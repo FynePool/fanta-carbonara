@@ -101,6 +101,20 @@ di ogni deadline formazioni.
   senza storico sufficiente o con status incerto (mai inventare un dato mancante).
   Utile solo a rose fatte e stagione in corso.
 
+## Fasi future (non ancora implementate, richieste esplicitamente)
+
+- **Classifica e storico vittorie/sconfitte della lega fantacalcio**: per ogni
+  giornata, punteggio totale di ciascuna delle 12 squadre (somma fantavoto
+  titolari + eventuale modificatore, da chiarire se la lega ne usa uno oltre
+  ai bonus/malus già inclusi nel fantavoto), confronto testa-a-testa e
+  classifica. Bloccata su tre cose che non esistono ancora, non solo sul voto:
+  1. il voto reale per giocatore (vedi sopra, serve leghe.fantacalcio.it);
+  2. il calendario testa-a-testa della lega fantacalcio (chi gioca contro chi
+     tra le 12 squadre ogni giornata — diverso dal calendario di Serie A,
+     generato da leghe.fantacalcio.it solo a stagione fantacalcio iniziata);
+  3. `ownership.json` popolato (dopo l'asta).
+  Da riprendere quando tutti e tre esistono, non prima.
+
 ## Regole per chi lavora su questo repo
 
 - Non inventare mai un voto, uno status o un dato storico mancante: se manca,
