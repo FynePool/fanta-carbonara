@@ -134,7 +134,7 @@ Campi: `elapsed`, `elapsed_extra`, `team`, `player_name`, `player_id`, `assist_n
 | `GET /v1/stored/matches/{id}/lineups` | Formazioni titolari/panchina con `starter` | Lo spec dice "non ancora ingerite, ritorna vuoto", ma **in sessione ha restituito formazioni reali**: spec più vecchia del servizio, verificare caso per caso |
 | `GET /v1/stored/matches/{id}/h2h` | Ultime N sfide tra le stesse due squadre | Utile per lo storico-per-avversario |
 | `GET /v1/standings` | Classifica di Serie A | **Verificato, 200 su free**: `data[0].rows[]` con `team_id`, `team_name`, `rank`, ecc., `season: "2026-27"` |
-| `GET /v1/leagues/{id}/top-scorers` | Capocannonieri con gol, assist, minuti, presenze | **Verificato, 200 su free** con `id=serie-a` (o id numerico `135`). Ha l'id giocatore BigBalls, joinabile |
+| `GET /v1/leagues/{id}/top-scorers` | Capocannonieri con gol, assist, minuti, presenze | **Verificato, 200 su free** con `id=serie-a` (o id numerico `135`). Ha l'id giocatore BigBalls, joinabile. **Attenzione**: non concorda con i box score della stessa API — per Malen dava 5 gol in 3 presenze, i box score per partita ne danno 6 in 5 presenze (i nostri dati sono coerenti, 5 righe senza duplicati). Aggregato e per-partita sono due pipeline diverse: non mescolarli |
 | `GET /v1/teams/{id}/form` | Ultime partite con risultato W/D/L dal punto di vista della squadra | **Verificato, 200 su free** (vedi sotto: lo spec lo dava come Solo+) |
 | `GET /v1/injuries` | Infortuni attivi per sport | Il significato dei campi varia per lega, documentato nello spec |
 | `GET /v1/teams/{id}/elo` | Elo squadra + rank in campionato | Possibile proxy di "difficoltà avversario" per il consiglio formazione |
