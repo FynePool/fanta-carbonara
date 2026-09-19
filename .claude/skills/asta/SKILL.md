@@ -32,10 +32,28 @@ avvisa l'utente e chiedi il file del listone prima di procedere.
 - Prima di consigliare un rilancio massimo su un giocatore, controlla sempre
   gli slot e i crediti rimanenti reali (via `stato`) — non stimare a memoria.
 
+## Mercato dopo l'asta (scambi e svincoli)
+
+- Scambio tra due squadre (anche misto, giocatori + crediti in entrambe le direzioni):
+  ```
+  python3 scripts/asta.py scambio --team-a <id> --team-b <id> \
+      --players-a <id1,id2> --players-b <id3> \
+      --credits-a-b <n> --credits-b-a <n>
+  ```
+  `--players-a` sono i giocatori ceduti da team-a a team-b (e viceversa per
+  `--players-b`); `--credits-a-b`/`--credits-b-a` sono i crediti che una squadra
+  versa all'altra. Ometti gli argomenti non pertinenti (es. uno scambio solo
+  giocatore-per-giocatore non ha bisogno di `--credits-*`).
+- Svincolare un giocatore (torna disponibile per tutti):
+  ```
+  python3 scripts/asta.py svincolo --player-id <id> --team-id <id> [--rimborso <n>]
+  ```
+  Dopo lo svincolo il giocatore può essere ripreso da chiunque con `assegna`.
+
 ## Regole
 
-- Non registrare mai un acquisto senza che l'utente lo abbia confermato esplicitamente
-  (nome giocatore, squadra acquirente, prezzo).
+- Non registrare mai un acquisto, scambio o svincolo senza che l'utente lo
+  abbia confermato esplicitamente (nomi giocatori, squadre coinvolte, prezzo/crediti).
 - Il consiglio di allocazione budget per ruolo in `league.json` è un'euristica di
   partenza, non un vincolo: se l'utente vuole sforare per un giocatore specifico,
   segui la sua scelta e aggiorna solo il tracking.

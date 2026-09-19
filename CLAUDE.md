@@ -67,9 +67,11 @@ di ogni deadline formazioni.
   lettura per esplorare una lega reale via l'API sopra. Non scrive mai in
   `data/`: il mapping verso `teams.json`/`ownership.json` per la lega vera
   dell'asta va deciso e scritto solo dopo l'asta, non prima.
-- `asta.py {assegna|stato|disponibili}` — assistente live per l'asta: registra un
-  acquisto di qualunque squadra, mostra crediti/slot rimanenti per ruolo, elenca i
-  giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
+- `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
+  e per il mercato post-asta: registra un acquisto di qualunque squadra, uno scambio
+  misto (giocatori + crediti in entrambe le direzioni) tra due squadre, o lo svincolo
+  di un giocatore (torna disponibile per tutti); mostra crediti/slot rimanenti per
+  ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
 - `report_formazione.py --team-id <id> [--matchday N]` — legge lo stato attuale della
   rosa e propone modulo, titolari e panchina, segnalando esplicitamente i giocatori
   senza storico sufficiente o con status incerto (mai inventare un dato mancante).
