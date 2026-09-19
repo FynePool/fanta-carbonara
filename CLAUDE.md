@@ -102,5 +102,7 @@ di ogni deadline formazioni.
   nella conversazione di progetto e non ancora implementate: non aggiungerle
   senza che siano state esplicitamente richieste.
 - Mai committare credenziali, jwt, token o dati personali reali (email,
-  username) in nessun file del repo. Le uniche variabili sensibili sono
-  `LEGHE_FC_USERNAME`/`LEGHE_FC_PASSWORD`, sempre da ambiente.
+  username) in nessun file del repo. Le variabili sensibili sono
+  `LEGHE_FC_USERNAME`/`LEGHE_FC_PASSWORD` e `BIGBALLS_API_KEY`, sempre da
+  ambiente, mai incollate in chat (se càpita, vanno considerate compromesse
+  e rigenerate sul sito del provider, non solo tenute com'erano).
