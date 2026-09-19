@@ -28,7 +28,17 @@ di ogni deadline formazioni.
 - `ownership.json` — chi possiede quale giocatore: player_id, team_id, prezzo d'acquisto,
   data, modalità (asta/scambio/svincolato).
 - `matchday_stats.json` — storico per giornata: player_id, matchday, squadra Serie A
-  avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, minuti.
+  avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, falli, minuti.
+  Gol/assist/cartellini/falli/minuti da BigBalls (vedi script sotto); `voto` e
+  `fantavoto` restano sempre `null` per ora, da riempire con l'API di
+  leghe.fantacalcio.it quando verificabile con una lega reale. L'endpoint BigBalls
+  usato mescola nel box score di una partita anche giocatori di squadre estranee
+  (altri campionati, nazionali): una riga viene scritta solo se nome+squadra
+  combaciano con un giocatore che sappiamo essere davvero in quella squadra di
+  Serie A in `players.json` — le squadre estranee non hanno match possibile e
+  restano escluse per costruzione. I "non trovati" (script stampa l'elenco) sono
+  in parte questo rumore, in parte veri giocatori mancanti dal listone: da
+  ricontrollare quando si rinfresca `players.json`.
 - `injuries.json` — storico infortuni: player_id, date, tipo, stato, rientro previsto.
 - `market_log.json` — log di mercato/scambi: supporta scambi misti (giocatore + crediti).
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
