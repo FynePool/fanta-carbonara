@@ -3,6 +3,19 @@
   "teams_count": 12,
   "credits_per_team": 500,
   "my_team_id": null,
+  "roster_requirements": {
+    "P": 3,
+    "D": 8,
+    "C": 8,
+    "A": 6
+  },
+  "auction_budget_split_suggestion": {
+    "_note": "Euristica di partenza, non regola fissa: percentuale indicativa del budget totale da riservare per ruolo. Da adattare in base a chi si punta.",
+    "P": 0.05,
+    "D": 0.15,
+    "C": 0.30,
+    "A": 0.50
+  },
   "formation_modules": [
     "3-4-3",
     "3-5-2",
