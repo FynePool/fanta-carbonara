@@ -1,0 +1,9 @@
+[
+  {
+    "player_id": "p001",
+    "team_id": "t01",
+    "purchase_price": 1,
+    "acquired_on": "2026-08-30",
+    "acquired_via": "asta"
+  }
+]

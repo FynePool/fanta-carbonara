@@ -1,0 +1,24 @@
+{
+  "mode": "classic",
+  "teams_count": 12,
+  "credits_per_team": 500,
+  "my_team_id": null,
+  "formation_modules": [
+    "3-4-3",
+    "3-5-2",
+    "4-3-3",
+    "4-4-2",
+    "4-5-1",
+    "5-3-2",
+    "5-4-1"
+  ],
+  "scoring": {
+    "bonus_gol": 3,
+    "bonus_assist": 1,
+    "malus_ammonizione": -0.5,
+    "malus_espulsione": -1,
+    "malus_autogol": -2,
+    "malus_rigore_sbagliato": -3,
+    "bonus_rigore_parato": 3
+  }
+}
