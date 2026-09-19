@@ -50,14 +50,17 @@ di ogni deadline formazioni.
   `status` dei giocatori in `players.json`, con matching per nome+squadra
   (euristico, non un id condiviso tra fonti: verificare i "non trovati" in output).
   Vedi `.claude/skills/aggiorna-formazioni/SKILL.md`.
-- `lib/leghe_client.py` — **scaffold non verificato** per leghe.fantacalcio.it.
-  Non esiste un'API pubblica nota (vedi commento nel file: la correzione rispetto
-  a un'affermazione precedente e sbagliata su un presunto `apileague.fantacalcio.it`
-  con `app_key` è documentata nella conversazione di progetto). L'unica via nota è
-  scraping HTML autenticato via cookie di sessione, e anche quella va verificata
-  contro l'HTML reale di una lega — cosa impossibile finché la lega non esiste
-  (post-asta). Non aggiungere selettori di parsing indovinati: solo dopo aver
-  ispezionato pagine reali scaricate con questo client.
+- `lib/leghe_fc_client.py` — client per l'API privata non ufficiale di
+  leghe.fantacalcio.it (`apileague.fantacalcio.it`), portato in Python dal
+  codice sorgente reale di @legasanpetrux/leghe-fc-client (MIT, github.com/
+  legasanpetrux/leghe-fc-client). Non è un'API pubblica/documentata da
+  Fantacalcio.it, solo in lettura, uso a proprio rischio.
+  **Verificato in questa sessione**: `discover_app_key()` funziona live,
+  oggi, senza credenziali (la app key è un valore pubblico nell'HTML della
+  homepage). **Non verificato**: login e chiamate autenticate (richiedono
+  un account e una lega reali). Da testare in locale con le proprie
+  credenziali vere in `LEGHE_FC_USERNAME`/`LEGHE_FC_PASSWORD`, mai
+  incollando la password in chat.
 - `asta.py {assegna|stato|disponibili}` — assistente live per l'asta: registra un
   acquisto di qualunque squadra, mostra crediti/slot rimanenti per ruolo, elenca i
   giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
