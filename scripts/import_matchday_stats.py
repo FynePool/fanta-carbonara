@@ -54,22 +54,38 @@ STAT_FIELDS = {
 }
 
 
+EXTRA_ACCENTS = str.maketrans({
+    "ø": "o", "Ø": "O", "æ": "ae", "Æ": "AE", "ł": "l", "Ł": "L",
+    "đ": "d", "Đ": "D", "ß": "ss",
+})
+NAME_PARTICLES = {"de", "van", "von", "da", "di", "la", "le", "mc", "du", "dos", "del"}
+
+
 def strip_accents(s: str) -> str:
+    s = s.translate(EXTRA_ACCENTS)
     return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
 
 
 def split_name(raw: str):
     """Ritorna (cognome_normalizzato, iniziale_o_None) da un nome grezzo,
-    gestendo sia 'M. Koné' (Iniziale Cognome) sia 'Lautaro Martínez'
-    (Nome Cognome) sia 'Svilar' (solo cognome)."""
+    gestendo 'Martinez L.'/'Konè M.' (Cognome Iniziale, formato di
+    data/players.json), 'M. Koné' (Iniziale Cognome, formato BigBalls),
+    'Lautaro Martínez' (Nome Cognome, con eventuali particelle come
+    'De Bruyne') e 'Svilar'/'Vítinha' (solo cognome)."""
     tokens = strip_accents(raw).lower().replace(".", "").split()
     if not tokens:
         return "", None
     if len(tokens) == 1:
         return tokens[0], None
-    if len(tokens[0]) == 1:  # "m koné" -> iniziale cognome
+    if len(tokens[-1]) == 1:  # "martinez l" -> cognome iniziale
+        return " ".join(tokens[:-1]), tokens[-1]
+    if len(tokens[0]) == 1:  # "m kone" -> iniziale cognome
         return " ".join(tokens[1:]), tokens[0]
-    return tokens[-1], tokens[0][0]  # "lautaro martinez" -> nome cognome
+    # "lautaro martinez" / "kevin de bruyne" -> nome [particelle] cognome
+    i = len(tokens) - 1
+    while i > 0 and tokens[i - 1] in NAME_PARTICLES:
+        i -= 1
+    return " ".join(tokens[i:]), tokens[0][0]
 
 
 def build_player_index(players: list[dict]):
