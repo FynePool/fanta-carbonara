@@ -13,10 +13,11 @@ description: Propone la formazione da schierare per la prossima giornata di fant
    di titolarità (vedi punto 3).
 2. Leggi `config/league.json` per recuperare `my_team_id`. Se è `null`, chiedi
    all'utente quale sia la sua squadra (`data/teams.json`) prima di continuare.
-3. Controlla `data/players.json`: se `status_updated_at` di uno o più giocatori
-   della rosa dell'utente è più vecchio della data delle probabili formazioni
-   correnti, avvisa che i dati potrebbero essere obsoleti e chiedi se aggiornarli
-   prima di procedere (non aggiornarli da solo senza fonte fornita dall'utente).
+3. Aggiorna lo status di titolarità con la skill `aggiorna-formazioni` (scrape
+   fantacalcio.it + applicazione con `--dry-run` mostrato all'utente prima di
+   scrivere). Se lo scrape fallisce o l'utente non conferma l'applicazione,
+   procedi comunque ma avvisa esplicitamente che lo status potrebbe essere
+   vecchio, invece di bloccarti o di inventare un aggiornamento.
 4. Esegui:
    ```
    python3 scripts/report_formazione.py --team-id <my_team_id> [--matchday N]

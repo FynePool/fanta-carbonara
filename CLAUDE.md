@@ -40,6 +40,24 @@ di ogni deadline formazioni.
 - `import_listone.py --csv <file>` — importa il listone ufficiale (export Excel/CSV
   di fantacalcio.it) in `data/players.json`, preservando lo status dei giocatori già
   noti. Da lanciare prima dell'asta.
+- `import_fantadraft.py` — importa listone + infortuni da FantaDraft (github.com/
+  lucianomurr/FantaDraft, fonte pubblica aggregata, aggiornata quotidianamente).
+- `scrape_formazioni.py` — scrape delle probabili formazioni Serie A da
+  fantacalcio.it (HTML statico, verificato scrapeable senza rendering JS).
+  Scrive uno snapshot (`data/formazioni_correnti.json`, non versionato) e ne
+  accumula lo storico in `data/formazioni_history.json` (versionato).
+- `apply_formazioni_status.py [--dry-run]` — applica lo snapshot più recente allo
+  `status` dei giocatori in `players.json`, con matching per nome+squadra
+  (euristico, non un id condiviso tra fonti: verificare i "non trovati" in output).
+  Vedi `.claude/skills/aggiorna-formazioni/SKILL.md`.
+- `lib/leghe_client.py` — **scaffold non verificato** per leghe.fantacalcio.it.
+  Non esiste un'API pubblica nota (vedi commento nel file: la correzione rispetto
+  a un'affermazione precedente e sbagliata su un presunto `apileague.fantacalcio.it`
+  con `app_key` è documentata nella conversazione di progetto). L'unica via nota è
+  scraping HTML autenticato via cookie di sessione, e anche quella va verificata
+  contro l'HTML reale di una lega — cosa impossibile finché la lega non esiste
+  (post-asta). Non aggiungere selettori di parsing indovinati: solo dopo aver
+  ispezionato pagine reali scaricate con questo client.
 - `asta.py {assegna|stato|disponibili}` — assistente live per l'asta: registra un
   acquisto di qualunque squadra, mostra crediti/slot rimanenti per ruolo, elenca i
   giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
