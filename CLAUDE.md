@@ -55,12 +55,18 @@ di ogni deadline formazioni.
   codice sorgente reale di @legasanpetrux/leghe-fc-client (MIT, github.com/
   legasanpetrux/leghe-fc-client). Non è un'API pubblica/documentata da
   Fantacalcio.it, solo in lettura, uso a proprio rischio.
-  **Verificato in questa sessione**: `discover_app_key()` funziona live,
-  oggi, senza credenziali (la app key è un valore pubblico nell'HTML della
-  homepage). **Non verificato**: login e chiamate autenticate (richiedono
-  un account e una lega reali). Da testare in locale con le proprie
-  credenziali vere in `LEGHE_FC_USERNAME`/`LEGHE_FC_PASSWORD`, mai
-  incollando la password in chat.
+  **Verificato end-to-end in questa sessione** con un account e una lega
+  di test reali: login con username/password, e lettura di rose+crediti
+  (`/league/teams/all`) e listone della lega (`/league/players`). Punto
+  critico: il payload di login contiene due jwt diversi (uno d'account,
+  uno specifico per lega); solo quello di lega funziona per le chiamate
+  autenticate — usare sempre `get_league_jwt()`, mai `data['jwt']` diretto.
+  Credenziali sempre da variabili d'ambiente `LEGHE_FC_USERNAME`/
+  `LEGHE_FC_PASSWORD`, mai in chat o committate.
+- `leghe_fc_inspect.py {leghe|rose|listone} [--league-id ID]` — CLI di sola
+  lettura per esplorare una lega reale via l'API sopra. Non scrive mai in
+  `data/`: il mapping verso `teams.json`/`ownership.json` per la lega vera
+  dell'asta va deciso e scritto solo dopo l'asta, non prima.
 - `asta.py {assegna|stato|disponibili}` — assistente live per l'asta: registra un
   acquisto di qualunque squadra, mostra crediti/slot rimanenti per ruolo, elenca i
   giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
@@ -75,7 +81,10 @@ di ogni deadline formazioni.
   va segnalato come "da verificare a mano", mai stimato silenziosamente.
 - Il campione per lo storico contro un singolo avversario è quasi sempre piccolo
   (1-2 incontri a stagione): trattarlo come indizio debole, non come dato solido.
-- Le fasi successive del progetto (scraping probabili formazioni pubbliche,
-  integrazione API non ufficiale di leghe.fantacalcio.it, storico avversari,
-  assistente asta/scambi) sono descritte nella conversazione di progetto e non
-  ancora implementate: non aggiungerle senza che siano state esplicitamente richieste.
+- Le fasi successive del progetto (storico avversari, assistente asta/scambi
+  completo, mapping automatico API lega -> ownership.json) sono descritte
+  nella conversazione di progetto e non ancora implementate: non aggiungerle
+  senza che siano state esplicitamente richieste.
+- Mai committare credenziali, jwt, token o dati personali reali (email,
+  username) in nessun file del repo. Le uniche variabili sensibili sono
+  `LEGHE_FC_USERNAME`/`LEGHE_FC_PASSWORD`, sempre da ambiente.

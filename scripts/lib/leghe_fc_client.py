@@ -1,26 +1,31 @@
 """Client Python per l'API privata non ufficiale di leghe.fantacalcio.it.
 
-Verificato da codice sorgente reale (non da un riassunto): porting dei soli
-endpoint di lettura di @legasanpetrux/leghe-fc-client
+Porting dei soli endpoint di lettura di @legasanpetrux/leghe-fc-client
 (https://github.com/legasanpetrux/leghe-fc-client, MIT), un client
 TypeScript open source per la stessa API. Non è un'API pubblica/ufficiale:
 nessun ToS di Fantacalcio.it la documenta o la autorizza esplicitamente.
 Uso a proprio rischio, solo in lettura, solo per la propria lega.
 
-Cosa è verificato DA QUESTA sessione, oggi, contro l'host reale:
-- La app key (`authAppKey`) è un valore pubblico incorporato nell'HTML di
-  https://leghe.fantacalcio.it/, uguale per chiunque la visiti: si estrae
-  con una GET + regex, NESSUN login o DevTools richiesto. Testato live.
-
-Cosa NON è ancora verificato (richiede un account e una lega reali, che
-non esistono finché l'asta non è conclusa):
-- Il login (POST /onboarding/v1/login con username/password) e tutte le
-  chiamate autenticate successive. La struttura sotto rispecchia il codice
-  sorgente del client TypeScript, ma non è stata eseguita end-to-end qui.
-  Testare con le proprie credenziali reali, mai incollando la password in
-  chat: impostarla come variabile d'ambiente e lanciare lo script in locale.
+Verificato in questa sessione, end-to-end, con un account e una lega reali
+(di test, non quella dell'asta):
+- discover_app_key(): funziona senza credenziali (valore pubblico in homepage).
+- login(): funziona con username/password reali. L'header corretto per la
+  app key è `app_key` (underscore, minuscolo) — un tentativo iniziale con
+  `appKey` falliva con 401 "Application key is missing".
+- Le chiamate autenticate richiedono `Authorization: Bearer <jwt-di-lega>`.
+  ATTENZIONE: il payload di login contiene DUE jwt diversi — `data.jwt`
+  (jwt d'account, 808 caratteri nel test) e `data.leghe[i].jwt` (jwt
+  specifico per quella lega, più lungo). Solo il secondo funziona per le
+  chiamate `/onboarding/v1/league/*`: il primo tentativo con `data.jwt`
+  dava 401 "ATH001 Not authorized to access the services" pur essendo
+  ben formato. Usare sempre `get_league_jwt()`.
+- Endpoint testati con successo: login, `/onboarding/v1/league/teams/all`
+  (rose con crediti iniziali/spesi/rimanenti per squadra), `/onboarding/v1/
+  league/players` (listone della lega, con le quotazioni proprie della
+  lega — non quelle generiche di un aggregatore esterno), `/onboarding/v1/
+  league/competitions` (vuoto sulla lega di test, nessuna competizione
+  configurata).
 """
-import os
 import re
 
 import requests
@@ -34,6 +39,8 @@ BROWSER_HEADERS = {
         "(KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "it-IT,it;q=0.5",
+    "Origin": "https://leghe.fantacalcio.it",
+    "Referer": "https://leghe.fantacalcio.it/",
 }
 
 
@@ -42,7 +49,6 @@ class LegheFcError(Exception):
 
 
 def discover_app_key() -> str:
-    """Verificato live in questa sessione (19/09/2026): funziona senza credenziali."""
     resp = requests.get(APP_KEY_SOURCE_URL, headers=BROWSER_HEADERS, timeout=20)
     resp.raise_for_status()
     match = APP_KEY_PATTERN.search(resp.text)
@@ -53,37 +59,58 @@ def discover_app_key() -> str:
     return match.group(2)
 
 
+def _api_headers(app_key: str, jwt: str | None = None) -> dict:
+    headers = {**BROWSER_HEADERS, "app_key": app_key, "Accept": "application/json"}
+    if jwt:
+        headers["Authorization"] = f"Bearer {jwt}"
+    return headers
+
+
 def login(username: str, password: str, app_key: str | None = None) -> dict:
-    """NON TESTATO end-to-end. Ritorna il payload grezzo di /onboarding/v1/login,
-    che (da codice sorgente del client TS) contiene data.leghe: una lista di
-    leghe con id, nome, alias, id_squadra e un jwt per lega."""
+    """Ritorna il payload grezzo di /onboarding/v1/login: data.leghe è una
+    lista di leghe con id, nome, alias, id_squadra e un jwt per lega."""
     app_key = app_key or discover_app_key()
     resp = requests.post(
         f"{API_BASE_URL}/onboarding/v1/login",
         json={"username": username, "password": password},
-        headers={**BROWSER_HEADERS, "appKey": app_key},
+        headers=_api_headers(app_key),
         timeout=20,
     )
-    resp.raise_for_status()
+    if not resp.ok:
+        raise LegheFcError(f"Login fallito: HTTP {resp.status_code} — {resp.text[:300]}")
     return resp.json()
 
 
+def get_league_jwt(login_payload: dict, league_id: int | str | None = None) -> str:
+    """Estrae il jwt corretto (specifico di lega, non quello d'account) dal
+    payload di login(). Se league_id è None e c'è una sola lega, la usa."""
+    leghe = login_payload["data"]["leghe"]
+    if league_id is None:
+        if len(leghe) != 1:
+            raise LegheFcError(
+                f"L'account ha {len(leghe)} leghe: specifica league_id esplicitamente."
+            )
+        return leghe[0]["jwt"]
+    for lega in leghe:
+        if str(lega["id"]) == str(league_id):
+            return lega["jwt"]
+    raise LegheFcError(f"Nessuna lega con id {league_id} trovata per questo account.")
+
+
 def authenticated_get(path: str, jwt: str, app_key: str | None = None) -> dict:
-    """NON TESTATO. path es. '/onboarding/v1/league/teams/all',
-    '/onboarding/v1/league/players', '/onboarding/v1/league/competition/calendar/<id>'."""
+    """path es. '/onboarding/v1/league/teams/all', '/onboarding/v1/league/players',
+    '/onboarding/v1/league/competition/calendar/<id>'."""
     app_key = app_key or discover_app_key()
     resp = requests.get(
         f"{API_BASE_URL}{path}",
-        headers={**BROWSER_HEADERS, "appKey": app_key, "Authorization": jwt},
+        headers=_api_headers(app_key, jwt),
         timeout=20,
     )
-    resp.raise_for_status()
+    if not resp.ok:
+        raise LegheFcError(f"Richiesta fallita: HTTP {resp.status_code} — {resp.text[:300]}")
     return resp.json()
 
 
 if __name__ == "__main__":
-    # Smoke test manuale, solo per la parte verificabile senza credenziali.
     key = discover_app_key()
     print(f"App key scoperta con successo (lunghezza {len(key)}, valore non stampato).")
-    print("Login e chiamate autenticate non testate qui: servono LEGHE_FC_USERNAME/")
-    print("LEGHE_FC_PASSWORD reali, da impostare come variabili d'ambiente in locale, mai in chat.")
