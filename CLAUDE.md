@@ -101,6 +101,15 @@ di ogni deadline formazioni.
   senza storico sufficiente o con status incerto (mai inventare un dato mancante).
   Utile solo a rose fatte e stagione in corso.
 
+## Documentazione di riferimento (`.docs/`)
+
+- `.docs/bigballs-api.md` — riferimento dell'API BigBalls (auth, limiti del piano,
+  endpoint usati e non ancora usati, convenzioni su `season`/`league`/`round`) con
+  le magagne verificate sul campo: box score contaminato da squadre estranee,
+  eventi duplicati, `rating` che non è il voto fantacalcio, `round` in ritardo di
+  un giorno, note di piano nello spec non affidabili. Da leggere prima di toccare
+  gli importer o di aggiungere endpoint.
+
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 
 - **Classifica e storico vittorie/sconfitte della lega fantacalcio**: per ogni
