@@ -31,6 +31,10 @@ di ogni deadline formazioni.
   avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, minuti.
 - `injuries.json` — storico infortuni: player_id, date, tipo, stato, rientro previsto.
 - `market_log.json` — log di mercato/scambi: supporta scambi misti (giocatore + crediti).
+- `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
+  casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
+  Non contiene dati per giocatore (niente voto/gol/cartellini singoli): solo
+  l'esito partita, usato per sapere chi ha giocato contro chi in una giornata.
 
 `config/league.json` contiene le regole di scoring, i moduli ammessi e `my_team_id`
 (la mia squadra — da impostare la prima volta che si popolano i dati).
@@ -67,6 +71,16 @@ di ogni deadline formazioni.
   lettura per esplorare una lega reale via l'API sopra. Non scrive mai in
   `data/`: il mapping verso `teams.json`/`ownership.json` per la lega vera
   dell'asta va deciso e scritto solo dopo l'asta, non prima.
+- `import_calendario_seriea.py --season <anno> [--status ...]` — importa calendario
+  e risultati Serie A da BigBalls Sports Data API (bigballsdata.com) in
+  `data/calendario_serie_a.json`. Fonte verificata in questa sessione: copre Serie A
+  dal 2014-15 a oggi, con giornata ("round") e risultato, ma **non** statistiche per
+  giocatore né il voto fantacalcio (quello resta da verificare via l'API di
+  leghe.fantacalcio.it, endpoint `/gaming/v1/teamLineup`, non ancora testato — serve
+  una lega reale con competizione collegata). Richiede `BIGBALLS_API_KEY` da
+  ambiente. Le partite finite da pochissimo possono avere giornata nulla per
+  ritardo della fonte: mai stimata, va verificata a mano al prossimo refresh.
+  Merge idempotente sullo storico esistente (aggiorna per `match_id`, non duplica).
 - `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
   e per il mercato post-asta: registra un acquisto di qualunque squadra, uno scambio
   misto (giocatori + crediti in entrambe le direzioni) tra due squadre, o lo svincolo
