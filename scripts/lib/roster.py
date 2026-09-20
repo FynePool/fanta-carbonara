@@ -28,9 +28,17 @@ def team_roster(team_id: str):
     ]
 
 
+def _matchday_sort_key(row: dict):
+    """La giornata può essere nulla: la fonte la etichetta con circa un giorno di
+    ritardo, quindi una riga senza giornata è quasi sempre la più recente. Va in
+    fondo all'ordinamento invece di far fallire il confronto int/None."""
+    matchday = row.get("matchday")
+    return (1, 0) if matchday is None else (0, matchday)
+
+
 def average_fantavoto(player_id: str, last_n: int | None = None):
     rows = [r for r in store.load_matchday_stats() if r["player_id"] == player_id]
-    rows.sort(key=lambda r: r["matchday"])
+    rows.sort(key=_matchday_sort_key)
     if last_n:
         rows = rows[-last_n:]
     votes = [r["fantavoto"] for r in rows if r.get("fantavoto") is not None]
