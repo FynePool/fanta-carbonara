@@ -6,9 +6,9 @@
     "serie_a_team": "Roma",
     "quotazione": 18,
     "fvm": 83,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4964",
@@ -17,9 +17,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 16,
     "fvm": 69,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5116",
@@ -28,9 +28,9 @@
     "serie_a_team": "Inter",
     "quotazione": 17,
     "fvm": 68,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4431",
@@ -39,9 +39,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 17,
     "fvm": 57,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4312",
@@ -50,9 +50,9 @@
     "serie_a_team": "Milan",
     "quotazione": 15,
     "fvm": 52,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6966",
@@ -61,9 +61,9 @@
     "serie_a_team": "Como",
     "quotazione": 15,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd572",
@@ -72,9 +72,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 11,
     "fvm": 49,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6482",
@@ -83,9 +83,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 11,
     "fvm": 37,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd133",
@@ -94,9 +94,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 10,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6462",
@@ -105,9 +105,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 9,
     "fvm": 28,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2134",
@@ -116,9 +116,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 8,
     "fvm": 26,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2521",
@@ -127,9 +127,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 10,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4360",
@@ -138,9 +138,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 11,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6534",
@@ -149,9 +149,9 @@
     "serie_a_team": "Torino",
     "quotazione": 9,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6344",
@@ -160,9 +160,9 @@
     "serie_a_team": "Como",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4236",
@@ -171,9 +171,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 7,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7332",
@@ -182,9 +182,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 7,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6415",
@@ -193,9 +193,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6248",
@@ -204,9 +204,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 6,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6662",
@@ -215,9 +215,9 @@
     "serie_a_team": "Parma",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7301",
@@ -226,9 +226,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7411",
@@ -237,9 +237,9 @@
     "serie_a_team": "Parma",
     "quotazione": 6,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7457",
@@ -248,9 +248,9 @@
     "serie_a_team": "Torino",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4485",
@@ -259,9 +259,9 @@
     "serie_a_team": "Monza",
     "quotazione": 4,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2170",
@@ -270,9 +270,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 4,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2814",
@@ -281,9 +281,9 @@
     "serie_a_team": "Inter",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7463",
@@ -292,9 +292,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4867",
@@ -303,9 +303,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4",
@@ -314,9 +314,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7533",
@@ -325,9 +325,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7172",
@@ -336,9 +336,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6650",
@@ -347,9 +347,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2809",
@@ -358,9 +358,9 @@
     "serie_a_team": "Como",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6403",
@@ -369,9 +369,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd158",
@@ -380,9 +380,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7466",
@@ -402,9 +402,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6569",
@@ -413,9 +413,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1926",
@@ -424,9 +424,9 @@
     "serie_a_team": "Inter",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1930",
@@ -435,9 +435,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7337",
@@ -446,9 +446,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7534",
@@ -457,9 +457,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2815",
@@ -468,9 +468,9 @@
     "serie_a_team": "Milan",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6813",
@@ -479,9 +479,9 @@
     "serie_a_team": "Milan",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7475",
@@ -490,9 +490,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2845",
@@ -501,9 +501,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7048",
@@ -512,9 +512,9 @@
     "serie_a_team": "Roma",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd610",
@@ -523,9 +523,9 @@
     "serie_a_team": "Roma",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4518",
@@ -545,9 +545,9 @@
     "serie_a_team": "Torino",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd543",
@@ -556,9 +556,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5707",
@@ -578,9 +578,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7531",
@@ -600,9 +600,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7557",
@@ -611,9 +611,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7560",
@@ -622,9 +622,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd3",
@@ -633,9 +633,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4468",
@@ -644,9 +644,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4957",
@@ -655,9 +655,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7603",
@@ -677,9 +677,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2874",
@@ -688,9 +688,9 @@
     "serie_a_team": "Parma",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7626",
@@ -699,9 +699,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd254",
@@ -710,9 +710,9 @@
     "serie_a_team": "Inter",
     "quotazione": 31,
     "fvm": 250,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7181",
@@ -721,9 +721,9 @@
     "serie_a_team": "Roma",
     "quotazione": 18,
     "fvm": 95,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4998",
@@ -732,9 +732,9 @@
     "serie_a_team": "Roma",
     "quotazione": 18,
     "fvm": 71,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2788",
@@ -743,9 +743,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 16,
     "fvm": 60,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4409",
@@ -754,9 +754,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 14,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2296",
@@ -765,9 +765,9 @@
     "serie_a_team": "Roma",
     "quotazione": 15,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5022",
@@ -776,9 +776,9 @@
     "serie_a_team": "Milan",
     "quotazione": 14,
     "fvm": 47,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4976",
@@ -787,9 +787,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 14,
     "fvm": 47,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4159",
@@ -798,9 +798,9 @@
     "serie_a_team": "Inter",
     "quotazione": 15,
     "fvm": 45,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2120",
@@ -809,9 +809,9 @@
     "serie_a_team": "Inter",
     "quotazione": 14,
     "fvm": 42,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4317",
@@ -820,9 +820,9 @@
     "serie_a_team": "Roma",
     "quotazione": 12,
     "fvm": 41,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6956",
@@ -831,9 +831,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 13,
     "fvm": 40,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2816",
@@ -842,9 +842,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 12,
     "fvm": 37,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6217",
@@ -853,9 +853,9 @@
     "serie_a_team": "Inter",
     "quotazione": 13,
     "fvm": 36,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4807",
@@ -864,9 +864,9 @@
     "serie_a_team": "Roma",
     "quotazione": 12,
     "fvm": 35,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5750",
@@ -875,9 +875,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 10,
     "fvm": 34,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5982",
@@ -886,9 +886,9 @@
     "serie_a_team": "Inter",
     "quotazione": 11,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5641",
@@ -897,9 +897,9 @@
     "serie_a_team": "Como",
     "quotazione": 10,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6727",
@@ -908,9 +908,9 @@
     "serie_a_team": "Como",
     "quotazione": 9,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6869",
@@ -919,9 +919,9 @@
     "serie_a_team": "Como",
     "quotazione": 10,
     "fvm": 31,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5833",
@@ -930,9 +930,9 @@
     "serie_a_team": "Milan",
     "quotazione": 13,
     "fvm": 31,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5514",
@@ -941,9 +941,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 9,
     "fvm": 30,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5620",
@@ -952,9 +952,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 7,
     "fvm": 27,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5526",
@@ -963,9 +963,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 11,
     "fvm": 26,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6867",
@@ -974,9 +974,9 @@
     "serie_a_team": "Como",
     "quotazione": 7,
     "fvm": 26,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4734",
@@ -985,9 +985,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 9,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5739",
@@ -996,9 +996,9 @@
     "serie_a_team": "Milan",
     "quotazione": 5,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1852",
@@ -1018,9 +1018,9 @@
     "serie_a_team": "Parma",
     "quotazione": 8,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2514",
@@ -1029,9 +1029,9 @@
     "serie_a_team": "Inter",
     "quotazione": 12,
     "fvm": 22,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5862",
@@ -1040,9 +1040,9 @@
     "serie_a_team": "Parma",
     "quotazione": 9,
     "fvm": 22,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6664",
@@ -1051,9 +1051,9 @@
     "serie_a_team": "Parma",
     "quotazione": 8,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5365",
@@ -1062,9 +1062,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 7,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5877",
@@ -1073,9 +1073,9 @@
     "serie_a_team": "Inter",
     "quotazione": 7,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5885",
@@ -1084,9 +1084,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 9,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4210",
@@ -1095,9 +1095,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 7,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2188",
@@ -1117,9 +1117,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 6,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6989",
@@ -1128,9 +1128,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 8,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5675",
@@ -1139,9 +1139,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 8,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4994",
@@ -1150,9 +1150,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 9,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6672",
@@ -1172,9 +1172,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 6,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7580",
@@ -1183,9 +1183,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 6,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7220",
@@ -1194,9 +1194,9 @@
     "serie_a_team": "Torino",
     "quotazione": 8,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4664",
@@ -1205,9 +1205,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 6,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7219",
@@ -1216,9 +1216,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 5,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6531",
@@ -1227,9 +1227,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 7,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6042",
@@ -1238,9 +1238,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 8,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4887",
@@ -1249,9 +1249,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 5,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd554",
@@ -1260,9 +1260,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 8,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6320",
@@ -1271,9 +1271,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 8,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4657",
@@ -1282,9 +1282,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 8,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7469",
@@ -1293,9 +1293,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 8,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6496",
@@ -1304,9 +1304,9 @@
     "serie_a_team": "Milan",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5520",
@@ -1315,9 +1315,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7529",
@@ -1326,9 +1326,9 @@
     "serie_a_team": "Roma",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2724",
@@ -1348,9 +1348,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 5,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7485",
@@ -1359,9 +1359,9 @@
     "serie_a_team": "Monza",
     "quotazione": 7,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5701",
@@ -1370,9 +1370,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7621",
@@ -1381,9 +1381,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 6,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4401",
@@ -1392,9 +1392,9 @@
     "serie_a_team": "Milan",
     "quotazione": 7,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4817",
@@ -1403,9 +1403,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6642",
@@ -1414,9 +1414,9 @@
     "serie_a_team": "Torino",
     "quotazione": 7,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4177",
@@ -1425,9 +1425,9 @@
     "serie_a_team": "Inter",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6986",
@@ -1436,9 +1436,9 @@
     "serie_a_team": "Roma",
     "quotazione": 4,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6660",
@@ -1447,9 +1447,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7268",
@@ -1458,9 +1458,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 5,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7235",
@@ -1469,9 +1469,9 @@
     "serie_a_team": "Parma",
     "quotazione": 4,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7238",
@@ -1480,9 +1480,9 @@
     "serie_a_team": "Monza",
     "quotazione": 4,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7526",
@@ -1491,9 +1491,9 @@
     "serie_a_team": "Torino",
     "quotazione": 5,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6319",
@@ -1502,9 +1502,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7294",
@@ -1513,9 +1513,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 5,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7414",
@@ -1524,9 +1524,9 @@
     "serie_a_team": "Como",
     "quotazione": 6,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7329",
@@ -1535,9 +1535,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 6,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7012",
@@ -1546,9 +1546,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 4,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5010",
@@ -1557,9 +1557,9 @@
     "serie_a_team": "Torino",
     "quotazione": 8,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4952",
@@ -1568,9 +1568,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 6,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7253",
@@ -1590,9 +1590,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 6,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6893",
@@ -1601,9 +1601,9 @@
     "serie_a_team": "Como",
     "quotazione": 5,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5840",
@@ -1612,9 +1612,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 4,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7274",
@@ -1623,9 +1623,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 6,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6495",
@@ -1634,9 +1634,9 @@
     "serie_a_team": "Torino",
     "quotazione": 8,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5273",
@@ -1645,9 +1645,9 @@
     "serie_a_team": "Milan",
     "quotazione": 3,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7467",
@@ -1656,9 +1656,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 6,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7410",
@@ -1667,9 +1667,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4502",
@@ -1678,9 +1678,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6202",
@@ -1689,9 +1689,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7069",
@@ -1700,9 +1700,9 @@
     "serie_a_team": "Torino",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5555",
@@ -1711,9 +1711,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 10,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6632",
@@ -1722,9 +1722,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7240",
@@ -1733,9 +1733,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5838",
@@ -1744,9 +1744,9 @@
     "serie_a_team": "Monza",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4845",
@@ -1755,9 +1755,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5578",
@@ -1777,9 +1777,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7326",
@@ -1788,9 +1788,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7564",
@@ -1799,9 +1799,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6990",
@@ -1810,9 +1810,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6766",
@@ -1821,9 +1821,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4263",
@@ -1832,9 +1832,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6821",
@@ -1843,9 +1843,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5751",
@@ -1854,9 +1854,9 @@
     "serie_a_team": "Torino",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2169",
@@ -1865,9 +1865,9 @@
     "serie_a_team": "Torino",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4147",
@@ -1876,9 +1876,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 6,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6659",
@@ -1887,9 +1887,9 @@
     "serie_a_team": "Monza",
     "quotazione": 4,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6046",
@@ -1909,9 +1909,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 3,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6925",
@@ -1920,9 +1920,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 2,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4705",
@@ -1931,9 +1931,9 @@
     "serie_a_team": "Roma",
     "quotazione": 6,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6896",
@@ -1942,9 +1942,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 1,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7131",
@@ -1953,9 +1953,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5695",
@@ -1986,9 +1986,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 7,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7068",
@@ -1997,9 +1997,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5851",
@@ -2008,9 +2008,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 7,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7014",
@@ -2019,9 +2019,9 @@
     "serie_a_team": "Como",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5831",
@@ -2030,9 +2030,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 5,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5307",
@@ -2041,9 +2041,9 @@
     "serie_a_team": "Parma",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6631",
@@ -2052,9 +2052,9 @@
     "serie_a_team": "Roma",
     "quotazione": 5,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4374",
@@ -2074,9 +2074,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5527",
@@ -2085,9 +2085,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7538",
@@ -2096,9 +2096,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7255",
@@ -2107,9 +2107,9 @@
     "serie_a_team": "Parma",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7537",
@@ -2118,9 +2118,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4378",
@@ -2129,9 +2129,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 2,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6892",
@@ -2140,9 +2140,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6021",
@@ -2151,9 +2151,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd256",
@@ -2162,9 +2162,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5481",
@@ -2173,9 +2173,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 1,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7599",
@@ -2184,9 +2184,9 @@
     "serie_a_team": "Roma",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5742",
@@ -2195,9 +2195,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6047",
@@ -2206,9 +2206,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4925",
@@ -2217,9 +2217,9 @@
     "serie_a_team": "Monza",
     "quotazione": 4,
     "fvm": 9,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4751",
@@ -2228,9 +2228,9 @@
     "serie_a_team": "Milan",
     "quotazione": 6,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2640",
@@ -2239,9 +2239,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 6,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7532",
@@ -2250,9 +2250,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 6,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4375",
@@ -2272,9 +2272,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 3,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7312",
@@ -2294,9 +2294,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6638",
@@ -2305,9 +2305,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 2,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7202",
@@ -2316,9 +2316,9 @@
     "serie_a_team": "Parma",
     "quotazione": 1,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7154",
@@ -2327,9 +2327,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 3,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6601",
@@ -2338,9 +2338,9 @@
     "serie_a_team": "Como",
     "quotazione": 3,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7605",
@@ -2349,9 +2349,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 3,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7260",
@@ -2415,9 +2415,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 4,
     "fvm": 6,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7540",
@@ -2426,9 +2426,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 2,
     "fvm": 6,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7483",
@@ -2437,9 +2437,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 2,
     "fvm": 6,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2263",
@@ -2448,9 +2448,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5498",
@@ -2459,9 +2459,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6977",
@@ -2470,9 +2470,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd791",
@@ -2481,9 +2481,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd252",
@@ -2492,9 +2492,9 @@
     "serie_a_team": "Torino",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7548",
@@ -2503,9 +2503,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5994",
@@ -2514,9 +2514,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 3,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7182",
@@ -2525,9 +2525,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6537",
@@ -2536,9 +2536,9 @@
     "serie_a_team": "Monza",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6883",
@@ -2547,9 +2547,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7525",
@@ -2558,9 +2558,9 @@
     "serie_a_team": "Milan",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6681",
@@ -2569,9 +2569,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 4,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd487",
@@ -2580,9 +2580,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6039",
@@ -2591,9 +2591,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7476",
@@ -2602,9 +2602,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5812",
@@ -2613,9 +2613,9 @@
     "serie_a_team": "Milan",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7573",
@@ -2624,9 +2624,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 4,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7125",
@@ -2646,9 +2646,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 1,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6809",
@@ -2668,9 +2668,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 1,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6149",
@@ -2679,9 +2679,9 @@
     "serie_a_team": "Parma",
     "quotazione": 1,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5399",
@@ -2690,9 +2690,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 2,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6826",
@@ -2701,9 +2701,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 2,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd327",
@@ -2723,9 +2723,9 @@
     "serie_a_team": "Como",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5424",
@@ -2734,9 +2734,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7156",
@@ -2756,9 +2756,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7553",
@@ -2767,9 +2767,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7604",
@@ -2778,9 +2778,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7615",
@@ -2789,9 +2789,9 @@
     "serie_a_team": "Parma",
     "quotazione": 2,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6875",
@@ -2800,9 +2800,9 @@
     "serie_a_team": "Como",
     "quotazione": 30,
     "fvm": 250,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2194",
@@ -2811,9 +2811,9 @@
     "serie_a_team": "Inter",
     "quotazione": 28,
     "fvm": 242,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4777",
@@ -2822,9 +2822,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 26,
     "fvm": 190,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7126",
@@ -2833,9 +2833,9 @@
     "serie_a_team": "Como",
     "quotazione": 21,
     "fvm": 155,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2167",
@@ -2844,9 +2844,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 25,
     "fvm": 152,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2379",
@@ -2855,9 +2855,9 @@
     "serie_a_team": "Milan",
     "quotazione": 22,
     "fvm": 142,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2423",
@@ -2866,9 +2866,9 @@
     "serie_a_team": "Milan",
     "quotazione": 23,
     "fvm": 140,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2848",
@@ -2877,9 +2877,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 11,
     "fvm": 120,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2517",
@@ -2888,9 +2888,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 17,
     "fvm": 103,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7556",
@@ -2899,9 +2899,9 @@
     "serie_a_team": "Roma",
     "quotazione": 20,
     "fvm": 100,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd632",
@@ -2910,9 +2910,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 16,
     "fvm": 92,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5559",
@@ -2921,9 +2921,9 @@
     "serie_a_team": "Como",
     "quotazione": 18,
     "fvm": 85,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1870",
@@ -2932,9 +2932,9 @@
     "serie_a_team": "Inter",
     "quotazione": 17,
     "fvm": 81,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2766",
@@ -2943,9 +2943,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 17,
     "fvm": 75,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6908",
@@ -2954,9 +2954,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 15,
     "fvm": 72,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4973",
@@ -2965,9 +2965,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 16,
     "fvm": 70,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6884",
@@ -2976,9 +2976,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 13,
     "fvm": 69,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5687",
@@ -2987,9 +2987,9 @@
     "serie_a_team": "Torino",
     "quotazione": 13,
     "fvm": 65,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6684",
@@ -2998,9 +2998,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 12,
     "fvm": 57,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5792",
@@ -3009,9 +3009,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 13,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4179",
@@ -3020,9 +3020,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 13,
     "fvm": 48,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7625",
@@ -3031,9 +3031,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 12,
     "fvm": 47,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7314",
@@ -3042,9 +3042,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 13,
     "fvm": 45,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2606",
@@ -3053,9 +3053,9 @@
     "serie_a_team": "Milan",
     "quotazione": 12,
     "fvm": 45,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1850",
@@ -3064,9 +3064,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 12,
     "fvm": 44,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5800",
@@ -3075,9 +3075,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 13,
     "fvm": 44,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5119",
@@ -3086,9 +3086,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 13,
     "fvm": 43,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6274",
@@ -3097,9 +3097,9 @@
     "serie_a_team": "Inter",
     "quotazione": 9,
     "fvm": 43,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5172",
@@ -3108,9 +3108,9 @@
     "serie_a_team": "Inter",
     "quotazione": 12,
     "fvm": 42,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd152",
@@ -3119,9 +3119,9 @@
     "serie_a_team": "Inter",
     "quotazione": 12,
     "fvm": 42,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7436",
@@ -3130,9 +3130,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 11,
     "fvm": 42,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd536",
@@ -3141,9 +3141,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 10,
     "fvm": 40,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6618",
@@ -3152,9 +3152,9 @@
     "serie_a_team": "Milan",
     "quotazione": 7,
     "fvm": 40,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7078",
@@ -3163,9 +3163,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 11,
     "fvm": 39,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6844",
@@ -3174,9 +3174,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 10,
     "fvm": 39,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5589",
@@ -3185,9 +3185,9 @@
     "serie_a_team": "Roma",
     "quotazione": 10,
     "fvm": 38,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6372",
@@ -3196,9 +3196,9 @@
     "serie_a_team": "Milan",
     "quotazione": 11,
     "fvm": 37,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4220",
@@ -3218,9 +3218,9 @@
     "serie_a_team": "Torino",
     "quotazione": 10,
     "fvm": 35,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7223",
@@ -3229,9 +3229,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 9,
     "fvm": 34,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5844",
@@ -3240,9 +3240,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 10,
     "fvm": 33,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6151",
@@ -3251,9 +3251,9 @@
     "serie_a_team": "Como",
     "quotazione": 11,
     "fvm": 33,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4892",
@@ -3262,9 +3262,9 @@
     "serie_a_team": "Milan",
     "quotazione": 11,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6666",
@@ -3284,9 +3284,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 7,
     "fvm": 30,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd779",
@@ -3295,9 +3295,9 @@
     "serie_a_team": "Roma",
     "quotazione": 9,
     "fvm": 29,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7412",
@@ -3306,9 +3306,9 @@
     "serie_a_team": "Como",
     "quotazione": 6,
     "fvm": 28,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7060",
@@ -3317,9 +3317,9 @@
     "serie_a_team": "Torino",
     "quotazione": 6,
     "fvm": 28,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6010",
@@ -3328,9 +3328,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 8,
     "fvm": 28,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7472",
@@ -3339,9 +3339,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 8,
     "fvm": 27,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7129",
@@ -3350,9 +3350,9 @@
     "serie_a_team": "Como",
     "quotazione": 11,
     "fvm": 26,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd184",
@@ -3361,9 +3361,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 10,
     "fvm": 26,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd827",
@@ -3383,9 +3383,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 5,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5735",
@@ -3405,9 +3405,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 8,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5680",
@@ -3416,9 +3416,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 7,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5823",
@@ -3427,9 +3427,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 11,
     "fvm": 24,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5888",
@@ -3438,9 +3438,9 @@
     "serie_a_team": "Torino",
     "quotazione": 9,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7551",
@@ -3449,9 +3449,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 8,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5858",
@@ -3460,9 +3460,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 8,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4287",
@@ -3471,9 +3471,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 8,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6833",
@@ -3482,9 +3482,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 8,
     "fvm": 22,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4479",
@@ -3493,9 +3493,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 7,
     "fvm": 22,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6398",
@@ -3504,9 +3504,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 9,
     "fvm": 22,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5500",
@@ -3515,9 +3515,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 9,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7618",
@@ -3526,9 +3526,9 @@
     "serie_a_team": "Milan",
     "quotazione": 8,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7619",
@@ -3537,9 +3537,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 7,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2077",
@@ -3548,9 +3548,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 8,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7311",
@@ -3559,9 +3559,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 8,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5562",
@@ -3581,9 +3581,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 7,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4856",
@@ -3592,9 +3592,9 @@
     "serie_a_team": "Milan",
     "quotazione": 8,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7070",
@@ -3603,9 +3603,9 @@
     "serie_a_team": "Inter",
     "quotazione": 9,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd530",
@@ -3614,9 +3614,9 @@
     "serie_a_team": "Roma",
     "quotazione": 9,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6717",
@@ -3636,9 +3636,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 8,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5685",
@@ -3647,9 +3647,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 7,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7624",
@@ -3658,9 +3658,9 @@
     "serie_a_team": "Torino",
     "quotazione": 6,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5791",
@@ -3669,9 +3669,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 7,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6549",
@@ -3680,9 +3680,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 6,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5674",
@@ -3702,9 +3702,9 @@
     "serie_a_team": "Roma",
     "quotazione": 7,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6294",
@@ -3713,9 +3713,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 7,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4465",
@@ -3724,9 +3724,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 7,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5422",
@@ -3735,9 +3735,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 7,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7464",
@@ -3746,9 +3746,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 6,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7535",
@@ -3757,9 +3757,9 @@
     "serie_a_team": "Torino",
     "quotazione": 6,
     "fvm": 18,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6678",
@@ -3768,9 +3768,9 @@
     "serie_a_team": "Como",
     "quotazione": 6,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5504",
@@ -3779,9 +3779,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 7,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6252",
@@ -3790,9 +3790,9 @@
     "serie_a_team": "Monza",
     "quotazione": 4,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4349",
@@ -3823,9 +3823,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 7,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5295",
@@ -3834,9 +3834,9 @@
     "serie_a_team": "Milan",
     "quotazione": 4,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2765",
@@ -3845,9 +3845,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4199",
@@ -3856,9 +3856,9 @@
     "serie_a_team": "Milan",
     "quotazione": 4,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5878",
@@ -3867,9 +3867,9 @@
     "serie_a_team": "Monza",
     "quotazione": 9,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2741",
@@ -3889,9 +3889,9 @@
     "serie_a_team": "Parma",
     "quotazione": 5,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2528",
@@ -3900,9 +3900,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 6,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4260",
@@ -3911,9 +3911,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 7,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6994",
@@ -3922,9 +3922,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 5,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4911",
@@ -3933,9 +3933,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 4,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5761",
@@ -3944,9 +3944,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6020",
@@ -3955,9 +3955,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6783",
@@ -3966,9 +3966,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7198",
@@ -3988,9 +3988,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 7,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7146",
@@ -3999,9 +3999,9 @@
     "serie_a_team": "Monza",
     "quotazione": 5,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7036",
@@ -4010,9 +4010,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5507",
@@ -4032,9 +4032,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 4,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4870",
@@ -4043,9 +4043,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 7,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6629",
@@ -4054,9 +4054,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 4,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6506",
@@ -4065,9 +4065,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 5,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7203",
@@ -4076,9 +4076,9 @@
     "serie_a_team": "Milan",
     "quotazione": 5,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5036",
@@ -4087,9 +4087,9 @@
     "serie_a_team": "Como",
     "quotazione": 7,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5298",
@@ -4098,9 +4098,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7322",
@@ -4109,9 +4109,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6218",
@@ -4120,9 +4120,9 @@
     "serie_a_team": "Torino",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6015",
@@ -4142,9 +4142,9 @@
     "serie_a_team": "Torino",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5301",
@@ -4153,9 +4153,9 @@
     "serie_a_team": "Inter",
     "quotazione": 5,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5998",
@@ -4164,9 +4164,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd333",
@@ -4175,9 +4175,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7536",
@@ -4186,9 +4186,9 @@
     "serie_a_team": "Parma",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7208",
@@ -4197,9 +4197,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6895",
@@ -4208,9 +4208,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7473",
@@ -4219,9 +4219,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6815",
@@ -4230,9 +4230,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7248",
@@ -4241,9 +4241,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7575",
@@ -4252,9 +4252,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7579",
@@ -4263,9 +4263,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5453",
@@ -4274,9 +4274,9 @@
     "serie_a_team": "Como",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6593",
@@ -4285,9 +4285,9 @@
     "serie_a_team": "Monza",
     "quotazione": 7,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4947",
@@ -4296,9 +4296,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 4,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5319",
@@ -4307,9 +4307,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 5,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6207",
@@ -4318,9 +4318,9 @@
     "serie_a_team": "Parma",
     "quotazione": 4,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7409",
@@ -4329,9 +4329,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 5,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2857",
@@ -4340,9 +4340,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 4,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7341",
@@ -4351,9 +4351,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 4,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7528",
@@ -4362,9 +4362,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7318",
@@ -4395,9 +4395,9 @@
     "serie_a_team": "Como",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6225",
@@ -4406,9 +4406,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 2,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5131",
@@ -4417,9 +4417,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 2,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd22",
@@ -4428,9 +4428,9 @@
     "serie_a_team": "Roma",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5007",
@@ -4439,9 +4439,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7138",
@@ -4450,9 +4450,9 @@
     "serie_a_team": "Parma",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2529",
@@ -4461,9 +4461,9 @@
     "serie_a_team": "Inter",
     "quotazione": 4,
     "fvm": 9,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6005",
@@ -4472,9 +4472,9 @@
     "serie_a_team": "Torino",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6206",
@@ -4483,9 +4483,9 @@
     "serie_a_team": "Parma",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1871",
@@ -4494,9 +4494,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4970",
@@ -4505,9 +4505,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 5,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6917",
@@ -4516,9 +4516,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 5,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd801",
@@ -4527,9 +4527,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 3,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7232",
@@ -4538,9 +4538,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6640",
@@ -4560,9 +4560,9 @@
     "serie_a_team": "Inter",
     "quotazione": 2,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6024",
@@ -4571,9 +4571,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 3,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5457",
@@ -4582,9 +4582,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 3,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6241",
@@ -4615,9 +4615,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 1,
     "fvm": 6,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7183",
@@ -4626,9 +4626,9 @@
     "serie_a_team": "Torino",
     "quotazione": 3,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6903",
@@ -4637,9 +4637,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6219",
@@ -4659,9 +4659,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7345",
@@ -4681,9 +4681,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 2,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7477",
@@ -4692,9 +4692,9 @@
     "serie_a_team": "Monza",
     "quotazione": 2,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6980",
@@ -4725,9 +4725,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 2,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5872",
@@ -4736,9 +4736,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 2,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6191",
@@ -4747,9 +4747,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 3,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5725",
@@ -4769,9 +4769,9 @@
     "serie_a_team": "Parma",
     "quotazione": 2,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6410",
@@ -4780,9 +4780,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 2,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7574",
@@ -4791,9 +4791,9 @@
     "serie_a_team": "Monza",
     "quotazione": 2,
     "fvm": 2,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7456",
@@ -4802,9 +4802,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7165",
@@ -4813,9 +4813,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7357",
@@ -4835,9 +4835,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7481",
@@ -4857,9 +4857,9 @@
     "serie_a_team": "Monza",
     "quotazione": 2,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7571",
@@ -4879,9 +4879,9 @@
     "serie_a_team": "Milan",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 10%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5462",
@@ -4890,9 +4890,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7628",
@@ -4901,9 +4901,9 @@
     "serie_a_team": "Parma",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5585",
@@ -4912,9 +4912,9 @@
     "serie_a_team": "Roma",
     "quotazione": 37,
     "fvm": 445,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2764",
@@ -4923,9 +4923,9 @@
     "serie_a_team": "Inter",
     "quotazione": 35,
     "fvm": 390,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6052",
@@ -4934,9 +4934,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 29,
     "fvm": 285,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4871",
@@ -4945,9 +4945,9 @@
     "serie_a_team": "Inter",
     "quotazione": 28,
     "fvm": 260,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6397",
@@ -4956,9 +4956,9 @@
     "serie_a_team": "Milan",
     "quotazione": 27,
     "fvm": 232,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2097",
@@ -4967,9 +4967,9 @@
     "serie_a_team": "Como",
     "quotazione": 25,
     "fvm": 185,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7017",
@@ -4978,9 +4978,9 @@
     "serie_a_team": "Como",
     "quotazione": 21,
     "fvm": 180,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5951",
@@ -4989,9 +4989,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 24,
     "fvm": 143,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6752",
@@ -5000,9 +5000,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 23,
     "fvm": 140,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5637",
@@ -5011,9 +5011,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 19,
     "fvm": 113,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd309",
@@ -5022,9 +5022,9 @@
     "serie_a_team": "Roma",
     "quotazione": 16,
     "fvm": 110,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd531",
@@ -5033,9 +5033,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 19,
     "fvm": 108,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7071",
@@ -5044,9 +5044,9 @@
     "serie_a_team": "Inter",
     "quotazione": 17,
     "fvm": 105,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2137",
@@ -5055,9 +5055,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 19,
     "fvm": 100,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6435",
@@ -5066,9 +5066,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 18,
     "fvm": 96,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5995",
@@ -5077,9 +5077,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 17,
     "fvm": 92,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6434",
@@ -5099,9 +5099,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 15,
     "fvm": 80,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2061",
@@ -5110,9 +5110,9 @@
     "serie_a_team": "Torino",
     "quotazione": 14,
     "fvm": 74,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6572",
@@ -5121,9 +5121,9 @@
     "serie_a_team": "Roma",
     "quotazione": 14,
     "fvm": 70,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6967",
@@ -5132,9 +5132,9 @@
     "serie_a_team": "Como",
     "quotazione": 14,
     "fvm": 70,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4371",
@@ -5143,9 +5143,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 13,
     "fvm": 67,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7351",
@@ -5165,9 +5165,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 11,
     "fvm": 55,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5436",
@@ -5176,9 +5176,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 11,
     "fvm": 55,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5734",
@@ -5187,9 +5187,9 @@
     "serie_a_team": "Roma",
     "quotazione": 15,
     "fvm": 54,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2038",
@@ -5198,9 +5198,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 12,
     "fvm": 52,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6675",
@@ -5209,9 +5209,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 16,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7023",
@@ -5220,9 +5220,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 14,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4359",
@@ -5231,9 +5231,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 9,
     "fvm": 50,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5694",
@@ -5242,9 +5242,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 14,
     "fvm": 47,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7523",
@@ -5253,9 +5253,9 @@
     "serie_a_team": "Monza",
     "quotazione": 7,
     "fvm": 36,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4463",
@@ -5264,9 +5264,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 12,
     "fvm": 35,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6229",
@@ -5275,9 +5275,9 @@
     "serie_a_team": "Parma",
     "quotazione": 11,
     "fvm": 34,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7600",
@@ -5286,9 +5286,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 9,
     "fvm": 34,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7484",
@@ -5297,9 +5297,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 11,
     "fvm": 33,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7554",
@@ -5308,9 +5308,9 @@
     "serie_a_team": "Parma",
     "quotazione": 10,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7347",
@@ -5319,9 +5319,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 10,
     "fvm": 32,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6646",
@@ -5341,9 +5341,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 12,
     "fvm": 30,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6904",
@@ -5352,9 +5352,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 10,
     "fvm": 30,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6204",
@@ -5363,9 +5363,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 8,
     "fvm": 30,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2832",
@@ -5385,9 +5385,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 9,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4896",
@@ -5396,9 +5396,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 7,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7623",
@@ -5407,9 +5407,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 7,
     "fvm": 23,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5029",
@@ -5418,9 +5418,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 8,
     "fvm": 21,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2155",
@@ -5429,9 +5429,9 @@
     "serie_a_team": "Monza",
     "quotazione": 9,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6519",
@@ -5440,9 +5440,9 @@
     "serie_a_team": "Milan",
     "quotazione": 4,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6831",
@@ -5451,9 +5451,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 5,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7620",
@@ -5462,9 +5462,9 @@
     "serie_a_team": "Monza",
     "quotazione": 6,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7561",
@@ -5473,9 +5473,9 @@
     "serie_a_team": "Parma",
     "quotazione": 5,
     "fvm": 17,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7612",
@@ -5484,9 +5484,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 8,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6669",
@@ -5495,9 +5495,9 @@
     "serie_a_team": "Inter",
     "quotazione": 7,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7120",
@@ -5506,9 +5506,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 3,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7374",
@@ -5517,9 +5517,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 5,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "titolare",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6145",
@@ -5528,9 +5528,9 @@
     "serie_a_team": "Monza",
     "quotazione": 4,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7449",
@@ -5539,9 +5539,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 7,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6164",
@@ -5550,9 +5550,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 7,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd608",
@@ -5561,9 +5561,9 @@
     "serie_a_team": "Torino",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7001",
@@ -5572,9 +5572,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6215",
@@ -5583,9 +5583,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 3,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7546",
@@ -5594,9 +5594,9 @@
     "serie_a_team": "Monza",
     "quotazione": 6,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7252",
@@ -5605,9 +5605,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 6,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7342",
@@ -5616,9 +5616,9 @@
     "serie_a_team": "Parma",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5336",
@@ -5627,9 +5627,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7602",
@@ -5638,9 +5638,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6556",
@@ -5649,9 +5649,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 6,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5882",
@@ -5660,9 +5660,9 @@
     "serie_a_team": "Monza",
     "quotazione": 5,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7610",
@@ -5671,9 +5671,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 4,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6822",
@@ -5693,9 +5693,9 @@
     "serie_a_team": "Torino",
     "quotazione": 4,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7272",
@@ -5704,9 +5704,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 4,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7213",
@@ -5715,9 +5715,9 @@
     "serie_a_team": "Parma",
     "quotazione": 4,
     "fvm": 6,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4387",
@@ -5759,9 +5759,9 @@
     "serie_a_team": "Bologna",
     "quotazione": 2,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2012",
@@ -5792,9 +5792,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 1,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7622",
@@ -5825,9 +5825,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 15%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7482",
@@ -5836,9 +5836,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 2,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7568",
@@ -5847,8 +5847,8 @@
     "serie_a_team": "Parma",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 10%",
+    "status_updated_at": "2026-09-21"
   }
 ]
