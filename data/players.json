@@ -666,9 +666,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Operazione chirurgica e lungo stop, rientro da aprile.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7611",
@@ -1007,9 +1007,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 8,
     "fvm": 24,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Da valutare nella sosta in vista della 6a giornata di campionato, ma ci sono possibilità possa far parte dei convocati contro il Frosinone.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4137",
@@ -1106,9 +1106,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 6,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Proverà a recuperare a pieno durante la sosta, da valutare nei prossimi allenamenti le possibilità di convocazione già contro il Monza nel prossimo turno.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6485",
@@ -1161,9 +1161,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 7,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: proverà a tornerà arruolabile dalla seconda metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4433",
@@ -1337,9 +1337,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 6,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Sta recuperando lentamente, ipotizziamo possa tornare arruolabile da metà novembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7212",
@@ -1579,9 +1579,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 5,
     "fvm": 13,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Atalanta.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5678",
@@ -1766,9 +1766,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Lungo stop, ipotizziamo un rientro dalla fine di novembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7175",
@@ -1898,9 +1898,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 7,
     "fvm": 11,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: pronto a tornare in campo dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7563",
@@ -1975,9 +1975,9 @@
     "serie_a_team": "Fiorentina",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: punta a tornare convocabile da novembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6238",
@@ -2063,9 +2063,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 3,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: da valutare il rientro dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5820",
@@ -2261,9 +2261,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 4,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Napoli.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5603",
@@ -2283,9 +2283,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 3,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Condizioni da valutare, ma dovrebbe tornare convocabile dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5757",
@@ -2360,9 +2360,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 8,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tempi di recupero da valutare.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6985",
@@ -2371,9 +2371,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 2,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: punta a tornare convocabile dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6673",
@@ -2382,9 +2382,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 2,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: recuperabile da fine ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd2728",
@@ -2404,9 +2404,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 2,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Lungo stop e rientro dalla metà di dicembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6890",
@@ -2635,9 +2635,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 2,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: può tornare arruolabile dalla fine di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7413",
@@ -2657,9 +2657,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 1,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Stop di circa due mesi, rientro dalla seconda metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd294",
@@ -2745,9 +2745,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: ipotizziamo possa tornare convocabile da fine ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7454",
@@ -3207,9 +3207,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 10,
     "fvm": 35,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tempi di recupero da valutare.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd1933",
@@ -3273,9 +3273,9 @@
     "serie_a_team": "Parma",
     "quotazione": 7,
     "fvm": 31,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Da valutare nella sosta in vista della 6a giornata di campionato, a rischio la sua presenza a San Siro contro l'Inter.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4364",
@@ -3372,9 +3372,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 9,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tempi di recupero da valutare.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6827",
@@ -3394,9 +3394,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 9,
     "fvm": 25,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Milan.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4436",
@@ -3570,9 +3570,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 9,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Lungo stop, ipotizziamo un rientro da gennaio.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd795",
@@ -3625,9 +3625,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 8,
     "fvm": 20,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Operato, punta a tornare in campo da dicembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6680",
@@ -3691,9 +3691,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 6,
     "fvm": 19,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: rimane da valutare quotidianamente in vista della 6a giornata di campionato contro l'Atalanta.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6190",
@@ -3801,9 +3801,9 @@
     "serie_a_team": "Parma",
     "quotazione": 5,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tempi di recupero da valutare.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4459",
@@ -3812,9 +3812,9 @@
     "serie_a_team": "Lazio",
     "quotazione": 7,
     "fvm": 16,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tempi di recupero da valutare.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6677",
@@ -3878,9 +3878,9 @@
     "serie_a_team": "Monza",
     "quotazione": 6,
     "fvm": 15,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tempi di recupero da monitorare, ma proverà a tornare arruolabile dall'inizio di novembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6898",
@@ -3977,9 +3977,9 @@
     "serie_a_team": "Udinese",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Osservato un periodo di riposo, potrà tornare alla regolare attività agonistica (ipotizziamo da fine ottobre).",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5946",
@@ -4021,9 +4021,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 6,
     "fvm": 14,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Rientro dalla seconda metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6054",
@@ -4131,9 +4131,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 4,
     "fvm": 12,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Bologna.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6170",
@@ -4373,9 +4373,9 @@
     "serie_a_team": "Lecce",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: da valutare convocazione per la prossima giornata di campionato contro il Bologna.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7550",
@@ -4384,9 +4384,9 @@
     "serie_a_team": "Frosinone",
     "quotazione": 4,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Out anche nella sfida successiva contro il Como, da valutare nei prossimi allenamenti le possibilità di convocazione già nella trasferta di Napoli alla ripresa del campionato.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7127",
@@ -4549,9 +4549,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 5,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Verrà operato e costretto a un lungo stop (ipotizziamo un rientro da marzo).",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6503",
@@ -4604,9 +4604,9 @@
     "serie_a_team": "Monza",
     "quotazione": 1,
     "fvm": 6,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Da valutare.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7418",
@@ -4648,9 +4648,9 @@
     "serie_a_team": "Sassuolo",
     "quotazione": 1,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Da valutare rientro da metà ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6246",
@@ -4703,9 +4703,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 1,
     "fvm": 4,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Di certo assente nel prossimo turno di campionato, ipotesi di rientro da fine ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd526",
@@ -4846,9 +4846,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno a Bergamo.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6592",
@@ -5088,9 +5088,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 21,
     "fvm": 80,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Ipotesi di rientro in campo da fine novembre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6060",
@@ -5154,9 +5154,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 14,
     "fvm": 58,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Proverà a tornare arruolabile dalla seconda metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd4923",
@@ -5209,8 +5209,8 @@
     "serie_a_team": "Bologna",
     "quotazione": 16,
     "fvm": 50,
-    "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status": "infortunato",
+    "status_note": "infortunio: Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti la convocazione già per Lecce.",
     "status_updated_at": "2026-09-21"
   },
   {
@@ -5330,9 +5330,9 @@
     "serie_a_team": "Torino",
     "quotazione": 12,
     "fvm": 31,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Punta a recuperare nella sosta, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Udinese.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7547",
@@ -5374,9 +5374,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 6,
     "fvm": 27,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: ipotizziamo un possibile rientro dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd6530",
@@ -5682,9 +5682,9 @@
     "serie_a_team": "Juventus",
     "quotazione": 2,
     "fvm": 7,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: ipotizziamo un possibile rientro dalla fine di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7349",
@@ -5726,9 +5726,9 @@
     "serie_a_team": "Venezia",
     "quotazione": 4,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Tentativo di rientro da metà ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd5918",
@@ -5737,9 +5737,9 @@
     "serie_a_team": "Atalanta",
     "quotazione": 5,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Venezia.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7453",
@@ -5748,9 +5748,9 @@
     "serie_a_team": "Genoa",
     "quotazione": 3,
     "fvm": 5,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: dovrebbe tornare arruolabile dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7627",
@@ -5781,9 +5781,9 @@
     "serie_a_team": "Napoli",
     "quotazione": 3,
     "fvm": 3,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: ma rimane da valutare quotidianamente in vista della ripresa del campionato",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7161",
@@ -5814,9 +5814,9 @@
     "serie_a_team": "Cagliari",
     "quotazione": 1,
     "fvm": 1,
-    "status": "n/d",
-    "status_note": "",
-    "status_updated_at": ""
+    "status": "infortunato",
+    "status_note": "infortunio: Da metà settembre ha avuto l'ok per riprendere l'attività agonistica, potrebbe ora tornare convocabile dalla metà di ottobre.",
+    "status_updated_at": "2026-09-21"
   },
   {
     "id": "fd7408",

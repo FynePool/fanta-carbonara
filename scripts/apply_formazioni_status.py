@@ -12,7 +12,16 @@ Il matching giocatore avviene per (squadra Serie A + nome normalizzato):
 è un match euristico su stringhe, non un id condiviso tra fonti diverse,
 quindi va sempre controllato l'elenco dei "non trovati" in output.
 
+Dopo le probabili applica data/injuries.json: chi ha un infortunio aperto diventa
+"infortunato" a prescindere da come lo dà lo scrape (un infortunato compare spesso
+in panchina, ma non è schierabile). Vale la presenza nel file, non una data: la
+fonte elenca solo gli infortuni in corso, quindi chi è rientrato sparisce da sola
+al prossimo import. Per questo injuries.json va rinfrescato PRIMA, con
+import_fantadraft.py: se è vecchio lo script lo segnala invece di fidarsene.
+
 Uso:
+    python3 scripts/import_fantadraft.py          # rinfresca listone + infortuni
+    python3 scripts/scrape_formazioni.py          # scarica le probabili
     python3 scripts/apply_formazioni_status.py [--dry-run]
 """
 import argparse
@@ -96,6 +105,27 @@ def main():
 
     unmatched_scrape = [v for k, v in scrape_index.items() if k not in matched_keys]
 
+    # L'infortunio ha l'ultima parola sulle probabili: un infortunato può comparire
+    # in panchina nello scrape, ma non è schierabile. Applicato qui e non in uno
+    # script a parte per non dipendere dall'ordine in cui vengono lanciati.
+    injuries = {i["player_id"]: i for i in store.load_injuries()}
+    injured = []
+    for p in players:
+        inj = injuries.get(p["id"])
+        if inj is None:
+            continue
+        injured.append((p, p["status"]))
+        p["status"] = "infortunato"
+        p["status_note"] = f"infortunio: {inj.get('expected_return') or 'rientro non indicato'}"
+        p["status_updated_at"] = date.today().isoformat()
+
+    stale = {i.get("imported_on") for i in injuries.values()} - {date.today().isoformat()}
+    if stale:
+        print(
+            f"ATTENZIONE: data/injuries.json è stato importato il {sorted(stale)[-1]}, non oggi. "
+            "Chi è rientrato risulterebbe ancora infortunato: rilancia import_fantadraft.py."
+        )
+
     print(f"Aggiornati {len(updated)} status su {len(players)} giocatori del listone.")
     for p, old, new, pct in updated[:40]:
         print(f"  {p['name']:<25} ({p['serie_a_team']:<12}) {old} -> {new} ({pct}%)")
@@ -108,6 +138,13 @@ def main():
             print(f"  {p['name']} ({p['serie_a_team']})")
         if len(unmatched_players) > 15:
             print(f"  ... e altri {len(unmatched_players) - 15}")
+
+    if injured:
+        print(f"\n{len(injured)} giocatori marcati infortunati da data/injuries.json:")
+        for p, old in injured[:15]:
+            print(f"  {p['name']:<25} ({p['serie_a_team']:<12}) {old} -> infortunato")
+        if len(injured) > 15:
+            print(f"  ... e altri {len(injured) - 15}")
 
     if unmatched_scrape:
         print(f"\n{len(unmatched_scrape)} giocatori nello scrape non trovati nel listone (probabile differenza di nome):")

@@ -1,75 +1,39 @@
 [
   {
-    "player_id": "fd572",
+    "player_id": "fd7603",
     "start_date": null,
-    "expected_return": "Recuperabile dall'inizio di ottobre.",
-    "description": "Il portiere uscito claudicante dal match di mercoledì in Champions League per una lesione di basso grado all'adduttore lungo.",
+    "expected_return": "Operazione chirurgica e lungo stop, rientro da aprile.",
+    "description": "Il portiere out dal 20 settembre per una lesione al crociato anteriore del ginocchio destro.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd6956",
-    "start_date": null,
-    "expected_return": "è recuperabile dalla fine di settembre.",
-    "description": "il difensore il 7 settembre contro la Lazio costretto al cambio per una lesione al muscolo pettineo della gamba sinistra",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd5982",
-    "start_date": null,
-    "expected_return": "Punta a rientrare per la giornata 6 (fonte Gazzetta).",
-    "description": "Assente per un problema fisico, dettagli non ancora chiari.",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd1852",
     "start_date": null,
-    "expected_return": "Da valutare nella sosta in vista della 6a giornata di campionato.",
-    "description": "il difensore azzurro da venerdì non si allena per una lieve contrattura al bicipite femorale della coscia destra, che lo esclude per domenica a Firenze.",
+    "expected_return": "Da valutare nella sosta in vista della 6a giornata di campionato, ma ci sono possibilità possa far parte dei convocati contro il Frosinone.",
+    "description": "il difensore azzurro il 18 settembre ha lamentato una lieve contrattura al bicipite femorale della coscia destra, che lo ha escluso dalla trasferta di Firenze.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd2514",
-    "start_date": null,
-    "expected_return": "recuperabile dalla prima metà di ottobre.",
-    "description": "il difensore alle prese con un risentimento ai flessori della coscia sinistra",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd2188",
     "start_date": null,
-    "expected_return": "Ipotesi rientro da inizio ottobre.",
+    "expected_return": "Proverà a recuperare a pieno durante la sosta, da valutare nei prossimi allenamenti le possibilità di convocazione già contro il Monza nel prossimo turno.",
     "description": "il terzino dei biancocelesti KO il 24 agosto a Bologna vittima di una lesione muscolare alla coscia.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6672",
     "start_date": null,
     "expected_return": "proverà a tornerà arruolabile dalla seconda metà di ottobre.",
-    "description": "Il difensorr ai box per una lesione di grado moderato al quadricipite della gamba sinistra",
+    "description": "Il difensore ai box per una lesione di grado moderato al quadricipite della gamba sinistra",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd5520",
-    "start_date": null,
-    "expected_return": "Punta a rientrare per la giornata 6 (fonte Gazzetta).",
-    "description": "Assente per un problema fisico, dettagli non ancora chiari.",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd2724",
@@ -78,25 +42,25 @@
     "description": "il difensore operato nella seconda metà di luglio al menisco del ginocchio destro.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7253",
     "start_date": null,
-    "expected_return": "Recuperabile dall'inizio di ottobre.",
+    "expected_return": "Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Atalanta.",
     "description": "il difensore costretto al cambio a Frosinone il 6 settembre per un risentimento muscolare mio-fasciale all'adduttore della gamba destra.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5578",
     "start_date": null,
-    "expected_return": "Da valutare durante la sosta in vista della 6a giornata di campionato.",
-    "description": "Il difensore frenato sabato mattina da un risentimento muscolare ai flessori della coscia sinistra, assente domenica dunque contro la Juventus.",
+    "expected_return": "Lungo stop, ipotizziamo un rientro dalla fine di novembre.",
+    "description": "Il difensore frenato da una lesione muscolare di medio-alto grado del bicipite femorale della coscia sinistra alla vigilia della sfida di campionato contro la Juventus (del 20 settembre).",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6046",
@@ -105,25 +69,7 @@
     "description": "il difensore operato a fine giugno per una lesione del tendine prossimale del muscolo semimembranoso della coscia sinistra, in recupero e",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd6925",
-    "start_date": null,
-    "expected_return": "Tempi di recupero da valutare.",
-    "description": "il difensore nel primo turno di A contro il Como costretto al cambio per un lieve problema muscolare all'adduttore della coscia destra che lo terrà ai box fino alla fine di settembre.",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd5695",
-    "start_date": null,
-    "expected_return": "Condizioni da valutare (fonte Gazzetta).",
-    "description": "Assente per un problema fisico, dettagli non ancora chiari.",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5449",
@@ -132,34 +78,34 @@
     "description": "il cursore di fascia della Viola sta svolgendo l'iter di recupero dall'infortunio al legamento crociato al ginocchio",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd4374",
     "start_date": null,
-    "expected_return": "da valutare il rientro dalla fine di settembre.",
+    "expected_return": "da valutare il rientro dalla metà di ottobre.",
     "description": "Il difensore alle prese con un forte trauma contusivo alla gamba destra",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd4375",
     "start_date": null,
-    "expected_return": "recuperabile dall'inizio di ottobre.",
+    "expected_return": "da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Napoli.",
     "description": "Il terzino dei ciociari ai box per una lesione di basso grado del bicipite femorale della coscia sinistra",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7312",
     "start_date": null,
-    "expected_return": "Condizioni da valutare, ma dovrebbe tornare convocabile dalla prima metà di ottobre.",
+    "expected_return": "Condizioni da valutare, ma dovrebbe tornare convocabile dalla metà di ottobre.",
     "description": "il difensore fermo dal 6 settembre vittima di una lesione muscolare al bicipite femorale.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7260",
@@ -168,16 +114,16 @@
     "description": "Il difensore condizionato da una fastidiosa fascite plantare, di certo assente nel prossimo turno di campionato.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6985",
     "start_date": null,
-    "expected_return": "punta a tornare convocabile dalla fine di settembre.",
+    "expected_return": "punta a tornare convocabile dalla metà di ottobre.",
     "description": "il difensore a gennaio vittima della rottura legamento crociato anteriore ginocchio destro",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6673",
@@ -186,7 +132,7 @@
     "description": "il difensore operato in estate per il perdurare di un problema all'anca e",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7478",
@@ -195,16 +141,7 @@
     "description": "il difensore costretto al cambio a Milano contro i rossoneri a fine agosto per un guaio alla spalla che ha richiesto l'intervento chirurgico.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd6039",
-    "start_date": null,
-    "expected_return": "recuperabile dalla seconda metà di settembre.",
-    "description": "il difensore ai box da inizio settembre per una lesione di basso grado del muscolo semimembranoso della coscia sinistra",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7125",
@@ -213,52 +150,43 @@
     "description": "il calciatore in ripresa dalla rottura del legamento crociato",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6809",
     "start_date": null,
-    "expected_return": "Stop di circa due mesi, rientro dalla metà di ottobre.",
+    "expected_return": "Stop di circa due mesi, rientro dalla seconda metà di ottobre.",
     "description": "Il difensore KO in amichevole l'8 agosto vittima di una lesione di alto grado del collaterale mediale del ginocchio sinistro.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7156",
     "start_date": null,
-    "expected_return": "ipotizziamo possa tornare convocabile da ottobre.",
+    "expected_return": "ipotizziamo possa tornare convocabile da fine ottobre.",
     "description": "il difensore sta proseguendo la fase di recupero dalla lesione legamento crociato anteriore gamba destra e",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
-    "player_id": "fd2194",
-    "start_date": null,
-    "expected_return": "ma dovrebbe tornare arruolabile dall'inizio di ottobre.",
-    "description": "Il turco in tribuna il 14 settembre contro l'Udinese per un risentimento muscolare all'adduttore della coscia destra, condizioni da valutare quotidianamente",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd4777",
+    "player_id": "fd4220",
     "start_date": null,
     "expected_return": "Tempi di recupero da valutare.",
-    "description": "Il centrocampista l'1 settembre a causa di una lieve aritmia benigna ha deciso di sottoporsi a un intervento di correzione tramite ablazione. Si confida di rivederlo in campo da metà ottobre.",
+    "description": "il centrocampista subentrato a gara in corso il 20 settembre a Firenze, ma ha lamentato un nuovo fastidio fisico che andrà valutato e rischia di tenerlo fuori nel match contro il Frosinone alla ripresa del campionato.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6666",
     "start_date": null,
-    "expected_return": "Da valutare nella sosta in vista della 6a giornata di campionato.",
-    "description": "niente da fare per il centrocampista, ancora condizionato da noie fisiche e non fa parte dei convocati per domenica contro il Genoa.",
+    "expected_return": "Da valutare nella sosta in vista della 6a giornata di campionato, a rischio la sua presenza a San Siro contro l'Inter.",
+    "description": "niente da fare per il centrocampista, ancora condizionato da noie fisiche ed escluso il 20 settembre dai convocati contro il Genoa.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd827",
@@ -267,16 +195,16 @@
     "description": "il metronomo del centrocampo bianconero ha rimediato la rottura del menisco esterno del ginocchio. Verrà operato a Lione a stretto giro. Lungo stop e possibilità di rivederlo in campo da gennaio.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5735",
     "start_date": null,
-    "expected_return": "Recuperabile dall'inizio di ottobre.",
+    "expected_return": "Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Milan.",
     "description": "l'esterno offensivo dei neroverdi KO il 6 settembre a Bologna vittima di una lesione di grado moderato al flessore della gamba destra.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5562",
@@ -285,7 +213,7 @@
     "description": "il centrocampista condizionato da una sindrome femoro-rotulea e, dopo un consulto medico a fine agosto, è stato sottoposto il 3 settembre a operazione chirurgica.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6717",
@@ -294,16 +222,16 @@
     "description": "il centrocampista canadese vittima a giugno nella gara dei Mondiali di una rottura di tibia e perone.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5674",
     "start_date": null,
-    "expected_return": "rimane da valutare quotidianamente in vista di sabato sera in casa contro la Lazio nella 5a giornata di campionato.",
-    "description": "Il centrocampista out contro Frosinone e Fiorentina per noie fisiche",
+    "expected_return": "rimane da valutare quotidianamente in vista della 6a giornata di campionato contro l'Atalanta.",
+    "description": "Il centrocampista out contro Lazio, Frosinone e Fiorentina per noie fisiche",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd4349",
@@ -312,16 +240,16 @@
     "description": "il centrocampista alle prese dalla seconda metà di luglio con una lesione di medio grado alla coscia destra, ma a fine agosto ha deciso, assieme allo staff medico ducale, di operarsi. Lungo stop e ipotesi di ritorno in campo da novembre.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd4459",
     "start_date": null,
     "expected_return": "Tempi di recupero da valutare.",
-    "description": "il regista dei biancocelesti KO il 30 agosto contro il Genoa vittima di una lesione muscolare al polpaccio che lo terrà ai box fino alla prima metà di ottobre.",
+    "description": "il regista dei biancocelesti KO il 30 agosto contro il Genoa vittima di una lesione muscolare al polpaccio che lo terrà ai box fino alla metà di ottobre.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd2741",
@@ -330,7 +258,7 @@
     "description": "Il centrocampista costretto a saltare l'inizio di campionato per una lussazione della rotula del ginocchio destro rimediata nella prima metà di agosto in allenamento.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7198",
@@ -339,7 +267,7 @@
     "description": "Il centrocampista ha ravvisato il 7 settembre contro la Lazio una lieve aritmia cardiaca benigna e si sottoporrà nei prossimi giorni ad un intervento di ablazione cardiaca.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5507",
@@ -348,43 +276,34 @@
     "description": "il regista dei veneti KO l'11 settembre contro la Fiorentina vittima di una distrazione intratendinea del bicipite femorale destro.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd6629",
-    "start_date": null,
-    "expected_return": "Tempi di recupero da valutare.",
-    "description": "il centrocampista in recupero da un guaio muscolare alla gamba lamentato il 24 agosto a Bologna. Si confida di riaverlo a disposizione dalla 6a giornata di campionato.",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6015",
     "start_date": null,
-    "expected_return": "Recuperabile da inizio ottobre.",
+    "expected_return": "Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Bologna.",
     "description": "Il centrocampista ha lamentato un sovraccarico muscolare alla gamba e non ha preso parte alle sfide contro Monza e Milan.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7318",
     "start_date": null,
-    "expected_return": "Da valutare in vista della prossima giornata di campionato, dopo la sosta.",
-    "description": "Il centrocampista fuori causa da metà settembre contro il Monza per noie fisiche e out anche domenica a Milano.",
+    "expected_return": "da valutare convocazione per la prossima giornata di campionato contro il Bologna.",
+    "description": "Il centrocampista fuori causa da metà settembre per noie fisiche",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7550",
     "start_date": null,
-    "expected_return": "Salterà anche la sfida contro il Como in programma domenica e dovrebbe tornare arruolabile dalla 6a giornata di A.",
-    "description": "il centrocampista non convocato per Genova a causa di una sindrome retto-adduttoria.",
+    "expected_return": "Out anche nella sfida successiva contro il Como, da valutare nei prossimi allenamenti le possibilità di convocazione già nella trasferta di Napoli alla ripresa del campionato.",
+    "description": "il centrocampista non convocato per Genova (12 settembre) a causa di una sindrome retto-adduttoria.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6640",
@@ -393,25 +312,25 @@
     "description": "il centrocampista KO il 7 settembre contro il Lecce in casa vittima della rottura del legamento crociato anteriore.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5880",
     "start_date": null,
     "expected_return": "Da valutare.",
-    "description": "il centrocampista non al meglio per noie fisiche, forfait per venerdì contro il Sassuolo.",
+    "description": "il centrocampista non al meglio per noie fisiche, forfait anche nel prossimo turno contro la Lazio.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6219",
     "start_date": null,
-    "expected_return": "Da valutare rientro da fine settembre.",
+    "expected_return": "Da valutare rientro da metà ottobre.",
     "description": "il centrocampista fuori causa per un problema al ginocchio e fuori causa in questo inizio di campionato.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6980",
@@ -420,16 +339,16 @@
     "description": "il calciatore operato al tendine rotuleo e ora in fase di recupero.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7481",
     "start_date": null,
-    "expected_return": "Recuperabile dalla prima metà di ottobre.",
+    "expected_return": "Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno a Bergamo.",
     "description": "Il centrocampista non convocato dalla gara dell'11 settembre contro la Fiorentina per un problema fisico.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6434",
@@ -438,7 +357,7 @@
     "description": "l'attaccante turco, dopo la gara di Frosinone (23 agosto), ha lamentato un problema al piede. Operato il 31 agosto di osteosintesi della frattura della base del V metatarso del piede sinistro, stop di circa tre mesi.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7351",
@@ -447,52 +366,43 @@
     "description": "Il brasiliano costretto al cambio il 9 settembre in Champions League vittima di una lesione muscolare di medio grado al bicipite femorale sinistro.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6675",
     "start_date": null,
-    "expected_return": "Recuperabile dall'inizio di ottobre.",
+    "expected_return": "Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti la convocazione già per Lecce.",
     "description": "L'attaccante non al meglio per noie muscolari al flessore, assente contro Napoli e Torino.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6646",
     "start_date": null,
-    "expected_return": "Punta a recuperare nella sosta per essere poi arruolabile dalla prima metà di ottobre.",
+    "expected_return": "Punta a recuperare nella sosta, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Udinese.",
     "description": "L'attaccante frenato a metà settembre da una lesione distrattiva di basso grado all'adduttore, forfait contro Roma e Bologna.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd2832",
     "start_date": null,
-    "expected_return": "Attesi nuovi esami medici a fine settembre per stabilire con esattezza i tempi di recupero, ma ipotizziamo oggi un possibile rientro dalla metà di ottobre.",
-    "description": "l'ala offensiva dei bianconeri fermo dopo il match contro il Milan (6 settembre) per una lesione di medio grado del bicipite femorale.",
+    "expected_return": "ipotizziamo un possibile rientro dalla metà di ottobre.",
+    "description": "l'ala offensiva dei bianconeri fermo dopo il match contro il Milan (6 settembre) per una lesione di medio grado del bicipite femorale",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
-  },
-  {
-    "player_id": "fd5029",
-    "start_date": null,
-    "expected_return": "rientro previsto da inizio ottobre.",
-    "description": "l'attaccante KO contro la Roma il 31 agosto vittima di una distorsione alla caviglia",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd6822",
     "start_date": null,
-    "expected_return": "un possibile rientro dalla fine di ottobre).",
-    "description": "l'attaccante vittima di una lesione di medio grado del muscolo semitendinoso, a metà settembre verrà sottoposto a nuovi esami medici per stabilire i tempi di recupero (in attesa dei nuovi risultati medici, ipotizziamo un lungo stop e",
+    "expected_return": "ipotizziamo un possibile rientro dalla fine di ottobre.",
+    "description": "l'attaccante vittima di una lesione di medio grado del muscolo semitendinoso",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd4387",
@@ -501,16 +411,16 @@
     "description": "l'attaccante a fine luglio ha deciso di operarsi per un problema alla schiena, che lo costringerà a stare ai box per buona parte del girone d'andata del campionato.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd5918",
     "start_date": null,
-    "expected_return": "recuperabile da inizio ottobre.",
-    "description": "L'attaccante KO in amichevole l'8 agosto vittima di una lesione del collaterale mediale di secondo grado del ginocchio sinistro",
+    "expected_return": "Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Venezia.",
+    "description": "L'attaccante KO in amichevole l'8 agosto vittima di una lesione del collaterale mediale di secondo grado del ginocchio sinistro.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7453",
@@ -519,24 +429,24 @@
     "description": "L'attaccante ha deciso di operarsi alla caviglia e",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7162",
     "start_date": null,
-    "expected_return": "recuperabile dall'inizio di ottobre.",
-    "description": "L'attaccante operato il 3 settembre a causa di un'ernia inguinale e",
+    "expected_return": "ma rimane da valutare quotidianamente in vista della ripresa del campionato",
+    "description": "L'attaccante operato il 3 settembre a causa di un'ernia inguinale e recuperabile dall'inizio di ottobre",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   },
   {
     "player_id": "fd7317",
     "start_date": null,
-    "expected_return": "Da metà settembre ha avuto l'ok per riprendere l'attività agonistica, potrebbe ora tornare convocabile dalla prima metà di ottobre.",
+    "expected_return": "Da metà settembre ha avuto l'ok per riprendere l'attività agonistica, potrebbe ora tornare convocabile dalla metà di ottobre.",
     "description": "Il calciatore ricoverato il 16 agosto dopo che avrebbe rischiato di annegare in piscina. Dimesso poi il 28 agosto, ora condizioni monitorate da parte dello staff medico rossoblù.",
     "status": "in corso",
     "source": "fantadraft_import",
-    "imported_on": "2026-09-19"
+    "imported_on": "2026-09-21"
   }
 ]

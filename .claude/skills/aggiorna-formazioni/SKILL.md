@@ -1,11 +1,23 @@
 ---
 name: aggiorna-formazioni
-description: Scarica le probabili formazioni Serie A da fantacalcio.it e aggiorna lo status (titolare/ballottaggio/panchina) dei giocatori in data/players.json, mantenendo uno storico. Usare quando l'utente chiede "aggiorna le formazioni", "che status hanno i miei giocatori", o prima di generare il report formazione se i dati sono vecchi.
+description: Scarica le probabili formazioni Serie A da fantacalcio.it e gli infortuni aggiornati, e applica entrambi allo status (titolare/ballottaggio/panchina/infortunato) dei giocatori in data/players.json, mantenendo uno storico. Usare quando l'utente chiede "aggiorna le formazioni", "che status hanno i miei giocatori", "chi è infortunato", o prima di generare il report formazione se i dati sono vecchi.
 ---
 
 # Aggiorna probabili formazioni
 
-1. Esegui:
+L'ordine conta: gli infortuni vanno rinfrescati **prima**, perché
+`apply_formazioni_status.py` li applica sopra le probabili come ultima parola.
+
+1. Rinfresca listone e infortuni:
+   ```
+   python3 scripts/import_fantadraft.py
+   ```
+   Riscrive `data/injuries.json` da zero con i soli infortuni ancora in corso
+   secondo la fonte: chi è rientrato sparisce da solo. Lo status dei giocatori
+   già noto in `players.json` viene preservato. Se salti questo passo,
+   `apply_formazioni_status.py` avvisa che gli infortuni sono vecchi — non
+   ignorare quell'avviso, significa che qualcuno rientrato risulta ancora fuori.
+2. Esegui:
    ```
    python3 scripts/scrape_formazioni.py
    ```
@@ -13,20 +25,24 @@ description: Scarica le probabili formazioni Serie A da fantacalcio.it e aggiorn
    una voce a `data/formazioni_history.json` (storico versionato in git).
    Se fallisce (rete, struttura pagina cambiata), avvisa l'utente e fermati:
    non inventare uno status.
-2. Esegui prima in modalità di controllo:
+3. Esegui prima in modalità di controllo:
    ```
    python3 scripts/apply_formazioni_status.py --dry-run
    ```
    Mostra quanti status cambierebbero, la lista dei "non trovati" in entrambe
    le direzioni (matching per nome, non per id condiviso tra fonti — può
    sbagliare su omonimi o abbreviazioni). Presenta questo riepilogo all'utente.
-3. Solo dopo che l'utente ha visto il riepilogo, se conferma, esegui senza
+4. Solo dopo che l'utente ha visto il riepilogo, se conferma, esegui senza
    `--dry-run` per scrivere effettivamente `data/players.json`.
-4. Segnala sempre esplicitamente:
+5. Segnala sempre esplicitamente:
    - i giocatori della rosa dell'utente (se già nota) che risultano "non trovati"
      nello scrape — il loro status resta quello precedente, va verificato a mano;
    - lo status "ballottaggio" derivato da percentuali comprese tra 40-89%: è una
-     probabilità, non una certezza, e va trattato come tale nel consiglio formazione.
+     probabilità, non una certezza, e va trattato come tale nel consiglio formazione;
+   - i giocatori marcati "infortunato": il motore formazione li esclude
+     automaticamente, quindi se uno di loro è in realtà rientrato l'utente perde
+     un titolare senza accorgersene. Vale la presenza nel feed infortuni, non una
+     data di rientro (quelle sono testo libero e non vengono interpretate).
 
 ## Limiti noti (da dire sempre all'utente, non da nascondere)
 

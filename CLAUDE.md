@@ -63,6 +63,14 @@ di ogni deadline formazioni.
 - `apply_formazioni_status.py [--dry-run]` — applica lo snapshot più recente allo
   `status` dei giocatori in `players.json`, con matching per nome+squadra
   (euristico, non un id condiviso tra fonti: verificare i "non trovati" in output).
+  Poi sovrascrive con `infortunato` chiunque compaia in `data/injuries.json`:
+  l'infortunio ha l'ultima parola sulle probabili (un infortunato compare spesso
+  in panchina nello scrape, ma `roster.py` non lo schiera). Vale la presenza nel
+  file, non una data di rientro — quelle sono testo libero e non si interpretano.
+  Per questo `injuries.json` va rinfrescato PRIMA con `import_fantadraft.py`, che
+  lo riscrive da zero con i soli infortuni ancora in corso: chi è rientrato sparisce
+  da solo (verificato: 60 infortuni il 19/9, 50 il 21/9). Se il file non è di oggi
+  lo script lo segnala invece di fidarsene.
   Vedi `.claude/skills/aggiorna-formazioni/SKILL.md`.
 - `lib/leghe_fc_client.py` — client per l'API privata non ufficiale di
   leghe.fantacalcio.it (`apileague.fantacalcio.it`), portato in Python dal
