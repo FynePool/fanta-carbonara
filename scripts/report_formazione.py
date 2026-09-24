@@ -9,7 +9,9 @@ vanno aggiornati prima del lancio (skill aggiorna-dati o aggiorna-formazioni).
 """
 import argparse
 import sys
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -22,6 +24,25 @@ def _voti(rating: dict | None) -> str:
         return "  -    senza voti"
     n = rating["n"]
     return f"{rating['punteggio']:5.2f}  media {rating['media']:.2f} su {n} vot{'o' if n == 1 else 'i'}"
+
+
+ROMA = ZoneInfo("Europe/Rome")
+
+
+def _quando(data_utc: str) -> str:
+    return datetime.fromisoformat(data_utc.replace("Z", "+00:00")).astimezone(ROMA).strftime("%d/%m")
+
+
+def _partita(e: dict) -> str:
+    """Prossima partita della squadra del giocatore, dal calendario: avversario, casa/trasferta, data."""
+    m = e.get("partita")
+    if not m:
+        return "prossima partita: n/d"
+    squadra = e["player"]["serie_a_team"]
+    casa = m["squadra_casa"] == squadra
+    avversario = m["squadra_trasferta"] if casa else m["squadra_casa"]
+    rinviata = " RINVIATA" if m["stato"] == "postponed" else ""
+    return f"vs {avversario} ({'C' if casa else 'T'}) {_quando(m['data_utc'])}{rinviata}"
 
 
 def _titolarita(p: dict) -> str:
@@ -49,6 +70,12 @@ def main():
 
     matchday_label = f"Giornata {args.matchday}" if args.matchday else "Prossima giornata"
     print(f"{matchday_label} — modalità {config['mode']}, {cambi}")
+    turno = r["turno"]
+    if turno["partite"] and turno["chiaro"]:
+        print(
+            f"Prossimo turno dal calendario: {_quando(turno['partite'][0]['data_utc'])} - "
+            f"{_quando(turno['partite'][-1]['data_utc'])} ({len(turno['partite'])} partite)"
+        )
 
     if r["modulo"]:
         print(f"Modulo consigliato: {r['modulo']}")
@@ -60,7 +87,7 @@ def main():
         print("TITOLARI:")
         for e in r["titolari"]:
             p = e["player"]
-            riga = f"  [{p['role']}] {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p)}"
+            riga = f"  [{p['role']}] {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p):<17} {_partita(e)}"
             prob = p.get("prob_titolare")
             if prob is not None and prob < 75 and panchina_per_ruolo.get(p["role"]):
                 riga += f"   <- se non gioca entra {panchina_per_ruolo[p['role']][0]}"
@@ -77,12 +104,13 @@ def main():
         p = e["player"]
         contatori[p["role"]] = contatori.get(p["role"], 0) + 1
         etichetta = f"{p['role']}{contatori[p['role']]}"
-        print(f"  {etichetta:<3} {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p)}")
+        print(f"  {etichetta:<3} {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p):<17} {_partita(e)}")
 
     if r["non_disponibili"]:
         print("\nNON DISPONIBILI:")
-        for p in r["non_disponibili"]:
-            print(f"  [{p['role']}] {p['name']:<22} {p.get('status_note') or p['status']}")
+        for nd in r["non_disponibili"]:
+            p = nd["player"]
+            print(f"  [{p['role']}] {p['name']:<22} {nd['motivo']}")
 
     if r["avvisi"]:
         print("\nDA VERIFICARE A MANO:")

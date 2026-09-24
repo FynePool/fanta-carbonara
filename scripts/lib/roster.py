@@ -1,10 +1,14 @@
-from collections import defaultdict
+from collections import Counter, defaultdict
+from datetime import date, datetime, timezone
 from statistics import mean
 
 from . import store
 
 EXCLUDED_STATUSES = {"infortunato", "squalificato"}
 ROLES = ["P", "D", "C", "A"]
+# Oltre questa età lo status di un titolare va ricontrollato: con la routine del
+# mattino dovrebbe avere al massimo un giorno.
+STATUS_VECCHIO_GIORNI = 4
 
 # Forma recente: si guardano gli ultimi N voti presi, non le ultime N giornate.
 FORMA_ULTIMI_VOTI = 5
@@ -92,6 +96,33 @@ def player_history_vs_opponent(player_id: str, opponent_serie_a_team: str):
     ]
 
 
+def prossimo_turno(adesso: datetime | None = None) -> dict:
+    """Il prossimo turno di Serie A ricavato dalle date delle partite, senza inventare il
+    numero di giornata (la fonte lo assegna solo dopo che la partita è stata giocata).
+
+    Il turno sono le prime 10 partite non ancora giocate: se coprono le 20 squadre una
+    volta ciascuna è un turno pulito. Se no (un recupero, un rinvio, un turno già
+    iniziato) `chiaro` è False e nessuno viene escluso: va controllato a mano."""
+    path = store.DATA_DIR / "calendario_serie_a.json"
+    calendario = store.load_json(path) if path.exists() else []
+    adesso = (adesso or datetime.now(timezone.utc)).strftime("%Y-%m-%dT%H:%M:%S")
+    futuri = sorted(
+        (m for m in calendario if m["stato"] != "finished" and m["data_utc"][:19] >= adesso),
+        key=lambda m: m["data_utc"],
+    )
+    turno = futuri[:10]
+    squadre = Counter(t for m in turno for t in (m["squadra_casa"], m["squadra_trasferta"]))
+    per_squadra = {}
+    for m in futuri:
+        for t in (m["squadra_casa"], m["squadra_trasferta"]):
+            per_squadra.setdefault(t, m)
+    return {
+        "partite": turno,
+        "chiaro": len(turno) == 10 and len(squadre) == 20,
+        "per_squadra": per_squadra,
+    }
+
+
 def _role_order(entries: list[dict]) -> list[dict]:
     """Con sostituzioni illimitate nello stesso ruolo conviene mettere avanti chi ha
     la media più alta quando gioca, qualunque sia la probabilità che giochi: se non
@@ -126,11 +157,27 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     if roster and len(roster) + len(mancanti) != attesi:
         avvisi.append(f"La rosa ha {len(roster) + len(mancanti)} giocatori invece di {attesi}.")
 
-    non_disponibili = [p for p in roster if p["status"] in EXCLUDED_STATUSES]
+    turno = prossimo_turno()
+    if roster and turno["partite"] and not turno["chiaro"]:
+        avvisi.append(
+            "Il prossimo turno non si ricostruisce dalle date (un recupero, un rinvio, o il "
+            "turno è già iniziato): controlla a mano che le squadre dei titolari giochino."
+        )
+
+    non_disponibili = []
     per_ruolo = {role: [] for role in ROLES}
     for p in roster:
-        if p["status"] not in EXCLUDED_STATUSES:
-            per_ruolo[p["role"]].append({"player": p, "rating": rate_player(p, votes, role_avg)})
+        partita = turno["per_squadra"].get(p["serie_a_team"])
+        if p["status"] in EXCLUDED_STATUSES:
+            non_disponibili.append({"player": p, "motivo": p.get("status_note") or p["status"]})
+        elif turno["chiaro"] and partita and partita["stato"] == "postponed":
+            non_disponibili.append(
+                {"player": p, "motivo": f"partita rinviata: {partita['squadra_casa']}-{partita['squadra_trasferta']}"}
+            )
+        else:
+            per_ruolo[p["role"]].append(
+                {"player": p, "rating": rate_player(p, votes, role_avg), "partita": partita}
+            )
     per_ruolo = {role: _role_order(entries) for role, entries in per_ruolo.items()}
 
     risultato = {
@@ -138,6 +185,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         "titolari": [],
         "panchina": [e for role in ROLES for e in per_ruolo[role]],
         "non_disponibili": non_disponibili,
+        "turno": turno,
         "scoperti": {},
         "avvisi": avvisi,
     }
@@ -182,4 +230,26 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     senza_voti = [e["player"]["name"] for e in titolari if not e["rating"]]
     if senza_voti:
         avvisi.append(f"Titolari senza nessun voto, da decidere a mano: {', '.join(senza_voti)}.")
+    fuori_probabili = [
+        e["player"]["name"] for e in titolari
+        if e["player"]["status"] == "n/d" and "non trovato nelle probabili" in (e["player"].get("status_note") or "")
+    ]
+    if fuori_probabili:
+        avvisi.append(
+            f"Titolari che non compaiono nelle probabili (assenti, o nome scritto diversamente): "
+            f"{', '.join(fuori_probabili)}. Verifica prima della deadline."
+        )
+    oggi = date.today()
+    vecchi = []
+    for e in titolari:
+        agg = e["player"].get("status_updated_at")
+        if agg and (oggi - date.fromisoformat(agg)).days > STATUS_VECCHIO_GIORNI:
+            vecchi.append(f"{e['player']['name']} ({agg})")
+    if vecchi and len(vecchi) == len(titolari):
+        avvisi.append(
+            f"Lo status di tutti i titolari è più vecchio di {STATUS_VECCHIO_GIORNI} giorni. "
+            "La routine del mattino sta girando?"
+        )
+    elif vecchi:
+        avvisi.append(f"Status più vecchio di {STATUS_VECCHIO_GIORNI} giorni: {', '.join(vecchi)}.")
     return risultato

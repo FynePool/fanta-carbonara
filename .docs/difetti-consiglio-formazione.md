@@ -176,6 +176,8 @@ applicato di nascosto.
 
 ### 4. Lo status non scade: chi sparisce dalle probabili tiene quello vecchio
 
+> **Risolto il 24/09** (fase C1, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
+
 **Cosa si rompe.** In `apply_formazioni_status.py:93`, chi non viene trovato nelle
 probabili finisce in `unmatched_players` e **non viene toccato**: conserva status e
 data della volta prima. `score_player` non guarda mai `status_updated_at`. Lo status
@@ -234,6 +236,8 @@ stampare perché.
 ---
 
 ### 6. Il calendario non sa qual è la prossima giornata
+
+> **Risolto il 24/09** (fase C2, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
 
 **Cosa si rompe.** `--matchday` è solo un'etichetta (`report_formazione.py:29`): la
 formazione è identica per la giornata 1 e per la 38. E non potrebbe essere altrimenti:
@@ -351,8 +355,20 @@ voti. Ogni fase si verifica con la rosa simulata di [§ Riprodurre](#riprodurre)
 
 | # | Cosa | Dove | Difetto | Stato |
 |---|---|---|---|---|
-| C1 | Chi sparisce dalle probabili passa a `n/d`; status più vecchio di 4 giorni segnalato | `apply_formazioni_status.py`, `report_formazione.py` | 4 | da fare |
-| C2 | Prossima giornata ricavata dalle date; avviso se la squadra di un giocatore non gioca | `import_calendario_seriea.py`, `report_formazione.py` | 6 | da fare |
+| C1 | Chi sparisce dalle probabili passa a `n/d`; status più vecchio di 4 giorni segnalato | `apply_formazioni_status.py`, `roster.py` | 4 | fatto 24/09 |
+| C2 | Prossimo turno ricavato dalle date; prossima partita per giocatore; rinviati fuori dai disponibili | `roster.py`, `report_formazione.py` | 6 | fatto 24/09 |
+
+C2 è stata fatta diversamente da come la proponeva la prima stesura: **nessun numero di
+giornata viene scritto nel calendario**. Un numero ricavato dalle date sarebbe un dato
+stimato presentato come vero, e con un recupero giocato settimane dopo sbaglierebbe
+tutti quelli successivi. Il report legge le date e basta. Le prime 10 partite non
+giocate sono il prossimo turno solo se coprono le 20 squadre una volta ciascuna; se no
+avvisa e non esclude nessuno.
+
+Trovato durante la C1: lo status veniva timbrato con la data di **oggi** anche quando le
+probabili erano di giorni prima (per esempio se lo scrape del mattino fallisce e si
+riapplica lo snapshot vecchio). Ora prende la data delle probabili, e lo script avvisa
+se non sono di oggi.
 
 **Trovati e corretti durante le fasi A e B**, fuori dall'elenco iniziale:
 

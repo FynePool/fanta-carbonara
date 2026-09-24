@@ -82,6 +82,10 @@ se non scende in campo entra il primo della panchina: vedi
   lo riscrive da zero con i soli infortuni ancora in corso: chi è rientrato sparisce
   da solo (verificato: 60 infortuni il 19/9, 50 il 21/9). Se il file non è di oggi
   lo script lo segnala invece di fidarsene.
+  Chi non compare nelle probabili passa a `n/d` con una nota ("non trovato nelle
+  probabili del <data>"), invece di tenere lo status della volta prima.
+  `status_updated_at` è la data delle probabili, non di oggi: se lo scrape fallisce e
+  si riapplica uno snapshot vecchio, il dato risulta vecchio (e lo script avvisa).
   Vedi `.claude/skills/aggiorna-formazioni/SKILL.md`.
 - `lib/leghe_fc_client.py` — client per l'API privata non ufficiale di
   leghe.fantacalcio.it (`apileague.fantacalcio.it`), portato in Python dal
@@ -133,7 +137,14 @@ se non scende in campo entra il primo della panchina: vedi
   probabilità di giocare non entra nell'ordine ma negli avvisi ("se non gioca entra
   X"). Stampa per ognuno "media X su N voti". Non si blocca se un ruolo è senza
   dati: lascia lo slot a te col motivo. Segnala i giocatori di `ownership.json`
-  spariti dal listone. `--matchday` è ancora solo un'etichetta (difetto 6).
+  spariti dal listone. Per ogni giocatore mostra la prossima partita della sua
+  squadra (avversario, casa/trasferta, data), ricavata dalle date del calendario
+  senza inventare numeri di giornata: le prime 10 partite non giocate sono il
+  prossimo turno se coprono le 20 squadre una volta ciascuna. In quel caso chi ha la
+  partita rinviata esce dai disponibili; se il turno non è ricostruibile (recupero,
+  turno già iniziato) avvisa e non esclude nessuno. Avvisa anche per i titolari
+  assenti dalle probabili e per gli status più vecchi di 4 giorni. `--matchday` è
+  solo l'etichetta del titolo.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
   È quella che esegue la routine del mattino: per aggiungere un dato al giro
@@ -151,9 +162,9 @@ se non scende in campo entra il primo della panchina: vedi
 - `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
   `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
   di `main` e con le regole vere della lega: 8 difetti riprodotti con comando e
-  output (6 risolti il 24/09 con le fasi A e B; restano C1 status che non scade e
-  C2 prossima giornata), l'elenco di ciò che è stato tolto dopo la verifica, e il
-  piano delle correzioni. Da leggere prima di toccare
+  output, tutti risolti il 24/09 con le fasi A, B e C, l'elenco di ciò che è stato
+  tolto dopo la verifica, le correzioni trovate strada facendo e cosa resta da
+  ritarare quando arriveranno i voti. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)

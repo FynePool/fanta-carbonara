@@ -12,6 +12,12 @@ Il matching giocatore avviene per (squadra Serie A + nome normalizzato):
 è un match euristico su stringhe, non un id condiviso tra fonti diverse,
 quindi va sempre controllato l'elenco dei "non trovati" in output.
 
+Chi non compare nelle probabili passa a "n/d" con la data delle probabili nella nota,
+invece di tenere lo status della volta prima (può essere squalificato, escluso, o
+scritto con un nome diverso). status_updated_at è la data delle probabili, non quella
+di oggi: se lo scrape di oggi fallisce e si riapplica uno snapshot vecchio, il dato
+deve risultare vecchio.
+
 Dopo le probabili applica data/injuries.json: chi ha un infortunio aperto diventa
 "infortunato" a prescindere da come lo dà lo scrape (un infortunato compare spesso
 in panchina, ma non è schierabile). Vale la presenza nel file, non una data: la
@@ -73,6 +79,14 @@ def main():
     snapshot = store.load_json(snapshot_path)
     scrape_index = build_scrape_index(snapshot)
     players = store.load_players()
+    # Lo status prende la data delle probabili, non quella di oggi: se lo scrape di
+    # oggi è fallito e si riapplica uno snapshot vecchio, il dato deve sembrare vecchio.
+    data_probabili = snapshot["scraped_at"][:10]
+    if data_probabili != date.today().isoformat():
+        print(
+            f"ATTENZIONE: le probabili in data/formazioni_correnti.json sono del {data_probabili}, "
+            "non di oggi: lo scrape di oggi non è andato a buon fine?"
+        )
 
     updated, unmatched_players = [], []
     matched_keys = set()
@@ -103,7 +117,17 @@ def main():
         p["status_note"] = (
             f"fantacalcio.it probabili formazioni: {entry['status']} {entry['percentuale']}%"
         )
-        p["status_updated_at"] = date.today().isoformat()
+        p["status_updated_at"] = data_probabili
+
+    # Chi non compare nelle probabili non tiene lo status della volta prima: può essere
+    # squalificato, escluso, o scritto con un nome diverso. Si dice che non si sa.
+    for p in unmatched_players:
+        p["status"] = "n/d"
+        p["prob_titolare"] = None
+        p["status_note"] = (
+            f"non trovato nelle probabili del {data_probabili} (assente, o nome scritto diversamente)"
+        )
+        p["status_updated_at"] = data_probabili
 
     unmatched_scrape = [v for k, v in scrape_index.items() if k not in matched_keys]
 
@@ -119,7 +143,7 @@ def main():
         injured.append((p, p["status"]))
         p["status"] = "infortunato"
         p["status_note"] = f"infortunio: {inj.get('expected_return') or 'rientro non indicato'}"
-        p["status_updated_at"] = date.today().isoformat()
+        p["status_updated_at"] = inj.get("imported_on") or data_probabili
 
     stale = {i.get("imported_on") for i in injuries.values()} - {date.today().isoformat()}
     if stale:
@@ -135,7 +159,7 @@ def main():
         print(f"  ... e altri {len(updated) - 40}")
 
     if unmatched_players:
-        print(f"\n{len(unmatched_players)} giocatori del listone non trovati nello scrape (nessuna modifica):")
+        print(f"\n{len(unmatched_players)} giocatori del listone non trovati nello scrape (passano a n/d; gli infortunati poi diventano 'infortunato'):")
         for p in unmatched_players[:15]:
             print(f"  {p['name']} ({p['serie_a_team']})")
         if len(unmatched_players) > 15:
