@@ -98,6 +98,8 @@ def main():
         if p["status"] != new_status:
             updated.append((p, p["status"], new_status, entry["percentuale"]))
         p["status"] = new_status
+        # la percentuale pubblicata, come numero: la leggono il report e gli avvisi
+        p["prob_titolare"] = entry["percentuale"]
         p["status_note"] = (
             f"fantacalcio.it probabili formazioni: {entry['status']} {entry['percentuale']}%"
         )

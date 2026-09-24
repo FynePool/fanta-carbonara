@@ -8,7 +8,8 @@
     "fvm": 83,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4964",
@@ -19,7 +20,8 @@
     "fvm": 69,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5116",
@@ -30,7 +32,8 @@
     "fvm": 68,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4431",
@@ -41,7 +44,8 @@
     "fvm": 57,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4312",
@@ -52,7 +56,8 @@
     "fvm": 52,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6966",
@@ -63,7 +68,8 @@
     "fvm": 50,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd572",
@@ -74,7 +80,8 @@
     "fvm": 49,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd6482",
@@ -85,7 +92,8 @@
     "fvm": 37,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd133",
@@ -96,7 +104,8 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6462",
@@ -107,7 +116,8 @@
     "fvm": 28,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2134",
@@ -118,7 +128,8 @@
     "fvm": 26,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2521",
@@ -129,7 +140,8 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4360",
@@ -140,7 +152,8 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6534",
@@ -151,7 +164,8 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6344",
@@ -162,7 +176,8 @@
     "fvm": 15,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4236",
@@ -173,7 +188,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7332",
@@ -184,7 +200,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6415",
@@ -195,7 +212,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6248",
@@ -206,7 +224,8 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6662",
@@ -217,7 +236,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7301",
@@ -228,7 +248,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7411",
@@ -239,7 +260,8 @@
     "fvm": 7,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd7457",
@@ -250,7 +272,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4485",
@@ -261,7 +284,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd2170",
@@ -272,7 +296,8 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd2814",
@@ -283,7 +308,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd7463",
@@ -294,7 +320,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4867",
@@ -305,7 +332,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4",
@@ -316,7 +344,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd7533",
@@ -327,7 +356,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7172",
@@ -338,7 +368,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd6650",
@@ -349,7 +380,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd2809",
@@ -360,7 +392,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd6403",
@@ -371,7 +404,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd158",
@@ -382,7 +416,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7466",
@@ -393,7 +428,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd219",
@@ -404,7 +440,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd6569",
@@ -415,7 +452,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd1926",
@@ -426,7 +464,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd1930",
@@ -437,7 +476,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd7337",
@@ -448,7 +488,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd7534",
@@ -459,7 +500,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd2815",
@@ -470,7 +512,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd6813",
@@ -481,7 +524,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7475",
@@ -492,7 +536,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd2845",
@@ -503,7 +548,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7048",
@@ -514,7 +560,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd610",
@@ -525,7 +572,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4518",
@@ -536,7 +584,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7363",
@@ -547,7 +596,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd543",
@@ -558,7 +608,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd5707",
@@ -569,7 +620,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd6671",
@@ -580,7 +632,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7531",
@@ -591,7 +644,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd2127",
@@ -602,7 +656,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7557",
@@ -613,7 +668,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7560",
@@ -624,7 +680,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd3",
@@ -635,7 +692,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4468",
@@ -646,7 +704,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd4957",
@@ -657,7 +716,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd7603",
@@ -668,7 +728,8 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: Operazione chirurgica e lungo stop, rientro da aprile.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7611",
@@ -679,7 +740,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 5
   },
   {
     "id": "fd2874",
@@ -690,7 +752,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd7626",
@@ -701,7 +764,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 1
   },
   {
     "id": "fd254",
@@ -712,7 +776,8 @@
     "fvm": 250,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7181",
@@ -723,7 +788,8 @@
     "fvm": 95,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd4998",
@@ -734,7 +800,8 @@
     "fvm": 71,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd2788",
@@ -745,7 +812,8 @@
     "fvm": 60,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4409",
@@ -756,7 +824,8 @@
     "fvm": 50,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2296",
@@ -767,7 +836,8 @@
     "fvm": 50,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5022",
@@ -778,7 +848,8 @@
     "fvm": 47,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4976",
@@ -789,7 +860,8 @@
     "fvm": 47,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4159",
@@ -800,7 +872,8 @@
     "fvm": 45,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2120",
@@ -811,7 +884,8 @@
     "fvm": 42,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4317",
@@ -822,7 +896,8 @@
     "fvm": 41,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6956",
@@ -832,8 +907,9 @@
     "quotazione": 13,
     "fvm": 40,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 75
   },
   {
     "id": "fd2816",
@@ -844,7 +920,8 @@
     "fvm": 37,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6217",
@@ -855,7 +932,8 @@
     "fvm": 36,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd4807",
@@ -866,7 +944,8 @@
     "fvm": 35,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5750",
@@ -877,7 +956,8 @@
     "fvm": 34,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5982",
@@ -888,7 +968,8 @@
     "fvm": 32,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd5641",
@@ -899,7 +980,8 @@
     "fvm": 32,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6727",
@@ -910,7 +992,8 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6869",
@@ -921,7 +1004,8 @@
     "fvm": 31,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5833",
@@ -932,7 +1016,8 @@
     "fvm": 31,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5514",
@@ -943,7 +1028,8 @@
     "fvm": 30,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5620",
@@ -954,7 +1040,8 @@
     "fvm": 27,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5526",
@@ -965,7 +1052,8 @@
     "fvm": 26,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6867",
@@ -976,7 +1064,8 @@
     "fvm": 26,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd4734",
@@ -987,7 +1076,8 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5739",
@@ -998,7 +1088,8 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd1852",
@@ -1007,9 +1098,10 @@
     "serie_a_team": "Napoli",
     "quotazione": 8,
     "fvm": 24,
-    "status": "infortunato",
-    "status_note": "infortunio: Da valutare nella sosta in vista della 6a giornata di campionato, ma ci sono possibilità possa far parte dei convocati contro il Frosinone.",
-    "status_updated_at": "2026-09-21"
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4137",
@@ -1020,7 +1112,8 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2514",
@@ -1031,7 +1124,8 @@
     "fvm": 22,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd5862",
@@ -1042,7 +1136,8 @@
     "fvm": 22,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6664",
@@ -1053,7 +1148,8 @@
     "fvm": 21,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5365",
@@ -1064,7 +1160,8 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5877",
@@ -1075,7 +1172,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5885",
@@ -1086,7 +1184,8 @@
     "fvm": 20,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd4210",
@@ -1097,7 +1196,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd2188",
@@ -1108,7 +1208,8 @@
     "fvm": 20,
     "status": "infortunato",
     "status_note": "infortunio: Proverà a recuperare a pieno durante la sosta, da valutare nei prossimi allenamenti le possibilità di convocazione già contro il Monza nel prossimo turno.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6485",
@@ -1119,7 +1220,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6989",
@@ -1130,7 +1232,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd5675",
@@ -1141,7 +1244,8 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4994",
@@ -1152,7 +1256,8 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6672",
@@ -1163,7 +1268,8 @@
     "fvm": 19,
     "status": "infortunato",
     "status_note": "infortunio: proverà a tornerà arruolabile dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd4433",
@@ -1174,7 +1280,8 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7580",
@@ -1185,7 +1292,8 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7220",
@@ -1196,7 +1304,8 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd4664",
@@ -1207,7 +1316,8 @@
     "fvm": 18,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd7219",
@@ -1218,7 +1328,8 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6531",
@@ -1229,7 +1340,8 @@
     "fvm": 17,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6042",
@@ -1240,7 +1352,8 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd4887",
@@ -1251,7 +1364,8 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd554",
@@ -1262,7 +1376,8 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6320",
@@ -1273,7 +1388,8 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4657",
@@ -1284,7 +1400,8 @@
     "fvm": 16,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7469",
@@ -1295,7 +1412,8 @@
     "fvm": 16,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6496",
@@ -1306,7 +1424,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5520",
@@ -1317,7 +1436,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7529",
@@ -1328,7 +1448,8 @@
     "fvm": 15,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd2724",
@@ -1338,8 +1459,9 @@
     "quotazione": 6,
     "fvm": 15,
     "status": "infortunato",
-    "status_note": "infortunio: Sta recuperando lentamente, ipotizziamo possa tornare arruolabile da metà novembre.",
-    "status_updated_at": "2026-09-21"
+    "status_note": "infortunio: Sta recuperando lentamente, ipotizziamo possa tornare arruolabile da fine dicembre.",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7212",
@@ -1350,7 +1472,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7485",
@@ -1361,7 +1484,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5701",
@@ -1372,7 +1496,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7621",
@@ -1383,7 +1508,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd4401",
@@ -1394,7 +1520,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4817",
@@ -1405,7 +1532,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd6642",
@@ -1416,7 +1544,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4177",
@@ -1427,7 +1556,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd6986",
@@ -1438,7 +1568,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd6660",
@@ -1449,7 +1580,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7268",
@@ -1460,7 +1592,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7235",
@@ -1471,7 +1604,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7238",
@@ -1482,7 +1616,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7526",
@@ -1493,7 +1628,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6319",
@@ -1504,7 +1640,8 @@
     "fvm": 14,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd7294",
@@ -1515,7 +1652,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7414",
@@ -1526,7 +1664,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7329",
@@ -1537,7 +1676,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7012",
@@ -1548,7 +1688,8 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5010",
@@ -1559,7 +1700,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4952",
@@ -1570,7 +1712,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7253",
@@ -1581,7 +1724,8 @@
     "fvm": 13,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Atalanta.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd5678",
@@ -1592,7 +1736,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6893",
@@ -1603,7 +1748,8 @@
     "fvm": 13,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd5840",
@@ -1613,8 +1759,9 @@
     "quotazione": 4,
     "fvm": 13,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7274",
@@ -1625,7 +1772,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6495",
@@ -1636,7 +1784,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5273",
@@ -1647,7 +1796,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7467",
@@ -1658,7 +1808,8 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7410",
@@ -1669,7 +1820,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4502",
@@ -1680,7 +1832,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6202",
@@ -1691,7 +1844,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7069",
@@ -1702,7 +1856,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5555",
@@ -1713,7 +1868,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6632",
@@ -1724,7 +1880,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7240",
@@ -1735,7 +1892,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5838",
@@ -1746,7 +1904,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4845",
@@ -1756,8 +1915,9 @@
     "quotazione": 5,
     "fvm": 12,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 75
   },
   {
     "id": "fd5578",
@@ -1768,7 +1928,8 @@
     "fvm": 12,
     "status": "infortunato",
     "status_note": "infortunio: Lungo stop, ipotizziamo un rientro dalla fine di novembre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7175",
@@ -1779,7 +1940,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7326",
@@ -1790,7 +1952,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7564",
@@ -1801,7 +1964,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6990",
@@ -1812,7 +1976,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6766",
@@ -1823,7 +1988,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4263",
@@ -1834,7 +2000,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6821",
@@ -1845,7 +2012,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5751",
@@ -1856,7 +2024,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd2169",
@@ -1867,7 +2036,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd4147",
@@ -1878,7 +2048,8 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6659",
@@ -1889,7 +2060,8 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6046",
@@ -1899,8 +2071,9 @@
     "quotazione": 7,
     "fvm": 11,
     "status": "infortunato",
-    "status_note": "infortunio: pronto a tornare in campo dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_note": "infortunio: pronto a tornare in campo dalla fine di ottobre.",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7563",
@@ -1911,7 +2084,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6925",
@@ -1920,9 +2094,10 @@
     "serie_a_team": "Udinese",
     "quotazione": 2,
     "fvm": 11,
-    "status": "panchina",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd4705",
@@ -1933,7 +2108,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6896",
@@ -1944,7 +2120,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7131",
@@ -1955,7 +2132,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5695",
@@ -1966,7 +2144,8 @@
     "fvm": 10,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd5449",
@@ -1977,7 +2156,8 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: punta a tornare convocabile da novembre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6238",
@@ -1988,7 +2168,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7068",
@@ -1999,7 +2180,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd5851",
@@ -2010,7 +2192,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7014",
@@ -2021,7 +2204,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5831",
@@ -2032,7 +2216,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd5307",
@@ -2043,7 +2228,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd6631",
@@ -2054,7 +2240,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd4374",
@@ -2065,7 +2252,8 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: da valutare il rientro dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd5820",
@@ -2076,7 +2264,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd5527",
@@ -2087,7 +2276,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7538",
@@ -2098,7 +2288,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7255",
@@ -2108,8 +2299,9 @@
     "quotazione": 4,
     "fvm": 10,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7537",
@@ -2120,7 +2312,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd4378",
@@ -2131,7 +2324,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6892",
@@ -2142,7 +2336,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6021",
@@ -2151,9 +2346,10 @@
     "serie_a_team": "Udinese",
     "quotazione": 3,
     "fvm": 10,
-    "status": "titolare",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd256",
@@ -2164,7 +2360,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5481",
@@ -2175,7 +2372,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7599",
@@ -2186,7 +2384,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd5742",
@@ -2197,7 +2396,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd6047",
@@ -2208,7 +2408,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd4925",
@@ -2219,7 +2420,8 @@
     "fvm": 9,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4751",
@@ -2230,7 +2432,8 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd2640",
@@ -2241,7 +2444,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7532",
@@ -2252,7 +2456,8 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd4375",
@@ -2263,7 +2468,8 @@
     "fvm": 8,
     "status": "infortunato",
     "status_note": "infortunio: da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Napoli.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd5603",
@@ -2274,7 +2480,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7312",
@@ -2283,9 +2490,10 @@
     "serie_a_team": "Udinese",
     "quotazione": 3,
     "fvm": 8,
-    "status": "infortunato",
-    "status_note": "infortunio: Condizioni da valutare, ma dovrebbe tornare convocabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd5757",
@@ -2296,7 +2504,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd6638",
@@ -2307,7 +2516,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7202",
@@ -2318,7 +2528,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7154",
@@ -2329,7 +2540,8 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd6601",
@@ -2340,7 +2552,8 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd7605",
@@ -2351,7 +2564,8 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd7260",
@@ -2362,7 +2576,8 @@
     "fvm": 8,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6985",
@@ -2373,7 +2588,8 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: punta a tornare convocabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6673",
@@ -2384,7 +2600,8 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: recuperabile da fine ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd2728",
@@ -2395,7 +2612,8 @@
     "fvm": 7,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7478",
@@ -2406,7 +2624,8 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: Lungo stop e rientro dalla metà di dicembre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6890",
@@ -2417,7 +2636,8 @@
     "fvm": 6,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7540",
@@ -2428,7 +2648,8 @@
     "fvm": 6,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd7483",
@@ -2439,7 +2660,8 @@
     "fvm": 6,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd2263",
@@ -2450,7 +2672,8 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5498",
@@ -2461,7 +2684,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd6977",
@@ -2472,7 +2696,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd791",
@@ -2483,7 +2708,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd252",
@@ -2494,7 +2720,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7548",
@@ -2505,7 +2732,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd5994",
@@ -2515,8 +2743,9 @@
     "quotazione": 3,
     "fvm": 5,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7182",
@@ -2527,7 +2756,8 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd6537",
@@ -2538,7 +2768,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd6883",
@@ -2549,7 +2780,8 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7525",
@@ -2560,7 +2792,8 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd6681",
@@ -2571,7 +2804,8 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd487",
@@ -2582,7 +2816,8 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd6039",
@@ -2593,7 +2828,8 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd7476",
@@ -2604,7 +2840,8 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5812",
@@ -2615,7 +2852,8 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd7573",
@@ -2626,7 +2864,8 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd7125",
@@ -2637,7 +2876,8 @@
     "fvm": 3,
     "status": "infortunato",
     "status_note": "infortunio: può tornare arruolabile dalla fine di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7413",
@@ -2648,7 +2888,8 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd6809",
@@ -2659,7 +2900,8 @@
     "fvm": 3,
     "status": "infortunato",
     "status_note": "infortunio: Stop di circa due mesi, rientro dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd294",
@@ -2670,7 +2912,8 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd6149",
@@ -2681,7 +2924,8 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd5399",
@@ -2692,7 +2936,8 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd6826",
@@ -2703,7 +2948,8 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd327",
@@ -2714,7 +2960,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd418",
@@ -2725,7 +2972,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd5424",
@@ -2736,7 +2984,8 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7156",
@@ -2747,7 +2996,8 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: ipotizziamo possa tornare convocabile da fine ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7454",
@@ -2758,7 +3008,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd7553",
@@ -2769,7 +3020,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7604",
@@ -2780,7 +3032,8 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7615",
@@ -2790,8 +3043,9 @@
     "quotazione": 2,
     "fvm": 1,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd6875",
@@ -2802,7 +3056,8 @@
     "fvm": 250,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2194",
@@ -2813,7 +3068,8 @@
     "fvm": 242,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4777",
@@ -2824,7 +3080,8 @@
     "fvm": 190,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7126",
@@ -2835,7 +3092,8 @@
     "fvm": 155,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd2167",
@@ -2846,7 +3104,8 @@
     "fvm": 152,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd2379",
@@ -2857,7 +3116,8 @@
     "fvm": 142,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2423",
@@ -2868,7 +3128,8 @@
     "fvm": 140,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2848",
@@ -2879,7 +3140,8 @@
     "fvm": 120,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2517",
@@ -2889,8 +3151,9 @@
     "quotazione": 17,
     "fvm": 103,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd7556",
@@ -2901,7 +3164,8 @@
     "fvm": 100,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd632",
@@ -2912,7 +3176,8 @@
     "fvm": 92,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5559",
@@ -2923,7 +3188,8 @@
     "fvm": 85,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd1870",
@@ -2934,7 +3200,8 @@
     "fvm": 81,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2766",
@@ -2945,7 +3212,8 @@
     "fvm": 75,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6908",
@@ -2956,7 +3224,8 @@
     "fvm": 72,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4973",
@@ -2967,7 +3236,8 @@
     "fvm": 70,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6884",
@@ -2978,7 +3248,8 @@
     "fvm": 69,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5687",
@@ -2989,7 +3260,8 @@
     "fvm": 65,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6684",
@@ -3000,7 +3272,8 @@
     "fvm": 57,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5792",
@@ -3011,7 +3284,8 @@
     "fvm": 50,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4179",
@@ -3022,7 +3296,8 @@
     "fvm": 48,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7625",
@@ -3033,7 +3308,8 @@
     "fvm": 47,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7314",
@@ -3044,7 +3320,8 @@
     "fvm": 45,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2606",
@@ -3055,7 +3332,8 @@
     "fvm": 45,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd1850",
@@ -3066,7 +3344,8 @@
     "fvm": 44,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd5800",
@@ -3077,7 +3356,8 @@
     "fvm": 44,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5119",
@@ -3088,7 +3368,8 @@
     "fvm": 43,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6274",
@@ -3099,7 +3380,8 @@
     "fvm": 43,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5172",
@@ -3110,7 +3392,8 @@
     "fvm": 42,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd152",
@@ -3121,7 +3404,8 @@
     "fvm": 42,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 75
   },
   {
     "id": "fd7436",
@@ -3132,7 +3416,8 @@
     "fvm": 42,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 75
   },
   {
     "id": "fd536",
@@ -3143,7 +3428,8 @@
     "fvm": 40,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6618",
@@ -3154,7 +3440,8 @@
     "fvm": 40,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7078",
@@ -3165,7 +3452,8 @@
     "fvm": 39,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6844",
@@ -3176,7 +3464,8 @@
     "fvm": 39,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5589",
@@ -3187,7 +3476,8 @@
     "fvm": 38,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6372",
@@ -3198,7 +3488,8 @@
     "fvm": 37,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd4220",
@@ -3208,8 +3499,9 @@
     "quotazione": 10,
     "fvm": 35,
     "status": "infortunato",
-    "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-21"
+    "status_note": "infortunio: rimane da valutare nei prossimi allenamenti in vista della gara contro il Frosinone alla ripresa del campionato.",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd1933",
@@ -3220,7 +3512,8 @@
     "fvm": 35,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7223",
@@ -3231,7 +3524,8 @@
     "fvm": 34,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5844",
@@ -3242,7 +3536,8 @@
     "fvm": 33,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd6151",
@@ -3253,7 +3548,8 @@
     "fvm": 33,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd4892",
@@ -3264,7 +3560,8 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6666",
@@ -3275,7 +3572,8 @@
     "fvm": 31,
     "status": "infortunato",
     "status_note": "infortunio: Da valutare nella sosta in vista della 6a giornata di campionato, a rischio la sua presenza a San Siro contro l'Inter.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd4364",
@@ -3286,7 +3584,8 @@
     "fvm": 30,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd779",
@@ -3297,7 +3596,8 @@
     "fvm": 29,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7412",
@@ -3308,7 +3608,8 @@
     "fvm": 28,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7060",
@@ -3319,7 +3620,8 @@
     "fvm": 28,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6010",
@@ -3330,7 +3632,8 @@
     "fvm": 28,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7472",
@@ -3341,7 +3644,8 @@
     "fvm": 27,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7129",
@@ -3352,7 +3656,8 @@
     "fvm": 26,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd184",
@@ -3363,7 +3668,8 @@
     "fvm": 26,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd827",
@@ -3374,7 +3680,8 @@
     "fvm": 25,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6827",
@@ -3385,7 +3692,8 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd5735",
@@ -3396,7 +3704,8 @@
     "fvm": 25,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Milan.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd4436",
@@ -3407,7 +3716,8 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5680",
@@ -3418,7 +3728,8 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5823",
@@ -3429,7 +3740,8 @@
     "fvm": 24,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5888",
@@ -3440,7 +3752,8 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7551",
@@ -3451,7 +3764,8 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5858",
@@ -3462,7 +3776,8 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4287",
@@ -3473,7 +3788,8 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6833",
@@ -3483,8 +3799,9 @@
     "quotazione": 8,
     "fvm": 22,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd4479",
@@ -3495,7 +3812,8 @@
     "fvm": 22,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd6398",
@@ -3506,7 +3824,8 @@
     "fvm": 22,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5500",
@@ -3517,7 +3836,8 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7618",
@@ -3528,7 +3848,8 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7619",
@@ -3539,7 +3860,8 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd2077",
@@ -3550,7 +3872,8 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7311",
@@ -3561,7 +3884,8 @@
     "fvm": 21,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5562",
@@ -3572,7 +3896,8 @@
     "fvm": 20,
     "status": "infortunato",
     "status_note": "infortunio: Lungo stop, ipotizziamo un rientro da gennaio.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd795",
@@ -3583,7 +3908,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd4856",
@@ -3594,7 +3920,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7070",
@@ -3605,7 +3932,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd530",
@@ -3616,7 +3944,8 @@
     "fvm": 20,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd6717",
@@ -3627,7 +3956,8 @@
     "fvm": 20,
     "status": "infortunato",
     "status_note": "infortunio: Operato, punta a tornare in campo da dicembre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6680",
@@ -3638,7 +3968,8 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5685",
@@ -3649,7 +3980,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7624",
@@ -3660,7 +3992,8 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5791",
@@ -3671,7 +4004,8 @@
     "fvm": 19,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6549",
@@ -3682,7 +4016,8 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5674",
@@ -3693,7 +4028,8 @@
     "fvm": 19,
     "status": "infortunato",
     "status_note": "infortunio: rimane da valutare quotidianamente in vista della 6a giornata di campionato contro l'Atalanta.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6190",
@@ -3704,7 +4040,8 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6294",
@@ -3715,7 +4052,8 @@
     "fvm": 18,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4465",
@@ -3726,7 +4064,8 @@
     "fvm": 18,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5422",
@@ -3735,9 +4074,10 @@
     "serie_a_team": "Atalanta",
     "quotazione": 7,
     "fvm": 18,
-    "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd7464",
@@ -3748,7 +4088,8 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7535",
@@ -3759,7 +4100,8 @@
     "fvm": 18,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6678",
@@ -3770,7 +4112,8 @@
     "fvm": 17,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd5504",
@@ -3781,7 +4124,8 @@
     "fvm": 17,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6252",
@@ -3792,7 +4136,8 @@
     "fvm": 17,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4349",
@@ -3803,7 +4148,8 @@
     "fvm": 16,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd4459",
@@ -3814,7 +4160,8 @@
     "fvm": 16,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6677",
@@ -3825,7 +4172,8 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5295",
@@ -3836,7 +4184,8 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd2765",
@@ -3845,9 +4194,10 @@
     "serie_a_team": "Bologna",
     "quotazione": 8,
     "fvm": 15,
-    "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status": "infortunato",
+    "status_note": "infortunio: recuperabile dalla seconda metà di ottobre.",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd4199",
@@ -3858,7 +4208,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd5878",
@@ -3869,7 +4220,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd2741",
@@ -3880,7 +4232,8 @@
     "fvm": 15,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da monitorare, ma proverà a tornare arruolabile dall'inizio di novembre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6898",
@@ -3891,7 +4244,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2528",
@@ -3902,7 +4256,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4260",
@@ -3913,7 +4268,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6994",
@@ -3924,7 +4280,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4911",
@@ -3935,7 +4292,8 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5761",
@@ -3946,7 +4304,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6020",
@@ -3957,7 +4316,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6783",
@@ -3968,7 +4328,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7198",
@@ -3979,7 +4340,8 @@
     "fvm": 14,
     "status": "infortunato",
     "status_note": "infortunio: Osservato un periodo di riposo, potrà tornare alla regolare attività agonistica (ipotizziamo da fine ottobre).",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd5946",
@@ -3990,7 +4352,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7146",
@@ -4001,7 +4364,8 @@
     "fvm": 14,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7036",
@@ -4012,7 +4376,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd5507",
@@ -4023,7 +4388,8 @@
     "fvm": 14,
     "status": "infortunato",
     "status_note": "infortunio: Rientro dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6054",
@@ -4034,7 +4400,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd4870",
@@ -4045,7 +4412,8 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6629",
@@ -4056,7 +4424,8 @@
     "fvm": 13,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd6506",
@@ -4067,7 +4436,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7203",
@@ -4078,7 +4448,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5036",
@@ -4089,7 +4460,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5298",
@@ -4100,7 +4472,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7322",
@@ -4111,7 +4484,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6218",
@@ -4122,7 +4496,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd6015",
@@ -4133,7 +4508,8 @@
     "fvm": 12,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Bologna.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6170",
@@ -4144,7 +4520,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd5301",
@@ -4155,7 +4532,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd5998",
@@ -4166,7 +4544,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd333",
@@ -4177,7 +4556,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7536",
@@ -4188,7 +4568,8 @@
     "fvm": 12,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7208",
@@ -4199,7 +4580,8 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6895",
@@ -4210,7 +4592,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7473",
@@ -4221,7 +4604,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6815",
@@ -4232,7 +4616,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7248",
@@ -4243,7 +4628,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7575",
@@ -4254,7 +4640,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd7579",
@@ -4265,7 +4652,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5453",
@@ -4276,7 +4664,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd6593",
@@ -4287,7 +4676,8 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4947",
@@ -4298,7 +4688,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5319",
@@ -4309,7 +4700,8 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6207",
@@ -4320,7 +4712,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7409",
@@ -4331,7 +4724,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd2857",
@@ -4342,7 +4736,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7341",
@@ -4353,7 +4748,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7528",
@@ -4364,7 +4760,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7318",
@@ -4375,7 +4772,8 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: da valutare convocazione per la prossima giornata di campionato contro il Bologna.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7550",
@@ -4386,7 +4784,8 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: Out anche nella sfida successiva contro il Como, da valutare nei prossimi allenamenti le possibilità di convocazione già nella trasferta di Napoli alla ripresa del campionato.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7127",
@@ -4397,7 +4796,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd6225",
@@ -4408,7 +4808,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd5131",
@@ -4419,7 +4820,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd22",
@@ -4430,7 +4832,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd5007",
@@ -4441,7 +4844,8 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7138",
@@ -4452,7 +4856,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd2529",
@@ -4463,7 +4868,8 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd6005",
@@ -4474,7 +4880,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd6206",
@@ -4485,7 +4892,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd1871",
@@ -4496,7 +4904,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd4970",
@@ -4507,7 +4916,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6917",
@@ -4518,7 +4928,8 @@
     "fvm": 8,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd801",
@@ -4529,7 +4940,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7232",
@@ -4540,7 +4952,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6640",
@@ -4551,7 +4964,8 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: Verrà operato e costretto a un lungo stop (ipotizziamo un rientro da marzo).",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6503",
@@ -4562,7 +4976,8 @@
     "fvm": 7,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd6024",
@@ -4573,7 +4988,8 @@
     "fvm": 7,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd5457",
@@ -4584,7 +5000,8 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6241",
@@ -4595,7 +5012,8 @@
     "fvm": 6,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd5880",
@@ -4606,7 +5024,8 @@
     "fvm": 6,
     "status": "infortunato",
     "status_note": "infortunio: Da valutare.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7418",
@@ -4617,7 +5036,8 @@
     "fvm": 6,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7183",
@@ -4628,7 +5048,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd6903",
@@ -4639,7 +5060,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd6219",
@@ -4650,7 +5072,8 @@
     "fvm": 5,
     "status": "infortunato",
     "status_note": "infortunio: Da valutare rientro da metà ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6246",
@@ -4661,7 +5084,8 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7345",
@@ -4672,7 +5096,8 @@
     "fvm": 5,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7092",
@@ -4683,7 +5108,8 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7477",
@@ -4694,7 +5120,8 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd6980",
@@ -4705,7 +5132,8 @@
     "fvm": 4,
     "status": "infortunato",
     "status_note": "infortunio: Di certo assente nel prossimo turno di campionato, ipotesi di rientro da fine ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd526",
@@ -4716,7 +5144,8 @@
     "fvm": 4,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd6212",
@@ -4727,7 +5156,8 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd5872",
@@ -4738,7 +5168,8 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6191",
@@ -4749,7 +5180,8 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5725",
@@ -4760,7 +5192,8 @@
     "fvm": 3,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7276",
@@ -4771,7 +5204,8 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 35
   },
   {
     "id": "fd6410",
@@ -4782,7 +5216,8 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd7574",
@@ -4793,7 +5228,8 @@
     "fvm": 2,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7456",
@@ -4804,7 +5240,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd7165",
@@ -4815,7 +5252,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 20
   },
   {
     "id": "fd7357",
@@ -4826,7 +5264,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7319",
@@ -4837,7 +5276,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 25
   },
   {
     "id": "fd7481",
@@ -4848,7 +5288,8 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno a Bergamo.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6592",
@@ -4859,7 +5300,8 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7571",
@@ -4870,7 +5312,8 @@
     "fvm": 1,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7572",
@@ -4881,7 +5324,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 10%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 10
   },
   {
     "id": "fd5462",
@@ -4892,7 +5336,8 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7628",
@@ -4903,7 +5348,8 @@
     "fvm": 1,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5585",
@@ -4914,7 +5360,8 @@
     "fvm": 445,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd2764",
@@ -4925,7 +5372,8 @@
     "fvm": 390,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6052",
@@ -4936,7 +5384,8 @@
     "fvm": 285,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4871",
@@ -4947,7 +5396,8 @@
     "fvm": 260,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6397",
@@ -4958,7 +5408,8 @@
     "fvm": 232,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2097",
@@ -4969,7 +5420,8 @@
     "fvm": 185,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7017",
@@ -4980,7 +5432,8 @@
     "fvm": 180,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5951",
@@ -4991,7 +5444,8 @@
     "fvm": 143,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6752",
@@ -5002,7 +5456,8 @@
     "fvm": 140,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5637",
@@ -5013,7 +5468,8 @@
     "fvm": 113,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd309",
@@ -5024,7 +5480,8 @@
     "fvm": 110,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd531",
@@ -5035,7 +5492,8 @@
     "fvm": 108,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7071",
@@ -5046,7 +5504,8 @@
     "fvm": 105,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd2137",
@@ -5057,7 +5516,8 @@
     "fvm": 100,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd6435",
@@ -5068,7 +5528,8 @@
     "fvm": 96,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5995",
@@ -5079,7 +5540,8 @@
     "fvm": 92,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6434",
@@ -5090,7 +5552,8 @@
     "fvm": 80,
     "status": "infortunato",
     "status_note": "infortunio: Ipotesi di rientro in campo da fine novembre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6060",
@@ -5101,7 +5564,8 @@
     "fvm": 80,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2061",
@@ -5112,7 +5576,8 @@
     "fvm": 74,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6572",
@@ -5123,7 +5588,8 @@
     "fvm": 70,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd6967",
@@ -5134,7 +5600,8 @@
     "fvm": 70,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4371",
@@ -5145,7 +5612,8 @@
     "fvm": 67,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7351",
@@ -5156,7 +5624,8 @@
     "fvm": 58,
     "status": "infortunato",
     "status_note": "infortunio: Proverà a tornare arruolabile dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd4923",
@@ -5167,7 +5636,8 @@
     "fvm": 55,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 75
   },
   {
     "id": "fd5436",
@@ -5178,7 +5648,8 @@
     "fvm": 55,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd5734",
@@ -5189,7 +5660,8 @@
     "fvm": 54,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd2038",
@@ -5200,7 +5672,8 @@
     "fvm": 52,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6675",
@@ -5209,9 +5682,10 @@
     "serie_a_team": "Bologna",
     "quotazione": 16,
     "fvm": 50,
-    "status": "infortunato",
-    "status_note": "infortunio: Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti la convocazione già per Lecce.",
-    "status_updated_at": "2026-09-21"
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7023",
@@ -5222,7 +5696,8 @@
     "fvm": 50,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd4359",
@@ -5233,7 +5708,8 @@
     "fvm": 50,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd5694",
@@ -5244,7 +5720,8 @@
     "fvm": 47,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7523",
@@ -5255,7 +5732,8 @@
     "fvm": 36,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4463",
@@ -5266,7 +5744,8 @@
     "fvm": 35,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6229",
@@ -5277,7 +5756,8 @@
     "fvm": 34,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7600",
@@ -5288,7 +5768,8 @@
     "fvm": 34,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7484",
@@ -5299,7 +5780,8 @@
     "fvm": 33,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7554",
@@ -5310,7 +5792,8 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 85
   },
   {
     "id": "fd7347",
@@ -5321,7 +5804,8 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6646",
@@ -5332,7 +5816,8 @@
     "fvm": 31,
     "status": "infortunato",
     "status_note": "infortunio: Punta a recuperare nella sosta, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Udinese.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7547",
@@ -5343,7 +5828,8 @@
     "fvm": 30,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6904",
@@ -5354,7 +5840,8 @@
     "fvm": 30,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6204",
@@ -5365,7 +5852,8 @@
     "fvm": 30,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd2832",
@@ -5376,7 +5864,8 @@
     "fvm": 27,
     "status": "infortunato",
     "status_note": "infortunio: ipotizziamo un possibile rientro dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd6530",
@@ -5387,7 +5876,8 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd4896",
@@ -5398,7 +5888,8 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd7623",
@@ -5409,7 +5900,8 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd5029",
@@ -5420,7 +5912,8 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd2155",
@@ -5431,7 +5924,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd6519",
@@ -5442,7 +5936,8 @@
     "fvm": 20,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd6831",
@@ -5453,7 +5948,8 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7620",
@@ -5464,7 +5960,8 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7561",
@@ -5475,7 +5972,8 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7612",
@@ -5486,7 +5984,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd6669",
@@ -5497,7 +5996,8 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd7120",
@@ -5508,7 +6008,8 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7374",
@@ -5519,7 +6020,8 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 90
   },
   {
     "id": "fd6145",
@@ -5530,7 +6032,8 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7449",
@@ -5541,7 +6044,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6164",
@@ -5552,7 +6056,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd608",
@@ -5563,7 +6068,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7001",
@@ -5574,7 +6080,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd6215",
@@ -5585,7 +6092,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7546",
@@ -5596,7 +6104,8 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 80
   },
   {
     "id": "fd7252",
@@ -5607,7 +6116,8 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd7342",
@@ -5618,7 +6128,8 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd5336",
@@ -5629,7 +6140,8 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd7602",
@@ -5640,7 +6152,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 55
   },
   {
     "id": "fd6556",
@@ -5651,7 +6164,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 70
   },
   {
     "id": "fd5882",
@@ -5662,7 +6176,8 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7610",
@@ -5673,7 +6188,8 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd6822",
@@ -5684,7 +6200,8 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: ipotizziamo un possibile rientro dalla fine di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7349",
@@ -5695,7 +6212,8 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7272",
@@ -5706,7 +6224,8 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 60
   },
   {
     "id": "fd7213",
@@ -5717,7 +6236,8 @@
     "fvm": 6,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 50
   },
   {
     "id": "fd4387",
@@ -5728,7 +6248,8 @@
     "fvm": 5,
     "status": "infortunato",
     "status_note": "infortunio: Tentativo di rientro da metà ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd5918",
@@ -5739,7 +6260,8 @@
     "fvm": 5,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Venezia.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7453",
@@ -5750,7 +6272,8 @@
     "fvm": 5,
     "status": "infortunato",
     "status_note": "infortunio: dovrebbe tornare arruolabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7627",
@@ -5761,7 +6284,8 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 30
   },
   {
     "id": "fd2012",
@@ -5772,7 +6296,8 @@
     "fvm": 3,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7162",
@@ -5783,7 +6308,8 @@
     "fvm": 3,
     "status": "infortunato",
     "status_note": "infortunio: ma rimane da valutare quotidianamente in vista della ripresa del campionato",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7161",
@@ -5794,7 +6320,8 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7622",
@@ -5805,7 +6332,8 @@
     "fvm": 2,
     "status": "n/d",
     "status_note": "",
-    "status_updated_at": ""
+    "status_updated_at": "",
+    "prob_titolare": null
   },
   {
     "id": "fd7317",
@@ -5816,7 +6344,8 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: Da metà settembre ha avuto l'ok per riprendere l'attività agonistica, potrebbe ora tornare convocabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": null
   },
   {
     "id": "fd7408",
@@ -5827,7 +6356,8 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 15%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 15
   },
   {
     "id": "fd7482",
@@ -5838,7 +6368,8 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 40
   },
   {
     "id": "fd7568",
@@ -5849,6 +6380,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 10%",
-    "status_updated_at": "2026-09-21"
+    "status_updated_at": "2026-09-24",
+    "prob_titolare": 10
   }
 ]

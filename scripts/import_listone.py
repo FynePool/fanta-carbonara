@@ -58,6 +58,7 @@ def main():
                     "status": prev.get("status", "n/d"),
                     "status_note": prev.get("status_note", ""),
                     "status_updated_at": prev.get("status_updated_at", ""),
+                    "prob_titolare": prev.get("prob_titolare"),
                 }
             )
 

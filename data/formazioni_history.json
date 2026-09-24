@@ -3538,5 +3538,3552 @@
         ]
       }
     ]
+  },
+  {
+    "scraped_at": "2026-09-24T16:40:42.235855+00:00",
+    "source": "https://www.fantacalcio.it/probabili-formazioni-serie-a/",
+    "teams": [
+      {
+        "serie_a_team": "Genoa",
+        "modulo": "3-5-2",
+        "titolari": [
+          {
+            "name": "Bijlow",
+            "role": "P",
+            "fantacalcio_it_id": "7332",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Marcandalli",
+            "role": "D",
+            "fantacalcio_it_id": "6660",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ostigard",
+            "role": "D",
+            "fantacalcio_it_id": "5750",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Vasquez",
+            "role": "D",
+            "fantacalcio_it_id": "5514",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ehizibue",
+            "role": "D",
+            "fantacalcio_it_id": "6047",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Frendrup",
+            "role": "C",
+            "fantacalcio_it_id": "5791",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Sow",
+            "role": "C",
+            "fantacalcio_it_id": "5946",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Baldanzi",
+            "role": "C",
+            "fantacalcio_it_id": "5823",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ellertsson",
+            "role": "C",
+            "fantacalcio_it_id": "6020",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Colombo",
+            "role": "A",
+            "fantacalcio_it_id": "4923",
+            "percentuale": 75,
+            "status": "titolare"
+          },
+          {
+            "name": "Osmajic",
+            "role": "A",
+            "fantacalcio_it_id": "7600",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Stolz",
+            "role": "P",
+            "fantacalcio_it_id": "6569",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Sommariva",
+            "role": "P",
+            "fantacalcio_it_id": "219",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Mitaj",
+            "role": "D",
+            "fantacalcio_it_id": "7537",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Puczka",
+            "role": "D",
+            "fantacalcio_it_id": "7413",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Sabelli",
+            "role": "D",
+            "fantacalcio_it_id": "791",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Drameh",
+            "role": "D",
+            "fantacalcio_it_id": "5742",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Otoa",
+            "role": "D",
+            "fantacalcio_it_id": "6977",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Amorim",
+            "role": "C",
+            "fantacalcio_it_id": "7341",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Traorè Hj.",
+            "role": "C",
+            "fantacalcio_it_id": "2857",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Meichtry",
+            "role": "C",
+            "fantacalcio_it_id": "7409",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "El Shaarawy",
+            "role": "C",
+            "fantacalcio_it_id": "795",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Wiafe",
+            "role": "C",
+            "fantacalcio_it_id": "7608",
+            "percentuale": 15,
+            "status": "panchina"
+          },
+          {
+            "name": "Messias",
+            "role": "C",
+            "fantacalcio_it_id": "4970",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Vitinha O.",
+            "role": "A",
+            "fantacalcio_it_id": "6164",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Fiorentina",
+        "modulo": "4-3-2-1",
+        "titolari": [
+          {
+            "name": "De Gea",
+            "role": "P",
+            "fantacalcio_it_id": "2521",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Jimenez A.",
+            "role": "D",
+            "fantacalcio_it_id": "6531",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Dragusin",
+            "role": "D",
+            "fantacalcio_it_id": "5365",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ranieri L.",
+            "role": "D",
+            "fantacalcio_it_id": "4378",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Viery",
+            "role": "D",
+            "fantacalcio_it_id": "7410",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ndour",
+            "role": "C",
+            "fantacalcio_it_id": "6294",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Fagioli",
+            "role": "C",
+            "fantacalcio_it_id": "4465",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Atta",
+            "role": "C",
+            "fantacalcio_it_id": "6908",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Mastantuono",
+            "role": "C",
+            "fantacalcio_it_id": "7078",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Njie",
+            "role": "C",
+            "fantacalcio_it_id": "6827",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Pellegrino M.",
+            "role": "A",
+            "fantacalcio_it_id": "7023",
+            "percentuale": 70,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Christensen O.",
+            "role": "P",
+            "fantacalcio_it_id": "6403",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Lezzerini",
+            "role": "P",
+            "fantacalcio_it_id": "158",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Joao Mario",
+            "role": "D",
+            "fantacalcio_it_id": "7175",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Dodò",
+            "role": "D",
+            "fantacalcio_it_id": "5885",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Pongracic",
+            "role": "D",
+            "fantacalcio_it_id": "5603",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Valdepenas",
+            "role": "D",
+            "fantacalcio_it_id": "7294",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Brescianini",
+            "role": "C",
+            "fantacalcio_it_id": "4947",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Oulai",
+            "role": "C",
+            "fantacalcio_it_id": "7464",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Goncalves P.",
+            "role": "C",
+            "fantacalcio_it_id": "7625",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Beto",
+            "role": "A",
+            "fantacalcio_it_id": "5694",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Gnonto",
+            "role": "A",
+            "fantacalcio_it_id": "7623",
+            "percentuale": 55,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Inter",
+        "modulo": "3-5-2",
+        "titolari": [
+          {
+            "name": "Martinez Jo.",
+            "role": "P",
+            "fantacalcio_it_id": "5116",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Bisseck",
+            "role": "D",
+            "fantacalcio_it_id": "6217",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Akanji",
+            "role": "D",
+            "fantacalcio_it_id": "4159",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Bastoni",
+            "role": "D",
+            "fantacalcio_it_id": "2120",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Diouf",
+            "role": "C",
+            "fantacalcio_it_id": "6274",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Barella",
+            "role": "C",
+            "fantacalcio_it_id": "1870",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Zielinski",
+            "role": "C",
+            "fantacalcio_it_id": "152",
+            "percentuale": 75,
+            "status": "titolare"
+          },
+          {
+            "name": "Jones C.",
+            "role": "C",
+            "fantacalcio_it_id": "5172",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Dimarco",
+            "role": "D",
+            "fantacalcio_it_id": "254",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Thuram",
+            "role": "A",
+            "fantacalcio_it_id": "4871",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Martinez L.",
+            "role": "A",
+            "fantacalcio_it_id": "2764",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Provedel",
+            "role": "P",
+            "fantacalcio_it_id": "2814",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Di Gennaro",
+            "role": "P",
+            "fantacalcio_it_id": "1926",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Pavard",
+            "role": "D",
+            "fantacalcio_it_id": "4177",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Spence",
+            "role": "D",
+            "fantacalcio_it_id": "5982",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Stones",
+            "role": "D",
+            "fantacalcio_it_id": "2514",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Carlos Augusto",
+            "role": "D",
+            "fantacalcio_it_id": "5877",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Luis Henrique",
+            "role": "C",
+            "fantacalcio_it_id": "5301",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Calhanoglu",
+            "role": "C",
+            "fantacalcio_it_id": "2194",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Mkhitaryan",
+            "role": "C",
+            "fantacalcio_it_id": "2529",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Sucic P.",
+            "role": "C",
+            "fantacalcio_it_id": "7070",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Stankovic A.",
+            "role": "C",
+            "fantacalcio_it_id": "6503",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Bonny",
+            "role": "A",
+            "fantacalcio_it_id": "6669",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Esposito F.P.",
+            "role": "A",
+            "fantacalcio_it_id": "7071",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Parma",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Corvi",
+            "role": "P",
+            "fantacalcio_it_id": "6662",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Delprato",
+            "role": "D",
+            "fantacalcio_it_id": "6664",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Troilo",
+            "role": "D",
+            "fantacalcio_it_id": "7235",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Diego Carlos",
+            "role": "D",
+            "fantacalcio_it_id": "4137",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Britschgi",
+            "role": "D",
+            "fantacalcio_it_id": "7255",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Sierro",
+            "role": "C",
+            "fantacalcio_it_id": "7628",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Keita M.",
+            "role": "C",
+            "fantacalcio_it_id": "6898",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Valeri",
+            "role": "D",
+            "fantacalcio_it_id": "5862",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Tourè E.",
+            "role": "A",
+            "fantacalcio_it_id": "6229",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Lontani",
+            "role": "A",
+            "fantacalcio_it_id": "7561",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Romero D.",
+            "role": "A",
+            "fantacalcio_it_id": "7554",
+            "percentuale": 85,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Daffara",
+            "role": "P",
+            "fantacalcio_it_id": "7411",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Ghidotti",
+            "role": "P",
+            "fantacalcio_it_id": "2874",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Drobnic",
+            "role": "D",
+            "fantacalcio_it_id": "7615",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Ndiaye",
+            "role": "D",
+            "fantacalcio_it_id": "7202",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Carboni F.",
+            "role": "D",
+            "fantacalcio_it_id": "6149",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Valenti",
+            "role": "D",
+            "fantacalcio_it_id": "5307",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Fabbian",
+            "role": "C",
+            "fantacalcio_it_id": "6206",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Cremaschi",
+            "role": "C",
+            "fantacalcio_it_id": "7276",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Konate A.",
+            "role": "C",
+            "fantacalcio_it_id": "7581",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Ordonez C.",
+            "role": "C",
+            "fantacalcio_it_id": "7138",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Diallo O.",
+            "role": "C",
+            "fantacalcio_it_id": "7536",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Almqvist",
+            "role": "C",
+            "fantacalcio_it_id": "6207",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Elphege",
+            "role": "A",
+            "fantacalcio_it_id": "7342",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Frigan",
+            "role": "A",
+            "fantacalcio_it_id": "7213",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "De Martis",
+            "role": "A",
+            "fantacalcio_it_id": "7568",
+            "percentuale": 10,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Napoli",
+        "modulo": "4-3-3",
+        "titolari": [
+          {
+            "name": "Milinkovic-Savic V.",
+            "role": "P",
+            "fantacalcio_it_id": "2170",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Di Lorenzo",
+            "role": "D",
+            "fantacalcio_it_id": "2816",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Rrahmani",
+            "role": "D",
+            "fantacalcio_it_id": "4409",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Marin R.",
+            "role": "D",
+            "fantacalcio_it_id": "6638",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Olivera",
+            "role": "D",
+            "fantacalcio_it_id": "5840",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Gilmour",
+            "role": "C",
+            "fantacalcio_it_id": "5131",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Lobotka",
+            "role": "C",
+            "fantacalcio_it_id": "4287",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "De Bruyne",
+            "role": "C",
+            "fantacalcio_it_id": "2517",
+            "percentuale": 85,
+            "status": "titolare"
+          },
+          {
+            "name": "Politano",
+            "role": "C",
+            "fantacalcio_it_id": "536",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Hojlund",
+            "role": "A",
+            "fantacalcio_it_id": "6052",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Lang",
+            "role": "A",
+            "fantacalcio_it_id": "7120",
+            "percentuale": 70,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Meret",
+            "role": "P",
+            "fantacalcio_it_id": "572",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Contini",
+            "role": "P",
+            "fantacalcio_it_id": "2845",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Favasuli",
+            "role": "D",
+            "fantacalcio_it_id": "7563",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Beukema",
+            "role": "D",
+            "fantacalcio_it_id": "6202",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Spinazzola",
+            "role": "D",
+            "fantacalcio_it_id": "1852",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Badiashile",
+            "role": "D",
+            "fantacalcio_it_id": "4664",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "McTominay",
+            "role": "C",
+            "fantacalcio_it_id": "4777",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Vergara",
+            "role": "C",
+            "fantacalcio_it_id": "7223",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Neres",
+            "role": "A",
+            "fantacalcio_it_id": "6831",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Lucca",
+            "role": "A",
+            "fantacalcio_it_id": "6215",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Frosinone",
+        "modulo": "4-2-3-1",
+        "titolari": [
+          {
+            "name": "Palmisani",
+            "role": "P",
+            "fantacalcio_it_id": "6415",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Oyono A.",
+            "role": "D",
+            "fantacalcio_it_id": "6238",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Calvani",
+            "role": "D",
+            "fantacalcio_it_id": "7467",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Monterisi",
+            "role": "D",
+            "fantacalcio_it_id": "4952",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Bracaglia",
+            "role": "D",
+            "fantacalcio_it_id": "7469",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Calò",
+            "role": "C",
+            "fantacalcio_it_id": "7472",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Masini",
+            "role": "C",
+            "fantacalcio_it_id": "6917",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ghedjemis",
+            "role": "A",
+            "fantacalcio_it_id": "6530",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Schmid",
+            "role": "C",
+            "fantacalcio_it_id": "7551",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Kvernadze",
+            "role": "A",
+            "fantacalcio_it_id": "6204",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Raimondo",
+            "role": "A",
+            "fantacalcio_it_id": "5436",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Desplanches",
+            "role": "P",
+            "fantacalcio_it_id": "7463",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Pisseri",
+            "role": "P",
+            "fantacalcio_it_id": "7560",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Cittadini",
+            "role": "D",
+            "fantacalcio_it_id": "5757",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Tchato",
+            "role": "D",
+            "fantacalcio_it_id": "7605",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Omar Fayed",
+            "role": "D",
+            "fantacalcio_it_id": "7553",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Amey",
+            "role": "D",
+            "fantacalcio_it_id": "5424",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Akpoguma",
+            "role": "D",
+            "fantacalcio_it_id": "7540",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Fini",
+            "role": "C",
+            "fantacalcio_it_id": "6506",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Cichella",
+            "role": "C",
+            "fantacalcio_it_id": "7473",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Hasa",
+            "role": "C",
+            "fantacalcio_it_id": "6903",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "El Azzouzi A.",
+            "role": "C",
+            "fantacalcio_it_id": "7456",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Zerbin",
+            "role": "C",
+            "fantacalcio_it_id": "5998",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Birligea",
+            "role": "A",
+            "fantacalcio_it_id": "7610",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Bobcek",
+            "role": "A",
+            "fantacalcio_it_id": "7612",
+            "percentuale": 55,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Como",
+        "modulo": "4-2-3-1",
+        "titolari": [
+          {
+            "name": "Butez",
+            "role": "P",
+            "fantacalcio_it_id": "6966",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Couto",
+            "role": "D",
+            "fantacalcio_it_id": "6727",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Ramon",
+            "role": "D",
+            "fantacalcio_it_id": "6869",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Chalobah T.",
+            "role": "D",
+            "fantacalcio_it_id": "5641",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Valle",
+            "role": "D",
+            "fantacalcio_it_id": "6867",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Da Cunha",
+            "role": "C",
+            "fantacalcio_it_id": "5559",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Perrone",
+            "role": "C",
+            "fantacalcio_it_id": "6151",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Diao",
+            "role": "A",
+            "fantacalcio_it_id": "6967",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Paz N.",
+            "role": "C",
+            "fantacalcio_it_id": "6875",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Baturina",
+            "role": "C",
+            "fantacalcio_it_id": "7126",
+            "percentuale": 85,
+            "status": "titolare"
+          },
+          {
+            "name": "Kean",
+            "role": "A",
+            "fantacalcio_it_id": "2097",
+            "percentuale": 70,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Sanchez Ro.",
+            "role": "P",
+            "fantacalcio_it_id": "6344",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Vigorito",
+            "role": "P",
+            "fantacalcio_it_id": "2809",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Smolcic I.",
+            "role": "D",
+            "fantacalcio_it_id": "7014",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Kempf",
+            "role": "D",
+            "fantacalcio_it_id": "6893",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Kaiki",
+            "role": "D",
+            "fantacalcio_it_id": "7414",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Kambwala",
+            "role": "D",
+            "fantacalcio_it_id": "6601",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Dossena",
+            "role": "D",
+            "fantacalcio_it_id": "6230",
+            "percentuale": 15,
+            "status": "panchina"
+          },
+          {
+            "name": "Goldaniga",
+            "role": "D",
+            "fantacalcio_it_id": "418",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Milla",
+            "role": "C",
+            "fantacalcio_it_id": "7412",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Caqueret",
+            "role": "C",
+            "fantacalcio_it_id": "5036",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Ricci S.",
+            "role": "C",
+            "fantacalcio_it_id": "5453",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Addai",
+            "role": "C",
+            "fantacalcio_it_id": "7127",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Liberali",
+            "role": "C",
+            "fantacalcio_it_id": "6678",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Rodriguez Je.",
+            "role": "C",
+            "fantacalcio_it_id": "7129",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Douvikas",
+            "role": "A",
+            "fantacalcio_it_id": "7017",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Roma",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Svilar",
+            "role": "P",
+            "fantacalcio_it_id": "5841",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Mancini",
+            "role": "D",
+            "fantacalcio_it_id": "2296",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Balerdi",
+            "role": "D",
+            "fantacalcio_it_id": "4705",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Hermoso",
+            "role": "D",
+            "fantacalcio_it_id": "4807",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Molina N.",
+            "role": "D",
+            "fantacalcio_it_id": "4998",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Konè M.",
+            "role": "C",
+            "fantacalcio_it_id": "5589",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Cristante",
+            "role": "C",
+            "fantacalcio_it_id": "779",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Wesley",
+            "role": "D",
+            "fantacalcio_it_id": "7181",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Soulè",
+            "role": "A",
+            "fantacalcio_it_id": "5734",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Dybala",
+            "role": "A",
+            "fantacalcio_it_id": "309",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Malen",
+            "role": "A",
+            "fantacalcio_it_id": "5585",
+            "percentuale": 80,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Gollini",
+            "role": "P",
+            "fantacalcio_it_id": "610",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "De Marzi",
+            "role": "P",
+            "fantacalcio_it_id": "7048",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "N'Dicka",
+            "role": "D",
+            "fantacalcio_it_id": "4317",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Lulli",
+            "role": "D",
+            "fantacalcio_it_id": "7599",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Koulierakis",
+            "role": "D",
+            "fantacalcio_it_id": "7529",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Rensch",
+            "role": "D",
+            "fantacalcio_it_id": "6986",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Ghilardi",
+            "role": "D",
+            "fantacalcio_it_id": "6631",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "De Roon",
+            "role": "C",
+            "fantacalcio_it_id": "22",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Pisilli",
+            "role": "C",
+            "fantacalcio_it_id": "6190",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Mora",
+            "role": "C",
+            "fantacalcio_it_id": "7556",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Pellegrini Lo.",
+            "role": "C",
+            "fantacalcio_it_id": "530",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Castro S.",
+            "role": "A",
+            "fantacalcio_it_id": "6572",
+            "percentuale": 55,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Lazio",
+        "modulo": "4-3-3",
+        "titolari": [
+          {
+            "name": "Mandas",
+            "role": "P",
+            "fantacalcio_it_id": "6482",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Floriani Mussolini",
+            "role": "D",
+            "fantacalcio_it_id": "7131",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Sutalo J.",
+            "role": "D",
+            "fantacalcio_it_id": "7580",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Provstgaard",
+            "role": "D",
+            "fantacalcio_it_id": "7012",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Tavares N.",
+            "role": "D",
+            "fantacalcio_it_id": "5620",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Frattesi",
+            "role": "C",
+            "fantacalcio_it_id": "2848",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Belahyane",
+            "role": "C",
+            "fantacalcio_it_id": "6191",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Taylor K.",
+            "role": "C",
+            "fantacalcio_it_id": "7314",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Cancellieri",
+            "role": "C",
+            "fantacalcio_it_id": "5500",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Noslin",
+            "role": "A",
+            "fantacalcio_it_id": "6556",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Zaccagni",
+            "role": "C",
+            "fantacalcio_it_id": "632",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Motta",
+            "role": "P",
+            "fantacalcio_it_id": "7337",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Renzetti",
+            "role": "P",
+            "fantacalcio_it_id": "7534",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Pedraza",
+            "role": "D",
+            "fantacalcio_it_id": "4817",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Doekhi",
+            "role": "D",
+            "fantacalcio_it_id": "6320",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Leite",
+            "role": "D",
+            "fantacalcio_it_id": "6319",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Lazzari",
+            "role": "D",
+            "fantacalcio_it_id": "2263",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Cataldi",
+            "role": "C",
+            "fantacalcio_it_id": "333",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Dele-Bashiru",
+            "role": "C",
+            "fantacalcio_it_id": "6629",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Isaksen",
+            "role": "C",
+            "fantacalcio_it_id": "6398",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Gudmundsson A.",
+            "role": "C",
+            "fantacalcio_it_id": "5800",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Pinamonti",
+            "role": "A",
+            "fantacalcio_it_id": "2038",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Monza",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Tornqvist",
+            "role": "P",
+            "fantacalcio_it_id": "7301",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Kouadio",
+            "role": "D",
+            "fantacalcio_it_id": "7238",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Lucchesi",
+            "role": "D",
+            "fantacalcio_it_id": "6659",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Carboni A.",
+            "role": "D",
+            "fantacalcio_it_id": "4925",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Birindelli",
+            "role": "D",
+            "fantacalcio_it_id": "5838",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Akinsanmiro",
+            "role": "C",
+            "fantacalcio_it_id": "6593",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Folorunsho",
+            "role": "C",
+            "fantacalcio_it_id": "6252",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Mangas",
+            "role": "D",
+            "fantacalcio_it_id": "7485",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Cutrone",
+            "role": "A",
+            "fantacalcio_it_id": "2155",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Robinson J.",
+            "role": "A",
+            "fantacalcio_it_id": "7546",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Varela G.",
+            "role": "A",
+            "fantacalcio_it_id": "7523",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Thiam",
+            "role": "P",
+            "fantacalcio_it_id": "4485",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Strajnar",
+            "role": "P",
+            "fantacalcio_it_id": "7475",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Antov",
+            "role": "D",
+            "fantacalcio_it_id": "5399",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Goglichidze",
+            "role": "D",
+            "fantacalcio_it_id": "6537",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Maye",
+            "role": "D",
+            "fantacalcio_it_id": "7604",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Bakoune",
+            "role": "D",
+            "fantacalcio_it_id": "7476",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Forson O.",
+            "role": "C",
+            "fantacalcio_it_id": "6592",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Foe Ondoa",
+            "role": "C",
+            "fantacalcio_it_id": "7574",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Colombo L.",
+            "role": "C",
+            "fantacalcio_it_id": "7477",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Mout",
+            "role": "C",
+            "fantacalcio_it_id": "7575",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Tourè I.",
+            "role": "C",
+            "fantacalcio_it_id": "7146",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Colpani",
+            "role": "C",
+            "fantacalcio_it_id": "5878",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Mota",
+            "role": "A",
+            "fantacalcio_it_id": "5882",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Ngonge",
+            "role": "A",
+            "fantacalcio_it_id": "6145",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Zeballos",
+            "role": "A",
+            "fantacalcio_it_id": "7620",
+            "percentuale": 55,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Lecce",
+        "modulo": "4-3-3",
+        "titolari": [
+          {
+            "name": "Falcone",
+            "role": "P",
+            "fantacalcio_it_id": "2134",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Veiga D.",
+            "role": "D",
+            "fantacalcio_it_id": "6990",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Gaspar K.",
+            "role": "D",
+            "fantacalcio_it_id": "6632",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Siebert",
+            "role": "D",
+            "fantacalcio_it_id": "7240",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Gallo",
+            "role": "D",
+            "fantacalcio_it_id": "4502",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Coulibaly L.",
+            "role": "C",
+            "fantacalcio_it_id": "5504",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Ilic",
+            "role": "C",
+            "fantacalcio_it_id": "5007",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Maleh",
+            "role": "C",
+            "fantacalcio_it_id": "5457",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Pierotti",
+            "role": "C",
+            "fantacalcio_it_id": "6549",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Stulic",
+            "role": "A",
+            "fantacalcio_it_id": "7252",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Monteiro J.",
+            "role": "C",
+            "fantacalcio_it_id": "7619",
+            "percentuale": 85,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Bleve",
+            "role": "P",
+            "fantacalcio_it_id": "4468",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Penev",
+            "role": "P",
+            "fantacalcio_it_id": "7557",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Ndaba",
+            "role": "D",
+            "fantacalcio_it_id": "7182",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Dembelè A.",
+            "role": "D",
+            "fantacalcio_it_id": "6826",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Jean",
+            "role": "D",
+            "fantacalcio_it_id": "6883",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Tiago Gabriel",
+            "role": "D",
+            "fantacalcio_it_id": "6989",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Gorter",
+            "role": "C",
+            "fantacalcio_it_id": "7248",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Ngom",
+            "role": "C",
+            "fantacalcio_it_id": "7322",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Kaba",
+            "role": "C",
+            "fantacalcio_it_id": "6410",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Fofana Sa.",
+            "role": "C",
+            "fantacalcio_it_id": "7319",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "N'Dri",
+            "role": "A",
+            "fantacalcio_it_id": "7001",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Esteban",
+            "role": "A",
+            "fantacalcio_it_id": "7647",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Geubbels",
+            "role": "A",
+            "fantacalcio_it_id": "5029",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Fatah",
+            "role": "A",
+            "fantacalcio_it_id": "7602",
+            "percentuale": 55,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Bologna",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Skorupski",
+            "role": "P",
+            "fantacalcio_it_id": "133",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Helland",
+            "role": "D",
+            "fantacalcio_it_id": "7326",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Heggem",
+            "role": "D",
+            "fantacalcio_it_id": "7212",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Theate",
+            "role": "D",
+            "fantacalcio_it_id": "5675",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Zortea",
+            "role": "D",
+            "fantacalcio_it_id": "4433",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Pobega",
+            "role": "C",
+            "fantacalcio_it_id": "5298",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Ferguson",
+            "role": "C",
+            "fantacalcio_it_id": "5858",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Miranda J.",
+            "role": "D",
+            "fantacalcio_it_id": "4734",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Orsolini",
+            "role": "C",
+            "fantacalcio_it_id": "2167",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Bernardeschi",
+            "role": "C",
+            "fantacalcio_it_id": "184",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Piccoli",
+            "role": "A",
+            "fantacalcio_it_id": "4359",
+            "percentuale": 80,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Pessina Mas.",
+            "role": "P",
+            "fantacalcio_it_id": "7172",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Happonen",
+            "role": "P",
+            "fantacalcio_it_id": "7533",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Alhassane",
+            "role": "D",
+            "fantacalcio_it_id": "7483",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Holm",
+            "role": "D",
+            "fantacalcio_it_id": "5678",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Vitik",
+            "role": "D",
+            "fantacalcio_it_id": "7068",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "De Silvestri",
+            "role": "D",
+            "fantacalcio_it_id": "487",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Casale",
+            "role": "D",
+            "fantacalcio_it_id": "5498",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Moro N.",
+            "role": "C",
+            "fantacalcio_it_id": "6054",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Amondarain",
+            "role": "C",
+            "fantacalcio_it_id": "7528",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "El Azzouzi O.",
+            "role": "C",
+            "fantacalcio_it_id": "6225",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Cambiaghi",
+            "role": "C",
+            "fantacalcio_it_id": "4436",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Mbangula",
+            "role": "C",
+            "fantacalcio_it_id": "6833",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Enem",
+            "role": "A",
+            "fantacalcio_it_id": "7627",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Dovbyk",
+            "role": "A",
+            "fantacalcio_it_id": "6675",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Sassuolo",
+        "modulo": "4-3-3",
+        "titolari": [
+          {
+            "name": "Muric",
+            "role": "P",
+            "fantacalcio_it_id": "4236",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Cinquegrano",
+            "role": "D",
+            "fantacalcio_it_id": "7573",
+            "percentuale": 85,
+            "status": "titolare"
+          },
+          {
+            "name": "Caleta-Car",
+            "role": "D",
+            "fantacalcio_it_id": "4147",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Leysen F.",
+            "role": "D",
+            "fantacalcio_it_id": "7564",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Doig",
+            "role": "D",
+            "fantacalcio_it_id": "5851",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Thorstvedt",
+            "role": "C",
+            "fantacalcio_it_id": "5844",
+            "percentuale": 85,
+            "status": "titolare"
+          },
+          {
+            "name": "Matic",
+            "role": "C",
+            "fantacalcio_it_id": "2528",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Bakola",
+            "role": "C",
+            "fantacalcio_it_id": "7036",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Berardi",
+            "role": "A",
+            "fantacalcio_it_id": "531",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Esposito Se.",
+            "role": "A",
+            "fantacalcio_it_id": "4463",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Laurientè",
+            "role": "A",
+            "fantacalcio_it_id": "6060",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Turati",
+            "role": "P",
+            "fantacalcio_it_id": "4867",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Satalino",
+            "role": "P",
+            "fantacalcio_it_id": "2127",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Van Der Brempt",
+            "role": "D",
+            "fantacalcio_it_id": "6896",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Obrador",
+            "role": "D",
+            "fantacalcio_it_id": "7329",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Odenthal",
+            "role": "D",
+            "fantacalcio_it_id": "7154",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Lipani",
+            "role": "C",
+            "fantacalcio_it_id": "6246",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Adzic",
+            "role": "C",
+            "fantacalcio_it_id": "6677",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Dominguez B.",
+            "role": "C",
+            "fantacalcio_it_id": "6895",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Ghion",
+            "role": "C",
+            "fantacalcio_it_id": "4930",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Sulemana I.",
+            "role": "C",
+            "fantacalcio_it_id": "6024",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Bowie",
+            "role": "A",
+            "fantacalcio_it_id": "7347",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Pierini",
+            "role": "A",
+            "fantacalcio_it_id": "1842",
+            "percentuale": 15,
+            "status": "panchina"
+          },
+          {
+            "name": "Skjellerup",
+            "role": "A",
+            "fantacalcio_it_id": "7159",
+            "percentuale": 30,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Milan",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Maignan",
+            "role": "P",
+            "fantacalcio_it_id": "4312",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Gila",
+            "role": "D",
+            "fantacalcio_it_id": "5833",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "De Winter",
+            "role": "D",
+            "fantacalcio_it_id": "5739",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Pavlovic",
+            "role": "D",
+            "fantacalcio_it_id": "5022",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Chukwueze",
+            "role": "C",
+            "fantacalcio_it_id": "4856",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Modric",
+            "role": "C",
+            "fantacalcio_it_id": "2606",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Rabiot",
+            "role": "C",
+            "fantacalcio_it_id": "2379",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Estupinan",
+            "role": "D",
+            "fantacalcio_it_id": "5273",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Pulisic",
+            "role": "C",
+            "fantacalcio_it_id": "2423",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Moreira",
+            "role": "C",
+            "fantacalcio_it_id": "6372",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Ramos G.",
+            "role": "A",
+            "fantacalcio_it_id": "6397",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Terracciano",
+            "role": "P",
+            "fantacalcio_it_id": "2815",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Torriani",
+            "role": "P",
+            "fantacalcio_it_id": "6813",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Tomori",
+            "role": "D",
+            "fantacalcio_it_id": "4751",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Gabbia",
+            "role": "D",
+            "fantacalcio_it_id": "4401",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Terracciano F.",
+            "role": "D",
+            "fantacalcio_it_id": "5812",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Bartesaghi",
+            "role": "D",
+            "fantacalcio_it_id": "6496",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Diawara S.",
+            "role": "D",
+            "fantacalcio_it_id": "7525",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Saelemaekers",
+            "role": "C",
+            "fantacalcio_it_id": "4892",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Musah",
+            "role": "C",
+            "fantacalcio_it_id": "5295",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Comotto",
+            "role": "C",
+            "fantacalcio_it_id": "7572",
+            "percentuale": 10,
+            "status": "panchina"
+          },
+          {
+            "name": "Jashari",
+            "role": "C",
+            "fantacalcio_it_id": "7203",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Hutchinson",
+            "role": "C",
+            "fantacalcio_it_id": "7618",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Loftus-Cheek",
+            "role": "C",
+            "fantacalcio_it_id": "4199",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Cissè A.",
+            "role": "C",
+            "fantacalcio_it_id": "6618",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Camarda",
+            "role": "A",
+            "fantacalcio_it_id": "6519",
+            "percentuale": 30,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Cagliari",
+        "modulo": "4-4-2",
+        "titolari": [
+          {
+            "name": "Caprile",
+            "role": "P",
+            "fantacalcio_it_id": "4360",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Zè Pedro",
+            "role": "D",
+            "fantacalcio_it_id": "7274",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Mina",
+            "role": "D",
+            "fantacalcio_it_id": "4210",
+            "percentuale": 85,
+            "status": "titolare"
+          },
+          {
+            "name": "Rodriguez Ju.",
+            "role": "D",
+            "fantacalcio_it_id": "7268",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Obert",
+            "role": "D",
+            "fantacalcio_it_id": "5701",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Adopo",
+            "role": "C",
+            "fantacalcio_it_id": "4870",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Deiola",
+            "role": "C",
+            "fantacalcio_it_id": "1871",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Winks",
+            "role": "C",
+            "fantacalcio_it_id": "4260",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Romano",
+            "role": "C",
+            "fantacalcio_it_id": "7311",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Maldini",
+            "role": "A",
+            "fantacalcio_it_id": "4896",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Mendy P.",
+            "role": "A",
+            "fantacalcio_it_id": "7374",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Radunovic",
+            "role": "P",
+            "fantacalcio_it_id": "3",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Sherri",
+            "role": "P",
+            "fantacalcio_it_id": "6650",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Aurelio",
+            "role": "D",
+            "fantacalcio_it_id": "7548",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Sugawara",
+            "role": "D",
+            "fantacalcio_it_id": "7621",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Kofler",
+            "role": "D",
+            "fantacalcio_it_id": "7532",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Liteta",
+            "role": "C",
+            "fantacalcio_it_id": "7165",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Fazzini",
+            "role": "C",
+            "fantacalcio_it_id": "6010",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Ciervo",
+            "role": "C",
+            "fantacalcio_it_id": "5462",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Gagliardini",
+            "role": "C",
+            "fantacalcio_it_id": "801",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Fadera",
+            "role": "C",
+            "fantacalcio_it_id": "6815",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Massolin",
+            "role": "C",
+            "fantacalcio_it_id": "7579",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Sulev",
+            "role": "C",
+            "fantacalcio_it_id": "7634",
+            "percentuale": 15,
+            "status": "panchina"
+          },
+          {
+            "name": "Sugamele",
+            "role": "A",
+            "fantacalcio_it_id": "7630",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Nzola",
+            "role": "A",
+            "fantacalcio_it_id": "5336",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Kevin Carlos",
+            "role": "A",
+            "fantacalcio_it_id": "7547",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Juventus",
+        "modulo": "4-2-3-1",
+        "titolari": [
+          {
+            "name": "Vicario",
+            "role": "P",
+            "fantacalcio_it_id": "4964",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Kalulu",
+            "role": "D",
+            "fantacalcio_it_id": "4976",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Bremer",
+            "role": "D",
+            "fantacalcio_it_id": "2788",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Lucumì",
+            "role": "D",
+            "fantacalcio_it_id": "6042",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Celik",
+            "role": "D",
+            "fantacalcio_it_id": "4657",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "McKennie",
+            "role": "C",
+            "fantacalcio_it_id": "4973",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Douglas Luiz",
+            "role": "C",
+            "fantacalcio_it_id": "4911",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Conceicao",
+            "role": "C",
+            "fantacalcio_it_id": "6884",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Gonzalez N.",
+            "role": "C",
+            "fantacalcio_it_id": "4179",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Alajbegovic",
+            "role": "C",
+            "fantacalcio_it_id": "7436",
+            "percentuale": 75,
+            "status": "titolare"
+          },
+          {
+            "name": "Kolo Muani",
+            "role": "A",
+            "fantacalcio_it_id": "5951",
+            "percentuale": 70,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Pinsoglio",
+            "role": "P",
+            "fantacalcio_it_id": "1930",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Cambiaso",
+            "role": "D",
+            "fantacalcio_it_id": "5520",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Cabal",
+            "role": "D",
+            "fantacalcio_it_id": "6039",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Kelly L.",
+            "role": "D",
+            "fantacalcio_it_id": "6766",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Rugani",
+            "role": "D",
+            "fantacalcio_it_id": "294",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Gatti",
+            "role": "D",
+            "fantacalcio_it_id": "5831",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Sarr P.",
+            "role": "C",
+            "fantacalcio_it_id": "5680",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Koopmeiners",
+            "role": "C",
+            "fantacalcio_it_id": "5685",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Zhegrova",
+            "role": "C",
+            "fantacalcio_it_id": "5761",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Woltemade",
+            "role": "A",
+            "fantacalcio_it_id": "6752",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Atalanta",
+        "modulo": "4-3-3",
+        "titolari": [
+          {
+            "name": "Carnesecchi",
+            "role": "P",
+            "fantacalcio_it_id": "4431",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Bellanova",
+            "role": "D",
+            "fantacalcio_it_id": "4887",
+            "percentuale": 85,
+            "status": "titolare"
+          },
+          {
+            "name": "Kristensen T.",
+            "role": "D",
+            "fantacalcio_it_id": "6485",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Scalvini",
+            "role": "D",
+            "fantacalcio_it_id": "5526",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Bernasconi",
+            "role": "D",
+            "fantacalcio_it_id": "7219",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Samardzic",
+            "role": "C",
+            "fantacalcio_it_id": "5119",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Kessiè",
+            "role": "C",
+            "fantacalcio_it_id": "1850",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Ederson D.S.",
+            "role": "C",
+            "fantacalcio_it_id": "5792",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "De Ketelaere",
+            "role": "A",
+            "fantacalcio_it_id": "5995",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Scamacca",
+            "role": "A",
+            "fantacalcio_it_id": "2137",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Rowe",
+            "role": "C",
+            "fantacalcio_it_id": "6844",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Sportiello",
+            "role": "P",
+            "fantacalcio_it_id": "4",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Pompei",
+            "role": "P",
+            "fantacalcio_it_id": "7626",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Kolasinac",
+            "role": "D",
+            "fantacalcio_it_id": "2640",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Zappacosta",
+            "role": "D",
+            "fantacalcio_it_id": "554",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Obric",
+            "role": "D",
+            "fantacalcio_it_id": "7633",
+            "percentuale": 15,
+            "status": "panchina"
+          },
+          {
+            "name": "Gaetano",
+            "role": "C",
+            "fantacalcio_it_id": "4364",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Pasalic",
+            "role": "C",
+            "fantacalcio_it_id": "2077",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Elmas",
+            "role": "C",
+            "fantacalcio_it_id": "4479",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Zalewski",
+            "role": "C",
+            "fantacalcio_it_id": "5422",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Krstovic",
+            "role": "A",
+            "fantacalcio_it_id": "6435",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Raspadori",
+            "role": "A",
+            "fantacalcio_it_id": "4371",
+            "percentuale": 55,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Venezia",
+        "modulo": "3-5-2",
+        "titolari": [
+          {
+            "name": "Stankovic F.",
+            "role": "P",
+            "fantacalcio_it_id": "6248",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Schingtienne",
+            "role": "D",
+            "fantacalcio_it_id": "6892",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Juan Jesus",
+            "role": "D",
+            "fantacalcio_it_id": "256",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Moreno M.",
+            "role": "D",
+            "fantacalcio_it_id": "6890",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Hainaut",
+            "role": "D",
+            "fantacalcio_it_id": "6821",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Perez K.",
+            "role": "C",
+            "fantacalcio_it_id": "6994",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Sohm",
+            "role": "C",
+            "fantacalcio_it_id": "5319",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Helgason",
+            "role": "C",
+            "fantacalcio_it_id": "5872",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Correia T.",
+            "role": "D",
+            "fantacalcio_it_id": "4845",
+            "percentuale": 75,
+            "status": "titolare"
+          },
+          {
+            "name": "Yeboah J.",
+            "role": "A",
+            "fantacalcio_it_id": "6904",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Adams A.",
+            "role": "A",
+            "fantacalcio_it_id": "7484",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Montipò",
+            "role": "P",
+            "fantacalcio_it_id": "4957",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Grandi",
+            "role": "P",
+            "fantacalcio_it_id": "6671",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Halhal",
+            "role": "D",
+            "fantacalcio_it_id": "7538",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Gomes",
+            "role": "D",
+            "fantacalcio_it_id": "7454",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Sagrado",
+            "role": "D",
+            "fantacalcio_it_id": "6681",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Mazzocchi",
+            "role": "D",
+            "fantacalcio_it_id": "5481",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Panada",
+            "role": "C",
+            "fantacalcio_it_id": "7632",
+            "percentuale": 35,
+            "status": "panchina"
+          },
+          {
+            "name": "Fanne",
+            "role": "C",
+            "fantacalcio_it_id": "7635",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Fernandez T.",
+            "role": "C",
+            "fantacalcio_it_id": "7232",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Rrahmani Al.",
+            "role": "A",
+            "fantacalcio_it_id": "7449",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Lauberbach",
+            "role": "A",
+            "fantacalcio_it_id": "7482",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Lisman",
+            "role": "A",
+            "fantacalcio_it_id": "7408",
+            "percentuale": 15,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Torino",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Perri",
+            "role": "P",
+            "fantacalcio_it_id": "6534",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Comuzzo",
+            "role": "D",
+            "fantacalcio_it_id": "6495",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Coco",
+            "role": "D",
+            "fantacalcio_it_id": "6642",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Comert",
+            "role": "D",
+            "fantacalcio_it_id": "7526",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Belghali",
+            "role": "D",
+            "fantacalcio_it_id": "7220",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Mandragora",
+            "role": "C",
+            "fantacalcio_it_id": "1933",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Fitz-Jim",
+            "role": "C",
+            "fantacalcio_it_id": "7535",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Cacciamani",
+            "role": "C",
+            "fantacalcio_it_id": "7060",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Casadei",
+            "role": "C",
+            "fantacalcio_it_id": "5888",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Vlasic",
+            "role": "C",
+            "fantacalcio_it_id": "5687",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Simeone",
+            "role": "A",
+            "fantacalcio_it_id": "2061",
+            "percentuale": 90,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Mascardi",
+            "role": "P",
+            "fantacalcio_it_id": "7457",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Siviero",
+            "role": "P",
+            "fantacalcio_it_id": "7363",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Ismajli",
+            "role": "D",
+            "fantacalcio_it_id": "5010",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Patterson",
+            "role": "D",
+            "fantacalcio_it_id": "5751",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Biraghi",
+            "role": "D",
+            "fantacalcio_it_id": "252",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Rodriguez R.",
+            "role": "D",
+            "fantacalcio_it_id": "2169",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Fortini",
+            "role": "D",
+            "fantacalcio_it_id": "7069",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Ilkhan",
+            "role": "C",
+            "fantacalcio_it_id": "6005",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Braganca",
+            "role": "C",
+            "fantacalcio_it_id": "7624",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Gineitis",
+            "role": "C",
+            "fantacalcio_it_id": "6170",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Aboukhlal",
+            "role": "C",
+            "fantacalcio_it_id": "7183",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Oristanio",
+            "role": "C",
+            "fantacalcio_it_id": "6218",
+            "percentuale": 55,
+            "status": "panchina"
+          },
+          {
+            "name": "Luongo",
+            "role": "C",
+            "fantacalcio_it_id": "7631",
+            "percentuale": 15,
+            "status": "panchina"
+          },
+          {
+            "name": "Zapata D.",
+            "role": "A",
+            "fantacalcio_it_id": "608",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Kulenovic",
+            "role": "A",
+            "fantacalcio_it_id": "7349",
+            "percentuale": 60,
+            "status": "panchina"
+          }
+        ]
+      },
+      {
+        "serie_a_team": "Udinese",
+        "modulo": "3-4-2-1",
+        "titolari": [
+          {
+            "name": "Okoye",
+            "role": "P",
+            "fantacalcio_it_id": "6462",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Abankwah",
+            "role": "D",
+            "fantacalcio_it_id": "6021",
+            "percentuale": 70,
+            "status": "titolare"
+          },
+          {
+            "name": "Kabasele",
+            "role": "D",
+            "fantacalcio_it_id": "4263",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Solet",
+            "role": "D",
+            "fantacalcio_it_id": "6956",
+            "percentuale": 75,
+            "status": "titolare"
+          },
+          {
+            "name": "Vojvoda",
+            "role": "D",
+            "fantacalcio_it_id": "4994",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Miller L.",
+            "role": "C",
+            "fantacalcio_it_id": "7208",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Karlstrom",
+            "role": "C",
+            "fantacalcio_it_id": "6680",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Kamara H.",
+            "role": "D",
+            "fantacalcio_it_id": "5555",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Zaniolo",
+            "role": "C",
+            "fantacalcio_it_id": "2766",
+            "percentuale": 80,
+            "status": "titolare"
+          },
+          {
+            "name": "Ekkelenkamp",
+            "role": "C",
+            "fantacalcio_it_id": "6684",
+            "percentuale": 90,
+            "status": "titolare"
+          },
+          {
+            "name": "Davis K.",
+            "role": "A",
+            "fantacalcio_it_id": "5637",
+            "percentuale": 70,
+            "status": "titolare"
+          }
+        ],
+        "panchina": [
+          {
+            "name": "Mrozek",
+            "role": "P",
+            "fantacalcio_it_id": "7611",
+            "percentuale": 5,
+            "status": "panchina"
+          },
+          {
+            "name": "Padelli",
+            "role": "P",
+            "fantacalcio_it_id": "543",
+            "percentuale": 1,
+            "status": "panchina"
+          },
+          {
+            "name": "Ebosse",
+            "role": "D",
+            "fantacalcio_it_id": "5994",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Bertola",
+            "role": "D",
+            "fantacalcio_it_id": "5820",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Palma",
+            "role": "D",
+            "fantacalcio_it_id": "6925",
+            "percentuale": 40,
+            "status": "panchina"
+          },
+          {
+            "name": "Zanoli",
+            "role": "D",
+            "fantacalcio_it_id": "5527",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Arizala",
+            "role": "D",
+            "fantacalcio_it_id": "7312",
+            "percentuale": 25,
+            "status": "panchina"
+          },
+          {
+            "name": "Chakvetadze",
+            "role": "C",
+            "fantacalcio_it_id": "7418",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Zarraga",
+            "role": "C",
+            "fantacalcio_it_id": "6212",
+            "percentuale": 50,
+            "status": "panchina"
+          },
+          {
+            "name": "Jovanovic",
+            "role": "C",
+            "fantacalcio_it_id": "7092",
+            "percentuale": 20,
+            "status": "panchina"
+          },
+          {
+            "name": "Lovric",
+            "role": "C",
+            "fantacalcio_it_id": "5850",
+            "percentuale": 30,
+            "status": "panchina"
+          },
+          {
+            "name": "Unai Gomez",
+            "role": "C",
+            "fantacalcio_it_id": "6783",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Gueye",
+            "role": "A",
+            "fantacalcio_it_id": "7272",
+            "percentuale": 60,
+            "status": "panchina"
+          },
+          {
+            "name": "Bayo V.",
+            "role": "A",
+            "fantacalcio_it_id": "7161",
+            "percentuale": 40,
+            "status": "panchina"
+          }
+        ]
+      }
+    ]
   }
 ]
