@@ -26,9 +26,16 @@ i "non trovati/ambigui" vengono stampati e NON scritti in matchday_stats.json.
 Richiede BIGBALLS_API_KEY da ambiente. Merge idempotente per
 (player_id, match_id): rilanciarlo aggiorna, non duplica.
 
+Incrementale: scarica solo le partite finite che non sono ancora in archivio, così il
+giro quotidiano costa poche chiamate (il piano free ne ha 500 al giorno). Le righe già
+presenti prendono la giornata dal calendario appena la fonte la pubblica, e voto e
+fantavoto già scritti non vengono mai sovrascritti.
+
 Uso:
     python3 scripts/import_matchday_stats.py
+    python3 scripts/import_matchday_stats.py --ricostruisci   # riscarica tutto
 """
+import argparse
 import os
 import sys
 import unicodedata
@@ -72,7 +79,11 @@ def split_name(raw: str):
     data/players.json), 'M. Koné' (Iniziale Cognome, formato BigBalls),
     'Lautaro Martínez' (Nome Cognome, con eventuali particelle come
     'De Bruyne') e 'Svilar'/'Vítinha' (solo cognome)."""
-    tokens = strip_accents(raw).lower().replace(".", "").split()
+    raw_tokens = strip_accents(raw).lower().split()
+    if len(raw_tokens) > 1 and raw_tokens[-1].endswith(".") and len(raw_tokens[-1].rstrip(".")) <= 3:
+        # "martinez jo." / "esposito se." -> cognome + abbreviazione del nome (listone)
+        return " ".join(t.replace(".", "") for t in raw_tokens[:-1]), raw_tokens[-1][0]
+    tokens = [t.replace(".", "") for t in raw_tokens]
     if not tokens:
         return "", None
     if len(tokens) == 1:
@@ -85,15 +96,29 @@ def split_name(raw: str):
     i = len(tokens) - 1
     while i > 0 and tokens[i - 1] in NAME_PARTICLES:
         i -= 1
-    return " ".join(tokens[i:]), tokens[0][0]
+    # "de bruyne" da solo è tutto cognome: nessun nome da cui prendere l'iniziale
+    return " ".join(tokens[i:]), (tokens[0][0] if i > 0 else None)
 
 
 def build_player_index(players: list[dict]):
-    """(squadra, cognome) -> lista di (player_id, iniziale_o_None)."""
+    """(squadra, cognome) -> lista di (player_id, iniziale_o_None).
+
+    Nel listone l'iniziale c'è solo quando è scritta ("Martinez L.", "Martinez Jo.").
+    Un nome senza iniziale è tutto cognome, anche se ha due parole: si registra sia
+    intero ("kolo muani", per "R. Kolo Muani") sia con l'ultima parola ("anguissa", per
+    "Andre-Frank Zambo Anguissa"), senza iniziale."""
     index: dict[tuple[str, str], list] = {}
     for p in players:
-        cognome, iniziale = split_name(p["name"])
-        index.setdefault((p["serie_a_team"], cognome), []).append((p["id"], iniziale))
+        tokens = strip_accents(p["name"]).lower().split()
+        if len(tokens) > 1 and tokens[-1].endswith("."):
+            cognome, iniziale = split_name(p["name"])
+            chiavi = [cognome]
+        else:
+            iniziale = None
+            parole = [t.replace(".", "") for t in tokens]
+            chiavi = list(dict.fromkeys([" ".join(parole), parole[-1]]))
+        for cognome in chiavi:
+            index.setdefault((p["serie_a_team"], cognome), []).append((p["id"], iniziale))
     return index
 
 
@@ -101,7 +126,11 @@ def match_player(index: dict, team: str, raw_name: str):
     cognome, iniziale = split_name(raw_name)
     candidates = index.get((team, cognome), [])
     if len(candidates) == 1:
-        return candidates[0][0]
+        pid, iniziale_listone = candidates[0]
+        # stesso cognome e squadra ma nome diverso: è un altro giocatore, non questo
+        if iniziale and iniziale_listone and iniziale != iniziale_listone:
+            return None
+        return pid
     if len(candidates) > 1 and iniziale:
         matches = [pid for pid, i in candidates if i == iniziale]
         if len(matches) == 1:
@@ -121,31 +150,61 @@ def fetch_match_stats(api_key: str, match_id: str):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--ricostruisci",
+        action="store_true",
+        help="riscarica tutte le partite giocate, non solo quelle mancanti (1 chiamata API per partita)",
+    )
+    args = parser.parse_args()
+
     api_key = os.environ.get("BIGBALLS_API_KEY")
     if not api_key:
         print("ERRORE: imposta BIGBALLS_API_KEY come variabile d'ambiente.")
         return 1
 
-    calendario = [m for m in store.load_json(store.DATA_DIR / "calendario_serie_a.json") if m["stato"] == "finished"]
+    calendario = {m["match_id"]: m for m in store.load_json(store.DATA_DIR / "calendario_serie_a.json")}
+    finished = [m for m in calendario.values() if m["stato"] == "finished"]
     players = store.load_players()
+    team_of = {p["id"]: p["serie_a_team"] for p in players}
     index = build_player_index(players)
 
     stats_path = store.DATA_DIR / "matchday_stats.json"
     existing = store.load_json(stats_path) if stats_path.exists() else []
-    by_key = {(r["player_id"], r["match_id"]): r for r in existing}
+
+    # Righe già in archivio: si scartano quelle di un giocatore la cui squadra non ha
+    # giocato quella partita, e si aggiorna la giornata dal calendario (arriva dopo la
+    # partita, e così si riempie senza chiamate API).
+    by_key, scartate = {}, []
+    for r in existing:
+        match = calendario.get(r["match_id"])
+        if match is None or team_of.get(r["player_id"]) not in (match["squadra_casa"], match["squadra_trasferta"]):
+            scartate.append(r)
+            continue
+        r["matchday"] = match["giornata"]
+        by_key[(r["player_id"], r["match_id"])] = r
+
+    imported = {mid for _, mid in by_key}
+    to_fetch = finished if args.ricostruisci else [m for m in finished if m["match_id"] not in imported]
 
     unmatched = []
     failed_matches = []
 
-    for match in calendario:
+    for match in to_fetch:
         try:
             player_rows = fetch_match_stats(api_key, match["match_id"])
         except RuntimeError as e:
             failed_matches.append((match["match_id"], str(e)))
             continue
 
+        # Le righe di questa partita vengono rifatte da zero; voto e fantavoto già
+        # presenti (arrivano da un'altra fonte) passano alla riga nuova, mai persi.
+        old = {pid: by_key.pop((pid, mid)) for pid, mid in list(by_key) if mid == match["match_id"]}
+
         for pr in player_rows:
             team = normalize_team(pr["team_name"])
+            if team not in (match["squadra_casa"], match["squadra_trasferta"]):
+                continue  # contaminazione della fonte: giocatore di un'altra squadra
             player_id = match_player(index, team, pr["name"])
             if player_id is None:
                 unmatched.append((match["match_id"], team, pr["name"]))
@@ -156,14 +215,15 @@ def main():
             else:
                 opponent, home_away = match["squadra_casa"], "trasferta"
 
+            prev = old.get(player_id, {})
             row = {
                 "player_id": player_id,
                 "match_id": match["match_id"],
                 "matchday": match["giornata"],
                 "opponent_serie_a_team": opponent,
                 "home_away": home_away,
-                "voto": None,
-                "fantavoto": None,
+                "voto": prev.get("voto"),
+                "fantavoto": prev.get("fantavoto"),
             }
             for field, source_key in STAT_FIELDS.items():
                 raw_value = pr["stats"].get(source_key, {}).get("value")
@@ -174,11 +234,13 @@ def main():
     merged = sorted(by_key.values(), key=lambda r: (r["matchday"] or 0, r["match_id"], r["player_id"]))
     store.save_json(stats_path, merged)
 
-    print(f"OK: {len(merged)} righe totali in matchday_stats.json.")
+    print(f"OK: {len(to_fetch)} partite scaricate, {len(merged)} righe totali in matchday_stats.json.")
+    if scartate:
+        print(f"Tolte {len(scartate)} righe di giocatori la cui squadra non ha giocato quella partita.")
     if failed_matches:
-        print(f"ATTENZIONE: {len(failed_matches)} partite non scaricate: {failed_matches}")
+        print(f"ATTENZIONE: {len(failed_matches)} partite non scaricate (riprovate al prossimo giro): {failed_matches}")
     if unmatched:
-        print(f"ATTENZIONE: {len(unmatched)} giocatori non riconosciuti (non scritti, verificare a mano):")
+        print(f"ATTENZIONE: {len(unmatched)} giocatori delle due squadre non riconosciuti nel listone (non scritti):")
         for match_id, team, name in unmatched:
             print(f"  match={match_id} squadra={team!r} nome={name!r}")
     return 0

@@ -148,7 +148,8 @@ def main():
     merged = sorted(by_id.values(), key=lambda r: (r["data_utc"], r["match_id"]))
     store.save_json(calendario_path, merged)
 
-    no_giornata = sum(1 for r in rows if r["giornata"] is None)
+    # Sulle partite future la fonte non assegna mai la giornata: conta solo sulle giocate.
+    no_giornata = sum(1 for r in rows if r["giornata"] is None and r["stato"] == "finished")
     print(f"OK: {len(rows)} partite importate/aggiornate (totale storico: {len(merged)}).")
     if no_giornata:
         print(f"ATTENZIONE: {no_giornata} partite senza giornata riconosciuta (round nullo dalla fonte) — verificare a mano.")
