@@ -109,6 +109,12 @@ di ogni deadline formazioni.
   eventi duplicati, `rating` che non è il voto fantacalcio, `round` in ritardo di
   un giorno, note di piano nello spec non affidabili. Da leggere prima di toccare
   gli importer o di aggiungere endpoint.
+- `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
+  `data/` → `roster.py` → `report_formazione.py`, eseguita sui dati reali del repo:
+  11 difetti riprodotti con comando e output, ordinati per punti attesi persi a
+  giornata, più il percorso critico per arrivare a un consiglio fidato. Da leggere
+  prima di toccare `roster.py`, `report_formazione.py` o la pipeline delle
+  probabili formazioni.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 
