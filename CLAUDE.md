@@ -35,8 +35,10 @@ di ogni deadline formazioni.
   usato mescola nel box score di una partita anche giocatori di squadre estranee
   (altri campionati, nazionali): una riga viene scritta solo se nome+squadra
   combaciano con un giocatore che sappiamo essere davvero in quella squadra di
-  Serie A in `players.json` — le squadre estranee non hanno match possibile e
-  restano escluse per costruzione. I "non trovati" (script stampa l'elenco) sono
+  Serie A in `players.json`. Questo esclude le squadre di altri campionati, ma
+  **non** un giocatore di un'altra squadra di Serie A finito nel box score sbagliato:
+  oggi ci sono 3 righe di questo tipo (vedi difetto 7 in
+  `.docs/difetti-consiglio-formazione.md`). I "non trovati" (script stampa l'elenco) sono
   in parte questo rumore, in parte veri giocatori mancanti dal listone: da
   ricontrollare quando si rinfresca `players.json`.
 - `injuries.json` — storico infortuni: player_id, date, tipo, stato, rientro previsto.
@@ -47,7 +49,12 @@ di ogni deadline formazioni.
   l'esito partita, usato per sapere chi ha giocato contro chi in una giornata.
 
 `config/league.json` contiene le regole di scoring, i moduli ammessi e `my_team_id`
-(la mia squadra — da impostare la prima volta che si popolano i dati).
+(la mia squadra — da impostare la prima volta che si popolano i dati). In
+`regole_lega` le regole confermate dalla lega il 24/09: **nessun modificatore di
+difesa, sostituzioni illimitate**. Con i cambi illimitati, dentro un ruolo va
+schierato prima chi ha la media più alta quando gioca, anche se gioca poco, perché
+se non scende in campo entra il primo della panchina: vedi
+`.docs/difetti-consiglio-formazione.md`.
 
 ## Script (`scripts/`)
 
@@ -114,15 +121,16 @@ di ogni deadline formazioni.
 - `.docs/bigballs-api.md` — riferimento dell'API BigBalls (auth, limiti del piano,
   endpoint usati e non ancora usati, convenzioni su `season`/`league`/`round`) con
   le magagne verificate sul campo: box score contaminato da squadre estranee,
-  eventi duplicati, `rating` che non è il voto fantacalcio, `round` in ritardo di
-  un giorno, note di piano nello spec non affidabili. Da leggere prima di toccare
+  eventi duplicati, `rating` che non è il voto fantacalcio, `round` assegnato solo
+  dopo la partita (in ritardo di circa un giorno, e vuoto su tutte le partite
+  future), note di piano nello spec non affidabili. Da leggere prima di toccare
   gli importer o di aggiungere endpoint.
 - `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
-  `data/` → `roster.py` → `report_formazione.py`, eseguita sui dati reali del repo:
-  11 difetti riprodotti con comando e output, ordinati per punti attesi persi a
-  giornata, più il percorso critico per arrivare a un consiglio fidato. Da leggere
-  prima di toccare `roster.py`, `report_formazione.py` o la pipeline delle
-  probabili formazioni.
+  `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
+  di `main` e con le regole vere della lega: 8 difetti aperti riprodotti con comando
+  e output, l'elenco di ciò che è stato tolto dopo la verifica, e il piano delle
+  correzioni fattibili subito (fasi A, B, C). Da leggere prima di toccare
+  `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 

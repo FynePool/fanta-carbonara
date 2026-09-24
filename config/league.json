@@ -33,5 +33,11 @@
     "malus_autogol": -2,
     "malus_rigore_sbagliato": -3,
     "bonus_rigore_parato": 3
+  },
+  "regole_lega": {
+    "_fonte": "Confermate dalla lega il 24/09/2026.",
+    "modificatore_difesa": false,
+    "sostituzioni_max": null,
+    "_sostituzioni_note": "null = illimitate: ogni titolare senza voto viene sostituito scorrendo la panchina. Da confermare: sostituzione solo nello stesso ruolo (default Classic)."
   }
 }

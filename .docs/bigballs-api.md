@@ -74,7 +74,11 @@ short_name, logo_url}`), `kickoff_utc`, `status`, `score {home, away}`, `linesco
 - **Verificato**: `round` arriva con ~1 giorno di ritardo rispetto al fischio finale.
   Le partite giocate oggi hanno `round: null` anche interrogando l'API in diretta,
   mentre quelle di ieri ce l'hanno. Non è un bug nostro: basta rilanciare l'import
-  il giorno dopo (il merge è idempotente per `match_id`).
+  il giorno dopo (il merge è idempotente per `match_id`). Verificato il 24/09: le
+  partite del 19/09 ora hanno `"Regular Season - 5"`.
+- **Verificato**: sulle partite **future** `round` è sempre `null` (335 su 335 il
+  24/09). Viene assegnato solo dopo che la partita si gioca, quindi questo campo non
+  dice qual è la prossima giornata: per quello va ricavata dalle date (`kickoff_utc`).
 - `season` e `venue` **non** vengono emessi dagli endpoint lista (documentato).
 - Su `/v1/matches/{id}` il parametro `fields` è accettato ma **non cambia la
   risposta** (lo spec lo dichiara esplicitamente: non costruirci sopra nulla).
