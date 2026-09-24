@@ -127,9 +127,10 @@ Raimondo     Frosinone  4 gol in 329'          Akanji     Inter      2 gialli, 4
 Varela G.    Monza      4 gol in 341'          Hermoso    Roma       2 gialli, 3 falli
 ```
 
-Non è una classifica da esibire: serve a sapere che un difensore a 3 gialli è a un
-passo dalla squalifica, e che chi fa tanti falli nelle partite toste è un rischio da
-pesare prima di schierarlo.
+Non è una classifica da esibire: i cartellini e i falli dicono chi rischia nelle partite
+toste. Per le squalifiche vere il repo non conta i gialli da sé, legge la fonte
+ufficiale: squalificati e diffidati arrivano dalla pagina "Indisponibili" di
+fantacalcio.it, e il report esclude i primi e ti avvisa dei secondi.
 
 ## Struttura dei dati
 
@@ -140,7 +141,8 @@ Tutto in `data/`, JSON versionati in git — niente database, niente stato nasco
 | `players.json` | Pool completo Serie A: ruolo, squadra, quotazione, status | 532 giocatori |
 | `calendario_serie_a.json` | Calendario e risultati per giornata | 379 partite (44 giocate) |
 | `matchday_stats.json` | Per giocatore/partita: gol, assist, cartellini, falli, minuti, avversario, casa/trasferta | 1596 righe |
-| `injuries.json` | Storico infortuni con rientro previsto | 60 voci |
+| `injuries.json` | Infortuni in corso con rientro previsto | 48 voci |
+| `squalifiche.json` | Squalificati e diffidati attuali | aggiornato ogni giro |
 | `teams.json` | Le 12 squadre della lega, crediti totali e rimanenti | da popolare |
 | `ownership.json` | Chi possiede chi, a che prezzo, con che modalità | dopo l'asta |
 | `market_log.json` | Log di acquisti, scambi e svincoli | dopo l'asta |
@@ -157,7 +159,7 @@ due volte:
 | Fonte | Cosa ci prendiamo | Cosa sappiamo che non funziona |
 |---|---|---|
 | **FantaDraft** (GitHub, pubblico) | Listone completo + infortuni | Può essere indietro sui trasferimenti recenti |
-| **fantacalcio.it** (HTML pubblico) | Probabili formazioni → status giocatore | Matching per nome, non per id: i "non trovati" vanno guardati |
+| **fantacalcio.it** (HTML pubblico) | Probabili formazioni → status giocatore; squalificati e diffidati | Matching per nome, non per id: i "non trovati" vanno guardati. La lista piena degli squalificati non si era ancora vista quando è stato scritto lo scraper |
 | **BigBalls API** | Calendario, risultati, box score per giocatore | Tabellini contaminati da squadre estranee, eventi duplicati, `round` in ritardo di un giorno, aggregati che non concordano coi propri box score |
 | **leghe.fantacalcio.it** (API privata) | Rose, crediti, e — quando ci arriveremo — i voti ufficiali | Non documentata, due JWT di cui uno inutile, da usare solo in lettura |
 

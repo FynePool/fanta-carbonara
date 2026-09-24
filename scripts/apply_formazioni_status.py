@@ -25,9 +25,13 @@ fonte elenca solo gli infortuni in corso, quindi chi è rientrato sparisce da so
 al prossimo import. Per questo injuries.json va rinfrescato PRIMA, con
 import_fantadraft.py: se è vecchio lo script lo segnala invece di fidarsene.
 
+Per ultimi gli squalificati di data/squalifiche.json (scrape_squalifiche.py): diventano
+"squalificato", con la stessa logica degli infortuni. I diffidati no, possono giocare.
+
 Uso:
     python3 scripts/import_fantadraft.py          # rinfresca listone + infortuni
     python3 scripts/scrape_formazioni.py          # scarica le probabili
+    python3 scripts/scrape_squalifiche.py         # squalificati e diffidati
     python3 scripts/apply_formazioni_status.py [--dry-run]
 """
 import argparse
@@ -145,6 +149,30 @@ def main():
         p["status_note"] = f"infortunio: {inj.get('expected_return') or 'rientro non indicato'}"
         p["status_updated_at"] = inj.get("imported_on") or data_probabili
 
+    # Lo squalificato è certo quanto l'infortunato: esce dai disponibili. Il diffidato
+    # invece può giocare, e resta com'è (lo segnala il report).
+    squalifiche_path = store.DATA_DIR / "squalifiche.json"
+    squalifiche = store.load_json(squalifiche_path) if squalifiche_path.exists() else None
+    squalificati = []
+    if squalifiche is None:
+        print("ATTENZIONE: data/squalifiche.json non esiste: lancia prima scrape_squalifiche.py.")
+    else:
+        by_id = {p["id"]: p for p in players}
+        for s in squalifiche:
+            p = by_id.get(s["player_id"])
+            if s["tipo"] != "squalificato" or p is None:
+                continue
+            squalificati.append((p, p["status"]))
+            p["status"] = "squalificato"
+            p["status_note"] = f"squalificato: {s.get('nota') or 'giornate non indicate'}"
+            p["status_updated_at"] = s.get("imported_on") or data_probabili
+        vecchie = {s.get("imported_on") for s in squalifiche} - {date.today().isoformat()}
+        if vecchie:
+            print(
+                f"ATTENZIONE: data/squalifiche.json è del {sorted(vecchie)[-1]}, non di oggi: "
+                "rilancia scrape_squalifiche.py."
+            )
+
     stale = {i.get("imported_on") for i in injuries.values()} - {date.today().isoformat()}
     if stale:
         print(
@@ -171,6 +199,11 @@ def main():
             print(f"  {p['name']:<25} ({p['serie_a_team']:<12}) {old} -> infortunato")
         if len(injured) > 15:
             print(f"  ... e altri {len(injured) - 15}")
+
+    if squalificati:
+        print(f"\n{len(squalificati)} giocatori marcati squalificati da data/squalifiche.json:")
+        for p, old in squalificati:
+            print(f"  {p['name']:<25} ({p['serie_a_team']:<12}) {old} -> squalificato")
 
     if unmatched_scrape:
         print(f"\n{len(unmatched_scrape)} giocatori nello scrape non trovati nel listone (probabile differenza di nome):")

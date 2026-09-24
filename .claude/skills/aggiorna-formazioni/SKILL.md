@@ -1,6 +1,6 @@
 ---
 name: aggiorna-formazioni
-description: Scarica le probabili formazioni Serie A da fantacalcio.it e gli infortuni aggiornati, e applica entrambi allo status (titolare/ballottaggio/panchina/infortunato) dei giocatori in data/players.json, mantenendo uno storico. Usare quando l'utente chiede "aggiorna le formazioni", "che status hanno i miei giocatori", "chi è infortunato", o prima di generare il report formazione se i dati sono vecchi.
+description: Scarica le probabili formazioni Serie A da fantacalcio.it, gli infortuni aggiornati, squalificati e diffidati, e li applica allo status (titolare/ballottaggio/panchina/infortunato/squalificato) dei giocatori in data/players.json, mantenendo uno storico. Usare quando l'utente chiede "aggiorna le formazioni", "che status hanno i miei giocatori", "chi è infortunato", "chi è squalificato", o prima di generare il report formazione se i dati sono vecchi.
 ---
 
 # Aggiorna probabili formazioni
@@ -20,11 +20,14 @@ L'ordine conta: gli infortuni vanno rinfrescati **prima**, perché
 2. Esegui:
    ```
    python3 scripts/scrape_formazioni.py
+   python3 scripts/scrape_squalifiche.py
    ```
-   Scrive `data/formazioni_correnti.json` (snapshot, non versionato) e aggiunge
-   una voce a `data/formazioni_history.json` (storico versionato in git).
-   Se fallisce (rete, struttura pagina cambiata), avvisa l'utente e fermati:
-   non inventare uno status.
+   Il primo scrive `data/formazioni_correnti.json` (snapshot, non versionato) e
+   aggiunge una voce a `data/formazioni_history.json` (storico versionato in git).
+   Il secondo scrive `data/squalifiche.json`: lo squalificato diventa non
+   disponibile come l'infortunato, il diffidato resta schierabile ma segnalato.
+   Se uno dei due fallisce (rete, struttura pagina cambiata), avvisa l'utente e
+   fermati: non inventare uno status.
 3. Esegui prima in modalità di controllo:
    ```
    python3 scripts/apply_formazioni_status.py --dry-run

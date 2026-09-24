@@ -10,7 +10,7 @@ Priorità attuale: **asta di inizio stagione imminente** (formato a chiamata cla
 asta (`scripts/asta.py`) è più importante del modulo formazione: senza rose complete
 non c'è nulla su cui basare un consiglio di formazione.
 
-I dati (listone, infortuni, calendario, statistiche, probabili formazioni e status)
+I dati (listone, infortuni, calendario, statistiche, probabili formazioni, squalifiche e status)
 si aggiornano ogni mattina con una routine automatica che esegue la skill
 `aggiorna-dati` e pusha su `main`. Le rose dopo l'asta e i voti non sono ancora
 coperti: vanno aggiunti a quella skill quando esisteranno gli importer.
@@ -44,6 +44,10 @@ coperti: vanno aggiunti a quella skill quando esisteranno gli importer.
   in parte questo rumore, in parte veri giocatori mancanti dal listone: da
   ricontrollare quando si rinfresca `players.json`.
 - `injuries.json` — storico infortuni: player_id, date, tipo, stato, rientro previsto.
+- `squalifiche.json` — squalificati e diffidati attuali da fantacalcio.it (pagina
+  "Indisponibili Serie A"): player_id, nome, squadra, `tipo` (squalificato |
+  diffidato), nota, data. Riscritto a ogni giro: vale la presenza, come per gli
+  infortuni.
 - `market_log.json` — log di mercato/scambi: supporta scambi misti (giocatore + crediti).
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
   casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
@@ -86,7 +90,18 @@ se non scende in campo entra il primo della panchina: vedi
   probabili del <data>"), invece di tenere lo status della volta prima.
   `status_updated_at` è la data delle probabili, non di oggi: se lo scrape fallisce e
   si riapplica uno snapshot vecchio, il dato risulta vecchio (e lo script avvisa).
+  Per ultimi applica gli squalificati di `data/squalifiche.json` (status
+  `squalificato`); i diffidati restano schierabili e li segnala il report.
   Vedi `.claude/skills/aggiorna-formazioni/SKILL.md`.
+- `scrape_squalifiche.py` — squalificati e diffidati dalla pagina "Indisponibili Serie
+  A" di fantacalcio.it (HTML statico, una scheda per squadra) in
+  `data/squalifiche.json`. La stessa pagina ha anche gli infortunati, ma non vengono
+  letti: arrivano già da FantaDraft, e due fonti per lo stesso dato potrebbero non
+  concordare. Matching esatto su nome + squadra (stessa convenzione del listone).
+  **La lista piena degli squalificati è dedotta**, non vista: il 24/09 erano tutti
+  "Nessuno". Lo script controlla la struttura e segnala ogni sezione diversa da quella
+  attesa invece di indovinare: alla prima giornata con squalificati veri va guardato
+  il suo output.
 - `lib/leghe_fc_client.py` — client per l'API privata non ufficiale di
   leghe.fantacalcio.it (`apileague.fantacalcio.it`), portato in Python dal
   codice sorgente reale di @legasanpetrux/leghe-fc-client (MIT, github.com/
@@ -143,8 +158,8 @@ se non scende in campo entra il primo della panchina: vedi
   prossimo turno se coprono le 20 squadre una volta ciascuna. In quel caso chi ha la
   partita rinviata esce dai disponibili; se il turno non è ricostruibile (recupero,
   turno già iniziato) avvisa e non esclude nessuno. Avvisa anche per i titolari
-  assenti dalle probabili e per gli status più vecchi di 4 giorni. `--matchday` è
-  solo l'etichetta del titolo.
+  assenti dalle probabili, per gli status più vecchi di 4 giorni e per i titolari
+  diffidati. `--matchday` è solo l'etichetta del titolo.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
   È quella che esegue la routine del mattino: per aggiungere un dato al giro
@@ -162,8 +177,7 @@ se non scende in campo entra il primo della panchina: vedi
 - `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
   `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
   di `main` e con le regole vere della lega: 8 difetti riprodotti con comando e
-  output, risolti il 24/09 con le fasi A, B e C tranne lo status `squalificato`
-  (nessuno script lo assegna), l'elenco di ciò che è stato
+  output, tutti risolti il 24/09 (fasi A, B, C e squalifiche), l'elenco di ciò che è stato
   tolto dopo la verifica, le correzioni trovate strada facendo e cosa resta da
   ritarare quando arriveranno i voti. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.

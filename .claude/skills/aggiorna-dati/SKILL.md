@@ -1,6 +1,6 @@
 ---
 name: aggiorna-dati
-description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, calendario e risultati Serie A, statistiche per giocatore, probabili formazioni e status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
+description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, calendario e risultati Serie A, statistiche per giocatore, probabili formazioni, squalificati e diffidati, status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
 ---
 
 # Aggiornamento dati quotidiano
@@ -43,11 +43,16 @@ fallito.
    È incrementale: scarica solo le partite finite non ancora in archivio. Non usare
    `--ricostruisci` in un giro automatico: costa una chiamata per ogni partita della
    stagione, su 500 al giorno del piano free.
-4. **Probabili formazioni:**
+4. **Probabili formazioni, squalificati e diffidati:**
    ```
    python3 scripts/scrape_formazioni.py
+   python3 scripts/scrape_squalifiche.py
    ```
-5. **Status dei giocatori** (probabili + infortuni):
+   Se `scrape_squalifiche.py` segnala una "struttura della pagina diversa da quella
+   attesa", riportalo in cima al riepilogo: la lista piena degli squalificati non era
+   mai stata vista quando lo script è stato scritto, quindi è il primo punto da
+   controllare la prima volta che ci sono squalificati veri.
+5. **Status dei giocatori** (probabili + infortuni + squalifiche):
    ```
    python3 scripts/apply_formazioni_status.py
    ```
@@ -74,6 +79,7 @@ Breve, in italiano, fatti e numeri:
 - partite finite in archivio e quante sono nuove rispetto a prima;
 - righe di statistiche aggiunte;
 - infortunati ora e differenza rispetto a prima (chi è entrato, chi è rientrato);
+- squalificati e diffidati, per nome e squadra;
 - quanti status sono cambiati, e i numeri dei "non trovati" nel matching nomi;
 - partite giocate ancora senza giornata;
 - chiamate API rimaste oggi;
@@ -82,7 +88,5 @@ Breve, in italiano, fatti e numeri:
 Dati che questa routine **non** copre ancora, da non inventare:
 
 - voti e fantavoto (vedi passo 6);
-- squalificati e diffidati: nessuno script li legge. Sul sito stanno nella pagina
-  "Squalificati e diffidati";
 - rose e scambi tra le squadre della lega: dopo l'asta andranno letti da
   leghe.fantacalcio.it, e anche quel passo andrà aggiunto qui.

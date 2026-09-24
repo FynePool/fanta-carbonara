@@ -230,6 +230,18 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     senza_voti = [e["player"]["name"] for e in titolari if not e["rating"]]
     if senza_voti:
         avvisi.append(f"Titolari senza nessun voto, da decidere a mano: {', '.join(senza_voti)}.")
+    squalifiche_path = store.DATA_DIR / "squalifiche.json"
+    diffidati = {
+        s["player_id"]
+        for s in (store.load_json(squalifiche_path) if squalifiche_path.exists() else [])
+        if s["tipo"] == "diffidato"
+    }
+    nomi_diffidati = [e["player"]["name"] for e in titolari if e["player"]["id"] in diffidati]
+    if nomi_diffidati:
+        avvisi.append(
+            f"Diffidati tra i titolari: {', '.join(nomi_diffidati)}. Con un'ammonizione "
+            "saltano la giornata successiva."
+        )
     fuori_probabili = [
         e["player"]["name"] for e in titolari
         if e["player"]["status"] == "n/d" and "non trovato nelle probabili" in (e["player"].get("status_note") or "")

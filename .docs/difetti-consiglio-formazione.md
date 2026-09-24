@@ -176,7 +176,8 @@ applicato di nascosto.
 
 ### 4. Lo status non scade: chi sparisce dalle probabili tiene quello vecchio
 
-> **Risolto il 24/09** (fase C1, vedi [§ Piano](#piano-cosa-si-può-fare-subito)), **tranne lo status `squalificato`**: nessuno script lo assegna ancora (vedi [§ Cosa resta aperto](#cosa-resta-aperto)).
+> **Risolto il 24/09** (fase C1, vedi [§ Piano](#piano-cosa-si-può-fare-subito). Lo status `squalificato`, rimasto fuori dalla C1, è stato aggiunto lo stesso giorno
+> con `scrape_squalifiche.py` (vedi [§ Cosa resta aperto](#cosa-resta-aperto)).
 
 **Cosa si rompe.** In `apply_formazioni_status.py:93`, chi non viene trovato nelle
 probabili finisce in `unmatched_players` e **non viene toccato**: conserva status e
@@ -406,8 +407,8 @@ con 1-2 incontri a stagione per avversario il campione è debole per definizione
 ## Cosa resta aperto
 
 Verificato il 24/09 sera rieseguendo le prove di ogni difetto sul codice di `main`
-(16 controlli, 13 superati). Tutti gli 8 difetti hanno la correzione verificata; le
-assunzioni della prima stesura stanno così:
+(16 controlli, 13 superati, poi chiusa anche la parte squalifiche). Tutti gli 8
+difetti hanno la correzione verificata; le assunzioni della prima stesura stanno così:
 
 - **«Se non abbiamo il dato, lo diciamo.»** Risolto. Chi sparisce dalle probabili
   diventa `n/d` con la nota; ogni punteggio mostra su quanti voti si basa; un
@@ -421,13 +422,15 @@ assunzioni della prima stesura stanno così:
   criterio giusto è la media quando il giocatore gioca, quindi i minuti non servono
   all'ordine. Avversario e casa/trasferta sono mostrati nel report ma non entrano nel
   punteggio: è l'ultima cosa da pesare, col campione debole di 1-2 incontri a stagione.
-- **«Il rischio squalifica è coperto.»** **Aperto.** Nessuno script assegna lo status
-  `squalificato` e nessuno conta i cartellini di un giocatore, benché il README citi
-  proprio questo come motivo per importarli. Un titolare squalificato oggi passa per
-  disponibile: se sparisce dalle probabili il report lo segnala (C1), ma non dice
-  perché. La fonte giusta è la pagina "Squalificati e diffidati" di fantacalcio.it,
-  da leggere con lo stesso scraper delle probabili, non una soglia di gialli calcolata
-  da noi.
+- **«Il rischio squalifica è coperto.»** Risolto il 24/09, dopo questa verifica.
+  `scrape_squalifiche.py` legge squalificati e diffidati dalla pagina "Indisponibili
+  Serie A" di fantacalcio.it: lo squalificato diventa `squalificato` ed esce dai
+  disponibili, il diffidato resta schierabile e il report lo segnala. Non si conta
+  nessun cartellino da noi: la fonte ufficiale dice già chi è squalificato. Unico
+  limite: quel giorno non c'era nessuno squalificato, quindi la lista piena è dedotta
+  dalla struttura degli infortunati nella stessa pagina. Lo script segnala ogni
+  sezione con una struttura diversa da quella attesa, ed è la prima cosa da guardare
+  alla prima squalifica vera. [Probabile]
 - **Il freno sulle medie** (difetto 3) va ritarato sui voti veri appena arrivano.
 
 ---
