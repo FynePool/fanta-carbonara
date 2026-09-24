@@ -53,8 +53,8 @@ flowchart LR
 
     subgraph dati["📦 data/ (JSON in git)"]
         P["players.json<br/><small>532 giocatori</small>"]
-        C["calendario_serie_a.json<br/><small>379 partite</small>"]
-        M["matchday_stats.json<br/><small>1596 righe</small>"]
+        C["calendario_serie_a.json<br/><small>380 partite</small>"]
+        M["matchday_stats.json<br/><small>1848 righe</small>"]
         O["ownership.json + teams.json"]
     end
 
@@ -114,7 +114,7 @@ python3 scripts/asta.py assegna  --player-id fd2764 --team-id t03 --prezzo 112
 python3 scripts/asta.py stato    --team-id t03
 python3 scripts/asta.py scambio  --team-a t03 --team-b t07 \
     --players-a fd2764 --players-b fd5841 --credits-b-a 15
-python3 scripts/asta.py svincolo --player-id fd5725 --team-id t03 --rimborso 2
+python3 scripts/asta.py svincolo --player-id fd5725 --team-id t03 --rimborso 1
 ```
 
 **Cosa abilita lo storico** — esempio ricavato dai dati già nel repo (giornate 1-5,
@@ -139,8 +139,8 @@ Tutto in `data/`, JSON versionati in git — niente database, niente stato nasco
 | File | Contenuto | Stato |
 |---|---|---|
 | `players.json` | Pool completo Serie A: ruolo, squadra, quotazione, status | 532 giocatori |
-| `calendario_serie_a.json` | Calendario e risultati per giornata | 379 partite (44 giocate) |
-| `matchday_stats.json` | Per giocatore/partita: gol, assist, cartellini, falli, minuti, avversario, casa/trasferta | 1596 righe |
+| `calendario_serie_a.json` | Calendario e risultati per giornata | 380 partite (50 giocate) |
+| `matchday_stats.json` | Per giocatore/partita: gol, assist, cartellini, falli, minuti, avversario, casa/trasferta | 1848 righe |
 | `injuries.json` | Infortuni in corso con rientro previsto | 48 voci |
 | `squalifiche.json` | Squalificati e diffidati attuali | aggiornato ogni giro |
 | `teams.json` | Le 12 squadre della lega, crediti totali e rimanenti | da popolare |
@@ -148,8 +148,40 @@ Tutto in `data/`, JSON versionati in git — niente database, niente stato nasco
 | `market_log.json` | Log di acquisti, scambi e svincoli | dopo l'asta |
 | `formazioni_history.json` | Storico delle probabili formazioni pubblicate | accumulo continuo |
 
-`config/league.json` tiene regole di scoring, moduli ammessi, requisiti di rosa e
-`my_team_id`.
+`config/league.json` tiene moduli ammessi, requisiti di rosa, `my_team_id` e le regole
+della lega prese dal regolamento FantaCarbonara, ognuna con la sua fonte:
+
+- **`regole_lega`**: niente modificatore di difesa, cambi illimitati nello stesso ruolo,
+  rinvii (vedi sotto), scadenza della formazione, penalità per formazione non schierata.
+- **`regole_mercato`**: ogni offerta deve lasciare almeno 1 credito per ogni slot ancora
+  vuoto, pena la perdita del giocatore e di tutti i successivi; svincolo rimborsato 1
+  credito, cessione all'estero o in Serie B rimborsata al prezzo d'acquisto; asta di
+  riparazione con +50 crediti; scambi solo a gennaio. `asta.py` non le applica ancora.
+- **`competizioni`**: criteri di parità di campionato, Champions, Europa e Coppa Italia,
+  per la futura classifica.
+- **`scoring`**: solo a titolo informativo, il fantavoto arriva già calcolato dal sito.
+  Due valori restano `null` perché il regolamento non li chiarisce ("Rigore +2", porta
+  inviolata).
+
+## Come ragiona il consiglio di formazione
+
+`report_formazione.py` ordina i giocatori di ogni ruolo per media quando giocano, perché
+con i cambi illimitati chi non scende in campo viene coperto dal primo della panchina.
+La probabilità di giocare non entra nell'ordine, ma negli avvisi ("se non gioca entra X").
+
+Le partite rinviate seguono la regola della lega, che vale **per giornata**:
+
+| Partite rinviate nella giornata | Cosa prendono i giocatori | Come li tratta il report |
+|---|---|---|
+| da 1 a 3 | 6 politico, senza recupero | valgono 6 nell'ordine (6 sicuro, niente cambio) |
+| più di 3 | il voto del recupero, per tutte | restano con la loro media |
+
+Una partita spostata ma giocata dentro la giornata non è un rinvio. Con esattamente 3
+rinvii il report avvisa che uno in più, anche dopo la scadenza, cambia la regola per
+tutti. Stampa anche la **scadenza della formazione**: l'inizio della prima partita non
+rinviata del turno. Se il turno non si ricostruisce dalle date del calendario, non
+applica niente di tutto questo e chiede di controllare a mano. Revisione completa della
+logica: [`.docs/difetti-consiglio-formazione.md`](.docs/difetti-consiglio-formazione.md).
 
 ## Fonti dei dati, con i loro difetti
 
@@ -173,6 +205,8 @@ Dettagli, endpoint e trappole verificate: [`.docs/bigballs-api.md`](.docs/bigbal
 - [x] Probabili formazioni con storico
 - [x] Calendario Serie A completo della stagione
 - [x] Storico per giocatore: gol, assist, cartellini, falli, minuti
+- [x] Regolamento della lega in config; rinvii e scadenza nel report formazione
+- [ ] **Regole di mercato in `asta.py`** (sforamento, rimborsi) — per l'asta di riparazione
 - [ ] **Voto e fantavoto ufficiali** — serve la lega vera su leghe.fantacalcio.it
 - [ ] **Rose reali e 12 squadre** — dopo l'asta
 - [ ] **Formazione consigliata che pesa avversario e casa/trasferta** — oggi l'algoritmo è un greedy sulla media fantavoto
@@ -184,6 +218,7 @@ Il repo è pensato per essere usato conversando. In `.claude/skills/`:
 
 | Skill | Quando parte |
 |---|---|
+| `aggiorna-dati` | la routine del mattino / «aggiorna tutti i dati» |
 | `asta` | «preso Lautaro dal Barattolo FC per 112» |
 | `aggiorna-formazioni` | «aggiorna le probabili» / prima di ogni deadline |
 | `formazione` | «che formazione schiero?» |
