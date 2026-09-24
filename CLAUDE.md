@@ -162,7 +162,8 @@ se non scende in campo entra il primo della panchina: vedi
 - `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
   `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
   di `main` e con le regole vere della lega: 8 difetti riprodotti con comando e
-  output, tutti risolti il 24/09 con le fasi A, B e C, l'elenco di ciò che è stato
+  output, risolti il 24/09 con le fasi A, B e C tranne lo status `squalificato`
+  (nessuno script lo assegna), l'elenco di ciò che è stato
   tolto dopo la verifica, le correzioni trovate strada facendo e cosa resta da
   ritarare quando arriveranno i voti. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.

@@ -176,7 +176,7 @@ applicato di nascosto.
 
 ### 4. Lo status non scade: chi sparisce dalle probabili tiene quello vecchio
 
-> **Risolto il 24/09** (fase C1, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
+> **Risolto il 24/09** (fase C1, vedi [§ Piano](#piano-cosa-si-può-fare-subito)), **tranne lo status `squalificato`**: nessuno script lo assegna ancora (vedi [§ Cosa resta aperto](#cosa-resta-aperto)).
 
 **Cosa si rompe.** In `apply_formazioni_status.py:93`, chi non viene trovato nelle
 probabili finisce in `unmatched_players` e **non viene toccato**: conserva status e
@@ -403,24 +403,32 @@ con 1-2 incontri a stagione per avversario il campione è debole per definizione
 
 ---
 
-## Cosa dovrebbe essere vero e non lo è
+## Cosa resta aperto
 
-- **«Se non abbiamo il dato, lo diciamo.»** [Certo] La regola è rispettata alla
-  lettera, perché nessun valore viene inventato, ma non nella sostanza. Un giocatore
-  sparito dalle probabili conserva lo status della settimana prima. Una media su 1
-  voto è stampata come una su 5, con la stessa etichetta. Un giocatore di `ownership.json`
-  che non esiste più in `players.json` sparisce dalla rosa senza avviso.
-- **«Il calendario sa chi gioca quando.»** [Certo] Sa chi ha giocato. Sul futuro non
-  risponde.
-- **«Le statistiche alimentano il consiglio.»** [Certo] `roster.py` e
-  `report_formazione.py` leggono una sola colonna di `matchday_stats.json`,
-  `fantavoto`, che oggi è vuota ovunque. Minuti, cartellini, avversario e casa/trasferta
-  sono in archivio e non collegati a niente; `player_history_vs_opponent` è definita e
-  mai chiamata.
-- **«Il rischio squalifica è coperto.»** [Certo] Il README lo cita come motivo per
-  importare i cartellini, ma nessuna riga di codice somma i gialli di un giocatore.
-  La fonte giusta è la pagina "Squalificati e diffidati" di fantacalcio.it, non una
-  soglia calcolata da noi.
+Verificato il 24/09 sera rieseguendo le prove di ogni difetto sul codice di `main`
+(16 controlli, 13 superati). Tutti gli 8 difetti hanno la correzione verificata; le
+assunzioni della prima stesura stanno così:
+
+- **«Se non abbiamo il dato, lo diciamo.»** Risolto. Chi sparisce dalle probabili
+  diventa `n/d` con la nota; ogni punteggio mostra su quanti voti si basa; un
+  giocatore di `ownership.json` sparito dal listone viene segnalato; uno status
+  vecchio viene segnalato come tale.
+- **«Il calendario sa chi gioca quando.»** Risolto per quello che serve: il prossimo
+  turno e la prossima partita di ogni squadra si ricavano dalle date. Il numero di
+  giornata delle partite future resta vuoto, per scelta: non si inventa.
+- **«Le statistiche alimentano il consiglio.»** In parte, e per ora va bene così.
+  Il motore usa solo `fantavoto` (ancora vuoto ovunque): con i cambi illimitati il
+  criterio giusto è la media quando il giocatore gioca, quindi i minuti non servono
+  all'ordine. Avversario e casa/trasferta sono mostrati nel report ma non entrano nel
+  punteggio: è l'ultima cosa da pesare, col campione debole di 1-2 incontri a stagione.
+- **«Il rischio squalifica è coperto.»** **Aperto.** Nessuno script assegna lo status
+  `squalificato` e nessuno conta i cartellini di un giocatore, benché il README citi
+  proprio questo come motivo per importarli. Un titolare squalificato oggi passa per
+  disponibile: se sparisce dalle probabili il report lo segnala (C1), ma non dice
+  perché. La fonte giusta è la pagina "Squalificati e diffidati" di fantacalcio.it,
+  da leggere con lo stesso scraper delle probabili, non una soglia di gialli calcolata
+  da noi.
+- **Il freno sulle medie** (difetto 3) va ritarato sui voti veri appena arrivano.
 
 ---
 
