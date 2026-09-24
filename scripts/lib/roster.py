@@ -164,20 +164,43 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
             "turno è già iniziato): controlla a mano che le squadre dei titolari giochino."
         )
 
+    # Regola della lega sui rinvii, a giornata: fino a max_6 partite rinviate prendono
+    # tutte 6 politico; oltre, si aspettano tutte e vale il voto del recupero. In
+    # nessuno dei due casi il giocatore va escluso. Il conto è quello di oggi: un rinvio
+    # deciso dopo la scadenza della formazione può ancora cambiare la regola.
+    max_6 = config.get("regole_lega", {}).get("rinvii", {}).get("max_partite_6_politico", 3)
+    rinviate = [m for m in turno["partite"] if m["stato"] == "postponed"] if turno["chiaro"] else []
+    sei_politico = len(rinviate) <= max_6
+    if roster and rinviate:
+        elenco = ", ".join(f"{m['squadra_casa']}-{m['squadra_trasferta']}" for m in rinviate)
+        if sei_politico:
+            avvisi.append(
+                f"{_n(len(rinviate), 'partita rinviata', 'partite rinviate')} nel turno ({elenco}): "
+                f"fino a {max_6} prendono tutti 6 politico, contato come 6 nell'ordine."
+            )
+        else:
+            avvisi.append(
+                f"{len(rinviate)} partite rinviate nel turno ({elenco}): più di {max_6}, quindi tutte "
+                "si recuperano e vale il voto del recupero. I giocatori restano ordinati per media."
+            )
+        if len(rinviate) == max_6:
+            avvisi.append(
+                "Un altro rinvio in questa giornata, anche dopo la scadenza, fa passare tutte le "
+                "partite rinviate al voto del recupero: niente più 6 politico."
+            )
+
     non_disponibili = []
     per_ruolo = {role: [] for role in ROLES}
     for p in roster:
         partita = turno["per_squadra"].get(p["serie_a_team"])
         if p["status"] in EXCLUDED_STATUSES:
             non_disponibili.append({"player": p, "motivo": p.get("status_note") or p["status"]})
-        elif turno["chiaro"] and partita and partita["stato"] == "postponed":
-            non_disponibili.append(
-                {"player": p, "motivo": f"partita rinviata: {partita['squadra_casa']}-{partita['squadra_trasferta']}"}
-            )
-        else:
-            per_ruolo[p["role"]].append(
-                {"player": p, "rating": rate_player(p, votes, role_avg), "partita": partita}
-            )
+            continue
+        rating = rate_player(p, votes, role_avg)
+        if partita in rinviate and sei_politico:
+            # Il 6 è sicuro e non lascia il posto alla panchina: vale 6, non la media.
+            rating = {"media": 6.0, "n": 0, "punteggio": 6.0, "politico": True}
+        per_ruolo[p["role"]].append({"player": p, "rating": rating, "partita": partita})
     per_ruolo = {role: _role_order(entries) for role, entries in per_ruolo.items()}
 
     risultato = {
@@ -192,7 +215,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     if not roster:
         avvisi.append(f"Nessun giocatore in ownership.json per la squadra {team_id}.")
         return risultato
-    if not any(e["rating"] for entries in per_ruolo.values() for e in entries):
+    if not any(e["rating"] and not e["rating"].get("politico") for entries in per_ruolo.values() for e in entries):
         avvisi.append(
             "Nessun giocatore della rosa ha ancora un voto: il motore non può consigliare "
             "una formazione finché non arrivano i voti. Sotto, la rosa per ruolo."

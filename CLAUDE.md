@@ -55,9 +55,16 @@ coperti: vanno aggiunti a quella skill quando esisteranno gli importer.
   l'esito partita, usato per sapere chi ha giocato contro chi in una giornata.
 
 `config/league.json` contiene le regole di scoring, i moduli ammessi e `my_team_id`
-(la mia squadra — da impostare la prima volta che si popolano i dati). In
-`regole_lega` le regole confermate dalla lega il 24/09: **nessun modificatore di
-difesa, sostituzioni illimitate**. Con i cambi illimitati, dentro un ruolo va
+(la mia squadra — da impostare la prima volta che si popolano i dati). Le regole
+vengono dal regolamento FantaCarbonara (24/09) e dai chiarimenti della lega, ognuna con
+la sua `_fonte`. In `regole_lega`: **nessun modificatore di difesa, sostituzioni
+illimitate**, rinvii, scadenza formazione, penalità. In `regole_mercato`: sforamento
+(ogni offerta deve lasciare almeno 1 credito per slot ancora vuoto), rimborsi (1 credito
+per uno svincolo, il prezzo d'acquisto per una cessione all'estero o in Serie B), asta di
+riparazione con +50 crediti, scambi solo a gennaio; `asta.py` non le applica ancora. In
+`competizioni` i criteri di parità per la futura fase classifica. I punteggi in
+`scoring` non li legge nessuno script (il fantavoto arriva già calcolato dal sito) e
+due valori sono `null` perché il regolamento non li chiarisce. Con i cambi illimitati, dentro un ruolo va
 schierato prima chi ha la media più alta quando gioca, anche se gioca poco, perché
 se non scende in campo entra il primo della panchina: vedi
 `.docs/difetti-consiglio-formazione.md`.
@@ -155,9 +162,13 @@ se non scende in campo entra il primo della panchina: vedi
   spariti dal listone. Per ogni giocatore mostra la prossima partita della sua
   squadra (avversario, casa/trasferta, data), ricavata dalle date del calendario
   senza inventare numeri di giornata: le prime 10 partite non giocate sono il
-  prossimo turno se coprono le 20 squadre una volta ciascuna. In quel caso chi ha la
-  partita rinviata esce dai disponibili; se il turno non è ricostruibile (recupero,
-  turno già iniziato) avvisa e non esclude nessuno. Avvisa anche per i titolari
+  prossimo turno se coprono le 20 squadre una volta ciascuna. In quel caso applica la
+  regola della lega sui rinvii, che vale per giornata: fino a 3 partite rinviate i loro
+  giocatori valgono 6 politico nell'ordine; oltre 3 restano con la loro media (voto del
+  recupero). Nessun rinviato viene escluso; se i rinvii sono 3 avvisa che uno in più
+  cambia la regola. Stampa anche la scadenza della formazione (inizio della prima
+  partita non rinviata del turno). Se il turno non è ricostruibile (recupero, turno già
+  iniziato) avvisa e non applica niente di tutto questo. Avvisa anche per i titolari
   assenti dalle probabili, per gli status più vecchi di 4 giorni e per i titolari
   diffidati. `--matchday` è solo l'etichetta del titolo.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo

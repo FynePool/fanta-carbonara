@@ -26,18 +26,79 @@
     "5-4-1"
   ],
   "scoring": {
+    "_fonte": "Regolamento FantaCarbonara (docx condiviso il 24/09/2026), sezione PUNTEGGI. Il regolamento elenca solo le voci diverse dallo standard: le altre sono i valori standard di fantacalcio.it, non confermati dalla lega. Nessuno script legge questi valori: il fantavoto arriva già calcolato dal sito delle leghe.",
     "bonus_gol": 3,
     "bonus_assist": 1,
     "malus_ammonizione": -0.5,
     "malus_espulsione": -1,
-    "malus_autogol": -2,
-    "malus_rigore_sbagliato": -3,
-    "bonus_rigore_parato": 3
+    "malus_autogol": -3,
+    "malus_rigore_sbagliato": -2,
+    "bonus_rigore_parato": null,
+    "_rigore_note": "Il regolamento dice 'Rigore +2' senza dire se è il rigore parato o il gol su rigore: da verificare con la lega.",
+    "bonus_porta_inviolata": null,
+    "_porta_inviolata_note": "Il valore non è indicato. Il portiere la prende solo se gioca almeno 45 minuti.",
+    "senza_voto_ammonito": 5.5,
+    "_senza_voto_ammonito_note": "Chi prende un'ammonizione senza voto prende 5,5 d'ufficio: ha un voto, quindi non entra nessuno dalla panchina al suo posto.",
+    "_autogol_portiere": "Il portiere che fa autogol prende sia il malus autogol sia il malus gol subito.",
+    "_portiere_improvvisato": "Un giocatore di movimento che finisce in porta sostituisce a tutti gli effetti il portiere, con bonus e malus del portiere."
   },
   "regole_lega": {
-    "_fonte": "Confermate dalla lega il 24/09/2026.",
+    "_fonte": "Modificatore e sostituzioni confermati dalla lega il 24/09/2026; il resto dal regolamento FantaCarbonara (24/09/2026), con i rinvii chiariti dall'utente lo stesso giorno.",
     "modificatore_difesa": false,
     "sostituzioni_max": null,
-    "_sostituzioni_note": "null = illimitate: ogni titolare senza voto viene sostituito dal primo panchinaro dello stesso ruolo che ha preso voto (stesso ruolo confermato dalla lega il 24/09/2026)."
+    "_sostituzioni_note": "null = illimitate: ogni titolare senza voto viene sostituito dal primo panchinaro dello stesso ruolo che ha preso voto (stesso ruolo confermato dalla lega il 24/09/2026).",
+    "rinvii": {
+      "max_partite_6_politico": 3,
+      "_note": "Si contano le partite della giornata non giocate entro la giornata (una partita spostata di giorno ma giocata dentro la giornata non è un rinvio). Fino a 3 partite rinviate: tutti i giocatori di quelle partite prendono 6 politico, senza recupero. Più di 3: TUTTE le partite rinviate della giornata si aspettano e i giocatori prendono il voto del recupero (il sito chiude la giornata solo allora). Una partita sospesa vale per i voti presi fino all'interruzione, senza 6 politico per chi non ha giocato."
+    },
+    "scadenza_formazione": "Fino a un secondo prima dell'inizio della partita che apre la giornata di Serie A. L'admin inserisce la formazione solo se gli viene comunicata prima di quell'orario.",
+    "formazione_non_schierata": "Sconfitta 3-0 a tavolino; la seconda volta anche -1 punto in classifica; dalla terza in poi 5 euro di penale ciascuna."
+  },
+  "regole_mercato": {
+    "_fonte": "Regolamento FantaCarbonara (24/09/2026), sezione ASTA; regola sullo sforamento chiarita dall'utente lo stesso giorno. asta.py non le applica ancora.",
+    "aste": "Due aste a chiamata: una a settembre e una di riparazione a mercato invernale chiuso.",
+    "ricarica_asta_riparazione": 50,
+    "credito_minimo_per_giocatore": 1,
+    "sforamento": "Ogni offerta deve lasciare almeno 1 credito per ogni slot ancora da riempire. Se non lo lascia, la squadra perde il giocatore che l'ha fatta sforare e tutti quelli presi dopo, e perde i crediti spesi. Quegli slot non si possono più riempire.",
+    "rimborso_svincolo": 1,
+    "rimborso_cessione_estero_o_serie_b": "prezzo d'acquisto",
+    "scambi": "Solo durante gennaio. Un giocatore scambiato non può tornare nella squadra da cui è partito nella stessa sessione di mercato. Gli scambi chiudono mezz'ora prima della partita che apre la giornata."
+  },
+  "competizioni": {
+    "_fonte": "Regolamento FantaCarbonara (24/09/2026), sezione CLASSIFICA. Serve alla fase classifica, non ancora implementata.",
+    "campionato": {
+      "spareggi": [
+        "punti totali fatti",
+        "differenza reti",
+        "gol fatti",
+        "gol subiti"
+      ]
+    },
+    "champions_europa_gironi": {
+      "spareggi": [
+        "scontri diretti",
+        "differenza reti",
+        "gol fatti",
+        "gol subiti",
+        "punti totali"
+      ]
+    },
+    "coppa_italia_gironi": {
+      "spareggi": [
+        "punti totali",
+        "scontri diretti",
+        "differenza reti",
+        "gol fatti",
+        "gol subiti"
+      ]
+    },
+    "eliminazione_diretta": {
+      "spareggi": [
+        "punteggio totale",
+        "punteggio totale senza bonus e malus"
+      ],
+      "_note": "Vale per Coppa Italia, Champions ed Europa."
+    },
+    "qualificazioni": "I primi 4 del campionato e le vincitrici di Champions ed Europa vanno in Champions l'anno dopo. Se coincidono, scalano il 5° ed eventualmente il 6°. Le altre squadre vanno in Europa."
   }
 }

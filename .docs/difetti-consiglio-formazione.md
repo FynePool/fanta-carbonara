@@ -253,6 +253,8 @@ ritardo".
 **Perché costa punti.** Il sistema non sa se la squadra di un tuo giocatore gioca. Una
 partita rinviata manda in s.v. tutti i tuoi giocatori di quelle due squadre, e il
 report li schiera come sempre. Raro (1-2 volte a stagione), ma può valere 3-4 slot.
+(Scritto prima di conoscere il regolamento: nella lega il rinviato non prende s.v. ma
+6 politico o il voto del recupero, vedi C2 nel piano.)
 
 **Correzione.** `data_utc` c'è per tutte le partite: ricavare la prossima giornata
 raggruppando le partite per date, e nel report segnalare chi appartiene a una squadra
@@ -357,7 +359,7 @@ voti. Ogni fase si verifica con la rosa simulata di [§ Riprodurre](#riprodurre)
 | # | Cosa | Dove | Difetto | Stato |
 |---|---|---|---|---|
 | C1 | Chi sparisce dalle probabili passa a `n/d`; status più vecchio di 4 giorni segnalato | `apply_formazioni_status.py`, `roster.py` | 4 | fatto 24/09 |
-| C2 | Prossimo turno ricavato dalle date; prossima partita per giocatore; rinviati fuori dai disponibili | `roster.py`, `report_formazione.py` | 6 | fatto 24/09 |
+| C2 | Prossimo turno ricavato dalle date; prossima partita per giocatore; rinviati trattati con la regola della lega (sotto) | `roster.py`, `report_formazione.py` | 6 | fatto 24/09, rivisto 24/09 |
 
 C2 è stata fatta diversamente da come la proponeva la prima stesura: **nessun numero di
 giornata viene scritto nel calendario**. Un numero ricavato dalle date sarebbe un dato
@@ -365,6 +367,19 @@ stimato presentato come vero, e con un recupero giocato settimane dopo sbagliere
 tutti quelli successivi. Il report legge le date e basta. Le prime 10 partite non
 giocate sono il prossimo turno solo se coprono le 20 squadre una volta ciascuna; se no
 avvisa e non esclude nessuno.
+
+**Rivista il 24/09 con il regolamento della lega.** La prima versione toglieva dai
+disponibili chi aveva la partita rinviata: sbagliato, perché la lega non dà s.v. a nessuno.
+La regola, chiarita dall'utente, vale per giornata: fino a 3 partite rinviate i loro
+giocatori prendono tutti 6 politico, senza recupero; con più di 3 si aspettano tutte e
+vale il voto del recupero. Una partita spostata ma giocata dentro la giornata non è un
+rinvio. Ora nessuno viene escluso: con 6 politico il giocatore entra nell'ordine con 6
+(sicuro, non lascia il posto alla panchina), altrimenti con la sua media. Il report
+conta i rinvii e avvisa quando sono esattamente 3, perché un rinvio in più, anche dopo la
+scadenza, cambia la regola per tutti. Due limiti restano: il conto è quello del momento
+in cui gira il report, e non sappiamo ancora come BigBalls segna un rinvio (nessuno visto
+finora). Se sposta la data invece di scrivere `postponed`, il turno non si ricostruisce e
+il report lo dice invece di applicare la regola.
 
 Trovato durante la C1: lo status veniva timbrato con la data di **oggi** anche quando le
 probabili erano di giorni prima (per esempio se lo scrape del mattino fallisce e si

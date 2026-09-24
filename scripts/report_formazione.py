@@ -22,6 +22,8 @@ from lib.roster import suggest_lineup
 def _voti(rating: dict | None) -> str:
     if rating is None:
         return "  -    senza voti"
+    if rating.get("politico"):
+        return " 6.00  6 politico (rinvio)"
     n = rating["n"]
     return f"{rating['punteggio']:5.2f}  media {rating['media']:.2f} su {n} vot{'o' if n == 1 else 'i'}"
 
@@ -31,6 +33,19 @@ ROMA = ZoneInfo("Europe/Rome")
 
 def _quando(data_utc: str) -> str:
     return datetime.fromisoformat(data_utc.replace("Z", "+00:00")).astimezone(ROMA).strftime("%d/%m")
+
+
+def _scadenza(turno: dict) -> str | None:
+    """La formazione va inserita prima dell'inizio della partita che apre la giornata:
+    la prima non rinviata del turno. Solo se il turno si ricostruisce dalle date."""
+    giocate = [m for m in turno["partite"] if m["stato"] != "postponed"]
+    if not turno["chiaro"] or not giocate:
+        return None
+    inizio = datetime.fromisoformat(giocate[0]["data_utc"].replace("Z", "+00:00")).astimezone(ROMA)
+    return (
+        f"Scadenza formazione: {inizio.strftime('%d/%m alle %H:%M')} (ora italiana), inizio di "
+        f"{giocate[0]['squadra_casa']}-{giocate[0]['squadra_trasferta']}"
+    )
 
 
 def _partita(e: dict) -> str:
@@ -76,6 +91,9 @@ def main():
             f"Prossimo turno dal calendario: {_quando(turno['partite'][0]['data_utc'])} - "
             f"{_quando(turno['partite'][-1]['data_utc'])} ({len(turno['partite'])} partite)"
         )
+    scadenza = _scadenza(turno)
+    if scadenza:
+        print(scadenza)
 
     if r["modulo"]:
         print(f"Modulo consigliato: {r['modulo']}")
@@ -89,7 +107,8 @@ def main():
             p = e["player"]
             riga = f"  [{p['role']}] {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p):<17} {_partita(e)}"
             prob = p.get("prob_titolare")
-            if prob is not None and prob < 75 and panchina_per_ruolo.get(p["role"]):
+            politico = e["rating"] and e["rating"].get("politico")
+            if prob is not None and prob < 75 and not politico and panchina_per_ruolo.get(p["role"]):
                 riga += f"   <- se non gioca entra {panchina_per_ruolo[p['role']][0]}"
             print(riga)
     else:
