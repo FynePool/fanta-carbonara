@@ -115,13 +115,20 @@ def main():
 
     history_path = store.DATA_DIR / "formazioni_history.json"
     history = store.load_json(history_path) if history_path.exists() else []
-    history.append(snapshot)
-    store.save_json(history_path, history)
+    # Con un giro al giorno lo storico crescerebbe di ~90 KB anche quando le probabili
+    # non cambiano (soste, giorni senza notizie): si aggiunge solo se sono diverse.
+    invariato = bool(history) and history[-1]["teams"] == teams
+    if not invariato:
+        history.append(snapshot)
+        store.save_json(history_path, history)
 
     total_players = sum(len(t["titolari"]) + len(t["panchina"]) for t in teams)
     print(f"OK: {len(teams)} squadre, {total_players} giocatori estratti.")
     print(f"Snapshot corrente: data/formazioni_correnti.json")
-    print(f"Storico ({len(history)} snapshot totali): data/formazioni_history.json")
+    if invariato:
+        print("Probabili identiche all'ultimo snapshot: storico non modificato.")
+    else:
+        print(f"Storico ({len(history)} snapshot totali): data/formazioni_history.json")
     return 0
 
 

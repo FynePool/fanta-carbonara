@@ -68,6 +68,8 @@ copertura.
 
 ### 1. La panchina non è ordinata, e con i cambi illimitati è lei a fare i punti
 
+> **Risolto il 24/09** (fase B1, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
+
 **Cosa si rompe.** `roster.py:109` costruisce la panchina come
 `[p for p in roster if p["id"] not in bench_ids]`, cioè nell'ordine di
 `ownership.json`, senza ordinarla. Ci mette dentro anche gli infortunati. Con
@@ -110,6 +112,8 @@ separata "non disponibili". Stampare la panchina numerata.
 
 ### 2. La penalità di −1,5 per titolarità incerta rimescola l'ordine giusto
 
+> **Risolto il 24/09** (fase B2, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
+
 **Cosa si rompe.** `apply_formazioni_status.py:44` riduce la percentuale di titolarità
 pubblicata da fantacalcio.it (17 valori distinti, dall'1% al 90%) a tre etichette. Poi
 `roster.py:65` toglie 1,5 punti a chi è `ballottaggio` o `panchina`, sempre la stessa
@@ -141,6 +145,8 @@ sostituto casuale: toglierla da sola peggiorerebbe il consiglio.
 ---
 
 ### 3. "media ultime 5" è un'etichetta falsa: 1 voto vale quanto 5
+
+> **Risolto il 24/09** (fase B3, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
 
 **Cosa si rompe.** `report_formazione.py:41` e `:47` stampano
 `media ultime 5: {score}` qualunque sia il numero di voti. Il valore stampato, poi,
@@ -205,6 +211,8 @@ Su fantacalcio.it gli indisponibili stanno in pagine separate: "Infortunati",
 
 ### 5. Se un ruolo non ha dati, il report non propone niente
 
+> **Risolto il 24/09** (fase B4, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
+
 **Cosa si rompe.** `roster.py:100`: per ogni modulo servono abbastanza giocatori con
 punteggio in ogni ruolo, altrimenti il modulo viene scartato. Se non ne resta nessuno,
 il report risponde solo "Nessun modulo schierabile".
@@ -249,6 +257,8 @@ che non compare in quella giornata.
 
 ### 7. Tre righe di statistiche attribuite al giocatore sbagliato
 
+> **Risolto il 24/09** (fase A3, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
+
 **Cosa si rompe.** `import_matchday_stats.py:154`: se la squadra del giocatore non è
 quella di casa, lo script assume che sia quella in trasferta, senza controllare che
 sia davvero una delle due. Quando il box score contaminato di BigBalls porta un
@@ -279,6 +289,8 @@ Poi togliere le 3 righe dall'archivio.
 ---
 
 ### 8. Le giornate vuote si riempiono solo rilanciando gli import, e nessuno li rilancia
+
+> **Risolto il 24/09** (fase A2, vedi [§ Piano](#piano-cosa-si-può-fare-subito)).
 
 **Cosa si rompe.** Le 3 partite del 19/09 sono entrate in archivio senza giornata. La
 fonte ora la fornisce (verificato il 24/09: Roma-Inter e Bologna-Torino hanno "Regular
@@ -320,27 +332,46 @@ voti. Ogni fase si verifica con la rosa simulata di [§ Riprodurre](#riprodurre)
 
 **Fase A — dati e regole** (basso rischio, sistema la materia prima)
 
-| # | Cosa | Dove | Difetto |
-|---|---|---|---|
-| A1 | Scrivere le regole della lega | `config/league.json` | **fatto il 24/09** |
-| A2 | Rilanciare gli import calendario e statistiche, e aggiungerli alla routine della skill `formazione` | `.claude/skills/formazione/SKILL.md` | 8 |
-| A3 | Due controlli nell'importer statistiche + togliere le 3 righe di Sulemana | `import_matchday_stats.py`, `data/matchday_stats.json` | 7 |
+| # | Cosa | Dove | Difetto | Stato |
+|---|---|---|---|---|
+| A1 | Scrivere le regole della lega | `config/league.json` | — | fatto 24/09 |
+| A2 | Rilanciare gli import calendario e statistiche, e metterli nel giro quotidiano | skill `aggiorna-dati` | 8 | fatto 24/09 |
+| A3 | Due controlli nell'importer statistiche + togliere le 3 righe di Sulemana | `import_matchday_stats.py`, `data/matchday_stats.json` | 7 | fatto 24/09 |
 
 **Fase B — il motore** (il cuore; B1 e B2 vanno fatti insieme)
 
-| # | Cosa | Dove | Difetto |
-|---|---|---|---|
-| B1 | Panchina ordinata per media dentro ogni ruolo, esclusi in lista a parte, numerata | `roster.py`, `report_formazione.py` | 1 |
-| B2 | Togliere la penalità −1,5 dall'ordine; salvare la percentuale come numero e usarla per gli avvisi | `apply_formazioni_status.py`, `roster.py` | 2 |
-| B3 | Frenare le medie su pochi voti e stampare "media X su N voti" | `roster.py`, `report_formazione.py` | 3 |
-| B4 | Non bloccare il report se un ruolo è senza dati: slot lasciato a te con il motivo | `roster.py`, `report_formazione.py` | 5 |
+| # | Cosa | Dove | Difetto | Stato |
+|---|---|---|---|---|
+| B1 | Panchina ordinata per media dentro ogni ruolo, esclusi in lista a parte, numerata | `roster.py`, `report_formazione.py` | 1 | fatto 24/09 |
+| B2 | Togliere la penalità −1,5 dall'ordine; salvare la percentuale come numero e usarla per gli avvisi | `apply_formazioni_status.py`, `roster.py` | 2 | fatto 24/09 |
+| B3 | Frenare le medie su pochi voti e stampare "media X su N voti" | `roster.py`, `report_formazione.py` | 3 | fatto 24/09 |
+| B4 | Non bloccare il report se un ruolo è senza dati: slot lasciato a te con il motivo | `roster.py`, `report_formazione.py` | 5 | fatto 24/09 |
 
 **Fase C — affidabilità di quello che leggi**
 
-| # | Cosa | Dove | Difetto |
-|---|---|---|---|
-| C1 | Chi sparisce dalle probabili passa a `n/d`; status più vecchio di 4 giorni segnalato | `apply_formazioni_status.py`, `report_formazione.py` | 4 |
-| C2 | Prossima giornata ricavata dalle date; avviso se la squadra di un giocatore non gioca | `import_calendario_seriea.py`, `report_formazione.py` | 6 |
+| # | Cosa | Dove | Difetto | Stato |
+|---|---|---|---|---|
+| C1 | Chi sparisce dalle probabili passa a `n/d`; status più vecchio di 4 giorni segnalato | `apply_formazioni_status.py`, `report_formazione.py` | 4 | da fare |
+| C2 | Prossima giornata ricavata dalle date; avviso se la squadra di un giocatore non gioca | `import_calendario_seriea.py`, `report_formazione.py` | 6 | da fare |
+
+**Trovati e corretti durante le fasi A e B**, fuori dall'elenco iniziale:
+
+- `import_matchday_stats.py` riscaricava tutte le partite a ogni giro (44 chiamate
+  oggi, 380 a fine stagione, su 500 al giorno) e **riscriveva ogni riga con
+  `voto: None`**: il giorno in cui arriveranno i voti, il giro successivo li avrebbe
+  cancellati. Ora è incrementale e conserva voto e fantavoto.
+- Il matching non riconosceva le abbreviazioni del listone a più lettere ("Martinez
+  Jo.") né i cognomi doppi ("Kolo Muani"): mancavano, tra gli altri, il portiere
+  titolare dell'Inter e un attaccante della Juventus. Recuperati 12 giocatori.
+- `scrape_formazioni.py` aggiungeva allo storico una fotografia di ~90 KB a ogni giro,
+  anche con probabili identiche: con la routine quotidiana, ~22 MB a stagione. Ora
+  salva solo le fotografie diverse dalla precedente.
+
+**Da ritarare quando ci saranno i voti veri.** Il freno sulle medie (difetto 3) tira
+verso la media di tutto il ruolo, con peso pari a 3 partite. Per un giocatore che
+entra a spezzoni questa media è probabilmente ottimistica: con 1 voto da 5,30 finisce
+davanti a chi ne ha 5 da 5,34. È il comportamento statisticamente coerente con quel
+riferimento, ma il riferimento stesso va verificato sui voti reali. [Ipotesi]
 
 **Dopo l'asta (27/09).** Caricare le 12 rose, e controllare che ogni squadra abbia
 esattamente 25 giocatori e che ogni `player_id` esista in `players.json`: oggi

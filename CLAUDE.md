@@ -10,10 +10,10 @@ Priorità attuale: **asta di inizio stagione imminente** (formato a chiamata cla
 asta (`scripts/asta.py`) è più importante del modulo formazione: senza rose complete
 non c'è nulla su cui basare un consiglio di formazione.
 
-Nessuno scraping automatico in questa fase: il listone va importato da un export
-ufficiale (vedi `scripts/import_listone.py`), gli acquisti live vanno registrati
-a mano man mano che avvengono, e lo status giocatore va aggiornato a mano prima
-di ogni deadline formazioni.
+I dati (listone, infortuni, calendario, statistiche, probabili formazioni e status)
+si aggiornano ogni mattina con una routine automatica che esegue la skill
+`aggiorna-dati` e pusha su `main`. Le rose dopo l'asta e i voti non sono ancora
+coperti: vanno aggiunti a quella skill quando esisteranno gli importer.
 
 ## Struttura dati (`data/`, JSON versionati in git)
 
@@ -24,7 +24,9 @@ di ogni deadline formazioni.
   infortunato | squalificato | panchina | n/d) e `status_updated_at` diventano
   rilevanti solo a stagione iniziata e **vanno aggiornati prima di ogni deadline**
   leggendo le probabili formazioni pubblicate sui siti (fantacalcio.it, SOS Fanta,
-  Gazzetta, ecc.).
+  Gazzetta, ecc.). `prob_titolare` è la percentuale di titolarità pubblicata da
+  fantacalcio.it (0-100), come numero: serve agli avvisi del report, **non**
+  all'ordine dei giocatori.
 - `ownership.json` — chi possiede quale giocatore: player_id, team_id, prezzo d'acquisto,
   data, modalità (asta/scambio/svincolato).
 - `matchday_stats.json` — storico per giornata: player_id, matchday, squadra Serie A
@@ -66,7 +68,9 @@ se non scende in campo entra il primo della panchina: vedi
 - `scrape_formazioni.py` — scrape delle probabili formazioni Serie A da
   fantacalcio.it (HTML statico, verificato scrapeable senza rendering JS).
   Scrive uno snapshot (`data/formazioni_correnti.json`, non versionato) e ne
-  accumula lo storico in `data/formazioni_history.json` (versionato).
+  accumula lo storico in `data/formazioni_history.json` (versionato), ma solo se è
+  diverso dall'ultimo: con un giro al giorno lo storico crescerebbe di ~90 KB anche
+  nei giorni in cui le probabili non cambiano.
 - `apply_formazioni_status.py [--dry-run]` — applica lo snapshot più recente allo
   `status` dei giocatori in `players.json`, con matching per nome+squadra
   (euristico, non un id condiviso tra fonti: verificare i "non trovati" in output).
@@ -106,15 +110,34 @@ se non scende in campo entra il primo della panchina: vedi
   ambiente. Le partite finite da pochissimo possono avere giornata nulla per
   ritardo della fonte: mai stimata, va verificata a mano al prossimo refresh.
   Merge idempotente sullo storico esistente (aggiorna per `match_id`, non duplica).
+- `import_matchday_stats.py [--ricostruisci]` — box score per giocatore da BigBalls
+  (`/v1/stored/matches/{id}/stats`) in `data/matchday_stats.json`. **Incrementale**:
+  scarica solo le partite finite non ancora in archivio (il piano free ha 500
+  chiamate al giorno; `--ricostruisci` le riscarica tutte). Aggiorna la giornata
+  delle righe esistenti dal calendario, e non sovrascrive mai `voto`/`fantavoto` già
+  presenti. Scarta le righe di giocatori la cui squadra non ha giocato la partita.
+  Il matching nomi gestisce le abbreviazioni del listone a più lettere ("Martinez
+  Jo."), i cognomi doppi ("Kolo Muani") e rifiuta un abbinamento se le iniziali sono
+  note e diverse: se listone e BigBalls non concordano sulla squadra di un giocatore
+  (es. Sulemana, Törnqvist), la riga non viene attribuita e finisce tra i "non
+  riconosciuti".
 - `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
   e per il mercato post-asta: registra un acquisto di qualunque squadra, uno scambio
   misto (giocatori + crediti in entrambe le direzioni) tra due squadre, o lo svincolo
   di un giocatore (torna disponibile per tutti); mostra crediti/slot rimanenti per
   ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
 - `report_formazione.py --team-id <id> [--matchday N]` — legge lo stato attuale della
-  rosa e propone modulo, titolari e panchina, segnalando esplicitamente i giocatori
-  senza storico sufficiente o con status incerto (mai inventare un dato mancante).
-  Utile solo a rose fatte e stagione in corso.
+  rosa e propone modulo, titolari e panchina **ordinata** (la logica sta in
+  `lib/roster.py`). Dentro ogni ruolo ordina per media quando il giocatore gioca
+  (ultimi 5 voti), avvicinata alla media del ruolo se i voti sono pochi; la
+  probabilità di giocare non entra nell'ordine ma negli avvisi ("se non gioca entra
+  X"). Stampa per ognuno "media X su N voti". Non si blocca se un ruolo è senza
+  dati: lascia lo slot a te col motivo. Segnala i giocatori di `ownership.json`
+  spariti dal listone. `--matchday` è ancora solo un'etichetta (difetto 6).
+- Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
+  di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
+  È quella che esegue la routine del mattino: per aggiungere un dato al giro
+  quotidiano si modifica la skill, non la routine.
 
 ## Documentazione di riferimento (`.docs/`)
 
@@ -127,9 +150,10 @@ se non scende in campo entra il primo della panchina: vedi
   gli importer o di aggiungere endpoint.
 - `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
   `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
-  di `main` e con le regole vere della lega: 8 difetti aperti riprodotti con comando
-  e output, l'elenco di ciò che è stato tolto dopo la verifica, e il piano delle
-  correzioni fattibili subito (fasi A, B, C). Da leggere prima di toccare
+  di `main` e con le regole vere della lega: 8 difetti riprodotti con comando e
+  output (6 risolti il 24/09 con le fasi A e B; restano C1 status che non scade e
+  C2 prossima giornata), l'elenco di ciò che è stato tolto dopo la verifica, e il
+  piano delle correzioni. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
