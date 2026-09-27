@@ -1,13 +1,13 @@
 ---
 name: aggiorna-dati
-description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, rose e calendario della lega, calendario e risultati Serie A, statistiche per giocatore, voti e fantavoto, probabili formazioni, squalificati e diffidati, status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
+description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, rose e calendario della lega, calendario e risultati Serie A, statistiche per giocatore, voti e fantavoto, probabili formazioni, squalificati e diffidati, status, notizie sulle squadre della rosa), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
 ---
 
 # Aggiornamento dati quotidiano
 
 Pensata per girare da sola, senza nessuno che risponda: **non chiedere conferme**,
 applica direttamente. Lo storico in `data/matchday_stats.json` non si accorcia mai: se uno
-script si ferma con "righe dello storico sparirebbero", non aggirarlo, riportalo. Aggiorna solo i dati: non dà consigli di formazione, non modifica codice.
+script si ferma con "righe dello storico sparirebbero", non aggirarlo, riportalo. Aggiorna solo i dati (notizie comprese): non dà consigli di formazione, non modifica codice.
 
 ## Prima di cominciare
 
@@ -92,7 +92,30 @@ fallito.
    i passi 2 e 3 sono saltati. Riscrive i voti di tutte le giornate finite (il sito
    li può correggere nei giorni dopo). Se stampa "anomalie di struttura della pagina",
    riportalo in cima al riepilogo: quei voti non sono stati scritti.
-7. **Quota API rimasta**, per il riepilogo:
+7. **Notizie sulle squadre della mia rosa** (i numeri non vedono un allenatore
+   cambiato, un infortunio in nazionale, un rigorista nuovo). Cosa cercare:
+   ```
+   python3 scripts/notizie_rosa.py squadre
+   ```
+   Per ogni squadra elencata, una ricerca web sulle notizie degli ultimi giorni:
+   allenatore, infortuni e rientri (anche in nazionale), chi gioca titolare e i
+   ballottaggi, rigoristi, squalifiche, mercato. Aggiungi a `data/notizie_rosa.json`
+   solo i **fatti** nuovi che toccano i giocatori della rosa o la loro squadra, uno per
+   voce, nel formato descritto in `scripts/notizie_rosa.py`:
+   - ogni notizia con almeno un link; `verificata: true` solo con due fonti
+     indipendenti o la fonte ufficiale del club;
+   - niente pareri, voci di mercato senza conferma o previsioni: se un fatto non è
+     sicuro, `verificata: false` e scrivilo nel testo;
+   - non duplicare una notizia già nel file; se è cambiata, aggiorna quella;
+   - mai inventare: se la ricerca non trova niente per una squadra, non si scrive niente.
+   Poi aggiorna `aggiornato_il` e controlla il file:
+   ```
+   python3 scripts/notizie_rosa.py valida
+   ```
+   Se `valida` segnala errori, correggili; se non ci riesci, ripristina il file di ieri
+   (`git checkout -- data/notizie_rosa.json`) e riportalo. Se la ricerca web non è
+   disponibile in questo giro, salta il passo e scrivilo in cima al riepilogo.
+8. **Quota API rimasta**, per il riepilogo:
    ```
    curl -sS https://api.bigballsdata.com/v1/usage -H "x-api-key: $BIGBALLS_API_KEY"
    ```
@@ -117,6 +140,7 @@ Breve, in italiano, fatti e numeri:
 - voti: righe aggiornate, righe nuove, e quanti voti di giocatori assenti dal listone;
 - infortunati ora e differenza rispetto a prima (chi è entrato, chi è rientrato);
 - squalificati e diffidati, per nome e squadra;
+- notizie nuove sulla rosa, una riga ciascuna con il link (e quelle non verificate);
 - quanti status sono cambiati, e i numeri dei "non trovati" nel matching nomi;
 - partite giocate ancora senza giornata;
 - chiamate API rimaste oggi;
