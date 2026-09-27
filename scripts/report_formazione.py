@@ -121,10 +121,15 @@ def _partita(e: dict) -> str:
 
 
 def _rig(e: dict) -> str:
-    """Marcatore compatto: solo il primo rigorista, che è l'unico che vale qualcosa
-    (+0,26 di fantavoto atteso; il secondo calcia solo se manca il primo, +0,03)."""
+    """Marcatore compatto. `RIG!` = ha calciato rigori davvero quest'anno (dato ufficiale);
+    `rig?` = lo dicono solo i giornali, e dove la realtà le ha messe alla prova quelle liste
+    hanno sbagliato 3 volte su 5. Il secondo rigorista non si marca: vale +0,03."""
     v = e.get("rigorista")
-    return " RIG" if v and v.get("consenso_sul_primo") else "    "
+    if not v:
+        return "     "
+    if v.get("rigori_stagione", {}).get("calciati"):
+        return " RIG!"
+    return " rig?" if v.get("consenso_sul_primo") else "     "
 
 
 def _titolarita(p: dict) -> str:
@@ -239,27 +244,39 @@ def main():
     in_rosa = [e for e in r["titolari"] + r["panchina"] + r["esclusi"] if e.get("rigorista")]
     if in_rosa:
         valore = r["valore_rigorista"]
-        print(f"\nRIGORISTI IN ROSA (RIG sulle righe sopra = primo rigorista, vale circa "
-              f"+{valore:.2f} di")
-        print("fantavoto atteso a partita). NON è dentro il numero, perché la media degli ultimi")
-        print("voti contiene già i rigori davvero calciati e non si possono togliere: serve come")
-        print("spareggio quando due giocatori sono equivalenti. Le gerarchie non sono un dato")
-        print("ufficiale, sono pareri di giornali che spesso non concordano:")
-        for e in sorted(in_rosa, key=lambda x: (x["rigorista"]["rango"], x["player"]["name"])):
+        print(f"\nRIGORISTI IN ROSA. Il primo rigorista vale circa +{valore:.2f} di fantavoto "
+              "atteso a")
+        print("partita; il secondo +0,03, cioè niente. NON è dentro il numero: le gerarchie dei")
+        print("giornali, dove la realtà le ha messe alla prova (i 5 rigori di questa stagione),")
+        print("hanno sbagliato 3 volte su 5. Serve come spareggio fra due giocatori equivalenti.")
+        print("  RIG! = ha calciato rigori davvero quest'anno, dato ufficiale di fantacalcio.it")
+        print("  rig? = lo dicono solo i giornali. Zero rigori NON lo smentisce: dopo 5 giornate")
+        print("         quasi nessun rigorista designato ne ha ancora avuto uno da tirare.")
+        def ordine(x):
+            v = x["rigorista"]
+            return (0 if v.get("rigori_stagione", {}).get("calciati") else 1,
+                    0 if v.get("consenso_sul_primo") else 1,
+                    v["rango"] or 99, x["player"]["name"])
+
+        for e in sorted(in_rosa, key=ordine):
             v, p = e["rigorista"], e["player"]
             tot = v["fonti_totali_sulla_squadra"]
             primo = v.get("fonti_che_lo_danno_primo", 0)
-            if v["consenso_sul_primo"]:
-                quanto = f"PRIMO rigorista ({primo} fonti su {tot} lo dicono)"
-            elif primo:
-                quanto = f"{v['rango']}º, ma {primo} fonte su {tot} lo dà primo"
+            calciati = v.get("rigori_stagione", {}).get("calciati", 0)
+            segnati = v.get("rigori_stagione", {}).get("segnati", 0)
+            if calciati:
+                quanto = (f"RIG! ha calciato {segnati}/{calciati} rigori quest'anno"
+                          + (f", e {primo} fonti su {tot} lo danno primo" if primo
+                             else f", ma le fonti lo danno {v['rango']}º"))
+                quanto += " — il rigore è già dentro la sua media"
+            elif v["consenso_sul_primo"]:
+                quanto = (f"rig? dato primo da {primo} fonti su {tot}, ma non l'ha ancora "
+                          "calciato: supposizione")
+            elif v["rango"]:
+                quanto = f"{v['rango']}º nella gerarchia: vale +0,03, niente"
             else:
-                quanto = f"{v['rango']}º nella gerarchia: vale poco"
-            nota = ""
-            if v["consenso_sul_primo"] and e["rigori_calciati"]:
-                nota = (f" — ne ha già calciato {e['rigori_calciati']}, la sua media lo "
-                        "contiene già in parte")
-            print(f"  [{p['role']}] {p['name']:<18} {v['squadra']:<12} {quanto}{nota}")
+                quanto = "non in gerarchia"
+            print(f"  [{p['role']}] {p['name']:<18} {v['squadra']:<12} {quanto}")
 
     lega = prossima_partita_lega(args.team_id)
     if lega:

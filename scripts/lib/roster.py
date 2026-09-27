@@ -84,17 +84,26 @@ SOGLIA_AVVISO_COPERTURA = 0.97
 # squadra a partita nella stagione scorsa x 1,90 per rigore: vedi scripts/rigoristi.py,
 # che ricalcola il numero dai dati e lo scrive in data/rigoristi.json).
 #
-# NON entra nel punteggio, e la ragione non è il backtest — lì il confronto non ha potere
-# (dei 20 primi rigoristi della stagione scorsa solo 16 sono ancora nel listone, e il
-# risultato è −0,08 [−0,56, +0,32], cioè niente). La ragione è il DOPPIO CONTEGGIO: la
-# media degli ultimi voti contiene già i rigori che il giocatore ha davvero calciato, e
-# quelli non si possono togliere perché il box score BigBalls ne ha 5 su 50 partite
-# (.docs/bigballs-api.md). Zaccagni ha segnato un rigore alla giornata 5: la sua media già
-# porta +0,6, e aggiungere +0,26 lo conterebbe due volte.
+# NON entra nel punteggio, per due ragioni, nessuna delle quali è il backtest (lì il
+# confronto non ha potere e la prima versione era anche sbagliata: assegnava il bonus al
+# primo rigorista della stagione scorsa senza controllare se fosse ancora in quella
+# squadra — vedi la nota nel doc).
 #
-# Quindi il rigorista serve dove l'informazione è decisiva e non si somma a niente: come
-# spareggio fra due giocatori entro SOGLIA_PARI, dove il modello non sa scegliere e +0,26
-# è più grande della soglia. Lo fa _decisioni, e il report lo mostra accanto al giocatore.
+#  1. LE GERARCHIE SBAGLIANO. Sono pareri di giornali, non un dato. Nelle prime 5 giornate
+#     del 2026-27 ci sono stati 5 rigori in tutto il campionato, cioè 5 casi in cui la
+#     realtà ha messo alla prova le liste: **3 su 5 le hanno smentite** (Maldini dato 3º,
+#     Yeboah 3º, Varela 2º hanno calciato loro). Solo Zaccagni e Colombo confermano il
+#     consenso. Un flag che sbaglia 3 volte su 5 non va sommato a un punteggio.
+#  2. DOPPIO CONTEGGIO su chi ha già calciato: la media degli ultimi voti contiene già il
+#     rigore. Zaccagni ha segnato alla giornata 5, la sua media porta già +0,6, e
+#     sommargli +0,26 lo conterebbe due volte. (I rigori si potrebbero togliere dai voti:
+#     il box score BigBalls li ha tutti e 5, verificato contro fantacalcio.it. Ma resta la
+#     ragione 1.)
+#
+# Quindi il rigorista serve dove l'informazione è decisiva, va pesata a mano e non si somma
+# a niente: come spareggio fra due giocatori entro SOGLIA_PARI, distinguendo chi è
+# CONFERMATO dai rigori veri di quest'anno da chi è solo una supposizione. Lo fa
+# _decisioni, e il report lo mostra accanto al giocatore.
 VALORE_PRIMO_RIGORISTA_DEFAULT = 0.26
 
 # Role counts per module, excluding the goalkeeper (always 1).
@@ -527,19 +536,34 @@ def _spareggio_rigorista(a: dict, b: dict, valore: float) -> str:
     """Se fra due giocatori equivalenti per il modello uno è il primo rigorista della sua
     squadra e l'altro no, lo dice: vale circa `valore` di fantavoto atteso, più della soglia
     dei pari. Avvisa quando il rigore è già dentro la media, per non contarlo due volte."""
-    ra, rb = a.get("rigorista"), b.get("rigorista")
-    primo_a = bool(ra and ra.get("consenso_sul_primo"))
-    primo_b = bool(rb and rb.get("consenso_sul_primo"))
-    if primo_a == primo_b:
+    def peso(e):
+        """0 = non è rigorista; 1 = lo dicono solo i giornali; 2 = ha calciato davvero."""
+        v = e.get("rigorista")
+        if not v:
+            return 0
+        if v.get("rigori_stagione", {}).get("calciati"):
+            return 2
+        return 1 if v.get("consenso_sul_primo") else 0
+
+    pa, pb = peso(a), peso(b)
+    if pa == pb:
         return ""
-    chi, voce = (a, ra) if primo_a else (b, rb)
-    testo = (f" Spareggio: {chi['player']['name']} è il primo rigorista del "
-             f"{voce['squadra']} ({voce['fonti_che_lo_citano']} fonti su "
-             f"{voce['fonti_totali_sulla_squadra']}), che vale circa +{valore:.2f} di "
-             "fantavoto atteso e non è nel numero.")
-    if chi.get("rigori_calciati"):
-        testo += (f" Ma ne ha già calciato {chi['rigori_calciati']} in queste giornate, "
-                  "quindi la sua media lo contiene già in parte: vale meno di così.")
+    chi, altro = (a, b) if pa > pb else (b, a)
+    voce = chi["rigorista"]
+    if max(pa, pb) == 2:
+        r = voce["rigori_stagione"]
+        testo = (f" Spareggio: {chi['player']['name']} ha calciato {r['calciati']} "
+                 f"rigor{'e' if r['calciati'] == 1 else 'i'} quest'anno ({r['segnati']} "
+                 f"segnat{'o' if r['segnati'] == 1 else 'i'}), quindi è il rigorista per "
+                 "davvero e non per sentito dire.")
+        testo += (" Attento: il rigore è già dentro la sua media, quindi il vantaggio è "
+                  "minore di quanto sembri.")
+    else:
+        testo = (f" Spareggio debole: {chi['player']['name']} è dato primo rigorista del "
+                 f"{voce['squadra']} da {voce['fonti_che_lo_citano']} fonti su "
+                 f"{voce['fonti_totali_sulla_squadra']}, e varrebbe +{valore:.2f}. Ma "
+                 "nessuno l'ha visto calciare quest'anno, e dove la realtà ha messo alla "
+                 "prova queste liste le ha smentite 3 volte su 5: pesalo poco.")
     return testo
 
 

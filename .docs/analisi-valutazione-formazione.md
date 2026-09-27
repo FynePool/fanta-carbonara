@@ -135,56 +135,82 @@ solo se con più giornate guadagna punti con l'intervallo che esclude lo zero.
 
 ### Entrato come dato, non come punteggio: i rigoristi
 
-`data/rigoristi.json` + `scripts/rigoristi.py` (27/09 sera).
+`data/rigoristi.json` + `scripts/rigoristi.py` (27/09 sera), con la revisione della stessa
+sera dopo l'osservazione dell'utente: *«un rigorista dell'anno scorso potrebbe non esserlo
+quest'anno — l'unico dato ufficiale sono i rigori tirati in questa stagione»*. Aveva
+ragione, e ha fatto emergere due errori miei.
 
-**Correzione di una mia stima sbagliata.** Nella prima stesura avevo scritto che un
-rigorista designato vale «+0,5/+0,75 di fantavoto, il singolo fattore più grande di tutti
-quelli discussi qui». **Era sbagliato**, perché avevo tirato a indovinare la frequenza dei
-rigori. Il numero vero, dai dati del repo: nella stagione 2025-26 ci sono stati **106
-rigori in 380 partite**, cioè **0,139 per squadra per partita** (`storico_stagioni.json`).
-Un rigore vale in media +1,90 di fantavoto (+3 se segnato, −2 se sbagliato, conversione
-~78%). Quindi il primo rigorista vale **+0,26 a partita** **[Certo]** — dello stesso
-ordine del termine avversario (±0,31), non il doppio di tutto il resto. Il secondo
-rigorista calcia solo se manca il primo: **+0,03**, trascurabile.
+#### Il valore: una mia stima sbagliata, corretta
 
-**Le liste non sono un dato, sono opinioni che si contraddicono.** Lette tre fonti
-indipendenti (fantacalcio-online 02/09, Sky Sport 03/09, SOS Fanta 26/09): **concordano
-sul primo rigorista di 11 squadre su 20 e si contraddicono sulle altre 9** **[Certo]** —
-Milan, Parma, Genoa, Fiorentina, Lecce, Frosinone, Juventus, Cagliari, Atalanta. Per
-questo il file tiene le liste di tutte le fonti e lo script calcola il consenso, marcando
-`consenso_sul_primo` solo dove almeno due fonti concordano. Con tre fonti si arriva a
-**18 squadre su 20** con un primo rigorista di consenso.
+Avevo scritto che un rigorista designato vale «+0,5/+0,75 di fantavoto, il singolo fattore
+più grande di tutti quelli discussi qui». **Era sbagliato**: avevo indovinato la frequenza
+dei rigori invece di calcolarla, e il dato era già nel repo. Numeri veri: nella stagione
+2025-26 **106 rigori in 380 partite**, cioè **0,139 per squadra per partita**; un rigore
+vale in media +1,90 di fantavoto (+3 segnato, −2 sbagliato, conversione ~78%). Quindi il
+primo rigorista vale **+0,26 a partita** **[Certo]** — come il termine avversario (±0,31),
+non il doppio di tutto. Il secondo rigorista calcia solo se manca il primo: **+0,03**.
 
-**Limite del consenso, da sapere.** È una maggioranza semplice, non pesata sulla data. Sei
-delle nove contraddizioni hanno la stessa forma — la fonte più vecchia (02/09) o la più
-recente (26/09) contro le altre due — e questo di solito vuol dire che la gerarchia è
-**cambiata** durante settembre, non che una fonte sbagli. Dove la più recente è quella
-isolata (Genoa: Østigård secondo SOS Fanta il 26/09, Colombo secondo le altre due a
-inizio settembre) la maggioranza potrebbe avere torto. Le notizie di `notizie_rosa.json`
-sono il posto giusto per accorgersene.
+#### Le gerarchie dei giornali sbagliano, e ora sappiamo di quanto
 
-**Un bug mio, che vale la pena raccontare.** Il primo abbinamento dava «Lautaro Martinez»
-dell'Inter a **Martinez Jo., il portiere** — un portiere terzo rigorista. È esattamente il
-difetto 7 di questo repo (matching che ignora le iniziali). Lo script ora rifiuta un nome
-quando le iniziali sono note e diverse, e segnala ogni abbinamento su un portiere.
+Tre fonti indipendenti (fantacalcio-online 02/09, Sky Sport 03/09, SOS Fanta 26/09):
+**concordano sul primo rigorista di 11 squadre su 20 e si contraddicono sulle altre 9**
+**[Certo]**. Con tre fonti si arriva a 18 squadre su 20 con un primo rigorista di consenso.
 
-**Perché NON entra nel punteggio.** Non per il backtest: lì il confronto **non ha potere**
-— dei 20 primi rigoristi della stagione scorsa solo 16 sono ancora nel listone e uno solo è
-in rosa, e il risultato è −0,08 [−0,56, +0,32], cioè nessuna informazione **[Certo]**. La
-ragione è il **doppio conteggio**: la media degli ultimi voti contiene già i rigori
-davvero calciati, e non si possono togliere perché il box score BigBalls ne ha **5 su 50
-partite**. Prova concreta: Zaccagni ha segnato un rigore alla giornata 5, quindi la sua
-media già porta +0,6; sommargli +0,26 lo conterebbe due volte. **[Certo]**
+Ma il punto vero è un altro, e lo dà il dato ufficiale. Nelle prime 5 giornate del 2026-27
+ci sono stati **5 rigori in tutto il campionato** — cioè 5 casi in cui la realtà ha messo
+alla prova le liste. **Tre su cinque le hanno smentite [Certo]**:
 
-**Dove entra, allora.** Dove l'informazione è decisiva e non si somma a niente: come
-**spareggio** fra due giocatori entro la soglia dei pari (0,20), dove il modello dichiara
-di non saper scegliere e +0,26 è più grande della soglia. E mostrato nel report, con
-quante fonti lo danno primo, e con l'avviso quando il rigore è già dentro la media.
+| Chi ha calciato | Squadra | Cosa dicevano le fonti |
+|---|---|---|
+| Zaccagni | Lazio | primo (3 su 3) ✔ |
+| Colombo | Genoa | primo (2 su 3) ✔ |
+| **Varela G.** | Monza | **secondo** ✘ |
+| **Maldini** | Cagliari | **terzo** ✘ |
+| **Yeboah J.** | Venezia | **terzo** ✘ |
 
-In rosa oggi: **Zaccagni** primo rigorista della Lazio (3 fonti su 3, ma ne ha già
-calciato uno) e **Ramos G.** primo rigorista del Milan (2 fonti su 3, e **zero rigori in
-Serie A**, quindi è informazione che il modello non poteva vedere in nessun modo). Entrambi
-sono già titolari, quindi oggi non cambia la formazione: cambierebbe un pari.
+Un flag che sbaglia 3 volte su 5, dove si può controllare, non va sommato a un punteggio.
+Va mostrato, distinguendo chi è **confermato** da chi è una **supposizione**.
+
+#### Cosa il dato ufficiale NON dice
+
+Zero rigori **non** smentisce nessuno. Con 0,139 rigori per squadra a partita, dopo 5
+giornate una squadra ne ha avuti in media **0,7**: la quasi totalità dei rigoristi designati
+non ne ha ancora avuto uno da tirare. Il dato ufficiale **conferma** un rigorista, non lo
+**esclude**. Ramos G. con zero rigori non è smentito: è senza occasioni.
+
+#### Il secondo errore mio: il backtest era sbagliato, non solo debole
+
+Avevo testato la variante assegnando il bonus al primo rigorista **della stagione scorsa**
+— senza controllare se fosse ancora in quella squadra. Un rigorista che ha cambiato squadra
+non è più il rigorista, quindi il test non era «senza potere», era **scorretto**. È stato
+tolto da `backtest_undici.py`, con il motivo scritto nel codice. E non esiste un modo giusto
+di rifarlo: le gerarchie di oggi sono state scritte guardando anche le giornate 1-5, quindi
+usarle per prevedere quelle giornate sarebbe barare.
+
+#### Terza correzione: BigBalls non perde i rigori
+
+Avevo giustificato il «non entra nel punteggio» dicendo che i rigori realizzati non si
+possono togliere dai voti perché il box score BigBalls ne ha solo 5 su 50 partite.
+**Falso**: fantacalcio.it, sulla stessa stagione, ne ha esattamente **5**, gli stessi cinque
+giocatori **[Certo]**. BigBalls è completo su questo campo, e la magagna 5 di
+`.docs/bigballs-api.md` è stata smentita. I rigori **si possono** togliere. Resta comunque
+il doppio conteggio come effetto (la media di Zaccagni porta già +0,6 dal suo rigore), ma la
+ragione principale per tenerlo fuori dal punteggio è l'attendibilità delle liste, non
+l'impossibilità tecnica.
+
+#### Dove entra, quindi
+
+Come **spareggio** fra due giocatori entro la soglia dei pari, con due pesi diversi:
+`RIG!` per chi ha calciato davvero quest'anno (dato ufficiale), `rig?` per chi lo dicono
+solo i giornali — e in quel caso il report dice esplicitamente che quelle liste hanno
+sbagliato 3 volte su 5, quindi va pesato poco. Il dato ufficiale arriva da
+`import_storico_stagioni.py --corrente`, che scrive in **`stagione_in_corso`** e non in
+`stagioni`: chi legge `stagioni` prende la più recente come «la stagione scorsa», e
+metterci la stagione in corso farebbe guardare il futuro al backtest.
+
+In rosa oggi: **Zaccagni** confermato (1/1 rigori, e 3 fonti su 3 lo danno primo, ma il
+rigore è già dentro la sua media) e **Ramos G.** solo supposizione (2 fonti su 3, zero
+rigori). Entrambi già titolari: oggi non cambia la formazione.
 
 ### Provata e SCARTATA: scegliere il modulo col valore atteso
 
@@ -239,12 +265,13 @@ giocate, quindi diventa misurabile.
 2. **La probabilità di prendere voto è approssimata** con quella di partire titolare. Dalla
    giornata 6 diventa misurabile (probabili dal 21/09 + giornate giocate). Quando lo sarà,
    va rifatto il confronto sul modulo (sopra).
-3. ~~**I rigoristi.**~~ Fatto il 27/09 sera, e la mia stima del valore era sbagliata:
-   vale +0,26, non +0,5/+0,75. Vedi la sezione sopra. Resta aperto **misurare i rigori per
-   squadra** invece di usare la media del campionato per tutti: il Milan ne ottiene circa
-   il doppio del Parma secondo le fonti, e per un primo rigorista del Milan il valore
-   sarebbe ~+0,5 invece di +0,26. Serve la frequenza dei rigori per squadra su più
-   stagioni, che `storico_stagioni.json` ha.
+3. ~~**I rigoristi.**~~ Fatto il 27/09 sera, con tre correzioni a cose che avevo scritto
+   io (valore, backtest, BigBalls): vedi la sezione sopra. Resta aperto **misurare i rigori
+   per squadra** invece di usare la media del campionato per tutti — il Milan ne ottiene
+   circa il doppio del Parma secondo le fonti, e per un primo rigorista del Milan il valore
+   sarebbe ~+0,5 invece di +0,26. I dati per farlo (`storico_stagioni.json`, più stagioni)
+   ci sono. E resta da **riguardare le gerarchie dopo la giornata 10-15**, quando i rigori
+   calciati saranno abbastanza da confermare o smentire più di 5 squadre.
 4. **Metà delle statistiche raccolte non entra nel modello**: `passaggi_chiave` (2044
    righe), `assist`, `cartellini_gialli` (154), `falli_commessi` (720), `minuti`. **La
    previsione è che modellarli non pagherà**, ed è la stessa idea della correzione per la

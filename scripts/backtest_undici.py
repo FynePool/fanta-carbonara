@@ -195,29 +195,17 @@ def main():
     # Il riferimento e' il motore come gira davvero: panchina scelta con la probabilita' di
     # prendere voto, modulo scelto sulla somma dei valori dei titolari (vedi suggest_lineup).
     base = esegui(modello, pan=True, mod=False)
-    # --- variante rigoristi, senza fuga di dati ---
-    # I rigoristi di OGGI (data/rigoristi.json) non si possono usare per prevedere le
-    # giornate 3-5: le fonti sono state scritte anche guardando quelle giornate. Si usa
-    # invece il primo rigorista della STAGIONE SCORSA (chi ne ha calciati piu' di tutti
-    # nella sua squadra), che e' fissato prima che questa stagione cominci.
-    primo_scorsa = {}
-    per_squadra_scorsa = defaultdict(list)
-    for pid, d in scorsa.items():
-        if d.get("rigori_calciati"):
-            per_squadra_scorsa[d["squadra"]].append((d["rigori_calciati"], pid))
-    for squadra, lista in per_squadra_scorsa.items():
-        lista.sort(reverse=True)
-        primo_scorsa[lista[0][1]] = squadra
-    VALORE_RIGORISTA = 0.26   # vedi scripts/rigoristi.py: 0,139 rigori a partita x 1,90
-
-    def modello_rigoristi(p, g, mo):
-        v = modello(p, g, mo)
-        if v is None:
-            return None
-        return v + (VALORE_RIGORISTA if p["id"] in primo_scorsa else 0.0)
-
-    REGOLE = [("modello attuale", modello), ("modello + rigoristi", modello_rigoristi),
-              ("media nuda dei voti", media_nuda),
+    # NESSUNA VARIANTE RIGORISTI, e vale la pena dire perche'.
+    # Il primo tentativo assegnava il bonus al primo rigorista della STAGIONE SCORSA senza
+    # controllare se fosse ancora in quella squadra: un rigorista che ha cambiato squadra
+    # (o a cui sono cambiati i compagni) non e' piu' il rigorista, quindi il test era
+    # sbagliato, non solo senza potere. E non c'e' un modo giusto di rifarlo: le gerarchie
+    # di data/rigoristi.json sono state scritte guardando anche le giornate 1-5, quindi
+    # usarle per prevedere quelle giornate sarebbe barare. Per questo il rigorista non
+    # entra nel punteggio ma serve come spareggio, e la sua attendibilita' si misura
+    # sull'unico dato onesto: i rigori davvero calciati quest'anno (5 in tutto il
+    # campionato, di cui 3 smentiscono le gerarchie). Vedi scripts/rigoristi.py.
+    REGOLE = [("modello attuale", modello), ("media nuda dei voti", media_nuda),
               ("fantamedia stagione scorsa", stagione_scorsa), ("quotazione iniziale", quotazione),
               ("nessun ordine (ordine d'acquisto)", nessun_ordine), ("ORACOLO (sa i voti veri)", oracolo)]
     intest = f"{'regola di valore':<34} {'punti':>6} {'min':>6} {'max':>6}   contro il modello, IC 95%"
