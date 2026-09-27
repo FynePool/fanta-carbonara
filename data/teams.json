@@ -1,9 +1,74 @@
 [
   {
-    "id": "t01",
-    "name": "TODO",
-    "owner": "TODO",
+    "id": "2742350",
+    "name": "Nu kebab",
     "credits_total": 500,
-    "credits_remaining": 500
+    "credits_remaining": 1
+  },
+  {
+    "id": "2743181",
+    "name": "FC TANALIPERATUTTI",
+    "credits_total": 500,
+    "credits_remaining": 18
+  },
+  {
+    "id": "2744148",
+    "name": "BORUSSIA LABELLA",
+    "credits_total": 500,
+    "credits_remaining": 6
+  },
+  {
+    "id": "2744395",
+    "name": "Fortitudo",
+    "credits_total": 500,
+    "credits_remaining": 3
+  },
+  {
+    "id": "2747320",
+    "name": "LOSERPOOL",
+    "credits_total": 500,
+    "credits_remaining": 21
+  },
+  {
+    "id": "2771576",
+    "name": "Bayer Luke",
+    "credits_total": 500,
+    "credits_remaining": 8
+  },
+  {
+    "id": "2777890",
+    "name": "As Draietta",
+    "credits_total": 500,
+    "credits_remaining": 5
+  },
+  {
+    "id": "3883192",
+    "name": "Milfwall FC",
+    "credits_total": 500,
+    "credits_remaining": 6
+  },
+  {
+    "id": "16303294",
+    "name": "NuKebbab der Met",
+    "credits_total": 500,
+    "credits_remaining": 7
+  },
+  {
+    "id": "16303729",
+    "name": "Pdor saint-germain",
+    "credits_total": 500,
+    "credits_remaining": 1
+  },
+  {
+    "id": "20598859",
+    "name": "bay ermo naco",
+    "credits_total": 500,
+    "credits_remaining": 9
+  },
+  {
+    "id": "20598917",
+    "name": "VAR-tificiale",
+    "credits_total": 500,
+    "credits_remaining": 3
   }
 ]

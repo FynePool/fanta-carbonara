@@ -1,1 +1,2102 @@
-[]
+[
+  {
+    "player_id": "fd7647",
+    "team_id": "2742350",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7561",
+    "team_id": "2742350",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7436",
+    "team_id": "2742350",
+    "purchase_price": 33,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7414",
+    "team_id": "2742350",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7412",
+    "team_id": "2742350",
+    "purchase_price": 10,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7235",
+    "team_id": "2742350",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7078",
+    "team_id": "2742350",
+    "purchase_price": 64,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6966",
+    "team_id": "2742350",
+    "purchase_price": 46,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6867",
+    "team_id": "2742350",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6821",
+    "team_id": "2742350",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6660",
+    "team_id": "2742350",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6530",
+    "team_id": "2742350",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6344",
+    "team_id": "2742350",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4870",
+    "team_id": "2742350",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4807",
+    "team_id": "2742350",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4465",
+    "team_id": "2742350",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4359",
+    "team_id": "2742350",
+    "purchase_price": 29,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4210",
+    "team_id": "2742350",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4137",
+    "team_id": "2742350",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2809",
+    "team_id": "2742350",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2766",
+    "team_id": "2742350",
+    "purchase_price": 43,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2528",
+    "team_id": "2742350",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd531",
+    "team_id": "2742350",
+    "purchase_price": 66,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd309",
+    "team_id": "2742350",
+    "purchase_price": 124,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd152",
+    "team_id": "2742350",
+    "purchase_price": 30,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7573",
+    "team_id": "2743181",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7554",
+    "team_id": "2743181",
+    "purchase_price": 22,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7349",
+    "team_id": "2743181",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7311",
+    "team_id": "2743181",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7014",
+    "team_id": "2743181",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6869",
+    "team_id": "2743181",
+    "purchase_price": 12,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6844",
+    "team_id": "2743181",
+    "purchase_price": 51,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6727",
+    "team_id": "2743181",
+    "purchase_price": 15,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6684",
+    "team_id": "2743181",
+    "purchase_price": 25,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6662",
+    "team_id": "2743181",
+    "purchase_price": 9,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6638",
+    "team_id": "2743181",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6434",
+    "team_id": "2743181",
+    "purchase_price": 30,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5995",
+    "team_id": "2743181",
+    "purchase_price": 46,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5840",
+    "team_id": "2743181",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5761",
+    "team_id": "2743181",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5119",
+    "team_id": "2743181",
+    "purchase_price": 24,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4777",
+    "team_id": "2743181",
+    "purchase_price": 46,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4664",
+    "team_id": "2743181",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4371",
+    "team_id": "2743181",
+    "purchase_price": 12,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2816",
+    "team_id": "2743181",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2194",
+    "team_id": "2743181",
+    "purchase_price": 80,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2170",
+    "team_id": "2743181",
+    "purchase_price": 17,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd779",
+    "team_id": "2743181",
+    "purchase_price": 13,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd608",
+    "team_id": "2743181",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd572",
+    "team_id": "2743181",
+    "purchase_price": 38,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7620",
+    "team_id": "2744148",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7485",
+    "team_id": "2744148",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7272",
+    "team_id": "2744148",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7223",
+    "team_id": "2744148",
+    "purchase_price": 10,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7071",
+    "team_id": "2744148",
+    "purchase_price": 72,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7069",
+    "team_id": "2744148",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6990",
+    "team_id": "2744148",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6752",
+    "team_id": "2744148",
+    "purchase_price": 48,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6677",
+    "team_id": "2744148",
+    "purchase_price": 15,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6534",
+    "team_id": "2744148",
+    "purchase_price": 13,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6462",
+    "team_id": "2744148",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6238",
+    "team_id": "2744148",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6151",
+    "team_id": "2744148",
+    "purchase_price": 18,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5888",
+    "team_id": "2744148",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5878",
+    "team_id": "2744148",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5800",
+    "team_id": "2744148",
+    "purchase_price": 30,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5687",
+    "team_id": "2744148",
+    "purchase_price": 36,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5641",
+    "team_id": "2744148",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5620",
+    "team_id": "2744148",
+    "purchase_price": 10,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4998",
+    "team_id": "2744148",
+    "purchase_price": 12,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4436",
+    "team_id": "2744148",
+    "purchase_price": 25,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4236",
+    "team_id": "2744148",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2404",
+    "team_id": "2744148",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2097",
+    "team_id": "2744148",
+    "purchase_price": 93,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2038",
+    "team_id": "2744148",
+    "purchase_price": 52,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7274",
+    "team_id": "2744395",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7120",
+    "team_id": "2744395",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7017",
+    "team_id": "2744395",
+    "purchase_price": 111,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6831",
+    "team_id": "2744395",
+    "purchase_price": 16,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6675",
+    "team_id": "2744395",
+    "purchase_price": 30,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6650",
+    "team_id": "2744395",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6618",
+    "team_id": "2744395",
+    "purchase_price": 23,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6218",
+    "team_id": "2744395",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5851",
+    "team_id": "2744395",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5823",
+    "team_id": "2744395",
+    "purchase_price": 17,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5172",
+    "team_id": "2744395",
+    "purchase_price": 18,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5036",
+    "team_id": "2744395",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5029",
+    "team_id": "2744395",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4994",
+    "team_id": "2744395",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4887",
+    "team_id": "2744395",
+    "purchase_price": 9,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4657",
+    "team_id": "2744395",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4364",
+    "team_id": "2744395",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4360",
+    "team_id": "2744395",
+    "purchase_price": 16,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4159",
+    "team_id": "2744395",
+    "purchase_price": 9,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2517",
+    "team_id": "2744395",
+    "purchase_price": 40,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2137",
+    "team_id": "2744395",
+    "purchase_price": 118,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2134",
+    "team_id": "2744395",
+    "purchase_price": 10,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2120",
+    "team_id": "2744395",
+    "purchase_price": 16,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd1870",
+    "team_id": "2744395",
+    "purchase_price": 24,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd554",
+    "team_id": "2744395",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7623",
+    "team_id": "2747320",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7618",
+    "team_id": "2747320",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7580",
+    "team_id": "2747320",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7472",
+    "team_id": "2747320",
+    "purchase_price": 10,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7337",
+    "team_id": "2747320",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7255",
+    "team_id": "2747320",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7212",
+    "team_id": "2747320",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7023",
+    "team_id": "2747320",
+    "purchase_price": 52,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6989",
+    "team_id": "2747320",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6967",
+    "team_id": "2747320",
+    "purchase_price": 58,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6495",
+    "team_id": "2747320",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6482",
+    "team_id": "2747320",
+    "purchase_price": 43,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6415",
+    "team_id": "2747320",
+    "purchase_price": 15,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6164",
+    "team_id": "2747320",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5757",
+    "team_id": "2747320",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5695",
+    "team_id": "2747320",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5637",
+    "team_id": "2747320",
+    "purchase_price": 95,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5507",
+    "team_id": "2747320",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5436",
+    "team_id": "2747320",
+    "purchase_price": 43,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5022",
+    "team_id": "2747320",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4856",
+    "team_id": "2747320",
+    "purchase_price": 14,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2606",
+    "team_id": "2747320",
+    "purchase_price": 19,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2423",
+    "team_id": "2747320",
+    "purchase_price": 77,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd1850",
+    "team_id": "2747320",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd795",
+    "team_id": "2747320",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7619",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7600",
+    "team_id": "2771576",
+    "purchase_price": 21,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7556",
+    "team_id": "2771576",
+    "purchase_price": 40,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7546",
+    "team_id": "2771576",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7526",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7048",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6986",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6904",
+    "team_id": "2771576",
+    "purchase_price": 31,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6680",
+    "team_id": "2771576",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6642",
+    "team_id": "2771576",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6572",
+    "team_id": "2771576",
+    "purchase_price": 29,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6531",
+    "team_id": "2771576",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6372",
+    "team_id": "2771576",
+    "purchase_price": 60,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6252",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6060",
+    "team_id": "2771576",
+    "purchase_price": 35,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5841",
+    "team_id": "2771576",
+    "purchase_price": 75,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5734",
+    "team_id": "2771576",
+    "purchase_price": 79,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5675",
+    "team_id": "2771576",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5514",
+    "team_id": "2771576",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4976",
+    "team_id": "2771576",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4911",
+    "team_id": "2771576",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4378",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4179",
+    "team_id": "2771576",
+    "purchase_price": 55,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd610",
+    "team_id": "2771576",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd536",
+    "team_id": "2771576",
+    "purchase_price": 27,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7547",
+    "team_id": "2777890",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7469",
+    "team_id": "2777890",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7060",
+    "team_id": "2777890",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7036",
+    "team_id": "2777890",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7012",
+    "team_id": "2777890",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6813",
+    "team_id": "2777890",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6556",
+    "team_id": "2777890",
+    "purchase_price": 17,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6217",
+    "team_id": "2777890",
+    "purchase_price": 9,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6215",
+    "team_id": "2777890",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6204",
+    "team_id": "2777890",
+    "purchase_price": 56,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6052",
+    "team_id": "2777890",
+    "purchase_price": 167,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6010",
+    "team_id": "2777890",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5838",
+    "team_id": "2777890",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5833",
+    "team_id": "2777890",
+    "purchase_price": 9,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5701",
+    "team_id": "2777890",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5589",
+    "team_id": "2777890",
+    "purchase_price": 47,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4892",
+    "team_id": "2777890",
+    "purchase_price": 23,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4502",
+    "team_id": "2777890",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4312",
+    "team_id": "2777890",
+    "purchase_price": 52,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4220",
+    "team_id": "2777890",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2815",
+    "team_id": "2777890",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2514",
+    "team_id": "2777890",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2379",
+    "team_id": "2777890",
+    "purchase_price": 51,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2155",
+    "team_id": "2777890",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd530",
+    "team_id": "2777890",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7626",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7564",
+    "team_id": "3883192",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7314",
+    "team_id": "3883192",
+    "purchase_price": 18,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7294",
+    "team_id": "3883192",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7268",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7162",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7001",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6898",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6875",
+    "team_id": "3883192",
+    "purchase_price": 104,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6833",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6827",
+    "team_id": "3883192",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6485",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6145",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5946",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5877",
+    "team_id": "3883192",
+    "purchase_price": 12,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5792",
+    "team_id": "3883192",
+    "purchase_price": 22,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5694",
+    "team_id": "3883192",
+    "purchase_price": 21,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5585",
+    "team_id": "3883192",
+    "purchase_price": 207,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5520",
+    "team_id": "3883192",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4431",
+    "team_id": "3883192",
+    "purchase_price": 48,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4409",
+    "team_id": "3883192",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2832",
+    "team_id": "3883192",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2788",
+    "team_id": "3883192",
+    "purchase_price": 17,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2077",
+    "team_id": "3883192",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4",
+    "team_id": "3883192",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7599",
+    "team_id": "16303294",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7332",
+    "team_id": "16303294",
+    "purchase_price": 14,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7252",
+    "team_id": "16303294",
+    "purchase_price": 12,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7161",
+    "team_id": "16303294",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6917",
+    "team_id": "16303294",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6666",
+    "team_id": "16303294",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6664",
+    "team_id": "16303294",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6519",
+    "team_id": "16303294",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6496",
+    "team_id": "16303294",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6274",
+    "team_id": "16303294",
+    "purchase_price": 26,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6248",
+    "team_id": "16303294",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6229",
+    "team_id": "16303294",
+    "purchase_price": 16,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6190",
+    "team_id": "16303294",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5982",
+    "team_id": "16303294",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5791",
+    "team_id": "16303294",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5739",
+    "team_id": "16303294",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4923",
+    "team_id": "16303294",
+    "purchase_price": 21,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4705",
+    "team_id": "16303294",
+    "purchase_price": 10,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4317",
+    "team_id": "16303294",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4287",
+    "team_id": "16303294",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2764",
+    "team_id": "16303294",
+    "purchase_price": 212,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2296",
+    "team_id": "16303294",
+    "purchase_price": 22,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2167",
+    "team_id": "16303294",
+    "purchase_price": 62,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd1933",
+    "team_id": "16303294",
+    "purchase_price": 22,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd133",
+    "team_id": "16303294",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7624",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7612",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7563",
+    "team_id": "16303729",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7535",
+    "team_id": "16303729",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7410",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7374",
+    "team_id": "16303729",
+    "purchase_price": 16,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7253",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7181",
+    "team_id": "16303729",
+    "purchase_price": 26,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7070",
+    "team_id": "16303729",
+    "purchase_price": 12,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6669",
+    "team_id": "16303729",
+    "purchase_price": 15,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6403",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6046",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5882",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5735",
+    "team_id": "16303729",
+    "purchase_price": 13,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5559",
+    "team_id": "16303729",
+    "purchase_price": 51,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5504",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4973",
+    "team_id": "16303729",
+    "purchase_price": 30,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4957",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4896",
+    "team_id": "16303729",
+    "purchase_price": 40,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4871",
+    "team_id": "16303729",
+    "purchase_price": 205,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4817",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2640",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2521",
+    "team_id": "16303729",
+    "purchase_price": 23,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd254",
+    "team_id": "16303729",
+    "purchase_price": 44,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd22",
+    "team_id": "16303729",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7625",
+    "team_id": "20598859",
+    "purchase_price": 31,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7551",
+    "team_id": "20598859",
+    "purchase_price": 22,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7523",
+    "team_id": "20598859",
+    "purchase_price": 31,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7351",
+    "team_id": "20598859",
+    "purchase_price": 13,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7347",
+    "team_id": "20598859",
+    "purchase_price": 14,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7301",
+    "team_id": "20598859",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7219",
+    "team_id": "20598859",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7131",
+    "team_id": "20598859",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7126",
+    "team_id": "20598859",
+    "purchase_price": 54,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6956",
+    "team_id": "20598859",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6908",
+    "team_id": "20598859",
+    "purchase_price": 16,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6884",
+    "team_id": "20598859",
+    "purchase_price": 46,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6646",
+    "team_id": "20598859",
+    "purchase_price": 11,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6435",
+    "team_id": "20598859",
+    "purchase_price": 59,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6398",
+    "team_id": "20598859",
+    "purchase_price": 13,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5951",
+    "team_id": "20598859",
+    "purchase_price": 95,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5678",
+    "team_id": "20598859",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5526",
+    "team_id": "20598859",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5500",
+    "team_id": "20598859",
+    "purchase_price": 8,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5365",
+    "team_id": "20598859",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4964",
+    "team_id": "20598859",
+    "purchase_price": 42,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4485",
+    "team_id": "20598859",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4433",
+    "team_id": "20598859",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2857",
+    "team_id": "20598859",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd1852",
+    "team_id": "20598859",
+    "purchase_price": 7,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7602",
+    "team_id": "20598917",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7484",
+    "team_id": "20598917",
+    "purchase_price": 22,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7467",
+    "team_id": "20598917",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7342",
+    "team_id": "20598917",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd7129",
+    "team_id": "20598917",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6549",
+    "team_id": "20598917",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6397",
+    "team_id": "20598917",
+    "purchase_price": 169,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6320",
+    "team_id": "20598917",
+    "purchase_price": 2,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6294",
+    "team_id": "20598917",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd6042",
+    "team_id": "20598917",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5862",
+    "team_id": "20598917",
+    "purchase_price": 3,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5858",
+    "team_id": "20598917",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5844",
+    "team_id": "20598917",
+    "purchase_price": 9,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5750",
+    "team_id": "20598917",
+    "purchase_price": 5,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5555",
+    "team_id": "20598917",
+    "purchase_price": 4,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5273",
+    "team_id": "20598917",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd5116",
+    "team_id": "20598917",
+    "purchase_price": 40,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4734",
+    "team_id": "20598917",
+    "purchase_price": 6,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd4463",
+    "team_id": "20598917",
+    "purchase_price": 27,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2848",
+    "team_id": "20598917",
+    "purchase_price": 39,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2814",
+    "team_id": "20598917",
+    "purchase_price": 23,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd2061",
+    "team_id": "20598917",
+    "purchase_price": 43,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd1926",
+    "team_id": "20598917",
+    "purchase_price": 1,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd632",
+    "team_id": "20598917",
+    "purchase_price": 50,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  },
+  {
+    "player_id": "fd184",
+    "team_id": "20598917",
+    "purchase_price": 31,
+    "acquired_on": null,
+    "acquired_via": "asta"
+  }
+]

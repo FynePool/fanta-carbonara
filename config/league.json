@@ -2,7 +2,10 @@
   "mode": "classic",
   "teams_count": 12,
   "credits_per_team": 500,
-  "my_team_id": null,
+  "my_team_id": "20598917",
+  "_my_team_note": "VAR-tificiale, id della squadra su leghe.fantacalcio.it.",
+  "league_id": 923348,
+  "_league_note": "FantaCarbonaraXI su leghe.fantacalcio.it: la usa scripts/import_rose_lega.py. La lega ha 18 squadre, 6 vuote e non in gioco.",
   "fonte_voti": "Redazione Fantacalcio",
   "_fonte_voti_note": "Quale dei tre voti di fantacalcio.it usa la lega (Redazione Fantacalcio | Voto Statistico | Voto Italia). Confermato dall'utente il 27/09: Redazione. Lo legge scripts/import_voti.py.",
   "roster_requirements": {

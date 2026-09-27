@@ -7,8 +7,7 @@ description: Aggiornamento completo e non interattivo dei dati del progetto (lis
 
 Pensata per girare da sola, senza nessuno che risponda: **non chiedere conferme**,
 applica direttamente. Lo storico in `data/matchday_stats.json` non si accorcia mai: se uno
-script si ferma con "righe dello storico sparirebbero", non aggirarlo, riportalo. Aggiorna solo i dati: non tocca la rosa (`ownership.json`,
-`teams.json`), non dà consigli di formazione, non modifica codice.
+script si ferma con "righe dello storico sparirebbero", non aggirarlo, riportalo. Aggiorna solo i dati: non dà consigli di formazione, non modifica codice.
 
 ## Prima di cominciare
 
@@ -36,6 +35,15 @@ fallito.
    che non sono nel calendario", "uscirebbero dal listone in un colpo solo"), **non**
    rilanciarlo con `--accetta-uscite`: riportalo in cima al riepilogo e vai avanti col
    listone di ieri. Riporta nel riepilogo chi è entrato, uscito o ha cambiato squadra.
+1b. **Rose e crediti della lega** (dopo il listone, che serve per i ruoli):
+   ```
+   python3 scripts/import_rose_lega.py --league-id <league_id di config/league.json>
+   ```
+   Da leghe.fantacalcio.it: riscrive `teams.json` e `ownership.json` con le 12 squadre
+   in gioco (le squadre vuote della lega restano fuori). Serve `LEGHE_FC_USERNAME` e
+   `LEGHE_FC_PASSWORD` nell'ambiente: se mancano, salta il passo e scrivilo in cima al
+   riepilogo. Se si rifiuta di scrivere ("squadre con la rosa, ne aspettavo 12"),
+   restano le rose di ieri: riportalo. Riporta chi è entrato o uscito da una rosa.
 2. **Calendario e risultati Serie A** (prima delle statistiche, che leggono le
    partite finite da qui):
    ```
@@ -93,6 +101,7 @@ Breve, in italiano, fatti e numeri:
 - partite finite in archivio e quante sono nuove rispetto a prima;
 - righe di statistiche aggiunte;
 - listone: giocatori entrati, usciti, con squadra o ruolo cambiati;
+- rose della lega: chi è entrato o uscito da una rosa, crediti cambiati;
 - voti: righe aggiornate, righe nuove, e quanti voti di giocatori assenti dal listone;
 - infortunati ora e differenza rispetto a prima (chi è entrato, chi è rientrato);
 - squalificati e diffidati, per nome e squadra;
@@ -103,5 +112,5 @@ Breve, in italiano, fatti e numeri:
 
 Dati che questa routine **non** copre ancora, da non inventare:
 
-- rose e scambi tra le squadre della lega: dopo l'asta andranno letti da
-  leghe.fantacalcio.it, e anche quel passo andrà aggiunto qui.
+- il fantavoto calcolato con le regole della lega (c'è quello standard di fantacalcio.it);
+- il calendario testa-a-testa della lega.

@@ -6,10 +6,12 @@ lega su leghe.fantacalcio.it) e ricevere consigli di formazione, mercato e scamb
 ## Stato del progetto
 
 Asta di inizio stagione **conclusa** (settembre 2026; a chiamata classica, 12 squadre,
-500 crediti, rose 3P-8D-8C-6A). Priorità attuale: il consiglio di formazione. Le rose
-vere vanno lette da leghe.fantacalcio.it a setup finito, non da export a mano: finché
-non ci sono, `ownership.json` è vuoto. Un CSV dell'asta è servito solo per una simulazione
-fuori dal repo (27/09): `asta.py` e `report_formazione.py` reggono una rosa completa.
+500 crediti, rose 3P-8D-8C-6A). Priorità attuale: il consiglio di formazione. Rose e
+crediti arrivano dalla lega vera su leghe.fantacalcio.it (`import_rose_lega.py`, dal
+27/09), che è la fonte: nomi e id delle squadre sono i suoi. L'app usata per l'asta era
+un'altra (Fantalab), con altri nomi di squadra: il suo export CSV è servito solo a
+verificare le rose importate (identiche, giocatori e prezzi) e non sta nel repo. La mia
+squadra è VAR-tificiale (`my_team_id` in `config/league.json`).
 
 I dati (listone, infortuni, calendario, statistiche, voti, probabili formazioni,
 squalifiche e status) si aggiornano ogni mattina con una routine automatica che esegue
@@ -28,8 +30,9 @@ coperte: vanno aggiunte a quella skill quando esisterà l'importer.
   Gazzetta, ecc.). `prob_titolare` è la percentuale di titolarità pubblicata da
   fantacalcio.it (0-100), come numero: serve agli avvisi del report, **non**
   all'ordine dei giocatori.
-- `ownership.json` — chi possiede quale giocatore: player_id, team_id, prezzo d'acquisto,
-  data, modalità (asta/scambio/svincolato).
+- `ownership.json` — chi possiede quale giocatore: player_id, team_id (id della squadra
+  su leghe.fantacalcio.it), prezzo d'acquisto, data, modalità (asta | da_verificare).
+  Riscritto ogni mattina dalla lega: vedi `import_rose_lega.py`.
 - `matchday_stats.json` — storico per giornata: player_id, matchday, squadra Serie A
   avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, falli, minuti.
   Gol/assist/cartellini/falli/minuti da BigBalls; `voto` e `fantavoto` da fantacalcio.it
@@ -135,9 +138,15 @@ se non scende in campo entra il primo della panchina: vedi
   Credenziali sempre da variabili d'ambiente `LEGHE_FC_USERNAME`/
   `LEGHE_FC_PASSWORD`, mai in chat o committate.
 - `leghe_fc_inspect.py {leghe|rose|listone} [--league-id ID]` — CLI di sola
-  lettura per esplorare una lega reale via l'API sopra. Non scrive mai in
-  `data/`: il mapping verso `teams.json`/`ownership.json` per la lega vera
-  dell'asta va deciso e scritto solo dopo l'asta, non prima.
+  lettura per esplorare una lega reale via l'API sopra. Non scrive mai in `data/`.
+- `import_rose_lega.py --league-id <id> [--verifica-csv file] [--dry-run]` — rose e
+  crediti della lega (`/league/teams/all`) in `teams.json` e `ownership.json`. La lega
+  FantaCarbonaraXI (`league_id` in config) ha 18 squadre di cui 6 vuote: entrano solo
+  quelle con la rosa, e se non sono esattamente 12 non scrive niente. Crediti totali =
+  `cri` + `bm` (554 - 54 = 500). Non salva il proprietario (è lo username, dato
+  personale). Chi entra in una rosa dopo il primo import è `da_verificare`: l'API non
+  dice se è uno svincolato o uno scambio. `--verifica-csv` confronta con un export
+  dell'asta.
 - `import_calendario_seriea.py --season <anno> [--status ...]` — importa calendario
   e risultati Serie A da BigBalls Sports Data API (bigballsdata.com) in
   `data/calendario_serie_a.json`. Fonte verificata in questa sessione: copre Serie A
@@ -174,7 +183,9 @@ se non scende in campo entra il primo della panchina: vedi
   (es. Sulemana, Törnqvist), la riga non viene attribuita e finisce tra i "non
   riconosciuti".
 - `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
-  e per il mercato post-asta: registra un acquisto di qualunque squadra, uno scambio
+  e per il mercato post-asta. **Dopo l'asta le rose le scrive la lega**: quello che
+  `asta.py` registra in `teams.json`/`ownership.json` viene sovrascritto dal giro del
+  mattino, quindi oggi serve solo a simulare (`stato` e `disponibili` restano utili): registra un acquisto di qualunque squadra, uno scambio
   misto (giocatori + crediti in entrambe le direzioni) tra due squadre, o lo svincolo
   di un giocatore (torna disponibile per tutti); mostra crediti/slot rimanenti per
   ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
@@ -231,7 +242,7 @@ se non scende in campo entra il primo della panchina: vedi
   2. il calendario testa-a-testa della lega fantacalcio (chi gioca contro chi
      tra le 12 squadre ogni giornata — diverso dal calendario di Serie A,
      generato da leghe.fantacalcio.it solo a stagione fantacalcio iniziata);
-  3. `ownership.json` popolato (dopo l'asta).
+  3. ~~`ownership.json` popolato~~: fatto il 27/09 dalla lega.
   Da riprendere quando tutti e tre esistono, non prima.
 
 ## Regole per chi lavora su questo repo
@@ -247,7 +258,7 @@ se non scende in campo entra il primo della panchina: vedi
 - Il campione per lo storico contro un singolo avversario è quasi sempre piccolo
   (1-2 incontri a stagione): trattarlo come indizio debole, non come dato solido.
 - Le fasi successive del progetto (storico avversari, assistente asta/scambi
-  completo, mapping automatico API lega -> ownership.json) sono descritte
+  completo) sono descritte
   nella conversazione di progetto e non ancora implementate: non aggiungerle
   senza che siano state esplicitamente richieste.
 - Mai committare credenziali, jwt, token o dati personali reali (email,
