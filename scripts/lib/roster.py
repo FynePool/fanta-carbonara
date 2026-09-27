@@ -80,6 +80,22 @@ PROB_RISERVA_INUTILE = 25.0
 # Sotto questa probabilità di riempire tutti gli slot di un ruolo, il report avvisa: se le
 # riserve di quel ruolo non prendono voto lo slot vale 0, cioè circa 6 punti persi.
 SOGLIA_AVVISO_COPERTURA = 0.97
+# Il primo rigorista vale circa +0,26 di fantavoto atteso a partita (0,139 rigori per
+# squadra a partita nella stagione scorsa x 1,90 per rigore: vedi scripts/rigoristi.py,
+# che ricalcola il numero dai dati e lo scrive in data/rigoristi.json).
+#
+# NON entra nel punteggio, e la ragione non è il backtest — lì il confronto non ha potere
+# (dei 20 primi rigoristi della stagione scorsa solo 16 sono ancora nel listone, e il
+# risultato è −0,08 [−0,56, +0,32], cioè niente). La ragione è il DOPPIO CONTEGGIO: la
+# media degli ultimi voti contiene già i rigori che il giocatore ha davvero calciato, e
+# quelli non si possono togliere perché il box score BigBalls ne ha 5 su 50 partite
+# (.docs/bigballs-api.md). Zaccagni ha segnato un rigore alla giornata 5: la sua media già
+# porta +0,6, e aggiungere +0,26 lo conterebbe due volte.
+#
+# Quindi il rigorista serve dove l'informazione è decisiva e non si somma a niente: come
+# spareggio fra due giocatori entro SOGLIA_PARI, dove il modello non sa scegliere e +0,26
+# è più grande della soglia. Lo fa _decisioni, e il report lo mostra accanto al giocatore.
+VALORE_PRIMO_RIGORISTA_DEFAULT = 0.26
 
 # Role counts per module, excluding the goalkeeper (always 1).
 MODULE_ROLE_COUNTS = {
@@ -311,6 +327,20 @@ def prossimo_turno(adesso: datetime | None = None) -> dict:
     }
 
 
+def rigoristi() -> tuple[dict, float]:
+    """(player_id -> voce di data/rigoristi.json, valore del primo rigorista in fantavoto).
+
+    Le gerarchie non sono un dato ufficiale: sono valutazioni editoriali che si
+    contraddicono spesso, quindi conta `consenso_sul_primo` (almeno due fonti indipendenti
+    lo danno primo). Lo calcola scripts/rigoristi.py. Se il file non c'è, nessun rigorista."""
+    path = store.DATA_DIR / "rigoristi.json"
+    if not path.exists():
+        return {}, VALORE_PRIMO_RIGORISTA_DEFAULT
+    doc = store.load_json(path)
+    valore = doc.get("valore_primo_rigorista") or VALORE_PRIMO_RIGORISTA_DEFAULT
+    return {r["player_id"]: r for r in doc.get("rigoristi", [])}, valore
+
+
 def prossima_partita_lega(team_id: str) -> dict | None:
     """La prossima partita della lega fantacalcio (`data/lega_competizioni.json`), cioè il
     primo turno non ancora calcolato in cui la squadra gioca, con l'avversario e come sta
@@ -493,10 +523,32 @@ def _valore(e: dict) -> float | None:
     return e["rating"]["punteggio"] if e["rating"] else None
 
 
-def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict, riserve: dict) -> list[str]:
+def _spareggio_rigorista(a: dict, b: dict, valore: float) -> str:
+    """Se fra due giocatori equivalenti per il modello uno è il primo rigorista della sua
+    squadra e l'altro no, lo dice: vale circa `valore` di fantavoto atteso, più della soglia
+    dei pari. Avvisa quando il rigore è già dentro la media, per non contarlo due volte."""
+    ra, rb = a.get("rigorista"), b.get("rigorista")
+    primo_a = bool(ra and ra.get("consenso_sul_primo"))
+    primo_b = bool(rb and rb.get("consenso_sul_primo"))
+    if primo_a == primo_b:
+        return ""
+    chi, voce = (a, ra) if primo_a else (b, rb)
+    testo = (f" Spareggio: {chi['player']['name']} è il primo rigorista del "
+             f"{voce['squadra']} ({voce['fonti_che_lo_citano']} fonti su "
+             f"{voce['fonti_totali_sulla_squadra']}), che vale circa +{valore:.2f} di "
+             "fantavoto atteso e non è nel numero.")
+    if chi.get("rigori_calciati"):
+        testo += (f" Ma ne ha già calciato {chi['rigori_calciati']} in queste giornate, "
+                  "quindi la sua media lo contiene già in parte: vale meno di così.")
+    return testo
+
+
+def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict, riserve: dict,
+               valore_rigorista: float = VALORE_PRIMO_RIGORISTA_DEFAULT) -> list[str]:
     """Le scelte che il modello non sa fare meglio di te: coppie entro SOGLIA_PARI al
     confine tra titolari e panchina, o tra i primi due cambi di un ruolo; moduli che
-    valgono quasi quanto quello scelto; titolari con pochi dati."""
+    valgono quasi quanto quello scelto; titolari con pochi dati. Dove i due sono pari,
+    guarda se uno dei due è il primo rigorista: quello è uno spareggio vero."""
     decisioni = []
     counts = {"P": 1, **MODULE_ROLE_COUNTS[modulo]}
     for role, n in counts.items():
@@ -511,6 +563,7 @@ def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict, riserve: dict) ->
                     f"[{role}] {ultimo['player']['name']} ({_valore(ultimo):.2f}) titolare o "
                     f"{primo['player']['name']} ({_valore(primo):.2f}) in panchina: differenza {diff:.2f}, "
                     f"sotto la soglia di {SOGLIA_PARI:.2f}. Equivalenti per il modello."
+                    + _spareggio_rigorista(ultimo, primo, valore_rigorista)
                 )
         if len(panchina) >= 2:
             diff = round(_valore(panchina[0]) - _valore(panchina[1]), 2)
@@ -518,6 +571,7 @@ def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict, riserve: dict) ->
                 decisioni.append(
                     f"[{role}] Primo cambio: {panchina[0]['player']['name']} ({_valore(panchina[0]):.2f}) o "
                     f"{panchina[1]['player']['name']} ({_valore(panchina[1]):.2f}), differenza {diff:.2f}."
+                    + _spareggio_rigorista(panchina[0], panchina[1], valore_rigorista)
                 )
 
     scelto_chiave, scelti = per_modulo[modulo][:2]
@@ -598,6 +652,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     if roster and len(roster) + len(mancanti) != attesi:
         avvisi.append(f"La rosa ha {len(roster) + len(mancanti)} giocatori invece di {attesi}.")
 
+    rig, valore_rigorista = rigoristi()
     turno = prossimo_turno()
     if roster and turno["partite"] and not turno["chiaro"]:
         avvisi.append(
@@ -645,7 +700,19 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         if partita in rinviate and sei_politico:
             # Il 6 è sicuro e non lascia il posto alla panchina: vale 6, non la media.
             rating = {"media": 6.0, "n": 0, "punteggio": 6.0, "politico": True}
-        per_ruolo[p["role"]].append({"player": p, "rating": rating, "partita": partita})
+        # quanti rigori ha già calciato in queste giornate: serve a non contare due volte
+        # il valore del rigorista (il box score ne ha pochi, quindi è un minimo)
+        calciati = sum(
+            (r.get("rigori_segnati") or 0) + (r.get("rigori_sbagliati") or 0)
+            for r in modello["per_giocatore"].get(p["id"], [])
+        )
+        per_ruolo[p["role"]].append({
+            "player": p,
+            "rating": rating,
+            "partita": partita,
+            "rigorista": rig.get(p["id"]),
+            "rigori_calciati": calciati,
+        })
     per_ruolo = {role: _role_order(entries) for role, entries in per_ruolo.items()}
 
     risultato = {
@@ -657,6 +724,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         "copertura": {},
         "atteso": None,
         "panchina_cfg": panchina_cfg,
+        "valore_rigorista": valore_rigorista,
         "turno": turno,
         "scoperti": {},
         "avvisi": avvisi,
@@ -716,7 +784,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         scoperti=scoperti,
         copertura=copertura,
     )
-    risultato["decisioni"] = _decisioni(module, per_modulo, per_ruolo, riserve)
+    risultato["decisioni"] = _decisioni(module, per_modulo, per_ruolo, riserve, valore_rigorista)
 
     # Avvisi sulla panchina corta: è la novità del 27/09 e il posto dove si perdono punti
     # senza accorgersene (7 slot scoperti su 396 nel backtest, circa 1,2 punti a giornata).

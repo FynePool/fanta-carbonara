@@ -120,6 +120,13 @@ def _partita(e: dict) -> str:
     return f"vs {avversario} ({'C' if casa else 'T'}) {_quando(m['data_utc'])}{rinviata}"
 
 
+def _rig(e: dict) -> str:
+    """Marcatore compatto: solo il primo rigorista, che è l'unico che vale qualcosa
+    (+0,26 di fantavoto atteso; il secondo calcia solo se manca il primo, +0,03)."""
+    v = e.get("rigorista")
+    return " RIG" if v and v.get("consenso_sul_primo") else "    "
+
+
 def _titolarita(p: dict) -> str:
     prob = p.get("prob_titolare")
     if prob is not None:
@@ -174,7 +181,7 @@ def main():
         print("TITOLARI:")
         for e in r["titolari"]:
             p = e["player"]
-            riga = f"  [{p['role']}] {p['name']:<18} {_voti(e['rating']):<39} {_titolarita(p):<17} {_partita(e)}"
+            riga = f"  [{p['role']}] {p['name']:<18} {_voti(e['rating']):<39}{_rig(e)} {_titolarita(p):<17} {_partita(e)}"
             prob = p.get("prob_titolare")
             politico = e["rating"] and e["rating"].get("politico")
             if prob is not None and prob < 75 and not politico and panchina_per_ruolo.get(p["role"]):
@@ -195,7 +202,7 @@ def main():
         p = e["player"]
         contatori[p["role"]] = contatori.get(p["role"], 0) + 1
         etichetta = f"{p['role']}{contatori[p['role']]}"
-        print(f"  {etichetta:<3} {p['name']:<18} {_voti(e['rating']):<39} {_titolarita(p):<17} {_partita(e)}")
+        print(f"  {etichetta:<3} {p['name']:<18} {_voti(e['rating']):<39}{_rig(e)} {_titolarita(p):<17} {_partita(e)}")
 
     if r["modulo"] and r["esclusi"]:
         print("\nFUORI DISTINTA (la panchina ha pochi posti per ruolo: questi non entrano):")
@@ -228,6 +235,31 @@ def main():
             if soglie.get("da_confermare"):
                 print("  ATTENZIONE: le soglie gol non sono confermate dalla lega, sono i valori")
                 print("  standard di fantacalcio.it. Da verificare nel pannello della lega.")
+
+    in_rosa = [e for e in r["titolari"] + r["panchina"] + r["esclusi"] if e.get("rigorista")]
+    if in_rosa:
+        valore = r["valore_rigorista"]
+        print(f"\nRIGORISTI IN ROSA (RIG sulle righe sopra = primo rigorista, vale circa "
+              f"+{valore:.2f} di")
+        print("fantavoto atteso a partita). NON è dentro il numero, perché la media degli ultimi")
+        print("voti contiene già i rigori davvero calciati e non si possono togliere: serve come")
+        print("spareggio quando due giocatori sono equivalenti. Le gerarchie non sono un dato")
+        print("ufficiale, sono pareri di giornali che spesso non concordano:")
+        for e in sorted(in_rosa, key=lambda x: (x["rigorista"]["rango"], x["player"]["name"])):
+            v, p = e["rigorista"], e["player"]
+            tot = v["fonti_totali_sulla_squadra"]
+            primo = v.get("fonti_che_lo_danno_primo", 0)
+            if v["consenso_sul_primo"]:
+                quanto = f"PRIMO rigorista ({primo} fonti su {tot} lo dicono)"
+            elif primo:
+                quanto = f"{v['rango']}º, ma {primo} fonte su {tot} lo dà primo"
+            else:
+                quanto = f"{v['rango']}º nella gerarchia: vale poco"
+            nota = ""
+            if v["consenso_sul_primo"] and e["rigori_calciati"]:
+                nota = (f" — ne ha già calciato {e['rigori_calciati']}, la sua media lo "
+                        "contiene già in parte")
+            print(f"  [{p['role']}] {p['name']:<18} {v['squadra']:<12} {quanto}{nota}")
 
     lega = prossima_partita_lega(args.team_id)
     if lega:

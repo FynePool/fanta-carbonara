@@ -115,7 +115,22 @@ fallito.
    Se `valida` segnala errori, correggili; se non ci riesci, ripristina il file di ieri
    (`git checkout -- data/notizie_rosa.json`) e riportalo. Se la ricerca web non è
    disponibile in questo giro, salta il passo e scrivilo in cima al riepilogo.
-8. **Quota API rimasta**, per il riepilogo:
+8. **Rigoristi** (chi calcia i rigori: vale circa +0,26 di fantavoto atteso a partita
+   per il primo rigorista, ed è informazione che i voti non contengono se non ha ancora
+   calciato). Controlla che il consenso salvato sia coerente con le liste:
+   ```
+   python3 scripts/rigoristi.py valida
+   ```
+   Se dice che non è aggiornato, lancia `python3 scripts/rigoristi.py calcola`.
+   **Le liste per fonte non si aggiornano ogni giorno**: le gerarchie cambiano poche volte
+   a stagione (allenatore nuovo, mercato, un rigore sbagliato che sposta le gerarchie).
+   Rileggile con la ricerca web solo se una notizia del passo 7 tocca i rigori, o se sono
+   passate più di **quattro settimane** dalla `data` più recente in `fonti`. In quel caso
+   aggiorna le liste dentro `fonti` in `data/rigoristi.json` (almeno due fonti
+   indipendenti, nomi come li scrive la fonte, in ordine di gerarchia) e poi `calcola`.
+   Guarda sempre l'output di `calcola`: i nomi che non si abbinano al listone vengono
+   elencati e non entrano, e un abbinamento su un portiere è quasi sempre sbagliato.
+9. **Quota API rimasta**, per il riepilogo:
    ```
    curl -sS https://api.bigballsdata.com/v1/usage -H "x-api-key: $BIGBALLS_API_KEY"
    ```

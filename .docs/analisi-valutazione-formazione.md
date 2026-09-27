@@ -133,6 +133,59 @@ Il parametro `produzione` resta e `backtest_undici.py` lo riprova a ogni giro: s
 solo se con più giornate guadagna punti con l'intervallo che esclude lo zero.
 («Produzione a metà peso» è invece **peggio** del motore attuale: −0,54 [−1,21, −0,01].)
 
+### Entrato come dato, non come punteggio: i rigoristi
+
+`data/rigoristi.json` + `scripts/rigoristi.py` (27/09 sera).
+
+**Correzione di una mia stima sbagliata.** Nella prima stesura avevo scritto che un
+rigorista designato vale «+0,5/+0,75 di fantavoto, il singolo fattore più grande di tutti
+quelli discussi qui». **Era sbagliato**, perché avevo tirato a indovinare la frequenza dei
+rigori. Il numero vero, dai dati del repo: nella stagione 2025-26 ci sono stati **106
+rigori in 380 partite**, cioè **0,139 per squadra per partita** (`storico_stagioni.json`).
+Un rigore vale in media +1,90 di fantavoto (+3 se segnato, −2 se sbagliato, conversione
+~78%). Quindi il primo rigorista vale **+0,26 a partita** **[Certo]** — dello stesso
+ordine del termine avversario (±0,31), non il doppio di tutto il resto. Il secondo
+rigorista calcia solo se manca il primo: **+0,03**, trascurabile.
+
+**Le liste non sono un dato, sono opinioni che si contraddicono.** Lette tre fonti
+indipendenti (fantacalcio-online 02/09, Sky Sport 03/09, SOS Fanta 26/09): **concordano
+sul primo rigorista di 11 squadre su 20 e si contraddicono sulle altre 9** **[Certo]** —
+Milan, Parma, Genoa, Fiorentina, Lecce, Frosinone, Juventus, Cagliari, Atalanta. Per
+questo il file tiene le liste di tutte le fonti e lo script calcola il consenso, marcando
+`consenso_sul_primo` solo dove almeno due fonti concordano. Con tre fonti si arriva a
+**18 squadre su 20** con un primo rigorista di consenso.
+
+**Limite del consenso, da sapere.** È una maggioranza semplice, non pesata sulla data. Sei
+delle nove contraddizioni hanno la stessa forma — la fonte più vecchia (02/09) o la più
+recente (26/09) contro le altre due — e questo di solito vuol dire che la gerarchia è
+**cambiata** durante settembre, non che una fonte sbagli. Dove la più recente è quella
+isolata (Genoa: Østigård secondo SOS Fanta il 26/09, Colombo secondo le altre due a
+inizio settembre) la maggioranza potrebbe avere torto. Le notizie di `notizie_rosa.json`
+sono il posto giusto per accorgersene.
+
+**Un bug mio, che vale la pena raccontare.** Il primo abbinamento dava «Lautaro Martinez»
+dell'Inter a **Martinez Jo., il portiere** — un portiere terzo rigorista. È esattamente il
+difetto 7 di questo repo (matching che ignora le iniziali). Lo script ora rifiuta un nome
+quando le iniziali sono note e diverse, e segnala ogni abbinamento su un portiere.
+
+**Perché NON entra nel punteggio.** Non per il backtest: lì il confronto **non ha potere**
+— dei 20 primi rigoristi della stagione scorsa solo 16 sono ancora nel listone e uno solo è
+in rosa, e il risultato è −0,08 [−0,56, +0,32], cioè nessuna informazione **[Certo]**. La
+ragione è il **doppio conteggio**: la media degli ultimi voti contiene già i rigori
+davvero calciati, e non si possono togliere perché il box score BigBalls ne ha **5 su 50
+partite**. Prova concreta: Zaccagni ha segnato un rigore alla giornata 5, quindi la sua
+media già porta +0,6; sommargli +0,26 lo conterebbe due volte. **[Certo]**
+
+**Dove entra, allora.** Dove l'informazione è decisiva e non si somma a niente: come
+**spareggio** fra due giocatori entro la soglia dei pari (0,20), dove il modello dichiara
+di non saper scegliere e +0,26 è più grande della soglia. E mostrato nel report, con
+quante fonti lo danno primo, e con l'avviso quando il rigore è già dentro la media.
+
+In rosa oggi: **Zaccagni** primo rigorista della Lazio (3 fonti su 3, ma ne ha già
+calciato uno) e **Ramos G.** primo rigorista del Milan (2 fonti su 3, e **zero rigori in
+Serie A**, quindi è informazione che il modello non poteva vedere in nessun modo). Entrambi
+sono già titolari, quindi oggi non cambia la formazione: cambierebbe un pari.
+
 ### Provata e SCARTATA: scegliere il modulo col valore atteso
 
 Sarebbe l'obiettivo giusto — il valore atteso sconta chi non prende voto e gli slot che
@@ -178,18 +231,20 @@ giocate, quindi diventa misurabile.
 
 ## Cosa resta aperto
 
-1. **Le soglie gol non sono confermate.** `regole_lega.soglie_gol` ha i valori standard
-   (66, poi ogni 6) con `da_confermare: true`, e il report lo dice ogni volta. Vanno lette
-   nel pannello della lega. Non cambiano la formazione, cambiano solo il giudizio su
-   quanto una decisione conti.
+1. ~~**Le soglie gol non sono confermate.**~~ Confermate dall'utente il 27/09: **primo gol
+   a 66 punti, poi una fascia ogni 5**. Cambia il giudizio su quanto una decisione conti,
+   e lo stringe: col punteggio atteso di oggi (70,7) la soglia successiva è a 71, cioè
+   **+0,3** — quindi questa giornata le scelte entro la soglia dei pari possono valere un
+   gol, invece di essere indifferenti.
 2. **La probabilità di prendere voto è approssimata** con quella di partire titolare. Dalla
    giornata 6 diventa misurabile (probabili dal 21/09 + giornate giocate). Quando lo sarà,
    va rifatto il confronto sul modulo (sopra).
-3. **I rigoristi.** Un rigorista designato vale +0,5/+0,75 di fantavoto atteso
-   **[Probabile]**: il singolo fattore più grande di tutti quelli discussi qui. Il box score
-   BigBalls ha 5 rigori in 50 partite, troppo pochi per dedurlo **[Certo]**; la pagina
-   «rigoristi» di fantacalcio.it non è mai stata letta. È l'unico dato mancante che vale la
-   pena andare a prendere.
+3. ~~**I rigoristi.**~~ Fatto il 27/09 sera, e la mia stima del valore era sbagliata:
+   vale +0,26, non +0,5/+0,75. Vedi la sezione sopra. Resta aperto **misurare i rigori per
+   squadra** invece di usare la media del campionato per tutti: il Milan ne ottiene circa
+   il doppio del Parma secondo le fonti, e per un primo rigorista del Milan il valore
+   sarebbe ~+0,5 invece di +0,26. Serve la frequenza dei rigori per squadra su più
+   stagioni, che `storico_stagioni.json` ha.
 4. **Metà delle statistiche raccolte non entra nel modello**: `passaggi_chiave` (2044
    righe), `assist`, `cartellini_gialli` (154), `falli_commessi` (720), `minuti`. **La
    previsione è che modellarli non pagherà**, ed è la stessa idea della correzione per la

@@ -1,0 +1,1595 @@
+{
+  "aggiornato_il": "2026-09-27",
+  "_note": "Gerarchie dei rigoristi della Serie A. NON sono un dato ufficiale: sono valutazioni editoriali, e le tre fonti lette il 27/09 si contraddicono sul PRIMO rigorista di 9 squadre su 20. Per questo non si sceglie una fonte: si tengono tutte in `fonti.liste` (nomi come li scrive la fonte, in ordine di gerarchia) e il consenso lo calcola scripts/rigoristi.py, che fa anche l'abbinamento col listone. Chi aggiorna i dati tocca solo `fonti`, poi lancia `python3 scripts/rigoristi.py calcola`.",
+  "_campi": {
+    "rango": "consenso: mediana dei ranghi fra le fonti che citano il giocatore",
+    "verificata": "almeno due fonti indipendenti lo mettono nella STESSA posizione",
+    "consenso_sul_primo": "almeno due fonti lo danno PRIMO rigorista: e' il flag che conta"
+  },
+  "fonti": {
+    "fantacalcio-online": {
+      "url": "https://www.fantacalcio-online.com/it/consigli-fantacalcio/rigoristi-serie-a-2026-2027",
+      "data": "2026-09-02",
+      "liste": {
+        "Inter": [
+          "Calhanoglu",
+          "Zielinski",
+          "Lautaro Martinez"
+        ],
+        "Milan": [
+          "Pulisic",
+          "Goncalo Ramos",
+          "Modric"
+        ],
+        "Juventus": [
+          "Kolo Muani",
+          "Yildiz",
+          "Locatelli"
+        ],
+        "Napoli": [
+          "De Bruyne",
+          "Hojlund",
+          "McTominay"
+        ],
+        "Roma": [
+          "Malen",
+          "Dybala",
+          "Castro"
+        ],
+        "Atalanta": [
+          "Scamacca",
+          "Samardzic",
+          "De Ketelaere"
+        ],
+        "Fiorentina": [
+          "Beto",
+          "Mastantuono",
+          "Pellegrino",
+          "Atta"
+        ],
+        "Lazio": [
+          "Zaccagni",
+          "Gudmundsson",
+          "Pinamonti",
+          "Cataldi"
+        ],
+        "Bologna": [
+          "Orsolini",
+          "Bernardeschi",
+          "Dovbyk"
+        ],
+        "Como": [
+          "Da Cunha",
+          "Kean",
+          "Nico Paz",
+          "Douvikas"
+        ],
+        "Torino": [
+          "Vlasic",
+          "Simeone",
+          "Mandragora",
+          "Oristanio"
+        ],
+        "Udinese": [
+          "Davis",
+          "Solet",
+          "Zaniolo"
+        ],
+        "Sassuolo": [
+          "Berardi",
+          "Lauriente"
+        ],
+        "Genoa": [
+          "Colombo",
+          "Vitinha",
+          "Ostigard"
+        ],
+        "Parma": [
+          "Bernabe",
+          "Toure",
+          "Valeri"
+        ],
+        "Cagliari": [
+          "Mina",
+          "Kevin Carlos",
+          "Maldini"
+        ],
+        "Lecce": [
+          "Stulic",
+          "Geubbels",
+          "Berisha"
+        ],
+        "Monza": [
+          "Pessina",
+          "Cutrone"
+        ],
+        "Venezia": [
+          "Busio",
+          "Adams",
+          "Yeboah",
+          "Adorante"
+        ],
+        "Frosinone": [
+          "Calo",
+          "Schmid",
+          "Grillitsch"
+        ]
+      }
+    },
+    "sosfanta": {
+      "url": "https://www.sosfanta.com/asta-fantacalcio/fantacalcio-asta-tutti-rigoristi-seriea-venti-squadre-campionato/",
+      "data": "2026-09-26",
+      "liste": {
+        "Atalanta": [
+          "Kessie",
+          "Scamacca",
+          "Samardzic"
+        ],
+        "Bologna": [
+          "Orsolini",
+          "Dovbyk",
+          "Bernardeschi"
+        ],
+        "Cagliari": [
+          "Maldini",
+          "Nzola",
+          "Fazzini"
+        ],
+        "Como": [
+          "Da Cunha",
+          "Kean",
+          "Douvikas"
+        ],
+        "Fiorentina": [
+          "Goncalves",
+          "Mastantuono",
+          "Pellegrino"
+        ],
+        "Frosinone": [
+          "Schmid",
+          "Calo",
+          "Bobcek"
+        ],
+        "Genoa": [
+          "Ostigard",
+          "Colombo",
+          "Baldanzi"
+        ],
+        "Inter": [
+          "Calhanoglu",
+          "Zielinski",
+          "Lautaro Martinez"
+        ],
+        "Juventus": [
+          "Woltemade",
+          "Kolo Muani",
+          "Yildiz"
+        ],
+        "Lazio": [
+          "Zaccagni",
+          "Pinamonti",
+          "Gudmundsson"
+        ],
+        "Lecce": [
+          "Geubbels",
+          "Stulic",
+          "Pierotti"
+        ],
+        "Milan": [
+          "Goncalo Ramos",
+          "Pulisic",
+          "Modric"
+        ],
+        "Monza": [
+          "Pessina",
+          "Gustavo Varela"
+        ],
+        "Napoli": [
+          "De Bruyne",
+          "Hojlund",
+          "Politano"
+        ],
+        "Parma": [
+          "El Bilal Toure",
+          "Elphege"
+        ],
+        "Roma": [
+          "Malen",
+          "Dybala",
+          "Lorenzo Pellegrini"
+        ],
+        "Sassuolo": [
+          "Berardi",
+          "Sebastiano Esposito",
+          "Lauriente"
+        ],
+        "Torino": [
+          "Vlasic",
+          "Kulenovic",
+          "Ricardo Rodriguez"
+        ],
+        "Udinese": [
+          "Davis",
+          "Alaba",
+          "Solet"
+        ],
+        "Venezia": [
+          "Busio",
+          "Akor Adams",
+          "Yeboah"
+        ]
+      }
+    },
+    "sky-sport": {
+      "url": "https://sport.sky.it/fantacalcio/rigoristi-serie-a-fantacalcio-2026-2027",
+      "data": "2026-09-03",
+      "liste": {
+        "Lazio": [
+          "Zaccagni",
+          "Gudmundsson",
+          "Cataldi"
+        ],
+        "Milan": [
+          "Goncalo Ramos",
+          "Pulisic",
+          "Modric"
+        ],
+        "Parma": [
+          "El Bilal Toure",
+          "Valeri",
+          "Bernabe"
+        ],
+        "Genoa": [
+          "Colombo",
+          "Vitinha",
+          "Messias"
+        ],
+        "Sassuolo": [
+          "Berardi",
+          "Sebastiano Esposito",
+          "Lauriente"
+        ],
+        "Torino": [
+          "Vlasic",
+          "Mandragora",
+          "Simeone"
+        ],
+        "Lecce": [
+          "Geubbels",
+          "Stulic",
+          "Berisha"
+        ],
+        "Venezia": [
+          "Busio",
+          "Akor Adams",
+          "Yeboah"
+        ],
+        "Bologna": [
+          "Orsolini",
+          "Bernardeschi",
+          "Dovbyk"
+        ],
+        "Inter": [
+          "Calhanoglu",
+          "Zielinski",
+          "Lautaro Martinez"
+        ],
+        "Fiorentina": [
+          "Beto",
+          "Mastantuono",
+          "Goncalves"
+        ],
+        "Frosinone": [
+          "Calo",
+          "Bobcek",
+          "Schmid"
+        ],
+        "Como": [
+          "Da Cunha",
+          "Douvikas",
+          "Nico Paz"
+        ],
+        "Udinese": [
+          "Davis",
+          "Zaniolo",
+          "Solet"
+        ],
+        "Juventus": [
+          "Kolo Muani",
+          "Locatelli",
+          "Woltemade"
+        ]
+      }
+    }
+  },
+  "rigoristi": [
+    {
+      "player_id": "fd1850",
+      "nome": "Kessiè",
+      "squadra": "Atalanta",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2137",
+      "nome": "Scamacca",
+      "squadra": "Atalanta",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5995",
+      "nome": "De Ketelaere",
+      "squadra": "Atalanta",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5119",
+      "nome": "Samardzic",
+      "squadra": "Atalanta",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2167",
+      "nome": "Orsolini",
+      "squadra": "Bologna",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd184",
+      "nome": "Bernardeschi",
+      "squadra": "Bologna",
+      "ruolo": "C",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 2,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6675",
+      "nome": "Dovbyk",
+      "squadra": "Bologna",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 3,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd4210",
+      "nome": "Mina",
+      "squadra": "Cagliari",
+      "ruolo": "D",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7547",
+      "nome": "Kevin Carlos",
+      "squadra": "Cagliari",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5336",
+      "nome": "Nzola",
+      "squadra": "Cagliari",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6010",
+      "nome": "Fazzini",
+      "squadra": "Cagliari",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd4896",
+      "nome": "Maldini",
+      "squadra": "Cagliari",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5559",
+      "nome": "Da Cunha",
+      "squadra": "Como",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd2097",
+      "nome": "Kean",
+      "squadra": "Como",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7017",
+      "nome": "Douvikas",
+      "squadra": "Como",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 4,
+        "sky-sport": 2,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6875",
+      "nome": "Paz N.",
+      "squadra": "Como",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5694",
+      "nome": "Beto",
+      "squadra": "Fiorentina",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd7078",
+      "nome": "Mastantuono",
+      "squadra": "Fiorentina",
+      "ruolo": "C",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7625",
+      "nome": "Goncalves P.",
+      "squadra": "Fiorentina",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sky-sport": 3,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7023",
+      "nome": "Pellegrino M.",
+      "squadra": "Fiorentina",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6908",
+      "nome": "Atta",
+      "squadra": "Fiorentina",
+      "ruolo": "C",
+      "rango": 4,
+      "rango_per_fonte": {
+        "fantacalcio-online": 4
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7472",
+      "nome": "Calò",
+      "squadra": "Frosinone",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd7551",
+      "nome": "Schmid",
+      "squadra": "Frosinone",
+      "ruolo": "C",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 3,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7612",
+      "nome": "Bobcek",
+      "squadra": "Frosinone",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sky-sport": 2,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7550",
+      "nome": "Grillitsch",
+      "squadra": "Frosinone",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd4923",
+      "nome": "Colombo",
+      "squadra": "Genoa",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd6164",
+      "nome": "Vitinha O.",
+      "squadra": "Genoa",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5823",
+      "nome": "Baldanzi",
+      "squadra": "Genoa",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd4970",
+      "nome": "Messias",
+      "squadra": "Genoa",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sky-sport": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5750",
+      "nome": "Ostigard",
+      "squadra": "Genoa",
+      "ruolo": "D",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2194",
+      "nome": "Calhanoglu",
+      "squadra": "Inter",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd152",
+      "nome": "Zielinski",
+      "squadra": "Inter",
+      "ruolo": "C",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2764",
+      "nome": "Martinez L.",
+      "squadra": "Inter",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 3,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5951",
+      "nome": "Kolo Muani",
+      "squadra": "Juventus",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd827",
+      "nome": "Locatelli",
+      "squadra": "Juventus",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6752",
+      "nome": "Woltemade",
+      "squadra": "Juventus",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sky-sport": 3,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6434",
+      "nome": "Yildiz",
+      "squadra": "Juventus",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd632",
+      "nome": "Zaccagni",
+      "squadra": "Lazio",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd5800",
+      "nome": "Gudmundsson A.",
+      "squadra": "Lazio",
+      "ruolo": "C",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 2,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2038",
+      "nome": "Pinamonti",
+      "squadra": "Lazio",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd333",
+      "nome": "Cataldi",
+      "squadra": "Lazio",
+      "ruolo": "C",
+      "rango": 4,
+      "rango_per_fonte": {
+        "fantacalcio-online": 4,
+        "sky-sport": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5029",
+      "nome": "Geubbels",
+      "squadra": "Lecce",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd7252",
+      "nome": "Stulic",
+      "squadra": "Lecce",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6015",
+      "nome": "Berisha M.",
+      "squadra": "Lecce",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6549",
+      "nome": "Pierotti",
+      "squadra": "Lecce",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6397",
+      "nome": "Ramos G.",
+      "squadra": "Milan",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd2423",
+      "nome": "Pulisic",
+      "squadra": "Milan",
+      "ruolo": "C",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2606",
+      "nome": "Modric",
+      "squadra": "Milan",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 3,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2741",
+      "nome": "Pessina",
+      "squadra": "Monza",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd2155",
+      "nome": "Cutrone",
+      "squadra": "Monza",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd7523",
+      "nome": "Varela G.",
+      "squadra": "Monza",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2517",
+      "nome": "De Bruyne",
+      "squadra": "Napoli",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd6052",
+      "nome": "Hojlund",
+      "squadra": "Napoli",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd4777",
+      "nome": "McTominay",
+      "squadra": "Napoli",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd536",
+      "nome": "Politano",
+      "squadra": "Napoli",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6229",
+      "nome": "Tourè E.",
+      "squadra": "Parma",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd7342",
+      "nome": "Elphege",
+      "squadra": "Parma",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6666",
+      "nome": "Bernabè",
+      "squadra": "Parma",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 1,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5862",
+      "nome": "Valeri",
+      "squadra": "Parma",
+      "ruolo": "D",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5585",
+      "nome": "Malen",
+      "squadra": "Roma",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 2,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd309",
+      "nome": "Dybala",
+      "squadra": "Roma",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6572",
+      "nome": "Castro S.",
+      "squadra": "Roma",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd530",
+      "nome": "Pellegrini Lo.",
+      "squadra": "Roma",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 2,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd531",
+      "nome": "Berardi",
+      "squadra": "Sassuolo",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd4463",
+      "nome": "Esposito Se.",
+      "squadra": "Sassuolo",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "sky-sport": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6060",
+      "nome": "Laurientè",
+      "squadra": "Sassuolo",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 3,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5687",
+      "nome": "Vlasic",
+      "squadra": "Torino",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd7349",
+      "nome": "Kulenovic",
+      "squadra": "Torino",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd1933",
+      "nome": "Mandragora",
+      "squadra": "Torino",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2169",
+      "nome": "Rodriguez R.",
+      "squadra": "Torino",
+      "ruolo": "D",
+      "rango": 3,
+      "rango_per_fonte": {
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2061",
+      "nome": "Simeone",
+      "squadra": "Torino",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 3
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6218",
+      "nome": "Oristanio",
+      "squadra": "Torino",
+      "ruolo": "C",
+      "rango": 4,
+      "rango_per_fonte": {
+        "fantacalcio-online": 4
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5637",
+      "nome": "Davis K.",
+      "squadra": "Udinese",
+      "ruolo": "A",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd2404",
+      "nome": "Alaba",
+      "squadra": "Udinese",
+      "ruolo": "D",
+      "rango": 2,
+      "rango_per_fonte": {
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6956",
+      "nome": "Solet",
+      "squadra": "Udinese",
+      "ruolo": "D",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 3,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd2766",
+      "nome": "Zaniolo",
+      "squadra": "Udinese",
+      "ruolo": "C",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 2
+      },
+      "fonti_che_lo_citano": 2,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd5507",
+      "nome": "Busio",
+      "squadra": "Venezia",
+      "ruolo": "C",
+      "rango": 1,
+      "rango_per_fonte": {
+        "fantacalcio-online": 1,
+        "sky-sport": 1,
+        "sosfanta": 1
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 3,
+      "consenso_sul_primo": true
+    },
+    {
+      "player_id": "fd7484",
+      "nome": "Adams A.",
+      "squadra": "Venezia",
+      "ruolo": "A",
+      "rango": 2,
+      "rango_per_fonte": {
+        "fantacalcio-online": 2,
+        "sky-sport": 2,
+        "sosfanta": 2
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd6904",
+      "nome": "Yeboah J.",
+      "squadra": "Venezia",
+      "ruolo": "A",
+      "rango": 3,
+      "rango_per_fonte": {
+        "fantacalcio-online": 3,
+        "sky-sport": 3,
+        "sosfanta": 3
+      },
+      "fonti_che_lo_citano": 3,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": true,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    },
+    {
+      "player_id": "fd4387",
+      "nome": "Adorante",
+      "squadra": "Venezia",
+      "ruolo": "A",
+      "rango": 4,
+      "rango_per_fonte": {
+        "fantacalcio-online": 4
+      },
+      "fonti_che_lo_citano": 1,
+      "fonti_totali_sulla_squadra": 3,
+      "verificata": false,
+      "fonti_che_lo_danno_primo": 0,
+      "consenso_sul_primo": false
+    }
+  ],
+  "rigori_per_partita": 0.1395,
+  "valore_primo_rigorista": 0.265
+}
