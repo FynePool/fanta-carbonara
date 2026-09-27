@@ -4,8 +4,14 @@
 Fonte: la pagina "Quotazioni Fantacalcio" (https://www.fantacalcio.it/quotazioni-fantacalcio),
 HTML statico, una riga `tr.player-row` per giocatore con il link alla scheda
 (".../squadre/udinese/alaba/2404": l'ultimo numero è l'id fantacalcio, "fd2404" qui),
-il ruolo classic (`span.role`), la quotazione attuale (`td.player-classic-current-price`)
-e l'FVM (`td.player-classic-fvm`). Verificata il 27/09/2026: 598 giocatori.
+il ruolo classic (`span.role`), la quotazione iniziale (`td.player-classic-initial-price`,
+colonna "QI": fissata prima della stagione, non cambia), la quotazione attuale
+(`td.player-classic-current-price`, "QA": si muove coi voti) e l'FVM
+(`td.player-classic-fvm`). Verificata il 27/09/2026: 598 giocatori.
+
+La quotazione iniziale è l'unica informazione a priori sul giocatore che non contiene le
+giornate già giocate: è quella che usa roster.py, e il backtest può usarla senza
+barare (vedi .docs/difetti-consiglio-formazione.md).
 
 Perché questa e non FantaDraft: FantaDraft ne aveva 532 (mancavano Leão, Lukaku,
 Di Gregorio, due giocatori presi all'asta...), mentre l'asta (Fantalab) e i voti
@@ -76,7 +82,8 @@ def parse_int(td):
 
 
 def parse(html: str):
-    """Ritorna (righe, anomalie). Una riga: id, nome, ruolo, slug squadra, quotazione, fvm."""
+    """Ritorna (righe, anomalie). Una riga: id, nome, ruolo, slug squadra, quotazione
+    iniziale, quotazione attuale, fvm."""
     soup = BeautifulSoup(html, "html.parser")
     righe, anomalie = [], []
     for tr in soup.select("tr.player-row"):
@@ -95,6 +102,7 @@ def parse(html: str):
             "name": link.get_text(strip=True),
             "role": r,
             "slug": m.group(1),
+            "quotazione_iniziale": parse_int(tr.select_one("td.player-classic-initial-price")),
             "quotazione": parse_int(tr.select_one("td.player-classic-current-price")),
             "fvm": parse_int(tr.select_one("td.player-classic-fvm")),
         })
@@ -140,6 +148,7 @@ def main():
             "name": r["name"],
             "role": r["role"],
             "serie_a_team": squadra_di[r["slug"]],
+            "quotazione_iniziale": r["quotazione_iniziale"],
             "quotazione": r["quotazione"],
             "fvm": r["fvm"],
             "status": "n/d",
