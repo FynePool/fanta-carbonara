@@ -39,11 +39,12 @@ fallito.
    ```
    python3 scripts/import_rose_lega.py --league-id <league_id di config/league.json>
    ```
-   Da leghe.fantacalcio.it: riscrive `teams.json` e `ownership.json` con le 12 squadre
-   in gioco (le squadre vuote della lega restano fuori). Serve `LEGHE_FC_USERNAME` e
+   Da leghe.fantacalcio.it: riscrive `teams.json` e `ownership.json` con le squadre
+   in gioco, cioè quelle con almeno un giocatore (le vuote restano fuori). Serve `LEGHE_FC_USERNAME` e
    `LEGHE_FC_PASSWORD` nell'ambiente: se mancano, salta il passo e scrivilo in cima al
-   riepilogo. Se si rifiuta di scrivere ("squadre con la rosa, ne aspettavo 12"),
-   restano le rose di ieri: riportalo. Riporta chi è entrato o uscito da una rosa.
+   riepilogo. Se si rifiuta di scrivere ("ora risultano vuote o sparite"), restano le
+   rose di ieri: riportalo, e **non** rilanciarlo con `--accetta-squadre-uscite`
+   (lo decide l'utente, dopo aver guardato la lega). Riporta in cima anche le "squadre entrate in gioco". Riporta chi è entrato o uscito da una rosa.
 2. **Calendario e risultati Serie A** (prima delle statistiche, che leggono le
    partite finite da qui):
    ```

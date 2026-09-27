@@ -141,8 +141,14 @@ se non scende in campo entra il primo della panchina: vedi
   lettura per esplorare una lega reale via l'API sopra. Non scrive mai in `data/`.
 - `import_rose_lega.py --league-id <id> [--verifica-csv file] [--dry-run]` — rose e
   crediti della lega (`/league/teams/all`) in `teams.json` e `ownership.json`. La lega
-  FantaCarbonaraXI (`league_id` in config) ha 18 squadre di cui 6 vuote: entrano solo
-  quelle con la rosa, e se non sono esattamente 12 non scrive niente. Crediti totali =
+  FantaCarbonaraXI (`league_id` in config) ha 18 squadre di cui 6 vuote (ragazzi che
+  quest'anno non giocano): entra ogni squadra con almeno un giocatore, quindi una
+  squadra vuota che prende dei giocatori entra da sola (e viene segnalata). Se una
+  squadra già in `teams.json` risulta vuota o sparita non scrive niente (il 27/09, mentre
+  l'admin spostava la rosa di Fortitudo sulla squadra Ss Igari, l'API ha restituito per
+  qualche secondo quasi tutte le rose vuote): un'uscita vera si accetta a mano con
+  `--accetta-squadre-uscite`, e i giocatori spostati tengono data e modalità d'acquisto.
+  Segnala le squadre con crediti totali diversi da 500 (li scrive come sono). Crediti totali =
   `cri` + `bm` (554 - 54 = 500). Non salva il proprietario (è lo username, dato
   personale). Chi entra in una rosa dopo il primo import è `da_verificare`: l'API non
   dice se è uno svincolato o uno scambio. `--verifica-csv` confronta con un export
