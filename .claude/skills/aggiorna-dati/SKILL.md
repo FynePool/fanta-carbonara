@@ -1,6 +1,6 @@
 ---
 name: aggiorna-dati
-description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, calendario e risultati Serie A, statistiche per giocatore, voti e fantavoto, probabili formazioni, squalificati e diffidati, status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
+description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, rose e calendario della lega, calendario e risultati Serie A, statistiche per giocatore, voti e fantavoto, probabili formazioni, squalificati e diffidati, status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
 ---
 
 # Aggiornamento dati quotidiano
@@ -45,6 +45,13 @@ fallito.
    riepilogo. Se si rifiuta di scrivere ("ora risultano vuote o sparite"), restano le
    rose di ieri: riportalo, e **non** rilanciarlo con `--accetta-squadre-uscite`
    (lo decide l'utente, dopo aver guardato la lega). Riporta in cima anche le "squadre entrate in gioco". Riporta chi è entrato o uscito da una rosa.
+1c. **Competizioni della lega, calendario e risultati** (dopo le rose):
+   ```
+   python3 scripts/import_calendario_lega.py --league-id <league_id di config/league.json>
+   ```
+   Stesse credenziali del passo 1b: se mancano, salta. Non perde mai una giornata già
+   calcolata. Riporta nel riepilogo le giornate calcolate per competizione, le
+   competizioni nuove (Coppa Italia, Europa League) e ogni "ATTENZIONE".
 2. **Calendario e risultati Serie A** (prima delle statistiche, che leggono le
    partite finite da qui):
    ```
@@ -103,6 +110,7 @@ Breve, in italiano, fatti e numeri:
 - righe di statistiche aggiunte;
 - listone: giocatori entrati, usciti, con squadra o ruolo cambiati;
 - rose della lega: chi è entrato o uscito da una rosa, crediti cambiati;
+- competizioni della lega: giornate calcolate, competizioni nuove;
 - voti: righe aggiornate, righe nuove, e quanti voti di giocatori assenti dal listone;
 - infortunati ora e differenza rispetto a prima (chi è entrato, chi è rientrato);
 - squalificati e diffidati, per nome e squadra;
@@ -114,4 +122,4 @@ Breve, in italiano, fatti e numeri:
 Dati che questa routine **non** copre ancora, da non inventare:
 
 - il fantavoto calcolato con le regole della lega (c'è quello standard di fantacalcio.it);
-- il calendario testa-a-testa della lega.
+- la classifica della lega (non c'è un endpoint: si ricaverà dal calendario).

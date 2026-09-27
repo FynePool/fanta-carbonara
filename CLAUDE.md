@@ -15,12 +15,13 @@ squadra è VAR-tificiale (`my_team_id` in `config/league.json`).
 
 I dati (listone, infortuni, calendario, statistiche, voti, probabili formazioni,
 squalifiche e status) si aggiornano ogni mattina con una routine automatica che esegue
-la skill `aggiorna-dati` e pusha su `main`. Le rose dopo l'asta non sono ancora
-coperte: vanno aggiunte a quella skill quando esisterà l'importer.
+la skill `aggiorna-dati` e pusha su `main`. Dal 27/09 il giro legge anche rose, crediti,
+competizioni e calendario della lega da leghe.fantacalcio.it.
 
 ## Struttura dati (`data/`, JSON versionati in git)
 
-- `teams.json` — le 12 squadre della lega: id, nome, proprietario, crediti totali/rimanenti.
+- `teams.json` — le squadre in gioco della lega (12, quelle con una rosa): id e nome di
+  leghe.fantacalcio.it, crediti totali/rimanenti. Il proprietario non si salva (dato personale).
 - `players.json` — **pool completo di tutti i giocatori Serie A** (non solo quelli
   posseduti), dal listone ufficiale di fantacalcio.it (`import_listone_fc.py`): id, nome, ruolo (P/D/C/A), squadra
   Serie A, `quotazione`. Il campo `status` (titolare | dubbio | ballottaggio |
@@ -54,6 +55,14 @@ coperte: vanno aggiunte a quella skill quando esisterà l'importer.
   diffidato), nota, data. Riscritto a ogni giro: vale la presenza, come per gli
   infortuni.
 - `market_log.json` — log di mercato/scambi: supporta scambi misti (giocatore + crediti).
+- `lega_competizioni.json` — le competizioni della lega su leghe.fantacalcio.it e il loro
+  calendario testa-a-testa con i risultati (`import_calendario_lega.py`). Per ogni
+  competizione: id, nome, tipo, giornate di Serie A di inizio e fine, squadre (id di
+  `teams.json`), e per ogni giornata (`giornata` della competizione, `giornata_serie_a`,
+  `calcolata`) le partite con squadre, punteggi, punti in classifica e risultato. Il
+  27/09 c'era solo il campionato FANTACARBONARA (Serie A 6-38, 33 giornate, ogni
+  avversario 3 volte); Coppa Italia ed Europa League entreranno da sole. Una giornata
+  calcolata non si perde mai, come lo storico dei voti.
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
   casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
   Non contiene dati per giocatore (niente voto/gol/cartellini singoli): solo
@@ -154,6 +163,11 @@ se non scende in campo entra il primo della panchina: vedi
   personale). Chi entra in una rosa dopo il primo import è `da_verificare`: l'API non
   dice se è uno svincolato o uno scambio. `--verifica-csv` confronta con un export
   dell'asta.
+- `import_calendario_lega.py --league-id <id> [--dry-run]` — competizioni
+  (`/league/competitions`) e calendari (`/league/competition/calendar/<id>`) della lega in
+  `lega_competizioni.json`. Una giornata già calcolata non viene mai sostituita da una non
+  calcolata; una ricalcolata dalla lega viene aggiornata e segnalata; competizioni e
+  giornate sparite dall'API restano in archivio. Non esiste un endpoint della classifica.
 - `import_calendario_seriea.py --season <anno> [--status ...]` — importa calendario
   e risultati Serie A da BigBalls Sports Data API (bigballsdata.com) in
   `data/calendario_serie_a.json`. Fonte verificata in questa sessione: copre Serie A
@@ -229,6 +243,12 @@ se non scende in campo entra il primo della panchina: vedi
   dopo la partita (in ritardo di circa un giorno, e vuoto su tutte le partite
   future), note di piano nello spec non affidabili. Da leggere prima di toccare
   gli importer o di aggiungere endpoint.
+- `.docs/leghe-fc-api.md` — riferimento dell'API di leghe.fantacalcio.it verificato sulla
+  lega vera: autenticazione (i due jwt), campi di rose, competizioni e calendario, le
+  squadre vuote, i crediti `cri + bm`, lo svuotamento temporaneo delle rose durante le
+  modifiche dell'admin, cosa non esiste (classifica) e cosa resta da vedere alla prima
+  giornata calcolata (`teamLineup`, significato di `result`). Da leggere prima di toccare
+  gli importer della lega.
 - `.docs/difetti-consiglio-formazione.md` — revisione avversariale della catena
   `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
   di `main` e con le regole vere della lega: 8 difetti riprodotti con comando e
@@ -246,9 +266,9 @@ se non scende in campo entra il primo della panchina: vedi
   classifica. Bloccata su tre cose che non esistono ancora, non solo sul voto:
   1. il fantavoto calcolato con le regole della lega (oggi c'è quello standard di
      fantacalcio.it, vedi `import_voti.py`; quello della lega sta su leghe.fantacalcio.it);
-  2. il calendario testa-a-testa della lega fantacalcio (chi gioca contro chi
-     tra le 12 squadre ogni giornata — diverso dal calendario di Serie A,
-     generato da leghe.fantacalcio.it solo a stagione fantacalcio iniziata);
+  2. ~~il calendario testa-a-testa della lega~~: importato dal 27/09
+     (`lega_competizioni.json`), con i punteggi calcolati dalla lega a ogni giornata:
+     la classifica si ricava da lì (non c'è un endpoint);
   3. ~~`ownership.json` popolato~~: fatto il 27/09 dalla lega.
   Da riprendere quando tutti e tre esistono, non prima.
 

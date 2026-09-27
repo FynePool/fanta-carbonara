@@ -25,6 +25,10 @@ Verificato in questa sessione, end-to-end, con un account e una lega reali
   lega — non quelle generiche di un aggregatore esterno), `/onboarding/v1/
   league/competitions` (vuoto sulla lega di test, nessuna competizione
   configurata).
+
+Verificato il 27/09/2026 sulla lega vera (FantaCarbonaraXI): rose, competizioni e
+calendario (`/onboarding/v1/league/competition/calendar/<id>`). Riferimento completo,
+campi e magagne in `.docs/leghe-fc-api.md`.
 """
 import re
 

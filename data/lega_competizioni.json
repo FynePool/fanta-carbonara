@@ -1,0 +1,2237 @@
+[
+  {
+    "id": "858469",
+    "nome": "FANTACARBONARA",
+    "tipo": 1,
+    "eliminata": false,
+    "giornata_serie_a_inizio": 6,
+    "giornata_serie_a_fine": 38,
+    "squadre": [
+      "2742350",
+      "2743181",
+      "2744148",
+      "2747320",
+      "2771576",
+      "2777890",
+      "3883192",
+      "16303294",
+      "16303729",
+      "20598859",
+      "20598917",
+      "20599630"
+    ],
+    "calendario": [
+      {
+        "giornata": 1,
+        "giornata_serie_a": 6,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 2,
+        "giornata_serie_a": 7,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 3,
+        "giornata_serie_a": 8,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "16303294",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 4,
+        "giornata_serie_a": 9,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 5,
+        "giornata_serie_a": 10,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2742350",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 6,
+        "giornata_serie_a": 11,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 7,
+        "giornata_serie_a": 12,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2742350",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 8,
+        "giornata_serie_a": 13,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 9,
+        "giornata_serie_a": 14,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2742350",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 10,
+        "giornata_serie_a": 15,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 11,
+        "giornata_serie_a": 16,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 12,
+        "giornata_serie_a": 17,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2777890",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "3883192",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 13,
+        "giornata_serie_a": 18,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 14,
+        "giornata_serie_a": 19,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "3883192",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 15,
+        "giornata_serie_a": 20,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "16303294",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 16,
+        "giornata_serie_a": 21,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 17,
+        "giornata_serie_a": 22,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "16303729",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 18,
+        "giornata_serie_a": 23,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20599630",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "3883192",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 19,
+        "giornata_serie_a": 24,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2743181",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 20,
+        "giornata_serie_a": 25,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "3883192",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 21,
+        "giornata_serie_a": 26,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2747320",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "3883192",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 22,
+        "giornata_serie_a": 27,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2777890",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 23,
+        "giornata_serie_a": 28,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 24,
+        "giornata_serie_a": 29,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 25,
+        "giornata_serie_a": 30,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "16303294",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 26,
+        "giornata_serie_a": 31,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 27,
+        "giornata_serie_a": 32,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2742350",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 28,
+        "giornata_serie_a": 33,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 29,
+        "giornata_serie_a": 34,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2742350",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 30,
+        "giornata_serie_a": 35,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598859",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 31,
+        "giornata_serie_a": 36,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "2742350",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 32,
+        "giornata_serie_a": 37,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "20598859",
+            "trasferta": "2747320",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303294",
+            "trasferta": "2742350",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2744148",
+            "trasferta": "3883192",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "16303729",
+            "trasferta": "20598917",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2777890",
+            "trasferta": "20599630",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2743181",
+            "trasferta": "2771576",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      },
+      {
+        "giornata": 33,
+        "giornata_serie_a": 38,
+        "calcolata": false,
+        "partite": [
+          {
+            "casa": "3883192",
+            "trasferta": "2777890",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2742350",
+            "trasferta": "16303729",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2747320",
+            "trasferta": "16303294",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20599630",
+            "trasferta": "20598859",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "2771576",
+            "trasferta": "2744148",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          },
+          {
+            "casa": "20598917",
+            "trasferta": "2743181",
+            "punteggio_casa": 0.0,
+            "punteggio_trasferta": 0.0,
+            "punti_classifica_casa": 0,
+            "punti_classifica_trasferta": 0,
+            "risultato": "-",
+            "risultato_sr": ""
+          }
+        ]
+      }
+    ]
+  }
+]
