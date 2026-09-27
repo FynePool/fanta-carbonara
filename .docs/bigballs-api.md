@@ -125,8 +125,15 @@ Chiavi osservate: `goals`, `assists`, `yellow_cards`, `red_cards`, `fouls_commit
    (`substitute: false` con minuti) tra le righe abbinate, 68 squadre-partita su 100 ne
    hanno 11, 20 ne hanno di più (fino a 16: subentrati segnati come titolari) e 12 di
    meno (giocatori non abbinati). Rumore della fonte, non corretto.
-5. **Rigori quasi assenti**: `penalty_scored`/`penalty_missed` danno 5 rigori calciati in
-   50 partite (27/09). Il rigorista non si ricava da qui.
+5. ~~**Rigori quasi assenti**~~ — **smentito il 27/09 sera, non era una magagna.**
+   `penalty_scored`/`penalty_missed` danno 5 rigori calciati in 50 partite, e sembravano
+   troppo pochi. Verificato contro fantacalcio.it (pagina "Statistiche Serie A" della
+   stagione in corso, la fonte dei voti della lega): **anche lì sono 5**, e sono gli stessi
+   cinque giocatori (Maldini, Colombo, Zaccagni, Varela G., Yeboah J.). Nelle prime 5
+   giornate del 2026-27 ci sono stati davvero solo 5 rigori. Quindi su questo campo
+   BigBalls è completo, e i rigori realizzati **si possono** togliere dal fantavoto se
+   serve. Resta vero che il **rigorista designato** non si ricava da qui: chi non ha ancora
+   avuto un rigore da tirare non lascia traccia (vedi `scripts/rigoristi.py`).
 
 ### `GET /v1/matches/{id}/events` — timeline eventi
 

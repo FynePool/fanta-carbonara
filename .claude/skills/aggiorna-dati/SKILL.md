@@ -117,8 +117,10 @@ fallito.
    disponibile in questo giro, salta il passo e scrivilo in cima al riepilogo.
 8. **Rigoristi** (chi calcia i rigori: vale circa +0,26 di fantavoto atteso a partita
    per il primo rigorista, ed è informazione che i voti non contengono se non ha ancora
-   calciato). Controlla che il consenso salvato sia coerente con le liste:
+   calciato). Prima i **rigori ufficiali** di questa stagione, che sono il solo dato vero
+   su chi li calcia adesso, poi il consenso delle fonti:
    ```
+   python3 scripts/import_storico_stagioni.py --stagioni 2026-27 --corrente
    python3 scripts/rigoristi.py valida
    ```
    Se dice che non è aggiornato, lancia `python3 scripts/rigoristi.py calcola`.
@@ -130,6 +132,9 @@ fallito.
    indipendenti, nomi come li scrive la fonte, in ordine di gerarchia) e poi `calcola`.
    Guarda sempre l'output di `calcola`: i nomi che non si abbinano al listone vengono
    elencati e non entrano, e un abbinamento su un portiere è quasi sempre sbagliato.
+   **Guarda in particolare le contraddizioni**: se un giocatore ha calciato rigori
+   quest'anno ma le fonti non lo danno primo, il dato ufficiale batte l'opinione e le liste
+   sono da rileggere. Il 27/09 succedeva per 3 dei 5 rigoristi confermati.
 9. **Quota API rimasta**, per il riepilogo:
    ```
    curl -sS https://api.bigballsdata.com/v1/usage -H "x-api-key: $BIGBALLS_API_KEY"

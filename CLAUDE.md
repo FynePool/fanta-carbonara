@@ -65,8 +65,12 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   27/09 c'era solo il campionato FANTACARBONARA (Serie A 6-38, 33 giornate, ogni
   avversario 3 volte); Coppa Italia ed Europa League entreranno da sole. Una giornata
   calcolata non si perde mai, come lo storico dei voti.
-- `storico_stagioni.json` — le stagioni passate in Serie A di tutti i giocatori (oggi
-  2025-26 e 2024-25), da fantacalcio.it (`import_storico_stagioni.py`): per stagione e
+- `storico_stagioni.json` — in `stagioni`, le stagioni **passate** in Serie A di tutti i
+  giocatori (oggi 2025-26 e 2024-25); in `stagione_in_corso`, la stagione corrente, tenuta
+  **fuori** da `stagioni` di proposito perché chi legge quel dizionario prende la più
+  recente come "la stagione scorsa" e ci finirebbe la stagione in corso, facendo guardare
+  il futuro al backtest. Serve ai **rigori ufficiali di quest'anno** (`rigoristi.py`). Da
+  fantacalcio.it (`import_storico_stagioni.py`): per stagione e
   per id del listone, squadra, partite con voto, media voto, fantamedia, gol, gol
   subiti, rigori segnati/calciati/parati, assist, cartellini. Chi quella stagione non
   era in Serie A non c'è (5 dei miei 25 il 27/09). Contesto per il consiglio: **non**
@@ -88,10 +92,17 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   Chi aggiorna i dati tocca solo `fonti`, poi lancia `rigoristi.py calcola`.
   Il primo rigorista vale circa **+0,26 di fantavoto atteso a partita** (0,139 rigori per
   squadra a partita nella stagione scorsa × 1,90 per rigore); il secondo vale +0,03 e non
-  conta. **Non entra nel punteggio del modello** per non contarlo due volte: la media
-  degli ultimi voti contiene già i rigori davvero calciati, e non si possono togliere
-  perché il box score BigBalls ne ha 5 su 50 partite. Serve come **spareggio** fra due
-  giocatori equivalenti e viene mostrato nel report.
+  conta. Ogni voce porta anche `rigori_stagione` (i rigori **davvero calciati quest'anno**,
+  dato ufficiale di fantacalcio.it da `stagione_in_corso` in `storico_stagioni.json`) e
+  `conferma`: `confermato` se ne ha calciato almeno uno, `supposizione` se lo dicono solo i
+  giornali. **Non entra nel punteggio del modello**, e la ragione principale è che le
+  gerarchie sbagliano: dei 5 rigori del 2026-27 — i soli 5 casi in cui la realtà ha messo
+  alla prova le liste — **3 le hanno smentite** (Varela G. dato 2º, Maldini e Yeboah J.
+  dati 3º hanno calciato loro). C'è anche il doppio conteggio su chi ha già calciato (la
+  media di Zaccagni porta già +0,6 dal suo rigore). **Zero rigori non smentisce nessuno**:
+  dopo 5 giornate una squadra ne ha avuti in media 0,7, quindi quasi nessun rigorista
+  designato ne ha ancora avuto uno da tirare. Serve come **spareggio** fra due giocatori
+  equivalenti, con pesi diversi per `confermato` e `supposizione`, e si vede nel report.
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
   casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
   Non contiene dati per giocatore (niente voto/gol/cartellini singoli): solo
@@ -262,6 +273,11 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   con l'id del listone). Le colonne sono controllate: se cambiano, o i giocatori sono
   meno di 400, non scrive niente. Stagioni finite, quindi si lancia una volta per
   stagione, non nel giro del mattino.
+  Con **`--corrente`** legge invece la stagione in corso e la scrive in
+  `stagione_in_corso`, **non** in `stagioni`: nella stagione corrente il link della scheda
+  non porta il suffisso della stagione (finisce con l'id), quindi serve un'altra regola —
+  il guardrail sulle colonne l'ha intercettato invece di scrivere dati sbagliati. Serve ai
+  rigori ufficiali di quest'anno, quindi **questo sì** va nel giro del mattino.
 - `notizie_rosa.py {squadre|valida}` — supporto alle notizie: `squadre` stampa le
   squadre dei miei giocatori con la prossima partita (cosa cercare), `valida` controlla
   `notizie_rosa.json` (campi, tipi, fonti, id) e toglie le notizie scadute (30 giorni,

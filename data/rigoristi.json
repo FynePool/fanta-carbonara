@@ -316,7 +316,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2137",
@@ -332,7 +337,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5995",
@@ -347,7 +357,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5119",
@@ -363,7 +378,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2167",
@@ -380,7 +400,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd184",
@@ -397,7 +422,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6675",
@@ -414,7 +444,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd4210",
@@ -429,7 +464,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7547",
@@ -444,7 +484,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5336",
@@ -459,7 +504,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6010",
@@ -474,7 +524,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd4896",
@@ -490,7 +545,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 1,
+        "calciati": 1
+      },
+      "conferma": "confermato"
     },
     {
       "player_id": "fd5559",
@@ -507,7 +567,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2097",
@@ -523,7 +588,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7017",
@@ -540,7 +610,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6875",
@@ -556,7 +631,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5694",
@@ -572,7 +652,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7078",
@@ -589,7 +674,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7625",
@@ -605,7 +695,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7023",
@@ -621,7 +716,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6908",
@@ -636,7 +736,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7472",
@@ -653,7 +758,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7551",
@@ -670,7 +780,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7612",
@@ -686,7 +801,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7550",
@@ -701,7 +821,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd4923",
@@ -718,7 +843,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 1
+      },
+      "conferma": "confermato"
     },
     {
       "player_id": "fd6164",
@@ -734,7 +864,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5823",
@@ -749,7 +884,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd4970",
@@ -764,7 +904,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5750",
@@ -780,7 +925,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2194",
@@ -797,7 +947,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd152",
@@ -814,7 +969,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2764",
@@ -831,7 +991,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5951",
@@ -848,7 +1013,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd827",
@@ -864,7 +1034,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6752",
@@ -880,7 +1055,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6434",
@@ -896,7 +1076,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd632",
@@ -913,7 +1098,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 1,
+        "calciati": 1
+      },
+      "conferma": "confermato"
     },
     {
       "player_id": "fd5800",
@@ -930,7 +1120,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2038",
@@ -946,7 +1141,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd333",
@@ -962,7 +1162,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5029",
@@ -979,7 +1184,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7252",
@@ -996,7 +1206,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6015",
@@ -1012,7 +1227,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6549",
@@ -1027,7 +1247,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6397",
@@ -1044,7 +1269,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2423",
@@ -1061,7 +1291,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2606",
@@ -1078,7 +1313,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2741",
@@ -1094,7 +1334,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": true,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2155",
@@ -1109,7 +1354,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7523",
@@ -1124,7 +1374,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 1,
+        "calciati": 1
+      },
+      "conferma": "confermato"
     },
     {
       "player_id": "fd2517",
@@ -1140,7 +1395,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": true,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6052",
@@ -1156,7 +1416,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd4777",
@@ -1171,7 +1436,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd536",
@@ -1186,7 +1456,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6229",
@@ -1203,7 +1478,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7342",
@@ -1218,7 +1498,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6666",
@@ -1234,7 +1519,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 1,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5862",
@@ -1250,7 +1540,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5585",
@@ -1266,7 +1561,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": true,
       "fonti_che_lo_danno_primo": 2,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd309",
@@ -1282,7 +1582,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6572",
@@ -1297,7 +1602,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd530",
@@ -1312,7 +1622,12 @@
       "fonti_totali_sulla_squadra": 2,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd531",
@@ -1329,7 +1644,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd4463",
@@ -1345,7 +1665,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6060",
@@ -1362,7 +1687,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5687",
@@ -1379,7 +1709,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7349",
@@ -1394,7 +1729,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd1933",
@@ -1410,7 +1750,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2169",
@@ -1425,7 +1770,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2061",
@@ -1441,7 +1791,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6218",
@@ -1456,7 +1811,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5637",
@@ -1473,7 +1833,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2404",
@@ -1488,7 +1853,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6956",
@@ -1505,7 +1875,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd2766",
@@ -1521,7 +1896,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd5507",
@@ -1538,7 +1918,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 3,
-      "consenso_sul_primo": true
+      "consenso_sul_primo": true,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd7484",
@@ -1555,7 +1940,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     },
     {
       "player_id": "fd6904",
@@ -1572,7 +1962,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": true,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 1
+      },
+      "conferma": "confermato"
     },
     {
       "player_id": "fd4387",
@@ -1587,7 +1982,12 @@
       "fonti_totali_sulla_squadra": 3,
       "verificata": false,
       "fonti_che_lo_danno_primo": 0,
-      "consenso_sul_primo": false
+      "consenso_sul_primo": false,
+      "rigori_stagione": {
+        "segnati": 0,
+        "calciati": 0
+      },
+      "conferma": "supposizione"
     }
   ],
   "rigori_per_partita": 0.1395,

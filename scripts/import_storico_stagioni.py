@@ -60,6 +60,10 @@ COLONNE = ["sq", "pg", "mv", "mfv", "gol", "gs", "rig", "rp", "ass", "amm", "esp
 MINIMO_GIOCATORI = 400
 STAGIONE_RE = re.compile(r"^\d{4}-\d{2}$")
 LINK_RE = re.compile(r"/(\d+)/(\d{4}-\d{2})/?$")
+# Nella stagione IN CORSO il link della scheda non ha il suffisso della stagione: finisce
+# con l'id (verificato il 27/09/2026: /serie-a/squadre/roma/malen/5585). Le colonne sono
+# le stesse delle stagioni finite.
+LINK_CORRENTE_RE = re.compile(r"/(\d+)/?$")
 RIGORI_RE = re.compile(r"^(\d+)\s*/\s*(\d+)$")
 
 
@@ -72,14 +76,22 @@ def _intero(testo: str) -> int:
     return int(testo.strip() or 0)
 
 
-def leggi(html: str, stagione: str) -> tuple[dict, list[str]]:
-    """Ritorna (giocatori per id, anomalie). Con anomalie non si scrive niente."""
+def leggi(html: str, stagione: str, corrente: bool = False) -> tuple[dict, list[str]]:
+    """Ritorna (giocatori per id, anomalie). Con anomalie non si scrive niente.
+
+    `corrente` per la stagione in corso, i cui link non portano la stagione."""
     soup = BeautifulSoup(html, "html.parser")
     giocatori, anomalie = {}, []
     for tr in soup.select("tr.player-row"):
         link = tr.select_one("a.player-name")
-        m = LINK_RE.search(link["href"].strip()) if link and link.get("href") else None
-        if not m or m.group(2) != stagione:
+        href = link["href"].strip() if link and link.get("href") else ""
+        if corrente:
+            m = LINK_CORRENTE_RE.search(href)
+            stagione_del_link = stagione if m else None
+        else:
+            m = LINK_RE.search(href)
+            stagione_del_link = m.group(2) if m else None
+        if not m or stagione_del_link != stagione:
             anomalie.append(f"riga senza link alla scheda della stagione {stagione}: {tr.get('data-filter-keywords')}")
             continue
         celle = tr.select("td[data-col-key]")
@@ -119,7 +131,17 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--stagioni", nargs="+", default=["2025-26", "2024-25"])
     parser.add_argument("--html", help="pagina già scaricata (una sola stagione)")
+    parser.add_argument(
+        "--corrente", action="store_true",
+        help=("la stagione è quella IN CORSO: si scrive in `stagione_in_corso`, non in "
+              "`stagioni`. Serve ai rigori ufficiali di quest'anno (scripts/rigoristi.py). "
+              "NON va in `stagioni` perché chi legge quel dizionario prende la stagione più "
+              "recente come 'quella scorsa': ci finirebbe la stagione in corso e il backtest "
+              "guarderebbe il futuro."),
+    )
     args = parser.parse_args()
+    if args.corrente and len(args.stagioni) != 1:
+        parser.error("--corrente vale per una stagione sola")
     if args.html and len(args.stagioni) != 1:
         parser.error("--html vale per una stagione sola")
 
@@ -141,7 +163,7 @@ def main() -> int:
                 errori += 1
                 continue
             html = resp.text
-        giocatori, anomalie = leggi(html, stagione)
+        giocatori, anomalie = leggi(html, stagione, corrente=args.corrente)
         if anomalie:
             print(f"{stagione}: struttura della pagina diversa da quella attesa, niente di scritto:")
             for a in anomalie[:10]:
@@ -150,11 +172,22 @@ def main() -> int:
                 print(f"  ... e altre {len(anomalie) - 10}")
             errori += 1
             continue
-        archivio["stagioni"][stagione] = {
+        voce = {
             "fonte": url,
             "letto_il": date.today().isoformat(),
             "giocatori": dict(sorted(giocatori.items())),
         }
+        if args.corrente:
+            voce["stagione"] = stagione
+            voce["_note"] = (
+                "Stagione IN CORSO: i numeri crescono a ogni giornata. Sta fuori da "
+                "`stagioni` di proposito, perché chi legge quel dizionario prende la "
+                "stagione più recente come 'quella scorsa'. La legge scripts/rigoristi.py "
+                "per i rigori ufficiali di quest'anno."
+            )
+            archivio["stagione_in_corso"] = voce
+        else:
+            archivio["stagioni"][stagione] = voce
         scritte += 1
         nel_listone = sum(1 for pid in giocatori if pid in listone)
         print(f"{stagione}: {len(giocatori)} giocatori, di cui {nel_listone} nel listone di oggi "

@@ -112,6 +112,35 @@ def abbina(nome_fonte: str, squadra: str, per_squadra: dict) -> tuple[dict | Non
     return None, f"omonimi ambigui ({nomi})"
 
 
+def rigori_ufficiali_stagione() -> tuple[dict, str | None]:
+    """(player_id -> {segnati, calciati} in QUESTA stagione, etichetta della stagione).
+
+    E' il solo dato **ufficiale** su chi calcia i rigori adesso, da fantacalcio.it
+    (`stagione_in_corso` in storico_stagioni.json, scritto da
+    `import_storico_stagioni.py --corrente`). Un rigorista dell'anno scorso puo' non
+    esserlo piu': ha cambiato squadra, o sono cambiati i compagni.
+
+    ATTENZIONE a cosa NON dice. Nelle prime 5 giornate del 2026-27 ci sono stati **5
+    rigori in tutto il campionato**. Con circa 0,14 rigori per squadra a partita, dopo 5
+    giornate una squadra ne ha avuti in media 0,7: quindi la quasi totalita' dei rigoristi
+    designati ne ha calciati **zero**. Questo dato **conferma** un rigorista, non lo
+    **esclude**: zero rigori non e' una smentita, e' assenza di occasioni."""
+    path = store.DATA_DIR / "storico_stagioni.json"
+    if not path.exists():
+        return {}, None
+    corrente = store.load_json(path).get("stagione_in_corso")
+    if not corrente:
+        return {}, None
+    return (
+        {
+            pid: {"segnati": d["rigori_segnati"], "calciati": d["rigori_calciati"]}
+            for pid, d in corrente["giocatori"].items()
+            if d.get("rigori_calciati")
+        },
+        corrente.get("stagione"),
+    )
+
+
 def rigori_per_partita() -> float | None:
     """Rigori calciati per squadra per partita, dalla stagione piu' recente finita."""
     path = store.DATA_DIR / "storico_stagioni.json"
@@ -152,6 +181,7 @@ def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
                     )
                 posizioni[(squadra, p["id"])][fonte] = rango
 
+    ufficiali, stagione_corrente = rigori_ufficiali_stagione()
     per_id = {p["id"]: p for p in players}
     fonti_per_squadra = {
         sq: sum(1 for d in doc["fonti"].values() if sq in d["liste"]) for sq in per_squadra
@@ -178,8 +208,49 @@ def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
             "fonti_che_lo_danno_primo": primo,
             # e' questo che conta per il valore: il primo rigorista
             "consenso_sul_primo": primo >= 2,
+            # il solo dato ufficiale: quanti rigori ha calciato DAVVERO quest'anno
+            "rigori_stagione": ufficiali.get(pid, {"segnati": 0, "calciati": 0}),
+            # "confermato" = ne ha calciato almeno uno quest'anno, quindi non e' una
+            # supposizione. "supposizione" = solo pareri di giornali: zero rigori non
+            # smentisce niente, dopo 5 giornate quasi nessuno ne ha avuti.
+            "conferma": "confermato" if pid in ufficiali else "supposizione",
         })
-    out.sort(key=lambda x: (x["squadra"], x["rango"], x["nome"]))
+    # Chi ha calciato un rigore quest'anno ma nessuna fonte lo cita: e' il caso piu'
+    # importante di tutti, perche' il dato ufficiale batte l'opinione.
+    citati = {pid for (_sq, pid) in posizioni}
+    for pid, r in ufficiali.items():
+        if pid in citati or pid not in per_id:
+            continue
+        p = per_id[pid]
+        out.append({
+            "player_id": pid,
+            "nome": p["name"],
+            "squadra": p["serie_a_team"],
+            "ruolo": p["role"],
+            "rango": None,
+            "rango_per_fonte": {},
+            "fonti_che_lo_citano": 0,
+            "fonti_totali_sulla_squadra": fonti_per_squadra.get(p["serie_a_team"], 0),
+            "fonti_che_lo_danno_primo": 0,
+            "verificata": False,
+            "consenso_sul_primo": False,
+            "rigori_stagione": r,
+            "conferma": "confermato",
+        })
+        problemi.append(
+            f"{p['name']} ({p['serie_a_team']}) ha calciato {r['calciati']} rigori in "
+            f"{stagione_corrente} ma NESSUNA fonte lo mette in gerarchia: il dato ufficiale "
+            "batte l'opinione, guarda se le liste sono vecchie"
+        )
+    # contraddizioni: chi ha calciato quest'anno e non e' il primo secondo le fonti
+    for r in out:
+        if r["rigori_stagione"]["calciati"] and r["fonti_che_lo_citano"] and not r["consenso_sul_primo"]:
+            problemi.append(
+                f"{r['nome']} ({r['squadra']}) ha calciato "
+                f"{r['rigori_stagione']['calciati']} rigori in {stagione_corrente} ma le "
+                f"fonti lo danno {r['rango']}º: il dato ufficiale contraddice il consenso"
+            )
+    out.sort(key=lambda x: (x["squadra"], x["rango"] if x["rango"] is not None else 99, x["nome"]))
     return out, problemi
 
 
@@ -244,9 +315,21 @@ def main():
         print(f"\nDA GUARDARE ({len(problemi)}):")
         for x in problemi:
             print(f"  - {x}")
+    ufficiali, stagione_corrente = rigori_ufficiali_stagione()
+    confermati = [r for r in nuovi if r["conferma"] == "confermato"]
+    print(f"\nDato UFFICIALE {stagione_corrente or '(assente)'}: "
+          f"{sum(v['calciati'] for v in ufficiali.values())} rigori calciati in tutto il "
+          f"campionato, da {len(ufficiali)} giocatori.")
+    if confermati:
+        for r in confermati:
+            print(f"  confermato: {r['nome']} ({r['squadra']}) "
+                  f"{r['rigori_stagione']['segnati']}/{r['rigori_stagione']['calciati']}")
+    print("  Tutti gli altri sono SUPPOSIZIONI (pareri di giornali). Zero rigori non smentisce")
+    print("  nessuno: con circa 0,14 rigori per squadra a partita, dopo 5 giornate la quasi")
+    print("  totalita' dei rigoristi designati non ne ha ancora calciato uno.")
     rpp = rigori_per_partita()
     if rpp:
-        print(f"\nRigori per squadra a partita (stagione scorsa): {rpp:.3f} "
+        print(f"\nRigori per squadra a partita (stagione scorsa, 380 partite): {rpp:.3f} "
               f"-> il primo rigorista vale +{rpp * VALORE_RIGORE:.2f} di fantavoto atteso.")
 
     if args.comando == "valida":
