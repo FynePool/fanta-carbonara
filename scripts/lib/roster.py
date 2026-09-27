@@ -1,4 +1,5 @@
 from collections import Counter, defaultdict
+from itertools import combinations
 from datetime import date, datetime, timezone
 from statistics import mean
 
@@ -11,16 +12,26 @@ ROLES = ["P", "D", "C", "A"]
 STATUS_VECCHIO_GIORNI = 4
 
 # Il valore di un giocatore è quello che ci si aspetta dal suo fantavoto nella prossima
-# partita, *se prende voto* (con i cambi illimitati è il criterio giusto per ordinare:
-# vedi .docs/difetti-consiglio-formazione.md). È fatto di tre pezzi, ognuno verificato
-# con scripts/backtest_formazione.py (prevedere la giornata N con i dati fino a N-1):
-#   base      media degli ultimi voti, frenata verso la media del ruolo;
-#   produzione nei voti della base, i gol su azione sostituiti da quelli attesi dai tiri
-#              in porta (chi tira tanto e non segna sale, chi segna con un tiro scende);
+# partita, *se prende voto*. Dentro un ruolo è il criterio giusto per ordinare, e la
+# probabilità di giocare non c'entra: se il titolare non scende in campo entra il primo
+# della panchina di quel ruolo, e scambiando due giocatori vicini la differenza vale
+# P(A)·P(B)·(valore A − valore B). Vedi .docs/difetti-consiglio-formazione.md.
+# ATTENZIONE: questo vale per l'ORDINE dentro un ruolo. NON vale per scegliere *chi* mettere
+# in panchina né per scegliere il modulo: la panchina ha 7 posti a quota fissa per ruolo
+# (1 P, 2 D, 2 C, 2 A) e se finiscono le riserve di un ruolo lo slot vale 0. Lì la
+# probabilità di prendere voto conta, e ci pensano _scegli_panchina e _slot_attesi.
+# Sul modulo è stata provata e scartata perché perde punti: vedi suggest_lineup.
+# Il valore è fatto di due pezzi, verificati con scripts/backtest_undici.py (punti veri
+# della formazione, non MAE sul singolo voto):
+#   base      media degli ultimi voti, frenata verso la media del ruolo. È qui che stanno
+#             i punti: il motore vale +3,25 [+1,31, +5,21] punti a giornata sull'ordine
+#             d'acquisto, misurato su 36 formazioni con backtest_undici.py.
 #   contesto  quanto subisce l'avversario della prossima partita.
-# Provati e scartati perché non migliorano le previsioni (numeri nel doc): l'a priori
-# dalla quotazione iniziale al posto della media del ruolo, il valore separato da
-# titolare e da subentrato, il fattore campo, il freno stimato ruolo per ruolo.
+# Provati e scartati perché non guadagnano punti (numeri in
+# .docs/analisi-valutazione-formazione.md): l'a priori dalla quotazione iniziale e dalla
+# fantamedia della stagione scorsa al posto della media del ruolo, il valore separato da
+# titolare e da subentrato, il fattore campo, il freno stimato ruolo per ruolo, e la
+# correzione per la produzione (vedi PRODUZIONE_PREDEFINITA).
 
 # Forma recente: si guardano gli ultimi N voti presi, non le ultime N giornate.
 FORMA_ULTIMI_VOTI = 5
@@ -44,6 +55,31 @@ CONTESTO_FRENO_PARTITE = 5
 # giornate 3-5, con distacchi sotto 0,20 l'ordine previsto indovina chi fa di più il
 # 52-55% delle volte, quasi una moneta (0,20-0,30: 60%; sopra 0,50: 69-70%).
 SOGLIA_PARI = 0.20
+# La correzione per la produzione (sostituire i gol su azione con quelli attesi dai tiri
+# in porta) è SPENTA dal 27/09. La decisione NON si appoggia a un risultato significativo:
+# nel backtest in punti riaccenderla vale +0,07 [−0,79, +1,06], cioè il test non distingue.
+# Si appoggia a tre cose insieme:
+#  1. tre misure indipendenti (panchina illimitata, panchina vera, e con la soglia sui tiri)
+#     danno tutte un punto stimato a favore dello spegnerla, nessuna a favore del contrario;
+#  2. il meccanismo: in 5 giornate i tiri in porta accumulati sono in mediana 0 per i
+#     difensori, 1 per i centrocampisti, 2 per gli attaccanti. Da 1-2 tiri i gol attesi sono
+#     rumore, e la correzione assume anche che nessun giocatore sia più bravo a segnare degli
+#     altri del suo ruolo;
+#  3. produceva i numeri più grossi del report (+0,62 su Zaccagni, −0,64 su Frattesi che
+#     aveva segnato 3 gol), con due decimali, a un utente che non può giudicarli: falsa
+#     precisione, che costa fiducia anche quando non costa punti.
+# Il parametro `produzione` resta: `backtest_undici.py` lo riprova a ogni giro, e si
+# riaccende solo se con più giornate guadagna punti con l'intervallo che esclude lo zero.
+PRODUZIONE_PREDEFINITA = False
+# Probabilità di prendere voto usata quando `prob_titolare` manca: non si inventa un
+# numero per giocatore, si usa una quota neutra solo per confrontare le panchine fra loro.
+PROB_VOTO_IGNOTA = 50.0
+# Un panchinaro sotto questa probabilità di giocare è quasi uno slot di panchina buttato:
+# la panchina ha 1-2 posti per ruolo, e il report lo segnala.
+PROB_RISERVA_INUTILE = 25.0
+# Sotto questa probabilità di riempire tutti gli slot di un ruolo, il report avvisa: se le
+# riserve di quel ruolo non prendono voto lo slot vale 0, cioè circa 6 punti persi.
+SOGLIA_AVVISO_COPERTURA = 0.97
 
 # Role counts per module, excluding the goalkeeper (always 1).
 MODULE_ROLE_COUNTS = {
@@ -94,7 +130,7 @@ def costruisci_modello(
     players_by_id: dict,
     calendario: list[dict],
     prima_di_giornata: int | None = None,
-    produzione: bool = True,
+    produzione: bool = PRODUZIONE_PREDEFINITA,
     contesto: bool = True,
     freno: float = FRENO_VOTI,
     peso_produzione: float = 1.0,
@@ -275,11 +311,60 @@ def prossimo_turno(adesso: datetime | None = None) -> dict:
     }
 
 
+def prossima_partita_lega(team_id: str) -> dict | None:
+    """La prossima partita della lega fantacalcio (`data/lega_competizioni.json`), cioè il
+    primo turno non ancora calcolato in cui la squadra gioca, con l'avversario e come sta
+    andando. Nel fantacalcio non si massimizza il punteggio: si vince o si perde una
+    partita, e i punti diventano gol a scatti. Sapere chi si affronta serve a capire se una
+    decisione cambia il risultato. Ritorna None se il calendario non c'è.
+
+    Non esiste un endpoint della classifica: i punti fatti si sommano dalle giornate già
+    calcolate (vedi .docs/leghe-fc-api.md)."""
+    path = store.DATA_DIR / "lega_competizioni.json"
+    if not path.exists():
+        return None
+    nomi = {t["id"]: t["name"] for t in store.load_json(store.DATA_DIR / "teams.json")}
+    for comp in store.load_json(path):
+        if comp.get("eliminata"):
+            continue
+        fatti = defaultdict(lambda: {"punti": 0.0, "giocate": 0, "vinte": 0, "classifica": 0})
+        prossima = None
+        for giornata in comp.get("calendario", []):
+            for partita in giornata.get("partite", []):
+                if not giornata.get("calcolata"):
+                    if prossima is None and team_id in (partita["casa"], partita["trasferta"]):
+                        casa = partita["casa"] == team_id
+                        prossima = {
+                            "competizione": comp["nome"],
+                            "giornata": giornata["giornata"],
+                            "giornata_serie_a": giornata["giornata_serie_a"],
+                            "casa": casa,
+                            "avversario_id": partita["trasferta"] if casa else partita["casa"],
+                        }
+                    continue
+                for chi, punti, cl in (
+                    (partita["casa"], partita["punteggio_casa"], partita["punti_classifica_casa"]),
+                    (partita["trasferta"], partita["punteggio_trasferta"], partita["punti_classifica_trasferta"]),
+                ):
+                    d = fatti[chi]
+                    d["punti"] += punti
+                    d["giocate"] += 1
+                    d["classifica"] += cl
+        if prossima:
+            avv, mio = fatti[prossima["avversario_id"]], fatti[team_id]
+            prossima["avversario_nome"] = nomi.get(prossima["avversario_id"], prossima["avversario_id"])
+            prossima["avversario"] = dict(avv)
+            prossima["mio"] = dict(mio)
+            return prossima
+    return None
+
+
 def _role_order(entries: list[dict]) -> list[dict]:
-    """Con sostituzioni illimitate nello stesso ruolo conviene mettere avanti chi ha
-    la media più alta quando gioca, qualunque sia la probabilità che giochi: se non
-    scende in campo entra il successivo. La probabilità non entra nell'ordine.
-    Chi non ha voti va in fondo, ordinato per probabilità di giocare."""
+    """Dentro un ruolo conviene mettere avanti chi vale di più quando prende voto, qualunque
+    sia la probabilità che giochi: se non scende in campo entra il successivo dello stesso
+    ruolo. La probabilità non entra nell'ordine (entra in _scegli_panchina, che decide chi
+    occupa i pochi posti in panchina). Chi non ha voti va in fondo, ordinato per
+    probabilità di giocare."""
     con_voti = sorted((e for e in entries if e["rating"]), key=lambda e: -e["rating"]["punteggio"])
     senza_voti = sorted(
         (e for e in entries if not e["rating"]),
@@ -288,11 +373,127 @@ def _role_order(entries: list[dict]) -> list[dict]:
     return con_voti + senza_voti
 
 
+def prob_voto(entry: dict) -> float:
+    """Probabilità (0-1) che il giocatore prenda voto nella prossima giornata.
+
+    È `prob_titolare` di fantacalcio.it, cioè la probabilità di **partire titolare**. Per
+    chi non è portiere è quindi un *pavimento*: un panchinaro che entra a partita in corso
+    prende voto comunque (129 voti presi con meno di 25 minuti nelle giornate 1-5, minimo
+    2 minuti). Usarla così rende gli avvisi di copertura prudenti — avvisano un po' troppo,
+    mai troppo poco — e non inventa nessun numero. Da quando esistono insieme le probabili
+    (dal 21/09) e le giornate giocate (dalla 6) la probabilità di prendere voto partendo
+    dalla panchina diventa misurabile: allora si potrà smettere di approssimarla.
+    Chi non ha il dato prende PROB_VOTO_IGNOTA, che serve solo a confrontare fra loro i
+    candidati alla panchina, non a stimare niente su di lui."""
+    p = entry["player"].get("prob_titolare")
+    if p is None:
+        p = PROB_VOTO_IGNOTA
+    return min(100.0, max(0.0, float(p))) / 100.0
+
+
+def _slot_attesi(candidati: list[dict], n: int, prob=None) -> tuple[float, float]:
+    """(valore atteso degli n slot, probabilità che siano tutti coperti).
+
+    `candidati` sono i titolari del ruolo seguiti dalle sue riserve, nell'ordine in cui la
+    lega li scorre. Regola della lega: per ogni titolare senza voto entra il primo
+    panchinaro **dello stesso ruolo** che ha preso voto; se le riserve del ruolo finiscono,
+    lo slot resta scoperto e vale 0.
+
+    Due portieri della stessa squadra di Serie A non possono partire titolari insieme: ne
+    gioca esattamente uno. Trattarli come indipendenti sottostima la copertura (con
+    Martinez 90% e Provedel 5% dell'Inter darebbe 90,5% invece di 95%), e farebbe
+    consigliare di cambiare una riserva che invece è quella giusta. Quindi i portieri della
+    stessa squadra formano un gruppo a scelta unica: gioca il primo, o il secondo, o nessuno
+    dei miei. Per i giocatori di movimento non vale — tre centrocampisti della stessa
+    squadra possono partire tutti e tre — e restano indipendenti.
+
+    `prob` permette di passare un altro stimatore della probabilità di prendere voto: lo usa
+    `backtest_undici.py`, che non può usare `prob_titolare` (fantacalcio.it la pubblica solo
+    dal 21/09, dopo le giornate che il backtest deve prevedere) e la stima dalle giornate
+    precedenti. Così il backtest collauda queste funzioni, non una loro copia.
+
+    Enumerazione esatta: i candidati di un ruolo sono al massimo 7 (5 titolari + 2 riserve).
+    """
+    prob = prob or prob_voto
+    # gruppi a scelta unica (portieri della stessa squadra) e giocatori indipendenti
+    gruppi: list[list[int]] = []
+    per_squadra: dict[str, int] = {}
+    for i, e in enumerate(candidati):
+        if e["player"]["role"] == "P":
+            squadra = e["player"]["serie_a_team"]
+            if squadra in per_squadra:
+                gruppi[per_squadra[squadra]].append(i)
+                continue
+            per_squadra[squadra] = len(gruppi)
+        gruppi.append([i])
+
+    dati = [(_valore(e) or 0.0, prob(e)) for e in candidati]
+
+    def casi(k: int):
+        """(probabilità, insieme degli indici che prendono voto) per ogni combinazione."""
+        if k == len(gruppi):
+            yield 1.0, ()
+            return
+        gruppo = gruppi[k]
+        for prob_resto, indici in casi(k + 1):
+            if len(gruppo) == 1:
+                i = gruppo[0]
+                yield prob_resto * dati[i][1], (i,) + indici
+                yield prob_resto * (1.0 - dati[i][1]), indici
+            else:
+                totale = 0.0
+                for i in gruppo:  # ne gioca al massimo uno
+                    totale += dati[i][1]
+                    yield prob_resto * dati[i][1], (i,) + indici
+                yield prob_resto * max(0.0, 1.0 - totale), indici
+
+    valore, coperti = 0.0, 0.0
+    for probabilita, indici in casi(0):
+        if probabilita == 0.0:
+            continue
+        presi, somma = 0, 0.0
+        for i in range(len(dati)):   # si scorre nell'ordine di schieramento
+            if presi >= n:
+                break
+            if i in indici:
+                somma += dati[i][0]
+                presi += 1
+        valore += probabilita * somma
+        if presi >= n:
+            coperti += probabilita
+    return valore, coperti
+
+
+def _scegli_panchina(ordine: list[dict], n: int, posti: int, prob=None) -> tuple[list[dict], list[dict]]:
+    """(titolari, riserve) di un ruolo, dato l'ordine per valore e i posti in panchina.
+
+    I titolari sono i primi `n` per valore: dato l'insieme degli schierati, ordinare per
+    valore è ottimo e la probabilità non c'entra. Le **riserve** sono un'altra cosa: la
+    panchina ha 1-2 posti per ruolo, quindi un panchinaro che non gioca mai è un posto
+    buttato e uno slot che rischia di valere 0. Si prende la combinazione di `posti`
+    riserve che massimizza il valore atteso degli slot. Con 6-8 giocatori per ruolo sono
+    al massimo 21 combinazioni: si enumerano tutte."""
+    titolari, resto = ordine[:n], ordine[n:]
+    posti = min(posti, len(resto))
+    if posti <= 0:
+        return titolari, []
+    migliore_chiave, migliori_riserve = None, None
+    for combo in combinations(range(len(resto)), posti):
+        riserve = [resto[i] for i in combo]
+        valore, _ = _slot_attesi(titolari + riserve, n, prob)
+        # a pari valore atteso vince la combinazione col valore più alto in panchina:
+        # serve solo a rendere la scelta stabile fra giri
+        chiave = (valore, sum(_valore(e) or 0.0 for e in riserve))
+        if migliore_chiave is None or chiave > migliore_chiave:
+            migliore_chiave, migliori_riserve = chiave, riserve
+    return titolari, migliori_riserve
+
+
 def _valore(e: dict) -> float | None:
     return e["rating"]["punteggio"] if e["rating"] else None
 
 
-def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict) -> list[str]:
+def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict, riserve: dict) -> list[str]:
     """Le scelte che il modello non sa fare meglio di te: coppie entro SOGLIA_PARI al
     confine tra titolari e panchina, o tra i primi due cambi di un ruolo; moduli che
     valgono quasi quanto quello scelto; titolari con pochi dati."""
@@ -301,7 +502,7 @@ def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict) -> list[str]:
     for role, n in counts.items():
         ordine = [e for e in per_ruolo[role] if e["rating"] and not e["rating"].get("politico")]
         titolari = [e for e in per_ruolo[role][:n] if e in ordine]
-        panchina = [e for e in per_ruolo[role][n:] if e in ordine]
+        panchina = [e for e in riserve.get(role, []) if e in ordine]
         if titolari and panchina:
             ultimo, primo = titolari[-1], panchina[0]
             diff = round(_valore(ultimo) - _valore(primo), 2)
@@ -319,9 +520,9 @@ def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict) -> list[str]:
                     f"{panchina[1]['player']['name']} ({_valore(panchina[1]):.2f}), differenza {diff:.2f}."
                 )
 
-    scelto_chiave, scelti = per_modulo[modulo]
+    scelto_chiave, scelti = per_modulo[modulo][:2]
     ids_scelti = {e["player"]["id"] for e in scelti}
-    for altro, (chiave, titolari) in per_modulo.items():
+    for altro, (chiave, titolari, _r) in per_modulo.items():
         if altro == modulo or chiave[:2] != scelto_chiave[:2]:
             continue
         diff = round(chiave[2] - scelto_chiave[2], 2)
@@ -345,7 +546,11 @@ def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict) -> list[str]:
             deboli.append(f"solo {_n(r['n'], 'voto', 'voti')}: il valore è per {FRENO_VOTI / (r['n'] + FRENO_VOTI):.0%} "
                           f"la media del ruolo")
         prod = r["produzione"]
-        if e["player"]["role"] != "P" and (prod is None or prod["voti_con_tiri"] < r["n"]):
+        # solo se la correzione per la produzione è accesa: spenta, i tiri mancanti non
+        # tolgono niente al valore e segnalarli sarebbe un avviso su un difetto inesistente
+        if PRODUZIONE_PREDEFINITA and e["player"]["role"] != "P" and (
+            prod is None or prod["voti_con_tiri"] < r["n"]
+        ):
             senza = r["n"] - (prod["voti_con_tiri"] if prod else 0)
             deboli.append(f"{senza} vot{'o' if senza == 1 else 'i'} su {r['n']} senza tiri da BigBalls, "
                           "correzione per la produzione solo sugli altri")
@@ -371,7 +576,19 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         store.load_json(calendario_path) if calendario_path.exists() else [],
     )
 
+    panchina_cfg = {
+        role: int(n)
+        for role, n in (config.get("regole_lega", {}).get("panchina") or {}).items()
+        if role in ROLES
+    }
+
     avvisi = []
+    if not panchina_cfg:
+        avvisi.append(
+            "regole_lega.panchina non è in config/league.json: la panchina viene stampata "
+            "intera invece di essere tagliata ai posti veri. Va scritta, o il consiglio sulla "
+            "panchina non è schierabile."
+        )
     if mancanti:
         avvisi.append(
             f"{_n(len(mancanti), 'giocatore', 'giocatori')} di ownership.json non più nel listone, fuori dal consiglio: "
@@ -436,6 +653,10 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         "titolari": [],
         "panchina": [e for role in ROLES for e in per_ruolo[role]],
         "non_disponibili": non_disponibili,
+        "esclusi": [],
+        "copertura": {},
+        "atteso": None,
+        "panchina_cfg": panchina_cfg,
         "turno": turno,
         "scoperti": {},
         "avvisi": avvisi,
@@ -455,31 +676,84 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     per_modulo = {}
     for module in modules:
         counts = {"P": 1, **MODULE_ROLE_COUNTS[module]}
-        titolari, scoperti = [], {}
+        titolari, riserve, scoperti, copertura, atteso = [], {}, {}, {}, 0.0
         for role, n in counts.items():
-            titolari.extend(per_ruolo[role][:n])
+            posti = panchina_cfg[role] if panchina_cfg else max(0, len(per_ruolo[role]) - n)
+            in_campo, in_panchina = _scegli_panchina(per_ruolo[role], n, posti)
+            titolari.extend(in_campo)
+            riserve[role] = in_panchina
             if len(per_ruolo[role]) < n:
                 scoperti[role] = n - len(per_ruolo[role])
-        # Prima i moduli che si riempiono tutti, poi quelli con meno titolari senza
-        # voti da decidere a mano, poi la somma dei punteggi più alta.
-        chiave = (
-            sum(scoperti.values()),
-            sum(1 for e in titolari if not e["rating"]),
-            -sum(e["rating"]["punteggio"] for e in titolari if e["rating"]),
-        )
-        per_modulo[module] = (chiave, titolari)
+            valore, coperto = _slot_attesi(in_campo + in_panchina, n)
+            atteso += valore
+            copertura[role] = coperto
+        # Prima i moduli che si riempiono tutti, poi quelli con meno titolari senza voti da
+        # decidere a mano, poi la somma dei valori dei titolari.
+        # PERCHÉ NON IL VALORE ATTESO, che sarebbe l'obiettivo giusto: provato, e nel
+        # backtest in punti PERDE 0,47 [−1,26, +0,32] punti a giornata contro la somma
+        # semplice. Il motivo è che il valore atteso dipende dalla probabilità di prendere
+        # voto, e la sola che abbiamo (`prob_titolare`) è la probabilità di partire titolare,
+        # cioè un pavimento: sottostima chi entra dalla panchina e quindi punisce troppo i
+        # moduli con più titolari in un ruolo. Il valore atteso resta calcolato, ma serve agli
+        # avvisi di copertura e al punteggio atteso del report, dove essere prudenti è un bene
+        # e non decide niente. Da riprovare quando la probabilità di prendere voto sarà
+        # misurata invece che approssimata (vedi prob_voto).
+        chiave = (sum(scoperti.values()), sum(1 for e in titolari if not e["rating"]),
+                  -sum(e["rating"]["punteggio"] for e in titolari if e["rating"]))
+        per_modulo[module] = (chiave, titolari, riserve)
         if best is None or chiave < best[0]:
-            best = (chiave, module, titolari, scoperti)
+            best = (chiave, module, titolari, riserve, scoperti, copertura, atteso)
 
-    _, module, titolari, scoperti = best
-    in_campo = {e["player"]["id"] for e in titolari}
+    _, module, titolari, riserve, scoperti, copertura, atteso = best
+    risultato["atteso"] = atteso   # valore atteso degli 11 slot, per le soglie gol del report
+    panchina = [e for role in ROLES for e in riserve.get(role, [])]
+    in_distinta = {e["player"]["id"] for e in titolari + panchina}
     risultato.update(
         modulo=module,
         titolari=titolari,
-        panchina=[e for role in ROLES for e in per_ruolo[role] if e["player"]["id"] not in in_campo],
+        panchina=panchina,
+        esclusi=[e for role in ROLES for e in per_ruolo[role] if e["player"]["id"] not in in_distinta],
         scoperti=scoperti,
+        copertura=copertura,
     )
-    risultato["decisioni"] = _decisioni(module, per_modulo, per_ruolo)
+    risultato["decisioni"] = _decisioni(module, per_modulo, per_ruolo, riserve)
+
+    # Avvisi sulla panchina corta: è la novità del 27/09 e il posto dove si perdono punti
+    # senza accorgersene (7 slot scoperti su 396 nel backtest, circa 1,2 punti a giornata).
+    for role, n in {"P": 1, **MODULE_ROLE_COUNTS[module]}.items():
+        coperto = copertura.get(role)
+        if coperto is None or coperto >= SOGLIA_AVVISO_COPERTURA:
+            continue
+        nomi = ", ".join(e["player"]["name"] for e in riserve.get(role, [])) or "nessuna"
+        avvisi.append(
+            f"Ruolo {role}: {1 - coperto:.0%} di rischio che uno slot resti vuoto, e uno slot "
+            f"vuoto vale 0 (circa 6 punti persi). Riserve in panchina: {nomi}. "
+            "Il rischio è calcolato sulla probabilità di partire titolare, quindi è prudente: "
+            "chi entra a partita in corso prende voto comunque."
+        )
+    # Una riserva che non gioca quasi mai è un posto di panchina buttato — ma solo se in rosa
+    # c'è un'alternativa dello stesso ruolo che gioca di più. Il secondo portiere della tua
+    # stessa squadra di Serie A è al 5% e va benissimo lì: se il primo non gioca, gioca lui.
+    fuori_per_ruolo = defaultdict(list)
+    for e in risultato["esclusi"]:
+        fuori_per_ruolo[e["player"]["role"]].append(e)
+    inutili = []
+    for e in panchina:
+        prob = prob_voto(e) * 100
+        if prob >= PROB_RISERVA_INUTILE:
+            continue
+        meglio = [a for a in fuori_per_ruolo[e["player"]["role"]] if prob_voto(a) * 100 > prob]
+        if meglio:
+            alternative = ", ".join(
+                f"{a['player']['name']} ({prob_voto(a) * 100:.0f}%)" for a in meglio[:3]
+            )
+            inutili.append(f"{e['player']['name']} ({prob:.0f}%), al suo posto {alternative}")
+    if inutili:
+        avvisi.append(
+            "Riserve che difficilmente giocheranno, con un'alternativa dello stesso ruolo che "
+            f"gioca di più: {'; '.join(inutili)}. Il valore atteso le preferisce lo stesso, ma "
+            "con pochi posti in panchina la scelta è tua."
+        )
     for role, n in scoperti.items():
         avvisi.append(f"Ruolo {role}: manca{'' if n == 1 else 'no'} {_n(n, 'giocatore disponibile', 'giocatori disponibili')}, nessun modulo lo copre.")
     senza_voti = [e["player"]["name"] for e in titolari if not e["rating"]]

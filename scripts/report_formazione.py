@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from lib import store
-from lib.roster import SOGLIA_PARI, suggest_lineup
+from lib.roster import PRODUZIONE_PREDEFINITA, SOGLIA_PARI, prossima_partita_lega, suggest_lineup
 
 
 def _voti(rating: dict | None) -> str:
@@ -28,10 +28,14 @@ def _voti(rating: dict | None) -> str:
     prod = rating["produzione"]
     ctx = rating["contesto"]
     pezzi = [f"voti {rating['base'] - (prod['effetto'] if prod else 0):.2f}"]
-    if prod:
-        pezzi.append(f"prod {prod['effetto']:+.2f}")
-    else:
-        pezzi.append("prod     -" if rating.get("portiere") else "prod   n/d")
+    # La colonna `prod` si stampa solo se la correzione per la produzione è accesa:
+    # spenta, scrivere "prod n/d" farebbe credere che manchi un dato (vedi
+    # PRODUZIONE_PREDEFINITA in lib/roster.py).
+    if PRODUZIONE_PREDEFINITA:
+        if prod:
+            pezzi.append(f"prod {prod['effetto']:+.2f}")
+        else:
+            pezzi.append("prod     -" if rating.get("portiere") else "prod   n/d")
     pezzi.append(f"avv {ctx['effetto']:+.2f}" if ctx else "avv   n/d")
     return f"{rating['punteggio']:5.2f}  {'  '.join(pezzi)}"
 
@@ -56,7 +60,7 @@ def _dettaglio(e: dict) -> str:
             f"{prod['gol_azione']} gol su azione contro {prod['gol_attesi']:.1f} attesi da "
             f"{prod['tiri_porta']} tiri in porta su {prod['tiri']} ({prod['effetto']:+.2f})"
         )
-    elif p["role"] != "P":
+    elif p["role"] != "P" and PRODUZIONE_PREDEFINITA:
         parti.append("tiri non disponibili (BigBalls non ha il giocatore): produzione non conteggiata")
     ctx = r["contesto"]
     if ctx:
@@ -131,12 +135,14 @@ def main():
 
     config = store.load_league_config()
     regole = config.get("regole_lega", {})
-    if "sostituzioni_max" not in regole:
-        cambi = "regole sulle sostituzioni non indicate in config/league.json"
-    elif regole["sostituzioni_max"] is None:
+    panchina_cfg = {k: v for k, v in (regole.get("panchina") or {}).items() if k in "PDCA"}
+    if panchina_cfg:
+        composizione = ", ".join(f"{n} {role}" for role, n in panchina_cfg.items())
+        cambi = f"panchina di {sum(panchina_cfg.values())} ({composizione}), cambi solo tra pari ruolo"
+    elif regole.get("sostituzioni_max") is None:
         cambi = "cambi illimitati nello stesso ruolo"
     else:
-        cambi = f"massimo {regole['sostituzioni_max']} cambi"
+        cambi = f"massimo {regole.get('sostituzioni_max')} cambi"
     r = suggest_lineup(args.team_id)
 
     matchday_label = f"Giornata {args.matchday}" if args.matchday else "Prossima giornata"
@@ -155,10 +161,13 @@ def main():
         print(f"Modulo consigliato: {r['modulo']}")
         print("Il numero è il fantavoto atteso se il giocatore prende voto, e ordina ogni ruolo:")
         print("  voti = media degli ultimi 5 voti, avvicinata alla media del ruolo se sono pochi;")
-        print("  prod = correzione dei gol su azione con quelli attesi dai tiri in porta;")
+        if PRODUZIONE_PREDEFINITA:
+            print("  prod = correzione dei gol su azione con quelli attesi dai tiri in porta;")
         print("  avv  = quanto subisce l'avversario rispetto alla media del campionato.")
-        print("La probabilità di giocare non entra nel numero (con i cambi illimitati se non")
-        print("gioca entra il primo della panchina): serve agli avvisi.\n")
+        print("La probabilità di giocare NON entra nel numero: se un titolare non prende voto")
+        print("entra il primo della panchina del suo ruolo, quindi conviene sempre mettere")
+        print("avanti il più forte. Entra invece nella scelta di CHI va in panchina e del")
+        print("modulo, perché i posti in panchina sono pochi e uno slot scoperto vale 0.\n")
         panchina_per_ruolo = {}
         for e in r["panchina"]:
             panchina_per_ruolo.setdefault(e["player"]["role"], []).append(e["player"]["name"])
@@ -175,7 +184,10 @@ def main():
         print("Nessuna formazione consigliata.")
 
     if r["modulo"]:
-        print("\nPANCHINA (in ordine: per ogni titolare senza voto entra il primo del suo ruolo):")
+        totale = sum(r["panchina_cfg"].values()) if r["panchina_cfg"] else len(r["panchina"])
+        print(f"\nPANCHINA — {len(r['panchina'])} di {totale} posti "
+              "(per ogni titolare senza voto entra il primo del suo ruolo;")
+        print("se le riserve di quel ruolo finiscono, lo slot vale 0):")
     elif r["panchina"]:
         print("\nROSA PER RUOLO:")
     contatori = {}
@@ -184,6 +196,52 @@ def main():
         contatori[p["role"]] = contatori.get(p["role"], 0) + 1
         etichetta = f"{p['role']}{contatori[p['role']]}"
         print(f"  {etichetta:<3} {p['name']:<18} {_voti(e['rating']):<39} {_titolarita(p):<17} {_partita(e)}")
+
+    if r["modulo"] and r["esclusi"]:
+        print("\nFUORI DISTINTA (la panchina ha pochi posti per ruolo: questi non entrano):")
+        for e in r["esclusi"]:
+            p = e["player"]
+            print(f"  [{p['role']}] {p['name']:<18} {_voti(e['rating']):<30} {_titolarita(p):<17} {_partita(e)}")
+
+    if r["modulo"] and r["copertura"]:
+        print("\nRISCHIO SLOT VUOTO per ruolo (probabilità che tutti gli slot siano coperti;")
+        print("calcolata sulla probabilità di partire titolare, quindi prudente):")
+        piu_esposto = min(r["copertura"].values())
+        for role, coperto in sorted(r["copertura"].items(), key=lambda x: x[1]):
+            print(f"  {role}: coperto al {coperto:6.1%}   rischio {1 - coperto:.1%}"
+                  + ("  <- il più esposto" if coperto == piu_esposto else ""))
+
+    if r["modulo"] and r["atteso"] is not None:
+        print(f"\nPUNTEGGIO ATTESO: {r['atteso']:.1f} punti (somma degli 11 slot, già scontata per")
+        print("chi rischia di non prendere voto e per gli slot che possono restare vuoti).")
+        soglie = regole.get("soglie_gol") or {}
+        if soglie.get("primo_gol"):
+            primo, fascia = float(soglie["primo_gol"]), float(soglie["fascia"])
+            gol = 0 if r["atteso"] < primo else int((r["atteso"] - primo) // fascia) + 1
+            prossima_soglia = primo if gol == 0 else primo + gol * fascia
+            manca = prossima_soglia - r["atteso"]
+            print(f"  Con le soglie della lega (primo gol a {primo:.0f}, poi ogni {fascia:.0f}): "
+                  f"{gol} gol.")
+            print(f"  Per il gol successivo servono {prossima_soglia:.0f} punti, cioè {manca:+.1f}: "
+                  + ("una decisione da meno di questo non cambia il risultato."
+                     if manca > 0.5 else "sei sul filo, qui ogni decimale conta."))
+            if soglie.get("da_confermare"):
+                print("  ATTENZIONE: le soglie gol non sono confermate dalla lega, sono i valori")
+                print("  standard di fantacalcio.it. Da verificare nel pannello della lega.")
+
+    lega = prossima_partita_lega(args.team_id)
+    if lega:
+        dove = "in casa" if lega["casa"] else "in trasferta"
+        print(f"\nAVVERSARIO DI LEGA: {lega['avversario_nome']}, {dove} "
+              f"({lega['competizione']}, giornata {lega['giornata']} = Serie A {lega['giornata_serie_a']}).")
+        avv, mio = lega["avversario"], lega["mio"]
+        if avv["giocate"]:
+            print(f"  Lui: {avv['punti'] / avv['giocate']:.1f} punti di media in {avv['giocate']} "
+                  f"giornate, {avv['classifica']} punti in classifica.")
+            print(f"  Tu:  {mio['punti'] / mio['giocate']:.1f} punti di media in {mio['giocate']} "
+                  f"giornate, {mio['classifica']} punti in classifica.")
+        else:
+            print("  Prima giornata della lega: non c'è ancora storico per confrontarvi.")
 
     if r["modulo"]:
         print("\nDA COSA È FATTO IL VALORE (titolari e primi due cambi di ogni ruolo):")
