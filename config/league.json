@@ -70,10 +70,10 @@
     "slot_scoperto": 0,
     "_slot_scoperto_note": "Se un titolare non prende voto e nessuna riserva del suo ruolo ha preso voto, lo slot vale 0: non entra nessuno e il punto e' perso. E' il motivo per cui la profondita' di un ruolo conta e la probabilita' di prendere voto torna a pesare sulla scelta della panchina e del modulo. Confermato dall'utente il 27/09/2026.",
     "soglie_gol": {
-      "_fonte": "DA CONFERMARE CON LA LEGA. Valori standard di fantacalcio.it (primo gol a 66, poi una fascia ogni 6 punti); la piattaforma li rende configurabili e consiglia fasce tra 4 e 6 punti. Finche' `da_confermare` e' true il report li usa solo per dire se una decisione cambia il risultato, avvisando che sono da verificare.",
-      "da_confermare": true,
+      "_fonte": "Confermate dall'utente il 27/09/2026: primo gol a 66 punti, poi una fascia ogni 5 punti (66 = 1 gol, 71 = 2, 76 = 3, ...). Il report le usa per dire se una decisione cambia il risultato.",
+      "da_confermare": false,
       "primo_gol": 66.0,
-      "fascia": 6.0
+      "fascia": 5.0
     }
   },
   "regole_mercato": {

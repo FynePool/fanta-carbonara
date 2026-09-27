@@ -78,6 +78,20 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   raccoglie con la ricerca web il giro del mattino e li ricontrolla la skill
   `formazione`; `notizie_rosa.py valida` controlla il formato e toglie le notizie
   scadute. Niente pareri, niente voci non confermate spacciate per fatti.
+- `rigoristi.json` — le gerarchie dei rigoristi delle 20 squadre, da più fonti
+  (`rigoristi.py`). **Non è un dato ufficiale**: sono valutazioni editoriali, e le tre
+  fonti lette il 27/09 si contraddicono sul *primo* rigorista di 9 squadre su 20. Per
+  questo il file tiene le liste di **tutte** le fonti (`fonti.liste`, nomi come li scrive
+  la fonte, in ordine di gerarchia) e il consenso lo calcola lo script: `rango` è la
+  mediana dei ranghi, `verificata` vuol dire che almeno due fonti lo mettono nella stessa
+  posizione, e `consenso_sul_primo` — il flag che conta — che almeno due lo danno primo.
+  Chi aggiorna i dati tocca solo `fonti`, poi lancia `rigoristi.py calcola`.
+  Il primo rigorista vale circa **+0,26 di fantavoto atteso a partita** (0,139 rigori per
+  squadra a partita nella stagione scorsa × 1,90 per rigore); il secondo vale +0,03 e non
+  conta. **Non entra nel punteggio del modello** per non contarlo due volte: la media
+  degli ultimi voti contiene già i rigori davvero calciati, e non si possono togliere
+  perché il box score BigBalls ne ha 5 su 50 partite. Serve come **spareggio** fra due
+  giocatori equivalenti e viene mostrato nel report.
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
   casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
   Non contiene dati per giocatore (niente voto/gol/cartellini singoli): solo
@@ -92,9 +106,9 @@ formazione, penalità, e le regole di panchina confermate dall'utente il 27/09 �
 `modalita_sostituzioni: pari_ruolo` (la modalità *Traditional* di leghe.fantacalcio.it:
 entra sempre il primo panchinaro dello stesso ruolo, il modulo non cambia mai),
 `slot_scoperto: 0` (se finiscono le riserve di un ruolo lo slot **non prende voto e vale
-0**) e `sostituzioni_max: 7`. C'è anche `soglie_gol` (primo gol a 66, poi ogni 6) ma con
-`da_confermare: true`: sono i valori standard di fantacalcio.it, **non** letti dal
-pannello della lega, e il report lo dice ogni volta che li usa. In `regole_mercato`: sforamento
+0**), `sostituzioni_max: 7` e le `soglie_gol` confermate lo stesso giorno: **primo gol a
+66 punti, poi una fascia ogni 5** (66 = 1 gol, 71 = 2, 76 = 3). Le legge il report per
+dire se una decisione cambia il risultato o no. In `regole_mercato`: sforamento
 (ogni offerta deve lasciare almeno 1 credito per slot ancora vuoto), rimborsi (1 credito
 per uno svincolo, il prezzo d'acquisto per una cessione all'estero o in Serie B), asta di
 riparazione con +50 crediti, scambi solo a gennaio; `asta.py` non le applica ancora. In
@@ -253,6 +267,16 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   `notizie_rosa.json` (campi, tipi, fonti, id) e toglie le notizie scadute (30 giorni,
   90 per allenatore e mercato). Non va su internet: le notizie le cerca chi esegue la
   skill.
+- `rigoristi.py {calcola|valida|mostra}` — `calcola` riabbina le liste per fonte di
+  `data/rigoristi.json` col listone e ricalcola il consenso; `valida` controlla senza
+  scrivere; `mostra [--team-id ID]` stampa le gerarchie (di una squadra della lega).
+  L'abbinamento cerca solo dentro la squadra giusta e **rifiuta un nome quando le iniziali
+  sono note e diverse**, come `import_matchday_stats.py`: all'Inter ci sono `Martinez L.`
+  (Lautaro) e `Martinez Jo.` (il portiere), e senza quel controllo "Lautaro Martinez"
+  finiva sul portiere. Se la fonte dà solo il cognome e c'è un solo candidato, abbina.
+  Stampa ogni nome che non si abbina invece di indovinare, e segnala un abbinamento su un
+  portiere. Ricalcola anche i rigori per squadra a partita da `storico_stagioni.json`, da
+  cui viene il valore del primo rigorista: nessun numero è scritto a mano.
 - `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
   e per il mercato post-asta. **Dopo l'asta le rose le scrive la lega**: quello che
   `asta.py` registra in `teams.json`/`ownership.json` viene sovrascritto dal giro del
@@ -274,11 +298,14 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   giocare non entra nell'ordine ma negli avvisi ("se non gioca entra X") e nella scelta
   di chi va in panchina. Stampa anche il **rischio slot vuoto per ruolo**, il
   **punteggio atteso** con la sua conversione in gol secondo `soglie_gol` (serve a
-  sapere se una decisione cambia il risultato o no) e l'**avversario di lega** della
-  prossima giornata, letto da `lega_competizioni.json`. La sezione "DA COSA È FATTO IL VALORE" spiega
+  sapere se una decisione cambia il risultato: le soglie sono confermate dall'utente il
+  27/09, primo gol a 66 e poi ogni 5) e l'**avversario di lega** della prossima giornata,
+  letto da `lega_competizioni.json`. Marca con `RIG` i **primi rigoristi** e ne stampa
+  l'elenco con quante fonti li danno primi. La sezione "DA COSA È FATTO IL VALORE" spiega
   in una riga titolari e primi due cambi di ogni ruolo; "DECISIONI TUE" elenca le scelte
   entro 0,20 punti (dove nel backtest l'ordine indovina come una moneta), i moduli quasi
-  pari e i titolari con dati deboli: lì decidi tu. "STAGIONI PASSATE" mostra per ogni
+  pari e i titolari con dati deboli: lì decidi tu. Su un pari dice anche se uno dei due è
+  il **primo rigorista**, che vale +0,26, più della soglia: è uno spareggio vero. "STAGIONI PASSATE" mostra per ogni
   giocatore le ultime due stagioni in Serie A (`storico_stagioni.json`), solo come
   contesto. Non si blocca se un ruolo è senza
   dati: lascia lo slot a te col motivo. Segnala i giocatori di `ownership.json`
@@ -359,8 +386,8 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   cosa è stato **provato e scartato** (scegliere il modulo col valore atteso: −0,47 punti).
   Contiene anche le critiche da esperto che **non** reggono, misurate (compagni di
   squadra: ρ = 0,07, +4% di σ; stagione scorsa come ordinamento: −3,15 punti), e cosa
-  resta aperto (soglie gol da confermare, probabilità di prendere voto approssimata,
-  rigoristi). Da leggere insieme al doc dei difetti, prima di toccare `roster.py`.
+  resta aperto (probabilità di prendere voto approssimata, statistiche raccolte e non
+  usate). Da leggere insieme al doc dei difetti, prima di toccare `roster.py`.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 
