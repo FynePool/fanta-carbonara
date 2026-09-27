@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""Importa il listone + infortuni da FantaDraft (github.com/lucianomurr/FantaDraft,
-MIT, dati aggregati da fonti pubbliche: quotazioni ufficiali, FBref, Gazzetta).
+"""Infortuni da FantaDraft (github.com/lucianomurr/FantaDraft, MIT, dati aggregati da
+fonti pubbliche: quotazioni ufficiali, FBref, Gazzetta), in data/injuries.json.
 
-Scarica players_pen.json (o legge un file locale già scaricato) e popola
-data/players.json (listone completo, quotazione + FVM) e data/injuries.json
-(infortuni con descrizione e rientro previsto, dove presenti).
+Fino al 27/09/2026 questo script scriveva anche il listone (data/players.json), ma
+FantaDraft ha solo una parte dei giocatori (532 su 598): ora il listone arriva da
+import_listone_fc.py (fantacalcio.it) e qui si leggono solo gli infortuni. Gli id sono
+gli stessi ("fd" + id fantacalcio).
+
+injuries.json viene riscritto da zero con i soli infortuni in corso: chi è rientrato
+sparisce da solo (vale la presenza, vedi apply_formazioni_status.py).
 
 Uso:
     python3 scripts/import_fantadraft.py                      # scarica dal repo
@@ -38,46 +42,34 @@ def main():
     args = parser.parse_args()
 
     source = load_source(args.json)
-    existing = {p["id"]: p for p in store.load_players()}
+    listone = {p["id"] for p in store.load_players()}
 
-    players = []
-    injuries = []
+    injuries, fuori_listone = [], []
     for row in source:
+        inj = row.get("inj")
+        if not inj:
+            continue
         pid = f"fd{row['id']}"
-        prev = existing.get(pid, {})
-        players.append(
+        if pid not in listone:
+            fuori_listone.append(f"{row['n']} ({row['s']})")
+        injuries.append(
             {
-                "id": pid,
-                "name": row["n"],
-                "role": row["r"],
-                "serie_a_team": row["s"],
-                "quotazione": row["q"],
-                "fvm": row.get("f"),
-                "status": prev.get("status", "n/d"),
-                "status_note": prev.get("status_note", ""),
-                "status_updated_at": prev.get("status_updated_at", ""),
-                "prob_titolare": prev.get("prob_titolare"),
+                "player_id": pid,
+                "start_date": None,
+                "expected_return": inj.get("r"),
+                "description": inj.get("d"),
+                "status": "in corso",
+                "source": "fantadraft_import",
+                "imported_on": date.today().isoformat(),
             }
         )
-        inj = row.get("inj")
-        if inj:
-            injuries.append(
-                {
-                    "player_id": pid,
-                    "start_date": None,
-                    "expected_return": inj.get("r"),
-                    "description": inj.get("d"),
-                    "status": "in corso",
-                    "source": "fantadraft_import",
-                    "imported_on": date.today().isoformat(),
-                }
-            )
 
-    store.save_json(store.DATA_DIR / "players.json", players)
     store.save_json(store.DATA_DIR / "injuries.json", injuries)
-    print(f"Importati {len(players)} giocatori e {len(injuries)} infortuni segnalati.")
+    print(f"Importati {len(injuries)} infortuni in corso da {len(source)} giocatori di FantaDraft.")
+    if fuori_listone:
+        print(f"Nota: {len(fuori_listone)} infortunati non sono nel listone (scritti lo stesso): "
+              + ", ".join(fuori_listone))
     print("Fonte: github.com/lucianomurr/FantaDraft (dati aggregati da fonti pubbliche, MIT).")
-    print("NB: quotazioni generiche di mercato, non quelle personalizzate della tua lega se diverse.")
 
 
 if __name__ == "__main__":

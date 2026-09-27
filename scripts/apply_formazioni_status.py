@@ -29,7 +29,7 @@ Per ultimi gli squalificati di data/squalifiche.json (scrape_squalifiche.py): di
 "squalificato", con la stessa logica degli infortuni. I diffidati no, possono giocare.
 
 Uso:
-    python3 scripts/import_fantadraft.py          # rinfresca listone + infortuni
+    python3 scripts/import_fantadraft.py          # rinfresca gli infortuni (il listone: import_listone_fc.py)
     python3 scripts/scrape_formazioni.py          # scarica le probabili
     python3 scripts/scrape_squalifiche.py         # squalificati e diffidati
     python3 scripts/apply_formazioni_status.py [--dry-run]

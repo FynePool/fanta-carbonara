@@ -1,28 +1,30 @@
 #!/usr/bin/env python3
-"""Aggiunge a data/players.json i giocatori del listone ufficiale di fantacalcio.it che
-FantaDraft non ha.
-
-Perché: FantaDraft (import_fantadraft.py) ha un sottoinsieme del listone. Il 27/09/2026
-aveva 532 giocatori contro i 598 di fantacalcio.it, e tra i 66 mancanti c'erano Leão,
-Lukaku, Nkunku, Di Gregorio, Alaba: presi all'asta (che usa gli id fantacalcio) o con
-voti in pagella, ma sconosciuti al progetto. Per i 532 in comune squadra, ruolo e nome
-coincidevano.
+"""Listone ufficiale di fantacalcio.it in data/players.json: è la fonte di chi esiste.
 
 Fonte: la pagina "Quotazioni Fantacalcio" (https://www.fantacalcio.it/quotazioni-fantacalcio),
 HTML statico, una riga `tr.player-row` per giocatore con il link alla scheda
-(".../squadre/udinese/alaba/2404": l'ultimo numero è l'id, lo stesso del listone, "fd2404"),
+(".../squadre/udinese/alaba/2404": l'ultimo numero è l'id fantacalcio, "fd2404" qui),
 il ruolo classic (`span.role`), la quotazione attuale (`td.player-classic-current-price`)
-e l'FVM (`td.player-classic-fvm`).
+e l'FVM (`td.player-classic-fvm`). Verificata il 27/09/2026: 598 giocatori.
 
-Solo aggiunte: i giocatori già presenti non vengono toccati (FantaDraft resta la fonte
-per quotazioni, FVM e infortuni). Va lanciato **dopo** import_fantadraft.py, che riscrive
-players.json da zero: quindi a ogni giro i mancanti vengono tolti e rimessi, e lo status
-lo riassegna apply_formazioni_status.py, che viene dopo. I giocatori aggiunti hanno
-`fonte_listone: "fantacalcio.it"`.
+Perché questa e non FantaDraft: FantaDraft ne aveva 532 (mancavano Leão, Lukaku,
+Di Gregorio, due giocatori presi all'asta...), mentre l'asta (Fantalab) e i voti
+(import_voti.py) usano gli id di questa pagina. FantaDraft resta solo per gli infortuni
+(import_fantadraft.py).
 
-Il nome della squadra si ricava dallo slug del link ("udinese") guardando come il listone
-chiama la squadra degli altri giocatori con lo stesso slug: nessuna tabella scritta a
-mano. Uno slug mai visto viene segnalato e quei giocatori non vengono aggiunti.
+Il file viene riscritto con i giocatori della pagina; di quelli già noti si tengono
+status, nota, data e probabilità di titolarità. Chi non è più nel listone (venduto
+all'estero, in Serie B) sparisce da players.json, ma **il suo storico in
+matchday_stats.json resta**: quel file non si accorcia mai (store.save_matchday_stats).
+
+Protezioni, perché una pagina cambiata o tagliata non passi per un listone vero:
+- meno di 400 giocatori letti: niente scritto;
+- una squadra che non è nel calendario: niente scritto;
+- più di MAX_USCITI giocatori che escono in un colpo solo: niente scritto (un mercato
+  vero ne toglie pochi al giorno), a meno di --accetta-uscite.
+
+Il nome della squadra si ricava dallo slug del link ("udinese" -> "Udinese")
+confrontandolo con le squadre del calendario, senza tabelle scritte a mano.
 
 Uso:
     python3 scripts/import_listone_fc.py
@@ -31,7 +33,7 @@ Uso:
 import argparse
 import re
 import sys
-from collections import Counter, defaultdict
+import unicodedata
 from pathlib import Path
 
 import requests
@@ -50,6 +52,14 @@ HEADERS = {
 }
 LINK_RE = re.compile(r"/squadre/([^/]+)/[^/]+/(\d+)/?$")
 RUOLI = {"P", "D", "C", "A"}
+MIN_GIOCATORI = 400
+MAX_USCITI = 40
+CAMPI_STATUS = ("status", "status_note", "status_updated_at", "prob_titolare")
+
+
+def slugify(nome: str) -> str:
+    s = "".join(c for c in unicodedata.normalize("NFKD", nome) if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
 def fetch_html(local_path: str | None) -> str:
@@ -94,64 +104,74 @@ def parse(html: str):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--html", default=None, help="pagina salvata, per test offline")
+    parser.add_argument(
+        "--accetta-uscite", action="store_true",
+        help=f"scrive anche se escono dal listone più di {MAX_USCITI} giocatori in un colpo",
+    )
     args = parser.parse_args()
 
     righe, anomalie = parse(fetch_html(args.html))
-    if len(righe) < 400:
-        # Una pagina cambiata o tagliata non deve passare per un listone vero.
+    if len(righe) < MIN_GIOCATORI:
         print(f"ERRORE: solo {len(righe)} giocatori letti dalla pagina, mi aspettavo circa 600. Niente scritto.")
         for a in anomalie:
             print(f"  {a}")
         return 1
 
-    players = store.load_players()
-    by_id = {p["id"]: p for p in players}
+    calendario = store.load_json(store.DATA_DIR / "calendario_serie_a.json")
+    squadra_di = {slugify(t): t for m in calendario for t in (m["squadra_casa"], m["squadra_trasferta"])}
+    ignoti = sorted({r["slug"] for r in righe} - set(squadra_di))
+    if ignoti:
+        print(f"ERRORE: squadre della pagina che non sono nel calendario: {ignoti}. Niente scritto.")
+        return 1
 
-    squadre_per_slug = defaultdict(Counter)
-    for r in righe:
-        if r["id"] in by_id:
-            squadre_per_slug[r["slug"]][by_id[r["id"]]["serie_a_team"]] += 1
-    squadra_di = {slug: c.most_common(1)[0][0] for slug, c in squadre_per_slug.items()}
+    vecchi = {p["id"]: p for p in store.load_players()}
+    nuovi_ids = {r["id"] for r in righe}
+    usciti = [p for pid, p in vecchi.items() if pid not in nuovi_ids]
+    if len(usciti) > MAX_USCITI and not args.accetta_uscite:
+        print(f"ERRORE: {len(usciti)} giocatori uscirebbero dal listone in un colpo solo (massimo {MAX_USCITI}): "
+              "pagina cambiata? Niente scritto. Se è un mercato vero, rilancia con --accetta-uscite.")
+        return 1
 
-    aggiunti, slug_ignoti, diversi = [], Counter(), []
+    players, entrati, cambiati = [], [], []
     for r in righe:
-        prev = by_id.get(r["id"])
-        squadra = squadra_di.get(r["slug"])
-        if prev is not None:
-            if squadra and (prev["serie_a_team"], prev["role"]) != (squadra, r["role"]):
-                diversi.append(f"{prev['name']}: FantaDraft {prev['serie_a_team']}/{prev['role']}, "
-                               f"fantacalcio.it {squadra}/{r['role']}")
-            continue
-        if squadra is None:
-            slug_ignoti[r["slug"]] += 1
-            continue
-        players.append({
+        prev = vecchi.get(r["id"])
+        p = {
             "id": r["id"],
             "name": r["name"],
             "role": r["role"],
-            "serie_a_team": squadra,
+            "serie_a_team": squadra_di[r["slug"]],
             "quotazione": r["quotazione"],
             "fvm": r["fvm"],
             "status": "n/d",
             "status_note": "",
             "status_updated_at": "",
             "prob_titolare": None,
-            "fonte_listone": "fantacalcio.it",
-        })
-        aggiunti.append(f"{r['name']} ({squadra}, {r['role']})")
+        }
+        if prev is None:
+            entrati.append(f"{p['name']} ({p['serie_a_team']}, {p['role']})")
+        else:
+            p.update({k: prev.get(k, p[k]) for k in CAMPI_STATUS})
+            if (prev["serie_a_team"], prev["role"]) != (p["serie_a_team"], p["role"]):
+                cambiati.append(f"{p['name']}: {prev['serie_a_team']}/{prev['role']} -> "
+                                f"{p['serie_a_team']}/{p['role']}")
+        players.append(p)
 
+    # Ordine stabile: quello della pagina segue le quotazioni e rimescolerebbe il file a
+    # ogni variazione, rendendo illeggibili i diff nel git.
+    players.sort(key=lambda p: ("PDCA".index(p["role"]), p["serie_a_team"], p["name"], p["id"]))
     store.save_json(store.DATA_DIR / "players.json", players)
 
-    print(f"OK: {len(righe)} giocatori nel listone di fantacalcio.it, {len(aggiunti)} aggiunti a "
-          f"players.json perché FantaDraft non li ha (totale ora {len(players)}).")
-    if aggiunti:
-        print("  " + ", ".join(aggiunti))
-    if slug_ignoti:
-        print(f"ATTENZIONE: squadre mai viste nel listone, giocatori non aggiunti: {dict(slug_ignoti)}")
-    if diversi:
-        print(f"ATTENZIONE: {len(diversi)} giocatori con squadra o ruolo diversi tra le due fonti (non toccati):")
-        for d in diversi:
-            print(f"  {d}")
+    print(f"OK: {len(players)} giocatori nel listone di fantacalcio.it scritti in players.json "
+          f"(prima {len(vecchi)}).")
+    if entrati:
+        print(f"Entrati ({len(entrati)}): " + ", ".join(entrati))
+    if usciti:
+        print(f"Usciti dal listone ({len(usciti)}; il loro storico in matchday_stats resta): "
+              + ", ".join(f"{p['name']} ({p['serie_a_team']})" for p in usciti))
+    if cambiati:
+        print(f"Squadra o ruolo cambiati ({len(cambiati)}):")
+        for c in cambiati:
+            print(f"  {c}")
     if anomalie:
         print(f"ATTENZIONE: {len(anomalie)} righe della pagina non lette:")
         for a in anomalie:

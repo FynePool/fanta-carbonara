@@ -20,7 +20,7 @@ coperte: vanno aggiunte a quella skill quando esisterà l'importer.
 
 - `teams.json` — le 12 squadre della lega: id, nome, proprietario, crediti totali/rimanenti.
 - `players.json` — **pool completo di tutti i giocatori Serie A** (non solo quelli
-  posseduti), da FantaDraft più i mancanti dal listone ufficiale di fantacalcio.it: id, nome, ruolo (P/D/C/A), squadra
+  posseduti), dal listone ufficiale di fantacalcio.it (`import_listone_fc.py`): id, nome, ruolo (P/D/C/A), squadra
   Serie A, `quotazione`. Il campo `status` (titolare | dubbio | ballottaggio |
   infortunato | squalificato | panchina | n/d) e `status_updated_at` diventano
   rilevanti solo a stagione iniziata e **vanno aggiornati prima di ogni deadline**
@@ -76,16 +76,18 @@ se non scende in campo entra il primo della panchina: vedi
 - `import_listone.py --csv <file>` — importa il listone ufficiale (export Excel/CSV
   di fantacalcio.it) in `data/players.json`, preservando lo status dei giocatori già
   noti. Da lanciare prima dell'asta.
-- `import_fantadraft.py` — importa listone + infortuni da FantaDraft (github.com/
-  lucianomurr/FantaDraft, fonte pubblica aggregata, aggiornata quotidianamente).
-  Riscrive `players.json` da zero, e ha solo una parte del listone.
-- `import_listone_fc.py` — aggiunge a `players.json` i giocatori del listone ufficiale
-  di fantacalcio.it (pagina "Quotazioni Fantacalcio", HTML statico) che FantaDraft non ha:
-  il 27/09 erano 66 su 598, tra cui Leão, Lukaku, Di Gregorio e due giocatori presi
-  all'asta. Solo aggiunte, abbinate per id (il link finisce con l'id fantacalcio, lo
-  stesso di FantaDraft e dell'asta); gli aggiunti hanno `fonte_listone: "fantacalcio.it"`.
-  Per i giocatori in comune squadra, ruolo e nome coincidevano; le quotazioni no (283
-  diverse), e restano quelle di FantaDraft. Va lanciato subito dopo `import_fantadraft.py`.
+- `import_listone_fc.py` — il listone ufficiale di fantacalcio.it (pagina "Quotazioni
+  Fantacalcio", HTML statico, 598 giocatori il 27/09) in `players.json`: id (lo stesso
+  dell'asta e dei voti), nome, ruolo, squadra, quotazione e FVM ufficiali. Di chi è già
+  noto tiene status e probabilità. Chi esce dal listone (venduto all'estero) sparisce da
+  `players.json` ma non dallo storico. Non scrive niente se legge meno di 400
+  giocatori, se trova una squadra fuori dal calendario, o se ne uscirebbero più di 40
+  in un colpo (`--accetta-uscite` per un mercato vero). Ordine del file stabile (ruolo,
+  squadra, nome) per diff leggibili.
+- `import_fantadraft.py` — solo gli infortuni, da FantaDraft (github.com/lucianomurr/
+  FantaDraft, fonte pubblica aggregata, aggiornata quotidianamente). Fino al 27/09
+  scriveva anche il listone, ma aveva 532 giocatori su 598 (mancavano Leão, Lukaku,
+  Di Gregorio...).
 - `scrape_formazioni.py` — scrape delle probabili formazioni Serie A da
   fantacalcio.it (HTML statico, verificato scrapeable senza rendering JS).
   Scrive uno snapshot (`data/formazioni_correnti.json`, non versionato) e ne
@@ -164,9 +166,8 @@ se non scende in campo entra il primo della panchina: vedi
   scarica solo le partite finite non ancora in archivio (il piano free ha 500
   chiamate al giorno; `--ricostruisci` le riscarica tutte). Aggiorna la giornata
   delle righe esistenti dal calendario, e non sovrascrive mai `voto`/`fantavoto` già
-  presenti. Scarta le righe di giocatori la cui squadra non ha giocato la partita,
-  tranne quelle col voto di fantacalcio.it (abbinate per id, valgono anche per chi ha
-  poi cambiato squadra).
+  presenti. Non scrive righe di giocatori la cui squadra non gioca la partita (box
+  score contaminato), ma non toglie mai righe già in archivio.
   Il matching nomi gestisce le abbreviazioni del listone a più lettere ("Martinez
   Jo."), i cognomi doppi ("Kolo Muani") e rifiuta un abbinamento se le iniziali sono
   note e diverse: se listone e BigBalls non concordano sulla squadra di un giocatore
@@ -234,6 +235,12 @@ se non scende in campo entra il primo della panchina: vedi
   Da riprendere quando tutti e tre esistono, non prima.
 
 ## Regole per chi lavora su questo repo
+
+- **Lo storico non si accorcia mai.** `data/matchday_stats.json` si scrive solo con
+  `store.save_matchday_stats`, che si rifiuta se una riga (giocatore, partita) già
+  presente sparirebbe: i voti vecchi possono non essere più recuperabili dalle fonti, e
+  un giocatore uscito dal listone o passato a un'altra squadra resta nello storico.
+  Pulire righe sbagliate è un'operazione a mano, voluta e committata a parte.
 
 - Non inventare mai un voto, uno status o un dato storico mancante: se manca,
   va segnalato come "da verificare a mano", mai stimato silenziosamente.

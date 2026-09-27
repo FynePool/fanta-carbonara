@@ -27,9 +27,9 @@ Si leggono solo le partite finite nel calendario (data/calendario_serie_a.json):
 una giornata la pagina mostra voti provvisori. Il sito può correggere i voti nei giorni
 successivi, quindi qui voto e fantavoto vengono **sempre riscritti** con l'ultimo valore
 pubblicato. La partita si trova per coppia casa/trasferta, unica in una stagione.
-Va lanciato **dopo** import_matchday_stats.py: quello scarta le righe di un giocatore la
-cui squadra nel listone non ha giocato la partita (anche quelle col voto, se il giocatore
-ha cambiato squadra), e questo le ricrea.
+Va lanciato **dopo** import_matchday_stats.py, che rifà le righe delle partite nuove.
+Non toglie mai righe: un voto già in archivio resta anche se il giocatore esce dal
+listone o la pagina non lo mostra più.
 
 Righe: se c'è già la riga BigBalls (player_id, match_id) si riempiono voto e fantavoto;
 se no (circa 30-60 giocatori a giornata che BigBalls non riconosce) si crea una riga
@@ -238,7 +238,11 @@ def main():
             senza_voto += r["senza_voto"]
 
     merged = sorted(by_key.values(), key=lambda r: (r["matchday"] or 0, r["match_id"], r["player_id"]))
-    store.save_json(stats_path, merged)
+    try:
+        store.save_matchday_stats(merged)
+    except store.StoricoPerso as e:
+        print(f"ERRORE: {e}")
+        return 1
 
     print(f"OK: fonte {fonte!r}, giornate {giornate}. Righe con voto aggiornate {aggiornate}, "
           f"righe nuove (giocatori che BigBalls non ha) {nuove}; senza voto (s.v.) in totale {senza_voto}.")

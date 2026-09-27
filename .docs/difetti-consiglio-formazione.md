@@ -293,6 +293,11 @@ corretta.
 delle due della partita; rifiutare il match quando le due iniziali sono note e diverse.
 Poi togliere le 3 righe dall'archivio.
 
+> **Aggiornamento 27/09.** La pulizia dell'archivio girava a ogni import, non una volta
+> sola: toglieva anche le righe di chi usciva dal listone o cambiava squadra. Tolta:
+> resta il controllo alla scrittura, e lo storico non si accorcia più
+> (`store.save_matchday_stats`).
+
 ---
 
 ### 8. Le giornate vuote si riempiono solo rilanciando gli import, e nessuno li rilancia

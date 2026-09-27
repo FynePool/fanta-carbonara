@@ -8,8 +8,9 @@ description: Scarica le probabili formazioni Serie A da fantacalcio.it, gli info
 L'ordine conta: gli infortuni vanno rinfrescati **prima**, perché
 `apply_formazioni_status.py` li applica sopra le probabili come ultima parola.
 
-1. Rinfresca listone e infortuni:
+1. Rinfresca listone (fantacalcio.it) e infortuni (FantaDraft):
    ```
+   python3 scripts/import_listone_fc.py
    python3 scripts/import_fantadraft.py
    ```
    Riscrive `data/injuries.json` da zero con i soli infortuni ancora in corso
@@ -50,7 +51,7 @@ L'ordine conta: gli infortuni vanno rinfrescati **prima**, perché
 ## Limiti noti (da dire sempre all'utente, non da nascondere)
 
 - Il matching giocatore avviene per nome normalizzato + squadra, non per un id
-  condiviso tra fantacalcio.it e il listone FantaDraft: su nomi comuni o
+  condiviso tra la pagina delle probabili e il listone: su nomi comuni o
   abbreviazioni ambigue può associare il giocatore sbagliato. In caso di dubbio,
   verificare a mano il giocatore specifico prima di escluderlo/includerlo in formazione.
 - Una sola fonte (fantacalcio.it): a differenza di un aggregatore multi-fonte,

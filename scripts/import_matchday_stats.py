@@ -167,28 +167,20 @@ def main():
     calendario = {m["match_id"]: m for m in store.load_json(store.DATA_DIR / "calendario_serie_a.json")}
     finished = [m for m in calendario.values() if m["stato"] == "finished"]
     players = store.load_players()
-    team_of = {p["id"]: p["serie_a_team"] for p in players}
     index = build_player_index(players)
 
     stats_path = store.DATA_DIR / "matchday_stats.json"
     existing = store.load_json(stats_path) if stats_path.exists() else []
 
-    # Righe già in archivio: si scartano quelle di un giocatore la cui squadra non ha
-    # giocato quella partita, e si aggiorna la giornata dal calendario (arriva dopo la
-    # partita, e così si riempie senza chiamate API). Le righe col voto di fantacalcio.it
-    # (abbinato per id, non per nome) sono certe anche se il giocatore ha poi cambiato
-    # squadra: non si toccano.
-    by_key, scartate = {}, []
+    # Righe già in archivio: si aggiorna la giornata dal calendario (arriva dopo la
+    # partita, e così si riempie senza chiamate API). Non se ne toglie mai nessuna, neanche
+    # di chi è uscito dal listone o ha cambiato squadra: lo storico non si accorcia (vedi
+    # store.save_matchday_stats). Le righe contaminate si fermano alla scrittura, sotto.
+    by_key = {}
     for r in existing:
         match = calendario.get(r["match_id"])
-        dal_sito_voti = r.get("fantavoto") is not None or r.get("minuti") is None
-        if match is None or (
-            not dal_sito_voti
-            and team_of.get(r["player_id"]) not in (match["squadra_casa"], match["squadra_trasferta"])
-        ):
-            scartate.append(r)
-            continue
-        r["matchday"] = match["giornata"]
+        if match is not None:
+            r["matchday"] = match["giornata"]
         by_key[(r["player_id"], r["match_id"])] = r
 
     # Le righe create da import_voti.py per giocatori che BigBalls non ha (statistiche a
@@ -240,17 +232,19 @@ def main():
 
             by_key[(player_id, match["match_id"])] = row
 
-        # Le righe col solo voto (da import_voti.py) che BigBalls non ha rifatto restano.
+        # Le righe vecchie che BigBalls non ha rifatto (solo voto da import_voti.py, o un
+        # giocatore che oggi il matching non riconosce più) restano com'erano.
         for pid, prev in old.items():
-            if prev.get("minuti") is None and (pid, match["match_id"]) not in by_key:
-                by_key[(pid, match["match_id"])] = prev
+            by_key.setdefault((pid, match["match_id"]), prev)
 
     merged = sorted(by_key.values(), key=lambda r: (r["matchday"] or 0, r["match_id"], r["player_id"]))
-    store.save_json(stats_path, merged)
+    try:
+        store.save_matchday_stats(merged)
+    except store.StoricoPerso as e:
+        print(f"ERRORE: {e}")
+        return 1
 
     print(f"OK: {len(to_fetch)} partite scaricate, {len(merged)} righe totali in matchday_stats.json.")
-    if scartate:
-        print(f"Tolte {len(scartate)} righe di giocatori la cui squadra non ha giocato quella partita.")
     if failed_matches:
         print(f"ATTENZIONE: {len(failed_matches)} partite non scaricate (riprovate al prossimo giro): {failed_matches}")
     if unmatched:
