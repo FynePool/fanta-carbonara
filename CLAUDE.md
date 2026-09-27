@@ -86,17 +86,30 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
 `config/league.json` contiene le regole di scoring, i moduli ammessi e `my_team_id`
 (la mia squadra — da impostare la prima volta che si popolano i dati). Le regole
 vengono dal regolamento FantaCarbonara (24/09) e dai chiarimenti della lega, ognuna con
-la sua `_fonte`. In `regole_lega`: **nessun modificatore di difesa, sostituzioni
-illimitate**, rinvii, scadenza formazione, penalità. In `regole_mercato`: sforamento
+la sua `_fonte`. In `regole_lega`: **nessun modificatore di difesa**, rinvii, scadenza
+formazione, penalità, e le regole di panchina confermate dall'utente il 27/09 —
+`panchina` (**7 posti a composizione fissa: 1 P, 2 D, 2 C, 2 A**),
+`modalita_sostituzioni: pari_ruolo` (la modalità *Traditional* di leghe.fantacalcio.it:
+entra sempre il primo panchinaro dello stesso ruolo, il modulo non cambia mai),
+`slot_scoperto: 0` (se finiscono le riserve di un ruolo lo slot **non prende voto e vale
+0**) e `sostituzioni_max: 7`. C'è anche `soglie_gol` (primo gol a 66, poi ogni 6) ma con
+`da_confermare: true`: sono i valori standard di fantacalcio.it, **non** letti dal
+pannello della lega, e il report lo dice ogni volta che li usa. In `regole_mercato`: sforamento
 (ogni offerta deve lasciare almeno 1 credito per slot ancora vuoto), rimborsi (1 credito
 per uno svincolo, il prezzo d'acquisto per una cessione all'estero o in Serie B), asta di
 riparazione con +50 crediti, scambi solo a gennaio; `asta.py` non le applica ancora. In
 `competizioni` i criteri di parità per la futura fase classifica. I punteggi in
 `scoring` non li legge nessuno script (il fantavoto arriva già calcolato dal sito) e
-due valori sono `null` perché il regolamento non li chiarisce. Con i cambi illimitati, dentro un ruolo va
-schierato prima chi ha il fantavoto atteso più alto quando prende voto, anche se gioca
-poco, perché se non scende in campo entra il primo della panchina: vedi
-`.docs/difetti-consiglio-formazione.md`.
+due valori sono `null` perché il regolamento non li chiarisce.
+
+**Dentro un ruolo** va schierato prima chi ha il fantavoto atteso più alto quando prende
+voto, anche se gioca poco, perché se non scende in campo entra il primo della panchina di
+quel ruolo: la probabilità di giocare non entra nell'ordine (dimostrazione in
+`.docs/difetti-consiglio-formazione.md`). **Ma la panchina ha solo 1-2 posti per ruolo e
+uno slot scoperto vale 0**, quindi la probabilità conta eccome per decidere *chi* ci va:
+una riserva che non gioca mai è un posto buttato. Lo fa `_scegli_panchina` in `roster.py`.
+Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: vedi
+`.docs/analisi-valutazione-formazione.md`.
 
 ## Script (`scripts/`)
 
@@ -248,15 +261,21 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   di un giocatore (torna disponibile per tutti); mostra crediti/slot rimanenti per
   ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
 - `report_formazione.py --team-id <id> [--matchday N]` — legge lo stato attuale della
-  rosa e propone modulo, titolari e panchina **ordinata** (la logica sta in
+  rosa e propone modulo, titolari e **la panchina vera della lega** (7 posti, 1 P, 2 D,
+  2 C, 2 A), più i giocatori che restano **fuori distinta** (la logica sta in
   `lib/roster.py`). Dentro ogni ruolo ordina per il **fantavoto atteso se il giocatore
-  prende voto**, fatto di tre pezzi mostrati in colonna: `voti` (media degli ultimi 5,
-  frenata verso la media del ruolo come se avesse 5 partite in più), `prod` (nei voti,
-  i gol su azione sostituiti da quelli attesi dai tiri in porta) e `avv` (quanto subisce
-  l'avversario della prossima partita rispetto alla media). Ogni pezzo è verificato con
-  `backtest_formazione.py`; a priori dalla quotazione, titolare/spezzone e casa/trasferta
-  sono stati provati e scartati. La probabilità di giocare non entra nell'ordine ma
-  negli avvisi ("se non gioca entra X"). La sezione "DA COSA È FATTO IL VALORE" spiega
+  prende voto**, fatto di due pezzi mostrati in colonna: `voti` (media degli ultimi 5,
+  frenata verso la media del ruolo come se avesse 5 partite in più) e `avv` (quanto
+  subisce l'avversario della prossima partita rispetto alla media). La colonna `prod`
+  non c'è più: la correzione per la produzione è spenta dal 27/09 (vedi
+  `PRODUZIONE_PREDEFINITA` in `roster.py`). Ogni pezzo è verificato con
+  `backtest_undici.py` in punti veri; a priori dalla quotazione e dalla stagione scorsa,
+  titolare/spezzone e casa/trasferta sono stati provati e scartati. La probabilità di
+  giocare non entra nell'ordine ma negli avvisi ("se non gioca entra X") e nella scelta
+  di chi va in panchina. Stampa anche il **rischio slot vuoto per ruolo**, il
+  **punteggio atteso** con la sua conversione in gol secondo `soglie_gol` (serve a
+  sapere se una decisione cambia il risultato o no) e l'**avversario di lega** della
+  prossima giornata, letto da `lega_competizioni.json`. La sezione "DA COSA È FATTO IL VALORE" spiega
   in una riga titolari e primi due cambi di ogni ruolo; "DECISIONI TUE" elenca le scelte
   entro 0,20 punti (dove nel backtest l'ordine indovina come una moneta), i moduli quasi
   pari e i titolari con dati deboli: lì decidi tu. "STAGIONI PASSATE" mostra per ogni
@@ -288,9 +307,14 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   modello con regole banali (media nuda, fantamedia della stagione scorsa, quotazione
   iniziale, nessun ordine) e con un oracolo che conosce i voti, e ablaziona i pezzi del
   modello in punti. Bootstrap appaiato su (squadra, giornata). Risponde alla domanda che
-  `backtest_formazione.py` non pone: quanti punti a giornata vale una modifica. Il 27/09
-  il modello valeva +1,75 punti a giornata sull'ordine d'acquisto e la correzione per la
-  produzione +0,14 [−0,79, +0,89], cioè niente: vedi
+  `backtest_formazione.py` non pone: quanti punti a giornata vale una modifica. Usa le
+  funzioni vere di `roster.py` (`_scegli_panchina`, `_slot_attesi`), non una loro copia,
+  passando una probabilità di prendere voto stimata dalle giornate precedenti (quella di
+  fantacalcio.it esiste solo dal 21/09 e per queste giornate sarebbe guardare il futuro).
+  Il 27/09 il motore valeva **+3,25 punti a giornata** sull'ordine d'acquisto e batteva
+  ogni regola semplice; scegliere la panchina con la probabilità vale +0,60 e il termine
+  avversario +1,50, entrambi con intervallo che esclude lo zero; la correzione per la
+  produzione non guadagna niente ed è stata spenta. Vedi
   `.docs/analisi-valutazione-formazione.md`. **È il collaudo da superare prima di toccare
   `roster.py`**: una modifica entra solo se guadagna punti con l'intervallo che esclude
   lo zero. Non scrive niente.
@@ -324,16 +348,19 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   i pezzi scartati e perché, la simulazione rifatta. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.
 - `.docs/analisi-valutazione-formazione.md` — analisi esterna del 27/09 di come il
-  progetto valuta la formazione, con la metrica che mancava (`backtest_undici.py`, punti
-  veri invece di MAE). Punti forti verificati: il criterio "ordina per media quando
-  gioca" è ottimo per questa lega, il freno sulle medie è dove stanno i punti (+1,75 a
-  giornata), l'onestà sui dati. Punti debili: tre impostazioni della lega mai lette
-  (modalità sostituzioni — portante e non confermata, dimensione massima della panchina,
-  soglie gol), il calendario testa-a-testa importato e mai letto, la correzione per la
-  produzione che vale zero punti e produce i numeri più vistosi del report, nessun avviso
-  sulla profondità di un ruolo, i rigoristi. Contiene anche le critiche da esperto che
-  **non** reggono, misurate (compagni di squadra: ρ = 0,07, +4% di σ; stagione scorsa come
-  ordinamento: −1,79 punti). Da leggere insieme al doc dei difetti.
+  progetto valuta la formazione, e gli interventi che ne sono seguiti, con la metrica che
+  mancava (`backtest_undici.py`, punti veri invece di MAE). Il fatto che ha ribaltato
+  l'analisi: la panchina non è illimitata ma di 7 posti a quota fissa per ruolo, e uno
+  slot scoperto vale 0 — quindi la probabilità di prendere voto torna a contare per
+  *chi* va in panchina (+0,60 punti a giornata, misurato). Cosa è entrato (panchina vera
+  e scelta con la probabilità, portieri della stessa squadra non indipendenti, avvisi di
+  copertura, punteggio atteso in gol, avversario di lega), cosa è uscito (la correzione
+  per la produzione, con la spiegazione onesta del perché la prova non è significativa) e
+  cosa è stato **provato e scartato** (scegliere il modulo col valore atteso: −0,47 punti).
+  Contiene anche le critiche da esperto che **non** reggono, misurate (compagni di
+  squadra: ρ = 0,07, +4% di σ; stagione scorsa come ordinamento: −3,15 punti), e cosa
+  resta aperto (soglie gol da confermare, probabilità di prendere voto approssimata,
+  rigoristi). Da leggere insieme al doc dei difetti, prima di toccare `roster.py`.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 

@@ -1,29 +1,28 @@
 #!/usr/bin/env python3
-"""Backtest dell'UNDICI, non del singolo voto.
+"""Backtest dell'UNDICI, non del singolo voto, con la panchina VERA della lega.
 
 `backtest_formazione.py` misura quanto il modello sbaglia il fantavoto di un giocatore
 (MAE) e quanto spesso mette in ordine giusto due giocatori della stessa rosa. Nessuna
-delle due cose dice la cosa che conta: **quanti punti a giornata guadagna la formazione
-consigliata** rispetto a una regola banale. Un modello puo' prevedere meglio ogni singolo
-voto e schierare lo stesso undici di prima: in quel caso non vale niente.
+delle due dice la cosa che conta: **quanti punti a giornata guadagna la formazione
+consigliata**. Un modello puo' prevedere meglio ogni singolo voto e schierare lo stesso
+undici: in quel caso non vale niente.
 
-Questo script chiude quel buco. Per ogni giornata N >= 3 e per ognuna delle 12 rose della
-lega, schiera la formazione usando **solo** i dati fino a N-1, poi applica le regole della
-lega (sostituzioni illimitate tra pari ruolo: per ogni titolare senza voto entra il primo
-del suo ruolo in panchina che ha preso voto; uno slot che non trova nessuno vale 0) e
-somma i **punti veri** della giornata.
+Le regole vere, da `config/league.json -> regole_lega` (confermate dall'utente il 27/09):
+panchina di **7 giocatori a composizione fissa** (1 P, 2 D, 2 C, 2 A), sostituzioni
+**solo tra pari ruolo**, e se finiscono le riserve di un ruolo lo **slot vale 0**. E' la
+differenza che conta: con la panchina corta la probabilita' di prendere voto torna a
+pesare sulla scelta della panchina e del modulo (non sull'ordine dentro il ruolo, dove
+resta irrilevante).
 
-12 rose x 3 giornate = 36 formazioni, invece delle 3 della sola rosa mia: sulle 3 le
-differenze sono tutte rumore (verificato: sulla sola rosa mia la fantamedia della
-stagione scorsa sembrava battere il modello di 0,17 punti; su 36 formazioni perde di
-1,79 con intervallo che esclude lo zero).
+Per ogni giornata N >= 3 e per ognuna delle 12 rose della lega schiera con i soli dati
+fino a N-1 e somma i punti veri. Bootstrap appaiato sulle coppie (squadra, giornata).
 
-Confronta il modello con regole alternative e ne ablaziona i pezzi. Gli intervalli al
-95% sono bootstrap appaiati sulle coppie (squadra della lega, giornata).
+La probabilita' di prendere voto qui NON viene da `prob_titolare` (fantacalcio.it la
+pubblica solo dal 21/09, dopo la giornata 5: usarla sarebbe guardare il futuro). Si stima
+dalle giornate precedenti: quota di giornate in cui il giocatore ha preso voto, frenata
+verso la quota media del suo ruolo.
 
-Non scrive niente. Da rilanciare quando ci sono piu' giornate, prima di toccare
-`lib/roster.py`: e' la misura che dice se una modifica guadagna punti o solo decimali
-di MAE.
+Non scrive niente. E' il collaudo da superare prima di toccare `lib/roster.py`.
 
 Uso:
     python3 scripts/backtest_undici.py
@@ -41,18 +40,9 @@ from lib import store
 from lib import roster as R
 
 STORICO_MIN_VOTI = 10
-
-
-def carica():
-    cfg = store.load_league_config()
-    players = {p["id"]: p for p in store.load_players()}
-    righe = store.load_matchday_stats()
-    calendario = store.load_json(store.DATA_DIR / "calendario_serie_a.json")
-    teams = [t["id"] for t in store.load_json(store.DATA_DIR / "teams.json")]
-    path = store.DATA_DIR / "storico_stagioni.json"
-    stagioni = store.load_json(path)["stagioni"] if path.exists() else {}
-    scorsa = stagioni[max(stagioni)]["giocatori"] if stagioni else {}
-    return cfg, players, righe, calendario, teams, scorsa
+# Freno sulla quota di voti presi: come se il giocatore avesse questo numero di giornate
+# in piu' "da giocatore medio del suo ruolo". Con 2-4 giornate alle spalle serve.
+FRENO_QUOTA = 2.0
 
 
 def main():
@@ -62,15 +52,22 @@ def main():
     parser.add_argument("--seed", type=int, default=0)
     args = parser.parse_args()
 
-    cfg, players, righe, calendario, teams, scorsa = carica()
+    cfg = store.load_league_config()
+    players = {p["id"]: p for p in store.load_players()}
+    righe = store.load_matchday_stats()
+    calendario = store.load_json(store.DATA_DIR / "calendario_serie_a.json")
+    teams = [t["id"] for t in store.load_json(store.DATA_DIR / "teams.json")]
+    path = store.DATA_DIR / "storico_stagioni.json"
+    stagioni = store.load_json(path)["stagioni"] if path.exists() else {}
+    scorsa = stagioni[max(stagioni)]["giocatori"] if stagioni else {}
+    panchina_cfg = {r: n for r, n in cfg["regole_lega"]["panchina"].items() if r in R.ROLES}
+
     ultima = max(r["matchday"] for r in righe if r["matchday"] is not None and r.get("fantavoto") is not None)
     giornate = list(range(args.dal, ultima + 1))
     if not giornate:
         print("Non ci sono ancora abbastanza giornate con i voti.")
         return 1
 
-    # fantavoto vero e avversario per (giocatore, giornata): il voto vero serve solo a
-    # contare i punti dopo aver schierato, e all'oracolo.
     vero = {(r["player_id"], r["matchday"]): r["fantavoto"] for r in righe if r.get("fantavoto") is not None}
     avversario = {
         (r["player_id"], r["matchday"]): r.get("opponent_serie_a_team")
@@ -78,11 +75,30 @@ def main():
     }
     rose = {t: R.team_roster(t, players)[0] for t in teams}
 
+    # --- probabilita' di prendere voto, stimata solo sulle giornate precedenti ---
+    def quote(g):
+        """player_id -> quota di giornate (fra 1 e g-1) in cui ha preso voto, frenata verso
+        la quota media del ruolo."""
+        n_giornate = g - 1
+        presi = {pid: 0 for pid in players}
+        for (pid, md), _ in vero.items():
+            if md is not None and md < g and pid in presi:
+                presi[pid] += 1
+        per_ruolo = {}
+        for r_ in R.ROLES:
+            v = [presi[pid] / n_giornate for pid in players if players[pid]["role"] == r_]
+            per_ruolo[r_] = st.mean(v) if v else 0.5
+        return {
+            pid: (presi[pid] + FRENO_QUOTA * per_ruolo[players[pid]["role"]])
+                 / (n_giornate + FRENO_QUOTA)
+            for pid in players
+        }
+
     def fantamedia_scorsa(pid):
         d = scorsa.get(pid)
         return d["fantamedia"] if d and d["partite_con_voto"] >= STORICO_MIN_VOTI else None
 
-    # --- le regole da confrontare: ognuna da' il valore con cui ordinare un giocatore ---
+    # --- regole di valore: con cosa si ordina un giocatore ---
     def modello(p, g, mo):
         rt = R.rate_player(p, mo, avversario.get((p["id"], g)))
         return rt["punteggio"] if rt else None
@@ -94,12 +110,6 @@ def main():
     def stagione_scorsa(p, g, mo):
         return fantamedia_scorsa(p["id"])
 
-    def meta_e_meta(p, g, mo):
-        a, b = modello(p, g, mo), fantamedia_scorsa(p["id"])
-        if a is None:
-            return b
-        return a if b is None else 0.5 * a + 0.5 * b
-
     def quotazione(p, g, mo):
         return p.get("quotazione_iniziale") or 0
 
@@ -109,46 +119,55 @@ def main():
     def oracolo(p, g, mo):
         return vero.get((p["id"], g))  # bara: sa i voti veri. E' il tetto massimo.
 
-    REGOLE = [
-        ("modello attuale", modello),
-        ("media nuda dei voti", media_nuda),
-        ("fantamedia stagione scorsa", stagione_scorsa),
-        ("meta modello + meta scorsa", meta_e_meta),
-        ("quotazione iniziale", quotazione),
-        ("nessun ordine (ordine d'acquisto)", nessun_ordine),
-        ("ORACOLO (sa i voti veri)", oracolo),
-    ]
-
-    def schiera_e_conta(team, g, chiave, modelli):
-        """Ordina ogni ruolo con `chiave`, scegli il modulo con la somma piu' alta (come fa
-        roster.py), poi conta i punti veri applicando le sostituzioni."""
+    def schiera_e_conta(team, g, chiave, modelli, panchina_con_prob, modulo_con_prob):
+        """Schiera e conta i punti veri. Usa `_scegli_panchina` e `_slot_attesi` di
+        lib/roster.py — le funzioni vere del motore — passando lo stimatore storico della
+        probabilita' di prendere voto al posto di `prob_titolare`, che per queste giornate
+        non esiste. Cosi' il backtest collauda il codice che gira, non una sua copia."""
         mo = modelli[g]
+        q = quote(g)
+        prob = lambda e: q.get(e["player"]["id"], 0.5)
         per_ruolo = {r: [] for r in R.ROLES}
         for p in rose[team]:
             if p["status"] not in R.EXCLUDED_STATUSES:
-                per_ruolo[p["role"]].append(p)
-        val = {p["id"]: chiave(p, g, mo) for r in R.ROLES for p in per_ruolo[r]}
+                # le funzioni di roster.py vogliono le "entry" {player, rating}
+                per_ruolo[p["role"]].append({"player": p, "rating": None})
         for r in R.ROLES:
-            # chi non ha un valore va in fondo, come in roster.py
-            per_ruolo[r].sort(key=lambda p: -(val[p["id"]] if val[p["id"]] is not None else -99))
+            for e in per_ruolo[r]:
+                v = chiave(e["player"], g, mo)
+                e["rating"] = {"punteggio": v} if v is not None else None
+            per_ruolo[r].sort(key=lambda e: -(e["rating"]["punteggio"] if e["rating"] else -99))
+
+        def schierati(ruolo, n):
+            posti = panchina_cfg.get(ruolo, 0)
+            if panchina_con_prob:
+                t_, r_ = R._scegli_panchina(per_ruolo[ruolo], n, posti, prob)
+            else:   # come faceva il report prima: le riserve sono le successive per valore
+                t_, r_ = per_ruolo[ruolo][:n], per_ruolo[ruolo][n:n + posti]
+            return t_ + r_
+
         migliore, somma_migliore = None, None
         for module in cfg["formation_modules"]:
             counts = {"P": 1, **R.MODULE_ROLE_COUNTS[module]}
-            s = sum(val[p["id"]] or 0 for r_, n in counts.items() for p in per_ruolo[r_][:n])
+            if modulo_con_prob:
+                s = sum(R._slot_attesi(schierati(r_, n), n, prob)[0] for r_, n in counts.items())
+            else:   # somma dei valori dei titolari, senza scontare chi non prende voto
+                s = sum((e["rating"]["punteggio"] if e["rating"] else 0)
+                        for r_, n in counts.items() for e in per_ruolo[r_][:n])
             if somma_migliore is None or s > somma_migliore:
                 somma_migliore, migliore = s, module
-        counts = {"P": 1, **R.MODULE_ROLE_COUNTS[migliore]}
+
         punti = 0.0
-        for ruolo, n in counts.items():
+        for ruolo, n in {"P": 1, **R.MODULE_ROLE_COUNTS[migliore]}.items():
             presi = 0
-            for p in per_ruolo[ruolo]:
+            for e in schierati(ruolo, n):   # titolari + le sole riserve ammesse dalla lega
                 if presi >= n:
                     break
-                fv = vero.get((p["id"], g))
-                if fv is not None:  # senza voto: si scorre, entra il prossimo del ruolo
+                fv = vero.get((e["player"]["id"], g))
+                if fv is not None:          # senza voto: entra il prossimo DELLO STESSO RUOLO
                     punti += fv
                     presi += 1
-            # gli slot che restano scoperti valgono 0
+            # se le riserve del ruolo finiscono, gli slot restano scoperti e valgono 0
         return punti
 
     modelli = {g: R.costruisci_modello(righe, players, calendario, prima_di_giornata=g) for g in giornate}
@@ -156,50 +175,89 @@ def main():
     rnd = random.Random(args.seed)
     campioni = [[rnd.choice(chiavi) for _ in chiavi] for _ in range(args.bootstrap)]
 
-    def confronta(valori, riferimento):
-        oss = st.mean(valori[k] - riferimento[k] for k in chiavi)
-        boot = sorted(st.mean(valori[k] - riferimento[k] for k in s) for s in campioni)
-        lo = boot[int(0.025 * args.bootstrap)]
-        hi = boot[int(0.975 * args.bootstrap) - 1]
-        verdetto = "MEGLIO" if lo > 0 else ("peggio" if hi < 0 else "indistinguibile")
-        return oss, lo, hi, verdetto
+    def esegui(chiave, modelli=modelli, pan=True, mod=False):
+        return {k: schiera_e_conta(k[0], k[1], chiave, modelli, pan, mod) for k in chiavi}
 
-    risultati = {nome: {k: schiera_e_conta(k[0], k[1], f, modelli) for k in chiavi} for nome, f in REGOLE}
-    base = risultati["modello attuale"]
+    def confronta(v, rif):
+        oss = st.mean(v[k] - rif[k] for k in chiavi)
+        boot = sorted(st.mean(v[k] - rif[k] for k in s) for s in campioni)
+        lo, hi = boot[int(0.025 * args.bootstrap)], boot[int(0.975 * args.bootstrap) - 1]
+        return oss, lo, hi, ("MEGLIO" if lo > 0 else ("peggio" if hi < 0 else "indistinguibile"))
 
+    panca = ", ".join(f"{n}{r}" for r, n in panchina_cfg.items())
     print(f"Backtest dell'undici: {len(teams)} rose x {len(giornate)} giornate "
           f"({giornate[0]}-{giornate[-1]}) = {len(chiavi)} formazioni.")
-    print("Ogni giornata schierata coi soli dati precedenti. Punti VERI, sostituzioni")
-    print("illimitate tra pari ruolo, slot scoperto = 0. Bootstrap appaiato "
-          f"{args.bootstrap}, seed {args.seed}.\n")
-    intest = f"{'regola':<34} {'punti':>6} {'min':>6} {'max':>6}   contro il modello, IC 95%"
+    print(f"Panchina vera: {sum(panchina_cfg.values())} giocatori ({panca}), sostituzioni solo tra")
+    print(f"pari ruolo, slot scoperto = {cfg['regole_lega']['slot_scoperto']} punti. "
+          f"Bootstrap appaiato {args.bootstrap}, seed {args.seed}.\n")
+
+    # Il riferimento e' il motore come gira davvero: panchina scelta con la probabilita' di
+    # prendere voto, modulo scelto sulla somma dei valori dei titolari (vedi suggest_lineup).
+    base = esegui(modello, pan=True, mod=False)
+    REGOLE = [("modello attuale", modello), ("media nuda dei voti", media_nuda),
+              ("fantamedia stagione scorsa", stagione_scorsa), ("quotazione iniziale", quotazione),
+              ("nessun ordine (ordine d'acquisto)", nessun_ordine), ("ORACOLO (sa i voti veri)", oracolo)]
+    intest = f"{'regola di valore':<34} {'punti':>6} {'min':>6} {'max':>6}   contro il modello, IC 95%"
     print(intest)
     print("-" * (len(intest) + 8))
-    for nome, _ in REGOLE:
-        v = risultati[nome]
+    for nome, f in REGOLE:
+        v = base if nome == "modello attuale" else esegui(f)
         riga = f"{nome:<34} {st.mean(v.values()):6.2f} {min(v.values()):6.1f} {max(v.values()):6.1f}   "
-        if nome == "modello attuale":
-            print(riga + "(riferimento)")
-            continue
-        oss, lo, hi, verdetto = confronta(v, base)
-        print(riga + f"{oss:+.2f} [{lo:+.2f},{hi:+.2f}] {verdetto}")
+        print(riga + ("(riferimento)" if nome == "modello attuale"
+                      else "{:+.2f} [{:+.2f},{:+.2f}] {}".format(*confronta(v, base))))
 
-    print("\nAblazione in punti: ogni pezzo del modello tolto o cambiato. Se una variante e'")
-    print("'indistinguibile', quel pezzo non sta guadagnando punti misurabili.")
-    VARIANTI = [
-        ("senza produzione", dict(produzione=False, contesto=True)),
-        ("senza contesto (avversario)", dict(produzione=True, contesto=False)),
-        ("senza nessuno dei due", dict(produzione=False, contesto=False)),
-        ("produzione a meta peso", dict(produzione=True, contesto=True, peso_produzione=0.5)),
-        (f"freno 3 invece di {R.FRENO_VOTI}", dict(produzione=True, contesto=True, freno=3)),
-        (f"freno 10 invece di {R.FRENO_VOTI}", dict(produzione=True, contesto=True, freno=10)),
-    ]
-    for nome, parametri in VARIANTI:
-        mods = {g: R.costruisci_modello(righe, players, calendario, prima_di_giornata=g, **parametri)
+    print("\nDove entra la probabilita' di prendere voto. NON nell'ordine dentro il ruolo (la'")
+    print("e' dimostrato che non conta), ma nella scelta di chi va in panchina. Sul modulo e'")
+    print("stata provata e SCARTATA perche' perde punti: vedi il commento in suggest_lineup.")
+    print("Negativo = quella variante fa peggio del motore di oggi.")
+    for nome, pan, mod in (("panchina per solo valore (come prima del 27/09)", False, False),
+                           ("modulo col valore atteso invece della somma", True, True),
+                           ("modulo col valore atteso + panchina vecchia", False, True)):
+        v = esegui(modello, pan=pan, mod=mod)
+        print(f"  {nome:<38} {st.mean(v.values()):6.2f}  " +
+              "{:+.2f} [{:+.2f},{:+.2f}] {}".format(*confronta(v, base)))
+
+    print("\nAblazione del modello in punti. 'indistinguibile' = quel pezzo non guadagna nulla,")
+    print("e con 36 formazioni il test non distingue differenze sotto il punto e mezzo.")
+    VARIANTI = [("senza contesto (avversario)", dict(produzione=False, contesto=False)),
+                ("CON la produzione (spenta dal 27/09)", dict(produzione=True, contesto=True)),
+                ("produzione a meta peso", dict(produzione=True, contesto=True, peso_produzione=0.5)),
+                ("produzione senza contesto", dict(produzione=True, contesto=False)),
+                (f"freno 3 invece di {R.FRENO_VOTI}", dict(produzione=True, contesto=True, freno=3)),
+                (f"freno 10 invece di {R.FRENO_VOTI}", dict(produzione=True, contesto=True, freno=10))]
+    for nome, par in VARIANTI:
+        mods = {g: R.costruisci_modello(righe, players, calendario, prima_di_giornata=g, **par)
                 for g in giornate}
-        v = {k: schiera_e_conta(k[0], k[1], modello, mods) for k in chiavi}
-        oss, lo, hi, verdetto = confronta(v, base)
-        print(f"  {nome:<32} {st.mean(v.values()):6.2f}  {oss:+.2f} [{lo:+.2f},{hi:+.2f}] {verdetto}")
+        v = esegui(modello, modelli=mods)
+        print(f"  {nome:<32} {st.mean(v.values()):6.2f}  " +
+              "{:+.2f} [{:+.2f},{:+.2f}] {}".format(*confronta(v, base)))
+
+    print("\nQuanto costa la panchina corta: slot rimasti scoperti (0 punti) per giornata,")
+    print("col modello e la panchina scelta per valore.")
+    scoperti = 0
+    for t in teams:
+        for g in giornate:
+            mo = modelli[g]
+            per_ruolo = {r: [] for r in R.ROLES}
+            for p in rose[t]:
+                if p["status"] not in R.EXCLUDED_STATUSES:
+                    per_ruolo[p["role"]].append(p)
+            val = {p["id"]: modello(p, g, mo) for r in R.ROLES for p in per_ruolo[r]}
+            for r in R.ROLES:
+                per_ruolo[r].sort(key=lambda p: -(val[p["id"]] if val[p["id"]] is not None else -99))
+            # modulo come lo sceglie il motore oggi
+            best, mig = None, None
+            for m_ in cfg["formation_modules"]:
+                c = {"P": 1, **R.MODULE_ROLE_COUNTS[m_]}
+                s = sum(val[p["id"]] or 0 for r_, n in c.items() for p in per_ruolo[r_][:n])
+                if best is None or s > best:
+                    best, mig = s, m_
+            for r_, n in {"P": 1, **R.MODULE_ROLE_COUNTS[mig]}.items():
+                cand = per_ruolo[r_][:n + panchina_cfg.get(r_, 0)]
+                presi = sum(1 for p in cand if vero.get((p["id"], g)) is not None)
+                scoperti += max(0, n - presi)
+    print(f"  {scoperti} slot scoperti su {len(chiavi) * 11} ({scoperti / len(chiavi):.2f} per formazione, "
+          f"circa {scoperti / len(chiavi) * 6:.1f} punti a giornata buttati)")
     return 0
 
 

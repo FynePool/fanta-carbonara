@@ -20,6 +20,17 @@ codice · **[Ipotesi]** sto colmando un vuoto.
 
 ---
 
+> **AGGIORNAMENTO 27/09 sera — una premessa di questo doc era sbagliata.** Qui sotto si
+> legge «sostituzioni illimitate», e da lì discende tutta la sezione seguente. La regola
+> vera, confermata dall'utente: **panchina di 7 giocatori a composizione fissa (1 P, 2 D,
+> 2 C, 2 A), entra il primo dello stesso ruolo, e se le riserve di quel ruolo finiscono lo
+> slot non prende voto e vale 0.** La dimostrazione «dentro un ruolo ordina per valore,
+> la probabilità non conta» **regge lo stesso** ed è ancora il criterio del motore. Cade
+> invece il corollario implicito che la probabilità non serva mai: con 1-2 posti per ruolo
+> serve a scegliere **chi** ci va, e vale +0,60 punti a giornata misurati. Vedi
+> `.docs/analisi-valutazione-formazione.md`, che contiene anche la revisione in punti di
+> tutti i pezzi del modello (la correzione per la produzione è stata spenta).
+
 ## Le regole della lega cambiano la diagnosi
 
 Confermate dalla lega il 24/09 e scritte in `config/league.json → regole_lega`:

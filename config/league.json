@@ -18,8 +18,8 @@
     "_note": "Euristica di partenza, non regola fissa: percentuale indicativa del budget totale da riservare per ruolo. Da adattare in base a chi si punta.",
     "P": 0.05,
     "D": 0.15,
-    "C": 0.30,
-    "A": 0.50
+    "C": 0.3,
+    "A": 0.5
   },
   "formation_modules": [
     "3-4-3",
@@ -48,16 +48,33 @@
     "_portiere_improvvisato": "Un giocatore di movimento che finisce in porta sostituisce a tutti gli effetti il portiere, con bonus e malus del portiere."
   },
   "regole_lega": {
-    "_fonte": "Modificatore e sostituzioni confermati dalla lega il 24/09/2026; il resto dal regolamento FantaCarbonara (24/09/2026), con i rinvii chiariti dall'utente lo stesso giorno.",
+    "_fonte": "Modificatore e sostituzioni confermati dalla lega il 24/09/2026; panchina e modalita' sostituzioni confermate dall'utente il 27/09/2026; il resto dal regolamento FantaCarbonara (24/09/2026), con i rinvii chiariti dall'utente lo stesso giorno.",
     "modificatore_difesa": false,
-    "sostituzioni_max": null,
-    "_sostituzioni_note": "null = illimitate: ogni titolare senza voto viene sostituito dal primo panchinaro dello stesso ruolo che ha preso voto (stesso ruolo confermato dalla lega il 24/09/2026).",
+    "sostituzioni_max": 7,
+    "_sostituzioni_note": "7 = i 7 panchinari, tutti utilizzabili. NON sono illimitate nel senso che conta: la panchina ha una composizione FISSA per ruolo (vedi `panchina`), quindi per ogni ruolo si puo' sostituire al massimo quante riserve ha quel ruolo. Confermato dall'utente il 27/09/2026.",
     "rinvii": {
       "max_partite_6_politico": 3,
       "_note": "Si contano le partite della giornata non giocate entro la giornata (una partita spostata di giorno ma giocata dentro la giornata non è un rinvio). Fino a 3 partite rinviate: tutti i giocatori di quelle partite prendono 6 politico, senza recupero. Più di 3: TUTTE le partite rinviate della giornata si aspettano e i giocatori prendono il voto del recupero (il sito chiude la giornata solo allora). Una partita sospesa vale per i voti presi fino all'interruzione, senza 6 politico per chi non ha giocato."
     },
     "scadenza_formazione": "Fino a un secondo prima dell'inizio della partita che apre la giornata di Serie A. L'admin inserisce la formazione solo se gli viene comunicata prima di quell'orario.",
-    "formazione_non_schierata": "Sconfitta 3-0 a tavolino; la seconda volta anche -1 punto in classifica; dalla terza in poi 5 euro di penale ciascuna."
+    "formazione_non_schierata": "Sconfitta 3-0 a tavolino; la seconda volta anche -1 punto in classifica; dalla terza in poi 5 euro di penale ciascuna.",
+    "panchina": {
+      "_note": "Composizione fissa della panchina: 7 giocatori, 1 per ruolo piu' 2 per D, C, A. Non si possono mettere 3 difensori e 1 centrocampista. Lo legge lib/roster.py.",
+      "P": 1,
+      "D": 2,
+      "C": 2,
+      "A": 2
+    },
+    "modalita_sostituzioni": "pari_ruolo",
+    "_modalita_sostituzioni_note": "'pari_ruolo' = la modalita' Traditional di leghe.fantacalcio.it: entra sempre il primo panchinaro DELLO STESSO RUOLO che ha preso voto, e il modulo non cambia mai. Le altre due modalita' della piattaforma (Hybrid, Dynamic) cambiano il modulo e NON si applicano qui. Confermato dall'utente il 27/09/2026.",
+    "slot_scoperto": 0,
+    "_slot_scoperto_note": "Se un titolare non prende voto e nessuna riserva del suo ruolo ha preso voto, lo slot vale 0: non entra nessuno e il punto e' perso. E' il motivo per cui la profondita' di un ruolo conta e la probabilita' di prendere voto torna a pesare sulla scelta della panchina e del modulo. Confermato dall'utente il 27/09/2026.",
+    "soglie_gol": {
+      "_fonte": "DA CONFERMARE CON LA LEGA. Valori standard di fantacalcio.it (primo gol a 66, poi una fascia ogni 6 punti); la piattaforma li rende configurabili e consiglia fasce tra 4 e 6 punti. Finche' `da_confermare` e' true il report li usa solo per dire se una decisione cambia il risultato, avvisando che sono da verificare.",
+      "da_confermare": true,
+      "primo_gol": 66.0,
+      "fascia": 6.0
+    }
   },
   "regole_mercato": {
     "_fonte": "Regolamento FantaCarbonara (24/09/2026), sezione ASTA; regola sullo sforamento chiarita dall'utente lo stesso giorno. asta.py non le applica ancora.",
