@@ -6,7 +6,9 @@ Fonte: l'API privata di leghe.fantacalcio.it (lib/leghe_fc_client.py), endpoint
 `/onboarding/v1/league/teams/all`, verificata il 27/09/2026 sulla lega vera. Per ogni
 squadra: `id`, `n` (nome), `cal` (id fantacalcio dei giocatori, separati da ";"), `cs`
 (prezzi d'acquisto, nello stesso ordine), `cr` (crediti rimanenti), `cri` (crediti
-iniziali, 554) e `bm` (correzione, -54): i crediti totali sono cri + bm = 500.
+iniziali, 554) e `bm` (correzione, -54): i crediti totali sono cri + bm = 500. I crediti
+si scrivono come li dà la lega, senza controlli: Ss Igari ha 554 totali (senza la
+correzione) e per decisione dell'utente va bene così, contano rose e voti.
 
 La lega ha anche squadre vuote (18 squadre il 27/09, 6 senza nessun giocatore: ragazzi
 che quest'anno non giocano). Entra ogni squadra con almeno un giocatore: una squadra
@@ -191,10 +193,6 @@ def main():
         print(f"Entrati in una rosa ({len(entrati)}): " + ", ".join(entrati))
     if usciti:
         print(f"Usciti da una rosa ({len(usciti)}): " + ", ".join(usciti))
-    for t in teams:
-        if t["credits_total"] != config["credits_per_team"]:
-            print(f"ATTENZIONE: {t['name']} ha {t['credits_total']} crediti totali sulla lega, la regola è "
-                  f"{config['credits_per_team']} (scritti come sono: da correggere sulla lega, non qui).")
     for a in avvisi:
         print(f"ATTENZIONE: {a}")
 

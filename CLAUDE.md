@@ -148,7 +148,8 @@ se non scende in campo entra il primo della panchina: vedi
   l'admin spostava la rosa di Fortitudo sulla squadra Ss Igari, l'API ha restituito per
   qualche secondo quasi tutte le rose vuote): un'uscita vera si accetta a mano con
   `--accetta-squadre-uscite`, e i giocatori spostati tengono data e modalità d'acquisto.
-  Segnala le squadre con crediti totali diversi da 500 (li scrive come sono). Crediti totali =
+  I crediti si scrivono come li dà la lega, senza controlli: Ss Igari ne ha 554 totali
+  invece di 500, e per decisione dell'utente (27/09) non importa, contano rose e voti. Crediti totali =
   `cri` + `bm` (554 - 54 = 500). Non salva il proprietario (è lo username, dato
   personale). Chi entra in una rosa dopo il primo import è `da_verificare`: l'API non
   dice se è uno svincolato o uno scambio. `--verifica-csv` confronta con un export
