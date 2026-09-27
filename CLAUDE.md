@@ -328,6 +328,13 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
 
 ## Regole per chi lavora su questo repo
 
+- **Fusione in `main` senza chiedere** (decisione dell'utente, 27/09): una modifica
+  finita si porta su `main` con una pull request e la si fonde subito, senza chiedere
+  conferma, ma solo dopo averla verificata (script che girano, report e backtest
+  rilanciati se toccati, diff riletto). Dopo, si dice all'utente cosa è stato fuso e il
+  link della PR. Restano da chiedere prima le operazioni distruttive (riscrivere la
+  storia di git, togliere righe dallo storico dei voti, cancellare dati).
+
 - **L'utente sa poco o niente di calcio**: il progetto decide al posto suo. Ogni
   consiglio va motivato in parole semplici, spiegando il gergo; quando una scelta è sua
   (pari del modello, rischi), deve avere tutte le informazioni per capirla: cosa si
