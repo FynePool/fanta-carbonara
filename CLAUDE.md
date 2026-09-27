@@ -281,6 +281,19 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   distorsione per numero di voti. Non scrive niente. `--descrittive` stampa i fatti
   citati nel doc dei difetti. Da rilanciare quando ci sono più giornate, prima di
   toccare `roster.py`.
+- `backtest_undici.py [--dal N] [--bootstrap N]` — il backtest **dell'undici**, non del
+  singolo voto: per ogni giornata dalla 3 in poi e per tutte le 12 rose della lega
+  schiera la formazione coi soli dati precedenti, applica le regole (sostituzioni
+  illimitate tra pari ruolo, slot scoperto = 0) e somma i punti **veri**. Confronta il
+  modello con regole banali (media nuda, fantamedia della stagione scorsa, quotazione
+  iniziale, nessun ordine) e con un oracolo che conosce i voti, e ablaziona i pezzi del
+  modello in punti. Bootstrap appaiato su (squadra, giornata). Risponde alla domanda che
+  `backtest_formazione.py` non pone: quanti punti a giornata vale una modifica. Il 27/09
+  il modello valeva +1,75 punti a giornata sull'ordine d'acquisto e la correzione per la
+  produzione +0,14 [−0,79, +0,89], cioè niente: vedi
+  `.docs/analisi-valutazione-formazione.md`. **È il collaudo da superare prima di toccare
+  `roster.py`**: una modifica entra solo se guadagna punti con l'intervallo che esclude
+  lo zero. Non scrive niente.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
   È quella che esegue la routine del mattino: per aggiungere un dato al giro
@@ -310,6 +323,17 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   veri: difetti 9-13, il modello del valore con formula e parametri, il backtest,
   i pezzi scartati e perché, la simulazione rifatta. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.
+- `.docs/analisi-valutazione-formazione.md` — analisi esterna del 27/09 di come il
+  progetto valuta la formazione, con la metrica che mancava (`backtest_undici.py`, punti
+  veri invece di MAE). Punti forti verificati: il criterio "ordina per media quando
+  gioca" è ottimo per questa lega, il freno sulle medie è dove stanno i punti (+1,75 a
+  giornata), l'onestà sui dati. Punti debili: tre impostazioni della lega mai lette
+  (modalità sostituzioni — portante e non confermata, dimensione massima della panchina,
+  soglie gol), il calendario testa-a-testa importato e mai letto, la correzione per la
+  produzione che vale zero punti e produce i numeri più vistosi del report, nessun avviso
+  sulla profondità di un ruolo, i rigoristi. Contiene anche le critiche da esperto che
+  **non** reggono, misurate (compagni di squadra: ρ = 0,07, +4% di σ; stagione scorsa come
+  ordinamento: −1,79 punti). Da leggere insieme al doc dei difetti.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 
