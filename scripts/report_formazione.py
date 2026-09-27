@@ -16,16 +16,52 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from lib import store
-from lib.roster import suggest_lineup
+from lib.roster import SOGLIA_PARI, suggest_lineup
 
 
 def _voti(rating: dict | None) -> str:
+    """Il valore e i suoi tre pezzi, in colonna: voti (media frenata), produzione, contesto."""
     if rating is None:
         return "  -    senza voti"
     if rating.get("politico"):
         return " 6.00  6 politico (rinvio)"
-    n = rating["n"]
-    return f"{rating['punteggio']:5.2f}  media {rating['media']:.2f} su {n} vot{'o' if n == 1 else 'i'}"
+    prod = rating["produzione"]
+    ctx = rating["contesto"]
+    pezzi = [f"voti {rating['base'] - (prod['effetto'] if prod else 0):.2f}"]
+    if prod:
+        pezzi.append(f"prod {prod['effetto']:+.2f}")
+    else:
+        pezzi.append("prod     -" if rating.get("portiere") else "prod   n/d")
+    pezzi.append(f"avv {ctx['effetto']:+.2f}" if ctx else "avv   n/d")
+    return f"{rating['punteggio']:5.2f}  {'  '.join(pezzi)}"
+
+
+def _dettaglio(e: dict) -> str:
+    """Da cosa è fatto il valore, in parole: una riga per giocatore."""
+    p, r = e["player"], e["rating"]
+    if r is None:
+        return f"[{p['role']}] {p['name']}: nessun voto, nessun valore. Decidi tu."
+    if r.get("politico"):
+        return f"[{p['role']}] {p['name']}: partita rinviata, 6 politico."
+    n = r["n"]
+    parti = [
+        f"media {r['media']:.2f} su {n} vot{'o' if n == 1 else 'i'} "
+        f"({r['titolare']} da titolare, {r['da_subentrato']} da subentrato"
+        + (f", {n - r['titolare'] - r['da_subentrato']} senza dato" if n - r["titolare"] - r["da_subentrato"] else "")
+        + f"), frenata verso {r['riferimento']:.2f} del ruolo"
+    ]
+    prod = r["produzione"]
+    if prod and prod["voti_con_tiri"]:
+        parti.append(
+            f"{prod['gol_azione']} gol su azione contro {prod['gol_attesi']:.1f} attesi da "
+            f"{prod['tiri_porta']} tiri in porta su {prod['tiri']} ({prod['effetto']:+.2f})"
+        )
+    elif p["role"] != "P":
+        parti.append("tiri non disponibili (BigBalls non ha il giocatore): produzione non conteggiata")
+    ctx = r["contesto"]
+    if ctx:
+        parti.append(f"{ctx['avversario']} subisce {ctx['subiti']:.1f} gol a partita ({ctx['effetto']:+.2f})")
+    return f"[{p['role']}] {p['name']} {r['punteggio']:.2f}: " + "; ".join(parti) + "."
 
 
 ROMA = ZoneInfo("Europe/Rome")
@@ -97,15 +133,19 @@ def main():
 
     if r["modulo"]:
         print(f"Modulo consigliato: {r['modulo']}")
-        print("Il numero è il valore usato per scegliere: la media quando gioca, avvicinata")
-        print("alla media del ruolo se i voti sono pochi.\n")
+        print("Il numero è il fantavoto atteso se il giocatore prende voto, e ordina ogni ruolo:")
+        print("  voti = media degli ultimi 5 voti, avvicinata alla media del ruolo se sono pochi;")
+        print("  prod = correzione dei gol su azione con quelli attesi dai tiri in porta;")
+        print("  avv  = quanto subisce l'avversario rispetto alla media del campionato.")
+        print("La probabilità di giocare non entra nel numero (con i cambi illimitati se non")
+        print("gioca entra il primo della panchina): serve agli avvisi.\n")
         panchina_per_ruolo = {}
         for e in r["panchina"]:
             panchina_per_ruolo.setdefault(e["player"]["role"], []).append(e["player"]["name"])
         print("TITOLARI:")
         for e in r["titolari"]:
             p = e["player"]
-            riga = f"  [{p['role']}] {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p):<17} {_partita(e)}"
+            riga = f"  [{p['role']}] {p['name']:<18} {_voti(e['rating']):<39} {_titolarita(p):<17} {_partita(e)}"
             prob = p.get("prob_titolare")
             politico = e["rating"] and e["rating"].get("politico")
             if prob is not None and prob < 75 and not politico and panchina_per_ruolo.get(p["role"]):
@@ -123,7 +163,20 @@ def main():
         p = e["player"]
         contatori[p["role"]] = contatori.get(p["role"], 0) + 1
         etichetta = f"{p['role']}{contatori[p['role']]}"
-        print(f"  {etichetta:<3} {p['name']:<22} {_voti(e['rating']):<34} {_titolarita(p):<17} {_partita(e)}")
+        print(f"  {etichetta:<3} {p['name']:<18} {_voti(e['rating']):<39} {_titolarita(p):<17} {_partita(e)}")
+
+    if r["modulo"]:
+        print("\nDA COSA È FATTO IL VALORE (titolari e primi due cambi di ogni ruolo):")
+        primi = {}
+        for e in r["panchina"]:
+            primi.setdefault(e["player"]["role"], []).append(e)
+        for e in r["titolari"] + [e for role in "PDCA" for e in primi.get(role, [])[:2]]:
+            print(f"  {_dettaglio(e)}")
+
+    if r["decisioni"]:
+        print(f"\nDECISIONI TUE (sotto {SOGLIA_PARI:.2f} di differenza il modello non sa scegliere meglio di una moneta):")
+        for d in r["decisioni"]:
+            print(f"  - {d}")
 
     if r["non_disponibili"]:
         print("\nNON DISPONIBILI:")

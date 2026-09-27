@@ -96,20 +96,37 @@ Chiavi osservate: `goals`, `assists`, `yellow_cards`, `red_cards`, `fouls_commit
 `duels_total`, `duels_won`, `tackles_total`, `tackles_blocks`, `interceptions`,
 `offsides`, `captain`, `substitute`, `rating`.
 
-**Due avvertenze importanti, verificate:**
+**Avvertenze importanti, verificate:**
 
 1. **`rating` NON è il voto fantacalcio.** È un rating generico stile Opta/Sofascore.
    Il voto che conta per lo scoring è solo quello di fantacalcio.it /
    leghe.fantacalcio.it. In `matchday_stats.json` i campi `voto`/`fantavoto` restano
    `null` e non vanno mai riempiti da qui.
-2. **Il box score è contaminato**: nella lista giocatori di una partita di Serie A
-   compaiono anche giocatori con `team_name` di club o nazionali estranee
+2. **Il `team_name` del box score non è affidabile**: nella lista giocatori di una
+   partita di Serie A compaiono giocatori con `team_name` di club o nazionali estranee
    (Liverpool, Chelsea, Marsiglia, RB Lipsia, Argentina, Croazia, Svizzera,
    Giappone…), alcuni con `team_name: null` o caratteri corrotti nel nome.
-   Osservato su quasi tutte le 44 partite importate. Difesa adottata: una riga
-   viene scritta **solo** se nome+squadra combaciano con un giocatore noto in
-   `data/players.json` — le squadre estranee non hanno match possibile e restano
-   escluse per costruzione.
+   **Verificato il 27/09: in gran parte non sono estranei**, sono giocatori veri della
+   partita, con i minuti giusti, etichettati con la squadra della stagione scorsa o la
+   nazionale (Kean "Fiorentina" nel Como, Curtis Jones "Liverpool" nell'Inter, N.
+   González "Argentina" nella Juventus). Il matching per squadra li perdeva: 179 voti
+   senza statistiche. Difesa adottata: una riga nuova si scrive **solo** se
+   nome+squadra combaciano con un giocatore della partita in `data/players.json`; le
+   righe che fantacalcio.it ha già per quella partita vengono arricchite con un
+   abbinamento per nome sui soli giocatori non abbinati (riconciliazione in
+   `import_matchday_stats.py`). Controllo: gol, assist e cartellini tornano con
+   fantavoto − voto in 130 righe riconciliate su 131.
+3. **Nomi sporchi**: entità HTML (`N&apos;Diaye`), UTF-8 letto come Latin-1
+   (`OulaÃ¯`, `ObriÄ\x87`), cognomi staccati (`Del Prato` per `Delprato`), doppi cognomi
+   spagnoli (`Jacobo Ramón Naveros`). La riconciliazione li ripara prima di confrontare.
+4. **Chiavi omesse a zero**: `shots_total`, `shots_on`, `passes_key` ecc. mancano quando
+   valgono 0 (anche per chi ha giocato 90'); si scrivono 0. `substitute` c'è sempre:
+   `true` = partiva dalla panchina (con `minutes` > 0 è entrato). Contando i titolari
+   (`substitute: false` con minuti) tra le righe abbinate, 68 squadre-partita su 100 ne
+   hanno 11, 20 ne hanno di più (fino a 16: subentrati segnati come titolari) e 12 di
+   meno (giocatori non abbinati). Rumore della fonte, non corretto.
+5. **Rigori quasi assenti**: `penalty_scored`/`penalty_missed` danno 5 rigori calciati in
+   50 partite (27/09). Il rigorista non si ricava da qui.
 
 ### `GET /v1/matches/{id}/events` — timeline eventi
 

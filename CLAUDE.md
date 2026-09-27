@@ -24,7 +24,9 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   leghe.fantacalcio.it, crediti totali/rimanenti. Il proprietario non si salva (dato personale).
 - `players.json` — **pool completo di tutti i giocatori Serie A** (non solo quelli
   posseduti), dal listone ufficiale di fantacalcio.it (`import_listone_fc.py`): id, nome, ruolo (P/D/C/A), squadra
-  Serie A, `quotazione`. Il campo `status` (titolare | dubbio | ballottaggio |
+  Serie A, `quotazione_iniziale` (QI, fissata prima della stagione), `quotazione` (QA,
+  si muove coi voti) e `fvm`. Solo la QI è un'informazione a priori pulita: QA e FVM
+  contengono le giornate già giocate (vedi difetto 13 del doc dei difetti). Il campo `status` (titolare | dubbio | ballottaggio |
   infortunato | squalificato | panchina | n/d) e `status_updated_at` diventano
   rilevanti solo a stagione iniziata e **vanno aggiornati prima di ogni deadline**
   leggendo le probabili formazioni pubblicate sui siti (fantacalcio.it, SOS Fanta,
@@ -35,20 +37,20 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   su leghe.fantacalcio.it), prezzo d'acquisto, data, modalità (asta | da_verificare).
   Riscritto ogni mattina dalla lega: vedi `import_rose_lega.py`.
 - `matchday_stats.json` — storico per giornata: player_id, matchday, squadra Serie A
-  avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, falli, minuti.
-  Gol/assist/cartellini/falli/minuti da BigBalls; `voto` e `fantavoto` da fantacalcio.it
-  (`import_voti.py`, voto "Redazione Fantacalcio"), `null` se il giocatore è senza voto.
-  Le righe dei giocatori con voto che BigBalls non riconosce (30-60 a giornata) hanno
-  le statistiche BigBalls a `null`. L'endpoint BigBalls
-  usato mescola nel box score di una partita anche giocatori di squadre estranee
-  (altri campionati, nazionali): una riga viene scritta solo se nome+squadra
-  combaciano con un giocatore che sappiamo essere davvero in quella squadra di
-  Serie A in `players.json`. Questo esclude le squadre di altri campionati, ma
-  **non** un giocatore di un'altra squadra di Serie A finito nel box score sbagliato:
-  oggi ci sono 3 righe di questo tipo (vedi difetto 7 in
-  `.docs/difetti-consiglio-formazione.md`). I "non trovati" (script stampa l'elenco) sono
-  in parte questo rumore, in parte veri giocatori mancanti dal listone: da
-  ricontrollare quando si rinfresca `players.json`.
+  avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, falli, minuti,
+  `tiri`, `tiri_porta`, `passaggi_chiave`, `rigori_segnati`, `rigori_sbagliati`,
+  `subentrato` (vero se partiva dalla panchina). Le statistiche vengono da BigBalls;
+  `voto` e `fantavoto` da fantacalcio.it (`import_voti.py`, voto "Redazione
+  Fantacalcio"), `null` se il giocatore è senza voto. Le righe con voto di giocatori
+  che BigBalls non ha (42 il 27/09, 17 giocatori) hanno le statistiche a `null` e
+  `bigballs: "non_trovato"`. Il box score BigBalls etichetta spesso chi ha cambiato
+  squadra con la squadra vecchia o la nazionale (Kean "Fiorentina", Curtis Jones
+  "Liverpool"): l'importer li recupera riconciliandoli con i voti di fantacalcio.it
+  (vedi `import_matchday_stats.py`). Una riga nuova si scrive solo se nome+squadra
+  combaciano con un giocatore della partita in `players.json`; un giocatore di
+  un'altra squadra di Serie A finito nel box score sbagliato non passa più (difetto 7
+  in `.docs/difetti-consiglio-formazione.md`). I "non riconosciuti" che lo script
+  stampa sono soprattutto giocatori assenti dal listone (Primavera, riserve).
 - `injuries.json` — storico infortuni: player_id, date, tipo, stato, rientro previsto.
 - `squalifiche.json` — squalificati e diffidati attuali da fantacalcio.it (pagina
   "Indisponibili Serie A"): player_id, nome, squadra, `tipo` (squalificato |
@@ -79,8 +81,8 @@ riparazione con +50 crediti, scambi solo a gennaio; `asta.py` non le applica anc
 `competizioni` i criteri di parità per la futura fase classifica. I punteggi in
 `scoring` non li legge nessuno script (il fantavoto arriva già calcolato dal sito) e
 due valori sono `null` perché il regolamento non li chiarisce. Con i cambi illimitati, dentro un ruolo va
-schierato prima chi ha la media più alta quando gioca, anche se gioca poco, perché
-se non scende in campo entra il primo della panchina: vedi
+schierato prima chi ha il fantavoto atteso più alto quando prende voto, anche se gioca
+poco, perché se non scende in campo entra il primo della panchina: vedi
 `.docs/difetti-consiglio-formazione.md`.
 
 ## Script (`scripts/`)
@@ -186,18 +188,28 @@ se non scende in campo entra il primo della panchina: vedi
   listone (`fd<id>`). "55" sulla pagina è senza voto (un 6 grigio a video): si scrive
   `null`. Solo partite finite nel calendario (durante la giornata i voti sono
   provvisori), e i voti vengono sempre riscritti perché il sito li può correggere.
-  Va lanciato dopo `import_matchday_stats.py`. I voti di giocatori assenti dal listone
+  Va lanciato dopo `import_matchday_stats.py` (le righe che crea per giocatori non
+  abbinati vengono riconciliate col box score al giro dopo). I voti di giocatori assenti dal listone
   vengono stampati e non scritti: 11 sulle prime 5 giornate, giocatori che non sono
   nemmeno nel listone ufficiale di oggi (usciti dalla Serie A o mai listati). Il fantavoto del
   sito usa i bonus standard, non per forza quelli della lega (vedi `scoring`): per
   ordinare i giocatori va bene, per un'eventuale classifica fa fede leghe.fantacalcio.it.
 - `import_matchday_stats.py [--ricostruisci]` — box score per giocatore da BigBalls
-  (`/v1/stored/matches/{id}/stats`) in `data/matchday_stats.json`. **Incrementale**:
-  scarica solo le partite finite non ancora in archivio (il piano free ha 500
-  chiamate al giorno; `--ricostruisci` le riscarica tutte). Aggiorna la giornata
-  delle righe esistenti dal calendario, e non sovrascrive mai `voto`/`fantavoto` già
-  presenti. Non scrive righe di giocatori la cui squadra non gioca la partita (box
-  score contaminato), ma non toglie mai righe già in archivio.
+  (`/v1/stored/matches/{id}/stats`) in `data/matchday_stats.json`: gol, assist,
+  cartellini, falli, minuti, tiri, tiri in porta, passaggi chiave, rigori segnati e
+  sbagliati, subentrato. **Incrementale**: scarica le partite finite non ancora in
+  archivio, quelle con righe senza i campi nuovi (una volta sola) e quelle con righe di
+  fantacalcio.it non ancora cercate nel box score (di solito il giorno dopo la partita).
+  Il piano free ha 500 chiamate al giorno; `--ricostruisci` le riscarica tutte. Le
+  righe già in archivio vengono **arricchite, non riscritte**: si riempiono solo i campi
+  vuoti, la giornata si aggiorna dal calendario, `voto`/`fantavoto` non si toccano mai
+  (`--ricostruisci` riscrive le statistiche, mai i voti). Non scrive righe nuove di
+  giocatori la cui squadra non gioca la partita, e non toglie mai righe già in archivio.
+  **Riconciliazione con i voti**: un nome del box score non abbinato (etichetta di
+  squadra vecchia, "Del Prato" per "Delprato", entità HTML, UTF-8 rotto) che combacia
+  con un giocatore che fantacalcio.it ha già in quella partita gli dà le statistiche;
+  non crea righe. Verificata il 27/09: 145 righe recuperate, 130 su 131 coerenti con
+  fantavoto − voto. Chi resta fuori è marcato `bigballs: "non_trovato"`.
   Il matching nomi gestisce le abbreviazioni del listone a più lettere ("Martinez
   Jo."), i cognomi doppi ("Kolo Muani") e rifiuta un abbinamento se le iniziali sono
   note e diverse: se listone e BigBalls non concordano sulla squadra di un giocatore
@@ -212,10 +224,17 @@ se non scende in campo entra il primo della panchina: vedi
   ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
 - `report_formazione.py --team-id <id> [--matchday N]` — legge lo stato attuale della
   rosa e propone modulo, titolari e panchina **ordinata** (la logica sta in
-  `lib/roster.py`). Dentro ogni ruolo ordina per media quando il giocatore gioca
-  (ultimi 5 voti), avvicinata alla media del ruolo se i voti sono pochi; la
-  probabilità di giocare non entra nell'ordine ma negli avvisi ("se non gioca entra
-  X"). Stampa per ognuno "media X su N voti". Non si blocca se un ruolo è senza
+  `lib/roster.py`). Dentro ogni ruolo ordina per il **fantavoto atteso se il giocatore
+  prende voto**, fatto di tre pezzi mostrati in colonna: `voti` (media degli ultimi 5,
+  frenata verso la media del ruolo come se avesse 5 partite in più), `prod` (nei voti,
+  i gol su azione sostituiti da quelli attesi dai tiri in porta) e `avv` (quanto subisce
+  l'avversario della prossima partita rispetto alla media). Ogni pezzo è verificato con
+  `backtest_formazione.py`; a priori dalla quotazione, titolare/spezzone e casa/trasferta
+  sono stati provati e scartati. La probabilità di giocare non entra nell'ordine ma
+  negli avvisi ("se non gioca entra X"). La sezione "DA COSA È FATTO IL VALORE" spiega
+  in una riga titolari e primi due cambi di ogni ruolo; "DECISIONI TUE" elenca le scelte
+  entro 0,20 punti (dove nel backtest l'ordine indovina come una moneta), i moduli quasi
+  pari e i titolari con dati deboli: lì decidi tu. Non si blocca se un ruolo è senza
   dati: lascia lo slot a te col motivo. Segnala i giocatori di `ownership.json`
   spariti dal listone. Per ogni giocatore mostra la prossima partita della sua
   squadra (avversario, casa/trasferta, data), ricavata dalle date del calendario
@@ -229,6 +248,12 @@ se non scende in campo entra il primo della panchina: vedi
   iniziato) avvisa e non applica niente di tutto questo. Avvisa anche per i titolari
   assenti dalle probabili, per gli status più vecchi di 4 giorni e per i titolari
   diffidati. `--matchday` è solo l'etichetta del titolo.
+- `backtest_formazione.py [--descrittive]` — prevede ogni giornata dalla 3 in poi con i
+  soli dati precedenti e confronta modello del 27/09, nuovo e varianti (MAE, ordine
+  giusto dentro la rosa, bootstrap), più la taratura della soglia dei pari e la
+  distorsione per numero di voti. Non scrive niente. `--descrittive` stampa i fatti
+  citati nel doc dei difetti. Da rilanciare quando ci sono più giornate, prima di
+  toccare `roster.py`.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
   È quella che esegue la routine del mattino: per aggiungere un dato al giro
@@ -238,7 +263,8 @@ se non scende in campo entra il primo della panchina: vedi
 
 - `.docs/bigballs-api.md` — riferimento dell'API BigBalls (auth, limiti del piano,
   endpoint usati e non ancora usati, convenzioni su `season`/`league`/`round`) con
-  le magagne verificate sul campo: box score contaminato da squadre estranee,
+  le magagne verificate sul campo: box score con etichette di squadra vecchie e
+  giocatori estranei, rigori quasi assenti,
   eventi duplicati, `rating` che non è il voto fantacalcio, `round` assegnato solo
   dopo la partita (in ritardo di circa un giorno, e vuoto su tutte le partite
   future), note di piano nello spec non affidabili. Da leggere prima di toccare
@@ -253,8 +279,9 @@ se non scende in campo entra il primo della panchina: vedi
   `data/` → `roster.py` → `report_formazione.py`, ricontrollata il 24/09 sul codice
   di `main` e con le regole vere della lega: 8 difetti riprodotti con comando e
   output, tutti risolti il 24/09 (fasi A, B, C e squalifiche), l'elenco di ciò che è stato
-  tolto dopo la verifica, le correzioni trovate strada facendo e cosa resta da
-  ritarare quando arriveranno i voti. Da leggere prima di toccare
+  tolto dopo la verifica, le correzioni trovate strada facendo. Il 27/09, sui voti
+  veri: difetti 9-13, il modello del valore con formula e parametri, il backtest,
+  i pezzi scartati e perché, la simulazione rifatta. Da leggere prima di toccare
   `roster.py`, `report_formazione.py` o la pipeline delle probabili formazioni.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)

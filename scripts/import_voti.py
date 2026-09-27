@@ -52,7 +52,7 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from import_matchday_stats import STAT_FIELDS
+from import_matchday_stats import CAMPI_BIGBALLS
 from lib import store
 
 URL = "https://www.fantacalcio.it/voti-fantacalcio-serie-a/{stagione}/{giornata}"
@@ -228,7 +228,7 @@ def main():
                     "home_away": "casa" if in_casa else "trasferta",
                     "voto": None,
                     "fantavoto": None,
-                    **{field: None for field in STAT_FIELDS},
+                    **{field: None for field in CAMPI_BIGBALLS},
                 }
                 by_key[key] = row
                 nuove += 1
