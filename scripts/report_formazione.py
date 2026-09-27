@@ -67,6 +67,26 @@ def _dettaglio(e: dict) -> str:
 ROMA = ZoneInfo("Europe/Rome")
 
 
+def _stagione(d: dict | None) -> str:
+    if not d or not d["partite_con_voto"]:
+        return "non ha giocato in Serie A"
+    testo = f"{d['squadra']} {d['partite_con_voto']} voti, fantamedia {d['fantamedia']:.2f}"
+    if d["ruolo"] == "P":
+        testo += f", {d['gol_subiti']} gol subiti"
+    else:
+        testo += f", {d['gol']} gol, {d['assist']} assist"
+    if d["rigori_calciati"]:
+        testo += f", rigori {d['rigori_segnati']} su {d['rigori_calciati']}"
+    return testo
+
+
+def _storico() -> dict:
+    """Stagioni passate da data/storico_stagioni.json (import_storico_stagioni.py), dalla
+    più recente. Solo contesto: non entra nel valore (il backtest non lo sostiene ancora)."""
+    path = store.DATA_DIR / "storico_stagioni.json"
+    return store.load_json(path)["stagioni"] if path.exists() else {}
+
+
 def _quando(data_utc: str) -> str:
     return datetime.fromisoformat(data_utc.replace("Z", "+00:00")).astimezone(ROMA).strftime("%d/%m")
 
@@ -172,6 +192,15 @@ def main():
             primi.setdefault(e["player"]["role"], []).append(e)
         for e in r["titolari"] + [e for role in "PDCA" for e in primi.get(role, [])[:2]]:
             print(f"  {_dettaglio(e)}")
+
+    storico = _storico()
+    if storico and (r["titolari"] or r["panchina"]):
+        stagioni = list(storico)[:2]
+        print(f"\nSTAGIONI PASSATE in Serie A ({', '.join(stagioni)}; solo contesto, non entra nel valore):")
+        for e in r["titolari"] + r["panchina"]:
+            p = e["player"]
+            dati = " | ".join(f"{s}: {_stagione(storico[s]['giocatori'].get(p['id']))}" for s in stagioni)
+            print(f"  [{p['role']}] {p['name']:<16} {dati}")
 
     if r["decisioni"]:
         print(f"\nDECISIONI TUE (sotto {SOGLIA_PARI:.2f} di differenza il modello non sa scegliere meglio di una moneta):")

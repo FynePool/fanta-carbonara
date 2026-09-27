@@ -1,0 +1,38 @@
+{
+  "aggiornato_il": "2026-09-27",
+  "notizie": [
+    {
+      "data": "2026-09-16",
+      "squadra": "Bologna",
+      "giocatori": [
+        "fd5858",
+        "fd4734",
+        "fd184"
+      ],
+      "tipo": "allenatore",
+      "fatto": "Tedesco esonerato dopo 1 punto nelle prime giornate (16° posto, 2 gol segnati); al suo posto Raffaele Palladino, contratto fino al 2029. Con un allenatore nuovo le gerarchie dei titolari possono cambiare.",
+      "fonti": [
+        "https://sport.sky.it/calcio/serie-a/2026/09/16/bologna-tedesco-esonero-palladino-allenatore-news",
+        "https://www.ilrestodelcarlino.it/bologna/sport/bfc/bologna-esonero-tedesco-5dd147a8"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-07",
+      "squadra": "Fiorentina",
+      "giocatori": [
+        "fd6294"
+      ],
+      "tipo": "allenatore",
+      "fatto": "Esonerato Grosso dopo tre giornate, torna Paolo Vanoli (aveva salvato la squadra la stagione scorsa). Con lui 2 vittorie e un pareggio nelle prime tre partite ufficiali; la difesa resta un problema (12 gol subiti in 5 partite secondo il Corriere dello Sport).",
+      "fonti": [
+        "https://www.ilpost.it/2026/09/07/vanoli-nuovo-allenatore-fiorentina-ritorno/",
+        "https://www.corrieredellosport.it/news/calcio/serie-a/fiorentina/2026/09/21-151389558/vanoli_la_prova_della_svolta_della_fiorentina",
+        "https://www.corrieredellosport.it/news/calcio/serie-a/fiorentina/2026/09/23-151418043/la_fiorentina_allarme_in_difesa_il_dato_che_spaventa_vanoli_per_i_gol_subti"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    }
+  ]
+}

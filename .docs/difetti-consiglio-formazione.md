@@ -648,6 +648,7 @@ Confronti appaiati con il nuovo modello (Δ positivo = la variante è meglio):
 | freno stimato per ruolo | −0,014 [−0,028, +0,001] | −0,007 [−0,034, +0,018] | instabile, peggio |
 | produzione a metà peso | −0,005 [−0,011, +0,001] | +0,006 [−0,015, +0,028] | dentro il rumore: resta il peso pieno |
 | a priori QI + freno stimato sul modello del 27/09 | −0,029 [−0,058, −0,001] | −0,061 [−0,114, −0,011] | peggio |
+| a priori dalla fantamedia della stagione scorsa (tutti i ruoli / solo attaccanti) | −0,002 [−0,015, +0,011] / −0,000 [−0,010, +0,010] | −0,014 [−0,032, +0,007] / −0,004 [−0,014, +0,006] | niente: vedi difetto 14 |
 | portieri: contesto dai gol **fatti** dall'avversario invece che subiti | −0,000 [−0,008, +0,006] | +0,003 [−0,002, +0,009] | indistinguibile: da riguardare alla giornata 10 (sotto) |
 
 Perché titolare/spezzone non serve **[Certo]**, `--descrittive`: il divario tra titolari
@@ -708,6 +709,27 @@ loro voti non sono più indipendenti, e l'ordine per "valore se prende voto" res
 migliore dei 720, mentre ordinare per media da titolare perde. **[Probabile]** La prova
 generale dello scambio assume voti indipendenti; con un ballottaggio vale in questo
 esempio, non l'ho dimostrata in generale.
+
+#### 14. La stagione scorsa come punto di partenza (27/09, sera)
+
+**Idea.** Con 5 voti la forma di quest'anno dice poco (il freno migliore è forte), e la
+fantamedia della stagione scorsa è un'informazione fissata prima della stagione: niente
+dati del futuro. `import_storico_stagioni.py` la salva per tutti i giocatori
+(`data/storico_stagioni.json`).
+
+**Descrittivo [Certo].** Correlazione tra fantamedia 2025-26 (almeno 10 voti) e media di
+quest'anno (almeno 3 voti): D 0,26 (67 giocatori), C 0,27 (84), **A 0,60 (36)**. La
+quotazione iniziale sugli stessi ruoli: 0,22, 0,29, 0,27.
+
+**Backtest [Certo]** (varianti "a priori stagione scorsa" e "stagione scorsa solo
+attaccanti": il riferimento del freno diventa una retta sulla fantamedia scorsa, chi non
+ce l'ha resta con la media del ruolo). Rispetto al nuovo modello: tutti i ruoli Δ MAE
+−0,002 [−0,015, +0,011], ordine −0,014 [−0,032, +0,007]; solo attaccanti Δ MAE −0,000
+[−0,010, +0,010], ordine −0,004 [−0,014, +0,006]. Nessun miglioramento, quindi il modello
+non cambia. [Probabile] La correlazione degli attaccanti è alta ma su 36 giocatori, e
+nelle giornate 3-5 il freno verso la media del ruolo cattura già quasi tutto.
+Resta nel backtest: da riguardare dopo la giornata 10. Nel report le stagioni passate si
+mostrano come contesto ("STAGIONI PASSATE").
 
 ### Dati mancanti, da non inventare
 

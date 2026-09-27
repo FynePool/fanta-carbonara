@@ -19,6 +19,7 @@ Cosa il backtest NON può fare, e perché:
   subentrato del giocatore nelle giornate precedenti;
 - la quotazione iniziale (QI) è fissata prima della stagione: usarla non bara. La
   quotazione attuale e l'FVM invece contengono le giornate giocate e non si usano.
+  Nemmeno la stagione scorsa (data/storico_stagioni.json) bara: è finita prima.
 
 Uso:
     python3 scripts/backtest_formazione.py
@@ -114,6 +115,37 @@ def variante_casa(modello: dict, players: dict, **_) -> float:
     return _retta(xs, ys)
 
 
+STORICO_MIN_VOTI = 10
+
+
+def _fantamedia_scorsa(pid: str) -> float | None:
+    """Fantamedia della stagione scorsa in Serie A (data/storico_stagioni.json), se il
+    giocatore ha almeno STORICO_MIN_VOTI voti: è fissata prima della stagione, non bara."""
+    if not hasattr(_fantamedia_scorsa, "dati"):
+        path = store.DATA_DIR / "storico_stagioni.json"
+        stagioni = store.load_json(path)["stagioni"] if path.exists() else {}
+        _fantamedia_scorsa.dati = stagioni[max(stagioni)]["giocatori"] if stagioni else {}
+    d = _fantamedia_scorsa.dati.get(pid)
+    return d["fantamedia"] if d and d["partite_con_voto"] >= STORICO_MIN_VOTI else None
+
+
+def variante_storico(modello: dict, players: dict, **_) -> dict:
+    """Riferimento del freno dalla fantamedia della stagione scorsa: retta fantavoto ~
+    fantamedia scorsa per ruolo, stimata su chi ce l'ha. Chi non ce l'ha (nuovo in
+    Serie A, pochi voti) resta con la media del ruolo."""
+    retta = {}
+    for ruolo in ROLES:
+        righe = [x for pid, rr in modello["per_giocatore"].items()
+                 if players[pid]["role"] == ruolo and _fantamedia_scorsa(pid) is not None for x in rr]
+        if len(righe) < 3:
+            continue
+        xs = [_fantamedia_scorsa(x["player_id"]) for x in righe]
+        ys = [modello["corretto"](x) for x in righe]
+        b = _retta(xs, ys)
+        retta[ruolo] = (mean(ys) - b * mean(xs), b)
+    return retta
+
+
 def variante_portieri_fatti(modello: dict, players: dict, calendario: list, giornata: int, **_) -> dict:
     """Per i portieri il contesto con i gol *fatti* dall'avversario invece di quelli
     subiti: è l'attacco avversario che fa prendere gol al portiere. Stesso metodo del
@@ -154,6 +186,12 @@ def prevedi(conf: dict, modello: dict, extra: dict, player: dict, riga: dict) ->
     if "apriori_qi" in extra:
         a, b = extra["apriori_qi"][ruolo]
         riferimento = a + b * (player["quotazione_iniziale"] or 0)
+    for chiave, ruoli in (("storico", ROLES), ("storico_A", "A")):
+        if chiave in extra and ruolo in ruoli and ruolo in extra[chiave]:
+            fm = _fantamedia_scorsa(player["id"])
+            if fm is not None:
+                a, b = extra[chiave][ruolo]
+                riferimento = a + b * fm
     if "freno_stimato" in extra:
         k = extra["freno_stimato"][ruolo]
     if "spezzone" in extra:
@@ -194,6 +232,8 @@ CONFIGURAZIONI = [
     ("nuovo + titolare/spezzone", dict(produzione=True, contesto=True), ("spezzone",)),
     ("nuovo + titolare/spezzone ORACOLO (bara)", dict(produzione=True, contesto=True), ("spezzone", "oracolo")),
     ("nuovo + casa/trasferta", dict(produzione=True, contesto=True), ("casa",)),
+    ("nuovo + a priori stagione scorsa", dict(produzione=True, contesto=True), ("storico",)),
+    ("nuovo + stagione scorsa solo attaccanti", dict(produzione=True, contesto=True), ("storico_A",)),
     ("nuovo, portieri con gol fatti avversario", dict(produzione=True, contesto=True), ("portieri_fatti",)),
     ("attuale + a priori da QI + freno stimato", dict(produzione=False, contesto=False, freno=3), ("apriori_qi", "freno_stimato")),
 ]
@@ -203,6 +243,8 @@ VARIANTI = {
     "spezzone": variante_spezzone,
     "casa": variante_casa,
     "portieri_fatti": variante_portieri_fatti,
+    "storico": variante_storico,
+    "storico_A": variante_storico,
     "oracolo": lambda modello, players, **_: True,
 }
 

@@ -65,6 +65,19 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   27/09 c'era solo il campionato FANTACARBONARA (Serie A 6-38, 33 giornate, ogni
   avversario 3 volte); Coppa Italia ed Europa League entreranno da sole. Una giornata
   calcolata non si perde mai, come lo storico dei voti.
+- `storico_stagioni.json` — le stagioni passate in Serie A di tutti i giocatori (oggi
+  2025-26 e 2024-25), da fantacalcio.it (`import_storico_stagioni.py`): per stagione e
+  per id del listone, squadra, partite con voto, media voto, fantamedia, gol, gol
+  subiti, rigori segnati/calciati/parati, assist, cartellini. Chi quella stagione non
+  era in Serie A non c'è (5 dei miei 25 il 27/09). Contesto per il consiglio: **non**
+  entra nel valore del modello, perché nel backtest non migliora le previsioni (difetto
+  14 del doc dei difetti).
+- `notizie_rosa.json` — i fatti delle ultime settimane sulle squadre dei miei giocatori
+  (allenatore, infortuni e rientri, titolari, rigoristi, squalifiche, mercato), ognuno
+  con i link alle fonti e `verificata` (due fonti indipendenti o fonte ufficiale). Li
+  raccoglie con la ricerca web il giro del mattino e li ricontrolla la skill
+  `formazione`; `notizie_rosa.py valida` controlla il formato e toglie le notizie
+  scadute. Niente pareri, niente voci non confermate spacciate per fatti.
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
   casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
   Non contiene dati per giocatore (niente voto/gol/cartellini singoli): solo
@@ -215,6 +228,18 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   note e diverse: se listone e BigBalls non concordano sulla squadra di un giocatore
   (es. Sulemana, Törnqvist), la riga non viene attribuita e finisce tra i "non
   riconosciuti".
+- `import_storico_stagioni.py [--stagioni 2025-26 2024-25]` — le statistiche di
+  stagione di tutti i giocatori della Serie A da fantacalcio.it (pagina "Statistiche
+  Serie A", HTML statico, verificata il 27/09: 663 giocatori nella 2025-26, 679 nella
+  2024-25) in `storico_stagioni.json`. Abbinamento per id (il link della scheda finisce
+  con l'id del listone). Le colonne sono controllate: se cambiano, o i giocatori sono
+  meno di 400, non scrive niente. Stagioni finite, quindi si lancia una volta per
+  stagione, non nel giro del mattino.
+- `notizie_rosa.py {squadre|valida}` — supporto alle notizie: `squadre` stampa le
+  squadre dei miei giocatori con la prossima partita (cosa cercare), `valida` controlla
+  `notizie_rosa.json` (campi, tipi, fonti, id) e toglie le notizie scadute (30 giorni,
+  90 per allenatore e mercato). Non va su internet: le notizie le cerca chi esegue la
+  skill.
 - `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
   e per il mercato post-asta. **Dopo l'asta le rose le scrive la lega**: quello che
   `asta.py` registra in `teams.json`/`ownership.json` viene sovrascritto dal giro del
@@ -234,7 +259,9 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   negli avvisi ("se non gioca entra X"). La sezione "DA COSA È FATTO IL VALORE" spiega
   in una riga titolari e primi due cambi di ogni ruolo; "DECISIONI TUE" elenca le scelte
   entro 0,20 punti (dove nel backtest l'ordine indovina come una moneta), i moduli quasi
-  pari e i titolari con dati deboli: lì decidi tu. Non si blocca se un ruolo è senza
+  pari e i titolari con dati deboli: lì decidi tu. "STAGIONI PASSATE" mostra per ogni
+  giocatore le ultime due stagioni in Serie A (`storico_stagioni.json`), solo come
+  contesto. Non si blocca se un ruolo è senza
   dati: lascia lo slot a te col motivo. Segnala i giocatori di `ownership.json`
   spariti dal listone. Per ogni giocatore mostra la prossima partita della sua
   squadra (avversario, casa/trasferta, data), ricavata dalle date del calendario
@@ -300,6 +327,17 @@ poco, perché se non scende in campo entra il primo della panchina: vedi
   Da riprendere quando tutti e tre esistono, non prima.
 
 ## Regole per chi lavora su questo repo
+
+- **L'utente sa poco o niente di calcio**: il progetto decide al posto suo. Ogni
+  consiglio va motivato in parole semplici, spiegando il gergo; quando una scelta è sua
+  (pari del modello, rischi), deve avere tutte le informazioni per capirla: cosa si
+  decide, cosa dicono i numeri, cosa dicono le notizie, il consiglio, cosa rischia.
+- **Numeri e realtà insieme.** Oltre ai dati della routine vanno considerate le
+  notizie vere (allenatori, infortuni, chi gioca, clima della squadra), cercate e
+  citate con le fonti. Le informazioni qualitative, anche i pareri che l'utente incolla,
+  si verificano prima di usarle; decidono i pari del modello e segnalano rischi, ma non
+  ribaltano un distacco netto se non cambiano i fatti di base (non gioca, ruolo
+  cambiato). Vedi la skill `formazione`.
 
 - **Lo storico non si accorcia mai.** `data/matchday_stats.json` si scrive solo con
   `store.save_matchday_stats`, che si rifiuta se una riga (giocatore, partita) già
