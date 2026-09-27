@@ -2,6 +2,131 @@
   "aggiornato_il": "2026-09-27",
   "notizie": [
     {
+      "data": "2026-09-27",
+      "squadra": "Venezia",
+      "giocatori": [
+        "fd7484"
+      ],
+      "tipo": "formazione",
+      "fatto": "Akor Adams è l'acquisto più costoso della storia del Venezia (16 milioni più bonus dal Siviglia) ed è il centravanti titolare di Stroppa nel 3-5-2, in coppia con Yeboah. Ha giocato tutte le 5 giornate da titolare. Le probabili del 27/09 per Atalanta-Venezia lo danno titolare al 90%.",
+      "fonti": [
+        "https://www.fantacalcio.it/calciomercato/22_07_2026/ufficiale-venezia-colpo-in-attacco-ecco-akor-adams-495612",
+        "https://www.goal.com/it/liste/chi-e-akor-adams-l-acquisto-piu-costoso-della-storia-del-venezia-ruolo-caratteristiche-tecniche-titolare-o-no-con-stroppa/blt1dde247c2c317788"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-27",
+      "squadra": "Parma",
+      "giocatori": [
+        "fd7342"
+      ],
+      "tipo": "formazione",
+      "fatto": "Elphege non è un titolare: nell'attacco di Cuesta il punto fermo è El Bilal Tourè, e lui si gioca il posto con Romero come alternativa. Nelle prime 5 giornate ha giocato 12', 10', 0', 64' e 39'. Le probabili del 27/09 per Inter-Parma lo danno in panchina al 60%, con Tourè, Lontani e Romero davanti a lui.",
+      "fonti": [
+        "https://www.goal.com/it/liste/toure-elphege-romero-frigan-e-lontani-chi-gioca-titolare-in-attacco-nel-parma-i-consigli-per-il-fantacalcio/blt9024d04fca6f56ee",
+        "https://www.dazn.com/it-IT/news/calcio/probabile-formazione-parma-modulo-titolari-ballottaggi/1ia8kmpsjprnh1fkhln552xp1m"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-27",
+      "squadra": "Lazio",
+      "giocatori": [
+        "fd2848",
+        "fd632"
+      ],
+      "tipo": "clima",
+      "fatto": "Zaccagni è regolarmente convocato dalla Lazio il 27/09 (nessun infortunio in corso), mentre Frattesi è in Nazionale durante la sosta. La Lazio ha 18 assenti fra infortunati (Marusic, Patric, Rovella, Cataldi, Dele-Bashiru, Cancellieri fra gli altri) e nazionali, tanto da aggregare ragazzi della Primavera: la difesa è in emergenza, il che può riaprire una porta a Doekhi entro il 10/10.",
+      "fonti": [
+        "https://www.lazialita.com/2026/09/27/lazio-i-convocati-di-gattuso-in-vista-dellarezzo-lelenco-completo/"
+      ],
+      "verificata": false,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-26",
+      "squadra": "Fiorentina",
+      "giocatori": [
+        "fd6294"
+      ],
+      "tipo": "formazione",
+      "fatto": "Ndour è un intoccabile di Vanoli: titolare fisso in mezzo con Fagioli, 577 minuti su 630 fra campionato e Coppa Italia, un gol e un assist, e la convocazione in Nazionale. Nelle ultime due giornate ha preso 6,5 e 7,5 di fantavoto.",
+      "fonti": [
+        "https://www.firenzeviola.it/copertina/incedibile-club-intoccabile-vanoli-ndour-centro-villaggio-fiorentina-485611",
+        "https://www.violanews.com/news-viola/stampa/cor-sport-ndour-fagioli-il-duo-di-fiducia-di-vanoli-ora-testa-allazzurro/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-21",
+      "squadra": "Inter",
+      "giocatori": [
+        "fd5116",
+        "fd2814"
+      ],
+      "tipo": "formazione",
+      "fatto": "Josep Martinez resta il portiere titolare dell'Inter: ha giocato tutte le giornate e Chivu lo ha difeso pubblicamente, ma tutti gli 8 gol subiti finora sono nati da un errore individuale e più di uno è stato attribuito a lui. Provedel è il vice e i giornali parlano di un possibile cambio. Per la formazione conta poco: sono entrambi miei, quindi uno dei due gioca comunque.",
+      "fonti": [
+        "https://sport.sky.it/calciomercato/2026/05/27/inter-josep-martinez-provedel-portieri-2026-2027",
+        "https://www.fcinternews.it/rassegna/i-cds-i-gol-subiti-inter-sbaglia-pepo-retroscena-provedel-1018555"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-20",
+      "squadra": "Lazio",
+      "giocatori": [
+        "fd6320"
+      ],
+      "tipo": "formazione",
+      "fatto": "Doekhi ha perso il posto da titolare: operato alla mano dopo uno scontro in allenamento, è rientrato tra i disponibili ma Gattuso gli ha preferito la coppia Sutalo-Provstgaard nella 5ª giornata, lasciandolo in panchina. Convocato per l'amichevole col Arezzo del 27/09, quindi disponibile. Le probabili del 27/09 per Lazio-Monza lo danno in panchina al 50%.",
+      "fonti": [
+        "https://www.laziochannel.it/2026/09/lazio-sceglie-sutalo-provstgaard-in-difesa-per-venezia-doekhi-rientra-ma-resta-in-panchina",
+        "https://www.lazialita.com/2026/09/27/lazio-i-convocati-di-gattuso-in-vista-dellarezzo-lelenco-completo/",
+        "https://www.corrieredellosport.it/news/calcio/serie-a/lazio/2026/09/15-151260121/lazio_che_concorrenza_in_difesa_gattuso_ora_sceglie_i_due_centrali_titolari"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-19",
+      "squadra": "Sassuolo",
+      "giocatori": [
+        "fd4463"
+      ],
+      "tipo": "mercato",
+      "fatto": "Sebastiano Esposito è arrivato dal Cagliari a stagione iniziata e ha preso il posto di Pinamonti: per questo ha solo 2 voti su 5 giornate, non perché sia una riserva. Ha esordito il 13/09 segnando alla Juventus (3-2), poi 72' con il Monza, e dopo quella partita è arrivata la prima convocazione in Nazionale maggiore. Gioca in attacco con Berardi e Laurientè.",
+      "fonti": [
+        "https://www.sassuolonews.net/calciomercato-sassuolo/ufficiale-sebastiano-esposito-sassuolo-cifre-dettagli-accordo-cagliari-65691",
+        "https://www.sassuolonews.net/news/esposito-riporta-sassuolo-nazionale-neroverde-torna-italia-grandi-66151",
+        "https://www.tuttocagliari.net/i-rossoblu-in-prestito/sassuolo-juventus-titolare-sebastiano-esposito-formazioni-ufficiali-183802"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-19",
+      "squadra": "Bologna",
+      "giocatori": [
+        "fd5858",
+        "fd184",
+        "fd4734"
+      ],
+      "tipo": "formazione",
+      "fatto": "Con Palladino (3-4-2-1) i tre del Bologna sono dentro: Ferguson è dato 'sicuro del posto' in mezzo, Bernardeschi ritrova la titolarità da trequartista perché a Palladino serve la sua esperienza (e nella 5ª giornata ha segnato), Miranda gioca da esterno sinistro, quindi più avanti del solito pur essendo un difensore al fantacalcio.",
+      "fonti": [
+        "https://www.calciobologna.it/2026/09/19/verso-il-torino-le-ultime-di-formazione-palladino-con-la-difesa-a-tre/",
+        "https://www.calciomercato.com/liste/palladino-al-bologna-come-giochera-e-cosa-cambia-su-modulo-e-titolari-da-bernardeschi-ad-amondarain-e-chi-la-spunta-tra-piccoli-e-dovbyk/blt8faec41b05f8006e"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-27"
+    },
+    {
       "data": "2026-09-16",
       "squadra": "Bologna",
       "giocatori": [
