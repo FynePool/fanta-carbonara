@@ -648,6 +648,7 @@ Confronti appaiati con il nuovo modello (Δ positivo = la variante è meglio):
 | freno stimato per ruolo | −0,014 [−0,028, +0,001] | −0,007 [−0,034, +0,018] | instabile, peggio |
 | produzione a metà peso | −0,005 [−0,011, +0,001] | +0,006 [−0,015, +0,028] | dentro il rumore: resta il peso pieno |
 | a priori QI + freno stimato sul modello del 27/09 | −0,029 [−0,058, −0,001] | −0,061 [−0,114, −0,011] | peggio |
+| portieri: contesto dai gol **fatti** dall'avversario invece che subiti | −0,000 [−0,008, +0,006] | +0,003 [−0,002, +0,009] | indistinguibile: da riguardare alla giornata 10 (sotto) |
 
 Perché titolare/spezzone non serve **[Certo]**, `--descrittive`: il divario tra titolari
 e subentrati è quasi tutto di **chi** gioca, non di quanto. Attaccanti: 7,00 da
@@ -656,6 +657,18 @@ titolare (titolare − subentrato: A −0,09 su 34 giocatori, C −0,45 su 68, D
 Chi entra dalla panchina è di solito più scarso, e la sua media lo dice già. La
 probabilità di titolarità pubblicata non si è potuta provare nel backtest: il primo
 snapshot delle probabili è del 21/09, dopo la giornata 5 **[Certo]**.
+
+**Portieri, gol fatti o subiti dall'avversario [Certo]** (sezione "Solo portieri" del
+backtest). Per un portiere il meccanismo giusto è l'attacco avversario, ma il contesto
+di `roster.py` usa per tutti i gol *subiti* dall'avversario (le due cose sono
+correlate: chi subisce tanto di solito segna poco). Su 55 previsioni di portieri, giornate
+3-5: senza contesto MAE 1,107 e ordine 0,691; gol subiti 1,085 e 0,655; gol fatti 1,090 e
+0,649. Gol fatti contro subiti: Δ MAE −0,005 [−0,108, +0,098]. Il β dei portieri cambia
+molto da una giornata all'altra (sui gol subiti da 0,22 a 1,38). Nessuna differenza
+misurabile, quindi `roster.py` resta com'è e la variante resta nel backtest. **Da
+riguardare dopo la giornata 10** (circa il doppio dei voti dei portieri): si passa ai gol
+fatti solo se li batte con un intervallo che esclude lo zero. L'impatto pratico oggi è
+minimo, perché nelle rose di solito un solo portiere ha voti.
 
 L'attacco della propria squadra non si può stimare sugli scarti del giocatore (è
 costante per lui) ed è già nella sua media **[Probabile]**. Non è nel backtest.

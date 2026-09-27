@@ -35,7 +35,7 @@ from statistics import mean
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from lib import store
-from lib.roster import FRENO_VOTI, SOGLIA_PARI, _retta, costruisci_modello, rate_player
+from lib.roster import CONTESTO_FRENO_PARTITE, FRENO_VOTI, SOGLIA_PARI, _retta, costruisci_modello, rate_player
 
 ROLES = "PDCA"
 
@@ -46,7 +46,7 @@ def _somma_corretti(r: dict, k: float) -> float:
     return r["base"] * (r["n"] + k) - k * r["riferimento"]
 
 
-def variante_freno_stimato(modello: dict, players: dict) -> dict:
+def variante_freno_stimato(modello: dict, players: dict, **_) -> dict:
     """Freno per ruolo stimato sui dati (metodo dei momenti): varianza dei voti dentro
     il giocatore diviso varianza vera tra giocatori. Se la seconda esce <= 0 il freno
     diventa enorme (vale solo la media del ruolo)."""
@@ -67,7 +67,7 @@ def variante_freno_stimato(modello: dict, players: dict) -> dict:
     return k
 
 
-def variante_apriori_qi(modello: dict, players: dict) -> dict:
+def variante_apriori_qi(modello: dict, players: dict, **_) -> dict:
     """Riferimento del freno dalla quotazione iniziale: retta fantavoto ~ QI per ruolo."""
     retta = {}
     for ruolo in ROLES:
@@ -79,7 +79,7 @@ def variante_apriori_qi(modello: dict, players: dict) -> dict:
     return retta
 
 
-def variante_spezzone(modello: dict, players: dict) -> dict:
+def variante_spezzone(modello: dict, players: dict, **_) -> dict:
     """Effetto del subentrare sul fantavoto dello stesso giocatore (scarto dalla sua media,
     subentrato meno titolare), per ruolo, e quota di presenze da subentrato del ruolo."""
     effetto, quota = {}, {}
@@ -100,7 +100,7 @@ def variante_spezzone(modello: dict, players: dict) -> dict:
     return {"effetto": effetto, "quota": quota}
 
 
-def variante_casa(modello: dict, players: dict) -> float:
+def variante_casa(modello: dict, players: dict, **_) -> float:
     """Di quanto sale il fantavoto in casa rispetto alla media del giocatore (un
     coefficiente per tutti: +1 casa, -1 trasferta)."""
     xs, ys = [], []
@@ -112,6 +112,36 @@ def variante_casa(modello: dict, players: dict) -> float:
             xs.append(1.0 if x["home_away"] == "casa" else -1.0)
             ys.append(modello["corretto"](x) - m)
     return _retta(xs, ys)
+
+
+def variante_portieri_fatti(modello: dict, players: dict, calendario: list, giornata: int, **_) -> dict:
+    """Per i portieri il contesto con i gol *fatti* dall'avversario invece di quelli
+    subiti: è l'attacco avversario che fa prendere gol al portiere. Stesso metodo del
+    contesto di roster.py (freno verso la media del campionato, beta sugli scarti del
+    portiere dalla sua media, gol fatti calcolati senza quella partita). Il 27/09, su 55
+    previsioni di portieri, non si distingueva dai gol subiti: da riguardare con più voti."""
+    fatti = defaultdict(dict)  # squadra -> match_id -> gol fatti
+    for m in calendario:
+        if m["stato"] == "finished" and m.get("gol_casa") is not None and m.get("giornata") is not None \
+                and m["giornata"] < giornata:
+            fatti[m["squadra_casa"]][m["match_id"]] = m["gol_casa"]
+            fatti[m["squadra_trasferta"]][m["match_id"]] = m["gol_trasferta"]
+    tutti = [g for d in fatti.values() for g in d.values()]
+    media = mean(tutti) if tutti else 0.0
+
+    def scarto(squadra: str, senza: str | None = None) -> float:
+        g = [x for mid, x in fatti.get(squadra, {}).items() if mid != senza]
+        return (sum(g) + CONTESTO_FRENO_PARTITE * media) / (len(g) + CONTESTO_FRENO_PARTITE) - media
+
+    xs, ys = [], []
+    for pid, rr in modello["per_giocatore"].items():
+        if players[pid]["role"] != "P" or len(rr) < 2:
+            continue
+        m = mean(x["fantavoto"] for x in rr)
+        for x in rr:
+            xs.append(scarto(x["opponent_serie_a_team"], senza=x["match_id"]))
+            ys.append(x["fantavoto"] - m)
+    return {"beta": _retta(xs, ys) if len(xs) >= 2 else 0.0, "scarto": scarto}
 
 
 def prevedi(conf: dict, modello: dict, extra: dict, player: dict, riga: dict) -> float | None:
@@ -137,7 +167,10 @@ def prevedi(conf: dict, modello: dict, extra: dict, player: dict, riga: dict) ->
         valore = (somma + k * riferimento) / (n + k) + eff * quota
     else:
         valore = (somma + k * riferimento) / (n + k)
-    if r["contesto"]:
+    if "portieri_fatti" in extra and ruolo == "P":
+        v = extra["portieri_fatti"]
+        valore += v["beta"] * v["scarto"](riga["opponent_serie_a_team"])
+    elif r["contesto"]:
         valore += r["contesto"]["effetto"]
     if "casa" in extra:
         valore += extra["casa"] * (1.0 if riga["home_away"] == "casa" else -1.0)
@@ -161,6 +194,7 @@ CONFIGURAZIONI = [
     ("nuovo + titolare/spezzone", dict(produzione=True, contesto=True), ("spezzone",)),
     ("nuovo + titolare/spezzone ORACOLO (bara)", dict(produzione=True, contesto=True), ("spezzone", "oracolo")),
     ("nuovo + casa/trasferta", dict(produzione=True, contesto=True), ("casa",)),
+    ("nuovo, portieri con gol fatti avversario", dict(produzione=True, contesto=True), ("portieri_fatti",)),
     ("attuale + a priori da QI + freno stimato", dict(produzione=False, contesto=False, freno=3), ("apriori_qi", "freno_stimato")),
 ]
 VARIANTI = {
@@ -168,7 +202,8 @@ VARIANTI = {
     "apriori_qi": variante_apriori_qi,
     "spezzone": variante_spezzone,
     "casa": variante_casa,
-    "oracolo": lambda modello, players: True,
+    "portieri_fatti": variante_portieri_fatti,
+    "oracolo": lambda modello, players, **_: True,
 }
 
 
@@ -179,7 +214,7 @@ def esegui(conf, righe, players, calendario, giornate, own):
     errori, coppie, previsioni = [], defaultdict(lambda: [0, 0]), []
     for g in giornate:
         modello = costruisci_modello(righe, players, calendario, prima_di_giornata=g, **parametri)
-        extra = {v: VARIANTI[v](modello, players) for v in varianti}
+        extra = {v: VARIANTI[v](modello, players, calendario=calendario, giornata=g) for v in varianti}
         prev = []
         for riga in righe:
             if riga["matchday"] != g or riga.get("fantavoto") is None or riga["player_id"] not in players:
@@ -355,6 +390,29 @@ def main():
         dm = bootstrap_mae(risultati[nuovo][0], risultati[nome][0], args.bootstrap, args.seed)
         do = bootstrap_ordine(risultati[nuovo][1], risultati[nome][1], args.bootstrap, args.seed)
         print(f"  {nome:<42} MAE {dm[0]:+.3f} [{dm[1]:+.3f},{dm[2]:+.3f}]  ordine {do[0]:+.3f} [{do[1]:+.3f},{do[2]:+.3f}]")
+
+    print("\nSolo portieri (il contesto dei portieri si decide qui: nelle rose le coppie di portieri sono poche). "
+          "Ordine su tutte le coppie di portieri di Serie A della stessa giornata.")
+    portieri = (f"freno {FRENO_VOTI} + produzione", nuovo, "nuovo, portieri con gol fatti avversario")
+    err_p = {}
+    for nome in portieri:
+        prev = [(riga, p) for riga, p in risultati[nome][2] if players[riga["player_id"]]["role"] == "P"]
+        err_p[nome] = {(riga["player_id"], riga["matchday"]): abs(p - riga["fantavoto"]) for riga, p in prev}
+        ok = tot = 0
+        for g in giornate:
+            lista = [(riga["fantavoto"], p) for riga, p in prev if riga["matchday"] == g]
+            for i in range(len(lista)):
+                for j in range(i + 1, len(lista)):
+                    (vi, pi), (vj, pj) = lista[i], lista[j]
+                    if vi != vj and pi != pj:
+                        ok += (pi > pj) == (vi > vj)
+                        tot += 1
+        print(f"  {nome:<42} {len(prev):4d} previsioni  MAE {mean(err_p[nome].values()):.3f}  ordine {ok / tot:.3f} ({tot} coppie)")
+    a = err_p["nuovo, portieri con gol fatti avversario"]
+    e_a = [(pid, g, a[(pid, g)]) for (pid, g) in a]
+    e_b = [(pid, g, err_p[nuovo][(pid, g)]) for (pid, g) in a]
+    dm = bootstrap_mae(e_b, e_a, args.bootstrap, args.seed)
+    print(f"  gol fatti invece di subiti, Δ MAE (positivo = fatti meglio): {dm[0]:+.3f} [{dm[1]:+.3f},{dm[2]:+.3f}]")
 
     print(f"\nTaratura della soglia dei pari ({SOGLIA_PARI:.2f}): tutte le coppie dello stesso ruolo in Serie A "
           "che hanno preso voto nella stessa giornata, per distacco previsto.")
