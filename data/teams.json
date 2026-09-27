@@ -18,12 +18,6 @@
     "credits_remaining": 6
   },
   {
-    "id": "2744395",
-    "name": "Fortitudo",
-    "credits_total": 500,
-    "credits_remaining": 3
-  },
-  {
     "id": "2747320",
     "name": "LOSERPOOL",
     "credits_total": 500,
@@ -70,5 +64,11 @@
     "name": "VAR-tificiale",
     "credits_total": 500,
     "credits_remaining": 3
+  },
+  {
+    "id": "20599630",
+    "name": "Ss Igari",
+    "credits_total": 554,
+    "credits_remaining": 57
   }
 ]
