@@ -146,7 +146,7 @@ Tutto in `data/`, JSON versionati in git — niente database, niente stato nasco
 
 | File | Contenuto | Stato (27/09) |
 |---|---|---|
-| `players.json` | Listone ufficiale fantacalcio.it: ruolo, squadra, quotazione, status | 598 giocatori |
+| `players.json` | Listone ufficiale fantacalcio.it: ruolo, squadra, quotazione iniziale e attuale, FVM, status | 598 giocatori |
 | `matchday_stats.json` | Per giocatore/partita: voto e fantavoto (Redazione), gol, assist, cartellini, falli, minuti, avversario, casa/trasferta. **Non si accorcia mai** | 2068 righe, 1443 fantavoti (giornate 1-5) |
 | `calendario_serie_a.json` | Calendario e risultati Serie A | 380 partite (50 giocate) |
 | `teams.json` | Le squadre in gioco della lega, crediti totali e rimanenti | 12 squadre |
@@ -176,9 +176,24 @@ ognuna con la sua fonte:
 
 ## Come ragiona il consiglio di formazione
 
-`report_formazione.py` ordina i giocatori di ogni ruolo per media quando giocano, perché
-con i cambi illimitati chi non scende in campo viene coperto dal primo della panchina.
-La probabilità di giocare non entra nell'ordine, ma negli avvisi ("se non gioca entra X").
+`report_formazione.py` ordina i giocatori di ogni ruolo per il fantavoto atteso **se
+prendono voto**, perché con i cambi illimitati chi non scende in campo viene coperto dal
+primo della panchina. La probabilità di giocare non entra nell'ordine, ma negli avvisi
+("se non gioca entra X").
+
+Il valore ha tre pezzi, mostrati in colonna e spiegati in una riga per titolari e primi
+cambi, e ognuno è entrato solo perché migliora le previsioni nel backtest
+(`backtest_formazione.py`: ogni giornata prevista con i dati delle precedenti):
+
+- **voti**: media degli ultimi 5 fantavoti, avvicinata alla media del ruolo come se il
+  giocatore avesse 5 partite in più;
+- **prod**: nei voti, i gol su azione sostituiti da quelli attesi dai tiri in porta;
+- **avv**: quanto subisce l'avversario della prossima partita.
+
+Sulle giornate 3-5 il nuovo valore indovina chi fa di più tra due giocatori della stessa
+rosa nel 59% dei casi, contro il 53,5% di prima: meglio, ma lontano dalla certezza. Per
+questo la sezione **DECISIONI TUE** elenca le scelte entro 0,20 punti, dove il modello
+non sa fare meglio di una moneta.
 
 Le partite rinviate seguono la regola della lega, che vale **per giornata**:
 
@@ -203,7 +218,7 @@ due volte:
 |---|---|---|
 | **fantacalcio.it** (HTML pubblico) | Listone ufficiale (598, stessi id dell'asta), voti Redazione, probabili formazioni, squalificati e diffidati | Voti e listone abbinati per id; probabili e squalificati per nome, quindi i "non trovati" vanno guardati. "55" nei voti vuol dire senza voto |
 | **FantaDraft** (GitHub, pubblico) | Infortuni | Ha solo 532 giocatori su 598: per questo il listone non viene più da qui |
-| **BigBalls API** | Calendario, risultati, box score per giocatore | Tabellini contaminati da squadre estranee, eventi duplicati, `round` in ritardo di un giorno; non riconosce 30-60 giocatori a giornata |
+| **BigBalls API** | Calendario, risultati, box score per giocatore (anche tiri, passaggi chiave, subentrato) | Squadra sbagliata per chi ha cambiato maglia (recuperati riconciliando coi voti), giocatori estranei, eventi duplicati, `round` in ritardo di un giorno, rigori quasi assenti; 17 giocatori con voto che non ha proprio |
 | **leghe.fantacalcio.it** (API privata) | Rose, crediti, competizioni, calendario e risultati della lega | Non documentata, due JWT di cui uno inutile, solo lettura. Mostra anche 6 squadre vuote; mentre l'admin sposta una rosa può restituire per qualche secondo quasi tutte le rose vuote. Nessun endpoint per la classifica |
 
 Dettagli, endpoint e trappole verificate: [`.docs/bigballs-api.md`](.docs/bigballs-api.md) e
@@ -224,7 +239,7 @@ Dettagli, endpoint e trappole verificate: [`.docs/bigballs-api.md`](.docs/bigbal
 - [ ] **Classifica della lega** — non c'è un endpoint: si ricaverà dal calendario, alla prima giornata calcolata (Serie A 6, 10-12/10)
 - [ ] **Voti calcolati dalla lega** (`teamLineup`) — da verificare alla prima giornata calcolata
 - [ ] **Regole di mercato in `asta.py`** (sforamento, rimborsi) — per l'asta di riparazione
-- [ ] **Formazione consigliata che pesa avversario e casa/trasferta** — oggi l'algoritmo è un greedy sulla media fantavoto
+- [x] **Formazione consigliata che pesa avversario e produzione offensiva**, verificata con backtest; casa/trasferta provata e scartata
 
 ## Skill per Claude Code
 

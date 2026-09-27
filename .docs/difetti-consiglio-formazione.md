@@ -10,6 +10,11 @@ ancora note. Dopo la verifica sono stati tolti 3 difetti e corrette 3 affermazio
 elencati in [§ Rimossi dopo la verifica](#rimossi-dopo-la-verifica). Tutto ciò che
 resta qui è stato riverificato sul codice di `main` del 24/09.
 
+**Seconda revisione il 27/09**, sui voti veri delle giornate 1-5: il valore del
+giocatore (freno, produzione offensiva, avversario), con backtest. Sta in
+[§ Revisione del 27/09](#revisione-del-2709-il-valore-del-giocatore-sui-voti-veri);
+le sezioni prima di quella descrivono lo stato del 24/09.
+
 Marcatori: **[Certo]** eseguito e visto · **[Probabile]** inferenza forte dal
 codice · **[Ipotesi]** sto colmando un vuoto.
 
@@ -404,7 +409,8 @@ se non sono di oggi.
   anche con probabili identiche: con la routine quotidiana, ~22 MB a stagione. Ora
   salva solo le fotografie diverse dalla precedente.
 
-**Da ritarare quando ci saranno i voti veri.** Il freno sulle medie (difetto 3) tira
+**Da ritarare quando ci saranno i voti veri** (fatto il 27/09: il freno passa da 3 a 5,
+vedi difetto 11). Il freno sulle medie (difetto 3) tira
 verso la media di tutto il ruolo, con peso pari a 3 partite. Per un giocatore che
 entra a spezzoni questa media è probabilmente ottimistica: con 1 voto da 5,30 finisce
 davanti a chi ne ha 5 da 5,34. È il comportamento statisticamente coerente con quel
@@ -421,6 +427,9 @@ arrivano.
 
 **Solo alla fine.** Pesare avversario e casa/trasferta. È l'ultima cosa che conta, e
 con 1-2 incontri a stagione per avversario il campione è debole per definizione.
+(27/09: la forza difensiva dell'avversario, misurata su tutte le sue partite e non sullo
+storico del giocatore contro di lui, entra nel valore; casa/trasferta no. Vedi
+[§ Revisione del 27/09](#revisione-del-2709-il-valore-del-giocatore-sui-voti-veri).)
 
 ---
 
@@ -451,13 +460,315 @@ difetti hanno la correzione verificata; le assunzioni della prima stesura stanno
   dalla struttura degli infortunati nella stessa pagina. Lo script segnala ogni
   sezione con una struttura diversa da quella attesa, ed è la prima cosa da guardare
   alla prima squalifica vera. [Probabile]
-- **Il freno sulle medie** (difetto 3) va ritarato sui voti veri appena arrivano.
+- **Il freno sulle medie** (difetto 3) va ritarato sui voti veri appena arrivano. Fatto
+  il 27/09 (da 3 a 5), da riguardare con più giornate.
+
+---
+
+## Revisione del 27/09: il valore del giocatore sui voti veri
+
+Il 27/09 il report proponeva un 4-3-3 con Elphege titolare in attacco. Un amico esperto
+l'ha criticato; alcune critiche erano giuste, altre no. Questa revisione le verifica sui
+voti veri delle giornate 1-5 e ricostruisce il valore di ogni giocatore **pezzo per
+pezzo, tenendo solo i pezzi che migliorano le previsioni**.
+
+Il metodo è uno solo, per tutto: `scripts/backtest_formazione.py`. Per ogni giornata N da
+3 a 5 prevede il fantavoto di chi ha preso voto usando solo i dati fino a N-1, e misura
+(a) l'errore medio assoluto (MAE) e (b) quante volte, tra due giocatori dello stesso
+ruolo e della stessa squadra della lega, il modello mette davanti chi poi ha fatto di
+più. Gli intervalli al 95% sono bootstrap appaiati (giocatori per il MAE, coppie
+squadra-giornata per l'ordine). Il campione è piccolo: 786 voti da prevedere, 1093
+coppie. **[Certo]**, comandi in [§ Riprodurre](#riprodurre).
+
+### La verità scomoda, prima di tutto
+
+**[Certo]** Con 2-4 giornate alle spalle nessun modello ordina i giocatori molto meglio
+di una moneta. Il modello del 27/09 indovinava chi fa di più nel **53,5%** delle coppie
+della stessa rosa, il nuovo nel **59,2%**. Il guadagno è reale (IC 95% da +2,5 a +8,7
+punti), ma quattro scelte su dieci restano sbagliate lo stesso. Per questo il report ora
+dice quando una scelta è una moneta (difetto 12).
+
+### Difetti nuovi, con prova e correzione
+
+#### 9. BigBalls etichetta male chi ha cambiato squadra: 179 voti senza statistiche
+
+**Cosa si rompe.** Il box score di BigBalls mette spesso, a chi ha cambiato squadra, la
+squadra vecchia o la nazionale. L'importer abbinava per squadra + cognome e li perdeva.
+
+**Prova [Certo]** (box score scaricati il 27/09): nella stessa partita, con i minuti
+giusti, Kean è segnato "Fiorentina" (nel listone è del Como), Curtis Jones "Liverpool"
+(Inter), N. González "Argentina" (Juventus), Esposito Se. "Cagliari" (Sassuolo). Altri
+non combaciavano per il nome: "E. Del Prato" (Delprato), "A. N&apos;Diaye" (entità
+HTML), "C. Inao OulaÃ¯" (UTF-8 letto male), "Jacobo Ramón Naveros" (Ramon). Risultato:
+**179 righe con voto e senza minuti**, tra cui tutti i voti di Esposito Se. e Fatah.
+
+Quindi quella che il doc BigBalls chiamava "contaminazione da squadre estranee" è in
+buona parte un'etichetta vecchia su giocatori veri della partita.
+
+**Correzione.** Riconciliazione con i voti in `import_matchday_stats.py`: se
+fantacalcio.it ha già una riga per quella partita di un giocatore che BigBalls non ha
+abbinato, un nome del box score non abbinato che combacia con lui (cognome senza spazi e
+punteggiatura dentro il nome BigBalls, iniziale se nota, minuti > 0 se ha preso voto)
+gli dà le statistiche. Arricchisce solo righe già confermate da fantacalcio.it, non ne
+crea. Chi resta fuori viene marcato `bigballs: "non_trovato"` e non si riscarica.
+
+**Verifica [Certo].** 145 righe riconciliate. Controllo indipendente: gol, assist e
+cartellini di BigBalls devono spiegare fantavoto − voto di fantacalcio.it (movimento,
+bonus standard). Tornano in **130 righe riconciliate su 131** controllabili (99,2%),
+contro 1155 su 1170 (98,7%) delle righe abbinate per squadra; le differenze sono rigori
+sbagliati e assist contati in modo diverso dalle due fonti. Righe con voto e senza
+statistiche: **da 179 a 42** (17 giocatori che BigBalls non ha proprio: Fatah, Leysen,
+Osmajic, N'Dri...). Questo controllo è stato fatto una volta in sessione, non è in uno
+script del repo.
+
+#### 10. Il distacco tra due valori non diceva niente
+
+**Prova [Certo]** (backtest, tutte le coppie dello stesso ruolo in Serie A nella stessa
+giornata): con il modello del 27/09 la quota di ordini giusti **non cresce col
+distacco** previsto: 52% sotto 0,10, 58% tra 0,30 e 0,50, 56% oltre 1 punto. Un 7,30
+contro un 6,44 valeva quanto un 6,50 contro un 6,44.
+
+**Correzione.** Freno, produzione e contesto (sotto). Con il nuovo modello la quota
+cresce col distacco: 52% sotto 0,10, 55% tra 0,10 e 0,20, 60% tra 0,20 e 0,30, 63% tra
+0,30 e 0,50, 69-70% oltre 0,50. Il numero ora vuol dire qualcosa.
+
+#### 11. Il freno a 3 voti era troppo leggero
+
+**Prova [Certo]**, backtest del nuovo modello con freno diverso, confronto appaiato con
+freno 5:
+
+| Freno | MAE | Ordine rosa | Δ MAE vs 5 | Δ ordine vs 5 |
+|---|---|---|---|---|
+| 1 | 1,075 | 0,570 | −0,042 [−0,065, −0,020] | −0,022 [−0,036, −0,006] |
+| 3 | 1,041 | 0,576 | −0,008 [−0,015, −0,001] | −0,016 [−0,027, −0,005] |
+| **5** | **1,033** | **0,592** | — | — |
+| 10 | 1,031 | 0,605 | +0,003 [−0,005, +0,010] | +0,013 [−0,004, +0,030] |
+
+Anche il modello del 27/09 con freno 5 al posto di 3 migliora il MAE (+0,015 [+0,007,
++0,025]) senza cambiare l'ordine.
+
+**Correzione.** `FRENO_VOTI = 5`, il passo più piccolo che batte 3 su entrambe le
+metriche. **[Probabile]** Il guadagno è un po' ottimista: 5 è scelto tra 4 valori sugli
+stessi dati che lo misurano. La stima ruolo per ruolo (metodo dei momenti) è stata
+provata ed è peggio (sotto): con 5 giornate la varianza vera tra giocatori di C e A esce
+quasi zero e il freno esploderebbe.
+
+#### 12. Nessun avviso sui quasi pari
+
+Calvani contro Ferguson era 6,20 contro 6,20, Elphege contro Adams 6,50 contro 6,44:
+differenze sotto il rumore presentate come scelte nette.
+
+**Correzione.** `SOGLIA_PARI = 0,20`, dalla taratura del difetto 10: sotto quel distacco
+il nuovo modello indovina il 52-55% delle volte. Il report ha una sezione **DECISIONI
+TUE** con: le coppie entro la soglia al confine tra titolari e panchina e tra i primi due
+cambi di un ruolo, i moduli che valgono entro la soglia da quello scelto (con chi entra
+e chi esce), e i titolari con dati deboli (≤ 2 voti, voti senza tiri BigBalls,
+avversario ignoto).
+
+#### 13. La quotazione attuale non è un'informazione a priori
+
+La sessione precedente aveva misurato una correlazione ~0,5 tra quotazione e media dei
+voti, e proponeva di usarla come a priori.
+
+**Prova [Certo]** (`--descrittive`, giocatori con ≥ 3 voti): la quotazione **attuale**
+(QA) correla 0,51-0,69 per ruolo, ma fantacalcio.it la aggiorna in base ai voti delle
+giornate giocate: è in parte la stessa media che dovrebbe prevedere. La quotazione
+**iniziale** (QI, fissata prima della stagione, colonna "QI" della pagina del listone)
+correla solo 0,22-0,29. L'FVM (0,30-0,58) è un valore di mercato che si muove anch'esso
+con la stagione.
+
+**Correzione.** `import_listone_fc.py` legge anche la QI (`quotazione_iniziale` in
+`players.json`). Nel backtest la QI come riferimento del freno non migliora niente
+(sotto), quindi non entra nel valore.
+
+### Il modello
+
+Per ogni giocatore con almeno un voto, **valore = base + contesto**:
+
+- **base** = `(Σ fv' + 5 · media_ruolo') / (n + 5)` sugli ultimi `n ≤ 5` voti.
+- **produzione**, dentro la base: `fv' = fantavoto + 3 · (c_ruolo · tiri in porta − gol
+  su azione)` per D, C, A con statistiche BigBalls; altrimenti `fv' = fantavoto`. I gol su
+  rigore restano. `c_ruolo` = gol su azione / tiri in porta del ruolo, sui voti della
+  stagione: oggi D 0,265 (22/83), C 0,294 (57/194), A 0,324 (59/182). `media_ruolo'` è la
+  media di `fv'` del ruolo: P 4,70, D 6,04, C 6,37, A 6,83.
+- **contesto** = `β · (gol subiti a partita dall'avversario − 1,45)`, con i gol subiti
+  frenati verso la media del campionato come se la squadra avesse 5 partite in più. β
+  si stima sugli scarti di ogni giocatore dalla sua media, con i gol subiti
+  dall'avversario calcolati **senza quella partita** (se no il gol del giocatore gonfia
+  da solo i gol subiti e β). Oggi β = 0,40 per D/C/A insieme, 0,45 per i portieri.
+  Esempio: Monza 1,93 gol subiti a partita → +0,19; Cagliari 0,93 → −0,21.
+
+Parametri scelti a mano, tutti in cima a `roster.py`: ultimi 5 voti, freno 5 (difetto
+11), bonus gol 3 (quello del fantavoto di fantacalcio.it), freno delle squadre 5
+partite (il backtest non ne dipende finché tutte hanno giocato lo stesso numero di
+partite: β si riadatta), soglia dei pari 0,20 (difetto 12). Tutto il resto è stimato sui
+dati a ogni giro.
+
+Il valore stima il fantavoto **se il giocatore prende voto**: la media degli ultimi voti
+contiene già titolarità e spezzoni nella proporzione in cui gli capitano. La probabilità
+di giocare non entra, come deciso il 24/09.
+
+### Evidenza
+
+Backtest giornate 3-5 (`python3 scripts/backtest_formazione.py`), MAE e ordine giusto
+tra coppie della stessa rosa, differenze rispetto al modello del 27/09:
+
+| Modello | MAE | Δ MAE [IC 95%] | Ordine | Δ ordine [IC 95%] |
+|---|---|---|---|---|
+| del 27/09: media ruolo, freno 3 | 1,073 | — | 0,535 | — |
+| freno 5 | 1,058 | +0,015 [+0,007, +0,025] | 0,535 | +0,000 [−0,007, +0,007] |
+| freno 5 + contesto | 1,046 | +0,027 [+0,008, +0,046] | 0,597 | +0,062 [+0,027, +0,097] |
+| freno 5 + produzione | 1,046 | +0,027 [+0,010, +0,046] | 0,545 | +0,010 [−0,014, +0,033] |
+| **nuovo: freno 5 + produzione + contesto** | **1,033** | **+0,040 [+0,017, +0,063]** | **0,592** | **+0,057 [+0,025, +0,087]** |
+
+Ogni pezzo tolto dal nuovo, uno alla volta: senza contesto l'ordine perde 0,047 [+0,022,
++0,073] e il MAE 0,012 [+0,000, +0,024]; senza produzione il MAE perde 0,012 [+0,001,
++0,024] e l'ordine non cambia (−0,005 [−0,032, +0,020]). Il contesto serve all'ordine,
+la produzione all'errore.
+
+**Il caso Elphege.** Il timore era che il freno verso la media del ruolo gonfiasse chi
+gioca poco. Guardando indietro è vero che i giocatori con pochi voti hanno medie più
+basse (A: 6,16 con ≤ 2 voti, 6,96 con ≥ 4) **[Certo]**. Ma **in avanti** il modello non
+li sovrastima **[Certo]**: previsto meno vero, attaccanti con 1 voto precedente +0,00 (26
+casi), con 2 −0,77 (54 casi, sottostimati); centrocampisti −0,10 e −0,05; difensori
++0,19 e −0,03. Nessuna distorsione sistematica da correggere, e il freno più forte
+migliora. **[Probabile]** Il motivo: la media bassa di chi ha pochi voti viene soprattutto
+da chi ne ha pochi *perché* è scarso, e quello il freno lo vede già dopo 2-3 voti.
+
+### Provati e scartati
+
+Confronti appaiati con il nuovo modello (Δ positivo = la variante è meglio):
+
+| Variante | Δ MAE [IC 95%] | Δ ordine [IC 95%] | Perché fuori |
+|---|---|---|---|
+| a priori dalla QI al posto della media del ruolo | +0,001 [−0,011, +0,012] | −0,018 [−0,035, +0,000] | niente di meglio, ordine forse peggio |
+| titolare/spezzone (quota di spezzoni dello storico) | −0,002 [−0,003, −0,000] | +0,001 [−0,004, +0,005] | niente |
+| titolare/spezzone con l'**oracolo** (sa chi partirà titolare) | −0,003 [−0,007, +0,001] | +0,002 [−0,008, +0,011] | niente neanche barando |
+| casa/trasferta | −0,006 [−0,011, −0,000] | −0,001 [−0,017, +0,014] | peggio |
+| freno stimato per ruolo | −0,014 [−0,028, +0,001] | −0,007 [−0,034, +0,018] | instabile, peggio |
+| produzione a metà peso | −0,005 [−0,011, +0,001] | +0,006 [−0,015, +0,028] | dentro il rumore: resta il peso pieno |
+| a priori QI + freno stimato sul modello del 27/09 | −0,029 [−0,058, −0,001] | −0,061 [−0,114, −0,011] | peggio |
+
+Perché titolare/spezzone non serve **[Certo]**, `--descrittive`: il divario tra titolari
+e subentrati è quasi tutto di **chi** gioca, non di quanto. Attaccanti: 7,00 da
+titolare, 6,42 da subentrato; ma **lo stesso** attaccante vale da subentrato quanto da
+titolare (titolare − subentrato: A −0,09 su 34 giocatori, C −0,45 su 68, D +0,21 su 38).
+Chi entra dalla panchina è di solito più scarso, e la sua media lo dice già. La
+probabilità di titolarità pubblicata non si è potuta provare nel backtest: il primo
+snapshot delle probabili è del 21/09, dopo la giornata 5 **[Certo]**.
+
+L'attacco della propria squadra non si può stimare sugli scarti del giocatore (è
+costante per lui) ed è già nella sua media **[Probabile]**. Non è nel backtest.
+
+### Critiche risultate sbagliate
+
+- "Se non entra prima del 75' non prende voto": falso. **[Certo]** 129 voti presi con
+  meno di 25' giocati, minimo 2'; nessun giocatore con 25' o più è rimasto senza voto.
+- "Il 3-4-3 è meglio per principio": il bonus dei centrocampisti è già dentro il
+  fantavoto e il motore sceglie il modulo col totale più alto. Il 27/09 il nuovo modello
+  sceglie 3-4-3, ma perché lo dicono i giocatori, non un principio.
+- "Calvani a Napoli no" per reputazione: il Napoli subisce 1,32 gol a partita (frenato),
+  poco sotto la media di 1,45: il contesto vale −0,05. Lo decide il dato.
+- "Due della stessa squadra sono rischiosi": è varianza, non valore atteso. Non entra
+  nel valore e non c'è un avviso.
+- Scambi: solo a gennaio (`regole_mercato`). Fuori scopo.
+
+### La simulazione del 24/09, rifatta con la nuova definizione
+
+Il principio "dentro un ruolo, prima chi vale di più quando prende voto" regge anche
+quando il valore mescola titolarità e spezzoni. Sei giocatori con probabilità di partire
+titolare, di entrare dalla panchina, e medie diverse nei due casi; 3 posti; valore atteso
+calcolato in modo esatto (script in [§ Riprodurre](#riprodurre)). **[Certo]**:
+
+```
+valore se prende voto (nuovo)    20.506
+media da titolare                20.506
+valore x probabilità di voto     19.103
+probabilità di titolarità        19.065
+migliore sulle 720 possibili     20.506  = ordine per valore se prende voto: True
+
+ballottaggio: ordine nuovo 20.527, migliore sulle 720 20.527, per media da titolare 20.444
+```
+
+Nell'ultima riga due giocatori si giocano un posto (parte esattamente uno dei due): i
+loro voti non sono più indipendenti, e l'ordine per "valore se prende voto" resta il
+migliore dei 720, mentre ordinare per media da titolare perde. **[Probabile]** La prova
+generale dello scambio assume voti indipendenti; con un ballottaggio vale in questo
+esempio, non l'ho dimostrata in generale.
+
+### Dati mancanti, da non inventare
+
+- **Rigoristi**: il box score BigBalls ha **5 rigori calciati in 50 partite** (Colombo,
+  Maldini, Varela G., Yeboah J., Zaccagni) **[Certo]**. Sono pochi per essere tutti
+  **[Ipotesi]**: il rigorista non si ricava da qui. I gol su rigore restano nel fantavoto
+  come sono, senza correzione. Una pagina "rigoristi" di fantacalcio.it non è stata letta
+  né verificata: resta aperto.
+- **42 voti senza statistiche BigBalls** (17 giocatori): per quei voti la produzione non
+  si applica, e il report lo dice.
+- **Probabilità di titolarità storica**: non c'è prima del 21/09.
 
 ---
 
 ## Riprodurre
 
-Tutto in una copia di lavoro, il repo non viene toccato.
+**Revisione del 27/09** (sui dati del repo, non scrive niente):
+
+```bash
+python3 scripts/backtest_formazione.py                 # backtest, ablazione, soglia, distorsione
+python3 scripts/backtest_formazione.py --descrittive   # i fatti descrittivi citati sopra
+python3 scripts/report_formazione.py --team-id <my_team_id>
+```
+
+Simulazione dell'ordine con titolarità e spezzoni (valore atteso esatto):
+
+```bash
+python3 - <<'EOF'
+import itertools
+# (P titolare, P di entrare se parte in panchina, media da titolare, media da subentrato)
+ROSA = [(0.9, 0.5, 6.4, 6.0), (0.5, 0.6, 7.6, 6.2), (1.0, 0.0, 6.0, 6.0),
+        (0.3, 0.7, 8.0, 6.3), (0.8, 0.5, 6.7, 6.4), (0.6, 0.5, 7.0, 5.8)]
+K = 3
+def p_voto(g): s, q, _, _ = g; return s + (1 - s) * q
+def valore_se_vota(g): s, q, vs, vb = g; return (s * vs + (1 - s) * q * vb) / p_voto(g)
+def atteso_dati(ordine, pm):
+    """Valore esatto con K posti e cambi illimitati, voti indipendenti dato pm."""
+    dist = [1.0] + [0.0] * K; tot = 0.0
+    for g in ordine:
+        p, m = pm[g]; tot += p * m * sum(dist[:K]); nuova = [0.0] * (K + 1)
+        for j, pj in enumerate(dist):
+            if j == K: nuova[K] += pj; continue
+            nuova[j + 1] += pj * p; nuova[j] += pj * (1 - p)
+        dist = nuova
+    return tot
+atteso = lambda o: atteso_dati(o, {g: (p_voto(g), valore_se_vota(g)) for g in ROSA})
+criteri = {"valore se prende voto (nuovo)": lambda g: -valore_se_vota(g),
+           "media da titolare": lambda g: -g[2],
+           "valore x probabilità di voto": lambda g: -valore_se_vota(g) * p_voto(g),
+           "probabilità di titolarità": lambda g: -g[0]}
+for nome, f in criteri.items():
+    print(f"{nome:<32} {atteso(sorted(ROSA, key=f)):.3f}")
+best = max(itertools.permutations(ROSA), key=atteso)
+print(f"{'migliore sulle 720 possibili':<32} {atteso(best):.3f}  = ordine per valore se prende voto: "
+      f"{list(best) == sorted(ROSA, key=criteri['valore se prende voto (nuovo)'])}")
+# Ballottaggio: parte titolare esattamente uno tra A e B (50%).
+ROSA[1] = (0.5, 0.6, 7.6, 6.2); ROSA[5] = (0.5, 0.5, 7.0, 5.8); A, B = ROSA[1], ROSA[5]
+def atteso_ballottaggio(ordine):
+    tot = 0.0
+    for parte_a in (True, False):
+        pm = {g: (p_voto(g), valore_se_vota(g)) for g in ROSA}
+        for g, parte in ((A, parte_a), (B, not parte_a)):
+            pm[g] = (1.0, g[2]) if parte else (g[1], g[3])
+        tot += 0.5 * atteso_dati(ordine, pm)
+    return tot
+nuovo = sorted(ROSA, key=lambda g: -valore_se_vota(g))
+best = max(itertools.permutations(ROSA), key=atteso_ballottaggio)
+print(f"\nballottaggio: ordine nuovo {atteso_ballottaggio(nuovo):.3f}, migliore sulle 720 "
+      f"{atteso_ballottaggio(best):.3f}, per media da titolare "
+      f"{atteso_ballottaggio(sorted(ROSA, key=lambda g: -g[2])):.3f}")
+EOF
+```
+
+**Revisione del 24/09.** Tutto in una copia di lavoro, il repo non viene toccato.
 
 **Rosa simulata con fantavoto simulati** (i fantavoto reali non esistono ancora; la
 simulazione serve solo a far girare il motore oltre il blocco "nessun modulo

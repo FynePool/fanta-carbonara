@@ -59,13 +59,16 @@ fallito.
    python3 scripts/import_calendario_seriea.py --season <stagione> --status scheduled
    python3 scripts/import_calendario_seriea.py --season <stagione> --status postponed
    ```
-3. **Statistiche per giocatore** (gol, assist, cartellini, falli, minuti):
+3. **Statistiche per giocatore** (gol, assist, cartellini, falli, minuti, tiri,
+   passaggi chiave, rigori, subentrato):
    ```
    python3 scripts/import_matchday_stats.py
    ```
-   È incrementale: scarica solo le partite finite non ancora in archivio. Non usare
-   `--ricostruisci` in un giro automatico: costa una chiamata per ogni partita della
-   stagione, su 500 al giorno del piano free.
+   È incrementale: scarica le partite finite non ancora in archivio, più quelle con
+   voti di ieri non ancora cercati nel box score (circa 10 chiamate in più il giorno
+   dopo un turno). Non usare `--ricostruisci` in un giro automatico: costa una chiamata
+   per ogni partita della stagione, su 500 al giorno del piano free. Nel riepilogo
+   riporta anche le righe "riconciliate con i voti" e i giocatori "marcati non trovati".
 4. **Probabili formazioni, squalificati e diffidati:**
    ```
    python3 scripts/scrape_formazioni.py
