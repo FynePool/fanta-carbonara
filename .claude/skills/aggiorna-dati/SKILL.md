@@ -28,7 +28,12 @@ fallito.
 1. **Listone e infortuni** (prima dello status, che li usa):
    ```
    python3 scripts/import_fantadraft.py
+   python3 scripts/import_listone_fc.py
    ```
+   Il secondo aggiunge i giocatori del listone ufficiale di fantacalcio.it che FantaDraft
+   non ha (66 il 27/09, tra cui Leão, Lukaku, Di Gregorio): va sempre subito dopo il
+   primo, che riscrive `players.json` da zero. Se stampa "squadra o ruolo diversi tra
+   le due fonti" o "squadre mai viste", riportalo nel riepilogo.
 2. **Calendario e risultati Serie A** (prima delle statistiche, che leggono le
    partite finite da qui):
    ```
@@ -85,6 +90,7 @@ Breve, in italiano, fatti e numeri:
 - per ogni passo: ok o fallito, e perché;
 - partite finite in archivio e quante sono nuove rispetto a prima;
 - righe di statistiche aggiunte;
+- giocatori aggiunti dal listone di fantacalcio.it (quanti, e se sono cambiati);
 - voti: righe aggiornate, righe nuove, e quanti voti di giocatori assenti dal listone;
 - infortunati ora e differenza rispetto a prima (chi è entrato, chi è rientrato);
 - squalificati e diffidati, per nome e squadra;

@@ -20,7 +20,7 @@ coperte: vanno aggiunte a quella skill quando esisterà l'importer.
 
 - `teams.json` — le 12 squadre della lega: id, nome, proprietario, crediti totali/rimanenti.
 - `players.json` — **pool completo di tutti i giocatori Serie A** (non solo quelli
-  posseduti), importato dal listone ufficiale: id, nome, ruolo (P/D/C/A), squadra
+  posseduti), da FantaDraft più i mancanti dal listone ufficiale di fantacalcio.it: id, nome, ruolo (P/D/C/A), squadra
   Serie A, `quotazione`. Il campo `status` (titolare | dubbio | ballottaggio |
   infortunato | squalificato | panchina | n/d) e `status_updated_at` diventano
   rilevanti solo a stagione iniziata e **vanno aggiornati prima di ogni deadline**
@@ -78,6 +78,14 @@ se non scende in campo entra il primo della panchina: vedi
   noti. Da lanciare prima dell'asta.
 - `import_fantadraft.py` — importa listone + infortuni da FantaDraft (github.com/
   lucianomurr/FantaDraft, fonte pubblica aggregata, aggiornata quotidianamente).
+  Riscrive `players.json` da zero, e ha solo una parte del listone.
+- `import_listone_fc.py` — aggiunge a `players.json` i giocatori del listone ufficiale
+  di fantacalcio.it (pagina "Quotazioni Fantacalcio", HTML statico) che FantaDraft non ha:
+  il 27/09 erano 66 su 598, tra cui Leão, Lukaku, Di Gregorio e due giocatori presi
+  all'asta. Solo aggiunte, abbinate per id (il link finisce con l'id fantacalcio, lo
+  stesso di FantaDraft e dell'asta); gli aggiunti hanno `fonte_listone: "fantacalcio.it"`.
+  Per i giocatori in comune squadra, ruolo e nome coincidevano; le quotazioni no (283
+  diverse), e restano quelle di FantaDraft. Va lanciato subito dopo `import_fantadraft.py`.
 - `scrape_formazioni.py` — scrape delle probabili formazioni Serie A da
   fantacalcio.it (HTML statico, verificato scrapeable senza rendering JS).
   Scrive uno snapshot (`data/formazioni_correnti.json`, non versionato) e ne
@@ -147,7 +155,8 @@ se non scende in campo entra il primo della panchina: vedi
   `null`. Solo partite finite nel calendario (durante la giornata i voti sono
   provvisori), e i voti vengono sempre riscritti perché il sito li può correggere.
   Va lanciato dopo `import_matchday_stats.py`. I voti di giocatori assenti dal listone
-  (circa 30 sulle prime 5 giornate) vengono stampati e non scritti. Il fantavoto del
+  vengono stampati e non scritti: 11 sulle prime 5 giornate, giocatori che non sono
+  nemmeno nel listone ufficiale di oggi (usciti dalla Serie A o mai listati). Il fantavoto del
   sito usa i bonus standard, non per forza quelli della lega (vedi `scoring`): per
   ordinare i giocatori va bene, per un'eventuale classifica fa fede leghe.fantacalcio.it.
 - `import_matchday_stats.py [--ricostruisci]` — box score per giocatore da BigBalls
