@@ -3,6 +3,8 @@
   "teams_count": 12,
   "credits_per_team": 500,
   "my_team_id": null,
+  "fonte_voti": "Redazione Fantacalcio",
+  "_fonte_voti_note": "Quale dei tre voti di fantacalcio.it usa la lega (Redazione Fantacalcio | Voto Statistico | Voto Italia). Confermato dall'utente il 27/09: Redazione. Lo legge scripts/import_voti.py.",
   "roster_requirements": {
     "P": 3,
     "D": 8,

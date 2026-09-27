@@ -1,6 +1,6 @@
 ---
 name: aggiorna-dati
-description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, calendario e risultati Serie A, statistiche per giocatore, probabili formazioni, squalificati e diffidati, status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
+description: Aggiornamento completo e non interattivo dei dati del progetto (listone, infortuni, calendario e risultati Serie A, statistiche per giocatore, voti e fantavoto, probabili formazioni, squalificati e diffidati, status), con commit e push su main. Usare per la routine automatica del mattino, o quando l'utente chiede "aggiorna tutti i dati" / "aggiorna il database".
 ---
 
 # Aggiornamento dati quotidiano
@@ -56,9 +56,16 @@ fallito.
    ```
    python3 scripts/apply_formazioni_status.py
    ```
-6. **Voti e fantavoto: NON ANCORA DISPONIBILI.** Manca l'importer da
-   leghe.fantacalcio.it. Quando esisterà, va aggiunto qui dopo il passo 3. Oggi
-   scrivi nel riepilogo che `voto` e `fantavoto` restano vuoti.
+6. **Voti e fantavoto** (dopo il passo 3, mai prima: l'importer BigBalls rifà le righe
+   delle partite nuove, e questo ci scrive sopra i voti):
+   ```
+   python3 scripts/import_voti.py
+   ```
+   Da fantacalcio.it, voto "Redazione Fantacalcio" (`fonte_voti` in
+   `config/league.json`), abbinato per id. Non usa la chiave BigBalls: va fatto anche se
+   i passi 2 e 3 sono saltati. Riscrive i voti di tutte le giornate finite (il sito
+   li può correggere nei giorni dopo). Se stampa "anomalie di struttura della pagina",
+   riportalo in cima al riepilogo: quei voti non sono stati scritti.
 7. **Quota API rimasta**, per il riepilogo:
    ```
    curl -sS https://api.bigballsdata.com/v1/usage -H "x-api-key: $BIGBALLS_API_KEY"
@@ -78,6 +85,7 @@ Breve, in italiano, fatti e numeri:
 - per ogni passo: ok o fallito, e perché;
 - partite finite in archivio e quante sono nuove rispetto a prima;
 - righe di statistiche aggiunte;
+- voti: righe aggiornate, righe nuove, e quanti voti di giocatori assenti dal listone;
 - infortunati ora e differenza rispetto a prima (chi è entrato, chi è rientrato);
 - squalificati e diffidati, per nome e squadra;
 - quanti status sono cambiati, e i numeri dei "non trovati" nel matching nomi;
@@ -87,6 +95,5 @@ Breve, in italiano, fatti e numeri:
 
 Dati che questa routine **non** copre ancora, da non inventare:
 
-- voti e fantavoto (vedi passo 6);
 - rose e scambi tra le squadre della lega: dopo l'asta andranno letti da
   leghe.fantacalcio.it, e anche quel passo andrà aggiunto qui.

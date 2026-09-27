@@ -10,8 +10,9 @@ tutti importati qui). NON è il voto fantacalcio: il campo "rating" che la
 fonte restituisce è un rating generico (tipo Opta/Sofascore), calcolato con
 criteri diversi da quello di fantacalcio.it/leghe.fantacalcio.it, che è
 l'unico che conta per lo scoring. `voto` e `fantavoto` restano quindi
-sempre null qui: vanno riempiti da un'altra fonte quando l'API di
-leghe.fantacalcio.it sarà verificabile con una lega reale.
+sempre null qui: li riempie scripts/import_voti.py da fantacalcio.it, che va
+lanciato dopo questo script e crea anche le righe dei giocatori che BigBalls non
+riconosce (con le statistiche a null).
 
 Gira su tutte le partite "finished" di data/calendario_serie_a.json (va
 quindi rilanciato import_calendario_seriea.py prima, se serve aggiornarlo).
@@ -174,17 +175,25 @@ def main():
 
     # Righe già in archivio: si scartano quelle di un giocatore la cui squadra non ha
     # giocato quella partita, e si aggiorna la giornata dal calendario (arriva dopo la
-    # partita, e così si riempie senza chiamate API).
+    # partita, e così si riempie senza chiamate API). Le righe col voto di fantacalcio.it
+    # (abbinato per id, non per nome) sono certe anche se il giocatore ha poi cambiato
+    # squadra: non si toccano.
     by_key, scartate = {}, []
     for r in existing:
         match = calendario.get(r["match_id"])
-        if match is None or team_of.get(r["player_id"]) not in (match["squadra_casa"], match["squadra_trasferta"]):
+        dal_sito_voti = r.get("fantavoto") is not None or r.get("minuti") is None
+        if match is None or (
+            not dal_sito_voti
+            and team_of.get(r["player_id"]) not in (match["squadra_casa"], match["squadra_trasferta"])
+        ):
             scartate.append(r)
             continue
         r["matchday"] = match["giornata"]
         by_key[(r["player_id"], r["match_id"])] = r
 
-    imported = {mid for _, mid in by_key}
+    # Le righe create da import_voti.py per giocatori che BigBalls non ha (statistiche a
+    # null) non contano: una partita è scaricata solo se ha righe BigBalls.
+    imported = {mid for (_, mid), r in by_key.items() if r.get("minuti") is not None}
     to_fetch = finished if args.ricostruisci else [m for m in finished if m["match_id"] not in imported]
 
     unmatched = []
@@ -230,6 +239,11 @@ def main():
                 row[field] = int(raw_value) if raw_value is not None else 0
 
             by_key[(player_id, match["match_id"])] = row
+
+        # Le righe col solo voto (da import_voti.py) che BigBalls non ha rifatto restano.
+        for pid, prev in old.items():
+            if prev.get("minuti") is None and (pid, match["match_id"]) not in by_key:
+                by_key[(pid, match["match_id"])] = prev
 
     merged = sorted(by_key.values(), key=lambda r: (r["matchday"] or 0, r["match_id"], r["player_id"]))
     store.save_json(stats_path, merged)

@@ -5,15 +5,16 @@ lega su leghe.fantacalcio.it) e ricevere consigli di formazione, mercato e scamb
 
 ## Stato del progetto
 
-Priorità attuale: **asta di inizio stagione imminente** (formato a chiamata classica,
-12 squadre, 500 crediti, rose 3P-8D-8C-6A). Finché l'asta non è conclusa, il modulo
-asta (`scripts/asta.py`) è più importante del modulo formazione: senza rose complete
-non c'è nulla su cui basare un consiglio di formazione.
+Asta di inizio stagione **conclusa** (settembre 2026; a chiamata classica, 12 squadre,
+500 crediti, rose 3P-8D-8C-6A). Priorità attuale: il consiglio di formazione. Le rose
+vere vanno lette da leghe.fantacalcio.it a setup finito, non da export a mano: finché
+non ci sono, `ownership.json` è vuoto. Un CSV dell'asta è servito solo per una simulazione
+fuori dal repo (27/09): `asta.py` e `report_formazione.py` reggono una rosa completa.
 
-I dati (listone, infortuni, calendario, statistiche, probabili formazioni, squalifiche e status)
-si aggiornano ogni mattina con una routine automatica che esegue la skill
-`aggiorna-dati` e pusha su `main`. Le rose dopo l'asta e i voti non sono ancora
-coperti: vanno aggiunti a quella skill quando esisteranno gli importer.
+I dati (listone, infortuni, calendario, statistiche, voti, probabili formazioni,
+squalifiche e status) si aggiornano ogni mattina con una routine automatica che esegue
+la skill `aggiorna-dati` e pusha su `main`. Le rose dopo l'asta non sono ancora
+coperte: vanno aggiunte a quella skill quando esisterà l'importer.
 
 ## Struttura dati (`data/`, JSON versionati in git)
 
@@ -31,9 +32,10 @@ coperti: vanno aggiunti a quella skill quando esisteranno gli importer.
   data, modalità (asta/scambio/svincolato).
 - `matchday_stats.json` — storico per giornata: player_id, matchday, squadra Serie A
   avversaria, casa/trasferta, voto, fantavoto, gol, assist, cartellini, falli, minuti.
-  Gol/assist/cartellini/falli/minuti da BigBalls (vedi script sotto); `voto` e
-  `fantavoto` restano sempre `null` per ora, da riempire con l'API di
-  leghe.fantacalcio.it quando verificabile con una lega reale. L'endpoint BigBalls
+  Gol/assist/cartellini/falli/minuti da BigBalls; `voto` e `fantavoto` da fantacalcio.it
+  (`import_voti.py`, voto "Redazione Fantacalcio"), `null` se il giocatore è senza voto.
+  Le righe dei giocatori con voto che BigBalls non riconosce (30-60 a giornata) hanno
+  le statistiche BigBalls a `null`. L'endpoint BigBalls
   usato mescola nel box score di una partita anche giocatori di squadre estranee
   (altri campionati, nazionali): una riga viene scritta solo se nome+squadra
   combaciano con un giocatore che sappiamo essere davvero in quella squadra di
@@ -136,12 +138,26 @@ se non scende in campo entra il primo della panchina: vedi
   ambiente. Le partite finite da pochissimo possono avere giornata nulla per
   ritardo della fonte: mai stimata, va verificata a mano al prossimo refresh.
   Merge idempotente sullo storico esistente (aggiorna per `match_id`, non duplica).
+- `import_voti.py [--giornata N]` — voto e fantavoto per giocatore da fantacalcio.it
+  (pagina "Voti Fantacalcio Serie A", HTML statico, verificata il 27/09 sulle giornate
+  1-5) in `data/matchday_stats.json`. Il sito pubblica tre voti (Redazione, Statistico,
+  Italia): la lega usa **Redazione**, `fonte_voti` in `config/league.json`. Abbinamento
+  **per id**: il link di ogni giocatore finisce con l'id fantacalcio, lo stesso del
+  listone (`fd<id>`). "55" sulla pagina è senza voto (un 6 grigio a video): si scrive
+  `null`. Solo partite finite nel calendario (durante la giornata i voti sono
+  provvisori), e i voti vengono sempre riscritti perché il sito li può correggere.
+  Va lanciato dopo `import_matchday_stats.py`. I voti di giocatori assenti dal listone
+  (circa 30 sulle prime 5 giornate) vengono stampati e non scritti. Il fantavoto del
+  sito usa i bonus standard, non per forza quelli della lega (vedi `scoring`): per
+  ordinare i giocatori va bene, per un'eventuale classifica fa fede leghe.fantacalcio.it.
 - `import_matchday_stats.py [--ricostruisci]` — box score per giocatore da BigBalls
   (`/v1/stored/matches/{id}/stats`) in `data/matchday_stats.json`. **Incrementale**:
   scarica solo le partite finite non ancora in archivio (il piano free ha 500
   chiamate al giorno; `--ricostruisci` le riscarica tutte). Aggiorna la giornata
   delle righe esistenti dal calendario, e non sovrascrive mai `voto`/`fantavoto` già
-  presenti. Scarta le righe di giocatori la cui squadra non ha giocato la partita.
+  presenti. Scarta le righe di giocatori la cui squadra non ha giocato la partita,
+  tranne quelle col voto di fantacalcio.it (abbinate per id, valgono anche per chi ha
+  poi cambiato squadra).
   Il matching nomi gestisce le abbreviazioni del listone a più lettere ("Martinez
   Jo."), i cognomi doppi ("Kolo Muani") e rifiuta un abbinamento se le iniziali sono
   note e diverse: se listone e BigBalls non concordano sulla squadra di un giocatore
@@ -200,7 +216,8 @@ se non scende in campo entra il primo della panchina: vedi
   titolari + eventuale modificatore, da chiarire se la lega ne usa uno oltre
   ai bonus/malus già inclusi nel fantavoto), confronto testa-a-testa e
   classifica. Bloccata su tre cose che non esistono ancora, non solo sul voto:
-  1. il voto reale per giocatore (vedi sopra, serve leghe.fantacalcio.it);
+  1. il fantavoto calcolato con le regole della lega (oggi c'è quello standard di
+     fantacalcio.it, vedi `import_voti.py`; quello della lega sta su leghe.fantacalcio.it);
   2. il calendario testa-a-testa della lega fantacalcio (chi gioca contro chi
      tra le 12 squadre ogni giornata — diverso dal calendario di Serie A,
      generato da leghe.fantacalcio.it solo a stagione fantacalcio iniziata);
