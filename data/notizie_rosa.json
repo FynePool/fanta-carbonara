@@ -1,6 +1,20 @@
 {
-  "aggiornato_il": "2026-09-27",
+  "aggiornato_il": "2026-09-28",
   "notizie": [
+    {
+      "data": "2026-09-28",
+      "squadra": "Torino",
+      "giocatori": [
+        "fd2061"
+      ],
+      "tipo": "altro",
+      "fatto": "Simeone non è tra i convocati delle nazionali durante la sosta di fine settembre (a differenza di Coco, Mandragora, Vlasic e Luongo, impegnati il 28/09): resta quindi ad allenarsi a Torino senza il rischio-viaggi dei nazionali. Non confermato da altre fonti indipendenti se sia una scelta tecnica dell'Argentina o altro motivo (nessun infortunio segnalato).",
+      "fonti": [
+        "https://www.toro.it/toro/primo-piano/torino-programma-nazionali-28-settembre-2026/1441502/"
+      ],
+      "verificata": false,
+      "aggiunta_il": "2026-09-28"
+    },
     {
       "data": "2026-09-27",
       "squadra": "Venezia",
@@ -47,6 +61,36 @@
       "aggiunta_il": "2026-09-27"
     },
     {
+      "data": "2026-09-27",
+      "squadra": "Juventus",
+      "giocatori": [
+        "fd6042"
+      ],
+      "tipo": "rientro",
+      "fatto": "Lucumì è impegnato con la Colombia nella sosta di fine settembre: titolare per tutti i 90' nel pareggio amichevole 1-1 col Messico del 26/09 (buona prova, 95% di passaggi riusciti, 5 chiusure difensive). Convocato da Lorenzo fino al 7/10 (altre amichevoli con Paraguay il 2/10 e Perù il 6/10): il rientro a Torino sarà a ridosso di Juventus-Cagliari dell'11/10. Nessun infortunio segnalato.",
+      "fonti": [
+        "https://www.juventusnews24.com/lucumi-messimo-colombia-amichevole-partita-numeri-juventus/",
+        "https://noibianconeri24.it/uncategorized/juventus-i-bianconeri-impegnati-con-le-nazionali-il-punto-del-27-settembre-2026/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
+    },
+    {
+      "data": "2026-09-27",
+      "squadra": "Genoa",
+      "giocatori": [
+        "fd5750"
+      ],
+      "tipo": "rientro",
+      "fatto": "Ostigard aveva saltato gli allenamenti dal 17/09 per una gastroenterite (lavoro differenziato, non in gruppo con il resto della squadra). Recuperato, il 27/09 è entrato al 66' con la Norvegia (sostituendo l'infortunato Ryerson) nella sconfitta 2-1 contro il Portogallo: segno che è tornato disponibile per il Genoa. Restano altre due amichevoli con la Norvegia (1/10 vs Galles, 4/10 vs Portogallo) prima del rientro a Genova.",
+      "fonti": [
+        "https://www.genoaoggi.it/notizie/genoa-ripresa-al-signorini-ostigard-ancora-a-parte-terapie-per-amorim-dopo-il-colpo-alla-caviglia/",
+        "https://www.buoncalcioatutti.it/2026/09/27/nazionali-genoa-ostigard-in-campo-nellultima-mezzora-di-norvegia-portogallo/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
+    },
+    {
       "data": "2026-09-26",
       "squadra": "Fiorentina",
       "giocatori": [
@@ -60,6 +104,21 @@
       ],
       "verificata": true,
       "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-23",
+      "squadra": "Lazio",
+      "giocatori": [
+        "fd632"
+      ],
+      "tipo": "altro",
+      "fatto": "Zaccagni non è stato convocato da Mancini per gli impegni di Nations League di fine settembre: esclusione per scelta di turnover ('dare respiro a chi ha pagato di più nel ciclo precedente'), non per infortunio. Resta quindi a disposizione della Lazio durante la sosta.",
+      "fonti": [
+        "https://www.laziochannel.it/2026/09/italia-in-turnover-zaccagni-non-convocato-lazio-guarda-al-futuro-con-i-volti-nuovi-di-mancini",
+        "https://www.lazionews24.com/convocati-italia-lista-mancini-scelta-frattesi/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
     },
     {
       "data": "2026-09-21",
@@ -92,6 +151,51 @@
       ],
       "verificata": true,
       "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-20",
+      "squadra": "Frosinone",
+      "giocatori": [
+        "fd7467"
+      ],
+      "tipo": "formazione",
+      "fatto": "Calvani è titolare fisso al centro della difesa a quattro di Alvini, in coppia con Monterisi (Oyono e Bracaglia esterni): schierato dal 1' anche nella vittoria per 2-0 sul Como del 20/09 (gol di Calò e Kvernadze), con Akpoguma relegato in panchina.",
+      "fonti": [
+        "https://www.napolimagazine.com/calcio/articolo/serie-a-frosinone-como-le-formazioni-ufficiali-20-09-2026",
+        "https://www.calciomagazine.net/pagelle-frosinone-como-20-settembre-2026-250571.html"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
+    },
+    {
+      "data": "2026-09-20",
+      "squadra": "Como",
+      "giocatori": [
+        "fd7129"
+      ],
+      "tipo": "formazione",
+      "fatto": "Jesus Rodriguez è un'alternativa, non un titolare fisso: dietro a Nico Paz, Baturina e Diao nelle gerarchie offensive di Fabregas, è partito titolare in 1 gara su 5. Nell'ultima (Frosinone-Como, persa 2-0 il 20/09) è entrato a inizio ripresa al posto di Baturina.",
+      "fonti": [
+        "https://www.calciomagazine.net/pagelle-frosinone-como-20-settembre-2026-250571.html",
+        "https://www.fantamaster.it/jesus-rodriguez-diao-baturina-addai-khun-titolari-gerarchie-trequarti-como/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
+    },
+    {
+      "data": "2026-09-19",
+      "squadra": "Udinese",
+      "giocatori": [
+        "fd5555"
+      ],
+      "tipo": "formazione",
+      "fatto": "Kamara è titolare fisso come esterno/terzino sinistro nel 3-4-2-1 di Runjaic: ha giocato titolare sia in Inter-Udinese (14/09) sia in Udinese-Cagliari (19/09).",
+      "fonti": [
+        "https://www.trivenetogoal.it/2026/09/14/inter-udinese-le-formazioni-ufficiali-lautaro-e-dimarco-dalla-panchina-runjaic-schiera-miller-e-kamara/265188",
+        "https://www.napolimagazine.com/calcio/articolo/serie-a-udinese-cagliari-le-formazioni-ufficiali-19-09-2026"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
     },
     {
       "data": "2026-09-19",
@@ -142,6 +246,21 @@
       ],
       "verificata": true,
       "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-12",
+      "squadra": "Lecce",
+      "giocatori": [
+        "fd7602",
+        "fd6549"
+      ],
+      "tipo": "formazione",
+      "fatto": "In conferenza stampa (12/09, dichiarazioni dirette dell'allenatore) Di Francesco ha chiarito i ruoli sulle fasce offensive: Pierotti 'deve fare l'esterno' perché ci sono quattro giocatori per quel ruolo e non può fare altrimenti; su Fatah ha detto che 'ha spunto e creatività' e 'non va dimenticato', descrivendolo però come alternativa a Pierotti e Monteiro, non come titolare fisso.",
+      "fonti": [
+        "https://www.pazzidifanta.com/news/lecce-difrancesco-conferenza-stampa-4a-giornata-serie-a-2026-27-459242"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-28"
     },
     {
       "data": "2026-09-07",
