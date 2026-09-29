@@ -34,7 +34,8 @@ guardando chi stava sopra al rigorista e dov'era (`valuta_rigori`):
              sia il primo (e' un sostituto);
   smentisce  qualcuno che le fonti gli mettono sopra era in campo per tutto il tempo in cui
              c'era lui;
-  incerto    qualcuno sopra di lui era in campo solo per una parte: dipende dal minuto.
+  incerto    qualcuno sopra di lui era in campo solo per una parte (dipende dal minuto), o
+             i minuti di uno dei due non si sanno: minuti ignoti non vuol dire assente.
 I minuti in campo vengono dal box score (una partita di T minuti, T il massimo giocato:
 titolare da 0 ai suoi minuti, subentrato da T meno i suoi minuti a T). Un "incerto" si
 risolve cercando il minuto del rigore e scrivendolo in `minuti_rigori` con due fonti.
@@ -173,12 +174,24 @@ def rigori_per_partita() -> float | None:
     return totale / len(squadre) / (2 * (len(squadre) - 1))   # partite di ogni squadra
 
 
-def _finestra(riga: dict, fine: int) -> tuple[int, int] | None:
-    """(da, a) minuti in campo nella partita, dal box score; None se non ha giocato."""
-    minuti = riga.get("minuti") or 0
+IGNOTA = "ignota"
+
+
+def _finestra(riga: dict | None, fine: int):
+    """(da, a) minuti in campo nella partita, dal box score; None se non ha giocato (nessuna
+    riga, o 0 minuti); IGNOTA se la riga c'è ma i minuti no (giocatore che BigBalls non ha:
+    42 righe con voto e senza minuti il 29/09). Minuti ignoti e assenza non sono la stessa
+    cosa: chi ha un voto ha giocato."""
+    if riga is None:
+        return None
+    minuti = riga.get("minuti")
+    if minuti is None:
+        return IGNOTA
     if minuti <= 0:
         return None
-    return (fine - minuti, fine) if riga.get("subentrato") else (0, minuti)
+    if riga.get("subentrato") is None:     # quanti minuti si sa, quando no
+        return (0, minuti) if minuti >= 90 else IGNOTA
+    return (fine - minuti, fine) if riga["subentrato"] else (0, minuti)
 
 
 def valuta_rigori(voci: list[dict], righe: list[dict], per_id: dict,
@@ -207,17 +220,21 @@ def valuta_rigori(voci: list[dict], righe: list[dict], per_id: dict,
         partita = per_partita[r["match_id"]]
         fine = max(90, max((x.get("minuti") or 0) for x in partita.values()))
         sua = _finestra(r, fine)
+        if sua is None:    # ha calciato, quindi ha giocato: i minuti del box score sono sbagliati
+            sua = IGNOTA
         nota = finestre_note.get((r["match_id"], pid))
-        if sua and nota:   # minuto del rigore verificato a mano con le fonti
-            sua = (max(sua[0], nota[0]), min(sua[1], nota[1]))
+        if nota:           # minuto del rigore verificato a mano con le fonti
+            sua = tuple(nota) if sua == IGNOTA else (max(sua[0], nota[0]), min(sua[1], nota[1]))
         sopra = []
         for v in sorted(per_squadra.get(squadra, []), key=lambda v: v["rango"] or 99):
             if v["player_id"] == pid or (rango is not None and (v["rango"] is None or v["rango"] >= rango)):
                 continue
             riga_v = partita.get(v["player_id"])
-            sue = _finestra(riga_v, fine) if riga_v else None
-            if sue is None or sua is None:
+            sue = _finestra(riga_v, fine)
+            if sue is None:
                 dove = "assente"
+            elif sue == IGNOTA or sua == IGNOTA:
+                dove = "minuti sconosciuti"
             else:
                 comune = min(sua[1], sue[1]) - max(sua[0], sue[0])
                 if comune <= 0:
@@ -227,12 +244,12 @@ def valuta_rigori(voci: list[dict], righe: list[dict], per_id: dict,
                 else:
                     dove = "in campo per una parte"
             sopra.append({"player_id": v["player_id"], "nome": v["nome"], "rango": v["rango"],
-                          "dove": dove, "minuti": (riga_v or {}).get("minuti") or 0})
+                          "dove": dove, "minuti": (riga_v or {}).get("minuti")})
         if rango == 1:
             esito = "primo"
         elif any(x["dove"] == "in campo" for x in sopra):
             esito = "smentisce"
-        elif any(x["dove"] == "in campo per una parte" for x in sopra):
+        elif any(x["dove"] in ("in campo per una parte", "minuti sconosciuti") for x in sopra):
             esito = "incerto"
         else:
             esito = "coerente"
@@ -358,13 +375,16 @@ def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
         ]
     for v in tutti:
         if v["esito"] in ("smentisce", "incerto"):
-            chi = ", ".join(f"{x['nome']} ({x['rango']}º, {x['dove']}, {x['minuti']}')"
-                            for x in v["sopra"] if x["dove"] in ("in campo", "in campo per una parte"))
+            chi = ", ".join(f"{x['nome']} ({x['rango']}º, {x['dove']}"
+                            + (f", {x['minuti']}')" if x["minuti"] is not None else ")")
+                            for x in v["sopra"] if x["dove"] in ("in campo", "in campo per una parte",
+                                                                 "minuti sconosciuti"))
             problemi.append(
                 f"{v['nome']} ({v['squadra']}, {v['rango'] or 'fuori lista'}º per le fonti) ha "
                 f"calciato alla giornata {v['giornata']} con {chi}: "
                 + ("le liste sono smentite, da rileggere" if v["esito"] == "smentisce" else
-                   "incerto, dipende dal minuto: cercalo e scrivilo in minuti_rigori con le fonti")
+                   "incerto: cerca il minuto del rigore e chi era in campo, e scrivilo in "
+                   "minuti_rigori con le fonti")
             )
     ufficiali_tot = sum(x["calciati"] for x in ufficiali.values())
     visti = sum(v["calciati"] for v in tutti)

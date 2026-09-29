@@ -139,8 +139,10 @@ dire se una decisione cambia il risultato o no. In `regole_mercato`: sforamento
 per uno svincolo, il prezzo d'acquisto per una cessione all'estero o in Serie B), asta di
 riparazione con +50 crediti, scambi solo a gennaio; `asta.py` non le applica ancora. In
 `competizioni` i criteri di parità per la futura fase classifica. I punteggi in
-`scoring` non li legge nessuno script (il fantavoto arriva già calcolato dal sito) e
-due valori sono `null` perché il regolamento non li chiarisce.
+`scoring` non li usa nessuno script per calcolare il fantavoto (arriva già calcolato dal
+sito), tranne i voti d'ufficio: `senza_voto_ammonito` (5,5, malus compreso) e
+`senza_voto_espulso` (4) li applica `lib/simulazione.py` ai punti veri del backtest, solo a
+chi ha giocato. Due valori sono `null` perché il regolamento non li chiarisce.
 
 **Dentro un ruolo** va schierato prima chi ha il fantavoto atteso più alto quando prende
 voto, anche se gioca poco, perché se non scende in campo entra il primo della panchina di
@@ -148,13 +150,15 @@ quel ruolo: la probabilità di giocare non entra nell'ordine (dimostrazione in
 `.docs/difetti-consiglio-formazione.md`). **Ma la panchina ha solo 1-2 posti per ruolo e
 uno slot scoperto vale 0**, quindi la probabilità conta eccome per decidere *chi* ci va:
 una riserva che non gioca mai è un posto buttato. Lo fa `_scegli_panchina` in `roster.py`.
-Sceglierci anche il modulo è stato provato e **scartato** perché non guadagna punti: vedi
-`.docs/analisi-valutazione-formazione.md`. **I portieri della stessa squadra sono una
+Sceglierci anche il modulo è stato provato e lasciato fuori perché non ha mostrato
+guadagni (non dimostrato, non smentito): vedi `.docs/analisi-valutazione-formazione.md`. **I portieri della stessa squadra sono una
 coppia**: ne gioca uno solo, quindi l'ordine fra titolare e riserva non cambia il punteggio
 e conta solo averli tutti e due in distinta. Le loro quote di `prob_titolare` (il sito non
-scrive mai più di 90) si rapportano a tutti i portieri di quella squadra. **Chi non ha voti
+scrive mai più di 90) si rapportano a tutti i portieri di quella squadra: la copertura
+che ne esce (99% per Martinez + Provedel) è una stima, non verificata. **Chi non ha voti
 non vale 0**: nel punteggio atteso conta con la media del ruolo, dichiarata come stima, e
-resta in fondo all'ordine.
+resta in fondo all'ordine (con una stima davanti, Provedel, 4,70, passerebbe davanti a
+Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvisa.
 
 ## Script (`scripts/`)
 
@@ -322,6 +326,11 @@ resta in fondo all'ordine.
   misto (giocatori + crediti in entrambe le direzioni) tra due squadre, o lo svincolo
   di un giocatore (torna disponibile per tutti); mostra crediti/slot rimanenti per
   ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
+- `lib/simulazione.py` — rigioca le giornate passate con le regole vere della lega per
+  tutte le rose (panchina a quota fissa, sostituzioni tra pari ruolo, slot scoperto = 0,
+  voti d'ufficio), usando le funzioni vere di `roster.py`. La usano `backtest_undici.py` e il
+  report (`scarti_formazione`: quanto il punteggio atteso di una formazione intera sbaglia i
+  punti veri, da cui la larghezza dello scenario dei gol).
 - `salva_status_scadenza.py [--dry-run]` — fotografa status e `prob_titolare` di tutti i
   giocatori prima della scadenza del prossimo turno, in `status_scadenze.json`. Lo lancia
   il giro del mattino dopo `apply_formazioni_status.py`: riscrive la foto finché la
@@ -341,10 +350,12 @@ resta in fondo all'ordine.
   giocare non entra nell'ordine ma negli avvisi ("se non gioca entra X") e nella scelta
   di chi va in panchina. Stampa anche il **rischio slot vuoto per ruolo**, il
   **punteggio atteso** e la probabilità di fare 0, 1, 2 o 3+ gol secondo `soglie_gol`
-  (confermate dall'utente il 27/09, primo gol a 66 e poi ogni 5), con l'incertezza del
-  punteggio misurata sugli scarti fra previsione e voto vero (`incertezza_voto` in
-  `roster.py`, circa ±5 punti): un punto atteso vale circa 0,2 gol ovunque, quindi non
-  esiste un "sul filo" guardando quanto manca alla soglia. Poi l'**avversario di lega** della prossima giornata,
+  (confermate dall'utente il 27/09, primo gol a 66 e poi ogni 5), come **scenario
+  approssimativo**: la larghezza è quanto i punti veri di una formazione intera si sono
+  allontanati dal punteggio atteso rigiocando le giornate passate (`scarti_formazione` in
+  `lib/simulazione.py`, circa ±7 punti il 29/09), il centro non è tarato. Un punto atteso
+  vale circa 0,17 gol ovunque, quindi non esiste un "sul filo" guardando quanto manca alla
+  soglia. Poi l'**avversario di lega** della prossima giornata,
   letto da `lega_competizioni.json`. Marca con `RIG` i **primi rigoristi** e ne stampa
   l'elenco con quante fonti li danno primi. La sezione "DA COSA È FATTO IL VALORE" spiega
   in una riga titolari e primi due cambi di ogni ruolo; "DECISIONI TUE" elenca le scelte
@@ -359,7 +370,8 @@ resta in fondo all'ordine.
   senza inventare numeri di giornata: le prime 10 partite non giocate sono il
   prossimo turno se coprono le 20 squadre una volta ciascuna. In quel caso applica la
   regola della lega sui rinvii, che vale per giornata: fino a 3 partite rinviate i loro
-  giocatori valgono 6 politico nell'ordine; oltre 3 restano con la loro media (voto del
+  giocatori valgono 6 politico nell'ordine, infortunati e squalificati compresi (il 6 va a
+  tutta la rosa); oltre 3 restano con la loro media (voto del
   recupero). Nessun rinviato viene escluso; se i rinvii sono 3 avvisa che uno in più
   cambia la regola. Stampa anche la scadenza della formazione (inizio della prima
   partita non rinviata del turno). Se il turno non è ricostruibile (recupero, turno già
@@ -384,19 +396,24 @@ resta in fondo all'ordine.
   funzioni vere di `roster.py` (`_scegli_panchina`, `_slot_attesi`), non una loro copia,
   passando una probabilità di prendere voto stimata dalle giornate precedenti (quella di
   fantacalcio.it esiste solo dal 21/09 e per queste giornate sarebbe guardare il futuro).
-  **Chi è fuori è quello che si sapeva alla scadenza**, dalla foto di
-  `status_scadenze.json`; senza foto (giornate 3-5) nessuno è escluso. Fino al 29/09
-  escludeva chi è infortunato oggi anche dalle giornate passate, e guardava il futuro. Conta
-  anche l'ammonito senza voto a 5,5 come nella lega. Il 29/09, senza più sguardo al futuro,
-  il motore vale **+2,68 [+0,64, +4,76] punti a giornata** sull'ordine d'acquisto e batte
-  stagione scorsa e quotazione, ma **non più in modo dimostrabile la media nuda dei voti**
-  (+1,22 [−0,15, +2,72]); scegliere la panchina con la probabilità vale +0,58 [+0,01,
-  +1,31]; il termine avversario +0,92 [−0,10, +2,03], non più significativo ma tenuto
-  (si rimisura con più giornate); la correzione per la produzione non guadagna niente ed è
-  stata spenta. Vedi
+  La simulazione sta in `lib/simulazione.py`, la stessa che usa il report: **niente di
+  quello che serve a schierare viene dalla giornata da prevedere**. Chi è fuori è quello
+  della foto di `status_scadenze.json` salvata prima della scadenza (senza foto, giornate
+  3-5, nessuno è escluso); l'avversario viene dal calendario, non dal tabellino della
+  giornata. Conta i voti d'ufficio (ammonito 5,5, espulso 4) solo a chi ha giocato. Stampa
+  anche quanto sbaglia il punteggio atteso della formazione intera. Il 29/09, dopo la
+  seconda revisione di Codex: il motore vale **+2,61 [+0,64, +4,56] punti a giornata**
+  sull'ordine d'acquisto e batte stagione scorsa e quotazione; contro la media nuda +1,15
+  [+0,19, +2,15]; panchina scelta con la probabilità +0,56 [−0,00, +1,29]; termine avversario
+  +0,85 [−0,03, +1,71]; modulo col valore atteso +0,12 [−0,64, +0,94]. **Gli intervalli sono
+  ottimisti** (le rose della stessa giornata condividono le partite) e con 36 formazioni le
+  etichette cambiano per pochi centesimi: prenderle come indizi, non verdetti.
+  "Indistinguibile" vuol dire non distinto da zero, non "non guadagna niente". Vedi
   `.docs/analisi-valutazione-formazione.md`. **È il collaudo da superare prima di toccare
-  `roster.py`**: una modifica entra solo se guadagna punti con l'intervallo che esclude
-  lo zero. Non scrive niente.
+  `roster.py`**, con una regola dichiaratamente a favore dello stato attuale: nessun
+  cambiamento, né per aggiungere un pezzo né per toglierlo, senza un intervallo che escluda
+  lo zero. Il termine avversario resta per questo, ed è **provvisorio** (entrato con prove
+  poi ridimensionate): si rimisura alla giornata 8. Non scrive niente.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
   È quella che esegue la routine del mattino: per aggiungere un dato al giro

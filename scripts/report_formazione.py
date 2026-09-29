@@ -8,7 +8,6 @@ I dati di stato giocatore (titolare/dubbio/infortunato/...) in data/players.json
 vanno aggiornati prima del lancio (skill aggiorna-dati o aggiorna-formazioni).
 """
 import argparse
-import math
 import sys
 from datetime import datetime
 from statistics import NormalDist
@@ -19,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from lib import store
 from lib.roster import PRODUZIONE_PREDEFINITA, SOGLIA_PARI, prossima_partita_lega, suggest_lineup
+from lib.simulazione import scarti_formazione
 from rigoristi import testo_verifica
 
 
@@ -157,35 +157,41 @@ def _titolarita(p: dict) -> str:
     return p["status"]
 
 
-def _gol(r: dict, soglie: dict) -> None:
-    """Il punteggio atteso non è un punteggio già fatto: quello vero si allontana di qualche
-    punto. Si stampa la probabilità di fare 0, 1, 2, 3+ gol, e quanto vale un punto in più.
-    Con un'incertezza più larga di una fascia, un punto vale circa lo stesso numero di gol
-    ovunque: non esiste un "sul filo" in cui ogni decimale conta."""
+def _gol(r: dict, soglie: dict, inc: dict | None) -> None:
+    """Il punteggio atteso non è un punteggio già fatto: quello vero si allontana di parecchi
+    punti. Si stampa uno SCENARIO di 0, 1, 2, 3+ gol e quanto vale un punto in più. Con
+    un'incertezza più larga di una fascia, un punto vale circa lo stesso numero di gol
+    ovunque: non esiste un "sul filo" in cui ogni decimale conta.
+
+    La larghezza viene da `scarti_formazione` (lib/simulazione.py): quanto i punti veri di
+    una formazione intera, con sostituzioni e slot scoperti, si sono allontanati dal punteggio
+    atteso nelle giornate passate. Non dal singolo giocatore moltiplicato per la radice di
+    11, che il 29/09 dava ±5,3 invece di ±6,9. Il centro invece non è tarato: nel backtest
+    il punteggio atteso sottostimava, ma lì la probabilità di voto è un'altra, quindi non lo
+    si corregge. Sono probabilità approssimate, non validate."""
     if not soglie.get("primo_gol"):
         return
     primo, fascia = float(soglie["primo_gol"]), float(soglie["fascia"])
-    inc = r.get("incertezza")
     print(f"  Soglie della lega: primo gol a {primo:.0f}, poi uno ogni {fascia:.0f}.")
     if not inc:
         print("  Quanto è incerto questo numero non si può ancora misurare (servono giornate")
         print("  giocate): non leggere i gol dal totale atteso.")
         return
-    # 11 slot con scarti indipendenti: fra compagni di squadra la correlazione misurata è
-    # piccola (+4% di deviazione, vedi .docs/analisi-valutazione-formazione.md)
-    sd = inc["sd_giocatore"] * math.sqrt(11)
+    sd = inc["sd"]
     dist = NormalDist(r["atteso"], sd)
     almeno = [1.0] + [1 - dist.cdf(primo + k * fascia) for k in range(12)]
     prob = [almeno[k] - almeno[k + 1] for k in range(3)] + [almeno[3]]
     per_punto = sum(dist.pdf(primo + k * fascia) for k in range(12))
-    print(f"  Il punteggio vero si allontana da quello atteso di circa {sd:.1f} punti (una deviazione")
-    print(f"  standard: {inc['sd_giocatore']:.2f} a giocatore, misurata su {inc['n']} voti delle giornate "
-          f"{inc['giornate'][0]}-{inc['giornate'][-1]}")
-    print("  confrontando la previsione fatta prima con il voto vero). Quindi i gol sono probabilità:")
+    print(f"  Il punteggio vero di una formazione si è allontanato da quello atteso di circa {sd:.1f}")
+    print(f"  punti (deviazione standard su {inc['n']} formazioni della lega rigiocate, giornate "
+          f"{inc['giornate'][0]}-{inc['giornate'][-1]}). Quindi i")
+    print("  gol sono uno scenario approssimativo, non probabilità già verificate:")
     print("    " + "   ".join(f"{k} gol {p:.0%}" for k, p in enumerate(prob[:3])) + f"   3 o più {prob[3]:.0%}")
-    print(f"  Un punto di valore atteso in più vale circa {per_punto:.2f} gol, vicino o lontano da una")
-    print(f"  soglia: una scelta da 0.10 punti sposta {0.1 * per_punto:.2f} gol. Le decisioni si pesano")
-    print("  in punti, non guardando quanto manca alla soglia.")
+    print(f"  Con queste ipotesi un punto di valore atteso vale circa {per_punto:.2f} gol, vicino o lontano")
+    print(f"  da una soglia: una scelta da 0.10 punti sposta {0.1 * per_punto:.2f} gol. Le decisioni si pesano")
+    print("  in punti, non guardando quanto manca alla soglia. Anche il centro non è tarato: nel")
+    print(f"  backtest il punteggio atteso ha sbagliato in media di {inc['media']:+.1f} punti, ma con una")
+    print("  probabilità di voto diversa da quella del sito usata qui, quindi non si corregge.")
     if soglie.get("da_confermare"):
         print("  ATTENZIONE: le soglie gol non sono confermate dalla lega, sono i valori")
         print("  standard di fantacalcio.it. Da verificare nel pannello della lega.")
@@ -239,7 +245,7 @@ def main():
         print("entra il primo della panchina del suo ruolo, quindi conviene sempre mettere")
         print("avanti il più forte. Entra invece nella scelta di CHI va in panchina, perché i")
         print("posti sono pochi e uno slot scoperto vale 0. Il modulo si sceglie sulla somma")
-        print("dei valori dei titolari (col valore atteso è stato provato e non guadagna).\n")
+        print("dei valori dei titolari (col valore atteso è stato provato e non ha mostrato guadagni).\n")
         panchina_per_ruolo = {}
         for e in r["panchina"]:
             panchina_per_ruolo.setdefault(e["player"]["role"], []).append(e["player"]["name"])
@@ -276,10 +282,11 @@ def main():
             print(f"  [{p['role']}] {p['name']:<18} {_voti(e['rating']):<30} {_titolarita(p):<17} {_partita(e)}")
 
     if r["modulo"] and r["copertura"]:
-        print("\nRISCHIO SLOT VUOTO per ruolo (probabilità che tutti gli slot siano coperti;")
-        print("calcolata sulla probabilità di partire titolare, che non conta chi entra a partita")
-        print("in corso, quindi un po' prudente. Per i portieri della stessa squadra la quota è")
-        print("rapportata a tutti i portieri di quella squadra: ne gioca sempre uno.)")
+        print("\nRISCHIO SLOT VUOTO per ruolo (probabilità che tutti gli slot siano coperti). È una")
+        print("STIMA, non ancora verificata: usa la probabilità di partire titolare del sito, che non")
+        print("conta chi entra a partita in corso e non è ancora stata confrontata con chi ha preso")
+        print("voto davvero. Per i portieri della stessa squadra la quota è rapportata a tutti i")
+        print("portieri di quella squadra: ne gioca sempre uno.")
         piu_esposto = min(r["copertura"].values())
         for role, coperto in sorted(r["copertura"].items(), key=lambda x: x[1]):
             print(f"  {role}: coperto al {coperto:6.1%}   rischio {1 - coperto:.1%}"
@@ -291,7 +298,7 @@ def main():
         if r["stimati"]:
             stime = ", ".join(f"{e['player']['name']} {e['stima']:.2f}" for e in r["stimati"])
             print(f"  Chi non ha voti è contato con la media del suo ruolo, una stima e non un dato: {stime}.")
-        _gol(r, regole.get("soglie_gol") or {})
+        _gol(r, regole.get("soglie_gol") or {}, scarti_formazione())
 
     in_rosa = [e for e in r["titolari"] + r["panchina"] + r["esclusi"] if e.get("rigorista")]
     if in_rosa:
