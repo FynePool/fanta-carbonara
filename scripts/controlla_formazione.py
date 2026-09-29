@@ -13,9 +13,12 @@ La prima riga dell'output è il verdetto, scritto per la notifica del giro del m
     FORMAZIONE DA CORREGGERE     un infortunato o squalificato schierato, un giocatore non
                                  più in rosa, o un ruolo che vale più di SOGLIA_PARI punti
                                  attesi sotto il consiglio
-    FORMAZIONE DA INSERIRE       non c'è ancora, e manca più di un giorno alla scadenza
-    FORMAZIONE MANCANTE          non c'è, e la scadenza è oggi o domani
-    FORMAZIONE NON CONTROLLATA   turno in corso, nessuna giornata di lega, sito o credenziali
+    FORMAZIONE MANCANTE          non c'è, e mancano GIORNI_URGENZA giorni o meno alla scadenza
+    FORMAZIONE NON CONTROLLATA   il controllo non ha potuto girare: sito, credenziali, dati
+    FORMAZIONE NESSUN AVVISO     niente da controllare: formazione non ancora inserita con la
+                                 scadenza lontana, turno in corso, nessuna giornata di lega
+Solo NESSUN AVVISO non va in cima al riepilogo del giro del mattino (vedi la skill
+aggiorna-dati): è la situazione normale fra un turno e l'altro.
 
 Legge solo la mia formazione. Quella dell'avversario il sito la restituisce anche prima
 della scadenza, ma non cambia quale formazione mi conviene.
@@ -42,10 +45,16 @@ from lib.roster import (MODULE_ROLE_COUNTS, ROLES, SOGLIA_PARI, _slot_attesi, _v
 
 ROMA = ZoneInfo("Europe/Rome")
 
-# Una formazione che manca a più di un giorno dalla scadenza è normale (dopo un turno si
-# inserisce la successiva): è un promemoria, non un allarme. Dal giorno prima diventa
-# MANCANTE, così l'avviso che conta non si perde fra quelli di tutti i giorni.
-GIORNI_URGENZA = 1
+# Decisione dell'utente (29/09): l'avviso di formazione mancante arriva dai 2 giorni prima
+# della scadenza fino al giorno stesso (con la scadenza sabato: giovedì, venerdì e sabato
+# mattina). Prima non serve: dopo un turno la formazione successiva manca per forza.
+GIORNI_URGENZA = 2
+
+
+def giorni_alla_scadenza(inizio: datetime, adesso: datetime) -> int:
+    """Giorni di calendario (ora italiana) fra oggi e il giorno della scadenza: 0 il giorno
+    stesso, anche se la routine gira alle 6 e la partita è alle 20:45."""
+    return (inizio.astimezone(ROMA).date() - adesso.astimezone(ROMA).date()).days
 
 
 def giornata_da_controllare(competizioni: list[dict], calendario: list[dict],
@@ -283,13 +292,17 @@ def main() -> int:
     giornata, motivo = giornata_da_controllare(store.load_json(competizioni_path),
                                                store.load_json(calendario_path), team_id)
     if giornata is None:
-        print(f"FORMAZIONE NON CONTROLLATA: {motivo}.")
+        print(f"FORMAZIONE NESSUN AVVISO: {motivo}.")
         return 0
     turno = prossimo_turno()
     inizio = scadenza(turno)
     if inizio is None:
-        print("FORMAZIONE NON CONTROLLATA: il prossimo turno di Serie A non si ricostruisce dalle "
-              "date (turno in corso, un recupero o un rinvio): controlla la formazione a mano sul sito.")
+        # Quasi sempre è il turno in corso. Può essere anche un recupero fra le prossime
+        # partite: allora il controllo tace anche vicino alla scadenza, e lo dice il report
+        # ("il prossimo turno non si ricostruisce dalle date").
+        print("FORMAZIONE NESSUN AVVISO: il prossimo turno di Serie A non si ricostruisce dalle "
+              "date (turno in corso, un recupero o un rinvio): se la scadenza è vicina, controlla "
+              "la formazione a mano sul sito.")
         return 0
 
     nomi = {t["id"]: t["name"] for t in store.load_teams()}
@@ -310,7 +323,7 @@ def main() -> int:
                 f"{giornata['giornata_serie_a']}/{giornata['id_casa']}/{giornata['id_trasferta']}")
         risposta = client.authenticated_get(path, jwt, app_key)
         if risposta.get("cal"):
-            print(f"FORMAZIONE NON CONTROLLATA: la lega ha già calcolato la {partita}.")
+            print(f"FORMAZIONE NESSUN AVVISO: la lega ha già calcolato la {partita}.")
             return 0
         salvata = formazione_salvata(risposta, giornata, team_id)
     except (client.LegheFcError, OSError, KeyError, ValueError) as e:
@@ -320,13 +333,14 @@ def main() -> int:
 
     consiglio = suggest_lineup(team_id)
     if salvata is None:
-        giorni = (inizio.astimezone(ROMA).date() - datetime.now(timezone.utc).astimezone(ROMA).date()).days
-        if giorni <= GIORNI_URGENZA:
-            print(f"FORMAZIONE MANCANTE: nessuna formazione per la {partita}. Scadenza {quando}: "
-                  f"senza formazione la lega dà lo 0-3 a tavolino.")
-        else:
-            print(f"FORMAZIONE DA INSERIRE: non c'è ancora la formazione per la {partita}. "
-                  f"Scadenza {quando}, fra {giorni} giorni.")
+        giorni = giorni_alla_scadenza(inizio, datetime.now(timezone.utc))
+        if giorni > GIORNI_URGENZA:
+            print(f"FORMAZIONE NESSUN AVVISO: la formazione per la {partita} non è ancora inserita, "
+                  f"ma la scadenza ({quando}) è fra {giorni} giorni: l'avviso parte "
+                  f"{GIORNI_URGENZA} giorni prima.")
+            return 0
+        print(f"FORMAZIONE MANCANTE: nessuna formazione per la {partita}. Scadenza {quando}: "
+              f"senza formazione la lega dà lo 0-3 a tavolino.")
         if consiglio.get("modulo"):
             print("\n".join(_consiglio_testo(consiglio)))
         return 0
