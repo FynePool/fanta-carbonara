@@ -20,7 +20,7 @@ POLITICO = {"punteggio": 6.0, "politico": True}
 def portiere(prob, rating=None, stima=4.70, quota=96.0, fuori=False, squadra="Inter"):
     return {"player": {"role": "P", "serie_a_team": squadra, "prob_titolare": prob},
             "rating": rating, "stima": None if rating else stima,
-            "quota_portieri_squadra": quota, "portiere_fuori": fuori}
+            "quota_portieri_squadra": quota, "titolare_porta_fuori": fuori}
 
 
 def arrotonda(t):
@@ -49,6 +49,29 @@ class Portieri(unittest.TestCase):
         di_gennaro = portiere(1, quota=quota["Inter"], fuori=True)
         self.assertAlmostEqual(R._slot_attesi([provedel, di_gennaro], 1)[1], 1.0)
 
+    def test_riserva_posseduta_da_sola_col_titolare_fuori(self):
+        # Pdor saint-germain ha De Gea e Christensen ma non Lezzerini: se De Gea si ferma
+        players = {
+            "dg": {"role": "P", "serie_a_team": "Fiorentina", "prob_titolare": 90, "status": "infortunato"},
+            "ch": {"role": "P", "serie_a_team": "Fiorentina", "prob_titolare": 5, "status": "panchina"},
+            "le": {"role": "P", "serie_a_team": "Fiorentina", "prob_titolare": 1, "status": "panchina"},
+        }
+        quota, fuori = R.quote_portieri(players)
+        christensen = portiere(5, quota=quota["Fiorentina"], fuori="Fiorentina" in fuori)
+        self.assertAlmostEqual(R._slot_attesi([christensen], 1)[1], 5 / 6)
+
+    def test_riserva_fuori_non_gonfia_il_titolare(self):
+        # Grabara (riserva della Juventus, senza quota) infortunato: Vicario resta al 90%
+        players = {
+            "vi": {"role": "P", "serie_a_team": "Juventus", "prob_titolare": 90, "status": "titolare"},
+            "gr": {"role": "P", "serie_a_team": "Juventus", "prob_titolare": None, "status": "infortunato"},
+            "ne": {"role": "P", "serie_a_team": "Juventus", "prob_titolare": 5, "status": "panchina"},
+        }
+        quota, fuori = R.quote_portieri(players)
+        self.assertNotIn("Juventus", fuori)
+        vicario = portiere(90, {"punteggio": 5.0}, quota=quota["Juventus"], fuori=False, squadra="Juventus")
+        self.assertAlmostEqual(R._slot_attesi([vicario], 1)[1], 0.90)
+
     def test_coppia_con_dato_mancante_non_supera_il_100(self):
         senza_dato = portiere(None)
         _, coperto = R._slot_attesi([portiere(90, {"punteggio": 4.54}), senza_dato], 1)
@@ -67,6 +90,17 @@ class SeiPolitico(unittest.TestCase):
     def test_6_politico_non_moltiplicato_per_la_titolarita(self):
         entry = {"player": {"role": "C", "serie_a_team": "X", "prob_titolare": 10}, "rating": POLITICO}
         self.assertEqual(arrotonda(R._slot_attesi([entry], 1)), (6.0, 1.0))
+
+
+class ScenarioGol(unittest.TestCase):
+    def test_le_percentuali_sommano_a_100(self):
+        from report_formazione import percentuali_a_5
+        self.assertEqual(percentuali_a_5([0.693, 0.197, 0.084, 0.026]), [70, 20, 10, 0])
+        for prob in ([0.23, 0.26, 0.27, 0.24], [0.02, 0.18, 0.40, 0.40], [1.0, 0, 0, 0],
+                     [0.124, 0.124, 0.376, 0.376]):
+            risultato = percentuali_a_5(prob)
+            self.assertEqual(sum(risultato), 100)
+            self.assertTrue(all(x % 5 == 0 for x in risultato))
 
 
 class Rigoristi(unittest.TestCase):

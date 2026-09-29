@@ -575,8 +575,13 @@ def _slot_attesi(candidati: list[dict], n: int, prob=None) -> tuple[float, float
             # sotto la quota minima si divide lo stesso se il portiere che manca alla somma è
             # fuori (infortunato, squalificato): allora le quote basse delle riserve sono
             # attese, e una di loro deve giocare
-            fuori = any(candidati[i].get("portiere_fuori") for i in gruppo)
-            if (len(gruppo) > 1 and all(q and (q >= PORTIERI_QUOTA_MINIMA or fuori) for q in quote)
+            fuori = any(candidati[i].get("titolare_porta_fuori") for i in gruppo)
+            # col titolare fuori si divide anche un portiere da solo: una riserva posseduta
+            # senza gli altri portieri della sua squadra (Christensen senza Lezzerini, se
+            # De Gea si ferma) al 5% delle quote vecchie è sottostimata, fra i disponibili
+            # è 5/6. Col titolare disponibile un portiere da solo resta com'è: lì il 90 del
+            # sito è una scala da tarare (vedi prob_voto), non un errore da correggere.
+            if ((len(gruppo) > 1 or fuori) and all(q and (q >= PORTIERI_QUOTA_MINIMA or fuori) for q in quote)
                     and all(candidati[i]["player"].get("prob_titolare") is not None for i in gruppo)):
                 for i in gruppo:
                     dati[i] = (dati[i][0], min(1.0, candidati[i]["player"]["prob_titolare"] / quote[0]))
@@ -654,19 +659,22 @@ def _valore(e: dict) -> float | None:
 
 
 def quote_portieri(players_by_id: dict) -> tuple[dict, set]:
-    """(squadra -> somma di `prob_titolare` dei suoi portieri DISPONIBILI, squadre con un
-    portiere infortunato o squalificato), per _slot_attesi. Un titolare fuori non deve
-    restare al denominatore delle sue riserve: con Martinez infortunato e le quote non
-    ancora aggiornate, Provedel (5) e Di Gennaro (1) davano 6/96 = 6% di copertura."""
-    quota, fuori = defaultdict(float), set()
+    """(squadra -> somma di `prob_titolare` dei suoi portieri DISPONIBILI, squadre col
+    TITOLARE fuori), per _slot_attesi. Un titolare fuori non deve restare al denominatore
+    delle sue riserve: con Martinez infortunato e le quote non ancora aggiornate, Provedel
+    (5) e Di Gennaro (1) davano 6/96 = 6% di copertura.
+
+    "Titolare fuori" vuol dire che i portieri infortunati o squalificati della squadra
+    avevano, prima di fermarsi, almeno PORTIERI_QUOTA_MINIMA di quota. Non basta un
+    portiere qualsiasi fuori: il 29/09 era infortunato Grabara, una riserva della Juventus,
+    e contarlo avrebbe gonfiato da solo il 90% di Vicario."""
+    quota, quota_fuori = defaultdict(float), defaultdict(float)
     for q in players_by_id.values():
-        if q["role"] != "P":
+        if q["role"] != "P" or q.get("prob_titolare") is None:
             continue
-        if q["status"] in EXCLUDED_STATUSES:
-            fuori.add(q["serie_a_team"])
-        elif q.get("prob_titolare") is not None:
-            quota[q["serie_a_team"]] += float(q["prob_titolare"])
-    return quota, fuori
+        dove = quota_fuori if q["status"] in EXCLUDED_STATUSES else quota
+        dove[q["serie_a_team"]] += float(q["prob_titolare"])
+    return quota, {sq for sq, v in quota_fuori.items() if v >= PORTIERI_QUOTA_MINIMA}
 
 
 def scavalcato_di_recente(v: dict) -> list[dict]:
@@ -818,7 +826,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     righe = store.load_matchday_stats()
     calendario = store.load_json(calendario_path) if calendario_path.exists() else []
     modello = costruisci_modello(righe, players_by_id, calendario)
-    quota_portieri, portiere_fuori = quote_portieri(players_by_id)
+    quota_portieri, titolare_porta_fuori = quote_portieri(players_by_id)
 
     panchina_cfg = {
         role: int(n)
@@ -907,7 +915,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
             # dichiarata, non un dato (vedi _slot_attesi)
             "stima": None if rating else modello["media_ruolo"].get(p["role"]),
             "quota_portieri_squadra": quota_portieri.get(p["serie_a_team"]) if p["role"] == "P" else None,
-            "portiere_fuori": p["role"] == "P" and p["serie_a_team"] in portiere_fuori,
+            "titolare_porta_fuori": p["role"] == "P" and p["serie_a_team"] in titolare_porta_fuori,
             "partita": partita,
             "rigorista": rig.get(p["id"]),
             "erede_rigorista": eredi.get(p["id"]),

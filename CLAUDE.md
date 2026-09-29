@@ -160,8 +160,11 @@ coppia**: ne gioca uno solo (salvo un cambio del portiere a partita in corso), q
 l'ordine fra titolare e riserva non cambia quasi mai il punteggio e conta averli tutti e due
 in distinta. Le loro quote di `prob_titolare` (il sito non scrive mai più di 90) si
 rapportano ai portieri **disponibili** di quella squadra (`quote_portieri` in `roster.py`:
-un titolare infortunato non resta al denominatore delle riserve): la copertura che ne esce
-(99% per Martinez + Provedel) è una stima, non verificata. **Chi non ha voti
+un titolare infortunato non resta al denominatore delle riserve), e così anche un portiere
+posseduto da solo quando il **titolare** della sua squadra è fuori (Christensen senza
+Lezzerini, se De Gea si ferma: 5/6, non 5%). Una riserva fuori non conta: Grabara
+infortunato non gonfia il 90% di Vicario. La copertura che ne esce (99% per Martinez +
+Provedel) è una stima, non verificata. **Chi non ha voti
 non vale 0**: nel punteggio atteso conta con la media del ruolo, dichiarata come stima, e
 resta in fondo all'ordine (con una stima davanti, Provedel, 4,70, passerebbe davanti a
 Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvisa.
@@ -357,7 +360,7 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   di chi va in panchina. Stampa anche il **rischio slot vuoto per ruolo**, il
   **punteggio atteso** e la probabilità di fare 0, 1, 2 o 3+ gol secondo `soglie_gol`
   (confermate dall'utente il 27/09, primo gol a 66 e poi ogni 5), come **scenario
-  approssimativo arrotondato a 5 punti percentuali**: la larghezza è quanto i punti veri di
+  approssimativo arrotondato a 5 punti percentuali** (che sommano sempre a 100): la larghezza è quanto i punti veri di
   una formazione intera si sono allontanati dal punteggio atteso rigiocando le giornate
   passate (`scarti_formazione` in `lib/simulazione.py`, circa ±7 punti il 29/09). Ma è
   misurata con la probabilità di voto dello storico, non con quella del sito che usa il
@@ -425,8 +428,9 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   poi ridimensionate): si rimisura alla giornata 8. Non scrive niente.
 - `tests/test_casi_limite.py` — i casi limite trovati nelle revisioni di Codex del 29/09
   (6 politico nella coppia di portieri, titolare fuori con le quote vecchie, coppia con un
-  dato mancante, rigori coi minuti sconosciuti, rigore più recente contro conferma vecchia,
-  voti d'ufficio solo a chi ha giocato), costruiti a mano senza leggere `data/`:
+  dato mancante, riserva posseduta da sola col titolare fuori, rigori coi minuti
+  sconosciuti, rigore più recente contro conferma vecchia, voti d'ufficio solo a chi ha
+  giocato, scenario dei gol che somma a 100), costruiti a mano senza leggere `data/`:
   `python3 -m unittest discover tests`. Un caso limite nuovo si aggiunge qui.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
