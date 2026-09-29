@@ -63,15 +63,39 @@ incontra ognuna delle altre 3 volte.
 10-12/10): che `ptH`/`ptA` siano i fantapunti totali e `result` il punteggio in gol, e
 cosa contiene `resultSR`.
 
+### `/gaming/v1/teamLineup/<competizione>/<giornata>/<giornata Serie A>/<casa>/<trasferta>` — formazioni inserite (`controlla_formazione.py`)
+
+Le formazioni delle due squadre di una partita della lega (`?extra=1` dà la stessa risposta).
+Il 27/09 mattina, prima che qualcuno schierasse, rispondeva `"home": null, "away": null`.
+**Verificato il 29/09** (giornata 1, Serie A 6, 11 giorni prima della scadenza): appena una
+squadra salva la formazione, la risposta la contiene. Campi in cima: `cal` (giornata
+calcolata), `mday` (giornata della competizione), `cmday` (giornata di Serie A), `idcomp`,
+`sign`/`res`/`resr` (esito: `"X"`, `"0-0"` prima del calcolo). Per squadra (`home`/`away`,
+`null` se non ha inserito niente):
+
+| Campo | Cosa | Note |
+|---|---|---|
+| `tid` | id della squadra | lo stesso di `teams.json` |
+| `useId` | id dell'utente | **dato personale: mai salvato né stampato** |
+| `starts` | gli 11 titolari | `pid` = id del listone (`fd<pid>`); `scr`, `cscr`, `b`, `ptype`, `m` a 56, 100, zeri e `-` prima del calcolo: da capire alla prima giornata calcolata |
+| `bench` | i 7 panchinari **nell'ordine inserito** | è l'ordine delle sostituzioni (1 P, 2 D, 2 C, 2 A) |
+| `mdl`, `nmdl` | modulo (`"343"`) | `controlla_formazione.py` lo ricava dai ruoli, non da qui |
+| `lucnt` | quante volte è stata salvata | |
+| `cdate`, `ldate` | primo e ultimo salvataggio, `AAAAMMGGhhmmssmmm` | fuso non dichiarato: **probabilmente UTC** (il 29/09 `ldate` diceva 16:09:55 e l'utente ha aperto la sessione per dirlo alle 16:11 UTC), non verificato; lo script ne usa solo il giorno |
+| `visb` | visibile | `true` per tutte e due già 11 giorni prima della scadenza |
+| `allComp` | valida per tutte le competizioni | |
+| `points`, `tot`, `tbon`, `swtc`, `capt`, `rg`, `tkply`, `lply` | punteggi, bonus, cambi, capitano | a zero o `null` prima del calcolo |
+
+**La risposta contiene anche la formazione dell'avversario**, già prima della scadenza.
+`controlla_formazione.py` legge solo la mia: quella dell'avversario non cambia quale
+formazione mi conviene. Resta da vedere alla prima giornata calcolata (Serie A 6) cosa
+diventano `scr`, `b`, `points`, `tot`, `tbon` e `swtc`: probabilmente il voto per giocatore e
+il punteggio calcolati dalla lega, che servono alla classifica (vedi CLAUDE.md, fasi future).
+
 ## Endpoint noti, non ancora utili
 
 - **Classifica: nessun endpoint** (non c'è nemmeno nel client di riferimento). Si ricava
   dal calendario, con i criteri di parità di `config/league.json` → `competizioni`.
-- `/gaming/v1/teamLineup/<competizione>/<giornata>/<giornata Serie A>/<casa>/<trasferta>`
-  (anche con `?extra=1`): formazioni schierate di una partita. Il 27/09, prima della
-  giornata, risponde `{"cal": false, "mday", "cmday", "idcomp", "sign", "res", "resr",
-  "home": null, "away": null}`. **Probabilmente** dopo il calcolo contiene formazioni e
-  voti per giocatore calcolati dalla lega: da verificare alla prima giornata calcolata.
 - `/onboarding/v1/league/players`: listone della lega con le sue quotazioni (verificato
   su una lega di test, non usato: il listone arriva da fantacalcio.it).
 - `/onboarding/v1/league/update`: nel client di riferimento, è una scrittura. Mai usarlo.

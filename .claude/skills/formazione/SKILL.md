@@ -105,3 +105,7 @@ nuovo) va cercato ogni volta, prima di consigliare.
     scelta autonoma.
 11. Se il report non propone una formazione, riporta il motivo che stampa (nessun
     voto, rosa vuota, ruolo scoperto) invece di proporne una approssimativa.
+12. Se l'utente dice di aver inserito la formazione sul sito, controllala con
+    `python3 scripts/controlla_formazione.py`: legge quella salvata su
+    leghe.fantacalcio.it e dice se coincide col consiglio, se c'è un indisponibile o un
+    ruolo sotto il consiglio. È lo stesso controllo del giro del mattino.
