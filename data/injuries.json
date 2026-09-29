@@ -9,15 +9,6 @@
     "imported_on": "2026-09-29"
   },
   {
-    "player_id": "fd2188",
-    "start_date": null,
-    "expected_return": "Proverà a recuperare a pieno durante la sosta, da valutare nei prossimi allenamenti le possibilità di convocazione già contro il Monza nel prossimo turno.",
-    "description": "il terzino dei biancocelesti KO il 24 agosto a Bologna vittima di una lesione muscolare alla coscia.",
-    "status": "in corso",
-    "source": "fantadraft_import",
-    "imported_on": "2026-09-29"
-  },
-  {
     "player_id": "fd6672",
     "start_date": null,
     "expected_return": "proverà a tornerà arruolabile dalla seconda metà di ottobre.",
@@ -47,7 +38,7 @@
   {
     "player_id": "fd5678",
     "start_date": null,
-    "expected_return": "Da valutare, ma non ci sarà alla ripresa del campionato.",
+    "expected_return": "Ha deciso di operarsi e rimangono da valutare i tempi di rientro, non ci sarà di certo alla ripresa del campionato.",
     "description": "Lo svedese KO in Nazionale il 26 settembre vittima di un problema muscolare alla coscia.",
     "status": "in corso",
     "source": "fantadraft_import",
@@ -157,6 +148,24 @@
     "start_date": null,
     "expected_return": "ipotizziamo possa tornare convocabile da fine ottobre.",
     "description": "il difensore sta proseguendo la fase di recupero dalla lesione legamento crociato anteriore gamba destra e",
+    "status": "in corso",
+    "source": "fantadraft_import",
+    "imported_on": "2026-09-29"
+  },
+  {
+    "player_id": "fd2766",
+    "start_date": null,
+    "expected_return": "rientro previsto dalla seconda metà di ottobre.",
+    "description": "Il calciatore alle prese con una lesione muscolare al bicipite femorale destro",
+    "status": "in corso",
+    "source": "fantadraft_import",
+    "imported_on": "2026-09-29"
+  },
+  {
+    "player_id": "fd5800",
+    "start_date": null,
+    "expected_return": "Condizioni da valutare, a forte rischio la sua presenza alla ripresa del campionato contro il Monza.",
+    "description": "L'islandese in Nazionale il 26 settembre vittima di un problema alla spalla sinistra dopo una caduta fortuita in partita.",
     "status": "in corso",
     "source": "fantadraft_import",
     "imported_on": "2026-09-29"
@@ -306,6 +315,15 @@
     "imported_on": "2026-09-29"
   },
   {
+    "player_id": "fd1871",
+    "start_date": null,
+    "expected_return": "Ipotesi di rientro in campo dalla metà di novembre.",
+    "description": "Il centrocampista operato a fine settembre vittima di una lesione del menisco laterale del ginocchio sinistro.",
+    "status": "in corso",
+    "source": "fantadraft_import",
+    "imported_on": "2026-09-29"
+  },
+  {
     "player_id": "fd6640",
     "start_date": null,
     "expected_return": "Verrà operato e costretto a un lungo stop (ipotizziamo un rientro da marzo).",
@@ -380,7 +398,7 @@
   {
     "player_id": "fd2832",
     "start_date": null,
-    "expected_return": "ipotizziamo un possibile rientro dalla metà di ottobre.",
+    "expected_return": "ipotizziamo un possibile rientro dalla metà di novembre.",
     "description": "l'ala offensiva dei bianconeri fermo dopo il match contro il Milan (6 settembre) per una lesione di medio grado del bicipite femorale",
     "status": "in corso",
     "source": "fantadraft_import",
@@ -389,7 +407,7 @@
   {
     "player_id": "fd6822",
     "start_date": null,
-    "expected_return": "ipotizziamo un possibile rientro dalla fine di ottobre.",
+    "expected_return": "rientro dalla metà di novembre.",
     "description": "l'attaccante vittima di una lesione di medio grado del muscolo semitendinoso",
     "status": "in corso",
     "source": "fantadraft_import",
@@ -398,8 +416,8 @@
   {
     "player_id": "fd7272",
     "start_date": null,
-    "expected_return": "condizioni da valutare. Assente nel prossimo turno di campionato.",
-    "description": "L'attaccante vittima di un problema alla caviglia a fine settembre",
+    "expected_return": "Assente nel prossimo turno di campionato contro il Torino, da valutare rientro dalla seconda metà di ottobre.",
+    "description": "L'attaccante vittima di un problema alla caviglia a fine settembre.",
     "status": "in corso",
     "source": "fantadraft_import",
     "imported_on": "2026-09-29"

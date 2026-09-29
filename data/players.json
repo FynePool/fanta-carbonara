@@ -1178,7 +1178,7 @@
     "quotazione": 6,
     "fvm": 11,
     "status": "infortunato",
-    "status_note": "infortunio: Da valutare, ma non ci sarà alla ripresa del campionato.",
+    "status_note": "infortunio: Ha deciso di operarsi e rimangono da valutare i tempi di rientro, non ci sarà di certo alla ripresa del campionato.",
     "status_updated_at": "2026-09-29",
     "prob_titolare": null
   },
@@ -2230,8 +2230,8 @@
     "quotazione_iniziale": 6,
     "quotazione": 5,
     "fvm": 16,
-    "status": "infortunato",
-    "status_note": "infortunio: Proverà a recuperare a pieno durante la sosta, da valutare nei prossimi allenamenti le possibilità di convocazione già contro il Monza nel prossimo turno.",
+    "status": "panchina",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
     "status_updated_at": "2026-09-29",
     "prob_titolare": 20
   },
@@ -2517,9 +2517,9 @@
     "quotazione": 6,
     "fvm": 10,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 50
+    "prob_titolare": 55
   },
   {
     "id": "fd5833",
@@ -4037,8 +4037,8 @@
     "quotazione_iniziale": 3,
     "quotazione": 5,
     "fvm": 10,
-    "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-29 (assente, o nome scritto diversamente)",
+    "status": "infortunato",
+    "status_note": "infortunio: Ipotesi di rientro in campo dalla metà di novembre.",
     "status_updated_at": "2026-09-29",
     "prob_titolare": null
   },
@@ -4830,10 +4830,10 @@
     "quotazione_iniziale": 12,
     "quotazione": 14,
     "fvm": 70,
-    "status": "titolare",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 90
+    "prob_titolare": 70
   },
   {
     "id": "fd4911",
@@ -5025,8 +5025,8 @@
     "quotazione_iniziale": 13,
     "quotazione": 13,
     "fvm": 38,
-    "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-29 (assente, o nome scritto diversamente)",
+    "status": "infortunato",
+    "status_note": "infortunio: Condizioni da valutare, a forte rischio la sua presenza alla ripresa del campionato contro il Monza.",
     "status_updated_at": "2026-09-29",
     "prob_titolare": null
   },
@@ -5273,9 +5273,9 @@
     "quotazione": 6,
     "fvm": 34,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 55
+    "prob_titolare": 60
   },
   {
     "id": "fd7572",
@@ -5325,9 +5325,9 @@
     "quotazione": 4,
     "fvm": 11,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 40
+    "prob_titolare": 50
   },
   {
     "id": "fd4199",
@@ -5416,9 +5416,9 @@
     "quotazione": 11,
     "fvm": 32,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 60
+    "prob_titolare": 50
   },
   {
     "id": "fd6593",
@@ -6274,9 +6274,9 @@
     "quotazione": 6,
     "fvm": 13,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 60
+    "prob_titolare": 70
   },
   {
     "id": "fd2766",
@@ -6286,10 +6286,10 @@
     "quotazione_iniziale": 18,
     "quotazione": 16,
     "fvm": 71,
-    "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status": "infortunato",
+    "status_note": "infortunio: rientro previsto dalla seconda metà di ottobre.",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 70
+    "prob_titolare": null
   },
   {
     "id": "fd6212",
@@ -6768,9 +6768,9 @@
     "quotazione": 4,
     "fvm": 3,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 40
+    "prob_titolare": 60
   },
   {
     "id": "fd7612",
@@ -6781,9 +6781,9 @@
     "quotazione": 8,
     "fvm": 10,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 55
+    "prob_titolare": 70
   },
   {
     "id": "fd6530",
@@ -6820,9 +6820,9 @@
     "quotazione": 12,
     "fvm": 60,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
     "status_updated_at": "2026-09-29",
-    "prob_titolare": 70
+    "prob_titolare": 50
   },
   {
     "id": "fd4923",
@@ -6950,7 +6950,7 @@
     "quotazione": 6,
     "fvm": 21,
     "status": "infortunato",
-    "status_note": "infortunio: ipotizziamo un possibile rientro dalla metà di ottobre.",
+    "status_note": "infortunio: ipotizziamo un possibile rientro dalla metà di novembre.",
     "status_updated_at": "2026-09-29",
     "prob_titolare": null
   },
@@ -6976,7 +6976,7 @@
     "quotazione": 2,
     "fvm": 6,
     "status": "infortunato",
-    "status_note": "infortunio: ipotizziamo un possibile rientro dalla fine di ottobre.",
+    "status_note": "infortunio: rientro dalla metà di novembre.",
     "status_updated_at": "2026-09-29",
     "prob_titolare": null
   },
@@ -7704,7 +7704,7 @@
     "quotazione": 7,
     "fvm": 10,
     "status": "infortunato",
-    "status_note": "infortunio: condizioni da valutare. Assente nel prossimo turno di campionato.",
+    "status_note": "infortunio: Assente nel prossimo turno di campionato contro il Torino, da valutare rientro dalla seconda metà di ottobre.",
     "status_updated_at": "2026-09-29",
     "prob_titolare": null
   },
