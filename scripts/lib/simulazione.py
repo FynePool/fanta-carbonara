@@ -8,7 +8,8 @@ ruolo, slot scoperto = 0, voti d'ufficio) e conta i punti **veri**. La usano:
 - il report, per misurare di quanto il punteggio atteso di una **formazione intera**
   sbaglia i punti veri (`scarti_formazione`). Misurarlo sul singolo giocatore e
   moltiplicare per la radice di 11 ignora sostituzioni, slot scoperti e dipendenze: il
-  29/09 dava ±5,3 punti, sulla formazione intera sono ±6,9.
+  29/09 dava ±5,3 punti, sulla formazione intera sono ±6,9. Ma misurati con la probabilità
+  di voto dello storico, non con quella del report: vedi `scarti_formazione`.
 
 Usa le funzioni vere di `roster.py` (`rate_player`, `_scegli_panchina`, `_slot_attesi`),
 non una loro copia. La probabilità di prendere voto qui NON viene da `prob_titolare`
@@ -199,8 +200,12 @@ def scarti_formazione(dal: int = 3) -> dict | None:
     atteso, rigiocando col motore tutte le rose della lega nelle giornate passate. `sd` è la
     deviazione standard degli scarti, `media` lo scarto medio (positivo = il punteggio atteso
     sottostimava). None se non ci sono giornate. ATTENZIONE: qui la probabilità di prendere
-    voto è quella stimata dallo storico, non `prob_titolare` del report: la larghezza si
-    trasferisce, lo scarto medio no."""
+    voto è quella stimata dallo storico, non `prob_titolare` del report, e i 6,93 punti del
+    29/09 contengono anche l'errore di questo stimatore (che sottostima di 5,9). Cambiando
+    stimatore possono cambiare sia lo scarto medio sia la larghezza: NESSUNO dei due è
+    verificato per il report. La larghezza è la misura migliore che c'è finché non ci sono
+    giornate con le probabili salvate alla scadenza (dalla 6); allora va rimisurata con
+    `prob_titolare`, la distinta che il motore avrebbe davvero proposto e i punti veri."""
     sim = Simulazione()
     giornate = sim.giornate(dal)
     scarti = [s["punti"] - s["atteso"]

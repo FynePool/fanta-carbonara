@@ -512,6 +512,33 @@ ridimensionate): si rimisura alla giornata 8.
   non ne arrivano altri: l'alternativa è la lista delle fonti, che quel rigore ha
   contraddetto. Il report mostra la giornata.
 
+## Terza revisione di Codex (29/09, sul commit `19d7a4e`)
+
+Codex ha confermato che le correzioni della seconda revisione ci sono e funzionano, e ha
+trovato tre problemi rimasti. Tutti riprodotti e corretti:
+
+- **"La larghezza si trasferisce, lo scarto medio no" non era dimostrato.** I 6,93 punti
+  sono misurati con la probabilità di voto dello storico, che sottostima di 5,9 punti:
+  cambiando stimatore possono cambiare tutti e due. Ora il codice e il report dicono che né
+  la larghezza né il centro sono verificati per il report, e lo scenario dei gol è
+  arrotondato a 5 punti percentuali. Per VAR-tificiale esce 25/25/25/25: con questa
+  incertezza, onestamente, ogni risultato fra 0 e 3+ gol vale circa uno su quattro.
+- **Il portiere titolare indisponibile restava al denominatore delle riserve.** Con Martinez
+  infortunato e le quote del sito non aggiornate, Provedel e Di Gennaro davano 6/96 = 6% di
+  copertura. Ora la somma è dei soli portieri disponibili (`quote_portieri`), e se il
+  titolare è fuori le riserve si dividono anche sotto la quota minima: copertura 100%.
+  Riformulato anche "invertirli non cambierebbe il punteggio" in "quasi mai": due portieri
+  della stessa squadra prendono voto insieme se il titolare viene sostituito.
+- **Nei rigoristi vinceva il fatto più vecchio.** `_conferma` dava priorità a "primo" su
+  "smentisce" qualunque fosse l'ordine, e lo spareggio guardava la conferma prima dello
+  scavalcamento. Ora conta il rigore più recente, e uno scavalcamento dopo l'ultimo rigore
+  pesa più di una conferma vecchia. Il testo su Adams A. ora dice "nell'unico episodio
+  osservato", non "non è lui a calciare".
+
+**Test automatici.** Codex ha segnalato che nessun test proteggeva questi casi.
+`tests/test_casi_limite.py` ha 13 casi costruiti a mano: sul codice di prima i quattro sui
+problemi di questa revisione falliscono, su quello nuovo passano tutti.
+
 ---
 
 ## Riprodurre

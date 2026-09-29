@@ -271,7 +271,13 @@ def valuta_rigori(voci: list[dict], righe: list[dict], per_id: dict,
 
 
 def _conferma(valutati: list[dict]) -> str:
-    esiti = {v["esito"] for v in valutati}
+    """Cosa prova su di lui il suo rigore PIÙ RECENTE: un rigore da primo alla giornata 5 non
+    conta più di uno che smentisce le liste alla giornata 8. Nella stessa giornata (un
+    recupero) vince l'esito più forte."""
+    if not valutati:
+        return "supposizione"
+    ultima = max(v["giornata"] or 0 for v in valutati)
+    esiti = {v["esito"] for v in valutati if (v["giornata"] or 0) == ultima}
     for esito, conferma in (("primo", "confermato"), ("smentisce", "smentisce"),
                             ("incerto", "incerto"), ("coerente", "sostituto")):
         if esito in esiti:
@@ -367,7 +373,11 @@ def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
     # chi ha calciato al posto suo mentre lui era in campo.
     per_rigore, tutti = valuta_rigori(out, store.load_matchday_stats(), per_id, doc.get("minuti_rigori", []))
     for r in out:
-        r["conferma"] = _conferma(per_rigore.get(r["player_id"], []))
+        suoi = per_rigore.get(r["player_id"], [])
+        r["conferma"] = _conferma(suoi)
+        # la giornata del suo ultimo rigore: uno scavalcamento dopo conta più della conferma
+        # (vedi scavalcato_di_recente in lib/roster.py)
+        r["ultimo_rigore"] = max((v["giornata"] or 0 for v in suoi), default=None)
         r["scavalcato_da"] = [
             {"nome": v["nome"], "giornata": v["giornata"], "dove": x["dove"]}
             for v in tutti for x in v["sopra"]

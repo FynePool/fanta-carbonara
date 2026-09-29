@@ -17,7 +17,8 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from lib import store
-from lib.roster import PRODUZIONE_PREDEFINITA, SOGLIA_PARI, prossima_partita_lega, suggest_lineup
+from lib.roster import (PRODUZIONE_PREDEFINITA, SOGLIA_PARI, prossima_partita_lega,
+                        scavalcato_di_recente, suggest_lineup)
 from lib.simulazione import scarti_formazione
 from rigoristi import testo_verifica
 
@@ -49,9 +50,10 @@ def _dettaglio(e: dict) -> str:
     if r is None and e.get("riserva_di"):
         return (f"[{p['role']}] {p['name']}: nessun voto perché finora in porta è andato "
                 f"{e['riserva_di']}, della stessa squadra. Ne gioca uno solo dei due: {p['name']} "
-                f"entra solo se {e['riserva_di']} non gioca, e invertirli non cambierebbe il "
-                "punteggio. Non è un giudizio su di lui e non c'è niente da decidere: conta "
-                "averli in distinta tutti e due.")
+                f"entra solo se {e['riserva_di']} non gioca, e invertirli non cambierebbe quasi mai "
+                "il punteggio (solo se prendessero voto tutti e due, con un cambio del portiere a "
+                "partita in corso). Non è un giudizio su di lui e non c'è niente da decidere: "
+                "conta averli in distinta tutti e due.")
     if r is None:
         return (f"[{p['role']}] {p['name']}: nessun voto, quindi il modello non sa quanto vale. "
                 "Non vuol dire che valga poco, né che valga di più di chi ha una media bassa. "
@@ -131,22 +133,19 @@ def _partita(e: dict) -> str:
     return f"vs {avversario} ({'C' if casa else 'T'}) {_quando(m['data_utc'])}{rinviata}"
 
 
-def _scavalcato(v: dict) -> list[dict]:
-    return [x for x in v.get("scavalcato_da", []) if x["dove"] == "in campo"]
-
-
 def _rig(e: dict) -> str:
     """Marcatore compatto. `RIG!` = ha calciato quest'anno da primo delle fonti (dato
     ufficiale); `rig?` = primo per le fonti, o primo disponibile perché chi gli sta davanti è
     fuori, ma non ancora visto calciare. Chi ha calciato solo perché il primo mancava, o è
-    stato scavalcato mentre era in campo, non si marca. Il secondo rigorista vale +0,03."""
+    stato scavalcato mentre era in campo dopo il suo ultimo rigore, non si marca: conta il
+    fatto più recente. Il secondo rigorista vale +0,03."""
     v = e.get("rigorista")
     if not v:
         return "     "
+    if scavalcato_di_recente(v):
+        return "     "
     if v.get("conferma") == "confermato":
         return " RIG!"
-    if _scavalcato(v):
-        return "     "
     return " rig?" if v.get("consenso_sul_primo") or e.get("erede_rigorista") else "     "
 
 
@@ -166,9 +165,12 @@ def _gol(r: dict, soglie: dict, inc: dict | None) -> None:
     La larghezza viene da `scarti_formazione` (lib/simulazione.py): quanto i punti veri di
     una formazione intera, con sostituzioni e slot scoperti, si sono allontanati dal punteggio
     atteso nelle giornate passate. Non dal singolo giocatore moltiplicato per la radice di
-    11, che il 29/09 dava ±5,3 invece di ±6,9. Il centro invece non è tarato: nel backtest
-    il punteggio atteso sottostimava, ma lì la probabilità di voto è un'altra, quindi non lo
-    si corregge. Sono probabilità approssimate, non validate."""
+    11, che il 29/09 dava ±5,3 invece di ±6,9. Ma è misurata con la probabilità di voto
+    stimata dallo storico, non con quella del sito che usa questo report: cambiando
+    stimatore possono cambiare sia il centro sia la larghezza, e nessuno dei due è
+    verificato qui. Per questo le percentuali si arrotondano a 5 punti: più precisione di
+    così i dati non la danno. Si verificano davvero dalla giornata 6, con le probabili
+    salvate alla scadenza (data/status_scadenze.json)."""
     if not soglie.get("primo_gol"):
         return
     primo, fascia = float(soglie["primo_gol"]), float(soglie["fascia"])
@@ -182,16 +184,20 @@ def _gol(r: dict, soglie: dict, inc: dict | None) -> None:
     almeno = [1.0] + [1 - dist.cdf(primo + k * fascia) for k in range(12)]
     prob = [almeno[k] - almeno[k + 1] for k in range(3)] + [almeno[3]]
     per_punto = sum(dist.pdf(primo + k * fascia) for k in range(12))
-    print(f"  Il punteggio vero di una formazione si è allontanato da quello atteso di circa {sd:.1f}")
+    def circa(p):   # a 5 punti percentuali: più precisione di così i dati non la danno
+        return f"{5 * round(p * 20):.0f}%"
+
+    print(f"  Il punteggio vero di una formazione si è allontanato da quello atteso di circa {sd:.0f}")
     print(f"  punti (deviazione standard su {inc['n']} formazioni della lega rigiocate, giornate "
           f"{inc['giornate'][0]}-{inc['giornate'][-1]}). Quindi i")
-    print("  gol sono uno scenario approssimativo, non probabilità già verificate:")
-    print("    " + "   ".join(f"{k} gol {p:.0%}" for k, p in enumerate(prob[:3])) + f"   3 o più {prob[3]:.0%}")
+    print("  gol sono uno SCENARIO APPROSSIMATIVO, arrotondato a 5 punti, non probabilità verificate:")
+    print("    " + "   ".join(f"{k} gol {circa(p)}" for k, p in enumerate(prob[:3])) + f"   3 o più {circa(prob[3])}")
     print(f"  Con queste ipotesi un punto di valore atteso vale circa {per_punto:.2f} gol, vicino o lontano")
     print(f"  da una soglia: una scelta da 0.10 punti sposta {0.1 * per_punto:.2f} gol. Le decisioni si pesano")
-    print("  in punti, non guardando quanto manca alla soglia. Anche il centro non è tarato: nel")
-    print(f"  backtest il punteggio atteso ha sbagliato in media di {inc['media']:+.1f} punti, ma con una")
-    print("  probabilità di voto diversa da quella del sito usata qui, quindi non si corregge.")
+    print("  in punti, non guardando quanto manca alla soglia. Né la larghezza né il centro sono")
+    print("  verificati per questo report: sono misurati con una probabilità di voto diversa da quella")
+    print(f"  del sito usata qui (e con quella il punteggio atteso ha sbagliato in media di {inc['media']:+.1f}")
+    print("  punti). Si verificano dalla giornata 6, con le probabili salvate alla scadenza.")
     if soglie.get("da_confermare"):
         print("  ATTENZIONE: le soglie gol non sono confermate dalla lega, sono i valori")
         print("  standard di fantacalcio.it. Da verificare nel pannello della lega.")
@@ -285,8 +291,8 @@ def main():
         print("\nRISCHIO SLOT VUOTO per ruolo (probabilità che tutti gli slot siano coperti). È una")
         print("STIMA, non ancora verificata: usa la probabilità di partire titolare del sito, che non")
         print("conta chi entra a partita in corso e non è ancora stata confrontata con chi ha preso")
-        print("voto davvero. Per i portieri della stessa squadra la quota è rapportata a tutti i")
-        print("portieri di quella squadra: ne gioca sempre uno.")
+        print("voto davvero. Per i portieri della stessa squadra la quota è rapportata ai portieri")
+        print("disponibili di quella squadra: ne gioca quasi sempre uno solo.")
         piu_esposto = min(r["copertura"].values())
         for role, coperto in sorted(r["copertura"].items(), key=lambda x: x[1]):
             print(f"  {role}: coperto al {coperto:6.1%}   rischio {1 - coperto:.1%}"
@@ -329,8 +335,17 @@ def main():
             fatti = f"{r_.get('segnati', 0)}/{r_.get('calciati', 0)}"
             rango = f"{v['rango']}º per le fonti" if v["rango"] else "fuori dalle liste delle fonti"
             conferma = v.get("conferma")
-            scavalcato = _scavalcato(v)
-            if conferma == "confermato":
+            scavalcato = scavalcato_di_recente(v)
+            if scavalcato:   # il fatto più recente su di lui: viene prima di tutto il resto
+                chi = ", ".join(f"{x['nome']} alla giornata {x['giornata']}" for x in scavalcato)
+                davanti = (f" ({', '.join(e['erede_rigorista'])} è fuori, quindi per le fonti "
+                           "toccherebbe a lui)") if e.get("erede_rigorista") else ""
+                volte = "nell'unico episodio osservato" if len(scavalcato) == 1 else \
+                    f"in {len(scavalcato)} episodi"
+                quanto = (f"{rango}{davanti}, ma {volte} dopo il suo ultimo rigore ha calciato "
+                          f"{chi} mentre lui era in campo: finché non ci sono altri rigori, il "
+                          "fatto pesa più delle fonti")
+            elif conferma == "confermato":
                 quanto = (f"RIG! ha calciato {fatti} rigori quest'anno da primo delle fonti ({primo} su "
                           f"{tot} lo danno primo) — il rigore è già dentro la sua media")
             elif conferma == "sostituto":
@@ -342,12 +357,6 @@ def main():
             elif conferma == "incerto":
                 quanto = (f"{rango}: ha calciato {fatti} rigori quest'anno, e chi gli sta sopra era "
                           "in campo per una parte della partita: dipende dal minuto")
-            elif scavalcato:
-                chi = ", ".join(f"{x['nome']} alla giornata {x['giornata']}" for x in scavalcato)
-                davanti = (f" ({', '.join(e['erede_rigorista'])} è fuori, quindi per le fonti "
-                           "toccherebbe a lui)") if e.get("erede_rigorista") else ""
-                quanto = (f"{rango}{davanti}, ma ha calciato {chi} mentre lui era in campo: non è "
-                          "lui a calciare")
             elif e.get("erede_rigorista"):
                 quanto = (f"rig? {rango}, ma {', '.join(e['erede_rigorista'])} è fuori: per le fonti "
                           "tocca a lui. Non l'ha ancora calciato")

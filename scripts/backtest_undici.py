@@ -178,9 +178,11 @@ def main():
     scarti = [base[k] - atteso[k] for k in chiavi]
     print("\nQuanto sbaglia il punteggio atteso della formazione intera (punti veri meno atteso):")
     print(f"  scarto medio {st.mean(scarti):+.2f}, deviazione standard {st.pstdev(scarti):.2f} "
-          f"su {len(scarti)} formazioni. Lo scarto medio dipende dalla probabilita' di voto stimata")
-    print("  dallo storico usata qui, non da quella del sito che usa il report; la larghezza e' quella")
-    print("  che il report usa per le probabilita' dei gol (lib/simulazione.py, scarti_formazione).")
+          f"su {len(scarti)} formazioni.")
+    print("  Misurati con la probabilita' di voto stimata dallo storico, non con quella del sito che")
+    print("  usa il report: il report ne prende la larghezza per lo scenario dei gol, ma ne' la")
+    print("  larghezza ne' lo scarto medio sono verificati per lui (lib/simulazione.py,")
+    print("  scarti_formazione). Si rimisurano dalla giornata 6 con le probabili salvate alla scadenza.")
 
     print("\nQuanto costa la panchina corta: slot rimasti scoperti (0 punti) per giornata,")
     print("col modello e la panchina scelta per valore.")
