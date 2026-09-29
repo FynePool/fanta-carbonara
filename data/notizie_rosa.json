@@ -137,6 +137,24 @@
       "aggiunta_il": "2026-09-27"
     },
     {
+      "data": "2026-09-25",
+      "squadra": "Inter",
+      "giocatori": [
+        "fd5116",
+        "fd2814"
+      ],
+      "tipo": "formazione",
+      "fatto": "Più fonti (24-25/09) riportano che Chivu userebbe la sosta per far ruotare i portieri: Provedel titolare in Inter-Parma (10/10), con Martinez a riposo in vista di Inter-Club Brugge di Champions League (13/10), senza che questo sia una bocciatura. Non è però un fatto certo: un aggregatore di probabili formazioni letto lo stesso giorno dà ancora Martinez titolare al 90% per quella partita. Per la formazione personale conta poco, essendo entrambi i portieri miei: uno dei due gioca comunque, ed è un altro caso della coppia di portieri della stessa squadra descritta sopra.",
+      "fonti": [
+        "https://www.goal.com/it/liste/inter-quando-gioca-provedel-dopo-la-sosta-partono-le-rotazioni-di-chivu-anche-per-la-porta/bltd829ea96b08f4841",
+        "https://www.fcinter1908.it/news/rassegna-stampa/inter-col-parma-ci-sara-spence-e-chivu-dopo-la-sosta-potrebbe-fare-questa-scelta-a-sorpresa/",
+        "https://www.calciomercato.it/2026/09/25/inter-novita-in-porta-tra-martinez-e-provedel-chivu-ha-scelto/",
+        "https://www.spaziointer.it/2026/09/25/inter-parma-provedel-titolare-al-posto-di-martinez-staffetta-per-la-porta-nerazzurra/"
+      ],
+      "verificata": false,
+      "aggiunta_il": "2026-09-29"
+    },
+    {
       "data": "2026-09-23",
       "squadra": "Lazio",
       "giocatori": [
