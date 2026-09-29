@@ -21487,7 +21487,7 @@
   },
   "stagione_in_corso": {
     "fonte": "https://www.fantacalcio.it/statistiche-serie-a/2026-27/fantacalcio/medie",
-    "letto_il": "2026-09-28",
+    "letto_il": "2026-09-29",
     "giocatori": {
       "fd133": {
         "nome": "Skorupski",
@@ -22447,6 +22447,22 @@
         "rigori_parati": 0,
         "assist": 1,
         "ammonizioni": 1,
+        "espulsioni": 0
+      },
+      "fd283": {
+        "nome": "Neto",
+        "squadra": "JUV",
+        "ruolo": "P",
+        "partite_con_voto": 0,
+        "media_voto": null,
+        "fantamedia": null,
+        "gol": 0,
+        "gol_subiti": 0,
+        "rigori_segnati": 0,
+        "rigori_calciati": 0,
+        "rigori_parati": 0,
+        "assist": 0,
+        "ammonizioni": 0,
         "espulsioni": 0
       },
       "fd2832": {

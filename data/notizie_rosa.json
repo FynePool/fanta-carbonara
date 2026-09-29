@@ -1,6 +1,22 @@
 {
-  "aggiornato_il": "2026-09-28",
+  "aggiornato_il": "2026-09-29",
   "notizie": [
+    {
+      "data": "2026-09-29",
+      "squadra": "Milan",
+      "giocatori": [
+        "fd5273"
+      ],
+      "tipo": "infortunio",
+      "fatto": "Estupinan ha rimediato una distorsione alla caviglia sinistra con l'Ecuador (amichevole contro gli USA), per questo precauzionalmente risparmiato nella gara successiva contro il Messico. Gli esami hanno escluso lesioni gravi: il problema si e' riassorbito e il terzino e' candidato al rientro tra i convocati del Milan, ma i tempi si sono allungati rispetto alle previsioni iniziali. Le probabili del 29/09 lo danno titolare al 70% (ballottaggio).",
+      "fonti": [
+        "https://www.milanistichannel.com/news-milan/infortuni/milan-estupinan-recuperato-solo-botta-e-dolore-nessun-infortunio-grave/",
+        "https://www.milannews24.com/infortunio-estupinan-recupero-milan-fiorentina/",
+        "https://www.firenzeviola.it/avversari/milan-infortunio-in-nazionale-per-estupinan-colpo-alla-caviglia-contro-gli-stati-uniti-461620"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-09-29"
+    },
     {
       "data": "2026-09-28",
       "squadra": "Torino",
