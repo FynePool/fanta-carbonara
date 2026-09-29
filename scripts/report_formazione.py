@@ -8,8 +8,10 @@ I dati di stato giocatore (titolare/dubbio/infortunato/...) in data/players.json
 vanno aggiornati prima del lancio (skill aggiorna-dati o aggiorna-formazioni).
 """
 import argparse
+import math
 import sys
 from datetime import datetime
+from statistics import NormalDist
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -43,8 +45,16 @@ def _voti(rating: dict | None) -> str:
 def _dettaglio(e: dict) -> str:
     """Da cosa è fatto il valore, in parole: una riga per giocatore."""
     p, r = e["player"], e["rating"]
+    if r is None and e.get("riserva_di"):
+        return (f"[{p['role']}] {p['name']}: nessun voto perché finora in porta è andato "
+                f"{e['riserva_di']}, della stessa squadra. Ne gioca uno solo dei due: {p['name']} "
+                f"entra solo se {e['riserva_di']} non gioca, e invertirli non cambierebbe il "
+                "punteggio. Non è un giudizio su di lui e non c'è niente da decidere: conta "
+                "averli in distinta tutti e due.")
     if r is None:
-        return f"[{p['role']}] {p['name']}: nessun voto, nessun valore. Decidi tu."
+        return (f"[{p['role']}] {p['name']}: nessun voto, quindi il modello non sa quanto vale. "
+                "Non vuol dire che valga poco, né che valga di più di chi ha una media bassa. "
+                "Decidi con le notizie.")
     if r.get("politico"):
         return f"[{p['role']}] {p['name']}: partita rinviata, 6 politico."
     n = r["n"]
@@ -139,10 +149,46 @@ def _titolarita(p: dict) -> str:
     return p["status"]
 
 
+def _gol(r: dict, soglie: dict) -> None:
+    """Il punteggio atteso non è un punteggio già fatto: quello vero si allontana di qualche
+    punto. Si stampa la probabilità di fare 0, 1, 2, 3+ gol, e quanto vale un punto in più.
+    Con un'incertezza più larga di una fascia, un punto vale circa lo stesso numero di gol
+    ovunque: non esiste un "sul filo" in cui ogni decimale conta."""
+    if not soglie.get("primo_gol"):
+        return
+    primo, fascia = float(soglie["primo_gol"]), float(soglie["fascia"])
+    inc = r.get("incertezza")
+    print(f"  Soglie della lega: primo gol a {primo:.0f}, poi uno ogni {fascia:.0f}.")
+    if not inc:
+        print("  Quanto è incerto questo numero non si può ancora misurare (servono giornate")
+        print("  giocate): non leggere i gol dal totale atteso.")
+        return
+    # 11 slot con scarti indipendenti: fra compagni di squadra la correlazione misurata è
+    # piccola (+4% di deviazione, vedi .docs/analisi-valutazione-formazione.md)
+    sd = inc["sd_giocatore"] * math.sqrt(11)
+    dist = NormalDist(r["atteso"], sd)
+    almeno = [1.0] + [1 - dist.cdf(primo + k * fascia) for k in range(12)]
+    prob = [almeno[k] - almeno[k + 1] for k in range(3)] + [almeno[3]]
+    per_punto = sum(dist.pdf(primo + k * fascia) for k in range(12))
+    print(f"  Il punteggio vero si allontana da quello atteso di circa {sd:.1f} punti (una deviazione")
+    print(f"  standard: {inc['sd_giocatore']:.2f} a giocatore, misurata su {inc['n']} voti delle giornate "
+          f"{inc['giornate'][0]}-{inc['giornate'][-1]}")
+    print("  confrontando la previsione fatta prima con il voto vero). Quindi i gol sono probabilità:")
+    print("    " + "   ".join(f"{k} gol {p:.0%}" for k, p in enumerate(prob[:3])) + f"   3 o più {prob[3]:.0%}")
+    print(f"  Un punto di valore atteso in più vale circa {per_punto:.2f} gol, vicino o lontano da una")
+    print(f"  soglia: una scelta da 0.10 punti sposta {0.1 * per_punto:.2f} gol. Le decisioni si pesano")
+    print("  in punti, non guardando quanto manca alla soglia.")
+    if soglie.get("da_confermare"):
+        print("  ATTENZIONE: le soglie gol non sono confermate dalla lega, sono i valori")
+        print("  standard di fantacalcio.it. Da verificare nel pannello della lega.")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--team-id", required=True)
-    parser.add_argument("--matchday", type=int, default=None)
+    parser.add_argument("--matchday", type=int, default=None,
+                        help="solo l'etichetta del titolo: il report calcola sempre il prossimo "
+                             "turno dal calendario")
     args = parser.parse_args()
 
     config = store.load_league_config()
@@ -159,6 +205,11 @@ def main():
 
     matchday_label = f"Giornata {args.matchday}" if args.matchday else "Prossima giornata"
     print(f"{matchday_label} — modalità {config['mode']}, {cambi}")
+    lega = prossima_partita_lega(args.team_id)
+    if args.matchday and lega and args.matchday != lega["giornata_serie_a"]:
+        print(f"ATTENZIONE: hai chiesto la giornata {args.matchday}, ma il report calcola sempre il "
+              f"prossimo turno dal calendario, cioè la giornata {lega['giornata_serie_a']} di Serie A "
+              "per la lega. --matchday cambia solo questo titolo.")
     turno = r["turno"]
     if turno["partite"] and turno["chiaro"]:
         print(
@@ -178,8 +229,9 @@ def main():
         print("  avv  = quanto subisce l'avversario rispetto alla media del campionato.")
         print("La probabilità di giocare NON entra nel numero: se un titolare non prende voto")
         print("entra il primo della panchina del suo ruolo, quindi conviene sempre mettere")
-        print("avanti il più forte. Entra invece nella scelta di CHI va in panchina e del")
-        print("modulo, perché i posti in panchina sono pochi e uno slot scoperto vale 0.\n")
+        print("avanti il più forte. Entra invece nella scelta di CHI va in panchina, perché i")
+        print("posti sono pochi e uno slot scoperto vale 0. Il modulo si sceglie sulla somma")
+        print("dei valori dei titolari (col valore atteso è stato provato e non guadagna).\n")
         panchina_per_ruolo = {}
         for e in r["panchina"]:
             panchina_per_ruolo.setdefault(e["player"]["role"], []).append(e["player"]["name"])
@@ -217,7 +269,9 @@ def main():
 
     if r["modulo"] and r["copertura"]:
         print("\nRISCHIO SLOT VUOTO per ruolo (probabilità che tutti gli slot siano coperti;")
-        print("calcolata sulla probabilità di partire titolare, quindi prudente):")
+        print("calcolata sulla probabilità di partire titolare, che non conta chi entra a partita")
+        print("in corso, quindi un po' prudente. Per i portieri della stessa squadra la quota è")
+        print("rapportata a tutti i portieri di quella squadra: ne gioca sempre uno.)")
         piu_esposto = min(r["copertura"].values())
         for role, coperto in sorted(r["copertura"].items(), key=lambda x: x[1]):
             print(f"  {role}: coperto al {coperto:6.1%}   rischio {1 - coperto:.1%}"
@@ -226,20 +280,10 @@ def main():
     if r["modulo"] and r["atteso"] is not None:
         print(f"\nPUNTEGGIO ATTESO: {r['atteso']:.1f} punti (somma degli 11 slot, già scontata per")
         print("chi rischia di non prendere voto e per gli slot che possono restare vuoti).")
-        soglie = regole.get("soglie_gol") or {}
-        if soglie.get("primo_gol"):
-            primo, fascia = float(soglie["primo_gol"]), float(soglie["fascia"])
-            gol = 0 if r["atteso"] < primo else int((r["atteso"] - primo) // fascia) + 1
-            prossima_soglia = primo if gol == 0 else primo + gol * fascia
-            manca = prossima_soglia - r["atteso"]
-            print(f"  Con le soglie della lega (primo gol a {primo:.0f}, poi ogni {fascia:.0f}): "
-                  f"{gol} gol.")
-            print(f"  Per il gol successivo servono {prossima_soglia:.0f} punti, cioè {manca:+.1f}: "
-                  + ("una decisione da meno di questo non cambia il risultato."
-                     if manca > 0.5 else "sei sul filo, qui ogni decimale conta."))
-            if soglie.get("da_confermare"):
-                print("  ATTENZIONE: le soglie gol non sono confermate dalla lega, sono i valori")
-                print("  standard di fantacalcio.it. Da verificare nel pannello della lega.")
+        if r["stimati"]:
+            stime = ", ".join(f"{e['player']['name']} {e['stima']:.2f}" for e in r["stimati"])
+            print(f"  Chi non ha voti è contato con la media del suo ruolo, una stima e non un dato: {stime}.")
+        _gol(r, regole.get("soglie_gol") or {})
 
     in_rosa = [e for e in r["titolari"] + r["panchina"] + r["esclusi"] if e.get("rigorista")]
     if in_rosa:
@@ -278,7 +322,6 @@ def main():
                 quanto = "non in gerarchia"
             print(f"  [{p['role']}] {p['name']:<18} {v['squadra']:<12} {quanto}")
 
-    lega = prossima_partita_lega(args.team_id)
     if lega:
         dove = "in casa" if lega["casa"] else "in trasferta"
         print(f"\nAVVERSARIO DI LEGA: {lega['avversario_nome']}, {dove} "

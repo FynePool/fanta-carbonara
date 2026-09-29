@@ -26,8 +26,32 @@ informazioni per capire cosa sceglie. Niente gergo senza spiegarlo ("regista",
    ```
    python3 scripts/report_formazione.py --team-id <my_team_id> [--matchday N]
    ```
+   `--matchday` cambia solo il titolo: il report calcola sempre il prossimo turno dal
+   calendario, e avvisa se il numero non coincide.
    Il report mostra anche le stagioni passate di ogni giocatore
    (`data/storico_stagioni.json`): sono contesto, non entrano nel valore.
+
+## Tre errori di ragionamento da non fare
+
+Il report li evita già; la risposta in chat non deve reintrodurli.
+
+- **I portieri della stessa squadra sono una coppia, non due alternative.** In Serie A ne
+  gioca uno solo per squadra. Se titolare e riserva in porta sono della stessa squadra
+  (oggi Martinez Jo. e Provedel, tutti e due dell'Inter), l'ordine fra i due **non cambia
+  il punteggio**: se gioca Martinez conta il suo voto in entrambi i casi, se gioca Provedel
+  conta il suo. Una media bassa del titolare non si evita invertendoli. La sola cosa che
+  conta è che siano **tutti e due in distinta** (il terzo resta fuori). L'ordine conta
+  solo se prendono voto tutti e due nella stessa partita (un cambio del portiere): raro.
+- **Nessun voto non è un giudizio.** Un giocatore senza voti non è migliore di uno con
+  una media bassa ("senza voto è meglio di 4" è sbagliato), non è peggiore, e non vale
+  zero: il modello non sa quanto vale. Per il secondo portiere vuol dire solo che finora
+  ha giocato il primo. Nel punteggio atteso chi non ha voti è contato con la media del
+  ruolo, e il report lo dichiara come stima.
+- **Il punteggio atteso non è un punteggio già fatto.** Il punteggio vero si allontana di
+  circa 5 punti: il report stampa la probabilità di fare 0, 1, 2 o 3+ gol. Non dire mai
+  che una scelta "non cambia il risultato" o che "sei sul filo" guardando quanto manca a
+  una soglia: ogni punto di valore atteso vale circa lo stesso numero di gol ovunque
+  (circa 0,2), e le scelte si pesano in punti.
 
 ## Notizie: cosa succede davvero
 
