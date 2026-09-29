@@ -6,6 +6,7 @@ Non leggono data/: ogni caso è costruito a mano, quindi non cambiano con i dati
 """
 import sys
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -212,6 +213,23 @@ class GiornataDaControllare(unittest.TestCase):
             giornata_lega(1, 6, calcolata=True), giornata_lega(2, 6, "x", "y")]}]
         g, motivo = CF.giornata_da_controllare(lega, CINQUE_TURNI, "io")
         self.assertIsNone(g)
+
+
+class AvvisoFormazioneMancante(unittest.TestCase):
+    # scadenza sabato 10/10 alle 15:00 italiane; la routine gira alle 6:52 italiane
+    SCADENZA = datetime(2026, 10, 10, 13, 0, tzinfo=timezone.utc)
+
+    def giorni(self, giorno, ora_utc=4):
+        return CF.giorni_alla_scadenza(self.SCADENZA, datetime(2026, 10, giorno, ora_utc, 52, tzinfo=timezone.utc))
+
+    def test_da_due_giorni_prima_al_giorno_stesso(self):
+        self.assertEqual([self.giorni(g) for g in (7, 8, 9, 10)], [3, 2, 1, 0])
+        self.assertEqual([self.giorni(g) <= CF.GIORNI_URGENZA for g in (7, 8, 9, 10)],
+                         [False, True, True, True])
+
+    def test_conta_il_giorno_italiano(self):
+        # 22:30 UTC del 7/10 è già l'8/10 in Italia: due giorni, non tre
+        self.assertEqual(self.giorni(7, ora_utc=22), 2)
 
 
 def giocatore(pid, ruolo, valore, prob=90, squadra=None, status="titolare"):

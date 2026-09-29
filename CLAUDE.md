@@ -401,9 +401,13 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   `OK`; `DA CORREGGERE` se c'è un infortunato o squalificato schierato, un giocatore non più
   in rosa, o un ruolo che vale più di `SOGLIA_PARI` punti attesi sotto il consiglio (sotto
   la soglia una differenza è una scelta alla pari, non un errore: la formazione concordata
-  il 27/09, con Ndour e Adams titolari, passa); `DA INSERIRE` se manca e la scadenza è
-  lontana; `MANCANTE` se manca e la scadenza è oggi o domani (0-3 a tavolino);
-  `NON CONTROLLATA` a turno in corso o senza credenziali. La giornata da controllare si
+  il 27/09, con Ndour e Adams titolari, passa); `MANCANTE` se manca da 2 giorni prima
+  della scadenza al giorno stesso (0-3 a tavolino: finestra decisa dall'utente il 29/09,
+  `GIORNI_URGENZA`); `NON CONTROLLATA` se il sito non risponde o mancano le credenziali;
+  `NESSUN AVVISO` quando non c'è niente da controllare (formazione non ancora inserita con
+  la scadenza lontana, turno in corso), e solo questo non va in cima al riepilogo. Con un
+  recupero fra le prossime partite il turno non si ricostruisce e il controllo tace anche
+  vicino alla scadenza, come il report. La giornata da controllare si
   trova contando le partite finite di ogni squadra (il turno N è iniziato se una squadra ne
   ha finite N), perché BigBalls non dà il numero di giornata alle partite future. Il valore
   di un ruolo è quello del report (`_slot_attesi`), con probabilità 0 per gli indisponibili.

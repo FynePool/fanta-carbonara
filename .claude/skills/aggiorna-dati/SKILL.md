@@ -158,10 +158,11 @@ fallito.
    giornata di lega e la confronta con i dati di oggi. Non scrive niente e non cambia la
    formazione sul sito. La **prima riga** che stampa è il verdetto: `FORMAZIONE OK`,
    `FORMAZIONE DA CORREGGERE` (un infortunato o squalificato schierato, un giocatore fuori
-   rosa, un ruolo sotto il consiglio), `FORMAZIONE DA INSERIRE` (manca, ma la scadenza è
-   lontana), `FORMAZIONE MANCANTE` (manca, e la scadenza è oggi o domani: la lega dà lo 0-3
-   a tavolino) o `FORMAZIONE NON CONTROLLATA` (turno in corso, credenziali mancanti, sito
-   che non risponde). Stesse credenziali del passo 1b. Non cambiare la formazione e non
+   rosa, un ruolo sotto il consiglio), `FORMAZIONE MANCANTE` (manca, e mancano 2 giorni o
+   meno alla scadenza: la lega dà lo 0-3 a tavolino), `FORMAZIONE NON CONTROLLATA`
+   (credenziali mancanti, sito che non risponde) o `FORMAZIONE NESSUN AVVISO` (niente da
+   controllare: formazione non ancora inserita con la scadenza lontana, turno in corso).
+   Stesse credenziali del passo 1b. Non cambiare la formazione e non
    aggiungere consigli: riporta il verdetto e le righe che lo seguono.
 10. **Quota API rimasta**, per il riepilogo:
    ```
@@ -182,7 +183,9 @@ copiato parola per parola** (la riga che comincia con `FORMAZIONE`), prima ancor
 dei passi: è la prima cosa che l'utente deve leggere, anche nell'anteprima della notifica
 della routine. Se il passo 9 non ha girato, la prima
 riga è `FORMAZIONE NON CONTROLLATA:` con il motivo. Se il verdetto è `DA CORREGGERE` o
-`MANCANTE`, subito sotto riporta anche il consiglio che il controllo stampa.
+`MANCANTE`, subito sotto riporta anche il consiglio che il controllo stampa. **Eccezione:
+`FORMAZIONE NESSUN AVVISO` non va in cima** (l'utente non vuole sentirne parlare quando la
+scadenza è lontana): riportalo solo come esito del passo 9 nell'elenco dei passi.
 
 Poi:
 
