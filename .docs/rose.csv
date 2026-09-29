@@ -1,0 +1,301 @@
+Squadra,Nome,Squadra_Appartenenza,Ruolo,Ruoli_Mantra,Prezzo,Quotazione,Quotazione_Mantra,Fantacalcio_Id
+"LOSERPOOL","Palmisani","FRO","P","Por",15,9,9,6415
+"LOSERPOOL","Mandas","LAZ","P","Por",43,13,13,6482
+"LOSERPOOL","Motta","LAZ","P","Por",1,1,1,7337
+"LOSERPOOL","Haps","VEN","D","Ds,E",1,5,5,5695
+"LOSERPOOL","Tiago Gabriel","LEC","D","Dc",5,9,9,6989
+"LOSERPOOL","Heggem","BOL","D","Dc,Ds",3,5,6,7212
+"LOSERPOOL","Pavlovic","MIL","D","Dc",11,13,13,5022
+"LOSERPOOL","Britschgi","PAR","D","Ds,Dd,E",3,4,5,7255
+"LOSERPOOL","Comuzzo","TOR","D","Dc",2,7,7,6495
+"LOSERPOOL","Sutalo J.","LAZ","D","Dc",2,7,7,7580
+"LOSERPOOL","Cittadini","FRO","D","Dc",1,4,4,5757
+"LOSERPOOL","Chukwueze","MIL","C","E,W",14,10,9,4856
+"LOSERPOOL","Pulisic","MIL","C","T,A",77,25,23,2423
+"LOSERPOOL","Modric","MIL","C","M,C",19,12,13,2606
+"LOSERPOOL","Calò","FRO","C","M,C",10,11,12,7472
+"LOSERPOOL","Kessiè","ATA","C","C",8,11,11,1850
+"LOSERPOOL","Hutchinson","MIL","C","W,A",3,7,6,7618
+"LOSERPOOL","El Shaarawy","GEN","C","W",4,7,6,795
+"LOSERPOOL","Busio","VEN","C","M,C",3,7,7,5507
+"LOSERPOOL","Raimondo","FRO","A","Pc",43,12,11,5436
+"LOSERPOOL","Pellegrino M.","FIO","A","Pc",52,16,16,7023
+"LOSERPOOL","Gnonto","FIO","A","W,A",2,7,8,7623
+"LOSERPOOL","Davis K.","UDI","A","Pc",95,19,19,5637
+"LOSERPOOL","Diao","COM","A","W,A",58,14,15,6967
+"LOSERPOOL","Vitinha O.","GEN","A","A",4,7,7,6164
+"Nu Kebbab der Met","Skorupski","BOL","P","Por",11,9,9,133
+"Nu Kebbab der Met","Stankovic F.","VEN","P","Por",6,5,5,6248
+"Nu Kebbab der Met","Bijlow","GEN","P","Por",14,6,6,7332
+"Nu Kebbab der Met","Balerdi","ROM","D","Dc",10,8,8,4705
+"Nu Kebbab der Met","Mancini","ROM","D","Dc",22,15,15,2296
+"Nu Kebbab der Met","N'Dicka","ROM","D","Dc",7,11,11,4317
+"Nu Kebbab der Met","Spence","INT","D","E",7,10,9,5982
+"Nu Kebbab der Met","Bartesaghi","MIL","D","Ds,E",3,7,7,6496
+"Nu Kebbab der Met","Delprato","PAR","D","B,Dd,E",2,8,8,6664
+"Nu Kebbab der Met","Lulli","ROM","D","E",7,3,3,7599
+"Nu Kebbab der Met","De Winter","MIL","D","Dc,Dd",3,6,7,5739
+"Nu Kebbab der Met","Diouf","INT","C","E,C",26,11,12,6274
+"Nu Kebbab der Met","Orsolini","BOL","C","W,A",62,23,22,2167
+"Nu Kebbab der Met","Pisilli","ROM","C","C",6,9,9,6190
+"Nu Kebbab der Met","Mandragora","TOR","C","C",22,12,12,1933
+"Nu Kebbab der Met","Lobotka","NAP","C","M,C",6,11,12,4287
+"Nu Kebbab der Met","Bernabè","PAR","C","C",8,6,6,6666
+"Nu Kebbab der Met","Frendrup","GEN","C","M,C",3,7,7,5791
+"Nu Kebbab der Met","Masini","FRO","C","M,C",1,7,7,6917
+"Nu Kebbab der Met","Martinez L.","INT","A","Pc",212,36,36,2764
+"Nu Kebbab der Met","Colombo","GEN","A","Pc",21,10,10,4923
+"Nu Kebbab der Met","Camarda","MIL","A","Pc",1,4,3,6519
+"Nu Kebbab der Met","Tourè E.","PAR","A","Pc",16,10,10,6229
+"Nu Kebbab der Met","Stulic","LEC","A","Pc",12,6,5,7252
+"Nu Kebbab der Met","Bayo V.","UDI","A","Pc",5,2,2,7161
+"VAR-tificiale","Martinez Jo.","INT","P","Por",40,14,14,5116
+"VAR-tificiale","Provedel","INT","P","Por",23,1,1,2814
+"VAR-tificiale","Di Gennaro","INT","P","Por",1,1,1,1926
+"VAR-tificiale","Ostigard","GEN","D","Dc",5,10,10,5750
+"VAR-tificiale","Valeri","PAR","D","Ds,E",3,9,9,5862
+"VAR-tificiale","Doekhi","LAZ","D","Dc",2,8,8,6320
+"VAR-tificiale","Lucumì","JUV","D","Dc",5,8,8,6042
+"VAR-tificiale","Miranda J.","BOL","D","Ds,E",6,10,10,4734
+"VAR-tificiale","Kamara H.","UDI","D","Ds,E",4,10,10,5555
+"VAR-tificiale","Estupinan","MIL","D","Ds,E",1,4,4,5273
+"VAR-tificiale","Calvani","FRO","D","Dc",1,8,8,7467
+"VAR-tificiale","Zaccagni","LAZ","C","W,A",50,18,17,632
+"VAR-tificiale","Frattesi","LAZ","C","C,T",39,12,12,2848
+"VAR-tificiale","Bernardeschi","BOL","C","W,T",31,12,12,184
+"VAR-tificiale","Thorstvedt","SAS","C","C,T",9,9,9,5844
+"VAR-tificiale","Pierotti","LEC","C","W",4,6,5,6549
+"VAR-tificiale","Rodriguez Je.","COM","C","W,A",6,11,10,7129
+"VAR-tificiale","Ndour","FIO","C","C",3,8,8,6294
+"VAR-tificiale","Ferguson","BOL","C","M,C",1,8,9,5858
+"VAR-tificiale","Ramos G.","MIL","A","Pc",169,25,25,6397
+"VAR-tificiale","Simeone","TOR","A","Pc",43,13,13,2061
+"VAR-tificiale","Adams A.","VEN","A","Pc",22,12,11,7484
+"VAR-tificiale","Esposito Se.","SAS","A","A",27,14,14,4463
+"VAR-tificiale","Elphege","PAR","A","Pc",1,5,5,7342
+"VAR-tificiale","Fatah","LEC","A","W,A",1,5,6,7602
+"Nu kebbab","Butez","COM","P","Por",46,13,13,6966
+"Nu kebbab","Sanchez Ro.","COM","P","Por",6,8,8,6344
+"Nu kebbab","Vigorito","COM","P","Por",1,1,1,2809
+"Nu kebbab","Hermoso","ROM","D","Dc",7,12,12,4807
+"Nu kebbab","Valle","COM","D","Ds,E",6,8,8,6867
+"Nu kebbab","Diego Carlos","PAR","D","Dc",2,8,8,4137
+"Nu kebbab","Hainaut","VEN","D","Dd,E",1,8,8,6821
+"Nu kebbab","Mina","CAG","D","Dc",2,9,9,4210
+"Nu kebbab","Marcandalli","GEN","D","Dc",1,5,5,6660
+"Nu kebbab","Kaiki","COM","D","Ds,E",2,9,9,7414
+"Nu kebbab","Troilo","PAR","D","Dc",1,4,4,7235
+"Nu kebbab","Zielinski","INT","C","C",30,13,13,152
+"Nu kebbab","Mastantuono","FIO","C","W,T",64,14,14,7078
+"Nu kebbab","Zaniolo","UDI","C","T,A",43,16,15,2766
+"Nu kebbab","Alajbegovic","JUV","C","W,T",33,11,11,7436
+"Nu kebbab","Milla","COM","C","M,C",10,7,7,7412
+"Nu kebbab","Fagioli","FIO","C","M,C",5,8,9,4465
+"Nu kebbab","Matic","SAS","C","M,C",3,9,10,2528
+"Nu kebbab","Adopo","CAG","C","M,C",1,9,10,4870
+"Nu kebbab","Dybala","ROM","A","A",124,17,18,309
+"Nu kebbab","Berardi","SAS","A","A",66,18,19,531
+"Nu kebbab","Ghedjemis","FRO","A","W,A",4,11,11,6530
+"Nu kebbab","Piccoli","BOL","A","Pc",29,9,9,4359
+"Nu kebbab","Lontani","PAR","A","A",11,6,6,7561
+"Nu kebbab","Esteban","LEC","A","Pc",1,2,2,7647
+"Milfwall (Albe)","Carnesecchi","ATA","P","Por",48,16,16,4431
+"Milfwall (Albe)","Pompei","ATA","P","Por",1,1,1,7626
+"Milfwall (Albe)","Sportiello","ATA","P","Por",1,1,1,4
+"Milfwall (Albe)","Bremer","JUV","D","Dc",17,17,17,2788
+"Milfwall (Albe)","Carlos Augusto","INT","D","B,Ds,E",12,10,11,5877
+"Milfwall (Albe)","Rrahmani","NAP","D","Dc",8,15,15,4409
+"Milfwall (Albe)","Valdepenas","FIO","D","Dc,Ds",2,5,6,7294
+"Milfwall (Albe)","Cambiaso","JUV","D","Ds,Dd,E",2,7,8,5520
+"Milfwall (Albe)","Leysen F.","SAS","D","Dc,Ds",2,8,9,7564
+"Milfwall (Albe)","Rodriguez Ju.","CAG","D","Dc,Ds",1,6,7,7268
+"Milfwall (Albe)","Kristensen T.","ATA","D","Dc,Dd",1,5,6,6485
+"Milfwall (Albe)","Paz N.","COM","C","T,A",104,29,27,6875
+"Milfwall (Albe)","Ederson D.S.","ATA","C","M,C",22,13,14,5792
+"Milfwall (Albe)","Taylor K.","LAZ","C","C,T",18,13,13,7314
+"Milfwall (Albe)","Pasalic","ATA","C","C,T",4,7,7,2077
+"Milfwall (Albe)","Njie","FIO","C","W,A",11,7,6,6827
+"Milfwall (Albe)","Sow","GEN","C","M,C",1,7,8,5946
+"Milfwall (Albe)","Keita M.","PAR","C","M,C",1,6,7,6898
+"Milfwall (Albe)","Mbangula","BOL","C","W,A",1,7,7,6833
+"Milfwall (Albe)","Malen","ROM","A","Pc",207,37,37,5585
+"Milfwall (Albe)","Boga","JUV","A","W,A",6,6,6,2832
+"Milfwall (Albe)","Beto","FIO","A","Pc",21,13,13,5694
+"Milfwall (Albe)","Giovane","NAP","A","A",1,3,3,7162
+"Milfwall (Albe)","Ngonge","MON","A","A",1,4,4,6145
+"Milfwall (Albe)","N'Dri","LEC","A","W,A",1,4,5,7001
+"PDOR SAINT-GERMAIN","De Gea","FIO","P","Por",23,10,10,2521
+"PDOR SAINT-GERMAIN","Christensen O.","FIO","P","Por",1,1,1,6403
+"PDOR SAINT-GERMAIN","Montipò","VEN","P","Por",1,1,1,4957
+"PDOR SAINT-GERMAIN","Favasuli","NAP","D","Ds,Dd,E",5,6,7,7563
+"PDOR SAINT-GERMAIN","Dimarco","INT","D","E,W",44,29,28,254
+"PDOR SAINT-GERMAIN","Wesley","ROM","D","E",26,18,17,7181
+"PDOR SAINT-GERMAIN","Hien","ATA","D","Dc",1,6,6,6046
+"PDOR SAINT-GERMAIN","Bella-Kotchap","VEN","D","Dc",1,4,4,7253
+"PDOR SAINT-GERMAIN","Viery","FIO","D","Dc,Ds",1,5,6,7410
+"PDOR SAINT-GERMAIN","Pedraza","LAZ","D","Ds,E",1,5,5,4817
+"PDOR SAINT-GERMAIN","Kolasinac","ATA","D","Dc,Ds",1,6,6,2640
+"PDOR SAINT-GERMAIN","Sucic P.","INT","C","C",12,9,9,7070
+"PDOR SAINT-GERMAIN","Da Cunha","COM","C","C,T",51,17,17,5559
+"PDOR SAINT-GERMAIN","Fitz-Jim","TOR","C","M,C",7,6,7,7535
+"PDOR SAINT-GERMAIN","McKennie","JUV","C","C,T",30,15,15,4973
+"PDOR SAINT-GERMAIN","Volpato","SAS","C","W,T",13,9,9,5735
+"PDOR SAINT-GERMAIN","De Roon","ROM","C","M,C",1,4,5,22
+"PDOR SAINT-GERMAIN","Coulibaly L.","LEC","C","M,C",1,10,11,5504
+"PDOR SAINT-GERMAIN","Braganca","TOR","C","C",1,7,7,7624
+"PDOR SAINT-GERMAIN","Thuram","INT","A","Pc",205,31,31,4871
+"PDOR SAINT-GERMAIN","Maldini","CAG","A","T,A",40,11,11,4896
+"PDOR SAINT-GERMAIN","Mendy P.","CAG","A","Pc",16,8,8,7374
+"PDOR SAINT-GERMAIN","Bonny","INT","A","Pc",15,8,7,6669
+"PDOR SAINT-GERMAIN","Mota","MON","A","A",1,6,6,5882
+"PDOR SAINT-GERMAIN","Bobcek","FRO","A","Pc",1,8,8,7612
+"BORUSSIA LAB","Muric","SAS","P","Por",11,5,5,4236
+"BORUSSIA LAB","Okoye","UDI","P","Por",8,8,8,6462
+"BORUSSIA LAB","Perri","TOR","P","Por",13,9,9,6534
+"BORUSSIA LAB","Fortini","TOR","D","E",1,6,6,7069
+"BORUSSIA LAB","Alaba","UDI","D","Dc",5,10,10,2404
+"BORUSSIA LAB","Mangas","MON","D","Ds,E",8,10,10,7485
+"BORUSSIA LAB","Molina N.","ROM","D","E",12,17,17,4998
+"BORUSSIA LAB","Tavares N.","LAZ","D","Ds,E",10,9,9,5620
+"BORUSSIA LAB","Chalobah T.","COM","D","Dc,Dd",8,9,10,5641
+"BORUSSIA LAB","Oyono A.","FRO","D","Dd,E",1,9,9,6238
+"BORUSSIA LAB","Veiga D.","LEC","D","Dd,E",1,6,6,6990
+"BORUSSIA LAB","Adzic","SAS","C","C,T",15,11,11,6677
+"BORUSSIA LAB","Gudmundsson A.","LAZ","C","T,A",30,13,12,5800
+"BORUSSIA LAB","Colpani","MON","C","T",8,8,8,5878
+"BORUSSIA LAB","Vlasic","TOR","C","T",36,11,10,5687
+"BORUSSIA LAB","Perrone","COM","C","M,C",18,11,12,6151
+"BORUSSIA LAB","Cambiaghi","BOL","C","W,A",25,8,7,4436
+"BORUSSIA LAB","Vergara","NAP","C","W,T",10,9,9,7223
+"BORUSSIA LAB","Casadei","TOR","C","C,T",1,8,8,5888
+"BORUSSIA LAB","Woltemade","JUV","A","A",48,22,22,6752
+"BORUSSIA LAB","Esposito F.P.","INT","A","Pc",72,18,18,7071
+"BORUSSIA LAB","Kean","COM","A","Pc",93,23,23,2097
+"BORUSSIA LAB","Pinamonti","LAZ","A","Pc",52,10,10,2038
+"BORUSSIA LAB","Zeballos","MON","A","A",3,7,7,7620
+"BORUSSIA LAB","Gueye","UDI","A","Pc",5,7,7,7272
+"Ss.igari","Caprile","CAG","P","Por",16,13,13,4360
+"Ss.igari","Falcone","LEC","P","Por",10,7,7,2134
+"Ss.igari","Sherri","CAG","P","Por",1,1,1,6650
+"Ss.igari","Bellanova","ATA","D","Dd,E",9,5,5,4887
+"Ss.igari","Bastoni","INT","D","Dc",16,13,13,2120
+"Ss.igari","Doig","SAS","D","Ds,E",6,8,8,5851
+"Ss.igari","Celik","JUV","D","B,Dd,E",5,8,9,4657
+"Ss.igari","Akanji","INT","D","Dc",9,14,14,4159
+"Ss.igari","Vojvoda","UDI","D","Dd,E",6,8,8,4994
+"Ss.igari","Zè Pedro","CAG","D","Dc,Dd",1,8,9,7274
+"Ss.igari","Zappacosta","ATA","D","Dd,E",5,7,7,554
+"Ss.igari","De Bruyne","NAP","C","T",40,17,16,2517
+"Ss.igari","Barella","INT","C","C",24,18,18,1870
+"Ss.igari","Baldanzi","GEN","C","T",17,10,9,5823
+"Ss.igari","Cissè A.","MIL","C","W,T",23,6,6,6618
+"Ss.igari","Jones C.","INT","C","C",18,12,12,5172
+"Ss.igari","Gaetano","ATA","C","M,C",8,6,7,4364
+"Ss.igari","Oristanio","TOR","C","W,T",2,6,6,6218
+"Ss.igari","Caqueret","COM","C","C,T",1,6,6,5036
+"Ss.igari","Douvikas","COM","A","Pc",111,22,22,7017
+"Ss.igari","Dovbyk","BOL","A","Pc",30,15,15,6675
+"Ss.igari","Scamacca","ATA","A","Pc",118,19,18,2137
+"Ss.igari","Neres","NAP","A","W,A",16,5,6,6831
+"Ss.igari","Lang","NAP","A","A",3,4,4,7120
+"Ss.igari","Geubbels","LEC","A","Pc",2,7,6,5029
+"BiG","Svilar","ROM","P","Por",75,19,19,5841
+"BiG","Gollini","ROM","P","Por",1,1,1,610
+"BiG","De Marzi","ROM","P","Por",1,1,1,7048
+"BiG","Jimenez A.","FIO","D","Ds,Dd,E",6,10,11,6531
+"BiG","Vasquez","GEN","D","Dc,Ds",6,9,10,5514
+"BiG","Kalulu","JUV","D","Dc,Dd",6,13,13,4976
+"BiG","Theate","BOL","D","Dc,Ds",4,8,9,5675
+"BiG","Coco","TOR","D","Dc",2,8,8,6642
+"BiG","Rensch","ROM","D","B,Dd,E",1,4,5,6986
+"BiG","Ranieri L.","FIO","D","Dc,Ds",1,3,3,4378
+"BiG","Comert","TOR","D","Dc",1,6,6,7526
+"BiG","Mora","ROM","C","T",40,20,19,7556
+"BiG","Politano","NAP","C","W",27,11,11,536
+"BiG","Moreira","MIL","C","E,W",60,15,15,6372
+"BiG","Gonzalez N.","JUV","C","W,A",55,13,12,4179
+"BiG","Douglas Luiz","JUV","C","C",2,4,4,4911
+"BiG","Karlstrom","UDI","C","M,C",3,9,10,6680
+"BiG","Monteiro J.","LEC","C","W,A",1,6,6,7619
+"BiG","Folorunsho","MON","C","C,T",1,3,3,6252
+"BiG","Soulè","ROM","A","A",79,16,16,5734
+"BiG","Castro S.","ROM","A","Pc",29,13,12,6572
+"BiG","Yeboah J.","VEN","A","A",31,8,8,6904
+"BiG","Laurientè","SAS","A","A",35,16,16,6060
+"BiG","Osmajic","GEN","A","Pc",21,10,9,7600
+"BiG","Robinson J.","MON","A","A",4,8,8,7546
+"BAY ERMO NACO","Vicario","JUV","P","Por",42,16,16,4964
+"BAY ERMO NACO","Tornqvist","MON","P","Por",1,3,3,7301
+"BAY ERMO NACO","Thiam","MON","P","Por",1,3,3,4485
+"BAY ERMO NACO","Solet","UDI","D","Dc",8,12,12,6956
+"BAY ERMO NACO","Bernasconi","ATA","D","Ds,E",3,5,5,7219
+"BAY ERMO NACO","Spinazzola","NAP","D","Ds,E",7,8,8,1852
+"BAY ERMO NACO","Dragusin","FIO","D","Dc",2,8,8,5365
+"BAY ERMO NACO","Scalvini","ATA","D","Dc",3,10,10,5526
+"BAY ERMO NACO","Zortea","BOL","D","Dd,E",7,6,6,4433
+"BAY ERMO NACO","Floriani Mussolini","LAZ","D","Dd,E",1,3,3,7131
+"BAY ERMO NACO","Holm","BOL","D","Dd,E",2,6,6,5678
+"BAY ERMO NACO","Atta","FIO","C","C,T",16,14,14,6908
+"BAY ERMO NACO","Baturina","COM","C","T",54,21,20,7126
+"BAY ERMO NACO","Conceicao","JUV","C","W,A",46,14,14,6884
+"BAY ERMO NACO","Schmid","FRO","C","W,T",22,11,11,7551
+"BAY ERMO NACO","Isaksen","LAZ","C","W,A",13,8,7,6398
+"BAY ERMO NACO","Cancellieri","LAZ","C","W,A",8,11,11,5500
+"BAY ERMO NACO","Goncalves P.","FIO","C","W,T",31,11,11,7625
+"BAY ERMO NACO","Traorè Hj.","GEN","C","W,T",1,4,4,2857
+"BAY ERMO NACO","Kolo Muani","JUV","A","Pc",95,23,23,5951
+"BAY ERMO NACO","Krstovic","ATA","A","Pc",59,16,15,6435
+"BAY ERMO NACO","Varela G.","MON","A","Pc",31,10,10,7523
+"BAY ERMO NACO","Santos A.","NAP","A","W,A",13,13,14,7351
+"BAY ERMO NACO","Bowie","SAS","A","Pc",14,12,11,7347
+"BAY ERMO NACO","Adams C.","TOR","A","A",11,11,12,6646
+"FC TANALIPERATUTTI","Corvi","PAR","P","Por",9,4,4,6662
+"FC TANALIPERATUTTI","Meret","NAP","P","Por",38,9,9,572
+"FC TANALIPERATUTTI","Milinkovic-Savic V.","NAP","P","Por",17,7,7,2170
+"FC TANALIPERATUTTI","Cinquegrano","SAS","D","Dd,E",6,5,5,7573
+"FC TANALIPERATUTTI","Ramon","COM","D","Dc",12,12,12,6869
+"FC TANALIPERATUTTI","Di Lorenzo","NAP","D","Dd,E",8,12,12,2816
+"FC TANALIPERATUTTI","Smolcic I.","COM","D","Dd,E",1,3,3,7014
+"FC TANALIPERATUTTI","Couto","COM","D","Dd,E",15,8,8,6727
+"FC TANALIPERATUTTI","Marin R.","NAP","D","Dc",2,2,2,6638
+"FC TANALIPERATUTTI","Badiashile","NAP","D","Dc",1,6,6,4664
+"FC TANALIPERATUTTI","Olivera","NAP","D","B,Ds,E",4,4,5,5840
+"FC TANALIPERATUTTI","McTominay","NAP","C","C,T",46,24,24,4777
+"FC TANALIPERATUTTI","Ekkelenkamp","UDI","C","C,T",25,14,14,6684
+"FC TANALIPERATUTTI","Calhanoglu","INT","C","M,C",80,27,28,2194
+"FC TANALIPERATUTTI","Cristante","ROM","C","M,C",13,11,11,779
+"FC TANALIPERATUTTI","Samardzic","ATA","C","C,T",24,14,14,5119
+"FC TANALIPERATUTTI","Rowe","ATA","C","W,T",51,9,9,6844
+"FC TANALIPERATUTTI","Zhegrova","JUV","C","W",6,10,9,5761
+"FC TANALIPERATUTTI","Romano","CAG","C","M,C",11,10,10,7311
+"FC TANALIPERATUTTI","Zapata D.","TOR","A","Pc",2,5,5,608
+"FC TANALIPERATUTTI","Raspadori","ATA","A","A",12,14,15,4371
+"FC TANALIPERATUTTI","Yildiz","JUV","A","A",30,20,21,6434
+"FC TANALIPERATUTTI","De Ketelaere","ATA","A","A",46,15,16,5995
+"FC TANALIPERATUTTI","Romero D.","PAR","A","Pc",22,13,13,7554
+"FC TANALIPERATUTTI","Kulenovic","TOR","A","Pc",1,6,6,7349
+"AS Draietta","Maignan","MIL","P","Por",52,15,15,4312
+"AS Draietta","Terracciano","MIL","P","Por",1,1,1,2815
+"AS Draietta","Torriani","MIL","P","Por",1,1,1,6813
+"AS Draietta","Bisseck","INT","D","Dc",9,13,13,6217
+"AS Draietta","Gila","MIL","D","Dc",9,13,13,5833
+"AS Draietta","Obert","CAG","D","B,Ds,E",5,8,8,5701
+"AS Draietta","Stones","INT","D","Dc",2,11,11,2514
+"AS Draietta","Bracaglia","FRO","D","Dc,Ds",3,9,9,7469
+"AS Draietta","Birindelli","MON","D","Ds,Dd,E",3,7,8,5838
+"AS Draietta","Provstgaard","LAZ","D","Dc",2,5,5,7012
+"AS Draietta","Gallo","LEC","D","Ds,E",2,6,6,4502
+"AS Draietta","Rabiot","MIL","C","C,T",51,24,24,2379
+"AS Draietta","Konè M.","ROM","C","M,C",47,14,14,5589
+"AS Draietta","Fazzini","CAG","C","C,T",6,7,8,6010
+"AS Draietta","Pellegrini Lo.","ROM","C","C,T",5,8,8,530
+"AS Draietta","Saelemaekers","MIL","C","E,W",23,11,12,4892
+"AS Draietta","Zambo Anguissa","NAP","C","C",7,9,9,4220
+"AS Draietta","Bakola","SAS","C","C,T",5,8,8,7036
+"AS Draietta","Cacciamani","TOR","C","E,W",2,8,9,7060
+"AS Draietta","Hojlund","NAP","A","Pc",167,27,27,6052
+"AS Draietta","Noslin","LAZ","A","A",17,10,10,6556
+"AS Draietta","Lucca","NAP","A","Pc",3,3,3,6215
+"AS Draietta","Kvernadze","FRO","A","W,A",56,11,12,6204
+"AS Draietta","Kevin Carlos","CAG","A","Pc",11,10,10,7547
+"AS Draietta","Cutrone","MON","A","Pc",6,8,8,2155
