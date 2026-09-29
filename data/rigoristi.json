@@ -326,6 +326,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -348,6 +349,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -369,6 +371,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -391,6 +394,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -414,6 +418,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -437,6 +442,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -460,6 +466,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -481,6 +488,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -502,6 +510,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -523,6 +532,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -544,6 +554,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -566,6 +577,7 @@
         "calciati": 1
       },
       "conferma": "sostituto",
+      "ultimo_rigore": 4,
       "scavalcato_da": []
     },
     {
@@ -589,6 +601,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -611,6 +624,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -634,6 +648,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -656,6 +671,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -678,6 +694,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -701,6 +718,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -723,6 +741,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -745,6 +764,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -766,6 +786,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -789,6 +810,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -812,6 +834,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -834,6 +857,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -855,6 +879,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -878,6 +903,7 @@
         "calciati": 1
       },
       "conferma": "confermato",
+      "ultimo_rigore": 4,
       "scavalcato_da": []
     },
     {
@@ -900,6 +926,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -921,6 +948,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -942,6 +970,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -964,6 +993,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -987,6 +1017,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1010,6 +1041,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1033,6 +1065,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1056,6 +1089,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1078,6 +1112,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1100,6 +1135,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1122,6 +1158,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1145,6 +1182,7 @@
         "calciati": 1
       },
       "conferma": "confermato",
+      "ultimo_rigore": 5,
       "scavalcato_da": []
     },
     {
@@ -1168,6 +1206,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1190,6 +1229,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1212,6 +1252,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1235,6 +1276,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1258,6 +1300,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1280,6 +1323,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1301,6 +1345,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1324,6 +1369,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1347,6 +1393,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1370,6 +1417,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1392,6 +1440,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1413,6 +1462,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1434,6 +1484,7 @@
         "calciati": 1
       },
       "conferma": "sostituto",
+      "ultimo_rigore": 5,
       "scavalcato_da": []
     },
     {
@@ -1456,6 +1507,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1478,6 +1530,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1499,6 +1552,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1520,6 +1574,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1543,6 +1598,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1564,6 +1620,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1586,6 +1643,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1608,6 +1666,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1630,6 +1689,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1652,6 +1712,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1673,6 +1734,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1694,6 +1756,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1717,6 +1780,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1739,6 +1803,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1762,6 +1827,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1785,6 +1851,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1806,6 +1873,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1828,6 +1896,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1849,6 +1918,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1871,6 +1941,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1892,6 +1963,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1915,6 +1987,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1936,6 +2009,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1959,6 +2033,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -1981,6 +2056,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -2004,6 +2080,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     },
     {
@@ -2027,6 +2104,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": [
         {
           "nome": "Yeboah J.",
@@ -2056,6 +2134,7 @@
         "calciati": 1
       },
       "conferma": "smentisce",
+      "ultimo_rigore": 5,
       "scavalcato_da": []
     },
     {
@@ -2077,6 +2156,7 @@
         "calciati": 0
       },
       "conferma": "supposizione",
+      "ultimo_rigore": null,
       "scavalcato_da": []
     }
   ],

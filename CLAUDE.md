@@ -104,8 +104,12 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   delle fonti; `sostituto` = ha calciato con chi gli sta sopra fuori dal campo (l'ordine
   regge, ma **non** è il primo); `smentisce` = ha calciato con in campo qualcuno che le
   fonti gli mettono sopra; `incerto` = dipende dal minuto; `supposizione` = non ha calciato.
-  `scavalcato_da` dice chi ha calciato al posto suo mentre lui era in campo. Quando un
-  rigore è incerto, il minuto si cerca e si scrive in `minuti_rigori` con due fonti.
+  `scavalcato_da` dice chi ha calciato al posto suo mentre lui era in campo. **Conta il fatto
+  più recente**: `conferma` è l'esito del suo ultimo rigore (`ultimo_rigore` la giornata), e
+  uno scavalcamento dopo il suo ultimo rigore pesa più di una conferma vecchia
+  (`scavalcato_di_recente` in `roster.py`). Quando un rigore è incerto (anche per minuti
+  sconosciuti, che non vogliono dire assenza), il minuto si cerca e si scrive in
+  `minuti_rigori` con due fonti.
   **Aver calciato non vuol dire essere il primo.** Il 27/09 qui c'era scritto che 3 rigori
   su 5 smentivano le liste: era falso, in tutti e tre i casi il primo designato non era in
   campo. Il 29/09: 2 rigori del primo delle fonti, 2 di sostituti col primo fuori, 1 che
@@ -152,10 +156,12 @@ uno slot scoperto vale 0**, quindi la probabilità conta eccome per decidere *ch
 una riserva che non gioca mai è un posto buttato. Lo fa `_scegli_panchina` in `roster.py`.
 Sceglierci anche il modulo è stato provato e lasciato fuori perché non ha mostrato
 guadagni (non dimostrato, non smentito): vedi `.docs/analisi-valutazione-formazione.md`. **I portieri della stessa squadra sono una
-coppia**: ne gioca uno solo, quindi l'ordine fra titolare e riserva non cambia il punteggio
-e conta solo averli tutti e due in distinta. Le loro quote di `prob_titolare` (il sito non
-scrive mai più di 90) si rapportano a tutti i portieri di quella squadra: la copertura
-che ne esce (99% per Martinez + Provedel) è una stima, non verificata. **Chi non ha voti
+coppia**: ne gioca uno solo (salvo un cambio del portiere a partita in corso), quindi
+l'ordine fra titolare e riserva non cambia quasi mai il punteggio e conta averli tutti e due
+in distinta. Le loro quote di `prob_titolare` (il sito non scrive mai più di 90) si
+rapportano ai portieri **disponibili** di quella squadra (`quote_portieri` in `roster.py`:
+un titolare infortunato non resta al denominatore delle riserve): la copertura che ne esce
+(99% per Martinez + Provedel) è una stima, non verificata. **Chi non ha voti
 non vale 0**: nel punteggio atteso conta con la media del ruolo, dichiarata come stima, e
 resta in fondo all'ordine (con una stima davanti, Provedel, 4,70, passerebbe davanti a
 Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvisa.
@@ -351,9 +357,12 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   di chi va in panchina. Stampa anche il **rischio slot vuoto per ruolo**, il
   **punteggio atteso** e la probabilità di fare 0, 1, 2 o 3+ gol secondo `soglie_gol`
   (confermate dall'utente il 27/09, primo gol a 66 e poi ogni 5), come **scenario
-  approssimativo**: la larghezza è quanto i punti veri di una formazione intera si sono
-  allontanati dal punteggio atteso rigiocando le giornate passate (`scarti_formazione` in
-  `lib/simulazione.py`, circa ±7 punti il 29/09), il centro non è tarato. Un punto atteso
+  approssimativo arrotondato a 5 punti percentuali**: la larghezza è quanto i punti veri di
+  una formazione intera si sono allontanati dal punteggio atteso rigiocando le giornate
+  passate (`scarti_formazione` in `lib/simulazione.py`, circa ±7 punti il 29/09). Ma è
+  misurata con la probabilità di voto dello storico, non con quella del sito che usa il
+  report: né la larghezza né il centro sono verificati per il report, e si rimisurano dalla
+  giornata 6 con le probabili salvate alla scadenza. Un punto atteso
   vale circa 0,17 gol ovunque, quindi non esiste un "sul filo" guardando quanto manca alla
   soglia. Poi l'**avversario di lega** della prossima giornata,
   letto da `lega_competizioni.json`. Marca con `RIG` i **primi rigoristi** e ne stampa
@@ -414,6 +423,11 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   cambiamento, né per aggiungere un pezzo né per toglierlo, senza un intervallo che escluda
   lo zero. Il termine avversario resta per questo, ed è **provvisorio** (entrato con prove
   poi ridimensionate): si rimisura alla giornata 8. Non scrive niente.
+- `tests/test_casi_limite.py` — i casi limite trovati nelle revisioni di Codex del 29/09
+  (6 politico nella coppia di portieri, titolare fuori con le quote vecchie, coppia con un
+  dato mancante, rigori coi minuti sconosciuti, rigore più recente contro conferma vecchia,
+  voti d'ufficio solo a chi ha giocato), costruiti a mano senza leggere `data/`:
+  `python3 -m unittest discover tests`. Un caso limite nuovo si aggiunge qui.
 - Skill `aggiorna-dati` (`.claude/skills/aggiorna-dati/SKILL.md`) — il giro completo
   di aggiornamento dati, nell'ordine giusto, non interattivo, con commit su `main`.
   È quella che esegue la routine del mattino: per aggiungere un dato al giro
@@ -477,8 +491,8 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
 
 - **Fusione in `main` senza chiedere** (decisione dell'utente, 27/09): una modifica
   finita si porta su `main` con una pull request e la si fonde subito, senza chiedere
-  conferma, ma solo dopo averla verificata (script che girano, report e backtest
-  rilanciati se toccati, diff riletto). Dopo, si dice all'utente cosa è stato fuso e il
+  conferma, ma solo dopo averla verificata (script che girano, `python3 -m unittest
+  discover tests` che passa, report e backtest rilanciati se toccati, diff riletto). Dopo, si dice all'utente cosa è stato fuso e il
   link della PR. Restano da chiedere prima le operazioni distruttive (riscrivere la
   storia di git, togliere righe dallo storico dei voti, cancellare dati).
 

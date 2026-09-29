@@ -511,17 +511,21 @@ def _slot_attesi(candidati: list[dict], n: int, prob=None) -> tuple[float, float
     lo slot resta scoperto e vale 0.
 
     Due portieri della stessa squadra di Serie A non possono partire titolari insieme: ne
-    gioca esattamente uno. Trattarli come indipendenti sottostima la copertura (con
+    gioca uno solo, salvo un cambio del portiere a partita in corso (raro: lì prenderebbero
+    voto tutti e due, e il modello lo ignora). Trattarli come indipendenti sottostima la copertura (con
     Martinez 90% e Provedel 5% dell'Inter darebbe 90,5% invece di 95%), e farebbe
     consigliare di cambiare una riserva che invece è quella giusta. Quindi i portieri della
     stessa squadra formano un gruppo a scelta unica: gioca il primo, o il secondo, o nessuno
     dei miei. Per i giocatori di movimento non vale — tre centrocampisti della stessa
     squadra possono partire tutti e tre — e restano indipendenti.
 
-    Dentro un gruppo le quote di `prob_titolare` si dividono per la somma di tutti i
-    portieri della squadra (`quota_portieri_squadra`, vedi PORTIERI_QUOTA_MINIMA): col 90%
-    di Martinez e il 5% di Provedel la porta è coperta al 99%, non al 95%, perché l'unico
-    altro portiere dell'Inter è Di Gennaro all'1%.
+    Dentro un gruppo le quote di `prob_titolare` si dividono per la somma dei portieri
+    **disponibili** della squadra (`quota_portieri_squadra`, vedi PORTIERI_QUOTA_MINIMA):
+    col 90% di Martinez e il 5% di Provedel la porta è coperta al 99%, non al 95%, perché
+    l'unico altro portiere dell'Inter è Di Gennaro all'1%. È una stima, non verificata. Se
+    Martinez è fuori e il sito non ha ancora aggiornato le quote, Provedel (5) e Di Gennaro
+    (1) si dividono per 6, non per 96: uno dei due deve giocare (prima della seconda
+    revisione di Codex la copertura usciva 6%).
 
     Chi non ha voti vale la sua `stima` (la media del ruolo), non 0: se prende voto il
     fantavoto sarà qualcosa, non niente. È una stima dichiarata, serve al punteggio atteso
@@ -568,7 +572,11 @@ def _slot_attesi(candidati: list[dict], n: int, prob=None) -> tuple[float, float
     if da_titolarita:
         for gruppo in gruppi:
             quote = [candidati[i].get("quota_portieri_squadra") for i in gruppo]
-            if (len(gruppo) > 1 and all(q and q >= PORTIERI_QUOTA_MINIMA for q in quote)
+            # sotto la quota minima si divide lo stesso se il portiere che manca alla somma è
+            # fuori (infortunato, squalificato): allora le quote basse delle riserve sono
+            # attese, e una di loro deve giocare
+            fuori = any(candidati[i].get("portiere_fuori") for i in gruppo)
+            if (len(gruppo) > 1 and all(q and (q >= PORTIERI_QUOTA_MINIMA or fuori) for q in quote)
                     and all(candidati[i]["player"].get("prob_titolare") is not None for i in gruppo)):
                 for i in gruppo:
                     dati[i] = (dati[i][0], min(1.0, candidati[i]["player"]["prob_titolare"] / quote[0]))
@@ -645,24 +653,51 @@ def _valore(e: dict) -> float | None:
     return e["rating"]["punteggio"] if e["rating"] else None
 
 
+def quote_portieri(players_by_id: dict) -> tuple[dict, set]:
+    """(squadra -> somma di `prob_titolare` dei suoi portieri DISPONIBILI, squadre con un
+    portiere infortunato o squalificato), per _slot_attesi. Un titolare fuori non deve
+    restare al denominatore delle sue riserve: con Martinez infortunato e le quote non
+    ancora aggiornate, Provedel (5) e Di Gennaro (1) davano 6/96 = 6% di copertura."""
+    quota, fuori = defaultdict(float), set()
+    for q in players_by_id.values():
+        if q["role"] != "P":
+            continue
+        if q["status"] in EXCLUDED_STATUSES:
+            fuori.add(q["serie_a_team"])
+        elif q.get("prob_titolare") is not None:
+            quota[q["serie_a_team"]] += float(q["prob_titolare"])
+    return quota, fuori
+
+
+def scavalcato_di_recente(v: dict) -> list[dict]:
+    """Le volte in cui qualcuno che le fonti gli mettono sotto ha calciato mentre lui era in
+    campo, dopo il suo ultimo rigore calciato: è il fatto più recente su di lui, e vale più
+    di un rigore calciato prima. Vuota se non è mai stato scavalcato, o se ha calciato lui
+    dopo."""
+    ultimo = v.get("ultimo_rigore") or 0
+    return [x for x in v.get("scavalcato_da", [])
+            if x["dove"] == "in campo" and (x.get("giornata") or 0) >= ultimo]
+
+
 def _spareggio_rigorista(a: dict, b: dict, valore: float, prova: dict | None = None) -> str:
     """Se fra due giocatori equivalenti per il modello uno è il primo rigorista della sua
     squadra e l'altro no, lo dice: vale circa `valore` di fantavoto atteso, più della soglia
     dei pari. Avvisa quando il rigore è già dentro la media, per non contarlo due volte.
 
     Aver calciato un rigore non basta a essere il primo: chi ha calciato perché il primo
-    mancava è un sostituto, e chi è stato scavalcato mentre era in campo non è lui a
-    calciare, qualunque cosa dicano le fonti."""
+    mancava è un sostituto, e chi è stato scavalcato mentre era in campo, dopo il suo ultimo
+    rigore, non ha peso finché i rigori non dicono altro. Conta il fatto più recente: un
+    rigore da primo alla giornata 5 non cancella uno scavalcamento alla giornata 8."""
     def peso(e):
         """0 = non è il primo rigorista; 1 = lo dicono le fonti (o è il primo disponibile
         perché chi gli sta davanti è fuori); 2 = ha calciato da primo delle fonti."""
         v = e.get("rigorista")
         if not v:
             return 0
+        if scavalcato_di_recente(v):
+            return 0
         if v.get("conferma") == "confermato":
             return 2
-        if any(x["dove"] == "in campo" for x in v.get("scavalcato_da", [])):
-            return 0
         return 1 if v.get("consenso_sul_primo") or e.get("erede_rigorista") else 0
 
     pa, pb = peso(a), peso(b)
@@ -783,11 +818,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     righe = store.load_matchday_stats()
     calendario = store.load_json(calendario_path) if calendario_path.exists() else []
     modello = costruisci_modello(righe, players_by_id, calendario)
-    # somma delle quote di tutti i portieri di ogni squadra, per _slot_attesi
-    quota_portieri = defaultdict(float)
-    for q in players_by_id.values():
-        if q["role"] == "P" and q.get("prob_titolare") is not None:
-            quota_portieri[q["serie_a_team"]] += float(q["prob_titolare"])
+    quota_portieri, portiere_fuori = quote_portieri(players_by_id)
 
     panchina_cfg = {
         role: int(n)
@@ -876,6 +907,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
             # dichiarata, non un dato (vedi _slot_attesi)
             "stima": None if rating else modello["media_ruolo"].get(p["role"]),
             "quota_portieri_squadra": quota_portieri.get(p["serie_a_team"]) if p["role"] == "P" else None,
+            "portiere_fuori": p["role"] == "P" and p["serie_a_team"] in portiere_fuori,
             "partita": partita,
             "rigorista": rig.get(p["id"]),
             "erede_rigorista": eredi.get(p["id"]),
@@ -947,8 +979,9 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     risultato["atteso"] = atteso   # valore atteso degli 11 slot, per le soglie gol del report
     panchina = [e for role in ROLES for e in riserve.get(role, [])]
     risultato["stimati"] = [e for e in titolari + panchina if not e["rating"] and e.get("stima") is not None]
-    # Il secondo portiere della stessa squadra del titolare: ne gioca uno solo, quindi l'ordine
-    # fra i due non cambia il punteggio, e "nessun voto" vuol dire solo che finora in porta è
+    # Il secondo portiere della stessa squadra del titolare: ne gioca uno solo (salvo un cambio
+    # del portiere a partita in corso), quindi l'ordine fra i due non cambia quasi mai il
+    # punteggio, e "nessun voto" vuol dire solo che finora in porta è
     # andato l'altro. Non è un giudizio sul giocatore, e non c'è niente da decidere.
     portiere = next((e for e in titolari if e["player"]["role"] == "P"), None)
     for e in riserve.get("P", []):
