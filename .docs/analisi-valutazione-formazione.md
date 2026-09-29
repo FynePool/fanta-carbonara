@@ -99,6 +99,10 @@ lui. `_slot_attesi` ora tratta i portieri della stessa squadra come gruppo a sce
 Per i giocatori di movimento non vale: tre centrocampisti della stessa squadra possono
 partire tutti e tre. **[Certo]**
 
+*Corretto il 29/09:* anche il 95% era sbagliato. Fantacalcio.it non scrive mai più di 90%
+e i portieri di una squadra sommano 96: la copertura vera è 95/96 = **99%**, e Provedel
+nel calcolo valeva 0 invece di una stima. Vedi la revisione in fondo.
+
 ### Entrato: gli avvisi che prima non c'erano
 
 - **Rischio slot vuoto per ruolo**, con la probabilità di copertura. Oggi: P 95,0%, A 95,4%,
@@ -106,7 +110,9 @@ partire tutti e tre. **[Certo]**
 - **Fuori distinta**: i 7 giocatori della rosa che non entrano né in campo né in panchina.
 - **Punteggio atteso** e sua conversione in gol con le soglie: oggi 70,7 punti = 1 gol, e
   per il secondo ne servono 72, cioè +1,3. Serve a sapere **se una decisione cambia il
-  risultato**: sotto +1,3 punti, oggi, non lo cambia.
+  risultato**: sotto +1,3 punti, oggi, non lo cambia. *Sbagliato, corretto il 29/09: il
+  punteggio vero oscilla di circa ±5 punti, quindi ogni punto atteso vale circa 0,2 gol
+  ovunque. Vedi la revisione in fondo.*
 - **Avversario di lega**, letto da `lega_competizioni.json` che prima nessuno leggeva:
   alla prossima giornata giochi in trasferta contro **BORUSSIA LABELLA** (giornata 1 di
   lega = Serie A 6).
@@ -171,6 +177,11 @@ alla prova le liste. **Tre su cinque le hanno smentite [Certo]**:
 Un flag che sbaglia 3 volte su 5, dove si può controllare, non va sommato a un punteggio.
 Va mostrato, distinguendo chi è **confermato** da chi è una **supposizione**.
 
+*Sbagliato, da correggere (29/09): in tutti e tre i casi "smentiti" il primo rigorista delle
+fonti non era in campo. Pessina non ha ancora giocato in questa stagione, Mina è rimasto in
+panchina senza entrare, Busio era infortunato. Nessuno dei 5 rigori smentisce chiaramente
+il primo rigorista; 2 lo confermano. Vedi la revisione in fondo.*
+
 #### Cosa il dato ufficiale NON dice
 
 Zero rigori **non** smentisce nessuno. Con 0,139 rigori per squadra a partita, dopo 5
@@ -216,13 +227,17 @@ rigori). Entrambi già titolari: oggi non cambia la formazione.
 
 Sarebbe l'obiettivo giusto — il valore atteso sconta chi non prende voto e gli slot che
 restano vuoti, la somma dei valori dei titolari no. **Misurato: −0,47 [−1,26, +0,32], cioè
-perde.** **[Certo]**
+perde.** **[Certo]** *Corretto il 29/09: l'intervallo contiene lo zero, quindi non "perde":
+non guadagna, che per la regola del progetto basta a lasciarlo fuori.*
 
 Il motivo è onesto e sta nel dato: il valore atteso dipende dalla probabilità di prendere
 voto, e l'unica che abbiamo (`prob_titolare`) è la probabilità di **partire titolare**,
 cioè un pavimento — chi entra a partita in corso prende voto lo stesso (129 voti con meno
 di 25 minuti nelle giornate 1-5, minimo 2 minuti). Sottostimando la probabilità si
-puniscono troppo i moduli con più titolari in un ruolo.
+puniscono troppo i moduli con più titolari in un ruolo. *Sbagliato due volte, corretto il
+29/09: chi entra prende voto il 72% delle volte, non "lo stesso" (sotto i 10 minuti il 7%);
+e il backtest non usa `prob_titolare` ma la quota storica di voti presi, quindi questa non
+può essere la spiegazione.*
 
 Quindi il modulo resta scelto sulla somma dei valori dei titolari, e il valore atteso serve
 solo agli avvisi e al punteggio atteso, dove essere prudenti è un bene e non decide niente.
@@ -243,7 +258,9 @@ giocate, quindi diventa misurabile.
    quando i voti sono pochi. Il valore esatto del freno non conta (3 o 10 invece di 5:
    indistinguibili).
 3. **Il termine sull'avversario adesso è significativo**: toglierlo costa −1,50 [−2,74,
-   −0,35]. Ed è stimato con cura — sugli scarti di ogni giocatore dalla sua media, e con i
+   −0,35]. *Da rivedere (29/09): il backtest escludeva i giocatori infortunati **oggi**
+   anche nelle giornate passate. Senza quell'esclusione vale +0,92 [−0,10, +2,03]: non è
+   più significativo.* Ed è stimato con cura — sugli scarti di ogni giocatore dalla sua media, e con i
    gol subiti dall'avversario calcolati escludendo quella partita, le due precauzioni che
    quasi tutti dimenticano.
 4. **L'onestà sui dati.** Il report dice su quanti voti si basa ogni numero, dichiara
@@ -261,7 +278,8 @@ giocate, quindi diventa misurabile.
    a 66 punti, poi una fascia ogni 5**. Cambia il giudizio su quanto una decisione conti,
    e lo stringe: col punteggio atteso di oggi (70,7) la soglia successiva è a 71, cioè
    **+0,3** — quindi questa giornata le scelte entro la soglia dei pari possono valere un
-   gol, invece di essere indifferenti.
+   gol, invece di essere indifferenti. *Sbagliato, corretto il 29/09: vedi la revisione in
+   fondo.*
 2. **La probabilità di prendere voto è approssimata** con quella di partire titolare. Dalla
    giornata 6 diventa misurabile (probabili dal 21/09 + giornate giocate). Quando lo sarà,
    va rifatto il confronto sul modulo (sopra).
@@ -303,11 +321,77 @@ Sono quelle che un esperto di fantacalcio direbbe per prime.
 - **«La stagione scorsa deve entrare nel modello.»** Provata come punto di partenza del
   freno (niente) e come regola di ordinamento a sé: **−3,15 punti**. **[Certo]** Come
   contesto stampato va benissimo dov'è.
-- **«Un giocatore che entra al 70' non prende voto.»** Falso: 129 voti con meno di 25
-  minuti, minimo 2. **[Certo]**
+- **«Un giocatore che entra al 70' non prende voto.»** Falso: chi gioca 20-29 minuti
+  prende voto il 99% delle volte. **[Certo]** *(Corretto il 29/09: la prova citata prima,
+  129 voti con meno di 25 minuti, nascondeva che altri 123 con meno di 25 minuti non
+  l'hanno preso. Sotto i 10 minuti prende voto il 7%, fra 10 e 19 il 39%.)*
 - **«Il 3-4-3 è scelto per principio.»** No, è la somma dei valori. Che vincano spesso i
   moduli con più centrocampisti e attaccanti è **corretto**: senza modificatore di difesa un
   attaccante medio (6,83) rende più di un difensore medio (6,04). **[Certo]**
+
+---
+
+## Revisione del 29/09: l'analisi di Codex, verificata
+
+Il 29/09 l'utente ha fatto analizzare il progetto (commit `ff42105`) a Codex. Ogni punto
+è stato ricontrollato sul codice e sui dati prima di toccare qualcosa.
+
+**Confermati e corretti subito** (non cambiano nessuna scelta del modello: il backtest del
+modello è identico al centesimo, e la formazione di VAR-tificiale non cambia):
+
+- **Chi non ha voti valeva 0** in `_slot_attesi`. Ora vale la media del ruolo, dichiarata
+  come stima. Effetto concreto su un'altra squadra: il motore lasciava fuori distinta Meret
+  (titolare del Napoli al 70%, senza voti) e metteva in panchina Corvi. Nei confronti del
+  backtest cambia solo la regola "fantamedia stagione scorsa", che ha molti giocatori senza
+  valore: da −2,85 a −2,14, sempre peggio del modello.
+- **La copertura dei portieri era sottostimata**: fantacalcio.it non scrive mai più di 90%
+  e i portieri di una squadra sommano quasi sempre 96 (16 squadre su 20). Dentro una coppia
+  della stessa squadra le quote si dividono per la somma dei portieri di quella squadra
+  (`PORTIERI_QUOTA_MINIMA`). La porta di VAR-tificiale passa dal 95% al **99%**: l'avviso
+  "5% di rischio" era un falso allarme. E una coppia non può più sommare più del 100% (con
+  un portiere senza dato, al 50%, la copertura usciva 140%).
+- **Il 6 politico veniva moltiplicato per la probabilità di partire titolare**: al 10% valeva
+  0,6. Ora vale 6.
+- **"Chi entra a partita in corso prende voto comunque" è falso**: 256 su 358 (72%). Il
+  report lo misura (`voto_da_subentrato`) invece di affermarlo.
+- **Il report diceva che la probabilità entra nella scelta del modulo**: non è vero, il
+  modulo si sceglie sulla somma dei valori dei titolari.
+- **"Sei sul filo, ogni decimale conta"**: sbagliato. Il fantavoto vero si scosta da quello
+  previsto di 1,60 a giocatore (786 voti delle giornate 3-5, previsti coi soli dati di
+  prima), cioè circa ±5,3 punti sulla squadra, più di una fascia di gol. Allora un punto
+  atteso vale circa 0,19 gol ovunque: +0,3 punti partendo da 70,7 valgono +0,055 gol,
+  partendo da 68,7 +0,051. Il report stampa la probabilità di 0, 1, 2, 3+ gol
+  (`incertezza_voto`).
+- **`--matchday` è solo un'etichetta**: ora il report avvisa se non coincide con la prossima
+  giornata della lega.
+- **La skill `formazione`** ha una sezione su tre errori di ragionamento: i portieri della
+  stessa squadra sono una coppia e l'ordine fra i due non cambia il punteggio; "nessun voto"
+  non è un giudizio né uno zero; il punteggio atteso non è un punteggio fatto.
+
+**Confermati, da correggere nei passi successivi:**
+
+- **Il backtest guarda il futuro**: esclude i giocatori infortunati *oggi* anche nelle
+  giornate 3-5 (11 voti di 8 giocatori in rosa, tra cui Busio e Holm). Senza quell'esclusione
+  il modello batte ancora l'ordine d'acquisto (+2,68 [+0,64, +4,76]), ma **non più in modo
+  dimostrabile la media nuda** (+1,22 [−0,15, +2,72]) e il termine avversario scende a +0,92
+  [−0,10, +2,03]. Vedi i punti forti sopra.
+- **Le gerarchie dei rigoristi non sono state "smentite 3 volte su 5"**: in tutti e tre i
+  casi il primo designato non era in campo. E "ha calciato un rigore" non vuol dire "è il
+  primo rigorista" se l'ha calciato perché il primo mancava. In rosa tocca Adams A.:
+  secondo del Venezia dietro Busio, infortunato.
+- **L'ammonito senza voto prende 5,5 d'ufficio** nella lega, e non entra nessuno al suo
+  posto: il backtest lo tratta come senza voto. Pochi casi: 7 in 5 giornate in tutta la
+  Serie A.
+
+**Non reggono, misurati:**
+
+- **Scegliere insieme titolari e panchina** (escludere un titolare forte che gioca poco per
+  far posto a una riserva sicura). Nel modello a volte paga (+0,56 per Pdor saint-germain,
+  +0,00 per VAR-tificiale), nei punti veri no: **−0,46 [−1,06, +0,07]**. È lo stesso schema
+  del modulo col valore atteso: ottimizzare su probabilità approssimate costa. Da riprovare
+  quando la probabilità di prendere voto sarà misurata.
+- **Il contesto dei portieri coi gol fatti dall'avversario**: era già stato provato il 27/09
+  (indistinguibile su 55 previsioni), da riguardare alla giornata 10.
 
 ---
 

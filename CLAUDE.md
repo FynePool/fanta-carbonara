@@ -133,8 +133,13 @@ quel ruolo: la probabilità di giocare non entra nell'ordine (dimostrazione in
 `.docs/difetti-consiglio-formazione.md`). **Ma la panchina ha solo 1-2 posti per ruolo e
 uno slot scoperto vale 0**, quindi la probabilità conta eccome per decidere *chi* ci va:
 una riserva che non gioca mai è un posto buttato. Lo fa `_scegli_panchina` in `roster.py`.
-Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: vedi
-`.docs/analisi-valutazione-formazione.md`.
+Sceglierci anche il modulo è stato provato e **scartato** perché non guadagna punti: vedi
+`.docs/analisi-valutazione-formazione.md`. **I portieri della stessa squadra sono una
+coppia**: ne gioca uno solo, quindi l'ordine fra titolare e riserva non cambia il punteggio
+e conta solo averli tutti e due in distinta. Le loro quote di `prob_titolare` (il sito non
+scrive mai più di 90) si rapportano a tutti i portieri di quella squadra. **Chi non ha voti
+non vale 0**: nel punteggio atteso conta con la media del ruolo, dichiarata come stima, e
+resta in fondo all'ordine.
 
 ## Script (`scripts/`)
 
@@ -313,9 +318,11 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   titolare/spezzone e casa/trasferta sono stati provati e scartati. La probabilità di
   giocare non entra nell'ordine ma negli avvisi ("se non gioca entra X") e nella scelta
   di chi va in panchina. Stampa anche il **rischio slot vuoto per ruolo**, il
-  **punteggio atteso** con la sua conversione in gol secondo `soglie_gol` (serve a
-  sapere se una decisione cambia il risultato: le soglie sono confermate dall'utente il
-  27/09, primo gol a 66 e poi ogni 5) e l'**avversario di lega** della prossima giornata,
+  **punteggio atteso** e la probabilità di fare 0, 1, 2 o 3+ gol secondo `soglie_gol`
+  (confermate dall'utente il 27/09, primo gol a 66 e poi ogni 5), con l'incertezza del
+  punteggio misurata sugli scarti fra previsione e voto vero (`incertezza_voto` in
+  `roster.py`, circa ±5 punti): un punto atteso vale circa 0,2 gol ovunque, quindi non
+  esiste un "sul filo" guardando quanto manca alla soglia. Poi l'**avversario di lega** della prossima giornata,
   letto da `lega_competizioni.json`. Marca con `RIG` i **primi rigoristi** e ne stampa
   l'elenco con quante fonti li danno primi. La sezione "DA COSA È FATTO IL VALORE" spiega
   in una riga titolari e primi due cambi di ogni ruolo; "DECISIONI TUE" elenca le scelte
@@ -336,7 +343,8 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   partita non rinviata del turno). Se il turno non è ricostruibile (recupero, turno già
   iniziato) avvisa e non applica niente di tutto questo. Avvisa anche per i titolari
   assenti dalle probabili, per gli status più vecchi di 4 giorni e per i titolari
-  diffidati. `--matchday` è solo l'etichetta del titolo.
+  diffidati. `--matchday` è solo l'etichetta del titolo, e il report avvisa se non
+  coincide con la prossima giornata della lega.
 - `backtest_formazione.py [--descrittive]` — prevede ogni giornata dalla 3 in poi con i
   soli dati precedenti e confronta modello del 27/09, nuovo e varianti (MAE, ordine
   giusto dentro la rosa, bootstrap), più la taratura della soglia dei pari e la
@@ -399,7 +407,7 @@ Sceglierci anche il modulo è stato provato e **scartato** perché perde punti: 
   e scelta con la probabilità, portieri della stessa squadra non indipendenti, avvisi di
   copertura, punteggio atteso in gol, avversario di lega), cosa è uscito (la correzione
   per la produzione, con la spiegazione onesta del perché la prova non è significativa) e
-  cosa è stato **provato e scartato** (scegliere il modulo col valore atteso: −0,47 punti).
+  cosa è stato **provato e scartato** (scegliere il modulo col valore atteso: non guadagna).
   Contiene anche le critiche da esperto che **non** reggono, misurate (compagni di
   squadra: ρ = 0,07, +4% di σ; stagione scorsa come ordinamento: −3,15 punti), e cosa
   resta aperto (probabilità di prendere voto approssimata, statistiche raccolte e non

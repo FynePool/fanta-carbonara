@@ -68,7 +68,7 @@
     "modalita_sostituzioni": "pari_ruolo",
     "_modalita_sostituzioni_note": "'pari_ruolo' = la modalita' Traditional di leghe.fantacalcio.it: entra sempre il primo panchinaro DELLO STESSO RUOLO che ha preso voto, e il modulo non cambia mai. Le altre due modalita' della piattaforma (Hybrid, Dynamic) cambiano il modulo e NON si applicano qui. Confermato dall'utente il 27/09/2026.",
     "slot_scoperto": 0,
-    "_slot_scoperto_note": "Se un titolare non prende voto e nessuna riserva del suo ruolo ha preso voto, lo slot vale 0: non entra nessuno e il punto e' perso. E' il motivo per cui la profondita' di un ruolo conta e la probabilita' di prendere voto torna a pesare sulla scelta della panchina e del modulo. Confermato dall'utente il 27/09/2026.",
+    "_slot_scoperto_note": "Se un titolare non prende voto e nessuna riserva del suo ruolo ha preso voto, lo slot vale 0: non entra nessuno e il punto e' perso. E' il motivo per cui la profondita' di un ruolo conta e la probabilita' di prendere voto torna a pesare sulla scelta della panchina (sul modulo e' stata provata e non guadagna punti). Confermato dall'utente il 27/09/2026.",
     "soglie_gol": {
       "_fonte": "Confermate dall'utente il 27/09/2026: primo gol a 66 punti, poi una fascia ogni 5 punti (66 = 1 gol, 71 = 2, 76 = 3, ...). Il report le usa per dire se una decisione cambia il risultato.",
       "da_confermare": false,

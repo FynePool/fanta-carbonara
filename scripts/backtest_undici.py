@@ -11,8 +11,8 @@ Le regole vere, da `config/league.json -> regole_lega` (confermate dall'utente i
 panchina di **7 giocatori a composizione fissa** (1 P, 2 D, 2 C, 2 A), sostituzioni
 **solo tra pari ruolo**, e se finiscono le riserve di un ruolo lo **slot vale 0**. E' la
 differenza che conta: con la panchina corta la probabilita' di prendere voto torna a
-pesare sulla scelta della panchina e del modulo (non sull'ordine dentro il ruolo, dove
-resta irrilevante).
+pesare sulla scelta della panchina (non sull'ordine dentro il ruolo, dove resta
+irrilevante; sul modulo e' stata provata e non guadagna).
 
 Per ogni giornata N >= 3 e per ognuna delle 12 rose della lega schiera con i soli dati
 fino a N-1 e somma i punti veri. Bootstrap appaiato sulle coppie (squadra, giornata).
@@ -137,6 +137,9 @@ def main():
             for e in per_ruolo[r]:
                 v = chiave(e["player"], g, mo)
                 e["rating"] = {"punteggio": v} if v is not None else None
+                # come in suggest_lineup: chi non ha voti vale la media del ruolo negli
+                # slot attesi, non 0 (sulle giornate 3-5 non cambia nessuna scelta)
+                e["stima"] = mo["media_ruolo"].get(r)
             per_ruolo[r].sort(key=lambda e: -(e["rating"]["punteggio"] if e["rating"] else -99))
 
         def schierati(ruolo, n):
@@ -219,7 +222,7 @@ def main():
 
     print("\nDove entra la probabilita' di prendere voto. NON nell'ordine dentro il ruolo (la'")
     print("e' dimostrato che non conta), ma nella scelta di chi va in panchina. Sul modulo e'")
-    print("stata provata e SCARTATA perche' perde punti: vedi il commento in suggest_lineup.")
+    print("stata provata e non guadagna punti: vedi il commento in suggest_lineup.")
     print("Negativo = quella variante fa peggio del motore di oggi.")
     for nome, pan, mod in (("panchina per solo valore (come prima del 27/09)", False, False),
                            ("modulo col valore atteso invece della somma", True, True),
