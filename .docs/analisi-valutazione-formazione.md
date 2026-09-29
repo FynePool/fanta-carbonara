@@ -60,7 +60,10 @@ ORACOLO (sa i voti veri)            78.18   67.0   92.5   +5.86 [+4.69,+7.15] ME
 ```
 
 **Il motore vale +3,25 punti a giornata** rispetto a schierare la rosa senza pensarci, e
-batte ogni regola semplice provata, tutte con intervalli che escludono lo zero. Con le
+batte ogni regola semplice provata, tutte con intervalli che escludono lo zero. *Gonfiato,
+corretto il 29/09: il backtest escludeva dalle giornate passate chi è infortunato oggi.
+Senza quello sguardo al futuro: +2,68 [+0,64, +4,76] sull'ordine d'acquisto, e contro la
+media nuda +1,22 [−0,15, +2,72], non più dimostrabile. Vedi la revisione in fondo.* Con le
 soglie gol standard (primo gol a 66, poi ogni 6) sono **circa mezzo gol a giornata**: su 33
 giornate, 15-18 gol. Un oracolo che conoscesse i voti farebbe +5,86, quindi il motore
 prende **il 36% di ciò che c'è da prendere**; il resto è caso e non si recupera.
@@ -368,13 +371,33 @@ modello è identico al centesimo, e la formazione di VAR-tificiale non cambia):
   stessa squadra sono una coppia e l'ordine fra i due non cambia il punteggio; "nessun voto"
   non è un giudizio né uno zero; il punteggio atteso non è un punteggio fatto.
 
-**Confermati, da correggere nei passi successivi:**
+**Fase 2, il backtest che guarda il futuro, corretto il 29/09:**
 
-- **Il backtest guarda il futuro**: esclude i giocatori infortunati *oggi* anche nelle
-  giornate 3-5 (11 voti di 8 giocatori in rosa, tra cui Busio e Holm). Senza quell'esclusione
-  il modello batte ancora l'ordine d'acquisto (+2,68 [+0,64, +4,76]), ma **non più in modo
-  dimostrabile la media nuda** (+1,22 [−0,15, +2,72]) e il termine avversario scende a +0,92
-  [−0,10, +2,03]. Vedi i punti forti sopra.
+- Il backtest escludeva i giocatori infortunati *oggi* anche nelle giornate 3-5 (11 voti di
+  8 giocatori in rosa, tra cui Busio e Holm). Ora legge chi era fuori da una foto scritta
+  prima di ogni scadenza (`salva_status_scadenza.py`, `data/status_scadenze.json`, nel giro
+  del mattino). Per le giornate 3-5 una foto non esiste (players.json nasce il 19/09, a
+  giornata 5 iniziata), quindi nessuno è escluso: tutte le regole giocano alla pari senza
+  saperlo. Conta anche l'ammonito senza voto a 5,5 come nella lega (7 casi, nessuno in una
+  distinta).
+- **I numeri che cambiano**, tutti sulle 36 formazioni delle giornate 3-5:
+
+  | | 27/09 (guardava il futuro) | 29/09 (onesto) |
+  |---|---|---|
+  | modello contro l'ordine d'acquisto | +3,25 [+1,31, +5,21] | **+2,68 [+0,64, +4,76]** |
+  | modello contro la media nuda | +1,43 [+0,49, +2,42] | **+1,22 [−0,15, +2,72]** |
+  | termine avversario | +1,50 [+0,35, +2,74] | **+0,92 [−0,10, +2,03]** |
+  | panchina scelta con la probabilità | +0,60 [+0,03, +1,32] | +0,58 [+0,01, +1,31] |
+  | modulo col valore atteso | −0,47 [−1,26, +0,32] | +0,00 [−1,22, +1,08] |
+
+- **Cosa vuol dire.** Il motore batte ancora in modo dimostrabile l'ordine d'acquisto, la
+  stagione scorsa e la quotazione. Contro la semplice media dei voti è avanti ma non in modo
+  dimostrabile, e il termine avversario non passa più la regola con cui era entrato.
+  **Decisione (29/09): resta.** La stima è positiva, togliere un pezzo richiede anch'esso una
+  prova, e con 3 giornate il test non distingue differenze sotto il punto. Si rimisura con
+  più giornate, dalla 6 con la foto vera degli status.
+
+**Confermati, da correggere nei passi successivi:**
 - **Le gerarchie dei rigoristi non sono state "smentite 3 volte su 5"**: in tutti e tre i
   casi il primo designato non era in campo. E "ha calciato un rigore" non vuol dire "è il
   primo rigorista" se l'ha calciato perché il primo mancava. In rosa tocca Adams A.:

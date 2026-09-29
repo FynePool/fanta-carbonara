@@ -82,6 +82,14 @@ fallito.
    ```
    python3 scripts/apply_formazioni_status.py
    ```
+5b. **Foto degli status per il backtest** (subito dopo il passo 5):
+   ```
+   python3 scripts/salva_status_scadenza.py
+   ```
+   Scrive in `data/status_scadenze.json` status e probabilità di tutti i giocatori com'erano
+   prima della scadenza del prossimo turno: è quello che permette al backtest di non
+   guardare il futuro. Si riscrive ogni mattina fino alla scadenza. Se dice che il turno
+   non si ricostruisce, non è un errore (turno già iniziato, recupero): riportalo e basta.
 6. **Voti e fantavoto** (dopo il passo 3, mai prima: l'importer BigBalls rifà le righe
    delle partite nuove, e questo ci scrive sopra i voti):
    ```

@@ -22,6 +22,18 @@ pubblica solo dal 21/09, dopo la giornata 5: usarla sarebbe guardare il futuro).
 dalle giornate precedenti: quota di giornate in cui il giocatore ha preso voto, frenata
 verso la quota media del suo ruolo.
 
+CHI E' FUORI (infortunato, squalificato) E' QUELLO CHE SI SAPEVA ALLA SCADENZA, non oggi.
+Fino al 29/09 il backtest escludeva chi e' infortunato oggi anche dalle giornate passate:
+guardava il futuro (11 voti delle giornate 3-5 di giocatori poi infortunati, tra cui Busio
+e Holm), e gonfiava il modello. Ora legge la foto scritta prima di ogni scadenza da
+`salva_status_scadenza.py` (data/status_scadenze.json). Per le giornate senza foto (fino
+alla 5: la prima foto e' del 29/09, e players.json non esisteva prima del 19/09) non esclude
+nessuno: tutte le regole giocano senza sapere chi e' fuori, quindi il confronto fra regole
+resta alla pari, ma i punti assoluti sono un po' piu' bassi di quelli veri.
+
+L'ammonito senza voto prende 5,5 d'ufficio nella lega (`scoring.senza_voto_ammonito` in
+config/league.json) e non entra nessuno al suo posto: nei punti veri vale cosi'.
+
 Non scrive niente. E' il collaudo da superare prima di toccare `lib/roster.py`.
 
 Uso:
@@ -70,6 +82,36 @@ def main():
         return 1
 
     vero = {(r["player_id"], r["matchday"]): r["fantavoto"] for r in righe if r.get("fantavoto") is not None}
+    # regola della lega: l'ammonito senza voto prende un voto d'ufficio e non viene sostituito
+    ammonito_sv = (cfg.get("scoring") or {}).get("senza_voto_ammonito")
+    ammoniti = 0
+    if ammonito_sv is not None:
+        for r in righe:
+            chiave_r = (r["player_id"], r["matchday"])
+            if (r["matchday"] is not None and r.get("fantavoto") is None
+                    and (r.get("cartellini_gialli") or 0) > 0 and chiave_r not in vero):
+                vero[chiave_r] = float(ammonito_sv)
+                ammoniti += 1
+
+    foto = store.load_json(store.DATA_DIR / "status_scadenze.json")["scadenze"] \
+        if (store.DATA_DIR / "status_scadenze.json").exists() else {}
+
+    def status_alla_scadenza(g):
+        """player_id -> status com'era alla scadenza della giornata g, dall'ultima foto salvata
+        prima della sua prima partita e che ne copre la maggior parte delle partite. None se
+        non c'e' foto: allora non si esclude nessuno."""
+        partite = [m for m in calendario if m.get("giornata") == g]
+        ids = {m["match_id"] for m in partite}
+        inizio = min((m["data_utc"][:19] for m in partite if m["stato"] != "postponed"), default=None)
+        buone = [f for f in foto.values()
+                 if inizio and f["salvato_il"][:19] <= inizio and len(ids & set(f["partite"])) > len(ids) / 2]
+        return max(buone, key=lambda f: f["salvato_il"])["status"] if buone else None
+
+    status_g = {g: status_alla_scadenza(g) for g in giornate}
+
+    def disponibile(p, g):
+        st_ = status_g[g]
+        return st_ is None or st_.get(p["id"]) not in R.EXCLUDED_STATUSES
     avversario = {
         (r["player_id"], r["matchday"]): r.get("opponent_serie_a_team")
         for r in righe if r["matchday"] is not None
@@ -130,7 +172,7 @@ def main():
         prob = lambda e: q.get(e["player"]["id"], 0.5)
         per_ruolo = {r: [] for r in R.ROLES}
         for p in rose[team]:
-            if p["status"] not in R.EXCLUDED_STATUSES:
+            if disponibile(p, g):
                 # le funzioni di roster.py vogliono le "entry" {player, rating}
                 per_ruolo[p["role"]].append({"player": p, "rating": None})
         for r in R.ROLES:
@@ -193,7 +235,15 @@ def main():
           f"({giornate[0]}-{giornate[-1]}) = {len(chiavi)} formazioni.")
     print(f"Panchina vera: {sum(panchina_cfg.values())} giocatori ({panca}), sostituzioni solo tra")
     print(f"pari ruolo, slot scoperto = {cfg['regole_lega']['slot_scoperto']} punti. "
-          f"Bootstrap appaiato {args.bootstrap}, seed {args.seed}.\n")
+          f"Bootstrap appaiato {args.bootstrap}, seed {args.seed}.")
+    con_foto = [g for g in giornate if status_g[g] is not None]
+    senza_foto = [g for g in giornate if status_g[g] is None]
+    print("Infortunati e squalificati com'erano alla scadenza: "
+          + (f"foto per le giornate {con_foto}" if con_foto else "nessuna foto")
+          + (f"; giornate {senza_foto} senza foto, nessuno escluso." if senza_foto else "."))
+    if ammonito_sv is not None:
+        print(f"Ammoniti senza voto: {ammoniti}, contati {ammonito_sv} d'ufficio come nella lega.")
+    print()
 
     # Il riferimento e' il motore come gira davvero: panchina scelta con la probabilita' di
     # prendere voto, modulo scelto sulla somma dei valori dei titolari (vedi suggest_lineup).
@@ -254,7 +304,7 @@ def main():
             mo = modelli[g]
             per_ruolo = {r: [] for r in R.ROLES}
             for p in rose[t]:
-                if p["status"] not in R.EXCLUDED_STATUSES:
+                if disponibile(p, g):
                     per_ruolo[p["role"]].append(p)
             val = {p["id"]: modello(p, g, mo) for r in R.ROLES for p in per_ruolo[r]}
             for r in R.ROLES:
