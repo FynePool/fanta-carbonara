@@ -52,6 +52,11 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   in `.docs/difetti-consiglio-formazione.md`). I "non riconosciuti" che lo script
   stampa sono soprattutto giocatori assenti dal listone (Primavera, riserve).
 - `injuries.json` — storico infortuni: player_id, date, tipo, stato, rientro previsto.
+- `status_scadenze.json` — per ogni turno, status e `prob_titolare` di tutti i giocatori
+  com'erano **prima della scadenza** (`salva_status_scadenza.py`), indicizzati per ora
+  della prima partita e con gli id delle partite del turno. Serve al backtest, che prima
+  escludeva dalle giornate passate chi è infortunato oggi, e servirà a misurare quanto
+  `prob_titolare` indovina chi prende voto. La prima foto è del 29/09 (giornata 6).
 - `squalifiche.json` — squalificati e diffidati attuali da fantacalcio.it (pagina
   "Indisponibili Serie A"): player_id, nome, squadra, `tipo` (squalificato |
   diffidato), nota, data. Riscritto a ogni giro: vale la presenza, come per gli
@@ -305,6 +310,11 @@ resta in fondo all'ordine.
   misto (giocatori + crediti in entrambe le direzioni) tra due squadre, o lo svincolo
   di un giocatore (torna disponibile per tutti); mostra crediti/slot rimanenti per
   ruolo ed elenca i giocatori ancora liberi. Vedi `.claude/skills/asta/SKILL.md`.
+- `salva_status_scadenza.py [--dry-run]` — fotografa status e `prob_titolare` di tutti i
+  giocatori prima della scadenza del prossimo turno, in `status_scadenze.json`. Lo lancia
+  il giro del mattino dopo `apply_formazioni_status.py`: riscrive la foto finché la
+  scadenza non è passata, poi non la tocca più. Se il turno non si ricostruisce dalle date
+  non scrive niente.
 - `report_formazione.py --team-id <id> [--matchday N]` — legge lo stato attuale della
   rosa e propone modulo, titolari e **la panchina vera della lega** (7 posti, 1 P, 2 D,
   2 C, 2 A), più i giocatori che restano **fuori distinta** (la logica sta in
@@ -362,10 +372,16 @@ resta in fondo all'ordine.
   funzioni vere di `roster.py` (`_scegli_panchina`, `_slot_attesi`), non una loro copia,
   passando una probabilità di prendere voto stimata dalle giornate precedenti (quella di
   fantacalcio.it esiste solo dal 21/09 e per queste giornate sarebbe guardare il futuro).
-  Il 27/09 il motore valeva **+3,25 punti a giornata** sull'ordine d'acquisto e batteva
-  ogni regola semplice; scegliere la panchina con la probabilità vale +0,60 e il termine
-  avversario +1,50, entrambi con intervallo che esclude lo zero; la correzione per la
-  produzione non guadagna niente ed è stata spenta. Vedi
+  **Chi è fuori è quello che si sapeva alla scadenza**, dalla foto di
+  `status_scadenze.json`; senza foto (giornate 3-5) nessuno è escluso. Fino al 29/09
+  escludeva chi è infortunato oggi anche dalle giornate passate, e guardava il futuro. Conta
+  anche l'ammonito senza voto a 5,5 come nella lega. Il 29/09, senza più sguardo al futuro,
+  il motore vale **+2,68 [+0,64, +4,76] punti a giornata** sull'ordine d'acquisto e batte
+  stagione scorsa e quotazione, ma **non più in modo dimostrabile la media nuda dei voti**
+  (+1,22 [−0,15, +2,72]); scegliere la panchina con la probabilità vale +0,58 [+0,01,
+  +1,31]; il termine avversario +0,92 [−0,10, +2,03], non più significativo ma tenuto
+  (si rimisura con più giornate); la correzione per la produzione non guadagna niente ed è
+  stata spenta. Vedi
   `.docs/analisi-valutazione-formazione.md`. **È il collaudo da superare prima di toccare
   `roster.py`**: una modifica entra solo se guadagna punti con l'intervallo che esclude
   lo zero. Non scrive niente.

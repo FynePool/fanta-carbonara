@@ -24,9 +24,14 @@ STATUS_VECCHIO_GIORNI = 4
 # Il valore è fatto di due pezzi, verificati con scripts/backtest_undici.py (punti veri
 # della formazione, non MAE sul singolo voto):
 #   base      media degli ultimi voti, frenata verso la media del ruolo. È qui che stanno
-#             i punti: il motore vale +3,25 [+1,31, +5,21] punti a giornata sull'ordine
-#             d'acquisto, misurato su 36 formazioni con backtest_undici.py.
-#   contesto  quanto subisce l'avversario della prossima partita.
+#             i punti: il motore vale +2,68 [+0,64, +4,76] punti a giornata sull'ordine
+#             d'acquisto, misurato su 36 formazioni con backtest_undici.py (29/09, senza
+#             più guardare il futuro: il 27/09 diceva +3,25 perché escludeva dalle giornate
+#             passate chi è infortunato oggi).
+#   contesto  quanto subisce l'avversario della prossima partita. Senza lo sguardo al
+#             futuro vale +0,92 [−0,10, +2,03]: non più significativo. Resta perché la
+#             stima è positiva e togliere un pezzo richiede anch'esso una prova; si
+#             rimisura con più giornate (decisione del 29/09).
 # Provati e scartati perché non guadagnano punti (numeri in
 # .docs/analisi-valutazione-formazione.md): l'a priori dalla quotazione iniziale e dalla
 # fantamedia della stagione scorsa al posto della media del ruolo, il valore separato da
@@ -867,8 +872,8 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         # Prima i moduli che si riempiono tutti, poi quelli con meno titolari senza voti da
         # decidere a mano, poi la somma dei valori dei titolari.
         # PERCHÉ NON IL VALORE ATTESO, che sarebbe l'obiettivo giusto: provato, e nel
-        # backtest in punti non guadagna niente contro la somma semplice (−0,42 [−1,49,
-        # +0,50] il 29/09: indistinguibile, non "perde"). La regola del progetto è che una
+        # backtest in punti non guadagna niente contro la somma semplice (+0,00 [−1,22,
+        # +1,08] il 29/09: indistinguibile, non "perde"). La regola del progetto è che una
         # modifica entra solo se guadagna. Attenzione a non dare la colpa a `prob_titolare`:
         # il backtest non la usa (non esisteva per quelle giornate), usa la quota storica di
         # voti presi. Il valore atteso resta calcolato, ma serve agli avvisi di copertura e

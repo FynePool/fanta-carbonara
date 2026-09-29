@@ -37,7 +37,11 @@ L'ordine conta: gli infortuni vanno rinfrescati **prima**, perché
    le direzioni (matching per nome, non per id condiviso tra fonti — può
    sbagliare su omonimi o abbreviazioni). Presenta questo riepilogo all'utente.
 4. Solo dopo che l'utente ha visto il riepilogo, se conferma, esegui senza
-   `--dry-run` per scrivere effettivamente `data/players.json`.
+   `--dry-run` per scrivere effettivamente `data/players.json`. Poi aggiorna la foto
+   degli status per il backtest (serve la versione più vicina alla scadenza):
+   ```
+   python3 scripts/salva_status_scadenza.py
+   ```
 5. Segnala sempre esplicitamente:
    - i giocatori della rosa dell'utente (se già nota) che risultano "non trovati"
      nello scrape — il loro status resta quello precedente, va verificato a mano;
