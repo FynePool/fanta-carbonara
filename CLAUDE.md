@@ -99,15 +99,25 @@ competizioni e calendario della lega da leghe.fantacalcio.it.
   squadra a partita nella stagione scorsa × 1,90 per rigore); il secondo vale +0,03 e non
   conta. Ogni voce porta anche `rigori_stagione` (i rigori **davvero calciati quest'anno**,
   dato ufficiale di fantacalcio.it da `stagione_in_corso` in `storico_stagioni.json`) e
-  `conferma`: `confermato` se ne ha calciato almeno uno, `supposizione` se lo dicono solo i
-  giornali. **Non entra nel punteggio del modello**, e la ragione principale è che le
-  gerarchie sbagliano: dei 5 rigori del 2026-27 — i soli 5 casi in cui la realtà ha messo
-  alla prova le liste — **3 le hanno smentite** (Varela G. dato 2º, Maldini e Yeboah J.
-  dati 3º hanno calciato loro). C'è anche il doppio conteggio su chi ha già calciato (la
-  media di Zaccagni porta già +0,6 dal suo rigore). **Zero rigori non smentisce nessuno**:
-  dopo 5 giornate una squadra ne ha avuti in media 0,7, quindi quasi nessun rigorista
-  designato ne ha ancora avuto uno da tirare. Serve come **spareggio** fra due giocatori
-  equivalenti, con pesi diversi per `confermato` e `supposizione`, e si vede nel report.
+  `conferma`, cioè cosa prova ogni rigore calciato, guardando se chi le fonti mettono sopra
+  al rigorista era in campo (minuti del box score): `confermato` = l'ha calciato il primo
+  delle fonti; `sostituto` = ha calciato con chi gli sta sopra fuori dal campo (l'ordine
+  regge, ma **non** è il primo); `smentisce` = ha calciato con in campo qualcuno che le
+  fonti gli mettono sopra; `incerto` = dipende dal minuto; `supposizione` = non ha calciato.
+  `scavalcato_da` dice chi ha calciato al posto suo mentre lui era in campo. Quando un
+  rigore è incerto, il minuto si cerca e si scrive in `minuti_rigori` con due fonti.
+  **Aver calciato non vuol dire essere il primo.** Il 27/09 qui c'era scritto che 3 rigori
+  su 5 smentivano le liste: era falso, in tutti e tre i casi il primo designato non era in
+  campo. Il 29/09: 2 rigori del primo delle fonti, 2 di sostituti col primo fuori, 1 che
+  scavalca il secondo (Yeboah J. al Venezia, con Adams A. in campo e Busio infortunato).
+  Il report calcola anche il **primo disponibile** di ogni squadra quando il primo designato
+  è infortunato o squalificato (`primi_di_fatto` in `roster.py`). **Non entra nel punteggio
+  del modello**: le fonti si contraddicono, i rigori per metterle alla prova sono pochi, e
+  c'è il doppio conteggio su chi ha già calciato (la media di Zaccagni porta già +0,6 dal
+  suo rigore). **Zero rigori non smentisce nessuno**: dopo 5 giornate una squadra ne ha
+  avuti in media 0,7. Serve come **spareggio** fra due giocatori equivalenti (peso pieno a
+  chi ha calciato da primo, ridotto a chi lo è per le fonti, nullo a sostituti e
+  scavalcati), e si vede nel report.
 - `calendario_serie_a.json` — calendario e risultati Serie A per giornata (squadra
   casa/trasferta, gol, stato), da BigBalls Sports Data API (vedi script sotto).
   Non contiene dati per giocatore (niente voto/gol/cartellini singoli): solo
@@ -302,7 +312,9 @@ resta in fondo all'ordine.
   finiva sul portiere. Se la fonte dà solo il cognome e c'è un solo candidato, abbina.
   Stampa ogni nome che non si abbina invece di indovinare, e segnala un abbinamento su un
   portiere. Ricalcola anche i rigori per squadra a partita da `storico_stagioni.json`, da
-  cui viene il valore del primo rigorista: nessun numero è scritto a mano.
+  cui viene il valore del primo rigorista: nessun numero è scritto a mano. Mette alla prova
+  le liste con ogni rigore calciato (`valuta_rigori`) e segnala quelli che le smentiscono o
+  che restano incerti.
 - `asta.py {assegna|scambio|svincolo|stato|disponibili}` — assistente live per l'asta
   e per il mercato post-asta. **Dopo l'asta le rose le scrive la lega**: quello che
   `asta.py` registra in `teams.json`/`ownership.json` viene sovrascritto dal giro del

@@ -180,10 +180,11 @@ alla prova le liste. **Tre su cinque le hanno smentite [Certo]**:
 Un flag che sbaglia 3 volte su 5, dove si può controllare, non va sommato a un punteggio.
 Va mostrato, distinguendo chi è **confermato** da chi è una **supposizione**.
 
-*Sbagliato, da correggere (29/09): in tutti e tre i casi "smentiti" il primo rigorista delle
+*Sbagliato, corretto il 29/09: in tutti e tre i casi "smentiti" il primo rigorista delle
 fonti non era in campo. Pessina non ha ancora giocato in questa stagione, Mina è rimasto in
-panchina senza entrare, Busio era infortunato. Nessuno dei 5 rigori smentisce chiaramente
-il primo rigorista; 2 lo confermano. Vedi la revisione in fondo.*
+panchina senza entrare, Busio era infortunato. Nessuno dei 5 rigori smentisce il primo
+rigorista; 2 lo confermano. Uno solo scavalca qualcuno: Yeboah J. ha calciato con Adams A.
+(secondo delle fonti) in campo. Vedi la revisione in fondo.*
 
 #### Cosa il dato ufficiale NON dice
 
@@ -217,7 +218,9 @@ l'impossibilità tecnica.
 Come **spareggio** fra due giocatori entro la soglia dei pari, con due pesi diversi:
 `RIG!` per chi ha calciato davvero quest'anno (dato ufficiale), `rig?` per chi lo dicono
 solo i giornali — e in quel caso il report dice esplicitamente che quelle liste hanno
-sbagliato 3 volte su 5, quindi va pesato poco. Il dato ufficiale arriva da
+sbagliato 3 volte su 5, quindi va pesato poco. *(Corretto il 29/09: non avevano sbagliato,
+vedi sopra. `RIG!` ora è solo per chi ha calciato da primo delle fonti; chi ha calciato da
+sostituto non si marca.)* Il dato ufficiale arriva da
 `import_storico_stagioni.py --corrente`, che scrive in **`stagione_in_corso`** e non in
 `stagioni`: chi legge `stagioni` prende la più recente come «la stagione scorsa», e
 metterci la stagione in corso farebbe guardare il futuro al backtest.
@@ -397,14 +400,36 @@ modello è identico al centesimo, e la formazione di VAR-tificiale non cambia):
   prova, e con 3 giornate il test non distingue differenze sotto il punto. Si rimisura con
   più giornate, dalla 6 con la foto vera degli status.
 
-**Confermati, da correggere nei passi successivi:**
-- **Le gerarchie dei rigoristi non sono state "smentite 3 volte su 5"**: in tutti e tre i
-  casi il primo designato non era in campo. E "ha calciato un rigore" non vuol dire "è il
-  primo rigorista" se l'ha calciato perché il primo mancava. In rosa tocca Adams A.:
-  secondo del Venezia dietro Busio, infortunato.
+**Fase 3, i rigoristi, corretto il 29/09:**
+
+- **Le gerarchie non sono state "smentite 3 volte su 5".** In tutti e tre i casi il primo
+  designato non era in campo. E "ha calciato un rigore" non vuol dire "è il primo
+  rigorista" se l'ha calciato perché il primo mancava.
+- **Ora ogni rigore si valuta** guardando chi le fonti mettono sopra al rigorista e se era
+  in campo mentre c'era lui (minuti del box score; `valuta_rigori` in
+  `scripts/rigoristi.py`): primo, sostituto (chi sta sopra era fuori), incerto (era in campo
+  solo per una parte), smentisce (era in campo). Il minuto di un rigore incerto si cerca e
+  si scrive in `minuti_rigori` con due fonti.
+- **Al 29/09**: Zaccagni e Colombo hanno calciato da primi delle fonti; Maldini e Varela G.
+  da sostituti, col primo fuori; Yeboah J. ha calciato nel primo tempo di Venezia-Lazio con
+  Adams A. in campo (fino al 73') e Busio infortunato
+  ([Eurosport](https://www.eurosport.it/calcio/serie-a/2026-2027/venezia-lazio-0-2-mandas-ipnotizza-john-yeboah-poi-segnano-zaccagni-e-noslin-i-biancocelesti-capitolini-sono-capolista-assieme-a-roma-e-inter_sto23338341/story.shtml),
+  [Calciomercato.com](https://www.calciomercato.com/liste/serie-a-venezia-lazio-live/bltd17a4b9ba597f763)).
+  Quindi il primo delle fonti non è mai stato scavalcato; il secondo del Venezia sì.
+- **Il primo disponibile.** Quando il primo designato è infortunato o squalificato, il
+  report dice chi viene dopo per le fonti (`primi_di_fatto` in `roster.py`), ma non lo
+  marca se è già stato scavalcato. Tocca la rosa di VAR-tificiale: Adams A. sarebbe l'erede
+  di Busio per le fonti, ma senza Busio ha calciato Yeboah con Adams in campo. Nel pari
+  Elphege-Adams il rigore **non** è uno spareggio per Adams.
+- **Lo spareggio** dà peso pieno a chi ha calciato da primo, ridotto a chi lo è per le
+  fonti (o è il primo disponibile), nullo a sostituti e scavalcati. Prima dava peso pieno a
+  chiunque avesse calciato, sostituti compresi.
+
+**Confermato, da chiudere più avanti:**
+
 - **L'ammonito senza voto prende 5,5 d'ufficio** nella lega, e non entra nessuno al suo
-  posto: il backtest lo tratta come senza voto. Pochi casi: 7 in 5 giornate in tutta la
-  Serie A.
+  posto. Il backtest ora lo conta (fase 2); resta da confermare con il fantavoto calcolato
+  dalla lega, dopo la giornata 6, se al 5,5 si toglie anche il malus dell'ammonizione.
 
 **Non reggono, misurati:**
 
