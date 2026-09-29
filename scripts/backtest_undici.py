@@ -256,8 +256,10 @@ def main():
     # di data/rigoristi.json sono state scritte guardando anche le giornate 1-5, quindi
     # usarle per prevedere quelle giornate sarebbe barare. Per questo il rigorista non
     # entra nel punteggio ma serve come spareggio, e la sua attendibilita' si misura
-    # sull'unico dato onesto: i rigori davvero calciati quest'anno (5 in tutto il
-    # campionato, di cui 3 smentiscono le gerarchie). Vedi scripts/rigoristi.py.
+    # sull'unico dato onesto: i rigori davvero calciati quest'anno, guardando chi era in
+    # campo quando sono stati calciati (5 in tutto il campionato al 29/09: il primo delle
+    # fonti non e' mai stato scavalcato, il secondo del Venezia si'). Vedi
+    # scripts/rigoristi.py.
     REGOLE = [("modello attuale", modello), ("media nuda dei voti", media_nuda),
               ("fantamedia stagione scorsa", stagione_scorsa), ("quotazione iniziale", quotazione),
               ("nessun ordine (ordine d'acquisto)", nessun_ordine), ("ORACOLO (sa i voti veri)", oracolo)]

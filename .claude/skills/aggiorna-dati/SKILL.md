@@ -140,9 +140,13 @@ fallito.
    indipendenti, nomi come li scrive la fonte, in ordine di gerarchia) e poi `calcola`.
    Guarda sempre l'output di `calcola`: i nomi che non si abbinano al listone vengono
    elencati e non entrano, e un abbinamento su un portiere è quasi sempre sbagliato.
-   **Guarda in particolare le contraddizioni**: se un giocatore ha calciato rigori
-   quest'anno ma le fonti non lo danno primo, il dato ufficiale batte l'opinione e le liste
-   sono da rileggere. Il 27/09 succedeva per 3 dei 5 rigoristi confermati.
+   **Guarda in particolare i rigori che `calcola` segnala.** Aver calciato non vuol dire
+   essere il primo: chi calcia perché il primo non è in campo è un sostituto e conferma
+   l'ordine. Conta solo chi ha calciato **con in campo** qualcuno che le fonti gli mettono
+   sopra ("le liste sono smentite"): lì le liste sono da rileggere. Se un rigore è
+   "incerto" (chi sta sopra era in campo solo per una parte), cerca il minuto del rigore e
+   scrivilo in `minuti_rigori` di `data/rigoristi.json` (finestra di minuti, almeno due
+   fonti), poi rilancia `calcola`.
 9. **Quota API rimasta**, per il riepilogo:
    ```
    curl -sS https://api.bigballsdata.com/v1/usage -H "x-api-key: $BIGBALLS_API_KEY"

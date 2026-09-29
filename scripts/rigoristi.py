@@ -23,6 +23,22 @@ L'abbinamento rifiuta un nome quando le iniziali sono note e diverse, come fa
 import_matchday_stats.py: all'Inter ci sono `Martinez L.` (Lautaro) e `Martinez Jo.` (il
 portiere), e senza quel controllo "Lautaro Martinez" finiva sul portiere.
 
+Come si mettono alla prova le liste. Un rigore calciato NON dice "questo e' il primo
+rigorista": dice che, in quel momento, chi le fonti gli mettono sopra non era in campo, o
+che le fonti sbagliano. Il 27/09 il progetto contava "3 rigori su 5 smentiscono le liste",
+ed era falso: in tutti e tre i casi il primo designato non era in campo (Pessina non ha
+ancora giocato, Mina era in panchina, Busio infortunato). Quindi ogni rigore si valuta
+guardando chi stava sopra al rigorista e dov'era (`valuta_rigori`):
+  primo      l'ha calciato il primo delle fonti;
+  coerente   chi gli sta sopra non era in campo in quel momento: conferma l'ordine, non che
+             sia il primo (e' un sostituto);
+  smentisce  qualcuno che le fonti gli mettono sopra era in campo per tutto il tempo in cui
+             c'era lui;
+  incerto    qualcuno sopra di lui era in campo solo per una parte: dipende dal minuto.
+I minuti in campo vengono dal box score (una partita di T minuti, T il massimo giocato:
+titolare da 0 ai suoi minuti, subentrato da T meno i suoi minuti a T). Un "incerto" si
+risolve cercando il minuto del rigore e scrivendolo in `minuti_rigori` con due fonti.
+
 Uso:
     python3 scripts/rigoristi.py calcola    # ricalcola il consenso dalle liste e riscrive
     python3 scripts/rigoristi.py valida     # controlla senza scrivere
@@ -157,6 +173,95 @@ def rigori_per_partita() -> float | None:
     return totale / len(squadre) / (2 * (len(squadre) - 1))   # partite di ogni squadra
 
 
+def _finestra(riga: dict, fine: int) -> tuple[int, int] | None:
+    """(da, a) minuti in campo nella partita, dal box score; None se non ha giocato."""
+    minuti = riga.get("minuti") or 0
+    if minuti <= 0:
+        return None
+    return (fine - minuti, fine) if riga.get("subentrato") else (0, minuti)
+
+
+def valuta_rigori(voci: list[dict], righe: list[dict], per_id: dict,
+                  minuti_rigori: list[dict]) -> tuple[dict, list[dict]]:
+    """(player_id -> rigori valutati, elenco di tutti i rigori valutati). Per ogni rigore
+    calciato quest'anno (box score BigBalls, che li ha tutti, verificato contro
+    fantacalcio.it il 27/09) guarda chi le fonti mettono sopra al rigorista e se era in
+    campo mentre c'era lui. Vedi il docstring del modulo per gli esiti."""
+    per_squadra = defaultdict(list)
+    for v in voci:
+        per_squadra[v["squadra"]].append(v)
+    per_partita = defaultdict(dict)
+    for r in righe:
+        per_partita[r["match_id"]][r["player_id"]] = r
+    finestre_note = {(m["match_id"], m["player_id"]): tuple(m["finestra"]) for m in minuti_rigori}
+
+    per_giocatore, tutti = defaultdict(list), []
+    for r in sorted(righe, key=lambda r: (r.get("matchday") or 0, r["match_id"], r["player_id"])):
+        calciati = (r.get("rigori_segnati") or 0) + (r.get("rigori_sbagliati") or 0)
+        if not calciati or r["player_id"] not in per_id:
+            continue
+        pid = r["player_id"]
+        voce = next((v for v in voci if v["player_id"] == pid), None)
+        squadra = voce["squadra"] if voce else per_id[pid]["serie_a_team"]
+        rango = voce["rango"] if voce else None
+        partita = per_partita[r["match_id"]]
+        fine = max(90, max((x.get("minuti") or 0) for x in partita.values()))
+        sua = _finestra(r, fine)
+        nota = finestre_note.get((r["match_id"], pid))
+        if sua and nota:   # minuto del rigore verificato a mano con le fonti
+            sua = (max(sua[0], nota[0]), min(sua[1], nota[1]))
+        sopra = []
+        for v in sorted(per_squadra.get(squadra, []), key=lambda v: v["rango"] or 99):
+            if v["player_id"] == pid or (rango is not None and (v["rango"] is None or v["rango"] >= rango)):
+                continue
+            riga_v = partita.get(v["player_id"])
+            sue = _finestra(riga_v, fine) if riga_v else None
+            if sue is None or sua is None:
+                dove = "assente"
+            else:
+                comune = min(sua[1], sue[1]) - max(sua[0], sue[0])
+                if comune <= 0:
+                    dove = "non in campo in quel momento"
+                elif sue[0] <= sua[0] and sue[1] >= sua[1]:
+                    dove = "in campo"
+                else:
+                    dove = "in campo per una parte"
+            sopra.append({"player_id": v["player_id"], "nome": v["nome"], "rango": v["rango"],
+                          "dove": dove, "minuti": (riga_v or {}).get("minuti") or 0})
+        if rango == 1:
+            esito = "primo"
+        elif any(x["dove"] == "in campo" for x in sopra):
+            esito = "smentisce"
+        elif any(x["dove"] == "in campo per una parte" for x in sopra):
+            esito = "incerto"
+        else:
+            esito = "coerente"
+        valutato = {
+            "giornata": r.get("matchday"),
+            "match_id": r["match_id"],
+            "player_id": pid,
+            "nome": per_id[pid]["name"],
+            "squadra": squadra,
+            "rango": rango,
+            "calciati": calciati,
+            "esito": esito,
+            "minuto_verificato": bool(nota),
+            "sopra": sopra,
+        }
+        per_giocatore[pid].append(valutato)
+        tutti.append(valutato)
+    return per_giocatore, tutti
+
+
+def _conferma(valutati: list[dict]) -> str:
+    esiti = {v["esito"] for v in valutati}
+    for esito, conferma in (("primo", "confermato"), ("smentisce", "smentisce"),
+                            ("incerto", "incerto"), ("coerente", "sostituto")):
+        if esito in esiti:
+            return conferma
+    return "supposizione"
+
+
 def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
     per_squadra = defaultdict(list)
     for p in players:
@@ -210,10 +315,8 @@ def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
             "consenso_sul_primo": primo >= 2,
             # il solo dato ufficiale: quanti rigori ha calciato DAVVERO quest'anno
             "rigori_stagione": ufficiali.get(pid, {"segnati": 0, "calciati": 0}),
-            # "confermato" = ne ha calciato almeno uno quest'anno, quindi non e' una
-            # supposizione. "supposizione" = solo pareri di giornali: zero rigori non
-            # smentisce niente, dopo 5 giornate quasi nessuno ne ha avuti.
-            "conferma": "confermato" if pid in ufficiali else "supposizione",
+            # riempito sotto da valuta_rigori
+            "conferma": "supposizione",
         })
     # Chi ha calciato un rigore quest'anno ma nessuna fonte lo cita: e' il caso piu'
     # importante di tutti, perche' il dato ufficiale batte l'opinione.
@@ -235,23 +338,59 @@ def calcola(doc: dict, players: list[dict]) -> tuple[list[dict], list[str]]:
             "verificata": False,
             "consenso_sul_primo": False,
             "rigori_stagione": r,
-            "conferma": "confermato",
+            "conferma": "supposizione",
         })
         problemi.append(
             f"{p['name']} ({p['serie_a_team']}) ha calciato {r['calciati']} rigori in "
             f"{stagione_corrente} ma NESSUNA fonte lo mette in gerarchia: il dato ufficiale "
             "batte l'opinione, guarda se le liste sono vecchie"
         )
-    # contraddizioni: chi ha calciato quest'anno e non e' il primo secondo le fonti
+    # Ogni rigore calciato messo alla prova contro le liste: chi stava sopra al rigorista
+    # era in campo? "conferma" dice cosa prova quel rigore su di lui, "scavalcato_da" dice
+    # chi ha calciato al posto suo mentre lui era in campo.
+    per_rigore, tutti = valuta_rigori(out, store.load_matchday_stats(), per_id, doc.get("minuti_rigori", []))
     for r in out:
-        if r["rigori_stagione"]["calciati"] and r["fonti_che_lo_citano"] and not r["consenso_sul_primo"]:
+        r["conferma"] = _conferma(per_rigore.get(r["player_id"], []))
+        r["scavalcato_da"] = [
+            {"nome": v["nome"], "giornata": v["giornata"], "dove": x["dove"]}
+            for v in tutti for x in v["sopra"]
+            if x["player_id"] == r["player_id"] and x["dove"] in ("in campo", "in campo per una parte")
+        ]
+    for v in tutti:
+        if v["esito"] in ("smentisce", "incerto"):
+            chi = ", ".join(f"{x['nome']} ({x['rango']}º, {x['dove']}, {x['minuti']}')"
+                            for x in v["sopra"] if x["dove"] in ("in campo", "in campo per una parte"))
             problemi.append(
-                f"{r['nome']} ({r['squadra']}) ha calciato "
-                f"{r['rigori_stagione']['calciati']} rigori in {stagione_corrente} ma le "
-                f"fonti lo danno {r['rango']}º: il dato ufficiale contraddice il consenso"
+                f"{v['nome']} ({v['squadra']}, {v['rango'] or 'fuori lista'}º per le fonti) ha "
+                f"calciato alla giornata {v['giornata']} con {chi}: "
+                + ("le liste sono smentite, da rileggere" if v["esito"] == "smentisce" else
+                   "incerto, dipende dal minuto: cercalo e scrivilo in minuti_rigori con le fonti")
             )
+    ufficiali_tot = sum(x["calciati"] for x in ufficiali.values())
+    visti = sum(v["calciati"] for v in tutti)
+    if visti != ufficiali_tot:
+        problemi.append(f"rigori nel box score {visti}, nel dato ufficiale {ufficiali_tot}: "
+                        "qualche rigore non si puo' mettere alla prova")
     out.sort(key=lambda x: (x["squadra"], x["rango"] if x["rango"] is not None else 99, x["nome"]))
     return out, problemi
+
+
+def verifica_gerarchie(voci: list[dict]) -> dict:
+    """Quante volte i rigori veri hanno confermato o smentito le liste, per esito. Conta i
+    rigoristi, non i rigori: chi ne ha calciati due conta una volta, col suo esito."""
+    conta = Counter(v["conferma"] for v in voci if v["conferma"] != "supposizione")
+    return {k: conta.get(k, 0) for k in ("confermato", "sostituto", "incerto", "smentisce")}
+
+
+def testo_verifica(v: dict) -> str:
+    """Una frase sui rigoristi che hanno calciato: la usano rigoristi.py e il report."""
+    totale = sum(v.values())
+    if not totale:
+        return "nessun rigore calciato finora."
+    return (f"{totale} rigoristi hanno calciato: {v['confermato']} erano il primo delle fonti, "
+            f"{v['sostituto']} hanno calciato con chi gli sta sopra fuori dal campo (l'ordine "
+            f"regge), {v['incerto']} incerti (dipende dal minuto), {v['smentisce']} hanno "
+            "calciato con in campo qualcuno che le fonti mettevano sopra.")
 
 
 def carica() -> dict:
@@ -316,13 +455,14 @@ def main():
         for x in problemi:
             print(f"  - {x}")
     ufficiali, stagione_corrente = rigori_ufficiali_stagione()
-    confermati = [r for r in nuovi if r["conferma"] == "confermato"]
     print(f"\nDato UFFICIALE {stagione_corrente or '(assente)'}: "
           f"{sum(v['calciati'] for v in ufficiali.values())} rigori calciati in tutto il "
           f"campionato, da {len(ufficiali)} giocatori.")
-    if confermati:
-        for r in confermati:
-            print(f"  confermato: {r['nome']} ({r['squadra']}) "
+    verifica = verifica_gerarchie(nuovi)
+    print("Le liste messe alla prova dai rigori veri: " + testo_verifica(verifica))
+    for r in nuovi:
+        if r["conferma"] != "supposizione":
+            print(f"  {r['conferma']:<11} {r['nome']} ({r['squadra']}, {r['rango'] or '-'}º per le fonti) "
                   f"{r['rigori_stagione']['segnati']}/{r['rigori_stagione']['calciati']}")
     print("  Tutti gli altri sono SUPPOSIZIONI (pareri di giornali). Zero rigori non smentisce")
     print("  nessuno: con circa 0,14 rigori per squadra a partita, dopo 5 giornate la quasi")
@@ -334,13 +474,14 @@ def main():
 
     if args.comando == "valida":
         cambiati = [r for r, v in zip(nuovi, doc["rigoristi"]) if r != v] if len(nuovi) == len(doc["rigoristi"]) else nuovi
-        if len(nuovi) != len(doc["rigoristi"]) or cambiati:
+        if len(nuovi) != len(doc["rigoristi"]) or cambiati or doc.get("verifica_gerarchie") != verifica:
             print(f"\nIl consenso salvato NON e' aggiornato: lancia `calcola`.")
             return 1
         print("\nIl consenso salvato e' aggiornato.")
         return 0
 
     doc["rigoristi"] = nuovi
+    doc["verifica_gerarchie"] = verifica_gerarchie(nuovi)
     if rpp:
         doc["rigori_per_partita"] = round(rpp, 4)
     doc["valore_primo_rigorista"] = round((rpp or RIGORI_PARTITA_DEFAULT) * VALORE_RIGORE, 3)

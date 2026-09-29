@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from lib import store
 from lib.roster import PRODUZIONE_PREDEFINITA, SOGLIA_PARI, prossima_partita_lega, suggest_lineup
+from rigoristi import testo_verifica
 
 
 def _voti(rating: dict | None) -> str:
@@ -130,16 +131,23 @@ def _partita(e: dict) -> str:
     return f"vs {avversario} ({'C' if casa else 'T'}) {_quando(m['data_utc'])}{rinviata}"
 
 
+def _scavalcato(v: dict) -> list[dict]:
+    return [x for x in v.get("scavalcato_da", []) if x["dove"] == "in campo"]
+
+
 def _rig(e: dict) -> str:
-    """Marcatore compatto. `RIG!` = ha calciato rigori davvero quest'anno (dato ufficiale);
-    `rig?` = lo dicono solo i giornali, e dove la realtà le ha messe alla prova quelle liste
-    hanno sbagliato 3 volte su 5. Il secondo rigorista non si marca: vale +0,03."""
+    """Marcatore compatto. `RIG!` = ha calciato quest'anno da primo delle fonti (dato
+    ufficiale); `rig?` = primo per le fonti, o primo disponibile perché chi gli sta davanti è
+    fuori, ma non ancora visto calciare. Chi ha calciato solo perché il primo mancava, o è
+    stato scavalcato mentre era in campo, non si marca. Il secondo rigorista vale +0,03."""
     v = e.get("rigorista")
     if not v:
         return "     "
-    if v.get("rigori_stagione", {}).get("calciati"):
+    if v.get("conferma") == "confermato":
         return " RIG!"
-    return " rig?" if v.get("consenso_sul_primo") else "     "
+    if _scavalcato(v):
+        return "     "
+    return " rig?" if v.get("consenso_sul_primo") or e.get("erede_rigorista") else "     "
 
 
 def _titolarita(p: dict) -> str:
@@ -288,31 +296,54 @@ def main():
     in_rosa = [e for e in r["titolari"] + r["panchina"] + r["esclusi"] if e.get("rigorista")]
     if in_rosa:
         valore = r["valore_rigorista"]
+        verifica = (r.get("prova_rigoristi") or {}).get("verifica")
         print(f"\nRIGORISTI IN ROSA. Il primo rigorista vale circa +{valore:.2f} di fantavoto "
               "atteso a")
-        print("partita; il secondo +0,03, cioè niente. NON è dentro il numero: le gerarchie dei")
-        print("giornali, dove la realtà le ha messe alla prova (i 5 rigori di questa stagione),")
-        print("hanno sbagliato 3 volte su 5. Serve come spareggio fra due giocatori equivalenti.")
-        print("  RIG! = ha calciato rigori davvero quest'anno, dato ufficiale di fantacalcio.it")
-        print("  rig? = lo dicono solo i giornali. Zero rigori NON lo smentisce: dopo 5 giornate")
-        print("         quasi nessun rigorista designato ne ha ancora avuto uno da tirare.")
+        print("partita; il secondo +0,03, cioè niente. NON è dentro il numero: le gerarchie sono")
+        print("pareri di giornali che si contraddicono fra loro, e i rigori veri per metterle alla")
+        print("prova sono ancora pochi. Serve come spareggio fra due giocatori equivalenti.")
+        if verifica:
+            print(f"  Finora {testo_verifica(verifica)}")
+        print("  RIG! = ha calciato quest'anno da primo delle fonti (dato ufficiale di fantacalcio.it)")
+        print("  rig? = primo per le fonti (o primo disponibile, se chi gli sta davanti è fuori), non")
+        print("         ancora visto calciare. Zero rigori NON lo smentisce: dopo 5 giornate quasi")
+        print("         nessun rigorista designato ne ha avuto uno da tirare.")
+
         def ordine(x):
             v = x["rigorista"]
-            return (0 if v.get("rigori_stagione", {}).get("calciati") else 1,
-                    0 if v.get("consenso_sul_primo") else 1,
+            return (0 if _rig(x) == " RIG!" else 1 if _rig(x) == " rig?" else 2,
                     v["rango"] or 99, x["player"]["name"])
 
         for e in sorted(in_rosa, key=ordine):
             v, p = e["rigorista"], e["player"]
             tot = v["fonti_totali_sulla_squadra"]
             primo = v.get("fonti_che_lo_danno_primo", 0)
-            calciati = v.get("rigori_stagione", {}).get("calciati", 0)
-            segnati = v.get("rigori_stagione", {}).get("segnati", 0)
-            if calciati:
-                quanto = (f"RIG! ha calciato {segnati}/{calciati} rigori quest'anno"
-                          + (f", e {primo} fonti su {tot} lo danno primo" if primo
-                             else f", ma le fonti lo danno {v['rango']}º"))
-                quanto += " — il rigore è già dentro la sua media"
+            r_ = v.get("rigori_stagione", {})
+            fatti = f"{r_.get('segnati', 0)}/{r_.get('calciati', 0)}"
+            rango = f"{v['rango']}º per le fonti" if v["rango"] else "fuori dalle liste delle fonti"
+            conferma = v.get("conferma")
+            scavalcato = _scavalcato(v)
+            if conferma == "confermato":
+                quanto = (f"RIG! ha calciato {fatti} rigori quest'anno da primo delle fonti ({primo} su "
+                          f"{tot} lo danno primo) — il rigore è già dentro la sua media")
+            elif conferma == "sostituto":
+                quanto = (f"{rango}: ha calciato {fatti} rigori quest'anno, ma quando chi gli sta "
+                          "sopra non era in campo. È il sostituto, non il primo")
+            elif conferma == "smentisce":
+                quanto = (f"{rango}, ma ha calciato {fatti} rigori quest'anno con in campo chi le "
+                          "fonti gli mettevano sopra: calcia prima di quanto dicono")
+            elif conferma == "incerto":
+                quanto = (f"{rango}: ha calciato {fatti} rigori quest'anno, e chi gli sta sopra era "
+                          "in campo per una parte della partita: dipende dal minuto")
+            elif scavalcato:
+                chi = ", ".join(f"{x['nome']} alla giornata {x['giornata']}" for x in scavalcato)
+                davanti = (f" ({', '.join(e['erede_rigorista'])} è fuori, quindi per le fonti "
+                           "toccherebbe a lui)") if e.get("erede_rigorista") else ""
+                quanto = (f"{rango}{davanti}, ma ha calciato {chi} mentre lui era in campo: non è "
+                          "lui a calciare")
+            elif e.get("erede_rigorista"):
+                quanto = (f"rig? {rango}, ma {', '.join(e['erede_rigorista'])} è fuori: per le fonti "
+                          "tocca a lui. Non l'ha ancora calciato")
             elif v["consenso_sul_primo"]:
                 quanto = (f"rig? dato primo da {primo} fonti su {tot}, ma non l'ha ancora "
                           "calciato: supposizione")
