@@ -16,7 +16,9 @@ squadra è VAR-tificiale (`my_team_id` in `config/league.json`).
 I dati (listone, infortuni, calendario, statistiche, voti, probabili formazioni,
 squalifiche e status) si aggiornano ogni mattina con una routine automatica che esegue
 la skill `aggiorna-dati` e pusha su `main`. Dal 27/09 il giro legge anche rose, crediti,
-competizioni e calendario della lega da leghe.fantacalcio.it.
+competizioni e calendario della lega da leghe.fantacalcio.it. Dal 29/09 controlla anche la
+formazione che ho inserito sul sito (`controlla_formazione.py`) e ne mette il verdetto in
+prima riga del riepilogo, quella che arriva nella notifica della routine.
 
 ## Struttura dati (`data/`, JSON versionati in git)
 
@@ -258,9 +260,9 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   e risultati Serie A da BigBalls Sports Data API (bigballsdata.com) in
   `data/calendario_serie_a.json`. Fonte verificata in questa sessione: copre Serie A
   dal 2014-15 a oggi, con giornata ("round") e risultato, ma **non** statistiche per
-  giocatore né il voto fantacalcio (quello resta da verificare via l'API di
-  leghe.fantacalcio.it, endpoint `/gaming/v1/teamLineup`, non ancora testato — serve
-  una lega reale con competizione collegata). Richiede `BIGBALLS_API_KEY` da
+  giocatore né il voto fantacalcio (quello della lega dovrebbe arrivare dall'endpoint
+  `/gaming/v1/teamLineup` di leghe.fantacalcio.it, che dal 29/09 dà le formazioni
+  inserite: i voti si vedranno alla prima giornata calcolata). Richiede `BIGBALLS_API_KEY` da
   ambiente. Le partite finite da pochissimo possono avere giornata nulla per
   ritardo della fonte: mai stimata, va verificata a mano al prossimo refresh.
   Merge idempotente sullo storico esistente (aggiorna per `match_id`, non duplica).
@@ -391,6 +393,22 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   assenti dalle probabili, per gli status più vecchi di 4 giorni e per i titolari
   diffidati. `--matchday` è solo l'etichetta del titolo, e il report avvisa se non
   coincide con la prossima giornata della lega.
+- `controlla_formazione.py [--team-id ID] [--league-id ID]` — legge da
+  leghe.fantacalcio.it (`teamLineup`) la formazione che ho **inserito sul sito** per la
+  prossima giornata di lega e la confronta coi dati di oggi e col consiglio di
+  `suggest_lineup`. Solo lettura: non scrive in `data/` e non tocca il sito. La prima riga
+  è il verdetto, pensato per la notifica del giro del mattino (passo 9 di `aggiorna-dati`):
+  `OK`; `DA CORREGGERE` se c'è un infortunato o squalificato schierato, un giocatore non più
+  in rosa, o un ruolo che vale più di `SOGLIA_PARI` punti attesi sotto il consiglio (sotto
+  la soglia una differenza è una scelta alla pari, non un errore: la formazione concordata
+  il 27/09, con Ndour e Adams titolari, passa); `DA INSERIRE` se manca e la scadenza è
+  lontana; `MANCANTE` se manca e la scadenza è oggi o domani (0-3 a tavolino);
+  `NON CONTROLLATA` a turno in corso o senza credenziali. La giornata da controllare si
+  trova contando le partite finite di ogni squadra (il turno N è iniziato se una squadra ne
+  ha finite N), perché BigBalls non dà il numero di giornata alle partite future. Il valore
+  di un ruolo è quello del report (`_slot_attesi`), con probabilità 0 per gli indisponibili.
+  Legge solo la mia formazione: la risposta ha anche quella dell'avversario, già prima
+  della scadenza, ma non cambia quale formazione mi conviene.
 - `backtest_formazione.py [--descrittive]` — prevede ogni giornata dalla 3 in poi con i
   soli dati precedenti e confronta modello del 27/09, nuovo e varianti (MAE, ordine
   giusto dentro la rosa, bootstrap), più la taratura della soglia dei pari e la

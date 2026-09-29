@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from lib import roster as R  # noqa: E402
 from lib.simulazione import Simulazione  # noqa: E402
 import rigoristi as RG  # noqa: E402
+import controlla_formazione as CF  # noqa: E402
 
 POLITICO = {"punteggio": 6.0, "politico": True}
 
@@ -168,6 +169,120 @@ class VotiDUfficio(unittest.TestCase):
         self.assertEqual(sim.vero[("espulso", 1)], 4.0)
         self.assertNotIn(("ignoto", 1), sim.vero)
         self.assertEqual(sim.voti_ufficio["minuti_ignoti"], 1)
+
+
+def partita(casa, trasferta, stato="finished"):
+    return {"stagione": "2026-27", "stato": stato, "squadra_casa": casa, "squadra_trasferta": trasferta}
+
+
+def giornata_lega(giornata, serie_a, casa="io", trasferta="lui", calcolata=False):
+    return {"giornata": giornata, "giornata_serie_a": serie_a, "calcolata": calcolata,
+            "partite": [{"casa": casa, "trasferta": trasferta}]}
+
+
+LEGA = [{"id": "1", "nome": "Campionato", "calendario": [giornata_lega(1, 6), giornata_lega(2, 7)]}]
+# 4 squadre, 5 turni finiti: ognuna ha 5 partite
+CINQUE_TURNI = [partita("A", "B") for _ in range(5)] + [partita("C", "D") for _ in range(5)]
+
+
+class GiornataDaControllare(unittest.TestCase):
+    def test_prossimo_turno(self):
+        g, motivo = CF.giornata_da_controllare(LEGA, CINQUE_TURNI, "io")
+        self.assertEqual((g["giornata"], g["giornata_serie_a"], g["avversario_id"]), (1, 6, "lui"))
+
+    def test_turno_iniziato_la_formazione_e_chiusa(self):
+        # A-B ha già giocato la sesta: la giornata 1 (Serie A 6) non si cambia più
+        g, _ = CF.giornata_da_controllare(LEGA, CINQUE_TURNI + [partita("A", "B")], "io")
+        self.assertEqual(g["giornata_serie_a"], 7)
+
+    def test_un_rinvio_non_sposta_il_turno(self):
+        # C-D rinviata al quinto turno: C e D sono a 4, il prossimo turno resta il 6
+        calendario = CINQUE_TURNI[:-1] + [partita("C", "D", "postponed")]
+        g, _ = CF.giornata_da_controllare(LEGA, calendario, "io")
+        self.assertEqual(g["giornata_serie_a"], 6)
+
+    def test_giornata_di_lega_piu_avanti_del_prossimo_turno(self):
+        lega = [{"id": "1", "nome": "Coppa", "calendario": [giornata_lega(1, 8)]}]
+        g, motivo = CF.giornata_da_controllare(lega, CINQUE_TURNI, "io")
+        self.assertIsNone(g)
+        self.assertIn("turno 8", motivo)
+
+    def test_calcolata_e_di_altri_non_contano(self):
+        lega = [{"id": "1", "nome": "Campionato", "calendario": [
+            giornata_lega(1, 6, calcolata=True), giornata_lega(2, 6, "x", "y")]}]
+        g, motivo = CF.giornata_da_controllare(lega, CINQUE_TURNI, "io")
+        self.assertIsNone(g)
+
+
+def giocatore(pid, ruolo, valore, prob=90, squadra=None, status="titolare"):
+    return {"player": {"id": pid, "name": pid, "role": ruolo, "serie_a_team": squadra or pid,
+                       "prob_titolare": prob, "status": status},
+            "rating": {"punteggio": valore}, "stima": None,
+            "quota_portieri_squadra": None, "titolare_porta_fuori": False}
+
+
+def consiglio_343():
+    """Un consiglio 3-4-3 con due fuori distinta e un infortunato."""
+    t = ([giocatore("p1", "P", 5.0)] + [giocatore(f"d{i}", "D", 6.5 - i / 10) for i in range(3)]
+         + [giocatore(f"c{i}", "C", 7.0 - i / 10) for i in range(4)]
+         + [giocatore(f"a{i}", "A", 7.0 - i / 10) for i in range(3)])
+    b = ([giocatore("p2", "P", 4.5)] + [giocatore(f"d{i}", "D", 6.0 - i / 10) for i in range(3, 5)]
+         + [giocatore(f"c{i}", "C", 6.5 - i / 10) for i in range(4, 6)]
+         + [giocatore(f"a{i}", "A", 6.5 - i / 10) for i in range(3, 5)])
+    esclusi = [giocatore("c6", "C", 6.25), giocatore("a5", "A", 5.5)]
+    rotto = giocatore("d9", "D", 7.0, status="infortunato")["player"]
+    return {"modulo": "3-4-3", "titolari": t, "panchina": b, "esclusi": esclusi,
+            "non_disponibili": [{"player": rotto, "motivo": "infortunato"}]}
+
+
+def ids(entries):
+    return [e["player"]["id"] for e in entries]
+
+
+class ControlloFormazione(unittest.TestCase):
+    def confronta(self, titolari=None, panchina=None):
+        c = consiglio_343()
+        salvata = {"titolari": titolari or ids(c["titolari"]), "panchina": panchina or ids(c["panchina"])}
+        return CF.confronta(salvata, c, {})
+
+    def test_uguale_al_consiglio(self):
+        e = self.confronta()
+        self.assertFalse(e["da_correggere"])
+        self.assertEqual(e["differenze"], [])
+        self.assertAlmostEqual(e["atteso"], e["atteso_consiglio"])
+
+    def test_scelta_alla_pari_non_e_un_errore(self):
+        # d3, primo cambio, vale 6.25: titolare al posto di d2 (6.3) è una scelta alla pari
+        # (come Ndour per Ferguson il 27/09), e la formazione resta OK con la differenza scritta
+        c = consiglio_343()
+        titolari = ids(c["titolari"])
+        panchina = ids(c["panchina"])
+        c["panchina"][1]["rating"]["punteggio"] = 6.25
+        titolari[titolari.index("d2")], panchina[panchina.index("d3")] = "d3", "d2"
+        e = CF.confronta({"titolari": titolari, "panchina": panchina}, c, {})
+        self.assertFalse(e["da_correggere"])
+        self.assertTrue(e["differenze"])
+
+    def test_distacco_sopra_la_soglia(self):
+        c = consiglio_343()
+        titolari = [x if x != "a0" else "a5" for x in ids(c["titolari"])]   # 5.5 invece di 7.0
+        e = CF.confronta({"titolari": titolari, "panchina": ids(c["panchina"])}, c, {})
+        self.assertTrue(e["da_correggere"])
+        self.assertEqual(e["sotto"], ["A"])
+
+    def test_infortunato_schierato(self):
+        c = consiglio_343()
+        titolari = [x if x != "d0" else "d9" for x in ids(c["titolari"])]
+        e = CF.confronta({"titolari": titolari, "panchina": ids(c["panchina"])}, c, {})
+        self.assertTrue(e["da_correggere"])
+        self.assertIn("d9 è titolare ma è infortunato", e["problemi"][0])
+
+    def test_giocatore_non_piu_in_rosa(self):
+        c = consiglio_343()
+        panchina = [x if x != "a4" else "venduto" for x in ids(c["panchina"])]
+        e = CF.confronta({"titolari": ids(c["titolari"]), "panchina": panchina}, c, {})
+        self.assertTrue(e["da_correggere"])
+        self.assertIn("non è nella tua rosa", e["problemi"][0])
 
 
 if __name__ == "__main__":

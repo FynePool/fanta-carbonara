@@ -7,7 +7,9 @@ description: Aggiornamento completo e non interattivo dei dati del progetto (lis
 
 Pensata per girare da sola, senza nessuno che risponda: **non chiedere conferme**,
 applica direttamente. Lo storico in `data/matchday_stats.json` non si accorcia mai: se uno
-script si ferma con "righe dello storico sparirebbero", non aggirarlo, riportalo. Aggiorna solo i dati (notizie comprese): non dà consigli di formazione, non modifica codice.
+script si ferma con "righe dello storico sparirebbero", non aggirarlo, riportalo. Aggiorna solo i dati (notizie comprese) e non modifica codice. Non dà consigli di formazione: il
+passo 9 controlla soltanto la formazione che l'utente ha già inserito sul sito, e il suo
+verdetto va riportato così com'è.
 
 ## Prima di cominciare
 
@@ -147,7 +149,21 @@ fallito.
    "incerto" (chi sta sopra era in campo solo per una parte), cerca il minuto del rigore e
    scrivilo in `minuti_rigori` di `data/rigoristi.json` (finestra di minuti, almeno due
    fonti), poi rilancia `calcola`.
-9. **Quota API rimasta**, per il riepilogo:
+9. **Controllo della formazione inserita** (per ultimo tra i passi sui dati: usa status,
+   voti e rigoristi appena aggiornati):
+   ```
+   python3 scripts/controlla_formazione.py
+   ```
+   Legge da leghe.fantacalcio.it la formazione che l'utente ha salvato per la prossima
+   giornata di lega e la confronta con i dati di oggi. Non scrive niente e non cambia la
+   formazione sul sito. La **prima riga** che stampa è il verdetto: `FORMAZIONE OK`,
+   `FORMAZIONE DA CORREGGERE` (un infortunato o squalificato schierato, un giocatore fuori
+   rosa, un ruolo sotto il consiglio), `FORMAZIONE DA INSERIRE` (manca, ma la scadenza è
+   lontana), `FORMAZIONE MANCANTE` (manca, e la scadenza è oggi o domani: la lega dà lo 0-3
+   a tavolino) o `FORMAZIONE NON CONTROLLATA` (turno in corso, credenziali mancanti, sito
+   che non risponde). Stesse credenziali del passo 1b. Non cambiare la formazione e non
+   aggiungere consigli: riporta il verdetto e le righe che lo seguono.
+10. **Quota API rimasta**, per il riepilogo:
    ```
    curl -sS https://api.bigballsdata.com/v1/usage -H "x-api-key: $BIGBALLS_API_KEY"
    ```
@@ -161,7 +177,14 @@ pull request.
 
 ## Riepilogo finale
 
-Breve, in italiano, fatti e numeri:
+Breve, in italiano, fatti e numeri. **La prima riga del riepilogo è il verdetto del passo 9
+copiato parola per parola** (la riga che comincia con `FORMAZIONE`), prima ancora dell'esito
+dei passi: è la prima cosa che l'utente deve leggere, anche nell'anteprima della notifica
+della routine. Se il passo 9 non ha girato, la prima
+riga è `FORMAZIONE NON CONTROLLATA:` con il motivo. Se il verdetto è `DA CORREGGERE` o
+`MANCANTE`, subito sotto riporta anche il consiglio che il controllo stampa.
+
+Poi:
 
 - per ogni passo: ok o fallito, e perché;
 - partite finite in archivio e quante sono nuove rispetto a prima;
