@@ -156,6 +156,17 @@ def _titolarita(p: dict) -> str:
     return p["status"]
 
 
+def percentuali_a_5(prob: list[float]) -> list[int]:
+    """Percentuali arrotondate a multipli di 5 che sommano a 100 (metodo del resto più
+    grande). Arrotondarle una per una può dare 95 o 105: con un atteso di 62,5 lo scenario
+    69,3/19,7/8,4/2,6 diventava 70/20/10/5."""
+    unita = [max(0.0, p) * 20 for p in prob]          # in unità da 5 punti
+    base = [int(u) for u in unita]
+    for i in sorted(range(len(unita)), key=lambda i: unita[i] - base[i], reverse=True)[:20 - sum(base)]:
+        base[i] += 1
+    return [5 * b for b in base]
+
+
 def _gol(r: dict, soglie: dict, inc: dict | None) -> None:
     """Il punteggio atteso non è un punteggio già fatto: quello vero si allontana di parecchi
     punti. Si stampa uno SCENARIO di 0, 1, 2, 3+ gol e quanto vale un punto in più. Con
@@ -184,14 +195,12 @@ def _gol(r: dict, soglie: dict, inc: dict | None) -> None:
     almeno = [1.0] + [1 - dist.cdf(primo + k * fascia) for k in range(12)]
     prob = [almeno[k] - almeno[k + 1] for k in range(3)] + [almeno[3]]
     per_punto = sum(dist.pdf(primo + k * fascia) for k in range(12))
-    def circa(p):   # a 5 punti percentuali: più precisione di così i dati non la danno
-        return f"{5 * round(p * 20):.0f}%"
-
+    circa = percentuali_a_5(prob)   # a 5 punti: più precisione di così i dati non la danno
     print(f"  Il punteggio vero di una formazione si è allontanato da quello atteso di circa {sd:.0f}")
     print(f"  punti (deviazione standard su {inc['n']} formazioni della lega rigiocate, giornate "
           f"{inc['giornate'][0]}-{inc['giornate'][-1]}). Quindi i")
     print("  gol sono uno SCENARIO APPROSSIMATIVO, arrotondato a 5 punti, non probabilità verificate:")
-    print("    " + "   ".join(f"{k} gol {circa(p)}" for k, p in enumerate(prob[:3])) + f"   3 o più {circa(prob[3])}")
+    print("    " + "   ".join(f"{k} gol {c}%" for k, c in enumerate(circa[:3])) + f"   3 o più {circa[3]}%")
     print(f"  Con queste ipotesi un punto di valore atteso vale circa {per_punto:.2f} gol, vicino o lontano")
     print(f"  da una soglia: una scelta da 0.10 punti sposta {0.1 * per_punto:.2f} gol. Le decisioni si pesano")
     print("  in punti, non guardando quanto manca alla soglia. Né la larghezza né il centro sono")
@@ -292,7 +301,8 @@ def main():
         print("STIMA, non ancora verificata: usa la probabilità di partire titolare del sito, che non")
         print("conta chi entra a partita in corso e non è ancora stata confrontata con chi ha preso")
         print("voto davvero. Per i portieri della stessa squadra la quota è rapportata ai portieri")
-        print("disponibili di quella squadra: ne gioca quasi sempre uno solo.")
+        print("disponibili di quella squadra (ne gioca quasi sempre uno solo), e così anche per un")
+        print("portiere da solo quando il titolare della sua squadra è fuori.")
         piu_esposto = min(r["copertura"].values())
         for role, coperto in sorted(r["copertura"].items(), key=lambda x: x[1]):
             print(f"  {role}: coperto al {coperto:6.1%}   rischio {1 - coperto:.1%}"

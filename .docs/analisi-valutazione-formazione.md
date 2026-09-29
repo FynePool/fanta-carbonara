@@ -539,6 +539,25 @@ trovato tre problemi rimasti. Tutti riprodotti e corretti:
 `tests/test_casi_limite.py` ha 13 casi costruiti a mano: sul codice di prima i quattro sui
 problemi di questa revisione falliscono, su quello nuovo passano tutti.
 
+## Quarta revisione di Codex (29/09, sul commit `6430f8b`)
+
+Codex ha confermato le correzioni della terza revisione e ha trovato due casi secondari,
+tutti e due riprodotti:
+
+- **Una riserva posseduta da sola, col titolare fuori.** La divisione per i portieri
+  disponibili valeva solo con due portieri della stessa squadra in distinta. Pdor
+  saint-germain ha De Gea e Christensen ma non Lezzerini: se De Gea si fermasse con le
+  quote vecchie, Christensen resterebbe al 5% invece di 5/6 = 83%. Ora un portiere da solo
+  si divide quando il **titolare** della sua squadra è fuori, cioè quando i portieri
+  indisponibili avevano almeno la quota minima. Non basta un portiere qualsiasi: il 29/09
+  era infortunato Grabara, riserva della Juventus senza quota, e con la regola più larga
+  avrebbe portato Vicario dal 90% al 94%.
+- **Lo scenario dei gol arrotondato voce per voce** poteva sommare a 95 o 105 (con un
+  atteso di 62,5: 70/20/10/5). Ora l'arrotondamento a 5 punti usa il resto più grande e
+  somma sempre a 100.
+
+Nessuna distinta cambia (oggi nessun titolare in porta è fuori). I test sono 16.
+
 ---
 
 ## Riprodurre
