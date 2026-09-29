@@ -1,7 +1,7 @@
 from collections import Counter, defaultdict
 from itertools import combinations
 from datetime import date, datetime, timezone
-from statistics import mean, pstdev
+from statistics import mean
 
 from . import store
 
@@ -20,19 +20,21 @@ STATUS_VECCHIO_GIORNI = 4
 # in panchina né per scegliere il modulo: la panchina ha 7 posti a quota fissa per ruolo
 # (1 P, 2 D, 2 C, 2 A) e se finiscono le riserve di un ruolo lo slot vale 0. Lì la
 # probabilità di prendere voto conta, e ci pensano _scegli_panchina e _slot_attesi.
-# Sul modulo è stata provata e non guadagna punti: vedi suggest_lineup.
+# Sul modulo è stata provata e non ha mostrato guadagni: vedi suggest_lineup.
 # Il valore è fatto di due pezzi, verificati con scripts/backtest_undici.py (punti veri
 # della formazione, non MAE sul singolo voto):
 #   base      media degli ultimi voti, frenata verso la media del ruolo. È qui che stanno
-#             i punti: il motore vale +2,68 [+0,64, +4,76] punti a giornata sull'ordine
+#             i punti: il motore vale +2,61 [+0,64, +4,56] punti a giornata sull'ordine
 #             d'acquisto, misurato su 36 formazioni con backtest_undici.py (29/09, senza
 #             più guardare il futuro: il 27/09 diceva +3,25 perché escludeva dalle giornate
-#             passate chi è infortunato oggi).
+#             passate chi è infortunato oggi). Intervalli ottimisti: le rose della stessa
+#             giornata condividono le partite.
 #   contesto  quanto subisce l'avversario della prossima partita. Senza lo sguardo al
-#             futuro vale +0,92 [−0,10, +2,03]: non più significativo. Resta perché la
-#             stima è positiva e togliere un pezzo richiede anch'esso una prova; si
-#             rimisura con più giornate (decisione del 29/09).
-# Provati e scartati perché non guadagnano punti (numeri in
+#             futuro vale +0,85 [−0,03, +1,71]: non dimostrato. Resta per la regola del
+#             progetto, dichiaratamente a favore dello stato attuale (nessun cambiamento,
+#             né in entrata né in uscita, senza un intervallo che escluda lo zero). È
+#             PROVVISORIO: entrato con prove poi ridimensionate, si rimisura alla giornata 8.
+# Provati e lasciati fuori perché non hanno mostrato guadagni (numeri in
 # .docs/analisi-valutazione-formazione.md): l'a priori dalla quotazione iniziale e dalla
 # fantamedia della stagione scorsa al posto della media del ruolo, il valore separato da
 # titolare e da subentrato, il fattore campo, il freno stimato ruolo per ruolo, e la
@@ -87,6 +89,9 @@ PROB_VOTO_IGNOTA = 50.0
 # quella squadra, ma solo se la somma è almeno questa: sotto, manca il dato del titolare
 # (nome non abbinato, scrape fallito) e dividere gonfierebbe le riserve.
 PORTIERI_QUOTA_MINIMA = 50.0
+# Chi non ha voti ma per le probabili parte titolare almeno a questa percentuale, se resta in
+# panchina o fuori distinta, viene segnalato (vedi suggest_lineup).
+PROB_TITOLARE_SENZA_VOTI = 60.0
 # Un panchinaro sotto questa probabilità di giocare è quasi uno slot di panchina buttato:
 # la panchina ha 1-2 posti per ruolo, e il report lo segnala.
 PROB_RISERVA_INUTILE = 25.0
@@ -474,15 +479,14 @@ def _role_order(entries: list[dict]) -> list[dict]:
 def prob_voto(entry: dict) -> float:
     """Probabilità (0-1) che il giocatore prenda voto nella prossima giornata.
 
-    È `prob_titolare` di fantacalcio.it, cioè la probabilità di **partire titolare**. Per
-    chi non è portiere sta un po' sotto quella di prendere voto, perché non conta chi entra
-    a partita in corso: nelle giornate 1-5 chi è entrato ha preso voto 256 volte su 358
-    (72%), quasi sempre da 20 minuti in su e quasi mai sotto i 10 (vedi
-    `voto_da_subentrato`). NON è vero che chi entra prende voto comunque: la Redazione non
-    ha una soglia di minuti. Usarla così rende gli avvisi di copertura un po' prudenti e non
-    inventa nessun numero. Da quando esistono insieme le probabili (dal 21/09) e le giornate
-    giocate (dalla 6) la probabilità di prendere voto diventa misurabile: allora si potrà
-    smettere di approssimarla.
+    È `prob_titolare` di fantacalcio.it, cioè la probabilità di **partire titolare**. Non
+    conta chi entra a partita in corso, e non è ancora stata confrontata con chi prende voto
+    davvero: se sia più alta o più bassa di quella vera lo dirà la taratura (dalla giornata
+    6, con le foto di data/status_scadenze.json). Chi entra a partita in corso, nelle
+    giornate 1-5, ha preso voto 256 volte su 358 (72%), quasi sempre da 20 minuti in su e
+    quasi mai sotto i 10 (vedi `voto_da_subentrato`). NON è vero che chi entra prende voto
+    comunque: la Redazione non ha una soglia di minuti. Usarla così non inventa nessun
+    numero, ma gli avvisi di copertura sono stime non verificate.
     Chi non ha il dato prende PROB_VOTO_IGNOTA, che serve solo a confrontare fra loro i
     candidati alla panchina, non a stimare niente su di lui."""
     p = entry["player"].get("prob_titolare")
@@ -536,11 +540,16 @@ def _slot_attesi(candidati: list[dict], n: int, prob=None) -> tuple[float, float
     """
     da_titolarita = prob is None
     prob = prob or prob_voto
-    # gruppi a scelta unica (portieri della stessa squadra) e giocatori indipendenti
+    # gruppi a scelta unica (portieri della stessa squadra) e giocatori indipendenti. Chi ha
+    # il 6 politico non entra in un gruppo: con la partita rinviata il 6 va a tutti, anche a
+    # tutti e due i portieri, e non c'è nessuno "che gioca al posto dell'altro".
+    def politico(e):
+        return bool(e["rating"] and e["rating"].get("politico"))
+
     gruppi: list[list[int]] = []
     per_squadra: dict[str, int] = {}
     for i, e in enumerate(candidati):
-        if e["player"]["role"] == "P":
+        if e["player"]["role"] == "P" and not politico(e):
             squadra = e["player"]["serie_a_team"]
             if squadra in per_squadra:
                 gruppi[per_squadra[squadra]].append(i)
@@ -553,7 +562,7 @@ def _slot_attesi(candidati: list[dict], n: int, prob=None) -> tuple[float, float
         return v if v is not None else (e.get("stima") or 0.0)
 
     def probabilita(e):
-        return 1.0 if e["rating"] and e["rating"].get("politico") else prob(e)
+        return 1.0 if politico(e) else prob(e)
 
     dati = [(valore(e), probabilita(e)) for e in candidati]
     if da_titolarita:
@@ -761,28 +770,6 @@ def _decisioni(modulo: str, per_modulo: dict, per_ruolo: dict, riserve: dict,
     return decisioni
 
 
-def incertezza_voto(righe: list[dict], players_by_id: dict, calendario: list[dict],
-                    dal: int = 3) -> dict | None:
-    """Di quanto il fantavoto vero si allontana da quello previsto: deviazione standard degli
-    scarti fra `rate_player` e il voto vero, giornata per giornata dalla `dal` in poi e con i
-    soli dati di prima, come nel backtest. Serve a dire quanto è incerto il punteggio atteso,
-    che non è un punteggio già fatto. None se non ci sono ancora giornate da misurare."""
-    giornate = sorted({r["matchday"] for r in righe
-                       if r.get("matchday") is not None and r["matchday"] >= dal and r.get("fantavoto") is not None})
-    scarti = []
-    for g in giornate:
-        modello = costruisci_modello(righe, players_by_id, calendario, prima_di_giornata=g)
-        for r in righe:
-            if r.get("matchday") != g or r.get("fantavoto") is None or r["player_id"] not in players_by_id:
-                continue
-            rating = rate_player(players_by_id[r["player_id"]], modello, r.get("opponent_serie_a_team"))
-            if rating:
-                scarti.append(r["fantavoto"] - rating["punteggio"])
-    if len(scarti) < 2:
-        return None
-    return {"sd_giocatore": pstdev(scarti), "n": len(scarti), "giornate": giornate}
-
-
 def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> dict:
     """Sceglie il modulo con la somma di punteggi più alta tra i titolari (la lega non
     usa il modificatore di difesa). I titolari di ogni ruolo sono i primi per valore; la
@@ -862,7 +849,10 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     per_ruolo = {role: [] for role in ROLES}
     for p in roster:
         partita = turno["per_squadra"].get(p["serie_a_team"])
-        if p["status"] in EXCLUDED_STATUSES:
+        # Con la partita rinviata e il 6 politico, il 6 va a tutta la rosa, infortunati e
+        # squalificati compresi (regolamento ufficiale di fantacalcio.it): non si escludono.
+        politico = partita in rinviate and sei_politico
+        if p["status"] in EXCLUDED_STATUSES and not politico:
             non_disponibili.append({"player": p, "motivo": p.get("status_note") or p["status"]})
             continue
         avversario = None
@@ -870,7 +860,7 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
             casa = partita["squadra_casa"] == p["serie_a_team"]
             avversario = partita["squadra_trasferta"] if casa else partita["squadra_casa"]
         rating = rate_player(p, modello, avversario)
-        if partita in rinviate and sei_politico:
+        if politico:
             # Il 6 è sicuro e non lascia il posto alla panchina: vale 6, non la media.
             rating = {"media": 6.0, "n": 0, "punteggio": 6.0, "politico": True}
         # quanti rigori ha già calciato in queste giornate: serve a non contare due volte
@@ -908,7 +898,6 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         "scoperti": {},
         "avvisi": avvisi,
         "decisioni": [],
-        "incertezza": None,
         "stimati": [],
     }
     if not roster:
@@ -939,9 +928,11 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         # Prima i moduli che si riempiono tutti, poi quelli con meno titolari senza voti da
         # decidere a mano, poi la somma dei valori dei titolari.
         # PERCHÉ NON IL VALORE ATTESO, che sarebbe l'obiettivo giusto: provato, e nel
-        # backtest in punti non guadagna niente contro la somma semplice (+0,00 [−1,22,
-        # +1,08] il 29/09: indistinguibile, non "perde"). La regola del progetto è che una
-        # modifica entra solo se guadagna. Attenzione a non dare la colpa a `prob_titolare`:
+        # backtest in punti non ha mostrato guadagni contro la somma semplice (+0,12 [−0,64,
+        # +0,94] il 29/09: indistinguibile, cioè né dimostrato né smentito). La regola del
+        # progetto: nessun cambiamento senza un guadagno con intervallo che esclude lo zero.
+        # E il punteggio atteso che userebbe è distorto: nel backtest sottostima i punti veri
+        # di quasi 6 (lib/simulazione.py). Attenzione a non dare la colpa a `prob_titolare`:
         # il backtest non la usa (non esisteva per quelle giornate), usa la quota storica di
         # voti presi. Il valore atteso resta calcolato, ma serve agli avvisi di copertura e
         # al punteggio atteso del report. Da riprovare quando la probabilità di prendere voto
@@ -954,7 +945,6 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
 
     _, module, titolari, riserve, scoperti, copertura, atteso = best
     risultato["atteso"] = atteso   # valore atteso degli 11 slot, per le soglie gol del report
-    risultato["incertezza"] = incertezza_voto(righe, players_by_id, calendario)
     panchina = [e for role in ROLES for e in riserve.get(role, [])]
     risultato["stimati"] = [e for e in titolari + panchina if not e["rating"] and e.get("stima") is not None]
     # Il secondo portiere della stessa squadra del titolare: ne gioca uno solo, quindi l'ordine
@@ -990,9 +980,9 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
         avvisi.append(
             f"Ruolo {role}: {1 - coperto:.0%} di rischio che uno slot resti vuoto, e uno slot "
             f"vuoto vale 0 (circa 6 punti persi). Riserve in panchina: {nomi}. "
-            "Il rischio è calcolato sulla probabilità di partire titolare, che non conta chi "
-            f"entra a partita in corso: {testo_subentrati}, quindi il rischio vero è un po' "
-            "più basso."
+            "È una stima: usa la probabilità di partire titolare, che non conta chi entra a "
+            f"partita in corso ({testo_subentrati}) e non è ancora stata confrontata con chi ha "
+            "preso voto davvero."
         )
     # Una riserva che non gioca quasi mai è un posto di panchina buttato — ma solo se in rosa
     # c'è un'alternativa dello stesso ruolo che gioca di più. Il secondo portiere della tua
@@ -1022,6 +1012,21 @@ def suggest_lineup(team_id: str, allowed_modules: list[str] | None = None) -> di
     senza_voti = [e["player"]["name"] for e in titolari if not e["rating"]]
     if senza_voti:
         avvisi.append(f"Titolari senza nessun voto, da decidere a mano: {', '.join(senza_voti)}.")
+    # Chi non ha voti va in fondo all'ordine: il modello non sa quanto vale, e metterlo
+    # davanti con una stima porterebbe Provedel (media del ruolo 4,70) davanti a Martinez
+    # (4,54), o una riserva che non gioca mai davanti a un titolare. Ma un acquisto nuovo o
+    # un rientrante che le probabili danno titolare può restare fuori per questo: si avvisa.
+    probabili_titolari = [
+        e for e in panchina + risultato["esclusi"]
+        if not e["rating"] and not e.get("riserva_di")
+        and (e["player"].get("prob_titolare") or 0) >= PROB_TITOLARE_SENZA_VOTI
+    ]
+    if probabili_titolari:
+        nomi = ", ".join(f"{e['player']['name']} ({e['player']['prob_titolare']}%)" for e in probabili_titolari)
+        avvisi.append(
+            f"Senza voti ma dati titolari dalle probabili, e per questo non in campo: {nomi}. Il "
+            "modello non sa quanto valgono e li mette in fondo: decidi con le notizie se schierarli."
+        )
     squalifiche_path = store.DATA_DIR / "squalifiche.json"
     diffidati = {
         s["player_id"]

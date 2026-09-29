@@ -47,11 +47,15 @@ Il report li evita già; la risposta in chat non deve reintrodurli.
   zero: il modello non sa quanto vale. Per il secondo portiere vuol dire solo che finora
   ha giocato il primo. Nel punteggio atteso chi non ha voti è contato con la media del
   ruolo, e il report lo dichiara come stima.
-- **Il punteggio atteso non è un punteggio già fatto.** Il punteggio vero si allontana di
-  circa 5 punti: il report stampa la probabilità di fare 0, 1, 2 o 3+ gol. Non dire mai
-  che una scelta "non cambia il risultato" o che "sei sul filo" guardando quanto manca a
-  una soglia: ogni punto di valore atteso vale circa lo stesso numero di gol ovunque
-  (circa 0,2), e le scelte si pesano in punti.
+- **Il punteggio atteso non è un punteggio già fatto.** Il punteggio vero di una
+  formazione si allontana di parecchi punti (il report dice quanti), e i gol che stampa
+  sono uno **scenario approssimativo**, non probabilità verificate: presentali così. Non
+  dire mai che una scelta "non cambia il risultato" o che "sei sul filo" guardando quanto
+  manca a una soglia: ogni punto di valore atteso vale circa lo stesso numero di gol
+  ovunque (il report lo stampa), e le scelte si pesano in punti.
+- **Le percentuali del report sono stime.** Copertura dei ruoli, probabilità di giocare,
+  scenario dei gol: vengono dalle percentuali del sito e da poche giornate, e non sono
+  ancora state confrontate con quello che è successo davvero. Dillo quando le usi.
 
 ## Notizie: cosa succede davvero
 

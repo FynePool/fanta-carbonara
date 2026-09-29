@@ -367,7 +367,8 @@ modello è identico al centesimo, e la formazione di VAR-tificiale non cambia):
   prima), cioè circa ±5,3 punti sulla squadra, più di una fascia di gol. Allora un punto
   atteso vale circa 0,19 gol ovunque: +0,3 punti partendo da 70,7 valgono +0,055 gol,
   partendo da 68,7 +0,051. Il report stampa la probabilità di 0, 1, 2, 3+ gol
-  (`incertezza_voto`).
+  (`incertezza_voto`). *Corretto nella seconda revisione: misurata sulla formazione intera
+  la larghezza è ±6,9, non ±5,3, e le probabilità sono uno scenario approssimativo.*
 - **`--matchday` è solo un'etichetta**: ora il report avvisa se non coincide con la prossima
   giornata della lega.
 - **La skill `formazione`** ha una sezione su tre errori di ragionamento: i portieri della
@@ -425,21 +426,91 @@ modello è identico al centesimo, e la formazione di VAR-tificiale non cambia):
   fonti (o è il primo disponibile), nullo a sostituti e scavalcati. Prima dava peso pieno a
   chiunque avesse calciato, sostituti compresi.
 
-**Confermato, da chiudere più avanti:**
+**L'ammonito senza voto** prende 5,5 d'ufficio nella lega, e non entra nessuno al suo
+posto. Il backtest lo conta dalla fase 2; il dubbio sul malus è chiuso nella seconda
+revisione, sotto.
 
-- **L'ammonito senza voto prende 5,5 d'ufficio** nella lega, e non entra nessuno al suo
-  posto. Il backtest ora lo conta (fase 2); resta da confermare con il fantavoto calcolato
-  dalla lega, dopo la giornata 6, se al 5,5 si toglie anche il malus dell'ammonizione.
-
-**Non reggono, misurati:**
+**Non dimostrati, rinviati** (il titolo era "Non reggono": troppo forte, corretto dopo la
+seconda revisione):
 
 - **Scegliere insieme titolari e panchina** (escludere un titolare forte che gioca poco per
   far posto a una riserva sicura). Nel modello a volte paga (+0,56 per Pdor saint-germain,
-  +0,00 per VAR-tificiale), nei punti veri no: **−0,46 [−1,06, +0,07]**. È lo stesso schema
-  del modulo col valore atteso: ottimizzare su probabilità approssimate costa. Da riprovare
-  quando la probabilità di prendere voto sarà misurata.
+  +0,00 per VAR-tificiale); nei punti veri la stima è −0,46 [−1,06, +0,07]. Un intervallo
+  che comprende lo zero non dimostra che peggiori: è non dimostrata, e resta fuori per la
+  regola dello stato attuale. Da riprovare quando la probabilità di prendere voto sarà
+  tarata.
 - **Il contesto dei portieri coi gol fatti dall'avversario**: era già stato provato il 27/09
   (indistinguibile su 55 previsioni), da riguardare alla giornata 10.
+
+## Seconda revisione di Codex (29/09, sul commit `cd1ee3c`)
+
+Codex ha ricontrollato le tre fasi. Ogni rilievo è stato riprodotto prima di correggerlo.
+
+**Bug veri, corretti:**
+
+- **L'avversario del backtest veniva dal tabellino della giornata da prevedere**, che ha una
+  riga solo per chi era nella partita: a 65 casi giocatore-giornata mancava il termine
+  avversario. Ora viene dal calendario. Modello 71,85 → 71,78, termine avversario +0,92 →
+  +0,85.
+- **Le varianti "freno 3" e "freno 10" accendevano anche la produzione** (bug del 27/09):
+  cambiavano due cose insieme. Ora ogni variante cambia una cosa sola: freno 3 −0,08
+  [−0,60, +0,54], freno 10 −0,47 [−1,42, +0,42].
+- **6 politico nella coppia di portieri**: la normalizzazione dei portieri sovrascriveva la
+  probabilità 1 (slot 5,94 e copertura 98,96% invece di 6 e 100%). Chi ha il 6 politico ora
+  non entra nei gruppi di portieri.
+- **Infortunati e squalificati di una partita rinviata venivano esclusi** prima di
+  controllare il rinvio. Il regolamento ufficiale di fantacalcio.it dà il 6 politico "a tutti
+  i componenti della rosa, potenziali riserve, infortunati e squalificati inclusi"; la
+  regola della lega dice "tutti i giocatori". Ora restano, col 6.
+- **Voti d'ufficio a chi non ha giocato**: Sabelli, ammonito dalla panchina senza entrare
+  alla giornata 1, prendeva 5,5. Il regolamento ufficiale esclude dal malus il panchinaro
+  mai entrato, e dice che il 5,5 dell'ammonito senza voto **comprende già il malus**: il
+  dubbio "5,5 o 5" è chiuso (salvo regole diverse della lega). Aggiunto l'espulso senza voto
+  a 4 (lo standard; finora zero casi). Ammoniti validi: 6, non 7.
+- **Rigori con i minuti sconosciuti**: se al primo rigorista mancavano i minuti, era
+  "assente" e il rigore del secondo "coerente". Ora minuti sconosciuti vuol dire "incerto".
+  Non era teorico: 42 righe hanno il voto ma non i minuti.
+
+**Numeri presentati con troppa sicurezza, corretti:**
+
+- **Lo scenario dei gol** usava la deviazione del singolo giocatore (1,60) moltiplicata per
+  la radice di 11: ±5,3. Rigiocando le 36 formazioni con sostituzioni e slot scoperti
+  (`scarti_formazione` in `lib/simulazione.py`) lo scarto fra punti veri e punteggio atteso
+  ha deviazione standard **6,93** e media **+5,91**: la larghezza era sottostimata, e nel
+  backtest il punteggio atteso sottostima di quasi 6 punti (per la probabilità di voto
+  stimata dallo storico, che avvicina tutti alla media del ruolo). Per VAR-tificiale lo
+  scenario passa da 17/32/33/18 a 23/26/27/24 per 0/1/2/3+ gol, e un punto vale 0,17 gol,
+  non 0,19. Il report ora lo chiama scenario approssimativo e dice che il centro non è
+  tarato.
+- **"Indistinguibile" non vuol dire "non guadagna"**: corretto nel backtest, nei commenti e
+  qui. La scelta congiunta è "non dimostrata", non smentita.
+- **La copertura al 99% e il "rischio un po' prudente"** sono stime non verificate:
+  riscritte così, finché la taratura non dirà quanto sono giuste.
+- **Gli intervalli sono ottimisti**: il bootstrap per coppie squadra-giornata ignora che le
+  rose della stessa giornata condividono le partite, e con 3 giornate non si può
+  ricampionare per giornata. Lo dimostra la correzione dell'avversario: da sola sposta il
+  confronto con la media nuda da +1,22 [−0,15, +2,72] a +1,15 [+0,19, +2,15], e la panchina
+  con la probabilità da +0,58 [+0,01, +1,31] a +0,56 [−0,00, +1,29]. Etichette che
+  cambiano per pochi centesimi sono indizi, non verdetti.
+
+**La regola, detta com'è.** Codex ha osservato che la regola "entra solo ciò che dimostra un
+miglioramento" veniva usata per tenere il termine avversario e lasciare fuori la scelta
+congiunta. È vero che la regola favorisce lo stato attuale, e ora è scritta così: nessun
+cambiamento, né per aggiungere un pezzo né per toglierlo, senza un intervallo che escluda lo
+zero. Il termine avversario resta ma è **provvisorio** (era entrato con prove poi
+ridimensionate): si rimisura alla giornata 8.
+
+**Dove non si è cambiato:**
+
+- **Chi non ha voti resta in fondo all'ordine.** Con la media del ruolo nell'ordine Provedel
+  (4,70) passerebbe davanti a Martinez (4,54), che è proprio l'errore "senza voto è meglio
+  di 4", e con portieri di squadre diverse una riserva che non gioca mai passerebbe davanti
+  a un titolare. Il rischio che Codex indica (un acquisto nuovo subito titolare lasciato
+  fuori) è coperto da un avviso: chi non ha voti ma è dato titolare almeno al 60% e resta
+  fuori viene segnalato.
+- **Un solo rigore che scavalca** (Yeboah su Adams) resta decisivo per lo spareggio finché
+  non ne arrivano altri: l'alternativa è la lista delle fonti, che quel rigore ha
+  contraddetto. Il report mostra la giornata.
 
 ---
 

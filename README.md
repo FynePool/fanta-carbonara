@@ -176,11 +176,11 @@ chi ha già calciato un rigore quest'anno da primo rigorista delle fonti; serve 
 spareggio, non entra nel numero.
 
 **PUNTEGGIO ATTESO** traduce gli 11 slot in gol della lega (66 punti = 1 gol, 71 = 2, 76
-= 3). 71,1 non vuol dire "2 gol": il punteggio vero si allontana da quello atteso di circa
-5 punti, misurati confrontando le previsioni delle giornate 3-5 con i voti veri, quindi
-il report dà la probabilità di ogni risultato. Per lo stesso motivo stare un soffio sopra
-una soglia non conta: un punto atteso in più vale circa 0,2 gol ovunque, e le scelte si
-pesano in punti.
+= 3). 71,1 non vuol dire "2 gol": il punteggio vero di una formazione si è allontanato da
+quello atteso di circa 7 punti, rigiocando le giornate 3-5 per tutte le rose della lega,
+quindi il report dà uno scenario approssimativo per ogni risultato (il centro non è
+ancora tarato). Per lo stesso motivo stare un soffio sopra una soglia non conta: un punto
+atteso in più vale circa 0,17 gol ovunque, e le scelte si pesano in punti.
 
 **Cosa abilita lo storico dei box score** — esempio dalle giornate 1-5:
 
@@ -254,15 +254,17 @@ cambi:
 
 Il collaudo è `backtest_undici.py`: per ogni giornata dalla 3 in poi schiera tutte le 12
 rose della lega con i soli dati precedenti, applica le regole della panchina e somma i
-punti **veri**. Al 29/09 il modello vale +2,68 punti a giornata rispetto all'ordine
-d'acquisto (intervallo +0,64 / +4,76), ma contro la semplice media dei voti il vantaggio
-(+1,22) non è ancora dimostrabile; scegliere la panchina con la probabilità vale +0,58.
-Anche il termine avversario (+0,92) ha un intervallo che tocca lo zero: resta, e si
-rimisura con più giornate. La correzione per la produzione offensiva (gol attesi dai tiri
-in porta) è spenta dal 27/09 perché non guadagna punti; l'a priori da quotazione e
-stagione scorsa, casa/trasferta e la scelta del modulo col valore atteso sono stati
-provati e scartati. Una modifica entra solo se
-guadagna punti con un intervallo che esclude lo zero: numeri e ragionamenti in
+punti **veri**. Al 29/09 il modello vale +2,61 punti a giornata rispetto all'ordine
+d'acquisto (intervallo +0,64 / +4,56), +1,15 contro la semplice media dei voti, +0,56
+scegliendo la panchina con la probabilità, +0,85 col termine avversario. Con 36
+formazioni gli intervalli sono ottimisti e le etichette "dimostrato / non dimostrato"
+cambiano per pochi centesimi: sono indizi, non verdetti. Il termine avversario resta ed è
+provvisorio: si rimisura alla giornata 8. La correzione per la produzione offensiva (gol
+attesi dai tiri in porta) è spenta dal 27/09 perché non ha mostrato guadagni; l'a priori
+da quotazione e stagione scorsa, casa/trasferta e la scelta del modulo col valore atteso
+sono stati provati e lasciati fuori. La regola è a favore dello stato attuale, e
+dichiarata: nessun cambiamento, né per aggiungere un pezzo né per toglierlo, senza un
+intervallo che escluda lo zero. Numeri e ragionamenti in
 [`.docs/analisi-valutazione-formazione.md`](.docs/analisi-valutazione-formazione.md).
 
 Resta lontano dalla certezza: con distacchi sotto 0,20 punti l'ordine previsto indovina

@@ -43,7 +43,9 @@
     "bonus_porta_inviolata": null,
     "_porta_inviolata_note": "Il valore non è indicato. Il portiere la prende solo se gioca almeno 45 minuti.",
     "senza_voto_ammonito": 5.5,
-    "_senza_voto_ammonito_note": "Chi prende un'ammonizione senza voto prende 5,5 d'ufficio: ha un voto, quindi non entra nessuno dalla panchina al suo posto.",
+    "_senza_voto_ammonito_note": "Chi prende un'ammonizione senza voto prende 5,5 d'ufficio: ha un voto, quindi non entra nessuno dalla panchina al suo posto. Il 5,5 comprende gia' il malus dell'ammonizione, e il panchinaro mai entrato che prende un cartellino non ha ne' malus ne' voto (regolamento ufficiale di fantacalcio.it, https://www.fantacalcio.it/amp/regolamenti/18_06_2020/regolamento-ufficiale-fantacalcio-388093, verificato il 29/09).",
+    "senza_voto_espulso": 4,
+    "_senza_voto_espulso_note": "Lo standard del regolamento ufficiale di fantacalcio.it: l'espulso senza voto ha fantavoto 4. Il regolamento della lega non lo cita: vale lo standard finche' la lega non dice altro.",
     "_autogol_portiere": "Il portiere che fa autogol prende sia il malus autogol sia il malus gol subito.",
     "_portiere_improvvisato": "Un giocatore di movimento che finisce in porta sostituisce a tutti gli effetti il portiere, con bonus e malus del portiere."
   },
@@ -54,7 +56,7 @@
     "_sostituzioni_note": "7 = i 7 panchinari, tutti utilizzabili. NON sono illimitate nel senso che conta: la panchina ha una composizione FISSA per ruolo (vedi `panchina`), quindi per ogni ruolo si puo' sostituire al massimo quante riserve ha quel ruolo. Confermato dall'utente il 27/09/2026.",
     "rinvii": {
       "max_partite_6_politico": 3,
-      "_note": "Si contano le partite della giornata non giocate entro la giornata (una partita spostata di giorno ma giocata dentro la giornata non è un rinvio). Fino a 3 partite rinviate: tutti i giocatori di quelle partite prendono 6 politico, senza recupero. Più di 3: TUTTE le partite rinviate della giornata si aspettano e i giocatori prendono il voto del recupero (il sito chiude la giornata solo allora). Una partita sospesa vale per i voti presi fino all'interruzione, senza 6 politico per chi non ha giocato."
+      "_note": "Si contano le partite della giornata non giocate entro la giornata (una partita spostata di giorno ma giocata dentro la giornata non è un rinvio). Fino a 3 partite rinviate: tutti i giocatori di quelle partite prendono 6 politico, senza recupero, infortunati e squalificati compresi (regolamento ufficiale di fantacalcio.it: 'a tutti i componenti della rosa, potenziali riserve, infortunati e squalificati inclusi'). Più di 3: TUTTE le partite rinviate della giornata si aspettano e i giocatori prendono il voto del recupero (il sito chiude la giornata solo allora). Una partita sospesa vale per i voti presi fino all'interruzione, senza 6 politico per chi non ha giocato."
     },
     "scadenza_formazione": "Fino a un secondo prima dell'inizio della partita che apre la giornata di Serie A. L'admin inserisce la formazione solo se gli viene comunicata prima di quell'orario.",
     "formazione_non_schierata": "Sconfitta 3-0 a tavolino; la seconda volta anche -1 punto in classifica; dalla terza in poi 5 euro di penale ciascuna.",
