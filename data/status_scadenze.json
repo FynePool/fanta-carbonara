@@ -2,7 +2,7 @@
   "_note": "Status e prob_titolare di ogni giocatore com'erano prima della scadenza di ogni turno, per il backtest: vedi scripts/salva_status_scadenza.py. Una foto per scadenza (ora UTC della prima partita non rinviata del turno); si riscrive ogni mattina fino alla scadenza, poi non si tocca più.",
   "scadenze": {
     "2026-10-10T13:00:00.000Z": {
-      "salvato_il": "2026-09-29T16:43:07Z",
+      "salvato_il": "2026-09-30T04:54:31Z",
       "partite": [
         "1d024048-0597-4472-9e3e-17dd63aa3c18",
         "28954dbe-a17b-475b-9211-3b61b1ae193d",
@@ -15,7 +15,7 @@
         "dd124c51-2579-4e48-b512-d0770a25d271",
         "deb28f43-589f-47bd-89af-99b8978897af"
       ],
-      "status_aggiornati_al": "2026-09-29",
+      "status_aggiornati_al": "2026-09-30",
       "status": {
         "fd133": "ballottaggio",
         "fd152": "ballottaggio",
@@ -711,7 +711,7 @@
         "fd4359": 80,
         "fd4360": 90,
         "fd4364": 60,
-        "fd4371": 55,
+        "fd4371": 50,
         "fd4374": null,
         "fd4375": null,
         "fd4378": 90,
@@ -726,7 +726,7 @@
         "fd4463": 70,
         "fd4465": 90,
         "fd4468": 5,
-        "fd4479": 50,
+        "fd4479": 55,
         "fd4485": 5,
         "fd4502": 90,
         "fd4510": null,
