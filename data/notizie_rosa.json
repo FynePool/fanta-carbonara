@@ -1,6 +1,75 @@
 {
-  "aggiornato_il": "2026-09-30",
+  "aggiornato_il": "2026-10-01",
   "notizie": [
+    {
+      "data": "2026-09-30",
+      "squadra": "Lecce",
+      "giocatori": [
+        "fd7602"
+      ],
+      "tipo": "mercato",
+      "fatto": "Fatah è arrivato al Lecce a titolo definitivo dai Rangers (ufficializzato 25/08/2026, contratto fino al 2029, numero 7). A fine settembre aveva totalizzato 4 presenze in Serie A, sempre subentrato nel secondo tempo, mai titolare: per Lecce-Bologna dell'11/10 è ancora previsto dalla panchina.",
+      "fonti": [
+        "https://www.calciolecce.it/2026/08/25/fatah/",
+        "https://www.quotidianodipuglia.it/sport/news/lecce_calcio_serie_a_fatah_ilic_trinchera-9725354.html",
+        "https://www.giornaledipuglia.com/2026/09/lecce-fatah-sempre-in-campo-nella.html"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-30",
+      "squadra": "Lazio",
+      "giocatori": [
+        "fd6320"
+      ],
+      "tipo": "infortunio",
+      "fatto": "Doekhi è stato operato l'11-12/09 per una frattura spiroide del secondo metacarpo della mano sinistra (placca e viti). Al 30/09 ha preso parte a un'amichevole di test (Lazio-Arezzo 2-0) insieme al neoarrivato difensore Diogo Leite, ma non è ancora nella coppia centrale titolare: nelle ultime gare di campionato hanno giocato Sutalo-Provstgaard, con Doekhi rientrato tra i disponibili ma lasciato in panchina.",
+      "fonti": [
+        "https://www.corrieredellosport.it/news/calcio/serie-a/lazio/2026/09/12-151187981/lazio_doekhi_operato_alla_mano_rientro_dopo_la_sosta_gattuso_punta_su_sutalo",
+        "https://www.laziochannel.it/2026/09/road-map-difensiva-lazio-sutalo-leite-doekhi",
+        "https://www.lalazio.com/2026/09/30/lazio-gattuso-testa-doekhi-e-diogo-leite-in-difesa/",
+        "https://www.laziochannel.it/2026/09/difesa-emergenza-leite-doekhi-sutalo-tre-vie-lazio"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-29",
+      "squadra": "Parma",
+      "giocatori": [
+        "fd7342",
+        "fd5862"
+      ],
+      "tipo": "allenatore",
+      "fatto": "Il Parma ha esonerato l'allenatore Carlos Cuesta il 27/09/2026 (4 punti in 5 giornate, 'non c'erano più i presupposti per andare avanti'). Il 29/09 è stato ufficializzato il nuovo tecnico Alberto Gilardino (ex calciatore del Parma, contratto fino a fine stagione con opzione di rinnovo biennale): esordirà proprio in Inter-Parma del 10/10, la partita che riguarda la mia formazione. Le gerarchie viste sotto Cuesta potrebbero cambiare da questa gara.",
+      "fonti": [
+        "https://www.agi.it/sport/news/2026-09-27/cuesta-parma-esonero-39274261/amp/",
+        "https://www.lapresse.it/calcio/2026/09/27/il-parma-esonera-carlos-cuesta-non-cerano-i-presupposti-per-andare-avanti/",
+        "https://sportparma.com/parma-calcio/ufficiale-cuesta-non-e-piu-lallenatore-del-parma.html",
+        "https://www.corrieredellosport.it/news/calcio/serie-a/parma/2026/09/29-151546958/parma_gilardino_il_nuovo_allenatore_ora_ufficiale",
+        "https://www.fcinternews.it/news/ufficiale-parma-gilardino-allenatore-esordira-inter-1019604"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-29",
+      "squadra": "Parma",
+      "giocatori": [
+        "fd7342"
+      ],
+      "tipo": "formazione",
+      "fatto": "Con l'arrivo di Gilardino, le probabili formazioni di più testate indicano Romero come prima scelta d'attacco nel 3-4-2-1, con Elphege come alternativa (possibile coesistenza in un 3-5-2). Nell'ultima gara sotto Cuesta (Como-Parma 14/09) Elphege era comunque titolare come unica punta. Nessun infortunio in corso per lui: previsione pre-partita, non ancora confermata dai fatti.",
+      "fonti": [
+        "https://www.goal.com/it/liste/come-giochera-il-parma-di-gilardino-modulo-titolari-e-formazione-tipo/blt8c9dbfb357597e62",
+        "https://www.calciomercato.com/liste/come-giochera-il-parma-di-gilardino-modulo-titolari-e-formazione-tipo-le-novita/blt8861f0e4ed36fd6b",
+        "https://www.fanpage.it/sport/calcio/come-giochera-il-parma-con-alberto-gilardino-nuovo-allenatore-puo-cambiare-lattacco-rispetto-a-cuesta/",
+        "https://www.fantamaster.it/formazioni-ufficiali-como-parma-4-giornata-seriea-2026-2027/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
     {
       "data": "2026-09-29",
       "squadra": "Milan",
@@ -45,6 +114,22 @@
       ],
       "verificata": false,
       "aggiunta_il": "2026-09-28"
+    },
+    {
+      "data": "2026-09-28",
+      "squadra": "Sassuolo",
+      "giocatori": [
+        "fd4463"
+      ],
+      "tipo": "rientro",
+      "fatto": "Sebastiano Esposito ha esordito da titolare con la Nazionale maggiore italiana contro la Turchia (28/09, Nations League), in campo insieme al fratello Pio: prima volta dal 1915 che due fratelli sono titolari insieme in azzurro. Nessun infortunio per lui in questa uscita.",
+      "fonti": [
+        "https://www.ilfattoquotidiano.it/2026/09/29/fratelli-esposito-titolari-nazionale-record-dedica-nonna/8521570/",
+        "https://www.adnkronos.com/sport/italia-fratelli-pio-sebastiano-insieme-nazionale-turchia-chi-sono_JwxT1azKcyMAiyrZTw6BC",
+        "https://www.eurosport.it/calcio/uefa-nations-league/2026-2027/sebastiano-e-francesco-pio-esposito-insieme-e-la-quarta-coppia-di-fratelli-a-scendere-in-campo-con-la-maglia-dellitalia_sto23341142/story.shtml"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
     },
     {
       "data": "2026-09-27",
@@ -137,6 +222,21 @@
       "aggiunta_il": "2026-09-27"
     },
     {
+      "data": "2026-09-26",
+      "squadra": "Bologna",
+      "giocatori": [
+        "fd184"
+      ],
+      "tipo": "mercato",
+      "fatto": "Bernardeschi è vicino al rinnovo di contratto con il Bologna fino al 2028.",
+      "fonti": [
+        "https://www.calciomercato.it/2026/09/26/bernardeschi-prolunga-con-il-bologna-insieme-fino-al-2028/",
+        "https://www.calciobologna.it/2026/09/25/bologna-bernardeschi-futuro-opzione-rinnovo-contratto/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
       "data": "2026-09-25",
       "squadra": "Inter",
       "giocatori": [
@@ -155,6 +255,53 @@
       "aggiunta_il": "2026-09-29"
     },
     {
+      "data": "2026-09-25",
+      "squadra": "Bologna",
+      "giocatori": [
+        "fd184"
+      ],
+      "tipo": "infortunio",
+      "fatto": "Bernardeschi si è fermato in tempo durante Bologna-Torino (19/09) evitando un infortunio serio: gli esami hanno escluso lesioni muscolari alla coscia sinistra. Gestito con alcuni giorni di lavoro differenziato, ha saltato per precauzione l'amichevole con la Primavera durante la sosta.",
+      "fonti": [
+        "https://www.fantacalcio.it/news/calcio-italia/25_09_2026/bologna-nessun-problema-per-bernardeschi-verra-gestito-durante-la-sosta-498392",
+        "https://www.1000cuorirossoblu.it/bologna/bologna-tre-giorni-lavoro-differenziato-federico-bernardeschi/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-23",
+      "squadra": "Lazio",
+      "giocatori": [
+        "fd632"
+      ],
+      "tipo": "rigori",
+      "fatto": "Zaccagni è confermato capitano e primo rigorista della Lazio per la stagione 2026/27, con Taylor come riserva dal dischetto: dichiarazione diretta di Taylor il 23/09 ('Zaccagni è il rigorista, io il secondo nella lista di Gattuso').",
+      "fonti": [
+        "https://www.fantacalcio.it/news/calcio-italia/23_09_2026/lazio-senti-taylor-zaccagni-e-il-rigorista-io-il-secondo-nella-lista-di-gattuso-498322",
+        "https://www.napolimagazine.com/calcio/articolo/lazio-taylor-il-rigorista-zaccagni-io-sono-il-secondo-in-lista-23-09-2026"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-23",
+      "squadra": "Lazio",
+      "giocatori": [
+        "fd2848"
+      ],
+      "tipo": "formazione",
+      "fatto": "Frattesi è passato dall'Inter alla Lazio in prestito con obbligo di riscatto condizionato (ufficializzato 14/08/2026, scatta a 22 presenze o decimo posto finale), presentato il 3/09. È diventato titolare fisso nel centrocampo di Gattuso e ha già segnato in più partite di campionato (Bologna, Genoa, Udinese).",
+      "fonti": [
+        "https://sport.sky.it/calciomercato/2026/08/14/frattesi-lazio-calciomercato-news",
+        "https://www.fantacalcio.it/calciomercato/14_08_2026/lazio-tutto-risolto-per-frattesi-i-dettagli-della-nuova-formula-trovata-con-l-inter-496467",
+        "https://www.lazionews24.com/frattesi-lazio-numeri-inizio-stagione/",
+        "https://sport.sky.it/calcio/serie-a/2026/09/03/frattesi-lazio-presentazione"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
       "data": "2026-09-23",
       "squadra": "Lazio",
       "giocatori": [
@@ -168,6 +315,35 @@
       ],
       "verificata": true,
       "aggiunta_il": "2026-09-28"
+    },
+    {
+      "data": "2026-09-23",
+      "squadra": "Juventus",
+      "giocatori": [
+        "fd6042"
+      ],
+      "tipo": "formazione",
+      "fatto": "Lucumì è arrivato alla Juventus dal Bologna nel mercato estivo 2026 (circa 20 milioni con bonus) e si è preso subito un posto da titolare: a fine settembre risultava titolare in 4 presenze su 5 totali di campionato. Nessun infortunio, squalifica o diffida in corso.",
+      "fonti": [
+        "https://www.fantacalcio.it/serie-a/squadre/juventus/lucum%c3%ac/6042",
+        "https://www.goal.com/it/liste/come-cambiera-la-juventus-con-lucumi-chi-puo-fargli-spazio-e-il-futuro-di-bremer-e-kelly/blt931aaa36c4f07c33"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-22",
+      "squadra": "Genoa",
+      "giocatori": [
+        "fd5750"
+      ],
+      "tipo": "allenatore",
+      "fatto": "Il Genoa ha confermato Daniele De Rossi in panchina nonostante un avvio difficile (sconfitte con Lazio, Como, Parma, un solo punto col Frosinone, poi la sconfitta 2-0 col Napoli): nessun cambio di allenatore in vista, quindi nessun rischio di stravolgimento delle gerarchie difensive per Ostigard. Una sola fonte trovata.",
+      "fonti": [
+        "https://www.corrieredellosport.it/news/calcio/serie-a/genoa/2026/09/22-151404722/perch_il_genoa_ha_confermato_de_rossi_ora_lallenatore_ha_le_idee_chiare"
+      ],
+      "verificata": false,
+      "aggiunta_il": "2026-10-01"
     },
     {
       "data": "2026-09-21",
@@ -264,6 +440,22 @@
     },
     {
       "data": "2026-09-19",
+      "squadra": "Milan",
+      "giocatori": [
+        "fd6397"
+      ],
+      "tipo": "clima",
+      "fatto": "Gonçalo Ramos (arrivato dal PSG per circa 74-80 milioni a giugno 2026) sta avendo un avvio difficile: a fine settembre aveva segnato solo 1 gol in 5 presenze. La stampa lo descrive isolato tatticamente ('gioca sempre spalle alla porta', 'la squadra non lo aiuta'), con 17 tiri totali ma solo 4 nello specchio in 4 partite di campionato.",
+      "fonti": [
+        "https://www.corrieredellosport.it/news/calcio/serie-a/milan/2026/09/19-151329510/ramos_solitario_il_milan_non_lo_aiuta_e_lui_gioca_sempre_spalle_alla_porta_amorim_cos_dura",
+        "https://www.calciomercato.it/2026/09/18/milan-ramos-non-decolla-35-milioni-per-lattacco-e-sfida-alla-juve/",
+        "https://www.corrieredellosport.it/news/calcio/serie-a/milan/2026/09/17-151295073/un_ramos_secco_ora_l_attaccante_del_milan_diventa_un_caso_per_amorim"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
+    },
+    {
+      "data": "2026-09-19",
       "squadra": "Bologna",
       "giocatori": [
         "fd5858",
@@ -295,6 +487,23 @@
       ],
       "verificata": true,
       "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-15",
+      "squadra": "Venezia",
+      "giocatori": [
+        "fd7484"
+      ],
+      "tipo": "rigori",
+      "fatto": "Il centrocampista Gianluca Busio (capitano, primo rigorista designato del Venezia) si è infortunato l'11/09 contro la Fiorentina: gli esami del 15/09 hanno rivelato una distrazione intratendinea del bicipite femorale destro, stop stimato 6-8 settimane (rientro possibile solo a novembre). Per Atalanta-Venezia del 12/10 sarà verosimilmente ancora assente: Adams (ha già calciato un rigore al posto suo alla giornata 5) resta tra le alternative principali dal dischetto insieme a Yeboah.",
+      "fonti": [
+        "https://www.fantacalcio.it/news/calcio-italia/14_09_2026/venezia-infortunio-busio-rischio-lesione-i-possibili-tempi-di-recupero-497908",
+        "https://www.fantacalcio.it/news/calcio-italia/15_09_2026/venezia-distrazione-intratendinea-del-bicipite-femorale-per-busio-i-tempi-di-recupero-497979",
+        "https://www.veneziatoday.it/sport/calcio/venezia-tegola-busio-distrazione-al-bicipite-destro-per-il-capitano-un-lungo-stop.html",
+        "https://www.chiamarsibomber.com/news/fantacalcio/venezia-infortunio-busio-distrazione-del-bicipite-femorale-stop-di-circa-due-mesi/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-01"
     },
     {
       "data": "2026-09-12",
