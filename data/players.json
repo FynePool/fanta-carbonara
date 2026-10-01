@@ -9,7 +9,7 @@
     "fvm": 56,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -22,7 +22,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -34,8 +34,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -48,7 +48,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -60,8 +60,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -74,7 +74,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -87,7 +87,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -100,7 +100,7 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -113,7 +113,7 @@
     "fvm": 30,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -125,8 +125,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -139,7 +139,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -152,7 +152,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -165,7 +165,7 @@
     "fvm": 43,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -178,7 +178,7 @@
     "fvm": 12,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -191,7 +191,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -204,7 +204,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -217,7 +217,7 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -230,7 +230,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -243,7 +243,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -255,8 +255,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -269,7 +269,7 @@
     "fvm": 21,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -282,7 +282,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -295,7 +295,7 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -308,7 +308,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -321,7 +321,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -334,7 +334,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -347,7 +347,7 @@
     "fvm": 63,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -360,7 +360,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -372,8 +372,8 @@
     "quotazione": 9,
     "fvm": 10,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -386,7 +386,7 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: Operazione chirurgica e lungo stop, rientro da aprile.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -399,7 +399,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -411,8 +411,8 @@
     "quotazione": 6,
     "fvm": 5,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -425,7 +425,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -438,7 +438,7 @@
     "fvm": 65,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -451,7 +451,7 @@
     "fvm": 41,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -464,7 +464,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -477,7 +477,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -490,7 +490,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -503,7 +503,7 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -515,8 +515,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -529,7 +529,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -541,8 +541,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -555,7 +555,7 @@
     "fvm": 54,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -568,7 +568,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -581,7 +581,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -593,8 +593,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -607,7 +607,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -620,7 +620,7 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -633,7 +633,7 @@
     "fvm": 8,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -646,7 +646,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -659,7 +659,7 @@
     "fvm": 40,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -672,7 +672,7 @@
     "fvm": 13,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -685,7 +685,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -698,7 +698,7 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -711,7 +711,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -723,8 +723,8 @@
     "quotazione": 7,
     "fvm": 20,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -737,7 +737,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -750,7 +750,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -763,7 +763,7 @@
     "fvm": 90,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -776,7 +776,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -788,8 +788,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -802,7 +802,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -815,7 +815,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -828,7 +828,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -840,8 +840,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -854,7 +854,7 @@
     "fvm": 16,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -867,7 +867,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -880,7 +880,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -893,7 +893,7 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -906,7 +906,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -918,8 +918,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -932,7 +932,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 1%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 1
   },
   {
@@ -945,7 +945,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 5%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 5
   },
   {
@@ -957,8 +957,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -971,7 +971,7 @@
     "fvm": 8,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -983,8 +983,8 @@
     "quotazione": 6,
     "fvm": 13,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -997,7 +997,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 85
   },
   {
@@ -1010,7 +1010,7 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -1022,8 +1022,8 @@
     "quotazione": 7,
     "fvm": 16,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1036,7 +1036,7 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: pronto a tornare in campo dalla fine di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1049,7 +1049,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -1062,7 +1062,7 @@
     "fvm": 12,
     "status": "infortunato",
     "status_note": "infortunio: Lungo stop, ipotizziamo un rientro dalla fine di novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1075,7 +1075,7 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -1088,7 +1088,7 @@
     "fvm": 23,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1101,7 +1101,7 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -1114,7 +1114,7 @@
     "fvm": 6,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -1127,7 +1127,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -1140,7 +1140,7 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -1153,7 +1153,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1166,7 +1166,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -1179,7 +1179,7 @@
     "fvm": 11,
     "status": "infortunato",
     "status_note": "infortunio: Ha deciso di operarsi e rimangono da valutare i tempi di rientro, non ci sarà di certo alla ripresa del campionato.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1192,7 +1192,7 @@
     "fvm": 22,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1205,7 +1205,7 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1218,7 +1218,7 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -1231,7 +1231,7 @@
     "fvm": 17,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1244,7 +1244,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -1257,7 +1257,7 @@
     "fvm": 3,
     "status": "infortunato",
     "status_note": "infortunio: può tornare arruolabile dalla fine di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1270,7 +1270,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -1283,7 +1283,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 85
   },
   {
@@ -1296,7 +1296,7 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1308,8 +1308,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1322,7 +1322,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1335,7 +1335,7 @@
     "fvm": 9,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -1347,8 +1347,8 @@
     "quotazione": 4,
     "fvm": 7,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1361,7 +1361,7 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -1374,7 +1374,7 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1387,7 +1387,7 @@
     "fvm": 29,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -1399,8 +1399,8 @@
     "quotazione": 1,
     "fvm": 8,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1413,7 +1413,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -1426,7 +1426,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -1439,7 +1439,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -1452,7 +1452,7 @@
     "fvm": 11,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -1465,7 +1465,7 @@
     "fvm": 34,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1478,7 +1478,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -1491,7 +1491,7 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -1504,7 +1504,7 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -1517,7 +1517,7 @@
     "fvm": 19,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1530,7 +1530,7 @@
     "fvm": 30,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1543,7 +1543,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -1555,8 +1555,8 @@
     "quotazione": 4,
     "fvm": 10,
     "status": "infortunato",
-    "status_note": "infortunio: punta a tornare convocabile da novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_note": "infortunio: punta a tornare convocabile da dicembre.",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1569,7 +1569,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -1582,7 +1582,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1595,7 +1595,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -1608,7 +1608,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1621,7 +1621,7 @@
     "fvm": 6,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -1634,7 +1634,7 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -1647,7 +1647,7 @@
     "fvm": 17,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1660,7 +1660,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1673,7 +1673,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -1685,8 +1685,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1699,7 +1699,7 @@
     "fvm": 1,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1712,7 +1712,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -1725,7 +1725,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -1738,7 +1738,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1751,7 +1751,7 @@
     "fvm": 2,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1764,7 +1764,7 @@
     "fvm": 6,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -1777,7 +1777,7 @@
     "fvm": 5,
     "status": "infortunato",
     "status_note": "infortunio: da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Napoli.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1790,7 +1790,7 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -1803,7 +1803,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -1816,7 +1816,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1828,8 +1828,8 @@
     "quotazione": 4,
     "fvm": 8,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1841,8 +1841,8 @@
     "quotazione": 1,
     "fvm": 2,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1855,7 +1855,7 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -1867,8 +1867,8 @@
     "quotazione": 8,
     "fvm": 15,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1881,7 +1881,7 @@
     "fvm": 26,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1894,7 +1894,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -1907,7 +1907,7 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -1920,7 +1920,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -1933,7 +1933,7 @@
     "fvm": 28,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1945,8 +1945,8 @@
     "quotazione": 1,
     "fvm": 2,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -1959,7 +1959,7 @@
     "fvm": 41,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1972,7 +1972,7 @@
     "fvm": 40,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -1985,7 +1985,7 @@
     "fvm": 34,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -1998,7 +1998,7 @@
     "fvm": 27,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -2011,7 +2011,7 @@
     "fvm": 210,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -2024,7 +2024,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2037,7 +2037,7 @@
     "fvm": 17,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -2050,7 +2050,7 @@
     "fvm": 14,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -2063,7 +2063,7 @@
     "fvm": 80,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2076,7 +2076,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -2089,7 +2089,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -2102,7 +2102,7 @@
     "fvm": 18,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2115,7 +2115,7 @@
     "fvm": 11,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -2128,7 +2128,7 @@
     "fvm": 41,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2141,7 +2141,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -2154,7 +2154,7 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -2167,7 +2167,7 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -2180,7 +2180,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -2193,7 +2193,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -2206,7 +2206,7 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2219,7 +2219,7 @@
     "fvm": 11,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -2232,7 +2232,7 @@
     "fvm": 16,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -2244,8 +2244,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2258,7 +2258,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -2270,8 +2270,8 @@
     "quotazione": 1,
     "fvm": 7,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2284,7 +2284,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2296,8 +2296,8 @@
     "quotazione": 6,
     "fvm": 20,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2310,7 +2310,7 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -2323,7 +2323,7 @@
     "fvm": 45,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2336,7 +2336,7 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -2349,7 +2349,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2362,7 +2362,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -2375,7 +2375,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -2388,7 +2388,7 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2400,8 +2400,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2414,7 +2414,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -2427,7 +2427,7 @@
     "fvm": 22,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -2440,7 +2440,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2452,8 +2452,8 @@
     "quotazione": 3,
     "fvm": 8,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2466,7 +2466,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2479,7 +2479,7 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -2492,7 +2492,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -2505,7 +2505,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -2518,7 +2518,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -2531,7 +2531,7 @@
     "fvm": 30,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2544,7 +2544,7 @@
     "fvm": 50,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2557,7 +2557,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -2570,7 +2570,7 @@
     "fvm": 7,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -2583,7 +2583,7 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -2596,7 +2596,7 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -2609,7 +2609,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2622,7 +2622,7 @@
     "fvm": 9,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2634,8 +2634,8 @@
     "quotazione": 4,
     "fvm": 11,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2648,7 +2648,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -2661,7 +2661,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2674,7 +2674,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2687,7 +2687,7 @@
     "fvm": 25,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2700,7 +2700,7 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2713,7 +2713,7 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2726,7 +2726,7 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -2739,7 +2739,7 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2752,7 +2752,7 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: Sta recuperando lentamente, ipotizziamo possa tornare arruolabile da fine dicembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2765,7 +2765,7 @@
     "fvm": 37,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2778,7 +2778,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -2790,8 +2790,8 @@
     "quotazione": 8,
     "fvm": 26,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2804,7 +2804,7 @@
     "fvm": 3,
     "status": "infortunato",
     "status_note": "infortunio: Stop di circa due mesi, rientro dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2817,7 +2817,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -2830,7 +2830,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -2843,7 +2843,7 @@
     "fvm": 53,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2856,7 +2856,7 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -2869,7 +2869,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -2882,7 +2882,7 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -2894,8 +2894,8 @@
     "quotazione": 6,
     "fvm": 18,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -2908,7 +2908,7 @@
     "fvm": 21,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2921,7 +2921,7 @@
     "fvm": 16,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2934,7 +2934,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -2947,7 +2947,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -2960,7 +2960,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2973,7 +2973,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -2986,7 +2986,7 @@
     "fvm": 22,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -2998,8 +2998,8 @@
     "quotazione": 3,
     "fvm": 12,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3012,7 +3012,7 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3025,7 +3025,7 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -3038,7 +3038,7 @@
     "fvm": 35,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3051,7 +3051,7 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -3064,7 +3064,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -3077,7 +3077,7 @@
     "fvm": 54,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3090,7 +3090,7 @@
     "fvm": 65,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -3103,7 +3103,7 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3116,7 +3116,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -3129,7 +3129,7 @@
     "fvm": 93,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -3142,7 +3142,7 @@
     "fvm": 11,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3155,7 +3155,7 @@
     "fvm": 6,
     "status": "infortunato",
     "status_note": "infortunio: punta a tornare convocabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3168,7 +3168,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 85
   },
   {
@@ -3181,7 +3181,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3194,7 +3194,7 @@
     "fvm": 14,
     "status": "infortunato",
     "status_note": "infortunio: proverà a tornerà arruolabile dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3207,7 +3207,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3219,8 +3219,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3232,8 +3232,8 @@
     "quotazione": 1,
     "fvm": 2,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3246,7 +3246,7 @@
     "fvm": 9,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -3259,7 +3259,7 @@
     "fvm": 6,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -3272,7 +3272,7 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: ipotizziamo possa tornare convocabile da fine ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3285,7 +3285,7 @@
     "fvm": 6,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -3298,7 +3298,7 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: da valutare il rientro dalla metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3311,7 +3311,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3324,7 +3324,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -3337,7 +3337,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3350,7 +3350,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3363,7 +3363,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -3376,7 +3376,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3389,7 +3389,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -3402,7 +3402,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -3414,8 +3414,8 @@
     "quotazione": 5,
     "fvm": 12,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3428,7 +3428,7 @@
     "fvm": 9,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -3441,7 +3441,7 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3454,7 +3454,7 @@
     "fvm": 25,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -3467,7 +3467,7 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -3480,7 +3480,7 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -3493,7 +3493,7 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -3506,7 +3506,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3519,7 +3519,7 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3531,8 +3531,8 @@
     "quotazione": 1,
     "fvm": 3,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3545,7 +3545,7 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -3558,7 +3558,7 @@
     "fvm": 30,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 75
   },
   {
@@ -3571,7 +3571,7 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -3584,7 +3584,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3597,7 +3597,7 @@
     "fvm": 11,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile dall'inizio di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Atalanta.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3610,7 +3610,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 75
   },
   {
@@ -3623,7 +3623,7 @@
     "fvm": 6,
     "status": "infortunato",
     "status_note": "infortunio: Lungo stop e rientro dalla metà di dicembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3636,7 +3636,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -3649,7 +3649,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -3662,7 +3662,7 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -3674,8 +3674,8 @@
     "quotazione": 5,
     "fvm": 9,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3688,7 +3688,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3701,7 +3701,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -3714,7 +3714,7 @@
     "fvm": 6,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3727,7 +3727,7 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3740,7 +3740,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3753,7 +3753,7 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: recuperabile da fine ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3766,7 +3766,7 @@
     "fvm": 45,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3779,7 +3779,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -3792,7 +3792,7 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3805,7 +3805,7 @@
     "fvm": 33,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3817,9 +3817,9 @@
     "quotazione": 7,
     "fvm": 18,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 55
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 60
   },
   {
     "id": "fd6844",
@@ -3831,7 +3831,7 @@
     "fvm": 35,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3844,7 +3844,7 @@
     "fvm": 36,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -3855,10 +3855,10 @@
     "quotazione_iniziale": 6,
     "quotazione": 6,
     "fvm": 11,
-    "status": "panchina",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 35
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 40
   },
   {
     "id": "fd7528",
@@ -3870,7 +3870,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -3883,7 +3883,7 @@
     "fvm": 35,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -3896,7 +3896,7 @@
     "fvm": 22,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3909,7 +3909,7 @@
     "fvm": 9,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -3922,7 +3922,7 @@
     "fvm": 22,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -3935,7 +3935,7 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -3948,7 +3948,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -3961,7 +3961,7 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -3974,7 +3974,7 @@
     "fvm": 13,
     "status": "infortunato",
     "status_note": "infortunio: recuperabile dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -3987,7 +3987,7 @@
     "fvm": 138,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -4000,7 +4000,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -4013,7 +4013,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4026,7 +4026,7 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -4038,8 +4038,8 @@
     "quotazione": 5,
     "fvm": 10,
     "status": "infortunato",
-    "status_note": "infortunio: Ipotesi di rientro in campo dalla metà di novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_note": "infortunio: Ipotesi di rientro in campo dalla fine di ottobre.",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4052,7 +4052,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4065,7 +4065,7 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 75
   },
   {
@@ -4078,7 +4078,7 @@
     "fvm": 7,
     "status": "infortunato",
     "status_note": "infortunio: Verrà operato e costretto a un lungo stop (ipotizziamo un rientro da marzo).",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4091,7 +4091,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -4104,7 +4104,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -4117,7 +4117,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -4129,8 +4129,8 @@
     "quotazione": 4,
     "fvm": 7,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4143,7 +4143,7 @@
     "fvm": 21,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4156,7 +4156,7 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4169,7 +4169,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -4182,7 +4182,7 @@
     "fvm": 153,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 85
   },
   {
@@ -4195,7 +4195,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -4208,7 +4208,7 @@
     "fvm": 69,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -4220,8 +4220,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4234,7 +4234,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -4247,7 +4247,7 @@
     "fvm": 26,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4260,7 +4260,7 @@
     "fvm": 248,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4273,7 +4273,7 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -4286,7 +4286,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -4299,7 +4299,7 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4312,7 +4312,7 @@
     "fvm": 63,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4325,7 +4325,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -4338,7 +4338,7 @@
     "fvm": 22,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4351,7 +4351,7 @@
     "fvm": 37,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4364,7 +4364,7 @@
     "fvm": 70,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4377,7 +4377,7 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4390,7 +4390,7 @@
     "fvm": 28,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -4403,7 +4403,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -4416,7 +4416,7 @@
     "fvm": 37,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4429,7 +4429,7 @@
     "fvm": 9,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4442,7 +4442,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -4455,7 +4455,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -4467,8 +4467,8 @@
     "quotazione": 2,
     "fvm": 6,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4481,7 +4481,7 @@
     "fvm": 9,
     "status": "infortunato",
     "status_note": "infortunio: Stop di circa sei settimane, può tornare convocabile da inizio novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4494,7 +4494,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -4506,8 +4506,8 @@
     "quotazione": 1,
     "fvm": 3,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4519,8 +4519,8 @@
     "quotazione": 4,
     "fvm": 11,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4533,7 +4533,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4546,7 +4546,7 @@
     "fvm": 38,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4559,7 +4559,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4572,7 +4572,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -4585,7 +4585,7 @@
     "fvm": 21,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4598,7 +4598,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4611,7 +4611,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4624,7 +4624,7 @@
     "fvm": 19,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4637,7 +4637,7 @@
     "fvm": 9,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4650,7 +4650,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4663,7 +4663,7 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4676,7 +4676,7 @@
     "fvm": 9,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -4689,7 +4689,7 @@
     "fvm": 4,
     "status": "infortunato",
     "status_note": "infortunio: Di certo assente nel prossimo turno di campionato, ipotesi di rientro da fine ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4702,7 +4702,7 @@
     "fvm": 84,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4715,7 +4715,7 @@
     "fvm": 220,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -4728,7 +4728,7 @@
     "fvm": 56,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4741,7 +4741,7 @@
     "fvm": 33,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -4754,7 +4754,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -4767,7 +4767,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -4780,7 +4780,7 @@
     "fvm": 7,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -4793,7 +4793,7 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4806,7 +4806,7 @@
     "fvm": 41,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 75
   },
   {
@@ -4819,7 +4819,7 @@
     "fvm": 40,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 75
   },
   {
@@ -4832,7 +4832,7 @@
     "fvm": 70,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -4845,7 +4845,7 @@
     "fvm": 16,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4858,7 +4858,7 @@
     "fvm": 46,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4871,7 +4871,7 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -4884,7 +4884,7 @@
     "fvm": 15,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4897,7 +4897,7 @@
     "fvm": 61,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -4909,8 +4909,8 @@
     "quotazione": 3,
     "fvm": 7,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4923,7 +4923,7 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4936,7 +4936,7 @@
     "fvm": 15,
     "status": "infortunato",
     "status_note": "infortunio: Lungo stop, ipotizziamo un rientro da gennaio.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -4949,7 +4949,7 @@
     "fvm": 22,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4962,7 +4962,7 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -4975,7 +4975,7 @@
     "fvm": 22,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -4988,7 +4988,7 @@
     "fvm": 8,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare, di certo out nel prossimo turno di campionato contro il Monza.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5001,7 +5001,7 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -5014,7 +5014,7 @@
     "fvm": 113,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5026,8 +5026,8 @@
     "quotazione": 13,
     "fvm": 38,
     "status": "infortunato",
-    "status_note": "infortunio: Condizioni da valutare, a forte rischio la sua presenza alla ripresa del campionato contro il Monza.",
-    "status_updated_at": "2026-09-30",
+    "status_note": "infortunio: Tempi di recupero da valutare.",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5040,7 +5040,7 @@
     "fvm": 21,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -5052,8 +5052,8 @@
     "quotazione": 1,
     "fvm": 5,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5066,7 +5066,7 @@
     "fvm": 16,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5079,7 +5079,7 @@
     "fvm": 43,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5092,7 +5092,7 @@
     "fvm": 122,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5105,7 +5105,7 @@
     "fvm": 11,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Bologna.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5118,7 +5118,7 @@
     "fvm": 17,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5131,7 +5131,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -5144,7 +5144,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -5157,7 +5157,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -5170,7 +5170,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5183,7 +5183,7 @@
     "fvm": 2,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -5195,8 +5195,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5209,7 +5209,7 @@
     "fvm": 7,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -5222,7 +5222,7 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 85
   },
   {
@@ -5235,7 +5235,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5248,7 +5248,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -5261,7 +5261,7 @@
     "fvm": 23,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -5274,7 +5274,7 @@
     "fvm": 34,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5287,7 +5287,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 10%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 10
   },
   {
@@ -5299,8 +5299,8 @@
     "quotazione": 4,
     "fvm": 10,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5313,7 +5313,7 @@
     "fvm": 14,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -5326,7 +5326,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -5339,7 +5339,7 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -5352,7 +5352,7 @@
     "fvm": 40,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5365,7 +5365,7 @@
     "fvm": 60,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -5378,7 +5378,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5391,7 +5391,7 @@
     "fvm": 150,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5404,7 +5404,7 @@
     "fvm": 141,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5417,7 +5417,7 @@
     "fvm": 32,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -5430,7 +5430,7 @@
     "fvm": 13,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5443,7 +5443,7 @@
     "fvm": 6,
     "status": "infortunato",
     "status_note": "infortunio: Da valutare.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5456,7 +5456,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -5469,7 +5469,7 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -5482,7 +5482,7 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -5495,7 +5495,7 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5508,7 +5508,7 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -5521,7 +5521,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -5534,7 +5534,7 @@
     "fvm": 15,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da monitorare, ma proverà a tornare arruolabile dall'inizio di novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5547,7 +5547,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -5560,7 +5560,7 @@
     "fvm": 90,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5573,7 +5573,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -5586,7 +5586,7 @@
     "fvm": 28,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5599,7 +5599,7 @@
     "fvm": 120,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -5612,7 +5612,7 @@
     "fvm": 42,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5625,7 +5625,7 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5638,7 +5638,7 @@
     "fvm": 27,
     "status": "infortunato",
     "status_note": "infortunio: rimane da valutare nei prossimi allenamenti in vista della gara contro il Frosinone alla ripresa del campionato.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5651,7 +5651,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5663,9 +5663,9 @@
     "quotazione": 6,
     "fvm": 27,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 50
+    "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 75
   },
   {
     "id": "fd7276",
@@ -5677,7 +5677,7 @@
     "fvm": 3,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -5690,7 +5690,7 @@
     "fvm": 8,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -5703,7 +5703,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5716,7 +5716,7 @@
     "fvm": 16,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5729,7 +5729,7 @@
     "fvm": 16,
     "status": "infortunato",
     "status_note": "infortunio: Tempi di recupero da valutare.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5741,8 +5741,8 @@
     "quotazione": 5,
     "fvm": 18,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5755,7 +5755,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5768,7 +5768,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5780,8 +5780,8 @@
     "quotazione": 3,
     "fvm": 12,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5794,7 +5794,7 @@
     "fvm": 31,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -5807,7 +5807,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -5819,8 +5819,8 @@
     "quotazione": 4,
     "fvm": 13,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5833,7 +5833,7 @@
     "fvm": 50,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5846,7 +5846,7 @@
     "fvm": 65,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5859,7 +5859,7 @@
     "fvm": 12,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 25%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 25
   },
   {
@@ -5872,7 +5872,7 @@
     "fvm": 30,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5885,7 +5885,7 @@
     "fvm": 37,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5898,7 +5898,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -5911,7 +5911,7 @@
     "fvm": 5,
     "status": "infortunato",
     "status_note": "infortunio: Da valutare rientro da metà ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5924,7 +5924,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -5936,8 +5936,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5950,7 +5950,7 @@
     "fvm": 20,
     "status": "infortunato",
     "status_note": "infortunio: Operato, punta a tornare in campo da dicembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -5963,7 +5963,7 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -5976,7 +5976,7 @@
     "fvm": 15,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -5989,7 +5989,7 @@
     "fvm": 7,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 35%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 35
   },
   {
@@ -6002,7 +6002,7 @@
     "fvm": 31,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 85
   },
   {
@@ -6015,7 +6015,7 @@
     "fvm": 20,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Milan.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6028,7 +6028,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -6040,8 +6040,8 @@
     "quotazione": 1,
     "fvm": 4,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6054,7 +6054,7 @@
     "fvm": 18,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6067,7 +6067,7 @@
     "fvm": 25,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -6080,7 +6080,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -6093,7 +6093,7 @@
     "fvm": 18,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6106,7 +6106,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -6119,7 +6119,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -6132,7 +6132,7 @@
     "fvm": 40,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6145,7 +6145,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -6158,7 +6158,7 @@
     "fvm": 57,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6170,8 +6170,8 @@
     "quotazione": 1,
     "fvm": 3,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6184,7 +6184,7 @@
     "fvm": 6,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6197,7 +6197,7 @@
     "fvm": 64,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6210,7 +6210,7 @@
     "fvm": 5,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 20%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 20
   },
   {
@@ -6223,7 +6223,7 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6236,7 +6236,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -6249,7 +6249,7 @@
     "fvm": 12,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6262,7 +6262,7 @@
     "fvm": 12,
     "status": "infortunato",
     "status_note": "infortunio: Osservato un periodo di riposo, potrà tornare alla regolare attività agonistica (ipotizziamo da fine ottobre).",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6275,7 +6275,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -6288,7 +6288,7 @@
     "fvm": 71,
     "status": "infortunato",
     "status_note": "infortunio: rientro previsto dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6301,7 +6301,7 @@
     "fvm": 4,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -6314,7 +6314,7 @@
     "fvm": 13,
     "status": "infortunato",
     "status_note": "infortunio: rimane da valutare quotidianamente in vista della 6a giornata di campionato contro l'Atalanta.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6326,8 +6326,8 @@
     "quotazione": 1,
     "fvm": 3,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6340,7 +6340,7 @@
     "fvm": 14,
     "status": "infortunato",
     "status_note": "infortunio: Rientro dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6353,7 +6353,7 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile dalla prima metà di ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno a Bergamo.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6365,8 +6365,8 @@
     "quotazione": 1,
     "fvm": 4,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6379,7 +6379,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6392,7 +6392,7 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -6405,7 +6405,7 @@
     "fvm": 14,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6418,7 +6418,7 @@
     "fvm": 10,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6431,7 +6431,7 @@
     "fvm": 64,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6444,7 +6444,7 @@
     "fvm": 80,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6455,10 +6455,10 @@
     "quotazione_iniziale": 13,
     "quotazione": 14,
     "fvm": 30,
-    "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 50
+    "status": "n/d",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": null
   },
   {
     "id": "fd2137",
@@ -6470,7 +6470,7 @@
     "fvm": 100,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -6483,7 +6483,7 @@
     "fvm": 4,
     "status": "infortunato",
     "status_note": "infortunio: Recuperabile da inizio ottobre, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro il Venezia.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6495,8 +6495,8 @@
     "quotazione": 8,
     "fvm": 10,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6509,7 +6509,7 @@
     "fvm": 33,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6522,7 +6522,7 @@
     "fvm": 4,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -6535,7 +6535,7 @@
     "fvm": 41,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -6547,8 +6547,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6560,8 +6560,8 @@
     "quotazione": 4,
     "fvm": 9,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6574,7 +6574,7 @@
     "fvm": 20,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6587,7 +6587,7 @@
     "fvm": 45,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6600,7 +6600,7 @@
     "fvm": 20,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6612,8 +6612,8 @@
     "quotazione": 6,
     "fvm": 7,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6626,7 +6626,7 @@
     "fvm": 10,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -6639,7 +6639,7 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: Da metà settembre ha avuto l'ok per riprendere l'attività agonistica, potrebbe ora tornare convocabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6651,8 +6651,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6665,7 +6665,7 @@
     "fvm": 67,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6678,7 +6678,7 @@
     "fvm": 138,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6691,7 +6691,7 @@
     "fvm": 138,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -6703,8 +6703,8 @@
     "quotazione": 3,
     "fvm": 5,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6716,8 +6716,8 @@
     "quotazione": 4,
     "fvm": 7,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6730,7 +6730,7 @@
     "fvm": 49,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6743,7 +6743,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -6756,7 +6756,7 @@
     "fvm": 51,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -6769,7 +6769,7 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6782,7 +6782,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -6795,7 +6795,7 @@
     "fvm": 31,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6808,7 +6808,7 @@
     "fvm": 50,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6821,7 +6821,7 @@
     "fvm": 60,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -6834,7 +6834,7 @@
     "fvm": 53,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 75%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 75
   },
   {
@@ -6847,7 +6847,7 @@
     "fvm": 4,
     "status": "infortunato",
     "status_note": "infortunio: dovrebbe tornare arruolabile dalla metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6860,7 +6860,7 @@
     "fvm": 36,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6872,8 +6872,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6886,7 +6886,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6899,7 +6899,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -6912,7 +6912,7 @@
     "fvm": 107,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -6925,7 +6925,7 @@
     "fvm": 418,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -6938,7 +6938,7 @@
     "fvm": 275,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -6951,7 +6951,7 @@
     "fvm": 21,
     "status": "infortunato",
     "status_note": "infortunio: ipotizziamo un possibile rientro dalla metà di novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6963,8 +6963,8 @@
     "quotazione": 8,
     "fvm": 25,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6977,7 +6977,7 @@
     "fvm": 6,
     "status": "infortunato",
     "status_note": "infortunio: rientro dalla metà di novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -6990,7 +6990,7 @@
     "fvm": 122,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7002,8 +7002,8 @@
     "quotazione": 4,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7016,7 +7016,7 @@
     "fvm": 97,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7029,7 +7029,7 @@
     "fvm": 70,
     "status": "infortunato",
     "status_note": "infortunio: Ipotesi di rientro in campo da fine novembre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7041,8 +7041,8 @@
     "quotazione": 10,
     "fvm": 20,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7055,7 +7055,7 @@
     "fvm": 35,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7068,7 +7068,7 @@
     "fvm": 40,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7080,8 +7080,8 @@
     "quotazione": 9,
     "fvm": 22,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7094,7 +7094,7 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -7107,7 +7107,7 @@
     "fvm": 8,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -7120,7 +7120,7 @@
     "fvm": 15,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -7133,7 +7133,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7146,7 +7146,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7159,7 +7159,7 @@
     "fvm": 12,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 30%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 30
   },
   {
@@ -7171,8 +7171,8 @@
     "quotazione": 6,
     "fvm": 10,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7184,8 +7184,8 @@
     "quotazione": 18,
     "fvm": 75,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7197,8 +7197,8 @@
     "quotazione": 13,
     "fvm": 20,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7211,7 +7211,7 @@
     "fvm": 237,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -7224,7 +7224,7 @@
     "fvm": 16,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7237,7 +7237,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7250,7 +7250,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -7262,8 +7262,8 @@
     "quotazione": 2,
     "fvm": 5,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7276,7 +7276,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -7289,7 +7289,7 @@
     "fvm": 69,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -7302,7 +7302,7 @@
     "fvm": 19,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -7315,7 +7315,7 @@
     "fvm": 1,
     "status": "infortunato",
     "status_note": "infortunio: ma rimane da valutare quotidianamente in vista della ripresa del campionato",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7326,10 +7326,10 @@
     "quotazione_iniziale": 28,
     "quotazione": 27,
     "fvm": 240,
-    "status": "titolare",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 90
+    "status": "ballottaggio",
+    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 80
   },
   {
     "id": "fd7120",
@@ -7341,7 +7341,7 @@
     "fvm": 12,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7354,7 +7354,7 @@
     "fvm": 11,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7366,8 +7366,8 @@
     "quotazione": 10,
     "fvm": 45,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7380,7 +7380,7 @@
     "fvm": 17,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7393,7 +7393,7 @@
     "fvm": 37,
     "status": "infortunato",
     "status_note": "infortunio: Proverà a tornare arruolabile dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7405,8 +7405,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7419,7 +7419,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7432,7 +7432,7 @@
     "fvm": 5,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 50%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 50
   },
   {
@@ -7444,9 +7444,9 @@
     "quotazione": 6,
     "fvm": 15,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 80
+    "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 60
   },
   {
     "id": "fd7554",
@@ -7457,9 +7457,9 @@
     "quotazione": 13,
     "fvm": 44,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 85%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 85
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 70
   },
   {
     "id": "fd6229",
@@ -7470,9 +7470,9 @@
     "quotazione": 10,
     "fvm": 31,
     "status": "ballottaggio",
-    "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
-    "prob_titolare": 80
+    "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
+    "status_updated_at": "2026-10-01",
+    "prob_titolare": 70
   },
   {
     "id": "fd6572",
@@ -7484,7 +7484,7 @@
     "fvm": 40,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 55%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 55
   },
   {
@@ -7497,7 +7497,7 @@
     "fvm": 120,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -7510,7 +7510,7 @@
     "fvm": 437,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 80%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 80
   },
   {
@@ -7523,7 +7523,7 @@
     "fvm": 63,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7535,8 +7535,8 @@
     "quotazione": 1,
     "fvm": 4,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7549,7 +7549,7 @@
     "fvm": 103,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -7562,7 +7562,7 @@
     "fvm": 33,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7575,7 +7575,7 @@
     "fvm": 41,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7588,7 +7588,7 @@
     "fvm": 77,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -7600,8 +7600,8 @@
     "quotazione": 1,
     "fvm": 1,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7614,7 +7614,7 @@
     "fvm": 25,
     "status": "infortunato",
     "status_note": "infortunio: Punta a recuperare nella sosta, ma da valutare nei prossimi allenamenti le possibilità di convocazione già nel prossimo turno contro l'Udinese.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7627,7 +7627,7 @@
     "fvm": 13,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7640,7 +7640,7 @@
     "fvm": 58,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -7653,7 +7653,7 @@
     "fvm": 10,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -7666,7 +7666,7 @@
     "fvm": 3,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7678,8 +7678,8 @@
     "quotazione": 2,
     "fvm": 4,
     "status": "n/d",
-    "status_note": "non trovato nelle probabili del 2026-09-30 (assente, o nome scritto diversamente)",
-    "status_updated_at": "2026-09-30",
+    "status_note": "non trovato nelle probabili del 2026-10-01 (assente, o nome scritto diversamente)",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7692,7 +7692,7 @@
     "fvm": 113,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: titolare 70%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 70
   },
   {
@@ -7705,7 +7705,7 @@
     "fvm": 10,
     "status": "infortunato",
     "status_note": "infortunio: Assente nel prossimo turno di campionato contro il Torino, da valutare rientro dalla seconda metà di ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7718,7 +7718,7 @@
     "fvm": 33,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   },
   {
@@ -7731,7 +7731,7 @@
     "fvm": 4,
     "status": "infortunato",
     "status_note": "infortunio: Tentativo di rientro da metà ottobre.",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": null
   },
   {
@@ -7744,7 +7744,7 @@
     "fvm": 1,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 40%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 40
   },
   {
@@ -7757,7 +7757,7 @@
     "fvm": 1,
     "status": "panchina",
     "status_note": "fantacalcio.it probabili formazioni: panchina 15%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 15
   },
   {
@@ -7770,7 +7770,7 @@
     "fvm": 9,
     "status": "ballottaggio",
     "status_note": "fantacalcio.it probabili formazioni: panchina 60%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 60
   },
   {
@@ -7783,7 +7783,7 @@
     "fvm": 27,
     "status": "titolare",
     "status_note": "fantacalcio.it probabili formazioni: titolare 90%",
-    "status_updated_at": "2026-09-30",
+    "status_updated_at": "2026-10-01",
     "prob_titolare": 90
   }
 ]
