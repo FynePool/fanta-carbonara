@@ -50,8 +50,8 @@ prodotti commerciali (FantaGPT, FantaGOAT) **non** sono stati verificati.
    da spareggio (`.docs/analisi-valutazione-formazione.md`): la skill `formazione` legge
    queste notizie. Il report non ne è toccato, perché usa `rigoristi.json`. È il punto debole
    più serio trovato, e il PDF non lo vede: lo strato delle notizie scrive fatti "verificati"
-   senza controllarli contro i dati che abbiamo. Va corretto **prima della scadenza del
-   10/10** (4.A).
+   senza controllarli contro i dati che abbiamo. **Le due notizie sono state corrette il
+   02/10**, col via dell'utente; resta da impedire che succeda di nuovo (4.A).
 2. **Il "probabile difetto" principale del PDF è in parte già superato, e la correzione che
    propone non è sostenuta. Ma nemmeno il contrario.** [Certain] I portieri hanno già un
    coefficiente `avv` separato, e la variante "portieri sui gol fatti dall'avversario" è già
@@ -285,8 +285,11 @@ o che non si recupera dopo. Niente di questo è stato fatto.
 ### Priorità 1: prima della scadenza del 10/10
 
 **A. Notizie coerenti con i dati del repo** [Certain che il problema esista]. Tre passi:
-1. correggere le due notizie del punto 0.1. È una modifica a `data/`, quindi con il via
-   dell'utente;
+1. ~~correggere le due notizie del punto 0.1~~ **fatto il 02/10**: tolti "Adams ha già
+   calciato un rigore" e "infortunato da almeno due mesi", ridotto "rientro solo a
+   novembre" a quello che dicono le fonti (6-8 settimane dall'11/09), aggiunto chi ha calciato alla
+   giornata 5 con le due cronache come fonte (le stesse di
+   `.docs/analisi-valutazione-formazione.md`);
 2. un controllo automatico in `notizie_rosa.py valida` per i fatti che il repo può smentire:
    rigori calciati e da chi (`matchday_stats.json`, `rigoristi.json`), date d'infortunio
    (`injuries.json`), squalifiche (`squalifiche.json`). Una notizia che contraddice i dati si
