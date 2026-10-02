@@ -1,6 +1,36 @@
 {
-  "aggiornato_il": "2026-10-01",
+  "aggiornato_il": "2026-10-02",
   "notizie": [
+    {
+      "data": "2026-10-01",
+      "squadra": "Venezia",
+      "giocatori": [
+        "fd7484"
+      ],
+      "tipo": "rigori",
+      "fatto": "Con Busio (primo rigorista designato) infortunato da almeno due mesi, Stroppa in conferenza stampa confirma Yeboah e Adams come il tandem offensivo titolare: più fonti indicano i due come le alternative dal dischetto in sua assenza, senza un ordine ufficiale dichiarato tra loro.",
+      "fonti": [
+        "https://www.sosfanta.com/squadra/venezia/stroppa-venezia-lazio-conferenza-busio-bella-kotchap-juan-jesus-adams-yeboah-toni-fernandez-fantacalcio/",
+        "https://www.fantamaster.it/rigorista-venezia-infortunio-busio-cambio-gerarchie-fantacalcio/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-02"
+    },
+    {
+      "data": "2026-10-01",
+      "squadra": "Sassuolo",
+      "giocatori": [
+        "fd5844",
+        "fd4463"
+      ],
+      "tipo": "rientro",
+      "fatto": "Thorstvedt ed Esposito Se. sono entrambi tra i convocati delle rispettive nazionali durante la sosta di fine settembre/inizio ottobre (dieci giocatori del Sassuolo chiamati in totale): segnale di buone condizioni fisiche in vista di Sassuolo-Milan dell'11/10, nessun dubbio di formazione riportato per loro due.",
+      "fonti": [
+        "https://sempremilan.com/opposition-insight-sassuolo-milan-2026"
+      ],
+      "verificata": false,
+      "aggiunta_il": "2026-10-02"
+    },
     {
       "data": "2026-09-30",
       "squadra": "Lecce",
