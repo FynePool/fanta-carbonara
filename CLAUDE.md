@@ -497,6 +497,13 @@ Martinez, 4,54). Se le probabili lo danno titolare e resta fuori, il report avvi
   squadra: ρ = 0,07, +4% di σ; stagione scorsa come ordinamento: −3,15 punti), e cosa
   resta aperto (probabilità di prendere voto approssimata, statistiche raccolte e non
   usate). Da leggere insieme al doc dei difetti, prima di toccare `roster.py`.
+- `.docs/analisi-progetti-simili.md` — verifica del 02/10, rivista con Codex, di
+  un'analisi esterna che confrontava il progetto con altri repo di fantacalcio (fantaclaude,
+  fantabot, JARVIS, fanta-asta...). Cosa delle fonti serve davvero, in ordine: notizie
+  coerenti coi dati del repo, foto del consiglio prima della scadenza, regole della lega da
+  `settings/calculate`, campi della giornata calcolata di `teamLineup` già decodificati da
+  fantabot e fantaclaude. Cosa scartare e perché. Da leggere prima di toccare le notizie,
+  gli importer della lega o il backtest.
 
 ## Fasi future (non ancora implementate, richieste esplicitamente)
 
