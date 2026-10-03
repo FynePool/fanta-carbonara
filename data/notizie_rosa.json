@@ -1,5 +1,5 @@
 {
-  "aggiornato_il": "2026-10-02",
+  "aggiornato_il": "2026-10-03",
   "notizie": [
     {
       "data": "2026-10-01",
@@ -192,6 +192,22 @@
       ],
       "verificata": true,
       "aggiunta_il": "2026-09-27"
+    },
+    {
+      "data": "2026-09-27",
+      "squadra": "Milan",
+      "giocatori": [
+        "fd6397"
+      ],
+      "tipo": "rientro",
+      "fatto": "Gonçalo Ramos ha segnato il gol decisivo (pallonetto al 54', dopo un errore del portiere) nella vittoria 1-2 del Portogallo in Norvegia (Nations League, 27/09), tornando al gol dopo un avvio difficile al Milan (1 gol in 5 presenze fino a metà settembre). Segnale di ripresa di condizione in vista di Sassuolo-Milan dell'11/10, non ancora confermato da prestazioni col club.",
+      "fonti": [
+        "https://sport.sky.it/calcio/nations-league/2026/09/28/goncalo-ramos-gol-norvegia-portogallo-video",
+        "https://www.eurosport.it/calcio/uefa-nations-league/2026-2027/norvegia-portogallo-1-2-goncalo-ramos-gioca-al-posto-di-cr7-e-trascina-i-lusitani-a-segno-in-precedenza-con-joao-felix-poi-ripreso-da-haaland_sto23340860/story.shtml",
+        "https://www.milanpress.it/nations-league-norvegia-portogallo-serata-ramos/"
+      ],
+      "verificata": true,
+      "aggiunta_il": "2026-10-03"
     },
     {
       "data": "2026-09-27",
